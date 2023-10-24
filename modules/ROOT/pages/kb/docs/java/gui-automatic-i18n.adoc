@@ -21,7 +21,7 @@
 :page-layout: tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
-:syntax: true
+:page-syntax: true
 :icons: font
 :source-highlighter: pygments
 :toc: left
@@ -114,7 +114,7 @@ Repeat the previous steps for all the components so that the form looks like the
 [.feature]
 --
 
-image::./finddialog_new_small.png[role="left", link="images/finddialog_new.png"]
+image::./finddialog_new_small.png[role="left", xref="image$./finddialog_new.png"]
 
 --
 
@@ -148,7 +148,7 @@ image::./addlocale_new.png[]
 [.feature]
 --
 
-image::./bundles_new_small.png[role="left", link="images/bundles_new.png"]
+image::./bundles_new_small.png[role="left", xref="image$./bundles_new.png"]
 
 --
 
@@ -169,7 +169,7 @@ The form is reopened and the Spanish locale is loaded in in the design, as shown
 [.feature]
 --
 
-image::./finddialog_es_new_small.png[role="left", link="images/finddialog_es_new.png"]
+image::./finddialog_es_new_small.png[role="left", xref="image$./finddialog_es_new.png"]
 
 --
 
@@ -183,7 +183,7 @@ image::./finddialog_es_new_small.png[role="left", link="images/finddialog_es_new
 [.feature]
 --
 
-image::./prjproperties_small.png[role="left", link="images/prjproperties.png"]
+image::./prjproperties_small.png[role="left", xref="image$./prjproperties.png"]
 
 --
 
@@ -199,7 +199,7 @@ The IDE runs the  ``FindDialog``  dialog box in the Spanish locale like shown be
 [.feature]
 --
 
-image::./run_small.png[role="left", link="images/run.png"]
+image::./run_small.png[role="left", xref="image$./run.png"]
 
 --
 
@@ -247,7 +247,7 @@ The sources files appear in the first page of the Wizard as shown below:
 [.feature]
 --
 
-image::./i18nwizardone_small.png[role="left", link="images/i18nwizardone.png"]
+image::./i18nwizardone_small.png[role="left", xref="image$./i18nwizardone.png"]
 
 --
 
@@ -264,7 +264,7 @@ image::./i18nwizardone_small.png[role="left", link="images/i18nwizardone.png"]
 [.feature]
 --
 
-image::./i18nwizardtwo_small.png[role="left", link="images/i18nwizardtwo.png"]
+image::./i18nwizardtwo_small.png[role="left", xref="image$./i18nwizardtwo.png"]
 
 --
 
@@ -281,7 +281,7 @@ image::./i18nwizardtwo_small.png[role="left", link="images/i18nwizardtwo.png"]
 [.feature]
 --
 
-image::./i18nwizardthree_small.png[role="left", link="images/i18nwizardthree.png"]
+image::./i18nwizardthree_small.png[role="left", xref="image$./i18nwizardthree.png"]
 
 --
 
@@ -323,7 +323,7 @@ If a hard-coded string does not need to be replaced, click the Skip button.
 [.feature]
 --
 
-image::./i18ndialog_small.png[role="left", link="images/i18ndialog.png"]
+image::./i18ndialog_small.png[role="left", xref="image$./i18ndialog.png"]
 
 --
 

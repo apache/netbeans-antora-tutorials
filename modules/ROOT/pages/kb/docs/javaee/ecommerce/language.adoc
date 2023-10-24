@@ -22,7 +22,7 @@
 :jbake-tags: tutorials 
 :jbake-status: published
 :icons: font
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:
@@ -223,7 +223,7 @@ image::./projects-window.png[title="View resource bundles and the keys they cont
 [.feature]
 --
 
-image::./properties-editor.png[role="left", link="images/properties-editor.png"]
+image::./properties-editor.png[role="left", xref="image$./properties-editor.png"]
 
 --
 
@@ -748,7 +748,7 @@ Enclose the current implementation within `<c:choose>` tags, and create logic si
 [.feature]
 --
 
-image::./variables-window.png[role="left", link="images/variables-window.png"]
+image::./variables-window.png[role="left", xref="image$./variables-window.png"]
 
 --
  

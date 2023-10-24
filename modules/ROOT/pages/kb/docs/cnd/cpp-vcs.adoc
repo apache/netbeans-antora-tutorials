@@ -22,7 +22,7 @@
 :jbake-tags: tutorials 
 :jbake-status: published
 :icons: font
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:
@@ -101,7 +101,7 @@ You can specify the list of such macros to ignore in the "Transient macros" fiel
 [.feature]
 --
 
-image::./proj_props_small.png[role="left", link="images/proj_props.png"]
+image::./proj_props_small.png[role="left", xref="image$./proj_props.png"]
 
 --
 

@@ -22,7 +22,7 @@
 :jbake-tags: tutorials 
 :jbake-status: published
 :icons: font
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:
@@ -711,7 +711,7 @@ image::./add-jsp-prop-group-dialog.png[title="Use the Add JSP Property Group dia
 [.feature]
 --
 
-image::./jsp-prop-groups-small.png[role="left", link="images/jsp-prop-groups.png"]
+image::./jsp-prop-groups-small.png[role="left", xref="image$./jsp-prop-groups.png"]
 
 --
 

@@ -21,7 +21,7 @@
 :page-layout: tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
-:syntax: true
+:page-syntax: true
 :icons: font
 :source-highlighter: pygments
 :toc: left
@@ -71,7 +71,7 @@ The sample form opens in the GUI Builder Design view.
 [.feature]
 --
 
-image::./sampleform-small.png[role="left", link="images/sampleform.png"]
+image::./sampleform-small.png[role="left", xref="image$./sampleform.png"]
 
 --
 
@@ -87,7 +87,7 @@ The Customize Layout dialog box opens as shown below.
 [.feature]
 --
 
-image::./customizerdialog-small.png[role="left", link="images/customizerdialog.png"]
+image::./customizerdialog-small.png[role="left", xref="image$./customizerdialog.png"]
 
 --
 
@@ -128,7 +128,7 @@ To add a new label and text field to the newly added row, complete the following
 [.feature]
 --
 
-image::./addcomponent-small.png[role="left", link="images/addcomponent.png"]
+image::./addcomponent-small.png[role="left", xref="image$./addcomponent.png"]
 
 --
 
@@ -235,7 +235,7 @@ If you click the Test Layout button in the toolbar (image:./testlayoutbutton.png
 [.feature]
 --
 
-image::./unwantedspace-small.png[role="left", link="images/unwantedspace.png"]
+image::./unwantedspace-small.png[role="left", xref="image$./unwantedspace.png"]
 
 --
 
@@ -247,7 +247,7 @@ This happens because the fourth column comprises both text fields and buttons (t
 [.feature]
 --
 
-image::./enclose-small.png[role="left", link="images/enclose.png"]
+image::./enclose-small.png[role="left", xref="image$./enclose.png"]
 
 --
 
@@ -298,7 +298,7 @@ Complete the steps listed below to add a button to an existing subcontainer:
 [.feature]
 --
 
-image::./designsubcontainer-small.png[role="left", link="images/designsubcontainer.png"]
+image::./designsubcontainer-small.png[role="left", xref="image$./designsubcontainer.png"]
 
 --
 
@@ -310,7 +310,7 @@ An empty cell for the new button displays.
 [.feature]
 --
 
-image::./emptycell-small.png[role="left", link="images/emptycell.png"]
+image::./emptycell-small.png[role="left", xref="image$./emptycell.png"]
 
 --
 
@@ -322,7 +322,7 @@ A new  ``jButton1``  button is added.
 [.feature]
 --
 
-image::./newbutton-small.png[role="left", link="images/newbutton.png"]
+image::./newbutton-small.png[role="left", xref="image$./newbutton.png"]
 
 --
 

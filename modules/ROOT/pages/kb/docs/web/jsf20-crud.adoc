@@ -22,7 +22,7 @@
 :jbake-tags: tutorials 
 :jbake-status: published
 :icons: font
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:
@@ -421,7 +421,7 @@ Either right-click in the editor and choose Run Statement, or click the Run SQL 
 [.feature]
 --
 
-image::./consultants-list-small.png[role="left", link="images/consultants-list.png"]
+image::./consultants-list-small.png[role="left", xref="image$./consultants-list.png"]
 
 --
 
@@ -437,7 +437,7 @@ The SQL query used to perform the action displays in the upper portion of the ed
 [.feature]
 --
 
-image::./view-data-table-small.png[role="left", link="images/view-data-table.png"]
+image::./view-data-table-small.png[role="left", xref="image$./view-data-table.png"]
 
 --
 
@@ -485,7 +485,7 @@ You can press Ctrl-Space on JSF tags and their attributes to invoke a documentat
 [.feature]
 --
 
-image::./localized-messages-small.png[role="left", link="images/localized-messages.png"]
+image::./localized-messages-small.png[role="left", xref="image$./localized-messages.png"]
 
 --
 
@@ -769,7 +769,7 @@ You will use the property values that are specified in `glassfish-resources.xml`
 [.feature]
 --
 
-image::./gf-admin-console-sm.png[role="left", link="images/gf-admin-console-lg.png"]
+image::./gf-admin-console-sm.png[role="left", xref="image$./gf-admin-console-lg.png"]
 
 --
 

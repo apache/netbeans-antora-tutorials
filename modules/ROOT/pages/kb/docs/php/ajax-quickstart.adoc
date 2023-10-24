@@ -21,7 +21,7 @@
 :page-layout: tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
-:syntax: true
+:page-syntax: true
 :icons: font
 :source-highlighter: pygments
 :toc: left
@@ -89,7 +89,7 @@ image::./php-name-location.png[title="New PHP Project wizard - Name and Location
 [.feature]
 --
 
-image::./php-run-config.png[role="left", link="images/php-run-config.png"]
+image::./php-run-config.png[role="left", xref="image$./php-run-config.png"]
 
 --
 

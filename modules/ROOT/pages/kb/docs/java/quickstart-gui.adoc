@@ -21,7 +21,7 @@
 :page-layout: tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
-:syntax: true
+:page-syntax: true
 :icons: font
 :source-highlighter: pygments
 :toc: left
@@ -85,7 +85,7 @@ NOTE: To explore the GUI Builder interface with an interactive demo, view the li
 [.feature]
 --
 
-image::./01_gb_ui-small.png[role="left", link="images/01_gb_ui.png"]
+image::./01_gb_ui-small.png[role="left", xref="image$./01_gb_ui.png"]
 
 --
 
@@ -149,7 +149,7 @@ The  ``JPanel``  component appears in the  ``ContactEditorUI``  form with orange
 [.feature]
 --
 
-image::./02_add_panels_1-small.png[role="left", link="images/02_add_panels_1.png"]
+image::./02_add_panels_1-small.png[role="left", xref="image$./02_add_panels_1.png"]
 
 --
 
@@ -167,7 +167,7 @@ The  ``JPanel``  component is extended to span between the container's left and 
 [.feature]
 --
 
-image::./02_add_panels_2-small.png[role="left", link="images/02_add_panels_2.png"]
+image::./02_add_panels_2-small.png[role="left", xref="image$./02_add_panels_2.png"]
 
 --
 
@@ -176,14 +176,14 @@ Now that we've added a panel to contain our UI's Name information, we need to re
 [.feature]
 --
 
-image::./02_add_panels_3-small.png[role="left", link="images/02_add_panels_3.png"]
+image::./02_add_panels_3-small.png[role="left", xref="image$./02_add_panels_3.png"]
 
 --
 
 [.feature]
 --
 
-image::./02_add_panels_4-small.png[role="left", link="images/02_add_panels_4.png"]
+image::./02_add_panels_4-small.png[role="left", xref="image$./02_add_panels_4.png"]
 
 --
 
@@ -191,7 +191,7 @@ image::./02_add_panels_4-small.png[role="left", link="images/02_add_panels_4.png
 [.feature]
 --
 
-image::./02_add_panels_5-small.png[role="left", link="images/02_add_panels_5.png"]
+image::./02_add_panels_5-small.png[role="left", xref="image$./02_add_panels_5.png"]
 
 --
 
@@ -213,7 +213,7 @@ Titled borders are added to both  ``JPanel``  components.
 [.feature]
 --
 
-image::./02_add_borders-small.png[role="left", link="images/02_add_borders.png"]
+image::./02_add_borders-small.png[role="left", xref="image$./02_add_borders.png"]
 
 --
 
@@ -404,7 +404,7 @@ The JLabel snaps into a right-aligned position with the column of JLabels above,
 [.feature]
 --
 
-image::./06_align_1-small.png[role="left", link="images/06_align_1.png"]
+image::./06_align_1-small.png[role="left", xref="image$./06_align_1.png"]
 
 --
 
@@ -431,7 +431,7 @@ The component snaps into a position aligned with the baseline of the text in the
 [.feature]
 --
 
-image::./06_align_2-small.png[role="left", link="images/06_align_2.png"]
+image::./06_align_2-small.png[role="left", xref="image$./06_align_2.png"]
 
 --
 
@@ -446,7 +446,7 @@ As shown in the following illustration, the JComboBox's right edge snaps into al
 [.feature]
 --
 
-image::./06_align_3-small.png[role="left", link="images/06_align_3.png"]
+image::./06_align_3-small.png[role="left", xref="image$./06_align_3.png"]
 
 --
 
@@ -515,7 +515,7 @@ The JList snaps into the position designated by the alignment guidelines and its
 [.feature]
 --
 
-image::./06_align_4-small.png[role="left", link="images/06_align_4.png"]
+image::./06_align_4-small.png[role="left", xref="image$./06_align_4.png"]
 
 --
 
@@ -537,14 +537,14 @@ To add, align, and edit the display text of multiple buttons:
 [.feature]
 --
 
-image::./buttons_1-small.png[role="left", link="images/buttons_1.png"]
+image::./buttons_1-small.png[role="left", xref="image$./buttons_1.png"]
 
 --
 
 [.feature]
 --
 
-image::./buttons_2-small.png[role="left", link="images/buttons_2.png"]
+image::./buttons_2-small.png[role="left", xref="image$./buttons_2.png"]
 
 --
 
@@ -555,7 +555,7 @@ image::./buttons_2-small.png[role="left", link="images/buttons_2.png"]
 [.feature]
 --
 
-image::./buttons_3-small.png[role="left", link="images/buttons_3.png"]
+image::./buttons_3-small.png[role="left", xref="image$./buttons_3.png"]
 
 --
 
@@ -566,7 +566,7 @@ image::./buttons_3-small.png[role="left", link="images/buttons_3.png"]
 [.feature]
 --
 
-image::./buttons_4-small.png[role="left", link="images/buttons_4.png"]
+image::./buttons_4-small.png[role="left", xref="image$./buttons_4.png"]
 
 --
 
@@ -579,7 +579,7 @@ The JButton components snap into the positions designated by the alignment guide
 [.feature]
 --
 
-image::./buttons_5-small.png[role="left", link="images/buttons_5.png"]
+image::./buttons_5-small.png[role="left", xref="image$./buttons_5.png"]
 
 --
 
@@ -599,7 +599,7 @@ The JButtons are set to the same size as the button with the longest name.
 [.feature]
 --
 
-image::./buttons_6-small.png[role="left", link="images/buttons_6.png"]
+image::./buttons_6-small.png[role="left", xref="image$./buttons_6.png"]
 
 --
 
@@ -623,7 +623,7 @@ To indent JRadioButtons below a JLabel:
 [.feature]
 --
 
-image::./07_indent_1-small.png[role="left", link="images/07_indent_1.png"]
+image::./07_indent_1-small.png[role="left", xref="image$./07_indent_1.png"]
 
 --
 
@@ -639,7 +639,7 @@ Three JRadioButtons are added to the form and indented below the  ``Mail Format`
 [.feature]
 --
 
-image::./07_indent_3-small.png[role="left", link="images/07_indent_3.png"]
+image::./07_indent_3-small.png[role="left", xref="image$./07_indent_3.png"]
 
 --
 
@@ -661,7 +661,7 @@ Three JRadioButtons are added to the button group.
 [.feature]
 --
 
-image::./07_group-small.png[role="left", link="images/07_group.png"]
+image::./07_group-small.png[role="left", xref="image$./07_group.png"]
 
 --
 
@@ -688,7 +688,7 @@ To add and edit the display text of buttons:
 [.feature]
 --
 
-image::./08_cancel-small.png[role="left", link="images/08_cancel.png"]
+image::./08_cancel-small.png[role="left", xref="image$./08_cancel.png"]
 
 --
 
@@ -705,7 +705,7 @@ image::./08_cancel-small.png[role="left", link="images/08_cancel.png"]
 [.feature]
 --
 
-image::./08_same_size-small.png[role="left", link="images/08_same_size.png"]
+image::./08_same_size-small.png[role="left", xref="image$./08_same_size.png"]
 
 --
 
@@ -727,7 +727,7 @@ Now that you have successfully built the ContactEditor GUI, you can try your int
 [.feature]
 --
 
-image::./08_preview_gui-small.png[role="left", link="images/08_preview_gui.png"]
+image::./08_preview_gui-small.png[role="left", xref="image$./08_preview_gui.png"]
 
 --
 

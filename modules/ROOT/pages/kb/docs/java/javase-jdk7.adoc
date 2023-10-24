@@ -22,7 +22,7 @@
 :jbake-tags: tutorials 
 :jbake-status: published
 :icons: font
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:
@@ -58,7 +58,7 @@ To check JDK 7 is registered in the NetBeans IDE:
 [.feature]
 --
 
-image::./platform-small.png[role="left", link="images/platform.png"]
+image::./platform-small.png[role="left", xref="image$./platform.png"]
 
 --
 
@@ -80,7 +80,7 @@ To check your project is configured to use the registered JDK for compilation, r
 [.feature]
 --
 
-image::./props-libs-small.png[role="left", link="images/props-libs.png"]
+image::./props-libs-small.png[role="left", xref="image$./props-libs.png"]
 
 --
 
@@ -91,7 +91,7 @@ image::./props-libs-small.png[role="left", link="images/props-libs.png"]
 [.feature]
 --
 
-image::./props-sources-small.png[role="left", link="images/props-sources.png"]
+image::./props-sources-small.png[role="left", xref="image$./props-sources.png"]
 
 --
 
@@ -151,7 +151,7 @@ You can immediately see that the JDK6 parser does not recognize the syntax. The 
 [.feature]
 --
 
-image::./error-small.png[role="left", link="images/error.png"]
+image::./error-small.png[role="left", xref="image$./error.png"]
 
 --
 
@@ -191,7 +191,7 @@ With JDK 7 being the Source/Binary Format, the IDE recognizes such cases and off
 [.feature]
 --
 
-image::./convert-small.png[role="left", link="images/convert.png"]
+image::./convert-small.png[role="left", xref="image$./convert.png"]
 
 --
 
@@ -270,7 +270,7 @@ public class SwitchTest {
 [.feature]
 --
 
-image::./converted-small.png[role="left", link="images/converted.png"]
+image::./converted-small.png[role="left", xref="image$./converted.png"]
 
 --
 

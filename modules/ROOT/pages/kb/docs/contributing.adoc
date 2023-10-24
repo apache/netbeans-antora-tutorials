@@ -112,7 +112,7 @@ Immediately after the level 0 title, we add the metadata of the page, all the "j
 :jbake-tags: tutorials
 :jbake-status: published
 :page-reviewed: 2019-01-25
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:
@@ -197,7 +197,7 @@ Clickable screenshots are generated using a "[.feature]" tag above a paragraph t
 [.feature]
 --
 
-image::./the-title-of-the-image-small.png[role="left", title="Click to enlarge", link="images/the-title-of-the-image-big.png"]
+image::./the-title-of-the-image-small.png[role="left", title="Click to enlarge", xref="image$./the-title-of-the-image-big.png"]
 
 --
 ----
@@ -227,7 +227,7 @@ Use the plain asciidoc construct for source code excerpts (that is, four slashes
  ----
 ----
 
-Other languages are `html`, `xml`, `javascript`, `php`, `python`, `ruby`. Remember to use the `:syntax: true` attribute in the metadata so that syntax highlighting works.
+Other languages are `html`, `xml`, `javascript`, `php`, `python`, `ruby`. Remember to use the `:page-syntax: true` attribute in the metadata so that syntax highlighting works.
 
 === Numbered lists
 

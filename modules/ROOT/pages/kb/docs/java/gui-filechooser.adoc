@@ -21,7 +21,7 @@
 :page-layout: tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
-:syntax: true
+:page-syntax: true
 :icons: font
 :source-highlighter: pygments
 :toc: left
@@ -61,7 +61,7 @@ First you create a new Java Application:
 [.feature]
 --
 
-image::./newproj-small.png[role="left", link="images/newproj.png"]
+image::./newproj-small.png[role="left", xref="image$./newproj.png"]
 
 --
 
@@ -83,7 +83,7 @@ In this section, you create a  ``JFrame``  container and add a few components to
 [.feature]
 --
 
-image::./newjframeform-small.png[role="left", link="images/newjframeform.png"]
+image::./newjframeform-small.png[role="left", xref="image$./newjframeform.png"]
 
 --
 
@@ -103,7 +103,7 @@ image::./newjframeform-small.png[role="left", link="images/newjframeform.png"]
 [.feature]
 --
 
-image::./menubaradded-small.png[role="left", link="images/menubaradded.png"]
+image::./menubaradded-small.png[role="left", xref="image$./menubaradded.png"]
 
 --
 
@@ -117,7 +117,7 @@ image::./menubaradded-small.png[role="left", link="images/menubaradded.png"]
 [.feature]
 --
 
-image::./menuitemadded-small.png[role="left", link="images/menuitemadded.png"]
+image::./menuitemadded-small.png[role="left", xref="image$./menuitemadded.png"]
 
 --
 
@@ -142,7 +142,7 @@ image::./openactionperformednavigator.png[]
 [.feature]
 --
 
-image::./highlighting-small.png[role="left", link="images/highlighting.png"]
+image::./highlighting-small.png[role="left", xref="image$./highlighting.png"]
 
 --
 
@@ -171,7 +171,7 @@ image::./highlighting-small.png[role="left", link="images/highlighting.png"]
 [.feature]
 --
 
-image::./textareadded-small.png[role="left", link="images/textareadded.png"]
+image::./textareadded-small.png[role="left", xref="image$./textareadded.png"]
 
 --
 
@@ -182,7 +182,7 @@ image::./textareadded-small.png[role="left", link="images/textareadded.png"]
 [.feature]
 --
 
-image::./jfilechooserdemoview_final-small.png[role="left", link="images/jfilechooserdemoview_final.png"]
+image::./jfilechooserdemoview_final-small.png[role="left", xref="image$./jfilechooserdemoview_final.png"]
 
 --
 
@@ -255,7 +255,7 @@ Now you add a custom file filter that makes the File Chooser display only  ``*.t
 [.feature]
 --
 
-image::./combobox-small.png[role="left", link="images/combobox.png"]
+image::./combobox-small.png[role="left", xref="image$./combobox.png"]
 
 --
 
@@ -310,7 +310,7 @@ image::./run.png[]
 [.feature]
 --
 
-image::./result_jfilechooserdemo-small.png[role="left", link="images/result_jfilechooserdemo.png"]
+image::./result_jfilechooserdemo-small.png[role="left", xref="image$./result_jfilechooserdemo.png"]
 
 --
 

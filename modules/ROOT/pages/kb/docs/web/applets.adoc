@@ -22,7 +22,7 @@
 :jbake-tags: tutorials 
 :jbake-status: published
 :icons: font
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:
@@ -190,7 +190,7 @@ When you build the  ``HelloWebApplet``  project by choosing Run > Build Project 
 
 [.feature]
 --
-images:./helloapplet-jar-in-files-small.png[role="left", link="images/helloapplet-jar-in-files.png"]
+images:./helloapplet-jar-in-files-small.png[role="left", xref="image$./helloapplet-jar-in-files.png"]
 --
 
 
@@ -221,7 +221,7 @@ You should see something similar to the illustration below (after you allow to r
 
 [.feature]
 --
-images:./appletinbrowser-small.png[role="left", link="images/appletinbrowser.png"]
+images:./appletinbrowser-small.png[role="left", xref="image$./appletinbrowser.png"]
 --
 
 For applet forms, you should see something similar to the following:

@@ -22,7 +22,7 @@
 :jbake-tags: tutorials 
 :jbake-status: published
 :icons: font
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:
@@ -116,7 +116,7 @@ a|
 [.feature]
 --
 
-image:./mockup-index-small.png[role="left", link="images/mockup-index.png"]
+image:./mockup-index-small.png[role="left", xref="image$./mockup-index.png"]
 
 --
 
@@ -130,7 +130,7 @@ a|
 [.feature]
 --
 
-image:./mockup-category-small.png[role="left", link="images/mockup-category.png"]
+image:./mockup-category-small.png[role="left", xref="image$./mockup-category.png"]
 
 --
 a|
@@ -142,7 +142,7 @@ a|
 [.feature]
 --
 
-image:./mockup-cart-small.png[role="left", link="images/mockup-cart.png"]
+image:./mockup-cart-small.png[role="left", xref="image$./mockup-cart.png"]
 
 --
 a|
@@ -164,7 +164,7 @@ a|
 [.feature]
 --
 
-image::./mockup-checkout-small.png[role="left", link="images/mockup-checkout.png"]
+image::./mockup-checkout-small.png[role="left", xref="image$./mockup-checkout.png"]
 
 --
 a|
@@ -179,7 +179,7 @@ a|
 [.feature]
 --
 
-image::./mockup-confirmation-small.png[role="left", link="images/mockup-confirmation.png"]
+image::./mockup-confirmation-small.png[role="left", xref="image$./mockup-confirmation.png"]
 
 --
 a|

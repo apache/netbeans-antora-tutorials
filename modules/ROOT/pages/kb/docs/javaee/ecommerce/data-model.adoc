@@ -22,7 +22,7 @@
 :jbake-tags: tutorials 
 :jbake-status: published
 :icons: font
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:
@@ -103,7 +103,7 @@ Start by running MySQL Workbench. In this exercise, you use Workbench to design 
 [.feature]
 --
 
-image::./workbench-home.png[role="left", link="images/workbench-home.png"]
+image::./workbench-home.png[role="left", xref="image$./workbench-home.png"]
 
 --
 
@@ -124,7 +124,7 @@ A new panel opens in the bottom region of the interface, enabling you to specify
 [.feature]
 --
 
-image::./workbench.png[role="left", link="images/workbench.png"]
+image::./workbench.png[role="left", xref="image$./workbench.png"]
 
 --
 
@@ -152,7 +152,7 @@ Start by creating a new entity-relationship diagram in MySQL Workbench. You can 
 [.feature]
 --
 
-image::./workbench-empty-canvas.png[role="left", link="images/workbench-empty-canvas.png"]
+image::./workbench-empty-canvas.png[role="left", xref="image$./workbench-empty-canvas.png"]
 
 --
 
@@ -175,7 +175,7 @@ image::./wb-new-entity-table.png[title="Click the New Table icon to drag empty t
 [.feature]
 --
 
-image::./wb-customer-table.png[role="left", link="images/wb-customer-table.png"]
+image::./wb-customer-table.png[role="left", xref="image$./wb-customer-table.png"]
 
 --
 

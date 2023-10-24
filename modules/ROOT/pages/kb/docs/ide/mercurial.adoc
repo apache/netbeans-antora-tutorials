@@ -21,7 +21,7 @@
 :page-layout: tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
-:syntax: true
+:page-syntax: true
 :icons: font
 :source-highlighter: pygments
 :toc: left
@@ -49,7 +49,7 @@ To set the path to the Mercurial executable file in the IDE:
 [.feature]
 --
 
-image::./options-dialog-small.png[role="left", link="images/options-dialog.png"]
+image::./options-dialog-small.png[role="left", xref="image$./options-dialog.png"]
 
 --
 
@@ -92,7 +92,7 @@ If you want to connect to a remote repository from the IDE, then check out files
 [.feature]
 --
 
-image::./clone-repository-small.png[role="left", link="images/clone-repository.png"]
+image::./clone-repository-small.png[role="left", xref="image$./clone-repository.png"]
 
 --
 
@@ -105,7 +105,7 @@ NOTE: The IDE's drop-down menus are context-sensitive, i.e. the available option
 [.feature]
 --
 
-image::./clone-username-small.png[role="left", link="images/clone-username.png"]
+image::./clone-username-small.png[role="left", xref="image$./clone-username.png"]
 
 --
 
@@ -116,7 +116,7 @@ image::./clone-username-small.png[role="left", link="images/clone-username.png"]
 [.feature]
 --
 
-image::./clone-push-small.png[role="left", link="images/clone-push.png"]
+image::./clone-push-small.png[role="left", xref="image$./clone-push.png"]
 
 --
 
@@ -129,7 +129,7 @@ image::./clone-push-small.png[role="left", link="images/clone-push.png"]
 [.feature]
 --
 
-image::./clone-destination-small.png[role="left", link="images/clone-destination.png"]
+image::./clone-destination-small.png[role="left", xref="image$./clone-destination.png"]
 
 --
 
@@ -154,7 +154,7 @@ To import a project to a repository:
 [.feature]
 --
 
-image::./repositoryrootpath.png[role="left", link="images/repositoryrootpath.png"]
+image::./repositoryrootpath.png[role="left", xref="image$./repositoryrootpath.png"]
 
 --
 
@@ -167,7 +167,7 @@ Choose Window > Output to open the Output window and view the progress.
 [.feature]
 --
 
-image::./output-small.png[role="left", link="images/output.png"]
+image::./output-small.png[role="left", xref="image$./output.png"]
 
 --
 
@@ -176,7 +176,7 @@ NOTE: After the project files are placed under Mercurial version control, they g
 [.feature]
 --
 
-image::./status-small.png[role="left", link="images/status.png"]
+image::./status-small.png[role="left", xref="image$./status.png"]
 
 --
 
@@ -186,7 +186,7 @@ image::./status-small.png[role="left", link="images/status.png"]
 [.feature]
 --
 
-image::./commit-dialog-small.png[role="left", link="images/commit-dialog.png"]
+image::./commit-dialog-small.png[role="left", xref="image$./commit-dialog.png"]
 
 --
 
@@ -232,14 +232,14 @@ a|
 [.feature]
 --
 
-image::./left-ui-small.png[role="left", link="images/left-ui.png"]
+image::./left-ui-small.png[role="left", xref="image$./left-ui.png"]
 
 --
 a|
 [.feature]
 --
 
-image::./right-ui-small.png[role="left", link="images/right-ui.png"]
+image::./right-ui-small.png[role="left", xref="image$./right-ui.png"]
 
 --
 
@@ -345,7 +345,7 @@ For example, you can perform the following actions on a file:
 |* *Revert Modifications*: Opens the Revert Modifications dialog which you can use to specify parameters for reverting any local changes to revisions maintained in the repository.
  |[.feature]
 --
-image:./search-rev-small.png[role="left", link="images/search-rev.png"]
+image:./search-rev-small.png[role="left", xref="image$./search-rev.png"]
 --
  
 |===
@@ -359,7 +359,7 @@ When you perform a diff, a graphical Diff Viewer opens for the selected file(s) 
 [.feature]
 --
 
-image::./diff-viewer-small.png[role="left", link="images/diff-viewer.png"]
+image::./diff-viewer-small.png[role="left", xref="image$./diff-viewer.png"]
 
 --
 
@@ -405,7 +405,7 @@ NetBeans IDE enables you to merge changes between repository revisions and your 
 [.feature]
 --
 
-image::./mercurial-merge-small.png[role="left", link="images/mercurial-merge.png"]
+image::./mercurial-merge-small.png[role="left", xref="image$./mercurial-merge.png"]
 
 --
 
@@ -441,7 +441,7 @@ The Commit dialog opens, displaying files that are about to be committed to the 
 [.feature]
 --
 
-image::./mercurial-commit-dialog-small.png[role="left", link="images/mercurial-commit-dialog.png"]
+image::./mercurial-commit-dialog-small.png[role="left", xref="image$./mercurial-commit-dialog.png"]
 
 --
 

@@ -21,7 +21,7 @@
 :page-layout: tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
-:syntax: true
+:page-syntax: true
 :icons: font
 :source-highlighter: pygments
 :toc: left
@@ -42,7 +42,7 @@ NOTE: To get the NetBeans ClearCase plugin, go to the Plugin Manager in the IDE 
 [.feature]
 --
 
-image::./cc-plugin-small.png[role="left", link="images/cc-plugin.png"]
+image::./cc-plugin-small.png[role="left", xref="image$./cc-plugin.png"]
 
 --
 
@@ -69,7 +69,7 @@ NetBeans IDE automatically tries to identify the location of the  ``cleartool`` 
 [.feature]
 --
 
-image::./cc-options-small.jpg[role="left", link="images/cc-options.jpg"]
+image::./cc-options-small.jpg[role="left", xref="image$./cc-options.jpg"]
 
 --
 
@@ -117,7 +117,7 @@ Now that your project is created, you can synchronize it with a ClearCase server
 [.feature]
 --
 
-image::./add-dialog-small.jpg[role="left", link="images/add-dialog.jpg"]
+image::./add-dialog-small.jpg[role="left", xref="image$./add-dialog.jpg"]
 
 --
 
@@ -172,7 +172,7 @@ a|
 [.feature]
 --
 
-image:./left-ui-small.png[role="left", link="images/left-ui.png"]
+image:./left-ui-small.png[role="left", xref="image$./left-ui.png"]
 
 --
 |image:./right-ui.png[title="Versioning color encoding displays in editor's right margin"] 
@@ -248,7 +248,7 @@ To open the Versioning window, select a versioned file or folder (e.g. from the 
 [.feature]
 --
 
-image::./versioning-window-small.jpg[role="left", link="images/versioning-window.jpg"]
+image::./versioning-window-small.jpg[role="left", xref="image$./versioning-window.jpg"]
 
 --
 
@@ -282,7 +282,7 @@ a|
 [.feature]
 --
 
-image:./annotations-small.jpg[role="left", link="images/annotations.jpg"]
+image:./annotations-small.jpg[role="left", xref="image$./annotations.jpg"]
 
 --
  
@@ -302,7 +302,7 @@ When you perform a diff, a graphical Diff Viewer opens for the selected file(s) 
 [.feature]
 --
 
-image::./diff-viewer-small.jpg[role="left", link="images/diff-viewer.jpg"]
+image::./diff-viewer-small.jpg[role="left", xref="image$./diff-viewer.jpg"]
 
 --
 
@@ -352,7 +352,7 @@ The Checkin dialog opens, listing:
 [.feature]
 --
 
-image::./checkin-dialog-small.png[role="left", link="images/checkin-dialog.png"]
+image::./checkin-dialog-small.png[role="left", xref="image$./checkin-dialog.png"]
 
 --
 

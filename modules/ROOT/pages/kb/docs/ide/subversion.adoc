@@ -21,7 +21,7 @@
 :page-layout: tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
-:syntax: true
+:page-syntax: true
 :icons: font
 :source-highlighter: pygments
 :toc: left
@@ -65,7 +65,7 @@ To set the path to the Subversion executable file in the IDE:
 [.feature]
 --
 
-image::./svn-options-small.png[role="left", link="images/svn-options.png"]
+image::./svn-options-small.png[role="left", xref="image$./svn-options.png"]
 
 --
 
@@ -143,7 +143,7 @@ For more help with `svn+ssh`, see: xref:wiki::wiki/FaqSubversionSSH.adoc[+How do
 [.feature]
 --
 
-image::./checkout-small.png[role="left", link="images/checkout.png"]
+image::./checkout-small.png[role="left", xref="image$./checkout.png"]
 
 --
 
@@ -170,7 +170,7 @@ To import a project to a repository:
 [.feature]
 --
 
-image::./import-small.png[role="left", link="images/import.png"]
+image::./import-small.png[role="left", xref="image$./import.png"]
 
 --
 
@@ -215,7 +215,7 @@ a|
 [.feature]
 --
 
-image::./left-ui-small.png[role="left", link="images/left-ui.png"]
+image::./left-ui-small.png[role="left", xref="image$./left-ui.png"]
 
 --
 |image:./right-ui.png[title="versioning color encoding displayed in editor's right margin"] 
@@ -298,7 +298,7 @@ To open the Versioning window, select a versioned file or folder (e.g. from the 
 [.feature]
 --
 
-image::./versioning-window-small.png[role="left", link="images/versioning-window.png"]
+image::./versioning-window-small.png[role="left", xref="image$./versioning-window.png"]
 
 --
 
@@ -340,7 +340,7 @@ Enables you to search for and compare multiple revisions of the selected file in
  |[.feature]
 --
 
-image::./history-viewer-small.png[role="left", link="images/history-viewer.png"]
+image::./history-viewer-small.png[role="left", xref="image$./history-viewer.png"]
 
 --
  
@@ -351,7 +351,7 @@ Allows you to mark the file to be excluded when performing a commit.
  |[.feature]
 --
 
-image::./exclude-from-commit-small.png[role="left", link="images/exclude-from-commit.png"]
+image::./exclude-from-commit-small.png[role="left", xref="image$./exclude-from-commit.png"]
 
 --
  
@@ -362,7 +362,7 @@ Opens the Revert Modifications dialog, enabling you to revert any delete actions
  |[.feature]
 --
 
-image::./revert-mods-small.png[role="left", link="images/revert-mods.png"]
+image::./revert-mods-small.png[role="left", xref="image$./revert-mods.png"]
 
 --
  
@@ -375,7 +375,7 @@ When specifying revisions, you can click Search to open the Search Revisions dia
  |[.feature]
 --
 
-image::./search-rev-small.png[role="left", link="images/search-rev.png"]
+image::./search-rev-small.png[role="left", xref="image$./search-rev.png"]
 
 --
  
@@ -390,7 +390,7 @@ When you perform a diff, a graphical Diff Viewer opens for the selected file(s) 
 [.feature]
 --
 
-image::./diff-viewer-small.png[role="left", link="images/diff-viewer.png"]
+image::./diff-viewer-small.png[role="left", xref="image$./diff-viewer.png"]
 
 --
 
@@ -453,7 +453,7 @@ The following scenario describes a common use-case: You have checked out the tru
 [.feature]
 --
 
-image::./svn-merge-small.png[role="left", link="images/svn-merge.png"]
+image::./svn-merge-small.png[role="left", xref="image$./svn-merge.png"]
 
 --
 
@@ -493,7 +493,7 @@ The Merge Conflicts Resolver displays the two conflicting revisions side-by-side
 [.feature]
 --
 
-image::./conflict-resolver-small.png[role="left", link="images/conflict-resolver.png"]
+image::./conflict-resolver-small.png[role="left", xref="image$./conflict-resolver.png"]
 
 --
 
@@ -511,7 +511,7 @@ The Commit dialog opens, displaying files that are about to be committed to the 
 [.feature]
 --
 
-image::./commit-dialog-small.png[role="left", link="images/commit-dialog.png"]
+image::./commit-dialog-small.png[role="left", xref="image$./commit-dialog.png"]
 
 --
 

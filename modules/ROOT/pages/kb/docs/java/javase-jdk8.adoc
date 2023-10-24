@@ -21,7 +21,7 @@
 :page-layout: tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
-:syntax: true
+:page-syntax: true
 :icons: font
 :source-highlighter: pygments
 :toc: left
@@ -62,7 +62,7 @@ After JDK 8 is downloaded and installed on your system, it needs to be registere
 [.feature]
 --
 
-image::./jdk8_small.png[role="left", link="images/jdk8.png"]
+image::./jdk8_small.png[role="left", xref="image$./jdk8.png"]
 
 --
 
@@ -74,7 +74,7 @@ JDK 8 is registered as a platform in the IDE.
 [.feature]
 --
 
-image::./jdk8registered_small.png[role="left", link="images/jdk8registered.png"]
+image::./jdk8registered_small.png[role="left", xref="image$./jdk8registered.png"]
 
 --
 
@@ -104,7 +104,7 @@ The IDE creates and opens the Java SE project in the Projects window.
 [.feature]
 --
 
-image::./prj_jdk8_small.png[role="left", link="images/prj_jdk8.png"]
+image::./prj_jdk8_small.png[role="left", xref="image$./prj_jdk8.png"]
 
 --
 
@@ -115,7 +115,7 @@ image::./prj_jdk8_small.png[role="left", link="images/prj_jdk8.png"]
 [.feature]
 --
 
-image::./prj_source_jdk8_small.png[role="left", link="images/prj_source_jdk8.png"]
+image::./prj_source_jdk8_small.png[role="left", xref="image$./prj_source_jdk8.png"]
 
 --
 
@@ -196,7 +196,7 @@ The IDE allows you to switch between the profiles and the full JRE when needed.
 [.feature]
 --
 
-image::./prj_src_profile_small.png[role="left", link="images/prj_src_profile.png"]
+image::./prj_src_profile_small.png[role="left", xref="image$./prj_src_profile.png"]
 
 --
 
@@ -210,7 +210,7 @@ The IDE displays errors to notify that the AnagramGame project is not compliant 
 [.feature]
 --
 
-image::./profile_small.png[role="left", link="images/profile.png"]
+image::./profile_small.png[role="left", xref="image$./profile.png"]
 
 --
 
@@ -237,7 +237,7 @@ For example, the AnagramGame project features a pre-lambda construct in the  ``A
 [.feature]
 --
 
-image::./lambda_small.png[role="left", link="images/lambda.png"]
+image::./lambda_small.png[role="left", xref="image$./lambda.png"]
 
 --
 
@@ -246,7 +246,7 @@ After you click the light bulb in the margin or press Alt-Enter, the IDE shows t
 [.feature]
 --
 
-image::./lambda_clicked_small.png[role="left", link="images/lambda_clicked.png"]
+image::./lambda_clicked_small.png[role="left", xref="image$./lambda_clicked.png"]
 
 --
 
@@ -255,7 +255,7 @@ If the Use Lambda hint is selected, the IDE converts the anonymous inner class i
 [.feature]
 --
 
-image::./lambda_converted_small.png[role="left", link="images/lambda_converted.png"]
+image::./lambda_converted_small.png[role="left", xref="image$./lambda_converted.png"]
 
 --
 
@@ -266,7 +266,7 @@ NOTE: For more information on initiating the Inspect operation in the IDE, see l
 [.feature]
 --
 
-image::./inspect_small.png[role="left", link="images/inspect.png"]
+image::./inspect_small.png[role="left", xref="image$./inspect.png"]
 
 --
 
@@ -275,7 +275,7 @@ After you press the Inspect button to launch the inspection, the IDE identifies 
 [.feature]
 --
 
-image::./lambda_inspection_small.png[role="left", link="images/lambda_inspection.png"]
+image::./lambda_inspection_small.png[role="left", xref="image$./lambda_inspection.png"]
 
 --
 
@@ -286,7 +286,7 @@ NOTE: For more information on initiating the Inspect and Transform operation, se
 [.feature]
 --
 
-image::./lambda_transform_small.png[role="left", link="images/lambda_transform.png"]
+image::./lambda_transform_small.png[role="left", xref="image$./lambda_transform.png"]
 
 --
 

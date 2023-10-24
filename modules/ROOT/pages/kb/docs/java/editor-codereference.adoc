@@ -24,7 +24,7 @@
 :jbake-tags: tutorials
 :jbake-status: published
 :page-reviewed: 2019-02-19
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:

@@ -22,7 +22,7 @@
 :jbake-tags: tutorials
 :jbake-status: published
 :icons: font
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:
@@ -65,7 +65,7 @@ Choose Debug > Take GUI Snapshot from the main menu.When you choose Take GUI Sna
 [.feature]
 --
 
-image::./debug-fullscreen.png[role="left", link="images/debug-fullscreen.png"]
+image::./debug-fullscreen.png[role="left", xref="image$./debug-fullscreen.png"]
 
 --
 

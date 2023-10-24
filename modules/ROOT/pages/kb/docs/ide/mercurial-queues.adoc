@@ -21,7 +21,7 @@
 :page-layout: tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
-:syntax: true
+:page-syntax: true
 :icons: font
 :source-highlighter: pygments
 :toc: left
@@ -58,7 +58,7 @@ The Create Patch dialog box displays.
 [.feature]
 --
 
-image::./create-patch-small.png[role="left", link="images/create-patch.png"]
+image::./create-patch-small.png[role="left", xref="image$./create-patch.png"]
 
 --
 
@@ -87,7 +87,7 @@ The Refresh Patch dialog box displays.
 [.feature]
 --
 
-image::./refresh-patch-small.png[role="left", link="images/refresh-patch.png"]
+image::./refresh-patch-small.png[role="left", xref="image$./refresh-patch.png"]
 
 --
 
@@ -115,7 +115,7 @@ The Diff Viewer displays differences found in the current patch and all your unc
 [.feature]
 --
 
-image::./qdiff-small.png[role="left", link="images/qdiff.png"]
+image::./qdiff-small.png[role="left", xref="image$./qdiff.png"]
 
 --
 

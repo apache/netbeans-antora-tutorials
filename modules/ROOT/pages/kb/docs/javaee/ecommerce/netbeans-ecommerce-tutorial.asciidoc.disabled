@@ -487,7 +487,7 @@ In this scenario, we've produced _mockups_ of the primary pages the user expects
 |===
 |[.feature]
 --
-image::images/mockup-index-small.png[role="left", link="images/mockup-index.png"]
+image::images/mockup-index-small.png[role="left", xref="image$./mockup-index.png"]
 --
  |
 
@@ -500,7 +500,7 @@ The welcome page is the website's home page, and entry point for the application
 
 |[.feature]
 --
-image::images/mockup-category-small.png[role="left", link="images/mockup-category.png"]
+image::images/mockup-category-small.png[role="left", xref="image$./mockup-category.png"]
 --
  |
 
@@ -513,7 +513,7 @@ The category page provides a listing of all products within the selected categor
 
 |[.feature]
 --
-image::images/mockup-cart-small.png[role="left", link="images/mockup-cart.png"]
+image::images/mockup-cart-small.png[role="left", xref="image$./mockup-cart.png"]
 --
  |
 
@@ -532,7 +532,7 @@ The cart page lists all items held in the user's shopping cart. It displays prod
 
 |[.feature]
 --
-image::images/mockup-checkout-small.png[role="left", link="images/mockup-checkout.png"]
+image::images/mockup-checkout-small.png[role="left", xref="image$./mockup-checkout.png"]
 --
  |
 
@@ -547,7 +547,7 @@ The user is able to send personal details over a secure channel.
 
 |[.feature]
 --
-image::images/mockup-confirmation-small.png[role="left", link="images/mockup-confirmation.png"]
+image::images/mockup-confirmation-small.png[role="left", xref="image$./mockup-confirmation.png"]
 --
  |
 
@@ -892,7 +892,7 @@ http://localhost:8080/AffableBean/
 . Click Finish. The IDE generates a skeleton project named `AffableBean` that adheres to the link:http://java.sun.com/blueprints/code/projectconventions.html#99632[+J2EE Blueprints conventions for web application structure+]. The IDE displays various windows in its default layout. 
 [.feature]
 --
-image::images/ide-default-layout.png[role="left", link="images/ide-default-layout.png"]
+image::images/ide-default-layout.png[role="left", xref="image$./ide-default-layout.png"]
 --
 
 [start=10]
@@ -1334,7 +1334,7 @@ Start by running MySQL Workbench. In this exercise, you use Workbench to design 
 
 [.feature]
 --
-image::images/workbench-home.png[role="left", link="images/workbench-home.png"]
+image::images/workbench-home.png[role="left", xref="image$./workbench-home.png"]
 --
 
 If you are working in Workbench 5.2, click *Create New EER Model* beneath the Data Modeling heading in the Home screen.
@@ -1353,7 +1353,7 @@ If you are working in Workbench 5.2, click *Create New EER Model* beneath the Da
 A new panel opens in the bottom region of the interface, enabling you to specify settings for the new schema. 
 [.feature]
 --
-image::images/workbench.png[role="left", link="images/workbench.png"]
+image::images/workbench.png[role="left", xref="image$./workbench.png"]
 --
 
 [start=2]
@@ -1377,7 +1377,7 @@ Start by creating a new entity-relationship diagram in MySQL Workbench. You can 
 [tips]#'EER' stands for Enhanced Entity-Relationship.# 
 [.feature]
 --
-image::images/workbench-empty-canvas.png[role="left", link="images/workbench-empty-canvas.png"]
+image::images/workbench-empty-canvas.png[role="left", xref="image$./workbench-empty-canvas.png"]
 --
 
 [start=2]
@@ -1397,7 +1397,7 @@ image::images/wb-new-entity-table.png[title="Click the New Table icon to drag em
 * *Comments:* `maintains customer details`
 [.feature]
 --
-image::images/wb-customer-table.png[role="left", link="images/wb-customer-table.png"]
+image::images/wb-customer-table.png[role="left", xref="image$./wb-customer-table.png"]
 --
 
 The link:http://www.innodb.com/[+InnoDB+] engine provides foreign key support, which is utilized in this tutorial. Later, under <<forwardEngineer,Forward-Engineering to the Database>>, you set the default storage engine used in Workbench to InnoDB.
@@ -2425,7 +2425,7 @@ image::images/add-jsp-prop-group-dialog.png[title="Use the Add JSP Property Grou
 . Switch to the Pages tab again, and in the Include Preludes and Include Codas fields, enter the paths to the `header.jspf` and `footer.jspf` files, respectively. You can click the Browse button and navigate to the files in the provided dialog. 
 [.feature]
 --
-image::images/jsp-prop-groups-small.png[role="left", link="images/jsp-prop-groups.png"]
+image::images/jsp-prop-groups-small.png[role="left", xref="image$./jsp-prop-groups.png"]
 --
 
 [start=10]
@@ -4958,7 +4958,7 @@ image::images/session-variable.png[title="Hover your mouse over variables and ex
 . Hover your mouse over the `session` variable again. Now you see the value currently set to the `session` variable. 
 [.feature]
 --
-image::images/session-variable-set.png[role="left", link="images/session-variable-set.png"]
+image::images/session-variable-set.png[role="left", xref="image$./session-variable-set.png"]
 --
 
 In NetBeans 6.9, you can click the grey pointer ( image::images/grey-pointer.png[] ) in the popup to expand a list of variable values contained in the highlighted element.
@@ -4998,7 +4998,7 @@ session.setAttribute("cart", cart);
 To witness this, open the debugger's Variables window. Choose Window > Debugging > Variables, or press Alt-Shift-1 (Ctrl-Shift-1 on Mac). 
 [.feature]
 --
-image::images/variables-win-session.png[role="left", link="images/variables-win-session.png"]
+image::images/variables-win-session.png[role="left", xref="image$./variables-win-session.png"]
 --
  
 If you expand the session > session > attributes node, you are able to view the objects that are bound to the session. In the above image, there are two items currently bound to the session (highlighted). These are `selectedCategory` and `categoryProducts`, instantiated in the `ControllerServlet` at lines 83 and 89, respectively. Both of these items were bound earlier, when you clicked a category image, and the `ControllerServlet` processed the category page request.
@@ -5007,7 +5007,7 @@ If you expand the session > session > attributes node, you are able to view the 
 . Press F8 (fn-F8 on Mac) to execute line 161. The `cart` object is bound to the session, and the Variables window updates to reflect changes. In the Variables window, note that the session now contains three attributes, the third being the newly initialized `ShoppingCart` object (highlighted below). 
 [.feature]
 --
-image::images/variables-win-session-cart.png[role="left", link="images/variables-win-session-cart.png"]
+image::images/variables-win-session-cart.png[role="left", xref="image$./variables-win-session-cart.png"]
 --
  
 
@@ -5043,7 +5043,7 @@ The debugger enables you to keep an eye on variables as it steps through code. T
 . Examine the `session` variable which you created a watch on (<<step21,step 21>> above). The `items.add(scItem)` statement in line 51 added the new `ShoppingCartItem` to the `items` list in the `ShoppingCart`. This is evident by drilling into the third attribute (i.e., the `cart` variable) contained in the session. 
 [.feature]
 --
-image::images/variables-window-add-item.png[role="left", link="images/variables-window-add-item.png"]
+image::images/variables-window-add-item.png[role="left", xref="image$./variables-window-add-item.png"]
 --
  
 At this stage, you can see how an `HttpSession` is created for the request, how a `ShoppingCart` object is created and attached to the session, and how a `ShoppingCartItem` is created based on the user's product choice, then added to the `ShoppingCart`'s list of `items`. The only remaining action is to forward the request to the `category.jsp` view.
@@ -5065,7 +5065,7 @@ image::images/breakpoint-jsp.png[title="You can suspend the debugger in JSP page
 . In the Variables window, expand the Implicit Objects > pageContext > session > session > attributes node. This provides access to the session object, just as you saw earlier when working in the `ControllerServlet`. In fact, you may note that the session which you created a watch on in step 21 above points to the very same object. Here you can verify that the value of `${cart.numberOfItems}` equals '`1`'. 
 [.feature]
 --
-image::images/variables-window-number-of-items.png[role="left", link="images/variables-window-number-of-items.png"]
+image::images/variables-window-number-of-items.png[role="left", xref="image$./variables-window-number-of-items.png"]
 --
 
 Maximize the Variables window, or any window in the IDE, by right-clicking the window header, then choosing Maximize Window (Shift-Esc).
@@ -5174,7 +5174,7 @@ Click the Ascending Sort ( image::images/ascending-sort-btn.png[] ) button so th
 Under the Request tab, note the requested URI (`/AffableBean/addToCart`), the HTTP method (`POST`), and the request parameters (`productId` and `submit`). 
 [.feature]
 --
-image::images/http-monitor-add-to-cart.png[role="left", link="images/http-monitor-add-to-cart.png"]
+image::images/http-monitor-add-to-cart.png[role="left", xref="image$./http-monitor-add-to-cart.png"]
 --
 
 [start=11]
@@ -5391,7 +5391,7 @@ image::images/glassfish-error-report.png[title="NullPointerException occurs when
 . Examine the GlassFish server log in the IDE. Open the Output window (Ctrl-4; ⌘-4 on Mac) and select the GlassFish Server tab. Scroll to the bottom of the log to examine the error's stack trace. 
 [.feature]
 --
-image::images/gf-server-output.png[role="left", link="images/gf-server-output.png"]
+image::images/gf-server-output.png[role="left", xref="image$./gf-server-output.png"]
 --
  
 The server log indicates that a `NullPointerException` occurred at line 184 in the `ControllerServlet`. The Output window forms a link to the line where the exception occurred.
@@ -5834,7 +5834,7 @@ public class ControllerServlet extends HttpServlet {
 Note that we haven't created the `placeOrder` method yet. This is why the editor flags an error. You can use the tip that displays in the left margin, which allows you to generate the method signature in the appropriate class. 
 [.feature]
 --
-image::images/tool-tip-create-method.png[role="left", link="images/tool-tip-create-method.png"]
+image::images/tool-tip-create-method.png[role="left", xref="image$./tool-tip-create-method.png"]
 --
 
 [start=4]
@@ -6372,7 +6372,7 @@ To overcome this, you explicitly set the transaction for rollback in the `catch`
 . Run the project and step through the business process flow. When you submit an order, return to the IDE and examine the server log. You'll see output similar to the following: 
 [.feature]
 --
-image::images/transaction-output.png[role="left", link="images/transaction-output.png"]
+image::images/transaction-output.png[role="left", xref="image$./transaction-output.png"]
 --
 
 Press Shift-Esc on the Output window to maximize it.

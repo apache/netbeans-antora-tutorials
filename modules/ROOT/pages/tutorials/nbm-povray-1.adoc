@@ -21,7 +21,7 @@
 :page-layout: platform_tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:
@@ -173,7 +173,7 @@ Click Next or press Enter.
 1. On the next screen, you are asked to supply a prefix for a the names of several Java classes that will be generated. Enter "Povray". This screen also requests an icon. Any 16x16 gif or png will do, or you can use 
 [.feature]
 --
-image::./povray_povicon.gif[role="left", link="images/povray_povicon.gif"]
+image::./povray_povicon.gif[role="left", xref="image$./povray_povicon.gif"]
 --
 .
 

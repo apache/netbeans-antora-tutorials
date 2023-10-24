@@ -22,7 +22,7 @@
 :jbake-tags: tutorials 
 :jbake-status: published
 :icons: font
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:
@@ -110,7 +110,7 @@ For example, when creating a new PHP project use the New Project Wizard (click t
 [.feature]
 --
 
-image::./new-php-project.png[role="left", link="images/new-php-project.png"]
+image::./new-php-project.png[role="left", xref="image$./new-php-project.png"]
 
 --
 

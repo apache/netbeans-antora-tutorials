@@ -21,7 +21,7 @@
 :page-layout: tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
-:syntax: true
+:page-syntax: true
 :icons: font
 :source-highlighter: pygments
 :toc: left
@@ -72,7 +72,7 @@ The  ``All Analyzers``  configuration deploys all static code analysis tools ava
 [.feature]
 --
 
-image::./allconfig-small.png[role="left", link="images/allconfig.png"]
+image::./allconfig-small.png[role="left", xref="image$./allconfig.png"]
 
 --
 
@@ -83,7 +83,7 @@ The results of the analysis are displayed in the Inspector Window as a tree view
 [.feature]
 --
 
-image::./all-small.png[role="left", link="images/all.png"]
+image::./all-small.png[role="left", xref="image$./all.png"]
 
 --
 
@@ -92,7 +92,7 @@ The description of the currently selected in the tree view finding is displayed 
 [.feature]
 --
 
-image::./alldescription-small.png[role="left", link="images/alldescription.png"]
+image::./alldescription-small.png[role="left", xref="image$./alldescription.png"]
 
 --
 
@@ -102,7 +102,7 @@ Press kbd:[Alt+Enter], click the black arrow pointing to the right at the end of
 [.feature]
 --
 
-image::./suppress-small.png[role="left", link="images/suppress.png"]
+image::./suppress-small.png[role="left", xref="image$./suppress.png"]
 
 --
 
@@ -124,7 +124,7 @@ NOTE: You can define a scope (a file, package, or project(s)) for the  ``NetBean
 [.feature]
 --
 
-image::./hints-small.png[role="left", link="images/hints.png"]
+image::./hints-small.png[role="left", xref="image$./hints.png"]
 
 --
 
@@ -177,7 +177,7 @@ image::./configurations-db.png[]
 [.feature]
 --
 
-image::./select-inspections-small.png[role="left", link="images/select-inspections.png"]
+image::./select-inspections-small.png[role="left", xref="image$./select-inspections.png"]
 
 --
 
@@ -210,7 +210,7 @@ The created  ``newConfig``  configuration is available in the Configuration drop
 [.feature]
 --
 
-image::./newconfig-inspect-small.png[role="left", link="images/newconfig-inspect.png"]
+image::./newconfig-inspect-small.png[role="left", xref="image$./newconfig-inspect.png"]
 
 --
 
@@ -251,7 +251,7 @@ You can inspect your code for a particular deficiency in your source code using 
 [.feature]
 --
 
-image::./single-inspection-small.png[role="left", link="images/single-inspection.png"]
+image::./single-inspection-small.png[role="left", xref="image$./single-inspection.png"]
 
 --
 
@@ -260,7 +260,7 @@ image::./single-inspection-small.png[role="left", link="images/single-inspection
 [.feature]
 --
 
-image::./hint-inspection-small.png[role="left", link="images/hint-inspection.png"]
+image::./hint-inspection-small.png[role="left", xref="image$./hint-inspection.png"]
 
 --
 

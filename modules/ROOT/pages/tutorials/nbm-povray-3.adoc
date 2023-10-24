@@ -21,7 +21,7 @@
 :page-layout: platform_tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:
@@ -671,7 +671,7 @@ The final method, `findPath()` allows a user to use a keystroke to select whatev
 [.feature]
 --
 imageone 
-image:./povray_scenes.gif[role="left", link="images/povray_scenes.gif"]
+image:./povray_scenes.gif[role="left", xref="image$./povray_scenes.gif"]
 --
 . Create a new java package "resources" underneath `org.netbeans.examples.modules.povproject`, and copy or save the image file there, modifying the file name in the source code if necesary.
 

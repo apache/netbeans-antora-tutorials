@@ -21,7 +21,7 @@
 :page-layout: tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
-:syntax: true
+:page-syntax: true
 :icons: font
 :source-highlighter: pygments
 :toc: left
@@ -72,7 +72,7 @@ When the installation is complete, the Java (TM) ME Platform SDK Device Manager 
 [.feature]
 --
 
-image::./plugins-small.png[role="left", link="images/plugins.png"]
+image::./plugins-small.png[role="left", xref="image$./plugins.png"]
 
 --
 
@@ -86,7 +86,7 @@ image::./plugins-small.png[role="left", link="images/plugins.png"]
 [.feature]
 --
 
-image::./installer-small.png[role="left", link="images/installer.png"]
+image::./installer-small.png[role="left", xref="image$./installer.png"]
 
 --
 
@@ -105,7 +105,7 @@ The Java Platform Manager dialog box displays.
 [.feature]
 --
 
-image::./jpmanager-small.png[role="left", link="images/jpmanager.png"]
+image::./jpmanager-small.png[role="left", xref="image$./jpmanager.png"]
 
 --
 
@@ -129,7 +129,7 @@ The IDE displays the Choose directory to search for platforms dialog box.
 [.feature]
 --
 
-image::./jpdetected-small.png[role="left", link="images/jpdetected.png"]
+image::./jpdetected-small.png[role="left", xref="image$./jpdetected.png"]
 
 --
 
@@ -138,7 +138,7 @@ The Oracle Java ME Platform is now registered in the Netbeans IDE.
 [.feature]
 --
 
-image::./jpregistered-small.png[role="left", link="images/jpregistered.png"]
+image::./jpregistered-small.png[role="left", xref="image$./jpregistered.png"]
 
 --
 
@@ -165,7 +165,7 @@ The New Project dialog box displays.
 [.feature]
 --
 
-image::./newappname-small.png[role="left", link="images/newappname.png"]
+image::./newappname-small.png[role="left", xref="image$./newappname.png"]
 
 --
 
@@ -223,7 +223,7 @@ The IMPNGPhone1 emulator starts and displays the EmbeddedApp application running
 [.feature]
 --
 
-image::./emulator-small.png[role="left", link="images/emulator.png"]
+image::./emulator-small.png[role="left", xref="image$./emulator.png"]
 
 --
 
@@ -234,7 +234,7 @@ In the Output window, you should see the output from the program, `Hello, world!
 [.feature]
 --
 
-image::./output-small.png[role="left", link="images/output.png"]
+image::./output-small.png[role="left", xref="image$./output.png"]
 
 --
 
@@ -272,7 +272,7 @@ Before profiling your application, you need to install the Java ME SDK Tools plu
 [.feature]
 --
 
-image::./available-plugins-small.png[role="left", link="images/available-plugins.png"]
+image::./available-plugins-small.png[role="left", xref="image$./available-plugins.png"]
 
 --
 
@@ -299,7 +299,7 @@ NOTE: You are prompted to integrate the profiler when a project is going to be p
 [.feature]
 --
 
-image::./enable-small.png[role="left", link="images/enable.png"]
+image::./enable-small.png[role="left", xref="image$./enable.png"]
 
 --
 
@@ -324,7 +324,7 @@ The IDE displays the profile data in the `cpu:_time_` window.
 [.feature]
 --
 
-image::./cpu-small.png[role="left", link="images/cpu.png"]
+image::./cpu-small.png[role="left", xref="image$./cpu.png"]
 
 --
 

@@ -23,7 +23,7 @@
 :jbake-status: published
 :page-reviewed: 2019-01-26
 :icons: font
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:

@@ -22,7 +22,7 @@
 :jbake-tags: tutorials 
 :jbake-status: published
 :icons: font
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:
@@ -150,7 +150,7 @@ http://localhost:8080/AffableBean/
 [.feature]
 --
 
-image::./ide-default-layout.png[role="left", link="images/ide-default-layout.png"]
+image::./ide-default-layout.png[role="left", xref="image$./ide-default-layout.png"]
 
 --
 

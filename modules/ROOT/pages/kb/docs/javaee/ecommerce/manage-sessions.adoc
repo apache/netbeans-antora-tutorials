@@ -22,7 +22,7 @@
 :jbake-tags: tutorials 
 :jbake-status: published
 :icons: font
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:
@@ -408,7 +408,7 @@ image::./session-variable.png[title="Hover your mouse over variables and express
 [.feature]
 --
 
-image::./session-variable-set.png[role="left", link="images/session-variable-set.png"]
+image::./session-variable-set.png[role="left", xref="image$./session-variable-set.png"]
 
 --
 
@@ -453,7 +453,7 @@ To witness this, open the debugger's Variables window. Choose Window > Debugging
 [.feature]
 --
 
-image::./variables-win-session.png[role="left", link="images/variables-win-session.png"]
+image::./variables-win-session.png[role="left", xref="image$./variables-win-session.png"]
 
 --
  
@@ -464,7 +464,7 @@ If you expand the session > session > attributes node, you are able to view the 
 [.feature]
 --
 
-image::./variables-win-session-cart.png[role="left", link="images/variables-win-session-cart.png"]
+image::./variables-win-session-cart.png[role="left", xref="image$./variables-win-session-cart.png"]
 
 --
  
@@ -504,7 +504,7 @@ The debugger enables you to keep an eye on variables as it steps through code. T
 [.feature]
 --
 
-image::./variables-window-add-item.png[role="left", link="images/variables-window-add-item.png"]
+image::./variables-window-add-item.png[role="left", xref="image$./variables-window-add-item.png"]
 
 --
  
@@ -529,7 +529,7 @@ image::./breakpoint-jsp.png[title="You can suspend the debugger in JSP pages"]
 [.feature]
 --
 
-image::./variables-window-number-of-items.png[role="left", link="images/variables-window-number-of-items.png"]
+image::./variables-window-number-of-items.png[role="left", xref="image$./variables-window-number-of-items.png"]
 
 --
 
@@ -649,7 +649,7 @@ Under the Request tab, note the requested URI (`/AffableBean/addToCart`), the HT
 [.feature]
 --
 
-image::./http-monitor-add-to-cart.png[role="left", link="images/http-monitor-add-to-cart.png"]
+image::./http-monitor-add-to-cart.png[role="left", xref="image$./http-monitor-add-to-cart.png"]
 
 --
 
@@ -880,7 +880,7 @@ image::./glassfish-error-report.png[title="NullPointerException occurs when requ
 [.feature]
 --
 
-image::./gf-server-output.png[role="left", link="images/gf-server-output.png"]
+image::./gf-server-output.png[role="left", xref="image$./gf-server-output.png"]
 
 --
  

@@ -22,7 +22,7 @@
 :jbake-tags: tutorials 
 :jbake-status: published
 :icons: font
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:
@@ -116,7 +116,7 @@ A description of the selected plugin is displayed in the right pane of the Plugi
 [.feature]
 --
 
-image::./add-plugins-sm.png[role="left", link="images/add-plugins.png"]
+image::./add-plugins-sm.png[role="left", xref="image$./add-plugins.png"]
 
 --
 
@@ -141,7 +141,7 @@ Various update centers are already registered with the IDE by default. To see a 
 [.feature]
 --
 
-image::./pluginsmanager-settings-sm.png[role="left", link="images/pluginsmanager-settings.png"]
+image::./pluginsmanager-settings-sm.png[role="left", xref="image$./pluginsmanager-settings.png"]
 
 --
 
@@ -165,7 +165,7 @@ After you install the plugin, the NetBeans Plugin Portal Update Center is added 
 [.feature]
 --
 
-image::./portal-uc-plugin-sm.png[role="left", link="images/portal-uc-plugin.png"]
+image::./portal-uc-plugin-sm.png[role="left", xref="image$./portal-uc-plugin.png"]
 
 --
 
@@ -176,7 +176,7 @@ Click Reload Catalog to update the list of plugins.
 [.feature]
 --
 
-image::./portal-uc-list-sm.png[role="left", link="images/portal-uc-list.png"]
+image::./portal-uc-list-sm.png[role="left", xref="image$./portal-uc-list.png"]
 
 --
 

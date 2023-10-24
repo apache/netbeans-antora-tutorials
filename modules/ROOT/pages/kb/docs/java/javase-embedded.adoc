@@ -21,7 +21,7 @@
 :page-layout: tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
-:syntax: true
+:page-syntax: true
 :icons: font
 :source-highlighter: pygments
 :toc: left
@@ -50,7 +50,7 @@ NOTE: The remote operating system must be UNIX. Windows is not supported.
 [.feature]
 --
 
-image::./plugins-small.png[role="left", link="images/plugins.png"]
+image::./plugins-small.png[role="left", xref="image$./plugins.png"]
 
 --
 
@@ -75,7 +75,7 @@ The Java Platform Manager dialog box displays.
 [.feature]
 --
 
-image::./jpmanager-small.png[role="left", link="images/jpmanager.png"]
+image::./jpmanager-small.png[role="left", xref="image$./jpmanager.png"]
 
 --
 
@@ -90,7 +90,7 @@ The IDE displays the Add Java Platform dialog box.
 [.feature]
 --
 
-image::./addjp-small.png[role="left", link="images/addjp.png"]
+image::./addjp-small.png[role="left", xref="image$./addjp.png"]
 
 --
 
@@ -108,7 +108,7 @@ A new remote Java SE platform displays in the Java Platform Manager dialog box.
 [.feature]
 --
 
-image::./jpremote-small.png[role="left", link="images/jpremote.png"]
+image::./jpremote-small.png[role="left", xref="image$./jpremote.png"]
 
 --
 
@@ -130,7 +130,7 @@ Now let us create a project that is going to be first run in the IDE and then on
 [.feature]
 --
 
-image::./wizard-small.png[role="left", link="images/wizard.png"]
+image::./wizard-small.png[role="left", xref="image$./wizard.png"]
 
 --
 
@@ -172,7 +172,7 @@ To develop a Java SE embedded application on a remote platform using link:https:
 [.feature]
 --
 
-image::./jdk8-small.png[role="left", link="images/jdk8.png"]
+image::./jdk8-small.png[role="left", xref="image$./jdk8.png"]
 
 --
 
@@ -184,7 +184,7 @@ JDK 8 is registered as a platform in the IDE.
 [.feature]
 --
 
-image::./jdk8registered-small.png[role="left", link="images/jdk8registered.png"]
+image::./jdk8registered-small.png[role="left", xref="image$./jdk8registered.png"]
 
 --
 
@@ -200,7 +200,7 @@ image::./jdk8registered-small.png[role="left", link="images/jdk8registered.png"]
 [.feature]
 --
 
-image::./prj-jdk8-small.png[role="left", link="images/prj-jdk8.png"]
+image::./prj-jdk8-small.png[role="left", xref="image$./prj-jdk8.png"]
 
 --
 
@@ -211,7 +211,7 @@ image::./prj-jdk8-small.png[role="left", link="images/prj-jdk8.png"]
 [.feature]
 --
 
-image::./prj-source-jdk8-small.png[role="left", link="images/prj-source-jdk8.png"]
+image::./prj-source-jdk8-small.png[role="left", xref="image$./prj-source-jdk8.png"]
 
 --
 
@@ -222,7 +222,7 @@ image::./prj-source-jdk8-small.png[role="left", link="images/prj-source-jdk8.png
 [.feature]
 --
 
-image::./prj-jdk8-profile-small.png[role="left", link="images/prj-jdk8-profile.png"]
+image::./prj-jdk8-profile-small.png[role="left", xref="image$./prj-jdk8-profile.png"]
 
 --
 
@@ -246,7 +246,7 @@ You can run and debug the application on a remote device after setting the proje
 [.feature]
 --
 
-image::./config-runtime-small.png[role="left", link="images/config-runtime.png"]
+image::./config-runtime-small.png[role="left", xref="image$./config-runtime.png"]
 
 --
 
@@ -259,7 +259,7 @@ If you run the project on a remote platform (Run > Run Project (project name)), 
 [.feature]
 --
 
-image::./run-remote-small.png[role="left", link="images/run-remote.png"]
+image::./run-remote-small.png[role="left", xref="image$./run-remote.png"]
 
 --
 
@@ -270,7 +270,7 @@ image::./run-remote-small.png[role="left", link="images/run-remote.png"]
 [.feature]
 --
 
-image::./switch-config-small.png[role="left", link="images/switch-config.png"]
+image::./switch-config-small.png[role="left", xref="image$./switch-config.png"]
 
 --
 

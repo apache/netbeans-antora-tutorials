@@ -22,7 +22,7 @@
 :jbake-tags: tutorials 
 :jbake-status: published
 :icons: font
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:
@@ -649,7 +649,7 @@ The following steps demonstrate how to enable the Default Principal To Role Mapp
 [.feature]
 --
 
-image::./gf-admin-console-security.png[role="left", link="images/gf-admin-console-security.png"]
+image::./gf-admin-console-security.png[role="left", xref="image$./gf-admin-console-security.png"]
 
 --
  

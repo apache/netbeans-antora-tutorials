@@ -21,7 +21,7 @@
 :page-layout: tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
-:syntax: true
+:page-syntax: true
 :icons: font
 :source-highlighter: pygments
 :toc: left
@@ -48,7 +48,7 @@ The *Single Inspection* option in the *Inspect and Transform* dialog box (*Refac
 [.feature]
 --
 
-image::./manage-inspections-small.png[role="left", link="images/manage-inspections.png"]
+image::./manage-inspections-small.png[role="left", xref="image$./manage-inspections.png"]
 
 --
 
@@ -57,7 +57,7 @@ The Search field enables you to check if a required inspection is available usin
 [.feature]
 --
 
-image::./search-small.png[role="left", link="images/search.png"]
+image::./search-small.png[role="left", xref="image$./search.png"]
 
 --
 
@@ -76,7 +76,7 @@ The suggested refactoring changes display in the preview panel.
 [.feature]
 --
 
-image::./single-inspection-small.png[role="left", link="images/single-inspection.png"]
+image::./single-inspection-small.png[role="left", xref="image$./single-inspection.png"]
 
 --
 +
@@ -100,7 +100,7 @@ The  ``Migrate to JDK 5``  configuration available in the IDE by default incorpo
 [.feature]
 --
 
-image::./jdk5-conf-small.png[role="left", link="images/jdk5-conf.png"]
+image::./jdk5-conf-small.png[role="left", xref="image$./jdk5-conf.png"]
 
 --
 
@@ -113,7 +113,7 @@ The  ``Migrate to JDK 7``  configuration available in the IDE by default incorpo
 [.feature]
 --
 
-image::./jdk7-conf-small.png[role="left", link="images/jdk7-conf.png"]
+image::./jdk7-conf-small.png[role="left", xref="image$./jdk7-conf.png"]
 
 --
 
@@ -130,7 +130,7 @@ Changes that convert the code to JDK 7 syntax display in the preview panel.
 [.feature]
 --
 
-image::./jdk7-ref-small.png[role="left", link="images/jdk7-ref.png"]
+image::./jdk7-ref-small.png[role="left", xref="image$./jdk7-ref.png"]
 
 --
 +
@@ -143,7 +143,7 @@ The  ``Migrate to JDK 8``  configuration available in the IDE by default incorpo
 [.feature]
 --
 
-image::./jdk8-conf-small.png[role="left", link="images/jdk8-conf.png"]
+image::./jdk8-conf-small.png[role="left", xref="image$./jdk8-conf.png"]
 
 --
 
@@ -163,7 +163,7 @@ NOTE: To configure the code style rules for import statements:
 [.feature]
 --
 
-image::./org-imports-small.png[role="left", link="images/org-imports.png"]
+image::./org-imports-small.png[role="left", xref="image$./org-imports.png"]
 
 --
 +
@@ -180,7 +180,7 @@ The preview panel displays one occurrence proposed for the Import section of the
 [.feature]
 --
 
-image::./imports-ref-small.png[role="left", link="images/imports-ref.png"]
+image::./imports-ref-small.png[role="left", xref="image$./imports-ref.png"]
 
 --
 +
@@ -202,7 +202,7 @@ A  `Custom > Inspection`  node is created in the Inspections list.
 [.feature]
 --
 
-image::./custom-hint-small.png[role="left", link="images/custom-hint.png"]
+image::./custom-hint-small.png[role="left", xref="image$./custom-hint.png"]
 
 --
 +
@@ -212,7 +212,7 @@ image::./custom-hint-small.png[role="left", link="images/custom-hint.png"]
 [.feature]
 --
 
-image::./script-small.png[role="left", link="images/script.png"]
+image::./script-small.png[role="left", xref="image$./script.png"]
 
 --
 +
@@ -221,7 +221,7 @@ image::./script-small.png[role="left", link="images/script.png"]
 [.feature]
 --
 
-image::./hint-file-small.png[role="left", link="images/hint-file.png"]
+image::./hint-file-small.png[role="left", xref="image$./hint-file.png"]
 
 --
 +
@@ -238,7 +238,7 @@ Your custom inspection is done and ready to be applied.
 [.feature]
 --
 
-image::./mycustomhint-small.png[role="left", link="images/mycustomhint.png"]
+image::./mycustomhint-small.png[role="left", xref="image$./mycustomhint.png"]
 
 --
 +

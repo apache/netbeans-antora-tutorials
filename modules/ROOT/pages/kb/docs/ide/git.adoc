@@ -21,7 +21,7 @@
 :page-layout: tutorial
 :jbake-tags: tutorials
 :jbake-status: published
-:syntax: true
+:page-syntax: true
 :icons: font
 :source-highlighter: pygments
 :toc: left
@@ -42,7 +42,7 @@ To initialize a Git repository from existing files that are not in source contro
 [.feature]
 --
 
-image::./initialize-git-repo-small.png[role="left", link="images/initialize-git-repo.png"]
+image::./initialize-git-repo-small.png[role="left", xref="image$./initialize-git-repo.png"]
 
 --
 
@@ -68,7 +68,7 @@ To get a copy of an already existing Git repository, you need to clone it. Make 
 [.feature]
 --
 
-image::./clone-wizard-small.png[role="left", link="images/clone-wizard.png"]
+image::./clone-wizard-small.png[role="left", xref="image$./clone-wizard.png"]
 
 --
 
@@ -113,7 +113,7 @@ NOTE: You need to have a GitHub account and be a project member in order to clon
 [.feature]
 --
 
-image::./github-repo-small.png[role="left", link="images/github-repo.png"]
+image::./github-repo-small.png[role="left", xref="image$./github-repo.png"]
 
 --
 
@@ -123,7 +123,7 @@ image::./github-repo-small.png[role="left", link="images/github-repo.png"]
 [.feature]
 --
 
-image::./github-branches-small.png[role="left", link="images/github-branches.png"]
+image::./github-branches-small.png[role="left", xref="image$./github-branches.png"]
 
 --
 
@@ -141,7 +141,7 @@ By default Clone Name is filled out with the actual Git repository name.
 [.feature]
 --
 
-image::./github-destination-small.png[role="left", link="images/github-destination.png"]
+image::./github-destination-small.png[role="left", xref="image$./github-destination.png"]
 
 --
 
@@ -305,7 +305,7 @@ To open the Versioning view, select a versioned file or folder (e.g. from the Pr
 [.feature]
 --
 
-image::./versioning-view-small.png[role="left", link="images/versioning-view.png"]
+image::./versioning-view-small.png[role="left", xref="image$./versioning-view.png"]
 
 --
 
@@ -350,7 +350,7 @@ You can access other Git commands in the Versioning view by selecting a table ro
 [.feature]
 --
 
-image::./versioning-right-click-small.png[role="left", link="images/versioning-right-click.png"]
+image::./versioning-right-click-small.png[role="left", xref="image$./versioning-right-click.png"]
 
 --
 
@@ -367,7 +367,7 @@ A graphical Diff Viewer opens for the selected file(s) and revisions in the IDE'
 [.feature]
 --
 
-image::./diff-viewer-small.png[role="left", link="images/diff-viewer.png"]
+image::./diff-viewer-small.png[role="left", xref="image$./diff-viewer.png"]
 
 --
 
@@ -458,7 +458,7 @@ The  ``Commit``  dialog box displays.
 [.feature]
 --
 
-image::./commit-small.png[role="left", link="images/commit.png"]
+image::./commit-small.png[role="left", xref="image$./commit.png"]
 
 --
 
@@ -523,7 +523,7 @@ The Create Branch dialog box displays.
 [.feature]
 --
 
-image::./create-branch-small.png[role="left", link="images/create-branch.png"]
+image::./create-branch-small.png[role="left", xref="image$./create-branch.png"]
 
 --
 
@@ -536,7 +536,7 @@ The branch is added to the  ``Branches/Local``  folder of the Git repository.
 [.feature]
 --
 
-image::./branch-added-small.png[role="left", link="images/branch-added.png"]
+image::./branch-added-small.png[role="left", xref="image$./branch-added.png"]
 
 --
 
@@ -552,7 +552,7 @@ The Checkout Selected Revision dialog box displays.
 [.feature]
 --
 
-image::./chkout-rev-small.png[role="left", link="images/chkout-rev.png"]
+image::./chkout-rev-small.png[role="left", xref="image$./chkout-rev.png"]
 
 --
 
@@ -576,7 +576,7 @@ The Checkout Selected Paths dialog box displays.
 [.feature]
 --
 
-image::./chkout-path-small.png[role="left", link="images/chkout-path.png"]
+image::./chkout-path-small.png[role="left", xref="image$./chkout-path.png"]
 
 --
 
@@ -598,7 +598,7 @@ The Merge Revision dialog box displays.
 [.feature]
 --
 
-image::./merge-small.png[role="left", link="images/merge.png"]
+image::./merge-small.png[role="left", xref="image$./merge.png"]
 
 --
 
@@ -644,7 +644,7 @@ The Fetch from Remote Repository wizard displays.
 [.feature]
 --
 
-image::./fetch-small.png[role="left", link="images/fetch.png"]
+image::./fetch-small.png[role="left", xref="image$./fetch.png"]
 
 --
 
@@ -664,7 +664,7 @@ The Pull from Remote Repository wizard displays.
 [.feature]
 --
 
-image::./pull-small.png[role="left", link="images/pull.png"]
+image::./pull-small.png[role="left", xref="image$./pull.png"]
 
 --
 
@@ -684,7 +684,7 @@ The Push to Remote Repository wizard displays.
 [.feature]
 --
 
-image::./push-small.png[role="left", link="images/push.png"]
+image::./push-small.png[role="left", xref="image$./push.png"]
 
 --
 

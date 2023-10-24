@@ -22,7 +22,7 @@
 :jbake-tags: tutorials 
 :jbake-status: published
 :icons: font
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:
@@ -194,7 +194,7 @@ When you click OK the JMX Agent URL field is updated with the full URL according
 [.feature]
 --
 
-image::./jmx-jmxagenturl2-sm.png[role="left", link="images/jmx-jmxagenturl2.png"]
+image::./jmx-jmxagenturl2-sm.png[role="left", xref="image$./jmx-jmxagenturl2.png"]
 
 --
 

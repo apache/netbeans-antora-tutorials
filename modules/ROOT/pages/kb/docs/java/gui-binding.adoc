@@ -21,7 +21,7 @@
 :page-layout: tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
-:syntax: true
+:page-syntax: true
 :icons: font
 :source-highlighter: pygments
 :toc: left
@@ -71,7 +71,7 @@ To illustrate the concept of beans binding and how the IDE supports it, we will 
 
 [.feature]
 --
-image:./numberslider-small.png[role="left", link="images/numberslider.png"]
+image:./numberslider-small.png[role="left", xref="image$./numberslider.png"]
 --
 
 * Clear the Create Main Class checkbox.
@@ -93,7 +93,7 @@ image:./numberslider-small.png[role="left", link="images/numberslider.png"]
 [.feature]
 --
 
-image::./numberslider2-small.png[role="left", link="images/numberslider2.png"]
+image::./numberslider2-small.png[role="left", xref="image$./numberslider2.png"]
 
 --
 
@@ -115,7 +115,7 @@ The resulting form might look something like the screenshot below. However, posi
 [.feature]
 --
 
-image::./slider-textfield-small.png[role="left", link="images/slider-textfield.png"]
+image::./slider-textfield-small.png[role="left", xref="image$./slider-textfield.png"]
 
 --
 
@@ -139,7 +139,7 @@ NOTE: Bindings can be two-way (read/write), so that changes in the target are au
 [.feature]
 --
 
-image::./bind-dialog-small.png[role="left", link="images/bind-dialog.png"]
+image::./bind-dialog-small.png[role="left", xref="image$./bind-dialog.png"]
 
 --
 
@@ -244,7 +244,7 @@ Before binding a component to data from a database, you need to have done the fo
 [.feature]
 --
 
-image::./entity-wizard1-small.png[role="left", link="images/entity-wizard1.png"]
+image::./entity-wizard1-small.png[role="left", xref="image$./entity-wizard1.png"]
 
 --
 
@@ -255,7 +255,7 @@ image::./entity-wizard1-small.png[role="left", link="images/entity-wizard1.png"]
 [.feature]
 --
 
-image::./entity-wizard2-small.png[role="left", link="images/entity-wizard2.png"]
+image::./entity-wizard2-small.png[role="left", xref="image$./entity-wizard2.png"]
 
 --
 
@@ -297,7 +297,7 @@ A JTable is created and its columns are bound to the columns in the database tab
 [.feature]
 --
 
-image::./bind-dialog-table-small.png[role="left", link="images/bind-dialog-table.png"]
+image::./bind-dialog-table-small.png[role="left", xref="image$./bind-dialog-table.png"]
 
 --
 
@@ -311,7 +311,7 @@ image::./bind-dialog-table-small.png[role="left", link="images/bind-dialog-table
 [.feature]
 --
 
-image::./source-selected-small.png[role="left", link="images/source-selected.png"]
+image::./source-selected-small.png[role="left", xref="image$./source-selected.png"]
 
 --
 
@@ -337,7 +337,7 @@ image::./source-selected-small.png[role="left", link="images/source-selected.png
 [.feature]
 --
 
-image::./jlist-binding-small.png[role="left", link="images/jlist-binding.png"]
+image::./jlist-binding-small.png[role="left", xref="image$./jlist-binding.png"]
 
 --
 
@@ -363,7 +363,7 @@ image::./jlist-binding-small.png[role="left", link="images/jlist-binding.png"]
 [.feature]
 --
 
-image::./combo-binding-small.png[role="left", link="images/combo-binding.png"]
+image::./combo-binding-small.png[role="left", xref="image$./combo-binding.png"]
 
 --
 
@@ -413,7 +413,7 @@ jComboBox1.setRenderer(new DefaultListCellRenderer() {
 [.feature]
 --
 
-image::./custom-small.png[role="left", link="images/custom.png"]
+image::./custom-small.png[role="left", xref="image$./custom.png"]
 
 --
 

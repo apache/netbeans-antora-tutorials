@@ -21,7 +21,7 @@
 :page-layout: tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
-:syntax: true
+:page-syntax: true
 :icons: font
 :source-highlighter: pygments
 :toc: left
@@ -190,7 +190,7 @@ The Edit Layout Space dialog box is displayed.
 [.feature]
 --
 
-image::./bottom-small.png[role="left", link="images/bottom.png"]
+image::./bottom-small.png[role="left", xref="image$./bottom.png"]
 
 --
 

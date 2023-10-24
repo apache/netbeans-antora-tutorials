@@ -21,7 +21,7 @@
 :page-layout: tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
-:syntax: true
+:page-syntax: true
 :icons: font
 :source-highlighter: pygments
 :toc: left
@@ -62,7 +62,7 @@ The sample form opens in the GUI Builder Design view.
 [.feature]
 --
 
-image::./sampleform-small.png[role="left", link="images/sampleform.png"]
+image::./sampleform-small.png[role="left", xref="image$./sampleform.png"]
 
 --
 
@@ -80,7 +80,7 @@ The Customize Layout dialog box opens as shown below.
 [.feature]
 --
 
-image::./customizerdialog-small.png[role="left", link="images/customizerdialog.png"]
+image::./customizerdialog-small.png[role="left", xref="image$./customizerdialog.png"]
 
 --
 
@@ -135,7 +135,7 @@ The components are now placed in accordance with the target layout.
 [.feature]
 --
 
-image::./layout1-small.png[role="left", link="images/layout1.png"]
+image::./layout1-small.png[role="left", xref="image$./layout1.png"]
 
 --
 
@@ -157,7 +157,7 @@ The  ``First Name:``  and  ``Surname:``  text fields are extended to span betwee
 [.feature]
 --
 
-image::./tfieldsresized-small.png[role="left", link="images/tfieldsresized.png"]
+image::./tfieldsresized-small.png[role="left", xref="image$./tfieldsresized.png"]
 
 --
 
@@ -171,7 +171,7 @@ To make the text fields wide enough to fill their display areas horizontally wit
 [.feature]
 --
 
-image::./horizontalset-small.png[role="left", link="images/horizontalset.png"]
+image::./horizontalset-small.png[role="left", xref="image$./horizontalset.png"]
 
 --
 
@@ -228,7 +228,7 @@ The  ``State``  combo-box is anchored to the left side of the form when the latt
 [.feature]
 --
 
-image::./comboanchored-small.png[role="left", link="images/comboanchored.png"]
+image::./comboanchored-small.png[role="left", xref="image$./comboanchored.png"]
 
 --
 
@@ -265,7 +265,7 @@ Your form should look now like the one from the  ``ContactsBasicFinal.java``  fi
 [.feature]
 --
 
-image::./contactsbasicfinal-small.png[role="left", link="images/contactsbasicfinal.png"]
+image::./contactsbasicfinal-small.png[role="left", xref="image$./contactsbasicfinal.png"]
 
 --
 

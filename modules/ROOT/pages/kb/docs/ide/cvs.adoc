@@ -21,7 +21,7 @@
 :page-layout: tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
-:syntax: true
+:page-syntax: true
 :icons: font
 :source-highlighter: pygments
 :toc: left
@@ -88,7 +88,7 @@ For more help with accessing local repositories, see: xref:wiki::wiki/FaqHowToSe
 [.feature]
 --
 
-image::./cvs-checkout-small.png[role="left", link="images/cvs-checkout.png"]
+image::./cvs-checkout-small.png[role="left", xref="image$./cvs-checkout.png"]
 
 --
 
@@ -113,7 +113,7 @@ To import a project to a repository:
 [.feature]
 --
 
-image::./folder-to-import-small.png[role="left", link="images/folder-to-import.png"]
+image::./folder-to-import-small.png[role="left", xref="image$./folder-to-import.png"]
 
 --
 
@@ -160,7 +160,7 @@ a|
 [.feature]
 --
 
-image::./left-ui-small.png[role="left", link="images/left-ui.png"]
+image::./left-ui-small.png[role="left", xref="image$./left-ui.png"]
 
 --
 |image:./right-ui.png[title="versioning color encoding displayed in editor's right margin"] 
@@ -222,7 +222,7 @@ File status labels provide a textual indication of the status of versioned files
 [.feature]
 --
 
-image::./cvs-options-small.png[role="left", link="images/cvs-options.png"]
+image::./cvs-options-small.png[role="left", xref="image$./cvs-options.png"]
 
 --
 
@@ -250,7 +250,7 @@ To open the Versioning window, select a versioned file or folder (e.g. from the 
 [.feature]
 --
 
-image::./cvs-versioning-window-small.png[role="left", link="images/cvs-versioning-window.png"]
+image::./cvs-versioning-window-small.png[role="left", xref="image$./cvs-versioning-window.png"]
 
 --
 
@@ -291,7 +291,7 @@ a|
 [.feature]
 --
 
-image::./history-viewer-small.png[role="left", link="images/history-viewer.png"]
+image::./history-viewer-small.png[role="left", xref="image$./history-viewer.png"]
 
 --
 
@@ -303,7 +303,7 @@ a|
 [.feature]
 --
 
-image::./exclude-from-commit-small.png[role="left", link="images/exclude-from-commit.png"]
+image::./exclude-from-commit-small.png[role="left", xref="image$./exclude-from-commit.png"]
 
 --
 
@@ -315,7 +315,7 @@ a|
 [.feature]
 --
 
-image::./cvs-confirm-overwrite-small.png[role="left", link="images/cvs-confirm-overwrite.png"]
+image::./cvs-confirm-overwrite-small.png[role="left", xref="image$./cvs-confirm-overwrite.png"]
 
 --
  
@@ -330,7 +330,7 @@ When you perform a diff, a graphical Diff Viewer opens for the selected file(s) 
 [.feature]
 --
 
-image::./diff-viewer-small.png[role="left", link="images/diff-viewer.png"]
+image::./diff-viewer-small.png[role="left", xref="image$./diff-viewer.png"]
 
 --
 
@@ -393,7 +393,7 @@ The following simple use-case demonstrates how you can apply the Merge dialog to
 [.feature]
 --
 
-image::./cvs-branch-dialog-small.png[role="left", link="images/cvs-branch-dialog.png"]
+image::./cvs-branch-dialog-small.png[role="left", xref="image$./cvs-branch-dialog.png"]
 
 --
 
@@ -418,7 +418,7 @@ In the dialog, specify the following criteria:
 [.feature]
 --
 
-image::./cvs-merge-branches-small.png[role="left", link="images/cvs-merge-branches.png"]
+image::./cvs-merge-branches-small.png[role="left", xref="image$./cvs-merge-branches.png"]
 
 --
 
@@ -455,7 +455,7 @@ The Merge Conflicts Resolver displays the two conflicting revisions side-by-side
 [.feature]
 --
 
-image::./conflict-resolver-small.png[role="left", link="images/conflict-resolver.png"]
+image::./conflict-resolver-small.png[role="left", xref="image$./conflict-resolver.png"]
 
 --
 
@@ -473,7 +473,7 @@ The Commit dialog opens, displaying files that are about to be committed to the 
 [.feature]
 --
 
-image::./cvs-commit-dialog-small.png[role="left", link="images/cvs-commit-dialog.png"]
+image::./cvs-commit-dialog-small.png[role="left", xref="image$./cvs-commit-dialog.png"]
 
 --
 

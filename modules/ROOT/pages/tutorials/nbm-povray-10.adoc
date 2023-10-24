@@ -21,7 +21,7 @@
 :page-layout: platform_tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:
@@ -37,7 +37,7 @@ At this stage, you have completed the application, which should look like this:
 
 [.feature]
 --
-image::./povray_71_ch7_pic2.png[role="left", link="images/pic1.png"]
+image::./povray_71_ch7_pic2.png[role="left", xref="image$./povray_71_ch7_pic2.png"]
 --
 
 Additional steps to take to improve and enhance the application:

@@ -22,7 +22,7 @@
 :jbake-tags: tutorials 
 :jbake-status: published
 :icons: font
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:
@@ -388,7 +388,7 @@ Here is what you should see at this stage [click to view larger image]:
 
 [.feature]
 --
-image:./jmx-initmanagement-sm.png[role="left", link="images/jmx-initmanagement.png"]
+image:./jmx-initmanagement-sm.png[role="left", xref="image$./jmx-initmanagement.png"]
 --
 
 
@@ -462,7 +462,7 @@ Here is what you should see at this stage [click to view larger image]:
 
 [.feature]
 --
-image:./jmx-initmanagement2-sm.png[role="left", link="images/jmx-initmanagement2.png"]
+image:./jmx-initmanagement2-sm.png[role="left", xref="image$./jmx-initmanagement2.png"]
 --
 
 You now need to add code to track the user's anagram solving experience.
@@ -502,7 +502,7 @@ You should now see the following in the editor [click to view larger image]:
 
 [.feature]
 --
-image:./jmx-stopthinking-sm.png[role="left", link="images/jmx-stopthinking.png"]
+image:./jmx-stopthinking-sm.png[role="left", xref="image$./jmx-stopthinking.png"]
 --
 
 You have now finished linking the JMX management layer to the application layer. In the next section you will build and run the Anagrams Game application and look at the exposed management information through the JConsole GUI.
@@ -555,7 +555,7 @@ The solutions to the anagrams (abstraction, ambiguous, arithmetic, backslash,...
 [.feature]
 --
 
-image::./jmx-jconsole-mbeans2-sm.png[role="left", link="images/jmx-jconsole-mbeans2.png"]
+image::./jmx-jconsole-mbeans2-sm.png[role="left", xref="image$./jmx-jconsole-mbeans2.png"]
 
 --
 

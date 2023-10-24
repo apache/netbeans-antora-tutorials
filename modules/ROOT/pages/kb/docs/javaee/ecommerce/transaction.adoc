@@ -22,7 +22,7 @@
 :jbake-tags: tutorials 
 :jbake-status: published
 :icons: font
-:syntax: true
+:page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:
@@ -253,7 +253,7 @@ Note that we haven't created the `placeOrder` method yet. This is why the editor
 [.feature]
 --
 
-image::./tool-tip-create-method.png[role="left", link="images/tool-tip-create-method.png"]
+image::./tool-tip-create-method.png[role="left", xref="image$./tool-tip-create-method.png"]
 
 --
 
@@ -799,7 +799,7 @@ To overcome this, you explicitly set the transaction for rollback in the `catch`
 [.feature]
 --
 
-image::./transaction-output.png[role="left", link="images/transaction-output.png"]
+image::./transaction-output.png[role="left", xref="image$./transaction-output.png"]
 
 --
 

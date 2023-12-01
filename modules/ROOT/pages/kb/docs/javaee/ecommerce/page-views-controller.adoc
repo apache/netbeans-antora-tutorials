@@ -1039,10 +1039,10 @@ xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 
 === NetBeans Books
 
-* xref:front::articles/netbeans-tips-and-tricks-book.adoc[+100 NetBeans IDE Tips and Tricks+]
+* xref:kb/articles/netbeans-tips-and-tricks-book.adoc[+100 NetBeans IDE Tips and Tricks+]
 * link:http://www.apress.com/book/view/1590598954[+Pro NetBeans IDE 6 Rich Client Platform Edition+]
 * link:http://apress.com/book/view/1430219548[+Beginning Java EE 6 Platform with GlassFish 3: From Novice to Professional+]
-* xref:front::articles/books.adoc[+More books about NetBeans IDE+]
+* xref:kb/articles/books.adoc[+More books about NetBeans IDE+]
 
 
 === External Resources

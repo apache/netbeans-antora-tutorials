@@ -212,7 +212,7 @@ When working with JSP/Servlet technology, there are four scope objects available
 |*Page* |Data that is only valid in the context of a single page (JSPs only) |`[n/a]` |`pageScope` 
 |===
 
-If you open your project's `category.jsp` file in the editor, you'll see that EL expressions include various scoped variables, including `${categories}`, `${selectedCategory}` and `${categoryProducts}`. The `${categories}` variable is application-scoped, which is set in the `ControllerServlet`'s `init` method:
+If you open your project's `category.jsp` file in the editor, you'll see that EL expressions include various scoped variables, including `$\{categories}`, `$\{selectedCategory}` and `$\{categoryProducts}`. The `$\{categories}` variable is application-scoped, which is set in the `ControllerServlet`'s `init` method:
 
 
 [source,java]
@@ -222,7 +222,7 @@ If you open your project's `category.jsp` file in the editor, you'll see that EL
 getServletContext().setAttribute("categories", categoryFacade.findAll());
 ----
 
-The other two, `${selectedCategory}` and `${categoryProducts}`, are placed in the application's session scope from the `ControllerServlet`. For example:
+The other two, `$\{selectedCategory}` and `$\{categoryProducts}`, are placed in the application's session scope from the `ControllerServlet`. For example:
 
 
 [source,java]
@@ -232,7 +232,7 @@ The other two, `${selectedCategory}` and `${categoryProducts}`, are placed in th
 session.setAttribute("selectedCategory", selectedCategory);
 ----
 
-*Note:* If you are continuing from the previous tutorial units, you'll likely note that `${selectedCategory}` and `${categoryProducts}` were originally placed in the request scope. In previous units this was fine, but consider now what happens if a user clicks the 'add to cart' button in a category page. The server responds to an `addToCart` request by returning the currently viewed category page. It therefore needs to know the `selectedCategory` and the `categoryProducts` pertaining to the selected category. Rather than establishing this information for each request, you place it in the session scope from a `category` request so that it is maintained across multiple requests, and can be accessed when you need it. Also, examine the functionality provided by the cart page. (A functional description is <<cartPage,provided below>>.) The 'continue shopping' button returns the user to the previously viewed category. Again, the `selectedCategory` and the `categoryProducts` variables are required.
+*Note:* If you are continuing from the previous tutorial units, you'll likely note that `$\{selectedCategory}` and `$\{categoryProducts}` were originally placed in the request scope. In previous units this was fine, but consider now what happens if a user clicks the 'add to cart' button in a category page. The server responds to an `addToCart` request by returning the currently viewed category page. It therefore needs to know the `selectedCategory` and the `categoryProducts` pertaining to the selected category. Rather than establishing this information for each request, you place it in the session scope from a `category` request so that it is maintained across multiple requests, and can be accessed when you need it. Also, examine the functionality provided by the cart page. (A functional description is <<cartPage,provided below>>.) The 'continue shopping' button returns the user to the previously viewed category. Again, the `selectedCategory` and the `categoryProducts` variables are required.
 
 When referencing scoped variables in an EL expression, you do not need to specify the variable's scope (provided that you do not have two variables of the same name in different scopes). The JSP engine checks all four scopes and returns the first variable match it finds. In `category.jsp` for example, you can use the following expression:
 
@@ -788,7 +788,7 @@ The `<c:url>` tag can be applied to the URL in the following manner:
 </c:if>
 ----
 
-The `clear=true` parameter is set by adding a `<c:param` tag between the `<c:url>` tags. A variable named '`url`' is set using <c:url>'s `var` attribute, and `var` is then accessed in the HTML anchor tag using the `${url}` expression.
+The `clear=true` parameter is set by adding a `<c:param` tag between the `<c:url>` tags. A variable named '`url`' is set using <c:url>'s `var` attribute, and `var` is then accessed in the HTML anchor tag using the `$\{url}` expression.
 
 You can download and examine link:https://netbeans.org/projects/samples/downloads/download/Samples%252FJavaEE%252Fecommerce%252FAffableBean_snapshot6.zip[+snapshot 6+] to see how all links in the project have been encoded.
 

@@ -451,7 +451,7 @@ xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 === NetBeans Resources
 
 * xref:kb/docs/java/project-setup.adoc[+Creating, Importing, and Configuring Java Projects+]
-* xref:front::articles/mysql.adoc[+MySQL and NetBeans IDE+]
+* xref:kb/articles/mysql.adoc[+MySQL and NetBeans IDE+]
 * xref:kb/docs/ide/mysql.adoc[+Connecting to a MySQL Database+]
 * xref:kb/docs/web/mysql-webapp.adoc[+Creating a Simple Web Application Using a MySQL Database+]
 
@@ -466,7 +466,7 @@ xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 
 === Books
 
-* xref:front::articles/books.adoc[+NetBeans Books+]
+* xref:kb/articles/books.adoc[+NetBeans Books+]
 * link:http://www.apress.com/book/view/1590598954[+Pro NetBeans IDE 6 Rich Client Platform Edition+]
 * link:http://apress.com/book/view/1430219548[+Beginning Java EE 6 Platform with GlassFish 3: From Novice to Professional+]
 

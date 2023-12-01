@@ -513,7 +513,7 @@ xref:front::community/mailing-lists.adoc[+Send Us Your Feedback+]
 
 === NetBeans Resources
 
-* xref:front::articles/mysql.adoc[+MySQL and NetBeans IDE+]
+* xref:kb/articles/mysql.adoc[+MySQL and NetBeans IDE+]
 * xref:kb/docs/ide/mysql.adoc[+Connecting to a MySQL Database+]
 * xref:kb/docs/web/mysql-webapp.adoc[+Creating a Simple Web Application Using a MySQL Database+]
 * xref:kb/docs/ide/database-improvements-screencast.adoc[+Screencast: Database Support in NetBeans IDE+]

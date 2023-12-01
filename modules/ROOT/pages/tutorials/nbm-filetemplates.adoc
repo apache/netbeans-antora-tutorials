@@ -126,13 +126,13 @@ The template file defines the content that the template will generate for the us
 
 [start=3]
 1. Change the HTML file according to your needs. You can add the following predefined variables, if needed:
-* ${date} inserts the current date, in this format: Feb 16, 2008
-* ${encoding} inserts the default encoding, such as: UTF-8
-* ${name} inserts the name of the file.
-* ${nameAndExt} inserts the name of the file, together with its extension.
-* ${package} inserts the name of the package where the file is created.
-* ${time} inserts the current time, in this format: 7:37:58 PM
-* ${user} inserts the user name.
+* \${date} inserts the current date, in this format: Feb 16, 2008
+* \${encoding} inserts the default encoding, such as: UTF-8
+* \${name} inserts the name of the file.
+* \${nameAndExt} inserts the name of the file, together with its extension.
+* \${package} inserts the name of the package where the file is created.
+* \${time} inserts the current time, in this format: 7:37:58 PM
+* \${user} inserts the user name.
 
 NOTE:  Your users will be able to set values for these variables in the Template Manager, which is under the Tools menu. There, they will click the Settings button and a file named  ``user.properties``  will open in the Source Editor. In this file, users can set the above values, to override those provided by default. Typically, however, they will not do this, because the default values of the above variables will do the job fine.
 

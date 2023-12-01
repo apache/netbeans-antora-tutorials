@@ -625,7 +625,7 @@ image::./insert-db-query.png[title="Specify query details to create an SQL query
                     <p>[ welcome text ]</p>
                     
 ----
-The SQL query creates a result set which is stored in the `categories` variable. You can then access the result set using EL syntax, e.g., `${categories}` (demonstrated below).
+The SQL query creates a result set which is stored in the `categories` variable. You can then access the result set using EL syntax, e.g., `$\{categories}` (demonstrated below).
 
 [start=5]
 . Place your cursor at the end of `<div id="indexRightColumn">` (line 22), hit return, type `jstl` then press Ctrl-Space and choose JSTL For Each. 

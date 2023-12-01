@@ -511,7 +511,7 @@ Keep in mind that when running tests in this manner, your local server is compet
 [[profile]]
 == Using the NetBeans Profiler
 
-The NetBeans Profiler is an link:http://www.developer.com/java/other/article.php/3795991/Winners-of-the-Developercom-Product-of-the-Year-2009-Are-Announced.htm[+award winning+] development utility that enables you to profile and monitor your application's CPU and memory usage, and thread status. The Profiler is an integral component of the IDE, and offers a click-of-the-button profiling environment that aids you when handling memory and performance-related issues. For an overview of the Profiler's features, see xref:front::features/java/profiler.adoc[+NetBeans IDE 6.9 Features: Profiler+].
+The NetBeans Profiler is an link:http://www.developer.com/java/other/article.php/3795991/Winners-of-the-Developercom-Product-of-the-Year-2009-Are-Announced.htm[+award winning+] development utility that enables you to profile and monitor your application's CPU and memory usage, and thread status. The Profiler is an integral component of the IDE, and offers a click-of-the-button profiling environment that aids you when handling memory and performance-related issues. For an overview of the Profiler's features, see xref:front::projects/profiler/index.adoc[+NetBeans IDE 6.9 Features: Profiler+].
 
 When profiling web applications, you can use the Profiler to work in tandem with a load script, such as a test plan created in JMeter. Often, problems start to arise only after your application has been running in a host environment for a certain period of time, and has begun serving multiple concurrent requests. In order to get an idea of how the application will perform before it is migrated to a production environment, you can launch the Profiler, run a test script on the application, and examine the results in the Profiler's interface.
 
@@ -763,15 +763,14 @@ Connection pool settings can also be specified in the `sun-resources.xml` descri
 
 === NetBeans Resources
 
-* link:http://profiler.netbeans.org/[+NetBeans Profiler+] [product page]
-* xref:front::features/java/profiler.adoc[+NetBeans Profiler Features+]
+* xref:front::projects/profiler/index.adoc[+NetBeans Profiler +]
 * xref:kb/docs/java/profiler-profilingpoints.adoc[+Using Profiling Points+]
 * link:http://profiler.netbeans.org/docs/help/6.0/heapwalker.html[+Using HeapWalker+]
 * xref:wiki::wiki/HeapWalkerDemo.adoc[+HeapWalker Demo+]
 * xref:kb/docs/java/profile-loadgenerator.adoc[+Using a Load Generator+]
 * xref:kb/docs/javaee/profiler-javaee.adoc[+Profiling an Enterprise Application+]
 * xref:kb/docs/java/profiler-intro.adoc[+Introduction to Profiling Java Applications+]
-* xref:front::articles/nb-profiler-uncoveringleaks_pt1.adoc[+Uncovering Memory Leaks Using NetBeans Profiler+]
+* xref:kb/articles/nb-profiler-uncoveringleaks_pt1.adoc[+Uncovering Memory Leaks Using NetBeans Profiler+]
 * xref:front::community/magazine/html/04/profiler.adoc[+Advanced Profiling: Theory in Practice with NetBeans+]
 * link:https://netbeans.org/download/magazine/01/nb01_profiler.pdf[+Exploring the NetBeans Profiler+] [pdf]
 * link:https://channelsun.sun.com/media/show/14757?n=playlist&nid=81[+The New NetBeans IDE 6 Profiler+] [screencast]

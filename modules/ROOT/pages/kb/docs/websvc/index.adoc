@@ -35,7 +35,6 @@
 - xref:./intro-ws.adoc[Introduction to Web Services]
 - xref:./pet-catalog-screencast.adoc[RESTful Web Services Pet Catalog - NetBeans IDE 6.5]
 - xref:./zillow.adoc[SaaS (Software as a Service): Zillow Tutorial]
-- xref:./section.adoc[]
 - xref:./flower_overview.adoc[Web Service Application Passing Binary Data, pt 1: Overview]
 - xref:./flower_wsdl_schema.adoc[Web Service Passing Binary Data, pt 4: Modifying the Schema and WSDL Files]
 - xref:./flower_swing.adoc[Web Service Passing Binary Data, pt 5: Creating the Swing Client]

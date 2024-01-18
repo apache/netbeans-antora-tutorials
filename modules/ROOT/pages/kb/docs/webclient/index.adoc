@@ -37,7 +37,6 @@
 - xref:index.adoc[HTML5 Tutorials]
 - xref:./ojet-rest.adoc[Interacting with RESTful Web Services in Oracle JET]
 - xref:./ojet-porting.adoc[Porting an Application to Oracle JET]
-- xref:./section.adoc[]
 - xref:./ojet-settingup.adoc[Setting Up an Oracle JET Application]
 - xref:./ojet-intermodular.adoc[Strategies for Intermodular Communication in Oracle JET]
 - xref:./ojet-databinding.adoc[Using Data Bindings to Connect Components]

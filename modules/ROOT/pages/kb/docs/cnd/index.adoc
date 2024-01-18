@@ -37,7 +37,6 @@
 - xref:./navigating-editing.adoc[Editing and Navigating C/C++ Source Files - NetBeans IDE Tutorial]
 - xref:./depchecking.adoc[Make Dependency Checking]
 - xref:./remote-modes.adoc[Modes of C/C++ Remote Development in the IDE]
-- xref:./section.adoc[]
 - xref:./cpp-vcs.adoc[Storing NetBeans C/C++ Projects Under Version Control Systems]
 - xref:./toolchain.adoc[Using the C/C++ Tool Collection Descriptor - NetBeans IDE Tutorial]
 

@@ -27,7 +27,6 @@
 :description: e-Commerce Tutorials
 
 - xref:index.adoc[e-Commerce Tutorials]
-- xref:./section.adoc[]
 - xref:./entity-session.adoc[The NetBeans E-commerce Tutorial - Adding Entity Classes and Session Beans]
 - xref:./language.adoc[The NetBeans E-commerce Tutorial - Adding Language Support]
 - xref:./conclusion.adoc[The NetBeans E-commerce Tutorial - Conclusion]

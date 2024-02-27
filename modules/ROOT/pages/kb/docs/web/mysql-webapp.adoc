@@ -265,7 +265,7 @@ In order to prepare the interface for `response.jsp` you must first create the f
 image::./response-jsp-node.png[title="response.jsp node appears in the Projects window"]
 
 
-. In the editor, change the title to: `IFPWAFCAD - {placeholder}`.
+. In the editor, change the title to: `IFPWAFCAD - \{placeholder}`.
 
 
 . Remove the `<h1>Hello World!</h1>` line between the `<body>` tags, then copy and paste the following HTML table into the body of the page:

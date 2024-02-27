@@ -82,7 +82,7 @@ image::./select-constructor-name.png[]
 
 . Edit the function name or accept the default. Press Enter again, and the cursor moves to the inside of the function's body. In a real world scenario, you would now start coding the function and the rest of the class.
 
-The final position of the cursor is determined by the  ``${cursor}``  parameter. This parameter is described in the section <<reserved-name,Reserved names>>.
+The final position of the cursor is determined by the  ``$\{cursor}``  parameter. This parameter is described in the section <<reserved-name,Reserved names>>.
 
 == Inserting the code template with code completion
 
@@ -250,14 +250,14 @@ A PHP code template can contain PHP code and template parameters. A PHP template
 
 The syntax of a code template parameter is a dollar sign,  ``$`` , followed by the parameter's definition between curly brackets  ``{...}`` . Within this syntax, template parameters have one of four forms:
 
-* An arbitrary <<placeholder,placeholder name>>, such as  ``${SomeName}`` 
+* An arbitrary <<placeholder,placeholder name>>, such as  ``$\{SomeName}`` 
 * A <<reserved-name,reserved name>> that gives processing instructions to the IDE
 * A descriptive parameter name and a set of <<complex,hints that define the parameter>>
 * <<pre-defined,Pre-defined parameters>>.
 
 The following sections discuss each form of a code template parameter.
 
-NOTE:  ``$$${VARIABLE...} `` Sometimes you see a PHP code template where the syntax seems to be three dollar signs followed by curly brackets  ``$$${...}`` . In this case, the code template includes a variable and its name. The syntax here is an escaped dollar sign, written as a double dollar sign  ``$$`` , followed by a parameter for the variable name,  ``${VARIABLE...}`` . For example, the code template  ``catch ${Exception} $$${exc}``  is expanded as [examplecode]# ``catch Exception $exc`` #.
+NOTE:  ``$$${VARIABLE...} `` Sometimes you see a PHP code template where the syntax seems to be three dollar signs followed by curly brackets  ``$$${...}`` . In this case, the code template includes a variable and its name. The syntax here is an escaped dollar sign, written as a double dollar sign  ``$$`` , followed by a parameter for the variable name,  ``${VARIABLE...}`` . For example, the code template  ``catch ${Exception} $$$\{exc}``  is expanded as [examplecode]# ``catch Exception $exc`` #.
 
 === Placeholder name
 
@@ -265,7 +265,7 @@ NOTE:  ``$$${VARIABLE...} `` Sometimes you see a PHP code template where the syn
 In the simplest case, a code template parameter is an arbitrary placeholder value. When the template is expanded, the IDE selects this placeholder name for editing.
 
 
-For example, consider the new class template  ``(cls)``  that this tutorial shows in the sections <<define,Defined PHP Templates>> and <<expand-with-abb,Expanding the code template by using the abbreviation + Tab>>. The expanded text of the new class template begins  ``class ${className}`` . Here, the word  ``class``  is PHP code and  ``${className}``  is a parameter. This parameter is only an arbitrary placeholder value for the name of the class. When the IDE expands the template,  ``${className}``  becomes  ``*class_name*`` . The IDE expects that  ``*class_name*``  is only a placeholder value and automatically selects this value for you to edit.
+For example, consider the new class template  ``(cls)``  that this tutorial shows in the sections <<define,Defined PHP Templates>> and <<expand-with-abb,Expanding the code template by using the abbreviation + Tab>>. The expanded text of the new class template begins  ``class $\{className}`` . Here, the word  ``class``  is PHP code and  ``$\{className}``  is a parameter. This parameter is only an arbitrary placeholder value for the name of the class. When the IDE expands the template,  ``$\{className}``  becomes  ``*class_name*`` . The IDE expects that  ``*class_name*``  is only a placeholder value and automatically selects this value for you to edit.
 
 image::./expanding-template-with-abb.png[]
 
@@ -274,20 +274,20 @@ image::./expanding-template-with-abb.png[]
 
 The IDE reserves two parameter names for use as operating instructions.
 
-*  ``${cursor}``  defines the location of the cursor after you finish editing all automatically selected values in the expanded template.
-*  ``${selection}``  defines a position for pasting the content of the editor selection. This is used by so-called 'selection templates' that appear as hints whenever the user selects text in the editor. If a template includes  ``${selection}`` , it usually refers to the same location as  ``${cursor}`` .
+*  ``$\{cursor}``  defines the location of the cursor after you finish editing all automatically selected values in the expanded template.
+*  ``$\{selection}``  defines a position for pasting the content of the editor selection. This is used by so-called 'selection templates' that appear as hints whenever the user selects text in the editor. If a template includes  ``$\{selection}`` , it usually refers to the same location as  ``$\{cursor}`` .
 
-For example, again consider the new class template  ``(cls)``  that this tutorial shows in the sections <<define,Defined PHP Templates>> and <<expand-with-abb,Expanding the code template by using the abbreviation + Tab>>. It contains two placeholder name parameters,  ``${ClassName}``  and  ``$__construct`` . In the function body, it has the parameters  ``${cursor}``  and  ``${selection}`` .
+For example, again consider the new class template  ``(cls)``  that this tutorial shows in the sections <<define,Defined PHP Templates>> and <<expand-with-abb,Expanding the code template by using the abbreviation + Tab>>. It contains two placeholder name parameters,  ``$\{ClassName}``  and  ``$__construct`` . In the function body, it has the parameters  ``$\{cursor}``  and  ``$\{selection}`` .
 
 
 [source,php]
 ----
 
 class ${ClassName} {
-    function ${__construct} {${selection}${cursor}}}
+    function ${__construct} {${selection}$\{cursor}}}
 ----
 
-After the template expands, the placeholder  ``*class_name*``  is selected automatically (1). Press Enter, and the placeholder  ``*__construct*``  is selected automatically (2). There are no other values to edit. Press Enter again, and the cursor moves to the location indicated by  ``${cursor}``  in the template's text (3).
+After the template expands, the placeholder  ``*class_name*``  is selected automatically (1). Press Enter, and the placeholder  ``*__construct*``  is selected automatically (2). There are no other values to edit. Press Enter again, and the cursor moves to the location indicated by  ``$\{cursor}``  in the template's text (3).
 
 image::./cursor-position-changes.png[]
 
@@ -304,14 +304,14 @@ Parameters can consist of an arbitrary, descriptive name in ALL-CAPS and one or 
 ${PARAMETER_NAME hint1[=value] [hint2...hint n]}
 ----
 
-The name does not appear anywhere in the code. However, it is useful if you want to use the parameter more than once in a code template. You only have to define the parameter the first time, and can refer to it by name all subsequent times. For example, in the following code template the parameter  ``${CONLINK}``  is defined only the first time but is referred by its name two more times.
+The name does not appear anywhere in the code. However, it is useful if you want to use the parameter more than once in a code template. You only have to define the parameter the first time, and can refer to it by name all subsequent times. For example, in the following code template the parameter  ``$\{CONLINK}``  is defined only the first time but is referred by its name two more times.
 
 
 
 [source,php]
 ----
 
-$$${CONLINK newVarName default="link"} = mysql_connect('localhost', 'mysql_user', 'mysql_password');  if (!$$${CONLINK}) {    die('Could not connect: ' . mysql_error());  }  echo 'Connected successfully';  mysql_close($$${CONLINK});  ${cursor}  
+$$${CONLINK newVarName default="link"} = mysql_connect('localhost', 'mysql_user', 'mysql_password');  if (!$$$\{CONLINK}) {    die('Could not connect: ' . mysql_error());  }  echo 'Connected successfully';  mysql_close($$$\{CONLINK});  $\{cursor}  
 ----
 
 Hints help the IDE to compute the value of the template parameter when the IDE expands the code template. For example, look at the  ``if(*true*)``  template, which is used in this tutorial in the section on <<surround-code,surrounding your code with a template>>. The expanded text of this template is
@@ -320,7 +320,7 @@ Hints help the IDE to compute the value of the template parameter when the IDE e
 [source,php]
 ----
 
-if (${CONDITION variableFromPreviousAssignment instanceof="boolean" default="true"}) {${selection}${cursor}}
+if (${CONDITION variableFromPreviousAssignment instanceof="boolean" default="true"}) {${selection}$\{cursor}}
 ----
 
 Examine the parameter  ``${CONDITION variableFromPreviousAssignment instanceof="boolean" default="true"}`` . This parameter sets the condition of the  ``if``  statement. Therefore the parameter is named CONDITION. The first hint is  ``variableFromPreviousAssignment``  and the second hint is  ``instanceof="boolean"`` . Together, these two hints tell the IDE to look for the closest boolean variable that is assigned in the code previous to the code template. Add the third hint,  ``default="true"`` , and the parameter sets the condition as "if the closest previous boolean variable's value is true."
@@ -398,7 +398,7 @@ The following code template inserts a PHP  ``echo``  statement into HTML.
 [source,php]
 ----
 
-<?php echo ${cursor}   ?>
+<?php echo $\{cursor}   ?>
 ----
  
 |===
@@ -419,7 +419,7 @@ Code templates can help you use PHP frameworks in NetBeans IDE, especially frame
 [source,php]
 ----
 
-defined('_JEXEC')or die('Restricted access');${cursor}  
+defined('_JEXEC')or die('Restricted access');$\{cursor}  
 ----
  
 |===
@@ -440,7 +440,7 @@ PHP developers often need to create a connection to a MySQL database. This code 
 [source,php]
 ----
 
-$$${CONLINK newVarName default="link"} = mysql_connect('localhost', 'mysql_user', 'mysql_password');  if (!$$${CONLINK}) {    die('Could not connect: ' . mysql_error());  }  echo 'Connected successfully';  mysql_close($$${CONLINK});  ${cursor}  
+$$${CONLINK newVarName default="link"} = mysql_connect('localhost', 'mysql_user', 'mysql_password');  if (!$$$\{CONLINK}) {    die('Could not connect: ' . mysql_error());  }  echo 'Connected successfully';  mysql_close($$$\{CONLINK});  $\{cursor}  
 ----
  
 |===
@@ -462,7 +462,7 @@ Rather than use the NetBeans wizard for creating an action, you can use a code t
 [source,php]
 ----
 
-public function ${functionName}Action () {${selection}${cursor}  }  
+public function $\{functionName}Action () {$\{selection}$\{cursor}  }  
 ----
  
 |===
@@ -484,7 +484,7 @@ This template inserts an element into a Zend form. Use it after you generate a f
 [source,php]
 ----
 
-$$${ELEMENT newVarName default="element"} = new Zend_Form_Element_Submit('submit', array('label' => 'Send data to server'));  $$this->addElement($$${ELEMENT});  ${cursor}  
+$$${ELEMENT newVarName default="element"} = new Zend_Form_Element_Submit('submit', array('label' => 'Send data to server'));  $$this->addElement($$$\{ELEMENT});  $\{cursor}  
 ----
  
 |===

@@ -57,6 +57,6 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 * link:http://docs.oracle.com/javame/embedded/embedded.html[+Oracle Java ME for Embedded Devices Documentation+]
 * link:http://www.oracle.com/technetwork/java/embedded/documentation/me-e-otn-faq-1852008.pdf[+Oracle Java ME Embedded Overview and Frequently Asked Questions+]
 * xref:wiki::wiki/JavaMESDKSupport.adoc[+FAQ on Java ME SDK Support in NetBeans IDE+]
-* xref:../mobility.adoc[+Java ME and Java Card Application Technology Trail+]
+* xref:kb/docs/mobility.adoc[Java ME and Java Card Application Technology Trail]
 * link:http://www.oracle.com/pls/topic/lookup?ctx=nb8000&id=NBDAG1552[+Developing Java ME Applications+] in _Developing Applications with NetBeans IDE_
 * link:http://www.oracle.com/technetwork/java/javame/javamobile/download/overview/index.html[+Java for Mobile Devices Download+]

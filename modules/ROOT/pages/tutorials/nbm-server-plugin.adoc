@@ -63,7 +63,7 @@ The following topics are covered below:
 
 Once the software is installed, this tutorial can be completed in 60 minutes.
 
-For more information on working with NetBeans modules, see the  xref:../kb/docs/platform.adoc[ NetBeans Module and Rich-Client Application tutorials page] on the NetBeans website. If you have questions, visit the  xref:wiki::wiki/NetBeansDeveloperFAQ.adoc[ NetBeans Developer FAQ] or use the feedback link at the top of this page.
+For more information on working with NetBeans modules, see the  xref:../kb/docs/platform.adoc[ NetBeans Module and Rich-Client Application tutorials page] on the NetBeans website. If you have questions, visit the  xref:wiki::wiki/DevFaqIndex.adoc[ NetBeans Developer FAQ] or use the feedback link at the top of this page.
 
 
 == Getting to Know the Sample
@@ -228,7 +228,7 @@ The supporting resources in the Java packages are introduced in alphabetical ord
 | ``<<server.gif,server.gif>>``  |Icon for the new server type's node in the IDE. 
 |===
 
-For basic information each of the Important Files, see the  link:https://netbeans.org/kb/articles/quickstart-nbm.html[Introduction to NetBeans Module Development].
+For basic information each of the Important Files, see the  xref:./nbm-quick-start.adoc[Introduction to NetBeans Module Development].
 
 We have now looked at the features provided by the server skeleton and at each of the files that you need to create it from scratch. Let's now go through the whole process from start to finish, during which we will recreate the whole server skeleton. At the end, we will look at further resources worth exploring when building your own server implementation on top of the server skeleton.
 
@@ -258,7 +258,7 @@ The IDE creates the  ``My Server Module``  project. The project contains all of 
 
 image::./myserver_projects-window-original.png[]
 
-For basic information on each of the files created by the New Project wizard, see the  xref:quickstart-nbm.adoc[Introduction to NetBeans Module Development].
+For basic information on each of the files created by the New Project wizard, see the  xref:./nbm-quick-start.adoc[Introduction to NetBeans Module Development].
 
 
 === Specifying the Module's Dependencies

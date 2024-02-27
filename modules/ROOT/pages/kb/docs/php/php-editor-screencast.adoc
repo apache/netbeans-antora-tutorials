@@ -34,21 +34,16 @@
 
 Author: Roman Strobl
 Time: 5:10 
-link:https://netbeans.org/files/documents/4/2028/php_demo.zip[+Download+] ( 6.35 MB )
+link:https://netbeans.org/files/documents/4/2028/php_demo.zip[Download] ( 6.35 MB )
 
+|
+|===
 
-*Related links*
+== Related links
 
-* xref:./editor-screencast.adoc[+Petr's NetBeans IDE 6.9-7.0 PHP Editor Screencast+]
-* xref:../../../features/php/index.adoc[+NetBeans IDE for PHP+]
-* xref:kb/docs/php.adoc[+The PHP Learning Trail+]
-* link:http://blogs.oracle.com/netbeansphp/[+NetBeans for PHP Weblog+]
+* xref:./editor-screencast.adoc[Petr's NetBeans IDE 6.9-7.0 PHP Editor Screencast]
+* xref:kb/docs/php.adoc[The PHP Learning Trail]
+* link:http://blogs.oracle.com/netbeansphp/[+NetBeans for PHP Weblog]
 
 xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 
- |
-
-Unable to load Flash player.
-
- 
-|===

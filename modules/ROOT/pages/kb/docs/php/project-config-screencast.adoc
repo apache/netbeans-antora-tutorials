@@ -34,17 +34,17 @@
 
 Author: Petr Pisl
 Time: 7:45
-link:http://bits.netbeans.org/media/NetBeans65PHP_demo_part_I.flv[+Download+] [14 MB]
+link:http://bits.netbeans.org/media/NetBeans65PHP_demo_part_I.flv[Download] [14 MB]
+
+|   
+|===
 
 
 == Related links
 
-* xref:./editor-screencast.adoc[+Demo of PHP support in NetBeans 6.5 - Part II: Editor Features +]
-* xref:../../../features/php/index.adoc[+NetBeans IDE for PHP+]
-* xref:kb/docs/php.adoc[+The PHP Learning Trail+]
-* link:http://blogs.oracle.com/netbeansphp/[+NetBeans PHP Blog+]
+* xref:./editor-screencast.adoc[Demo of PHP support in NetBeans 6.5 - Part II: Editor Features]
+* xref:kb/docs/php.adoc[The PHP Learning Trail]
+* link:http://blogs.oracle.com/netbeansphp/[NetBeans PHP Blog]
 
 xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 
- |   
-|===

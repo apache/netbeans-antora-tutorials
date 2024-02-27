@@ -59,5 +59,5 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 * link:http://www.oracle.com/technetwork/java/javame/javamobile/download/sdk/default-303768.html[+Oracle Java ME SDK Download+]
 * link:http://docs.oracle.com/javame/developer/developer.html[+Oracle Java ME Developer Tools Documentation+]
 * xref:wiki::wiki/JavaMESDKSupport.adoc[+FAQ on Java ME SDK Support in NetBeans IDE+]
-* xref:../mobility.adoc[+Java ME and Java Card Application Technology Trail+]
+* xref:kb/docs/mobility.adoc[Java ME and Java Card Application Technology Trail]
 * link:http://www.oracle.com/pls/topic/lookup?ctx=nb8000&id=NBDAG1552[+Developing Java ME Applications+] in _Developing Applications with NetBeans IDE_

@@ -36,16 +36,15 @@
 
 Author: Jeff Rubinoff
 Time: 12:33
-link:http://bits.netbeans.org/media/php-namespaces.flv[+Download+] [27.4 MB]
+link:http://bits.netbeans.org/media/php-namespaces.flv[Download] [27.4 MB]
 
+|   
+|===
 
 == Related links
 
-* xref:../../../features/php/index.adoc[+NetBeans IDE for PHP+]
-* xref:kb/docs/php.adoc[+The PHP Learning Trail+]
-* link:http://blogs.oracle.com/netbeansphp/[+NetBeans PHP Blog+]
+* xref:kb/docs/php.adoc[The PHP Learning Trail]
+* link:http://blogs.oracle.com/netbeansphp/[NetBeans PHP Blog]
 
-xref:front::community/mailing-lists.adoc[+Send Feedback on This Tutorial+]
+xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 
- |   
-|===

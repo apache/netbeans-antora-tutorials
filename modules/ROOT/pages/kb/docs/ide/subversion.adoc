@@ -273,7 +273,7 @@ File status labels provide a textual indication of the status of versioned files
 
 1. Choose Tools > Options (NetBeans > Preferences on OS X) from the main menu. The Options window opens.
 2. Select the Miscellaneous button along the top of the window, then click the Versioning tab beneath it. Make sure Subversion is selected beneath Versioning Systems in the left panel. (See the above <<svnOptions,screen capture>> for reference.)
-3. Click the Add Variable button to the right of the status label Format text field. In the Add Variable dialog that displays, select the `{revision}` variable, then click OK. The revision variable is added to the status label Format text field.
+3. Click the Add Variable button to the right of the status label Format text field. In the Add Variable dialog that displays, select the `\{revision}` variable, then click OK. The revision variable is added to the status label Format text field.
 4. To reformat status labels so that only status and revision display to the right of files, rearrange the contents of the Status Label Format text field to the following:
 
 [source,bash]

@@ -152,7 +152,7 @@ The following code is added to  ``nbproject/Makefile-impl.mk`` . It detects whic
 	fi
 ----
 
-The following code is added to  ``nbproject/Makefile-${CONF}.mk`` . It instructs  ``make``  to read previously generated  ``.dep.inc``  and execute instructions from it.
+The following code is added to  ``nbproject/Makefile-$\{CONF}.mk`` . It instructs  ``make``  to read previously generated  ``.dep.inc``  and execute instructions from it.
 
 
 [source,java]
@@ -164,7 +164,7 @@ The following code is added to  ``nbproject/Makefile-${CONF}.mk`` . It instructs
 include .dep.inc
 ----
 
-The rule  ``.dep.inc: .depcheck-impl``  is added to prevent build failure when  ``.dep.inc``  does not exist. There is only one case when it happens: when you compile single file from the Projects window. In this case  ``make``  executes file  ``nbproject/Makefile-${CONF}.mk``  directly.
+The rule  ``.dep.inc: .depcheck-impl``  is added to prevent build failure when  ``.dep.inc``  does not exist. There is only one case when it happens: when you compile single file from the Projects window. In this case  ``make``  executes file  ``nbproject/Makefile-$\{CONF}.mk``  directly.
 
 
 == References

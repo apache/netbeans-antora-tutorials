@@ -206,7 +206,7 @@ to fetch a localized string. `NbBundle` supports embedding arguments inside of a
 Could not delete {0} because {1}
 ----
 
-and `{0}` and `{1}` will be replaced by arguments passed to `getMessage()`. This is extremely useful, as often the order in which such strings occur in the result text will be different in different human languages.
+and `\{0}` and `\{1}` will be replaced by arguments passed to `getMessage()`. This is extremely useful, as often the order in which such strings occur in the result text will be different in different human languages.
 
 So let's go ahead and add the warning messages we need to `Bundle.properties` in the same package as `PovrayProject`:
 

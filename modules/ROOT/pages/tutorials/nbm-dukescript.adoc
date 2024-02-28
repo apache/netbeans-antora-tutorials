@@ -422,7 +422,7 @@ Please note that the new property has the attribute  ``array``  set to true. Thi
                         
 ----
 
-The method  ``connect``  is annotated with the annotation  link:https://bits.netbeans.org/html4j/1.0/net/java/html/json/OnReceive.html[@OnReceive] It will generate a new method of the same name in our ViewModel. The generated method has a parameter for the parts of the url enclosed in curly braces ({name}). When you call the method with a parameter, this will replace the  ``{name}``  to build the URL dynamically.
+The method  ``connect``  is annotated with the annotation  link:https://bits.netbeans.org/html4j/1.0/net/java/html/json/OnReceive.html[@OnReceive] It will generate a new method of the same name in our ViewModel. The generated method has a parameter for the parts of the url enclosed in curly braces (\{name}). When you call the method with a parameter, this will replace the  ``\{name}``  to build the URL dynamically.
 
 The generated method does a lot of magic for us. It will call the URL to retrieve the answer. The answer is in the JSON format you've seen above. In our connect method, we've declared that we want to receive a  ``List<RepositoryInfo> repos`` . Therefore the generated method will automatically parse the JSON message and map it to a list of RepositoryInfo Objects.
 

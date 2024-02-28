@@ -28,6 +28,7 @@
 :toc-title:
 :description: Using the C/C++ Tool Collection Descriptor - NetBeans IDE Tutorial - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Using the C/C++ Tool Collection Descriptor - NetBeans IDE Tutorial
+include::front::partial$database.adoc[]
 
 //_Contributed by link:mailto:alexander.simon@oracle.com[+_Alexander Simon_+]
 //March 2014_ [Revision number: V8.0-1]

@@ -1,0 +1,35 @@
+// 
+//     Licensed to the Apache Software Foundation (ASF) under one
+//     or more contributor license agreements.  See the NOTICE file
+//     distributed with this work for additional information
+//     regarding copyright ownership.  The ASF licenses this file
+//     to you under the Apache License, Version 2.0 (the
+//     "License"); you may not use this file except in compliance
+//     with the License.  You may obtain a copy of the License at
+// 
+//       http://www.apache.org/licenses/LICENSE-2.0
+// 
+//     Unless required by applicable law or agreed to in writing,
+//     software distributed under the License is distributed on an
+//     "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+//     KIND, either express or implied.  See the License for the
+//     specific language governing permissions and limitations
+//     under the License.
+//
+
+= Configuring NetBeans IDE 8.0 for C/C++/Fortran
+:page-layout: tutorial
+:jbake-tags: tutorials 
+:jbake-status: published
+:icons: font
+:page-syntax: true
+:source-highlighter: pygments
+:toc: left
+:toc-title:
+:description: Configuring NetBeans IDE 8.0 for C/C++/Fortran - Apache NetBeans
+:keywords: Apache NetBeans, Tutorials, Configuring NetBeans IDE 8.0 for C/C++/Fortran
+
+//Contributed by _Ann Rice_ and maintained by _Susan Morgan_ 
+//_March 2014_ [Revision number: V8.0-1]
+
+link:https://web.archive.org/web/20161111071155/https://netbeans.org/community/releases/80/cpp-setup-instructions.html[Former article page]

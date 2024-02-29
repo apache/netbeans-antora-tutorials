@@ -35,7 +35,7 @@ When you install the NetBeans IDE with C/C++ support, the IDE includes project t
 
 == Getting Started 
 
-* xref:front::community/releases/80/cpp-setup-instructions.adoc[Configuring NetBeans IDE for C/C{pp}/Fortran]
+* xref:./cnd/cpp-setup-instructions.adoc[Configuring NetBeans IDE for C/C{pp}/Fortran]
 
 == Tutorials and Articles
 

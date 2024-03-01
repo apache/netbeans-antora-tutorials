@@ -36,7 +36,7 @@ Tour the screencasts below to discover the new and noteworthy features of NetBea
 
 |===
 |xref:./java/jdk8-migration-screencast.adoc[Migration Screencast]image:./nb72-video-thumb.png[]
- |xref:front::community/releases/80/index.adoc[NetBeans IDE 8.0] delivers full support for the latest Java 8 technologies--Java SE 8, Java SE Embedded 8, and Java ME Embedded 8. The IDE also provides a range of new enhancements for Maven and Java EE with PrimeFaces; new tools for HTML5, in particular for AngularJS; and improvements to PHP and C/C++ support. 
+ |xref:front::download/index.adoc[NetBeans IDE 8.0] delivers full support for the latest Java 8 technologies--Java SE 8, Java SE Embedded 8, and Java ME Embedded 8. The IDE also provides a range of new enhancements for Maven and Java EE with PrimeFaces; new tools for HTML5, in particular for AngularJS; and improvements to PHP and C/C++ support. 
 
 Watch the xref:kb/docs/ide/overview-screencast.adoc[NetBeans IDE 8.0 Overview Video] to find out what's new and noteworthy in this latest release.
  
@@ -162,14 +162,14 @@ This screencast shows that you can expose RESTful web service endpoints via a wi
 | 
 [cols="1,1",grid=none,frame=none]
 !================================
-a!image::./html5-cordova.png[link="web/html5-cordova-screencast.html"] 
+a!image::./html5-cordova.png[link="kb/docs/web/html5-cordova-screencast.html"] 
 //ole="left", 
 
 Time: 5:08
 //link:http://bits.netbeans.org/media/html5-gettingstarted-cordova-final-screencast.mp4[Download] [36 MB]
 
 !
-xref:web/html5-cordova-screencast.adoc[Getting Started with Cordova in NetBeans IDE]
+xref:kb/docs/web/html5-cordova-screencast.adoc[Getting Started with Cordova in NetBeans IDE]
 
 This screencast demonstrates how to create HTML5 applications, that is, how to create applications that use HTML, JavaScript, and CSS, and deploy them as native Android or iOS applications via Cordova.
 
@@ -210,14 +210,14 @@ This screencast demonstrates JavaFX-related features that are implemented in Net
 |
 [cols="1,1",grid=none,frame=none]
 !================================
-a!image::./javame-thumb.png[link="javame/nb_mesdk_screencast.html"] 
+a!image::./javame-thumb.png[link="javame/nb_me8_screencast.html"] 
 //role="left", 
 
 Time: 4:22
 //link:http://bits.netbeans.org/media/nb_mesdk.mp4[Download] [6 MB]
 
 !
-xref:./javame/nb_mesdk_screencast.adoc[Setting up NetBeans IDE for Mobile Development on Windows]
+xref:./javame/nb_me8_screencast.adoc[Setting up NetBeans IDE for Mobile Development on Windows]
 
 This screencast demonstrates the support for the Java ME SDK in NetBeans IDE. This screencast shows how to activate JavaME plugins and register the Java ME SDK in NetBeans IDE.
 

@@ -174,7 +174,7 @@ JavaScript is an object-oriented scripting language primarily used in client-sid
 * xref:wiki::wiki/SecureJavaEE6App.adoc[+Securing JavaEE 6 application with JavaEE Security+] by Christopher Lam
 * xref:wiki::wiki/CreateReverseAjaxWebAppsWithDWR.adoc[+Create Reverse Ajax Web-Applications with DWR, GlassFish and NetBeans+] by Siegfried Bolz
 * xref:wiki::wiki/MavenAndNetBeansForGlassFish.adoc[+Developing Enterprise Applications for GlassFish using Maven and NetBeans+] by Wouter van Reeven
-* xref:wiki::wiki/SpringMVConNetBeansGlassFish.adoc[+Developing a Spring Framework MVC application using GlassFish+] by Arulazi Dhesiaseelan
+// lost * xref:wiki::wiki/SpringMVConNetBeansGlassFish.adoc[+Developing a Spring Framework MVC application using GlassFish+] by Arulazi Dhesiaseelan
 * xref:wiki::wiki/MavenSpringEJBsOnGlassfish.adoc[+EJB development for Glassfish using Maven2 and Spring+] by Kristian Rink
 * link:http://www.adam-bien.com/roller/abien/entry/simplest_possible_ejb_3_13[+Simplest Possible EJB 3.1/REST (JSR 311) Component+] by Adam Bien
 * xref:wiki::wiki/DevelopAjaxJSF2App.adoc[+Develop Ajax-based JSF2 applications with PrimeFaces using Netbeans 6.8+] by Christopher Lam

@@ -72,7 +72,7 @@ In addition to being a platform for multi-platform desktop applications, the Jav
 - xref:./java/profiler-intro.adoc[+Introduction to Profiling Java Applications+]
 - xref:./java/profiler-profilingpoints.adoc[+Using Profiling Points+]
 - xref:front::community/magazine/html/04/profiler.adoc[+Advanced Profiling: Theory in Practice+]
-- xref:front::competition/win-with-netbeans/case-study-nb-profiler.adoc[+Case Study of NetBeans Profiler+]
+// - xref:front::competition/win-with-netbeans/case-study-nb-profiler.adoc[+Case Study of NetBeans Profiler+]
 
 === Scripting Languages
 
@@ -109,6 +109,6 @@ In addition to being a platform for multi-platform desktop applications, the Jav
 - xref:wiki::wiki/NetBeansUserFAQ.adoc#Editing[+Editing+]
 - link:http://www.mysql.com/why-mysql/java/[+MySQL and Java - Resources +]
 - link:http://mysql.com/news-and-events/on-demand-webinars/?category=java_mysql[+MySQL On-Demand Web Seminars +]
-- xref:front::articles/learn-java.adoc[+Learning Java - Resources+]
+// - xref:front::articles/learn-java.adoc[+Learning Java - Resources+]
 
 

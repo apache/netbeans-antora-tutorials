@@ -338,7 +338,7 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 == See Also
 
-* xref:imp-ng-screencast.adoc[+Demo: Support for IMP-NG Profile in NetBeans IDE+]
+// need recover * xref:imp-ng-screencast.adoc[+Demo: Support for IMP-NG Profile in NetBeans IDE+]
 * link:http://www.oracle.com/technetwork/java/javame/javamobile/training/jmesdk/index.html[+Java Mobile - Start Learning+]
 * link:http://www.oracle.com/technetwork/java/embedded/resources/me-embeddocs/index.html[+Oracle Java ME Embedded Client Documentation+]
 * link:https://blogs.oracle.com/javamesdk/[+Java ME SDK Team Blog+]

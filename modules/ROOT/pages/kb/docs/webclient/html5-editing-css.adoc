@@ -51,7 +51,7 @@ To watch a screencast of this tutorial, see xref:kb/docs/web/html5-css-screencas
 
 |link:https://chrome.google.com/webstore/detail/netbeans-connector/hafdlehgocfcodbgjnpecfajgkeejnaa?utm_source=chrome-ntp-icon[+NetBeans Connector Extension for Chrome+] |1.1 or newer 
 
-|xref:../../../index.adocprojects/samples/downloads/download/Samples/Web%20Client/HTML5DemoSiteTemplate.zip[+HTML5DemoSiteTemplate.zip+] |-- 
+|link:https://web.archive.org/web/20170713202117/https://netbeans.org/projects/samples/downloads/download/Samples/Web%20Client/HTML5DemoSiteTemplate.zip[HTML5DemoSiteTemplate.zip] |-- 
 
 |CSS preprocessor |link:http://sass-lang.com/install[+Sass+] or
 link:http://lesscss.org/[+LESS+] 
@@ -59,8 +59,8 @@ link:http://lesscss.org/[+LESS+]
 
 *Notes:*
 
-* The xref:../../../index.adocprojects/samples/downloads/download/Samples/Web%20Client/HTML5DemoSiteTemplate.zip[+HTML5DemoSiteTemplate.zip+] is a site template that you will use when you create the project.
-* If you would like to compare your project with a working solution, you can download the xref:../../../index.adocprojects/samples/downloads/download/Samples/Web%20Client/HTML5DemoCssSiteTemplate.zip[+site template+] of the finished project.
+* The link:https://web.archive.org/web/20170713202117/https://netbeans.org/projects/samples/downloads/download/Samples/Web%20Client/HTML5DemoSiteTemplate.zip[HTML5DemoSiteTemplate.zip] is a site template that you will use when you create the project.
+* If you would like to compare your project with a working solution, you can download the link:https://web.archive.org/web/20170713202117/https://netbeans.org/projects/samples/downloads/download/Samples/Web%20Client/HTML5DemoCssSiteTemplate.zip[site template] of the finished project.
 * This document assumes you have some basic knowledge of, or programming experience with HTML, CSS, and JavaScript.
 
 
@@ -70,7 +70,7 @@ In this tutorial you use a site template to create the HTML5 project. The site t
 
 Perform the following steps to create the application from a site template.
 
-1. Download the HTML5 site template (xref:../../../index.adocprojects/samples/downloads/download/Samples/Web%20Client/HTML5DemoSiteTemplate.zip[+HTML5DemoSiteTemplate+])
+1. Download the HTML5 site template (link:https://web.archive.org/web/20170713202117/https://netbeans.org/projects/samples/downloads/download/Samples/Web%20Client/HTML5DemoSiteTemplate.zip[HTML5DemoSiteTemplate])
 2. Choose File > New Project (Ctrl-Shift-N; ⌘-Shift-N on Mac) in the main menu to open the New Project wizard.
 3. Select the *HTML5* category and then select *HTML5 Application*. Click Next.
 4. Type *HTML5DemoCss* for the project name and specify a location. Click Next.

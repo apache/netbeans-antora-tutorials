@@ -17,32 +17,20 @@
 //     under the License.
 //
 
-= Video of Getting Started with PrimeFaces Development in Java EE Applications
-:page-layout: tutorial
+= Using the Java Persistence API in a Stand-Alone Web App
+:page-layout: platform_tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
-:icons: font
 :page-syntax: true
 :source-highlighter: pygments
 :toc: left
 :toc-title:
-:description: Video of Getting Started with PrimeFaces Development in Java EE Applications - Apache NetBeans
-:keywords: Apache NetBeans, Tutorials, Video of Getting Started with PrimeFaces Development in Java EE Applications
+:icons: font
+:experimental:
+:description: Using the Java Persistence API in a Stand-Alone Web App - Apache NetBeans
+:keywords: Apache NetBeans Platform, Using the Java Persistence API in a Stand-Alone Web App
 
-|===
-|This screencast demonstrates the integration of PrimeFaces in Java EE applications.
+Demonstrates the use of Java Persistence APIs based on the new Java Persistence specification within a servlet.
 
-link:http://bits.netbeans.org/media/javaee-html5-primefaces.mp4[+Download / Watch full size+] (63 MB)
+link:https://web.archive.org/web/20170712060653/https://netbeans.org/kb/samples/webjpa.html[Former sample page]
 
- 
-
-|
-xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
-|===
-
-
-== Related links
-
-* link:http://docs.oracle.com/javaee/7/tutorial/doc/[+The Java EE 7 Tutorial+]
-* xref:kb/docs/java-ee.adoc[+NetBeans Feature Pages: Java Enterprise Edition Support+]
-//  * link:https://netbeans.org/kb/trails/java-ee.html[+Java EE &amp; Java Web NetBeans Learning Trail+]

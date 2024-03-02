@@ -119,7 +119,7 @@ We have ported the NetBeans Tutorials to this site, but some of the tutorials ne
 
 You can help us improve the tutorials following xref:./contributing.adoc[these contribution guidelines].
 
-* For historical reasons, the xref:platform/index.adoc[NetBeans Platform Learning Trail] has also a list of tutorials you may want to check.
+* For historical reasons, the xref:kb/docs/platform/index.adoc[NetBeans Platform Learning Trail] has also a list of tutorials you may want to check.
 
 === Introductory tutorials
 
@@ -172,7 +172,7 @@ tutorials to get you started:
 
 You can use OSGi modules within a NetBeans Platform. 
 
-* http://wiki.apidesign.org/wiki/Netigso[OSGi and NetBeans]
+* link:http://wiki.apidesign.org/wiki/Netigso[OSGi and NetBeans]
 * xref:tutorials/nbm-osgi-quickstart.adoc[+NetBeans Platform Quick Start Using OSGi+]
 * xref:tutorials/nbm-emf.adoc[+NetBeans Platform EMF Integration Tutorial+]
 

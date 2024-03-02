@@ -35,7 +35,7 @@ When you install the NetBeans IDE with C/C++ support, the IDE includes project t
 
 == Getting Started 
 
-* xref:front::community/releases/80/cpp-setup-instructions.adoc[Configuring NetBeans IDE for C/C{pp}/Fortran]
+* xref:./cnd/cpp-setup-instructions.adoc[Configuring NetBeans IDE for C/C{pp}/Fortran]
 
 == Tutorials and Articles
 
@@ -65,8 +65,8 @@ When you install the NetBeans IDE with C/C++ support, the IDE includes project t
 
 == Community-Contributed Docs
 
-* xref:wiki::wiki/HowToCreate64-BitC/C++WindowsProgramWithNetBeans.adoc[Setting up NetBeans IDE to Create 64-bit C/C{pp} Windows Executables]
-* xref:wiki::wiki/HowToSetup64-BitQt5WithNetBeans80OnWindows.adoc[Setting up 64-bit Qt 5 on Windows to use with NetBeans IDE]
+* xref:wiki::wiki/HowToCreate64-BitC_C++WindowsProgramWithNetBeans.adoc[Setting up NetBeans IDE to Create 64-bit C/C{pp} Windows Executables]
+// not archived * xref:wiki::wiki/HowToSetup64-BitQt5WithNetBeans80OnWindows.adoc[Setting up 64-bit Qt 5 on Windows to use with NetBeans IDE]
 
 == Other Resources
 

@@ -53,7 +53,7 @@ image::./vislib_image3.png[]
 
 All the information you need to know for working with the Visual Library API is collected at these two locations:
 
-*  xref:../projects/platform/graph/index.adoc[Visual Library Project Page]
+*  xref:front::projects/graph/index.adoc[Visual Library Project Page]
 *  link:https://bits.netbeans.org/dev/javadoc/org-netbeans-api-visual/org/netbeans/api/visual/widget/doc-files/documentation.html[Visual Library 2.0 - Documentation]
 
 
@@ -540,5 +540,5 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 For more information on working with the Visual Library API, see:
 
-*  xref:../projects/platform/graph/index.adoc[Visual Library Project Page]
+*  xref:front::projects/graph/index.adoc[Visual Library Project Page]
 *  link:https://bits.netbeans.org/dev/javadoc/org-netbeans-api-visual/org/netbeans/api/visual/widget/doc-files/documentation.html[Visual Library 2.0 - Documentation]

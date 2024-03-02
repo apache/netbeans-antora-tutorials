@@ -35,9 +35,13 @@
 == What is the NetBeans Platform?
 
 The NetBeans Platform is a broad Java framework on which you can base large
-desktop applications. NetBeans IDE itself is
-xref:../../projects/platform/screenshots.adoc[one of the hundreds of
-applications] based on the NetBeans Platform. The NetBeans Platform contains
+desktop applications. 
+
+// not available NetBeans IDE itself is
+//xref:../../projects/platform/screenshots.adoc[one of the hundreds of
+//applications] based on the NetBeans Platform. 
+
+The NetBeans Platform contains
 APIs that simplify the handling of windows, actions, files, and many other
 things typical in applications.
 
@@ -200,7 +204,7 @@ image::./five-easy-extend.png[role="left", link="http://www.youtube.com/watch?v=
 
 *  link:http://prezi.com/b5ntwnpvu9j8/free-netbeans-platform-crash-course/[Slides: Free NetBeans Platform Crash Course]
 *  xref:tutorials/nbm-10-top-apis.adoc[Video: Top 10 NetBeans APIs]
-*  xref:kb/docs/screencasts.adoc[NetBeans Screencasts]
+// no more full list *  xref:kb/docs/screencasts.adoc[NetBeans Screencasts]
 
 == Community-Contributed Docs
 

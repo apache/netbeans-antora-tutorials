@@ -49,7 +49,7 @@ Starting with NetBeans IDE 7.3 storing NetBeans C/C{pp} projects (mostly project
 |===
 
 
-See the xref:front::community/releases/74/install.adoc[NetBeans IDE Installation Instructions] and xref:front::community/releases/74/cpp-setup-instructions.adoc[Configuring the NetBeans IDE for C/C{pp}/Fortran] documents for information about downloading and installing the required software.
+See the xref:front::download/index.adoc[NetBeans IDE Installation Instructions] and xref:./cpp-setup-instructions.adoc[Configuring the NetBeans IDE for C/C{pp}/Fortran] documents for information about downloading and installing the required software.
 
 
 == VCS Controlled Project Issues Resolved in NetBeans IDE

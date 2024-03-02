@@ -830,6 +830,7 @@ private static class MyDragAndDropHandler extends link:https://bits.netbeans.org
 
 
 [start=8]
-1. Install the module again. When the TopComponent opens, the new Component Palette is shown. The categories you created in this tutorial are now categories in the Component Palette, while the movies are items within the categories. Next, you need to add drag and drop functionality to the items in the palette, as described in the  xref:./nbm-palette-api4.adoc[NetBeans Drag and Drop Tutorial].
+1. Install the module again. When the TopComponent opens, the new Component Palette is shown. The categories you created in this tutorial are now categories in the Component Palette, while the movies are items within the categories. 
+// not in archive Next, you need to add drag and drop functionality to the items in the palette, as described in the  xref:./nbm-palette-api4.adoc[NetBeans Drag and Drop Tutorial].
 
 xref:front::community/mailing-lists.adoc[Send Us Your Feedback]

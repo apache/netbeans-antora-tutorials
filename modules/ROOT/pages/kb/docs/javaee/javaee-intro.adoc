@@ -163,7 +163,7 @@ xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 For more information about using NetBeans IDE to develop Java EE applications, see the following resources:
 
 * xref:./javaee-gettingstarted.adoc[+Getting Started with Java EE Applications+]
-* xref:../websvc/jax-ws.adoc[+Getting Started with JAX-WS Web Services+]
+* xref:kb/docs/websvc/jax-ws.adoc[+Getting Started with JAX-WS Web Services+]
 * xref:kb/docs/java-ee.adoc[+Java EE &amp; Java Web Learning Trail+]
 
 To send comments and suggestions, get support, and keep informed on the latest developments on the NetBeans IDE Java EE development features, xref:front::community/mailing-lists.adoc[+join the nbj2ee@netbeans.org mailing list+].

@@ -258,9 +258,9 @@ This screencast demonstrates how to get a Git project by cloning an existing Git
  
 |============================================================
 
-//video::mzzAUEFS4vs_8k[youtube,title="Cloning a Git Repository Using NetBeans IDE"]
+//avideo::mzzAUEFS4vs_8k[youtube,title="Cloning a Git Repository Using NetBeans IDE"]
 
 == More NetBeans IDE Screencasts
 
-Browse the xref:front::community/media.adoc[NetBeans Media Library] and the link:http://www.youtube.com/user/netbeansvideos[NetBeans YouTube Channel] for additional video tutorials of the NetBeans IDE.
+Browse the xref:front::community/media.adoc[NetBeans Media Library] and the link:https://www.youtube.com/user/netbeansvideos[NetBeans YouTube Channel] for additional video tutorials of the NetBeans IDE.
 

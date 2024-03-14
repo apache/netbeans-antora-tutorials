@@ -50,7 +50,7 @@ Most mobile applications use the Java Micro Edition (Java ME) platform, which wa
 
 * xref:./javame/nb_me8_screencast.adoc[+Demo: NetBeans IDE Support for Java ME 8+]
 * xref:./javame/nb_me_plugins_screencast.adoc[+Demo: Installing and Using Java ME SDK 8.0 Plugins in NetBeans IDE+]
-* YouTube: video::_1PPSt2AwpM[Introduction into Java Micro Edition (ME) 8] (_by Terrence Bar_)
+* YouTube: avideo::_1PPSt2AwpM[Introduction into Java Micro Edition (ME) 8] (_by Terrence Bar_)
 
 == Community-Contributed Docs
 

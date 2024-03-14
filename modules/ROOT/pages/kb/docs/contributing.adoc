@@ -59,7 +59,7 @@ If you don't have edit permissions you always can clone the link:https://github.
 
 You can also watch the following YouTube video for instructions:
 
-video::0ovc902VWMQ[youtube, title="Contributing to Apache NetBeans Documentation"]
+avideo::0ovc902VWMQ[youtube, title="Contributing to Apache NetBeans Documentation"]
 
 == AsciiDoc Conventions in Apache NetBeans
 
@@ -206,14 +206,21 @@ TIP: Be sure to add a newline before the `[.feature]` tag.
 
 === Youtube videos
 
-Use the "video" asciidoc macro to embed youtube videos, like so:
+Use the custom "avideo" asciidoc macro to embed youtube videos, like so:
 
 [source, asciidoc]
 ----
-video::the-youtube-video-identifier[youtube, title="The title"] 
+avideo::the-youtube-video-identifier[youtube, title="The title"] 
 ----
 
 where "the-youtube-video-identifier" is the id of the youtube video, for instance `O8cwpEY1OAQ` is the identifier for link:https://www.youtube.com/embed/O8cwpEY1OAQ[https://www.youtube.com/embed/O8cwpEY1OAQ]
+
+You will need to provide a placeholder video that you will place in images/placeholder folder of respective modules
+
+[source, shell]
+----
+ wget https://i1.ytimg.com/vi/O8cwpEY1OAQ/hq1.jpg -O O8cwpEY1OAQ
+----
 
 === Source code
 

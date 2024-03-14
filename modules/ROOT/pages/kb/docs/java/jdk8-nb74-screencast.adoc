@@ -37,7 +37,7 @@ This screencast shows how to get started with JDK 8 in NetBeans IDE and how to u
 //link:http://bits.netbeans.org/media/jdk8-gettingstarted.mp4[+Download / Watch full size+] (30 MB)
 
 
-video::OXw5M_tD7B8[youtube,title="JDK 8 Support in NetBeans IDE"]
+avideo::OXw5M_tD7B8[youtube,title="JDK 8 Support in NetBeans IDE"]
  
 
 //|

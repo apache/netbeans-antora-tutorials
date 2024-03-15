@@ -29,6 +29,10 @@
 :description: Securing a Web Application in NetBeans IDE - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Securing a Web Application in NetBeans IDE
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 Contributed by Dan Kolar, Maintained by James Branam and Jeff Rubinoff
 
 This document takes you through the basics of adding security to a web application that is deployed to either the Oracle GlassFish Open Source Edition, Oracle WebLogic, or Apache Tomcat server.
@@ -38,7 +42,7 @@ This document shows you how to configure security authentication using a basic l
 *Expected duration: _40_ minutes*
 
 
-image::./netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
+image::kb/docs/web/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
 
 
 *To follow this tutorial, you need the following software and resources.*
@@ -227,12 +231,12 @@ For this scenario you need to use the Admin Console of the GlassFish server to c
 
 . In the Admin Console, navigate to Configurations > server-config > Security > Realms > File. The Edit Realm panel opens.
 
-image::./edit-realm.png[]
+image::kb/docs/web/edit-realm.png[]
 
 
 . Click the Manage Users button at the top of the Edit Realm panel. The File Users panel opens.
 
-image::./file-users.png[]
+image::kb/docs/web/file-users.png[]
 
 
 . Click New. The New File Realm User panel opens. Type  ``user``  as the user ID and  ``userpw01``  as the password. Click OK.
@@ -249,9 +253,9 @@ The basic users and roles for the Tomcat server are in  ``tomcat-users.xml`` . Y
 
 *Note:* You can find your CATALINA_BASE location by right-clicking the Tomcat server node in the Services window and selecting Properties. The Server Properties opens. The location of CATALINA_BASE is in the Connection tab.
 
-image::./tomcat-properties.png[] 
+image::kb/docs/web/tomcat-properties.png[] 
 
-image::./catalina-base.png[]
+image::kb/docs/web/catalina-base.png[]
 
 *Note:* If you use Tomcat 6 bundled with earlier versions of the IDE, this server has the  ``ide``  user defined with a password and the administrator and manager roles. The password for the user  ``ide``  is generated when Tomcat 6 is installed. You can change the password for the user  ``ide`` , or copy the password in  ``tomcat-users.xml`` .
 
@@ -346,7 +350,7 @@ General instructions on adding users and groups to the Web Logic server are in t
 
 . Type in the name "user" and the password "userpw01". Optionally type in a description. Accept default Authentication Provider. 
 
-image::./wl-admin-newuser.png[]
+image::kb/docs/web/wl-admin-newuser.png[]
 
 
 . Click OK. You return to the Users table.
@@ -378,7 +382,7 @@ Now add the  ``admin``  user to  ``adminGroup``  and the  ``user``  user to  ``u
 3. In the Parent Groups: Available: table, select  ``adminGroup`` .
 4. Click the right arrow, >. The  ``adminGroup``  appears in the Parent Groups: Chosen: table. 
 
-image::./wl-admin-usersettings.png[]
+image::kb/docs/web/wl-admin-usersettings.png[]
 
 
 . Click Save.
@@ -422,7 +426,7 @@ The following steps show how to configure a basic login for the GlassFish and We
 * *Tomcat:* Do not enter a realm name.
 * *WebLogic:* Enter your realm name. The default realm is  ``myrealm`` .
 
-image::./security-roles.png[]
+image::kb/docs/web/security-roles.png[]
 
 
 . Expand the Security Roles node and click Add to add a role name.
@@ -440,7 +444,7 @@ image::./security-roles.png[]
 1. Click Add Security Constraint. A section for a new security constraint appears.
 2. Enter  ``AdminConstraint``  for the Display Name of the new security constraint.
 
-image::./admin-constraint.png[]
+image::kb/docs/web/admin-constraint.png[]
 
 
 . Click Add. The Add Web Resource dialog opens.
@@ -451,7 +455,7 @@ In the Add Web Resource dialog, set the Resource Name to  ``Admin``  and the URL
 
 *Note: * When you use an asterisk (*), you are giving the user access to all files in that folder.
 
-image::./addwebresource.png[]
+image::kb/docs/web/addwebresource.png[]
 
 
 . Select Enable Authentication Constraint and click Edit. The Edit Role Names dialog opens.
@@ -461,7 +465,7 @@ image::./addwebresource.png[]
 
 After completing the above steps, the result should resemble the following figure:
 
-image::./constraints.png[]
+image::kb/docs/web/constraints.png[]
 
 
 . Create and configure a security constraint named  ``UserConstraint``  by doing the following:
@@ -488,7 +492,7 @@ The following steps show how to configure a login form
 5. 
 Set the Form Error Page by clicking Browse and locating  ``loginError.html`` .
 
-image::./login-forms.png[]
+image::kb/docs/web/login-forms.png[]
 
 
 . Enter a realm name, depending on your server.
@@ -520,7 +524,7 @@ In the Add Web Resource dialog box, set the Resource Name to  ``Admin``  and the
 
 *Note: * When you use an asterisk (*), you are giving the user access to all files in that folder.
 
-image::./addwebresource.png[]
+image::kb/docs/web/addwebresource.png[]
 
 
 . Select Enable Authentication Constraint and click Edit. The Edit Role Names dialog opens.
@@ -530,7 +534,7 @@ image::./addwebresource.png[]
 
 After completing the above steps, the result should resemble the following figure:
 
-image::./constraints.png[]
+image::kb/docs/web/constraints.png[]
 
 
 . Create and configure a security constraint named  ``UserConstraint``  by doing the following:
@@ -571,7 +575,7 @@ Note that the values you entered in  ``web.xml``  are displayed in  ``glassfish-
 . 
 Click Add Principal and enter  ``admin``  for the principal name. Click OK.
 
-image::./add-principal.png[]
+image::kb/docs/web/add-principal.png[]
 
 
 . Select the UserRole security role node to open the Security Role Mapping pane.
@@ -638,23 +642,23 @@ In the Projects window, right-click the project node and choose Run.
 
 After building and deploying the application to the server, the start page opens in your web browser. Choose the secure area which you want to access by clicking either *admin* or *user*.
 
-image::./deploy1.png[]
+image::kb/docs/web/deploy1.png[]
 
 After supplying the user and password, there are three possible results:
 
 * Password for this user is correct and user has privileges for secured content -> secure content page is displayed
 
-image::./deploy2.png[]
+image::kb/docs/web/deploy2.png[]
 
 * 
 Password for this user is incorrect -> Error page is displayed
 
-image::./deploy3.png[]
+image::kb/docs/web/deploy3.png[]
 
 * 
 Password for this user is correct, but user does not have right to access the secured content -> browser displays Error 403 Access to the requested resource has been denied
 
-image::./deploy4.png[]
+image::kb/docs/web/deploy4.png[]
 
 
 == Summary

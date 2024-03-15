@@ -30,6 +30,10 @@
 :description: Writing POV-Ray Support for NetBeans I—Application Structure &amp; File Support - Apache NetBeans
 :keywords: Apache NetBeans Platform, Platform Tutorials, Writing POV-Ray Support for NetBeans I—Application Structure &amp; File Support
 
+ifdef::env-github[]
+:imagesdir: ../../images
+endif::[]
+
 The POV-Ray tutorial is an advanced NetBeans Platform tutorial showing how to build an application for rendering POV-Ray files. In the process of creating the application, you will build on top of your existing NetBeans Platform knowledge, extending that knowledge into new areas, such as modular intercommunication and API design. You will touch upon many NetBeans APIs and learn how their best features can be combined in the creation of a real application.
 
 NOTE:  For a quick visual impression of the application you'll be creating, see the screenshot in the  xref:./nbm-povray-10.adoc[Conclusion] of this tutorial.
@@ -74,14 +78,14 @@ Since support for POV-Ray will be made up of multiple modules, we will start by 
 1. Select File > New Project from the main menu. In the New Project dialog, select NetBeans Modules > NetBeans Platform Application and click Next or press Enter:
 
 
-image::./povray_71_ch1_pic-1.png[]
+image::tutorials/povray_71_ch1_pic-1.png[]
 
 
 [start=2]
 1. Name the suite "povsuite" on the next screen, choose a location on your hard disk to put it.
 
 
-image::./povray_71_ch1_pic-2.png[]
+image::tutorials/povray_71_ch1_pic-2.png[]
 
 Then press Enter or click Finish.
 
@@ -130,7 +134,7 @@ We will now repeat the last few steps to create another project, in which we wil
 Your application should now look as follows:
 
 
-image::./povray_71_ch1_pic-3.png[]
+image::tutorials/povray_71_ch1_pic-3.png[]
 
 
 == Creating a File Type—Basic Support for .pov Files
@@ -155,7 +159,7 @@ NetBeans IDE has a template called "File Type" that makes it very easy to genera
 Select NetBeans Module Development > File Type in the New File wizard:
 
 
-image::./povray_71_ch1_pic-4.png[]
+image::tutorials/povray_71_ch1_pic-4.png[]
 
 Click Next or press Enter.
 
@@ -164,7 +168,7 @@ Click Next or press Enter.
 1. On the next screen, you are asked to supply a MIME type and a file extension. Enter "text/x-povray" for the MIME type, and two file extensions, ".pov,.inc" for the file extensions:
 
 
-image::./povray_71_ch1_pic-5.png[]
+image::tutorials/povray_71_ch1_pic-5.png[]
 
 Click Next or press Enter.
 
@@ -173,19 +177,19 @@ Click Next or press Enter.
 1. On the next screen, you are asked to supply a prefix for a the names of several Java classes that will be generated. Enter "Povray". This screen also requests an icon. Any 16x16 gif or png will do, or you can use 
 [.feature]
 --
-image::./povray_povicon.gif[role="left", xref="image$./povray_povicon.gif"]
+image::tutorials/povray_povicon.gif[role="left", xref="image$./povray_povicon.gif"]
 --
 .
 
 
-image::./povray_71_ch1_pic-6.png[]
+image::tutorials/povray_71_ch1_pic-6.png[]
 
 When you have entered the icon and the name, press Enter or click Finish and the IDE will generate the Java classes and metadata files needed for basic POV-Ray file support in NetBeans.
 
 You should now have the following file structure in the `povfile` package:
 
 
-image::./povray_71_ch1_pic-7.png[]
+image::tutorials/povray_71_ch1_pic-7.png[]
 
 * `*org.netbeans.examples.modules.povfile/*`
 * `*Bundle.properties*` A resource bundle for miscellaneous localized strings

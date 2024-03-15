@@ -30,6 +30,10 @@
 :description: JavaCC Lexer Generator Integration Tutorial for the NetBeans Platform - Apache NetBeans
 :keywords: Apache NetBeans Platform, Platform Tutorials, JavaCC Lexer Generator Integration Tutorial for the NetBeans Platform
 
+ifdef::env-github[]
+:imagesdir: ../../images
+endif::[]
+
 This tutorial shows you how to generate a lexer with  link:https://javacc.github.io/javacc//[JavaCC] and use it to create editor features for applications created on top of the NetBeans Platform.
 
 // NOTE:  This document uses NetBeans IDE 7.2 or above and NetBeans Platform 7.2 or above. If you are using an earlier version, see  link:71/nbm-javacc-lexer.html[the previous version of this document].
@@ -56,7 +60,7 @@ Part 2 of this tutorial, the  xref:./nbm-javacc-parser.adoc[JavaCC Parser Genera
 The NetBeans Platform provides hooks for integrating a lexer into your own Java desktop application on the NetBeans Platform. For example, in this tutorial, you use a sample grammar specification provided by JavaCC to generate a lexer and use it to create syntax coloring in an editor for a simplified Java language defined by the sample grammar specification:
 
 
-image::./javacc_72_result-1.png[]
+image::tutorials/javacc_72_result-1.png[]
 
 The principles you learn in this tutorial should help you integrate a JavaCC-based lexer of your own.
 
@@ -80,7 +84,7 @@ In the Name and Location panel, type  ``SimpleJava``  in Project Name. Change th
 The IDE creates the  ``SimpleJava``  project:
 
 
-image::./javacc_72_code-1.png[]
+image::tutorials/javacc_72_code-1.png[]
 
 The project contains all of your sources and project metadata, such as the project's Ant build script. The project opens in the IDE. You can view its logical structure in the Projects window (Ctrl-1) and its file structure in the Files window (Ctrl-2).
 
@@ -103,7 +107,7 @@ NOTE:  For details on the steps below, follow the  xref:./nbm-filetype.adoc[File
 The File Recognition panel should now look as follows:
 
 
-image::./javacc_72_code-2.png[]
+image::tutorials/javacc_72_code-2.png[]
 
 Click Next.
 
@@ -112,17 +116,17 @@ Click Next.
 1. In the Name and Location panel, type  ``SJ``  as the Class Name Prefix and browse to any 16x16 pixel image file as the new file type's icon, as shown below.
 
 
-image::./javacc_72_code-3.png[]
+image::tutorials/javacc_72_code-3.png[]
 
 *Note:* You can use any icon of a 16x16 pixel dimension. If you like, you can right-click on this one and save it locally, and then specify it in the wizard step above: 
-image:./javacc_71_JavaIcon.gif[]
+image:tutorials/javacc_71_JavaIcon.gif[]
 
 
 [start=4]
 1. Click Finish. The Projects window should now look as follows:
 
 
-image::./javacc_72_code-4.png[]
+image::tutorials/javacc_72_code-4.png[]
 
 The newly generated files above are described in the  xref:./nbm-filetype.adoc[File Type Integration Tutorial].
 
@@ -133,12 +137,12 @@ The newly generated files above are described in the  xref:./nbm-filetype.adoc[F
 You should see your icon is shown for the file type, the Actions registered via the annotations in the  ``DataObject``  are shown when you right-click the file in the Favorites window, and three tabs are shown in the editor (the source tab, the visual tab, and the local history tab):
 
 
-image::./javacc_72_code-5.png[]
+image::tutorials/javacc_72_code-5.png[]
 
 Create a new Java project and then go to the New File dialog, where you should see that your template has been registered:
 
 
-image::./javacc_72_code-6.png[]
+image::tutorials/javacc_72_code-6.png[]
 
 You now have a basic file type recognition infrastructure set up. In the next section, we generate a lexer via JavaCC and then use it to add syntax coloring for the SJ file type.
 
@@ -152,7 +156,7 @@ Let's now use JavaCC to generate a lexer!
 1. Download "javacc-5.0.zip" from  link:http://web.archive.org/web/20170410180215/https://java.net/projects/javacc//downloads[http://java.net/projects/javacc/downloads] and unpack it to a folder somewhere. In this section, for purposes of this example, we will use the grammar specified in the  ``Java1.5.jj``  file:
 
 
-image::./javacc_72_javacc-1.png[]
+image::tutorials/javacc_72_javacc-1.png[]
 
 NOTE:  You can try to use a different version of JavaCC, but there could be differences in the generated files, making the result incompatible with the sections that follow.
 
@@ -161,7 +165,7 @@ NOTE:  You can try to use a different version of JavaCC, but there could be diff
 1. Create a new package named  ``org.simplejava.jcclexer``  in your project. Copy the two files mentioned above,  ``Java1.5.jj``  and  ``Token.java`` , into the new package:
 
 
-image::./javacc_72_javacc-2.png[]
+image::tutorials/javacc_72_javacc-2.png[]
 
 In the next steps, we're going to tweak the  ``Java1.5.jj``  file so that it fits our specific needs.
 
@@ -380,7 +384,7 @@ Parser generated successfully.
 The result should be as follows:
 
 
-image::./javacc_72_javacc-3.png[]
+image::tutorials/javacc_72_javacc-3.png[]
 
 NOTE:  As you can see, JavaCC has generated several files, all of which should be compilable, that is, there should be no red error marks in any of the generated files.
 
@@ -396,17 +400,17 @@ In this section, we take the files generated in the previous section and integra
 1. In the Projects window, right-click the Libraries node, and choose Add Module Dependency, as shown below:
 
 
-image::./javacc_72_add-lexer-1.png[]
+image::tutorials/javacc_72_add-lexer-1.png[]
 
 Look for the "Lexer" module in the list:
 
 
-image::./javacc_72_add-lexer-2.png[]
+image::tutorials/javacc_72_add-lexer-2.png[]
 
 When you click OK, you should see the "Lexer" module is now a dependency in your module:
 
 
-image::./javacc_72_add-lexer-3.png[]
+image::tutorials/javacc_72_add-lexer-3.png[]
 
 
 [start=2]
@@ -670,7 +674,7 @@ public class JavaCharStream {
 1. After replacing the generated  ``JavaCharStream``  with the code in the previous step, everything should compile and your module structure should be as follows:
 
 
-image::./javacc_72_add-lexer-4.png[]
+image::tutorials/javacc_72_add-lexer-4.png[]
 
 You now have an implementation of the NetBeans Lexer API based on a JavaCC lexer generated from a JavaCC grammar definition. In the next section, you register your NetBeans lexer so that the NetBeans Platform infrastructure can find it and load it into the application.
 
@@ -726,12 +730,12 @@ public class SJLanguage extends DefaultLanguageConfig {
 For the class above to compile, you need a new dependency in your module:
 
 
-image::./javacc_72_add-lexer-5.png[]
+image::tutorials/javacc_72_add-lexer-5.png[]
 
 When the module containing the above class is built, the  ``generated-layer.xml``  file in the module's 'build' folder, which is visible in the Files window (Ctrl - 2), contains many new entries, providing many default features for your language:
 
 
-image::./javacc_72_add-lexer-6.png[]
+image::tutorials/javacc_72_add-lexer-6.png[]
 
 
 == Enabling Lexer Support in NetBeans Platform Applications
@@ -906,7 +910,7 @@ The above values will be shown in the Options window, in the panel where the use
 1. Right-click the  ``org.simplejava``  node, choose New | Other, and then create a new layer file, from the category shown below:
 
 
-image::./javacc_72_add-lexer-7.png[]
+image::tutorials/javacc_72_add-lexer-7.png[]
 
 Click Next above and Finish. A new XML file is created and registered in the manifest file of the module. The XML file defines the contributions of the module to the virtual filesystem of the application of which it is a part.
 
@@ -955,17 +959,17 @@ Click Next above and Finish. A new XML file is created and registered in the man
 1. Check that your module now has this content:
 
 
-image::./javacc_72_add-lexer-9.png[]
+image::tutorials/javacc_72_add-lexer-9.png[]
 
 Run the module, open an SJ file, and you should see the correct coloring, as defined in the files above:
 
 
-image::./javacc_72_result-1.png[]
+image::tutorials/javacc_72_result-1.png[]
 
 Look in the Options window, under the Tools menu, and you should be able to change the fonts and colors for the file type.
 
 
-image::./javacc_72_result-2.png[]
+image::tutorials/javacc_72_result-2.png[]
 
 xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 

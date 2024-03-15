@@ -30,6 +30,10 @@
 :description: NetBeans Wizard Module Tutorial - Apache NetBeans
 :keywords: Apache NetBeans Platform, Platform Tutorials, NetBeans Wizard Module Tutorial
 
+ifdef::env-github[]
+:imagesdir: ../../images
+endif::[]
+
 In this tutorial, you will learn how to use the main features provided by the Wizard classes of the  link:https://bits.netbeans.org/dev/javadoc/org-openide-dialogs/org/openide/package-summary.html[NetBeans Dialogs API].
 
 // NOTE: If you are using an earlier version of Apache NetBeans, see  link:74/nbm-wizard.html[the previous version of this document].
@@ -75,7 +79,7 @@ In this section, we use the Wizard wizard to add the stubs of a wizard to our mo
 1. In the Wizard Type panel, type 2 in the "Number of Wizard Panels" field, and leave the other values unchanged:
 
 
-image::./wizard_70_wizard-wizard.png[]
+image::tutorials/wizard_70_wizard-wizard.png[]
 
 The fields in the panel above are as follows:
 
@@ -90,14 +94,14 @@ Click Next.
 1. In the Name and Location panel, type  ``Demo``  in the Class Name Prefix and select the main package from the Package drop-down list:
 
 
-image::./wizard_70_wizard-wizard-4.png[]
+image::tutorials/wizard_70_wizard-wizard-4.png[]
 
 Click Finish.
 
 In the Projects window, you should now see this:
 
 
-image::./wizard_70_projects-window.png[]
+image::tutorials/wizard_70_projects-window.png[]
 
 Read through the NetBeans wizard javadoc in the  link:https://bits.netbeans.org/dev/javadoc/org-openide-dialogs/[NetBeans Dialogs API] and compare the classes generated above to the classes described in the  link:https://bits.netbeans.org/dev/javadoc/org-openide-dialogs/org/openide/package-summary.html[javadoc], which will prepare you for the next sections.
 
@@ -176,7 +180,7 @@ link:https://bits.netbeans.org/dev/javadoc/org-openide-awt/org/openide/awt/Actio
 When the module is compiled, you will find a " ``generated-layer.xml`` " file, if you switch to the Files window and look in the  ``build/classes/META-INF``  folder, as shown below:
 
 
-image::./wizard_70_generated-layer.png[]
+image::tutorials/wizard_70_generated-layer.png[]
 
 The  ``generated-layer.xml``  file provides contributions to the NetBeans central registry (also known as the 'system filesystem'), where fixed folders (such as "Actions" and "Menu") provide placeholders for the registration of the content of menubars, toolbars, and many other NetBeans Platform features. For details, see  xref:wiki::wiki/DevFaqSystemFilesystem.adoc[DevFaqSystemFilesystem].
 
@@ -185,17 +189,17 @@ The  ``generated-layer.xml``  file provides contributions to the NetBeans centra
 1. Run the module. The application starts up and you should see your menu item where you specified it to be in the annotation above:
 
 
-image::./wizard_70_result-1.png[]
+image::tutorials/wizard_70_result-1.png[]
 
 Click the menu item and the wizard appears:
 
 
-image::./wizard_70_result-2.png[]
+image::tutorials/wizard_70_result-2.png[]
 
 Click Next and notice that in the final panel the Finish button is enabled:
 
 
-image::./wizard_70_result-3.png[]
+image::tutorials/wizard_70_result-3.png[]
 
 Now that the wizard infrastructure is functioning, let's add some content.
 
@@ -209,7 +213,7 @@ In this section, we add content to the wizard and customize its basic features. 
 1. Open the  ``DemoWizardAction.java``  file and notice that you can set a variety of customization properties for the wizard:
 
 
-image::./wizard_70_wizard-tweaking.png[]
+image::tutorials/wizard_70_wizard-tweaking.png[]
 
 Read about these properties  link:http://ui.netbeans.org/docs/ui_apis/wide/index.html[here].
 
@@ -229,12 +233,12 @@ wiz.setTitle("Music Selection");
 1. Open the  ``DemoVisualPanel1.java``  file and the  ``DemoVisualPanel2.java``  file and use the "Matisse" GUI Builder to add some Swing components, such as the following:
 
 
-image::./wizard_panel-1-design.png[]
+image::tutorials/wizard_panel-1-design.png[]
 
 For code later in this tutorial to work, you need to set the name of the  ``JTextFields``  above to  ``nameField``  and  ``addressField`` .
 
 
-image::./wizard_panel-2-design.png[]
+image::tutorials/wizard_panel-2-design.png[]
 
 Above, you see  ``DemoVisualPanel1.java``  file and the  ``DemoVisualPanel2.java`` , with some Swing components.
 
@@ -247,7 +251,7 @@ Above, you see  ``DemoVisualPanel1.java``  file and the  ``DemoVisualPanel2.java
 Run the module again. When you open the wizard, you should see something like this, depending on the Swing components you added and the customizations you provided:
 
 
-image::./wizard_70_result-4.png[]
+image::tutorials/wizard_70_result-4.png[]
 
 The image in the left sidebar of the wizard above is set in the  ``DemoWizardAction.java``  file, like this:
 
@@ -316,7 +320,7 @@ if (DialogDisplayer.getDefault().notify(wiz) == WizardDescriptor.FINISH_OPTION) 
 The  `` link:https://bits.netbeans.org/dev/javadoc/org-openide-dialogs/org/openide/NotifyDescriptor.html[NotifyDescriptor]``  can be used in other ways too, as indicated by the code completion box:
 
 
-image::./wizard_70_notifydescriptor.png[]
+image::tutorials/wizard_70_notifydescriptor.png[]
 
 You now know how to process data entered by the user.
 
@@ -360,7 +364,7 @@ public void validate() throws WizardValidationException {
 1. Run the module. Click "Next", without entering anything in the "Name" field, and you should see the result below. Also, note that you are not able to move to the next panel, as a result of the validation having failed:
 
 
-image::./wizard_70_validation1.png[]
+image::tutorials/wizard_70_validation1.png[]
 
 
 [start=4]
@@ -408,7 +412,7 @@ public void validate() throws WizardValidationException {
 Run the module. This time, the first time you click "Next", you'll find that if there is no content is in the field, the "Next" button becomes disabled:
 
 
-image::./wizard_70_validation2.png[]
+image::tutorials/wizard_70_validation2.png[]
 
 Alternatively, set the boolean to false initially. That will cause the "Next" button to be disabled when the wizard is shown. Then add a  ``DocumentListener``  to the text field and, when the user types something in the field, set the boolean to true and call  ``isValid()`` .
 
@@ -453,14 +457,14 @@ public void storeSettings(WizardDescriptor wiz) {
 Run the module again and type a name and address in the first panel of the wizard:
 
 
-image::./wizard_70_nbpref1.png[]
+image::tutorials/wizard_70_nbpref1.png[]
 
 
 [start=4]
 1. Close the application, open the Files window, and look in the  ``wizard.properties``  file within the application's  ``build``  folder. You should now see settings like this:
 
 
-image::./wizard_70_nbpref3.png[]
+image::tutorials/wizard_70_nbpref3.png[]
 
 
 [start=5]
@@ -488,7 +492,7 @@ Branding entails overriding properties files in the NetBeans Platform. These pro
 1. In the Files window, expand the application's  ``"branding"``  folder and then create the folder/file structure highlighted below:
 
 
-image::./wizard_70_branding-1.png[]
+image::tutorials/wizard_70_branding-1.png[]
 
 
 [start=3]
@@ -519,7 +523,7 @@ The key "CTL_ContentName" is set to "Steps" by default, which is used in the lef
 1. Run the application and the "Next" button will be branded to "Advance":
 
 
-image::./wizard_70_branding-2.png[]
+image::tutorials/wizard_70_branding-2.png[]
 
 Optionally, use the  ``DemoWizardAction.java``  file, as described earlier, to remove the whole left side of the wizard as follows:
 
@@ -533,7 +537,7 @@ wiz.putProperty(WizardDescriptor.PROP_AUTO_WIZARD_STYLE, Boolean.FALSE);
 The above setting results in a wizard that looks as follows:
 
 
-image::./wizard_70_branding-3.png[]
+image::tutorials/wizard_70_branding-3.png[]
 
 You now know how to brand the strings defined in the wizard infrastructure with your own branded versions.
 
@@ -549,7 +553,7 @@ Tom Wheeler's NetBeans Site (click the image below):
 
 [.feature]
 --
-image::./wizard_tom.png[role="left", link="http://www.tomwheeler.com/netbeans/"]
+image::tutorials/wizard_tom.png[role="left", link="http://www.tomwheeler.com/netbeans/"]
 --
 
 Even though it was written for NetBeans 5.5, the above sample has been successfully tried in NetBeans IDE 6.5.1 on Ubuntu Linux with JDK 1.6.

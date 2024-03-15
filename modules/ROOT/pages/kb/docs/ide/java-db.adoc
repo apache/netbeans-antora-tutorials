@@ -29,6 +29,10 @@
 :description: Working with the Java DB (Derby) Database - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Working with the Java DB (Derby) Database
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This document demonstrates how to set up a connection to link:http://www.oracle.com/technetwork/java/javadb/overview/index.html[+Java DB+] database in NetBeans IDE. Once a connection is made, you can begin working with the database in the IDE, allowing you to create tables, populate them with data, run SQL statements and queries, and more.
 
 The Java DB database is Sun's supported distribution of link:http://db.apache.org/derby/[+Apache Derby+]. Java DB is a fully transactional, secure, standards-based database server, written entirely in Java, and fully supports SQL, JDBC API, and Java EE technology. The Java DB database is packaged with the link:http://glassfish.dev.java.net/[+GlassFish+] application server, and is included in link:http://download.oracle.com/javase/6/[+JDK 6+] as well. For more information on Java DB database, consult the link:http://www.oracle.com/technetwork/java/javadb/documentation/index.html[+official documentation+].
@@ -65,7 +69,7 @@ Now that the database is configured, perform the following steps to register Jav
 
 For example, the default location might look like  ``C:\Documents and Settings\username\.netbeans-derby``  on a Windows machine.
 
-image::./javadb-props.png[title="example of default settings of Java DB server and database"]
+image::kb/docs/ide/javadb-props.png[title="example of default settings of Java DB server and database"]
 
 NOTE: If the Database Location field is empty you will need to set the path to the directory that contains your databases. You will need to create a directory for the databases if no directory exists.
 
@@ -76,7 +80,7 @@ The Java DB Database menu options are displayed when you right-click the Java D
 
 1. In the Services window, right-click the Java DB node and choose Start Server. Note the following output in the Output window, indicating that the server has started:
 
-image::./output-start-db.png[]
+image::kb/docs/ide/output-start-db.png[]
 
 [start=2]
 . Right-click the Java DB node and choose Create Database to open the Create Java DB Database dialog.
@@ -87,7 +91,7 @@ image::./output-start-db.png[]
 [start=4]
 . Type  ``nbuser``  for the User Name and Password. Click OK.
 
-image::./javadb-createdb.png[]
+image::kb/docs/ide/javadb-createdb.png[]
 
 NOTE: The Database Location is the default location set during installation of Java DB from GlassFish. If you installed Java DB separately, this location might be different.
 
@@ -107,16 +111,16 @@ In order to begin working with the  ``contact``  database, you need to create a 
 
 1. Expand the Databases node in the Services window and locate the new database and the database connection nodes.
 
-The database connection node( image:./connection-node-icon.png[]) is displayed under the Databases node. The name of the database is displayed under the Java DB node.
+The database connection node( image:kb/docs/ide/connection-node-icon.png[]) is displayed under the Databases node. The name of the database is displayed under the Java DB node.
 
-image::./services-window.png[]
+image::kb/docs/ide/services-window.png[]
 
 NOTE: You will also see the `sample [app on APP]` database connection that is the default database schema.
 
 
 . Right-click the *contact* database connection node ( ``jdbc:derby://localhost:1527/contact [nbuser on NBUSER]`` ) and choose Connect.
 
-The connection node icon appears whole ( image:./connection-node-icon.png[]), signifying that the connection was successful.
+The connection node icon appears whole ( image:kb/docs/ide/connection-node-icon.png[]), signifying that the connection was successful.
 
 . Create a convenient display name for the database by right-clicking the database connection node ( ``jdbc:derby://localhost:1527/contact [nbuser on NBUSER]`` ) and choosing Rename. Type  ``Contact DB``  in the text field and click OK.
 
@@ -149,7 +153,7 @@ The  ``contact``  database that you just created is currently empty. It does not
 [start=6]
 . Under Constraints, select the Primary Key checkbox to specify that this column is the primary key for your table. All tables found in relational databases must contain a primary key. Note that when you select the Primary Key check box, the Index and Unique check boxes are also automatically selected and the Null check box is deselected. This is because primary keys are used to identify a unique row in the database, and by default are used as the table index. Because all rows must be identified, primary keys cannot contain a  ``Null``  value.
 
-image::./add-column.png[]
+image::kb/docs/ide/add-column.png[]
 
 
 . Repeat this procedure now by specifying fields as shown in the table below:
@@ -180,12 +184,12 @@ You are creating a table named  ``FRIENDS``  that holds the following data for e
 * *Friend Since Date*
 * *Email Address*
 
-image::./create-table-friends.png[]
+image::kb/docs/ide/create-table-friends.png[]
 
 
-.  When you are sure that your Create Table dialog contains the same specifications as those shown above, click OK. The IDE generates the  ``FRIENDS``  table in the database, and you can see a new  ``FRIENDS``  table node (image:./table-node.png[]) display under the Tables node. Beneath the table node the columns (fields) are listed, starting with the primary key (image:./primary-key-icon.png[]).
+.  When you are sure that your Create Table dialog contains the same specifications as those shown above, click OK. The IDE generates the  ``FRIENDS``  table in the database, and you can see a new  ``FRIENDS``  table node (image:kb/docs/ide/table-node.png[]) display under the Tables node. Beneath the table node the columns (fields) are listed, starting with the primary key (image:kb/docs/ide/primary-key-icon.png[]).
 
-image::./friends-table.png[]
+image::kb/docs/ide/friends-table.png[]
 
 
 === Using the SQL Editor:
@@ -209,12 +213,12 @@ CREATE TABLE "COLLEAGUES" (
 NOTE: Statements and queries formed in the SQL Editor are parsed in Structured Query Language. SQL adheres to strict syntax rules which you should be familiar with when working in the IDE's editor. SQL syntax can also differ depending on the database management system. See the link:http://www.oracle.com/technetwork/java/javadb/documentation/index.html[+JavaDB Reference Manual+] for specific guidelines.
 
 
-. Click the Run SQL (image:./run-sql-button.png[]) button in the task bar at the top of the editor (Ctrl-Shift-E) to execute the query. In the Output window (Ctrl-4), a message displays indicating that the statement was successfully executed.
+. Click the Run SQL (image:kb/docs/ide/run-sql-button.png[]) button in the task bar at the top of the editor (Ctrl-Shift-E) to execute the query. In the Output window (Ctrl-4), a message displays indicating that the statement was successfully executed.
 
-image::./run-query.png[]
+image::kb/docs/ide/run-query.png[]
 
 
-. To verify changes, right-click the  ``Contact DB``  connection node in the Services window and choose Refresh. This updates the Runtime UI component to the current status of the specified database. This step is necessary when running queries from the SQL Editor in NetBeans IDE. Note that the new COLLEAGUES table node (image:./table-node.png[]) now displays under Tables in the Services window.
+. To verify changes, right-click the  ``Contact DB``  connection node in the Services window and choose Refresh. This updates the Runtime UI component to the current status of the specified database. This step is necessary when running queries from the SQL Editor in NetBeans IDE. Note that the new COLLEAGUES table node (image:kb/docs/ide/table-node.png[]) now displays under Tables in the Services window.
 
 
 == Adding Table Data
@@ -247,7 +251,7 @@ While you are typing, you can use the SQL Editor code completion.
 
 When you choose View Data, a query to select all the data from the table is automatically generated in the upper pane of the SQL Editor. The results of the statement are displayed in the lower pane of the SQL Editor. In this case, the  ``FRIENDS``  table displays in the lower pane. Note that a new row has been added with the data you just supplied from the SQL statement.
 
-image::./new-record.png[]
+image::kb/docs/ide/new-record.png[]
 
 
 === Using the SQL Editor
@@ -259,7 +263,7 @@ The Insert Records dialog box appears.
 [start=3]
 . Click in each cell and enter records. Note that for the cells with Date data type, you can choose a date from the calendar. Click OK when you are done. 
 
-image::./insert-records.png[]
+image::kb/docs/ide/insert-records.png[]
 
 In the SQL Editor, you can sort the results by clicking on a row header, modify and delete existing records, and see the SQL script for the actions you are doing in the editor (the Show SQL Script command from the pop-up menu).
 
@@ -286,10 +290,10 @@ Alternatively, you can copy the contents of link:https://netbeans.org/project_do
 
 . Make sure your connection to  ``Contact DB ``  is selected from the Connection drop-down box in the tool bar at the top of the editor.
 
-image::./conn-drop-down.png[]
+image::kb/docs/ide/conn-drop-down.png[]
 
 
-. Click the Run SQL (image:./run-sql-button.png[]) button in the SQL Editor's task bar. The script is executed against the selected database, and any feedback is generated in the Output window.
+. Click the Run SQL (image:kb/docs/ide/run-sql-button.png[]) button in the SQL Editor's task bar. The script is executed against the selected database, and any feedback is generated in the Output window.
 . To verify changes, right-click the  ``Contact DB ``  connection node in the Services window and choose Refresh. Note that the new  ``COLLEAGUES``  table from the SQL script now displays as a table node under  ``contact``  in the Services window.
 . To view the data contained in the new tables, right-click the  ``COLLEAGUES``  table and choose View Data. In this manner, you can also compare the tabular data with the data contained in the SQL script to see that they match.
 
@@ -301,7 +305,7 @@ If you have a table from another database which you would like to recreate in th
 1. Connect to the  ``sample``  database by right-clicking the connection node under the Databases node in the Services window and choosing Connect (username and password is  ``app`` ).
 2. Expand the Tables node under the  ``sample``  database connection, right-click the  ``CUSTOMER``  table node and choose Grab Structure.
 
-image::./grab-structure.png[]
+image::kb/docs/ide/grab-structure.png[]
 
 
 . In the Grab Table dialog that opens, specify a location on your computer to save the grab file that will be created. Click Save.
@@ -312,11 +316,11 @@ The grab file records the table definition of the selected table.
 . Expand the APP schema node under the  ``Contact DB``  database connection, right-click the Tables node and choose Recreate Table to open the Recreate Table dialog box.
 . In the Recreate Table dialog box, navigate to the location where you saved the  ``CUSTOMER``  grab file and click Open to open the Name the Table dialog box.
 
-image::./recreate-table.png[]
+image::kb/docs/ide/recreate-table.png[]
 
 . At this point you can change the table name or edit the table definition. Otherwise, click OK to immediately create the table in the  ``contact``  database. A new  ``CUSTOMER``  table node appears beneath the  ``Contact``  DB connection node.
 
-image::./new-customer-node.png[]
+image::kb/docs/ide/new-customer-node.png[]
 
 If you view the data in the new  ``CUSTOMER``  table you will see that there are no records in the database, but that the structure of the table is identical to the table that you grabbed.
 

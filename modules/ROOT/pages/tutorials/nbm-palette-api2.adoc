@@ -30,6 +30,10 @@
 :description: NetBeans Editor Component Palette Module Tutorial - Apache NetBeans
 :keywords: Apache NetBeans Platform, Platform Tutorials, NetBeans Editor Component Palette Module Tutorial
 
+ifdef::env-github[]
+:imagesdir: ../../images
+endif::[]
+
 This tutorial demonstrates how to create a component palette that provides drag-and-drop code snippets for a new file type. Code snippets serve to speed up coding. The IDE provides a component palette for JSP files, HTML files, and Form files. In this tutorial, you learn how to create a component palette for Java source files.
 
 // NOTE: If you are using an earlier version of Apache NetBeans, see link:74/nbm-palette-api2.html[the previous version of this document].
@@ -231,7 +235,7 @@ The IDE uses an Ant build script to build and install your module. The build scr
 1. The IDE opens. Open a Java file. The palette opens at the same time. Drag snippets into the palette, a dialog opens, set a display name and other info, and you'll see your snippet in the palette:
 
 
-image::./palette_api_java-snippets-javafx.png[]
+image::tutorials/palette_api_java-snippets-javafx.png[]
 
 xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 

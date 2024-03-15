@@ -29,13 +29,17 @@
 :description: End-to-End Binary SOAP Attachment 2: Creating the Web Service - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, End-to-End Binary SOAP Attachment 2: Creating the Web Service
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 The goal of this lesson is to create a web application that contains a web service. You implement the web service as a stateless session bean.
 
 You can download a complete sample of the web service from the link:https://netbeans.org/projects/samples/downloads/download/Samples%252FWeb%2520Services%252FWeb%2520Service%2520Passing%2520Binary%2520Data%2520--%2520EE6%252FFlowerAlbumService.zip[+NetBeans Samples Catalog+].
 
 *Lessons In This Tutorial*
 
-image::./netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
+image::kb/docs/websvc/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
 
 1. xref:./flower_overview.adoc[+Overview+]
 2. => Creating the Web Service
@@ -68,7 +72,7 @@ Alternatively, select New > Other and select Java Package in the Java category o
 [start=6]
 . Name the package  ``org.flower.resources`` . Click Finish.
 
-image::./new-package.png[]
+image::kb/docs/websvc/new-package.png[]
 
 [start=7]
 . Copy the following images into  ``org.flower.resources`` :
@@ -79,7 +83,7 @@ image::./new-package.png[]
 
 The project now has the package  ``org.flower.resources``  in the Source Package. No other contents have been added.
 
-image::./project-w-resources.png[]
+image::kb/docs/websvc/project-w-resources.png[]
 
 
 [[add-ws]]
@@ -95,16 +99,16 @@ In this section you create a web service in the web application. You create the 
 1. In the Projects window, right-click the  ``FlowerAlbumService``  project node and choose New > Web Service. Alternatively, choose New > Other and then select Web Service under Web Services in the New File wizard. The New Web Service wizard opens.
 2. In the New Web Service wizard, type  ``FlowerService``  in Web Service Name and  ``org.flower.service``  in Package Name. Select Create Web Service from Scratch. Select Implement Service as Stateless Session Bean. Click Finish. 
 
-image::./new-service.png[]
+image::kb/docs/websvc/new-service.png[]
 
 The web service appears in the project's nodes in the Projects window. The Source Packages directory includes the service package and the resources package.
 
-image::./project-w-service-and-resources.png[]
+image::kb/docs/websvc/project-w-service-and-resources.png[]
 
 [start=3]
 . Open  ``FlowerService.java``  in the editor. Switch to the Design view. A form appears in which you can add operations and quality of service elements to the web service.
 
-image::./flower-service-empty-design.png[]
+image::kb/docs/websvc/flower-service-empty-design.png[]
 
 [start=4]
 . Click Add Operation. The Add Operation wizard opens.
@@ -115,12 +119,12 @@ image::./flower-service-empty-design.png[]
 [start=6]
 . In the Parameters tab, click Add. Name the parameter  ``name``  and accept the default  ``java.lang.String``  type. 
 
-image::./add-getflower-param.png[]
+image::kb/docs/websvc/add-getflower-param.png[]
 
 [start=7]
 . Open the Exceptions tab. Add an  ``IOException`` .
 
-image::./io-exception.png[]
+image::kb/docs/websvc/io-exception.png[]
 
 [start=8]
 . Click OK and close the wizard. Then click Add Operation again, and add an operation with the following properties:
@@ -130,7 +134,7 @@ image::./io-exception.png[]
 
 The Design view now shows the  ``getFlower``  and  ``getThumbnails``  operations. Switch to the List View of both operations and you see all their parameters.
 
-image::./flower-service-full-design.png[]
+image::kb/docs/websvc/flower-service-full-design.png[]
 
 
 ==  

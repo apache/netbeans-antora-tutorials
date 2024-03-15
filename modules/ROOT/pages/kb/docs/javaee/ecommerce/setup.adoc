@@ -29,6 +29,9 @@
 :description: The NetBeans E-commerce Tutorial - Setup Instructions - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, The NetBeans E-commerce Tutorial - Setup Instructions
 
+ifdef::env-github[]
+:imagesdir: ../../../../../images
+endif::[]
 
 == Tutorial Contents
 
@@ -46,16 +49,16 @@
 12. xref:./test-profile.adoc[+Testing and Profiling+]
 13. xref:./conclusion.adoc[+Conclusion+]
 
-image::./netbeans-stamp-68-69.png[title="Content on this page applies to NetBeans IDE, versions 6.8 and 6.9"]
+image::kb/docs/javaee/ecommerce/netbeans-stamp-68-69.png[title="Content on this page applies to NetBeans IDE, versions 6.8 and 6.9"]
 
 If you want to follow a tutorial unit without having completed previous units, you need to perform some preliminary steps in order to set up your development environment.
 
 1. *Set up your MySQL database server.* Follow the steps outlined in: xref:./setup-dev-environ.adoc#communicate[+Communicating with the Database Server+].
 2. *Create the `affablebean` schema on the database server, and populate the database with sample data:*
 .. Click on link:https://netbeans.org/projects/samples/downloads/download/Samples%252FJavaEE%252Fecommerce%252Faffablebean.sql[+affablebean.sql+] and copy (Ctrl-C; ⌘-C on Mac) the entire contents of the file.
-.. Open the IDE's SQL editor. In the Services window (Ctrl-5; ⌘-5 on Mac), right-click the `affablebean` database connection ( image:./db-connection-node.png[] ) node and choose Execute Command. 
+.. Open the IDE's SQL editor. In the Services window (Ctrl-5; ⌘-5 on Mac), right-click the `affablebean` database connection ( image:kb/docs/javaee/ecommerce/db-connection-node.png[] ) node and choose Execute Command. 
 
-image::./execute-command.png[title="Choose Execute Command from a connection node to open the IDE's SQL editor"] 
+image::kb/docs/javaee/ecommerce/execute-command.png[title="Choose Execute Command from a connection node to open the IDE's SQL editor"] 
 
 The IDE's SQL editor opens.
 
@@ -63,7 +66,7 @@ The IDE's SQL editor opens.
 . Paste (Ctrl-V; ⌘-V on Mac) the entire contents of the `affablebean.sql` file into the editor.
 
 [start=4]
-. Click the Run SQL ( image:./run-sql-btn.png[] ) button in the editor's toolbar. The script runs on your MySQL server. Tables are generated for the database, and sample data is added to the `product` and `category` tables.
+. Click the Run SQL ( image:kb/docs/javaee/ecommerce/run-sql-btn.png[] ) button in the editor's toolbar. The script runs on your MySQL server. Tables are generated for the database, and sample data is added to the `product` and `category` tables.
 
 [start=3]
 . *Create a connection pool and JDBC resource on GlassFish.*
@@ -77,7 +80,7 @@ The IDE's SQL editor opens.
 * *Resource Type:* `javax.sql.ConnectionPoolDataSource`
 * *Database Vendor:* `MySql`
 
-image::./connection-pool.png[title="Specify settings to create a connection pool that connects with a MySQL database"]
+image::kb/docs/javaee/ecommerce/connection-pool.png[title="Specify settings to create a connection pool that connects with a MySQL database"]
 
 [start=7]
 . Click Next. Accept all defaults and click Finish.
@@ -86,7 +89,7 @@ image::./connection-pool.png[title="Specify settings to create a connection pool
 . In the Connection Pools interface, click on your newly created `AffableBeanConnectionPool` to make the following change under the General tab:
 * *Datasource Classname:* `com.mysql.jdbc.jdbc2.optional.MysqlDataSource`
 
-image::./datasource-classname.png[title="Set the datasource classname for the connection pool"]
+image::kb/docs/javaee/ecommerce/datasource-classname.png[title="Set the datasource classname for the connection pool"]
 
 [start=9]
 . Click Save.
@@ -97,7 +100,7 @@ image::./datasource-classname.png[title="Set the datasource classname for the co
 * *Password:* `nbuser`
 * *URL:* `jdbc:mysql://localhost:3306/affablebean`
 
-image::./additional-properties.png[title="Set username, password and url to the database"]
+image::kb/docs/javaee/ecommerce/additional-properties.png[title="Set username, password and url to the database"]
 
 [start=11]
 . Click Save.
@@ -105,7 +108,7 @@ image::./additional-properties.png[title="Set username, password and url to the 
 [start=12]
 . Click the General tab, then click Ping. You should see a message indicating that the ping succeeded. The `AffableBeanPool` connection pool can now connect to your MySQL database server. 
 
-image::./ping-succeeded.png[title="Ping the MySQL server to determine whether the connection pool can connect"]
+image::kb/docs/javaee/ecommerce/ping-succeeded.png[title="Ping the MySQL server to determine whether the connection pool can connect"]
 
 [start=13]
 . In the Admin Console's Tree in the left column, click the Resources > JDBC > JDBC Resources node. The JDBC Resources interface opens in the main window.
@@ -115,7 +118,7 @@ image::./ping-succeeded.png[title="Ping the MySQL server to determine whether th
 * *JNDI Name:* `jdbc/affablebean`
 * *Connection Pool:* `AffableBeanPool`
 
-image::./jdbc-resource.png[title="Specify JNDI name and connection pool to create the JDBC resource"]
+image::kb/docs/javaee/ecommerce/jdbc-resource.png[title="Specify JNDI name and connection pool to create the JDBC resource"]
 
 [start=15]
 . Click OK.

@@ -30,6 +30,10 @@
 :keywords: Apache NetBeans, Tutorials, Creating a Database Driven Application With PHP
 include::front::partial$database.adoc[]
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 In this lesson you create and configure the PHP project to develop your application, create a list of pages in the application, and define the relations between them. You also develop basic application functionality and test it against the data you entered in the sample database in lesson 1.
 
 The PHP code you write in this lesson performs the following functions:
@@ -62,7 +66,7 @@ To cover this basic functionality, you will need to implement the following PHP 
 4. The editWishList.php page for editing a wish list by its owner.
 5. The editWish.php page for creating and editing wishes.
 
-image::./page-flow-diagram.png[]
+image::kb/docs/php/page-flow-diagram.png[]
 
 Now that you have finished the preliminary steps, you can start implementing the basic functionality of your application. Start with viewing the wish list of a wisher. This feature does not involve any validations and can be easily tested as you have already entered the test data into the database. The feature's functionality will be implemented on two pages, index.php and wishlist.php.
 
@@ -91,7 +95,7 @@ NOTE: You can ignore warnings from the HTML validator.
 
 . Remove the PHP block. The index.php file will not contain any PHP code.
 
-image::./remove-php-block.png[]
+image::kb/docs/php/remove-php-block.png[]
 
 
 
@@ -100,17 +104,17 @@ image::./remove-php-block.png[]
 
 . From the Palette's* HTML Forms* section, drag and drop a Form into the <body> section of  ``index.php`` . 
 
-image::./form-dnd.png[]
+image::kb/docs/php/form-dnd.png[]
 
 
 
 . The Insert Form dialog opens. In the Action field, type the path to the file to which the form will transfer data. In this case, type in  ``wishlist.php`` . (You will create this file in the same location as  ``index.php`` . See <<createNewFile,Creating wishlist.php and Testing the Application>>.) Select the GET method for transferring data. Give the form an arbitrary name, such as  ``wishList`` . Click OK when you are done.
 
-image::./insert-form-dialog.png[]
+image::kb/docs/php/insert-form-dialog.png[]
 
 The file now looks like this:
 
-image::./blank-form.png[]
+image::kb/docs/php/blank-form.png[]
 
 
 
@@ -122,11 +126,11 @@ image::./blank-form.png[]
 
 . Name the input  ``user`` . Select input type  ``text`` . Leave all other fields empty and click OK.
 
-image::./insert-text-input.png[]
+image::kb/docs/php/insert-text-input.png[]
 
 The file now looks like this:
 
-image::./form-with-text-input.png[]
+image::kb/docs/php/form-with-text-input.png[]
 
 
 
@@ -135,7 +139,7 @@ image::./form-with-text-input.png[]
 
 . The Insert Button dialog opens. Type  ``Go``  into the Label field and click OK.
 
-image::./insert-button-dialog.png[]
+image::kb/docs/php/insert-button-dialog.png[]
 
 
 
@@ -166,9 +170,9 @@ In <<transferDataFromIndexToWishlist,Adding a Form To index.php>> you created a 
 
 1. Inside the "wishlist" project you created, click the right mouse button on the Source files node and from the context menu choose New > PHP Web Page. The New PHP Web Page wizard opens.
 2. Type  ``wishlist``  in the File Name field and press Finish.
-3. Click the right mouse button on the Sources node and choose Run Project from the context menu or click the Run Main Project icon image:./run-main-project-button.png[]on the toolbar if you have set your project as Main. 
+3. Click the right mouse button on the Sources node and choose Run Project from the context menu or click the Run Main Project icon image:kb/docs/php/run-main-project-button.png[]on the toolbar if you have set your project as Main. 
 
-image::./index-php-works.png[]
+image::kb/docs/php/index-php-works.png[]
 
 
 
@@ -221,7 +225,7 @@ The code now looks like this:
 
 The PHP code block displays the data that is received through the method GET in the field "user". This data is transferred from  ``index.php``  where the name of the wish list owner Tom was entered in the text field "user". Repeat the steps from <<createNewFile,Testing index.php>> to see that wishlist.php works properly. 
 
-image::./wishlist-php-title-works.png[]
+image::kb/docs/php/wishlist-php-title-works.png[]
 
 
 
@@ -258,9 +262,9 @@ NOTE:  You may need to alter the database connection in the  ``oci_connect``  co
 
 NOTE: You can use NetBeans IDE's code completion for either mysqli or OCI8 functions.
 
-image::./codecompletion.png[]
+image::kb/docs/php/codecompletion.png[]
 
-image::./codecompletion-oci.png[]
+image::kb/docs/php/codecompletion-oci.png[]
 
 
 
@@ -370,7 +374,7 @@ Wish List of <?php echo htmlentities($_GET["user"]) . "<br/>"; ?>
 
 If you test the application and enter an invalid user, the following message appears.
 
-image::./wishlist-php-title-user-not-found-works.png[]
+image::kb/docs/php/wishlist-php-title-user-not-found-works.png[]
 
 
 == Displaying a Table of Wishes
@@ -438,7 +442,7 @@ WARNING: Make sure you type the names of database fields exactly as they are spe
 
 . To test the application, run the project as described in the section <<createNewFile,Testing index.php>>.
 
-image::./wishlist-php-works.png[]
+image::kb/docs/php/wishlist-php-works.png[]
 
 
 == Application Source Code after the Current Lesson Is Completed

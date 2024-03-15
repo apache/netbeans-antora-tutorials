@@ -29,6 +29,10 @@
 :description: Introduction to Ajax for PHP Web Applications - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Introduction to Ajax for PHP Web Applications
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This document provides an introduction to Ajax and demonstrates some of the features in the NetBeans IDE that allow you to program faster and more efficiently when working with Ajax-related technologies. While learning about the low-level functionality of Ajax, you build a simple application that employs auto-completion in a text field. Content here has been adapted from Greg Murray's article and sample application from link:http://weblogs.java.net/blog/gmurray71/archive/2005/12/using_ajax_with_1.html[+Using Ajax with Java Technology+].
 
 Ajax stands for Asynchronous JavaScript and XML. In essence, Ajax is an efficient way for a web application to handle user interactions with a web page - a way that reduces the need to do a page refresh or full page reload for every user interaction. This enables rich behavior (similar to that of a desktop application or plugin-based web application) using a browser. Ajax interactions are handled asynchronously in the background. As this happens, a user can continue working with the page. Ajax interactions are initiated by JavaScript code. When the Ajax interaction is complete, JavaScript updates the HTML source of the page. The changes are made immediately without requiring a page refresh. Ajax interactions can be used to do things such as validate form entries (while the user is entering them) using server-side logic, retrieve detailed data from the server, dynamically update data on a page, and submit partial forms from the page.
@@ -54,11 +58,11 @@ NOTE: If you need to compare your project with a working solution, you can link:
 
 Imagine a web page in which a user can search for information about musical composers. The page includes a field where the user can enter the name of the composer. In the example application, the entry field has an auto-complete feature. In other words, the user can type in part of the composer name, and the web application attempts to complete the name by listing all composers whose first or last name begins with the characters entered. The auto-complete feature saves the user from having to remember the complete name of the composer and can provide a more intuitive and direct path to the sought-after information.
 
-image::./sample-app.png[title="Sample application displayed in browser"]
+image::kb/docs/php/sample-app.png[title="Sample application displayed in browser"]
 
 Implementing auto-completion in a search field is something that can be performed using Ajax. Ajax works by employing an `XMLHttpRequest` object to pass requests and responses asynchronously between the client and server. The following diagram illustrates the process flow of the communication that takes place between the client and server.
 
-image::./ajax-process-flow.png[title="Ajax process flow diagram"]
+image::kb/docs/php/ajax-process-flow.png[title="Ajax process flow diagram"]
 
 
 The process flow of the diagram can be described by the following steps:
@@ -80,7 +84,7 @@ Begin by creating a new PHP application project in the IDE.
 1. Choose File > New Project. Under Categories, select *PHP*. Under Projects, select *PHP Application* then click *Next*.
 2. In Step 2: Name and Location, name the project `MyAjaxApp`. The Sources Folder field enables you to specify the location of the project on your computer. Leave other options at their defaults and click *Next*. 
 
-image::./php-name-location.png[title="New PHP Project wizard - Name and Location panel"]
+image::kb/docs/php/php-name-location.png[title="New PHP Project wizard - Name and Location panel"]
 
 
 . In Step 3: Run Configuration, specify how you want to deploy your application. If you have set up your PHP development environment by configuring an *AMP package, you should select *Local Web Site* from the drop-down list, and specify the URL of the project, as it will appear in a browser.
@@ -89,7 +93,7 @@ image::./php-name-location.png[title="New PHP Project wizard - Name and Location
 [.feature]
 --
 
-image::./php-run-config.png[role="left", xref="image$./php-run-config.png"]
+image::kb/docs/php/php-run-config.png[role="left", xref="image$./php-run-config.png"]
 
 --
 
@@ -100,7 +104,7 @@ You can also use the Project wizard to add  framework support to your project (p
 
 A default `index.php` index page is generated and opens in the IDE's editor. Also, your project appears in the Projects window.
 
-image::./php-proj-win.png[title="Projects window displays MyAjaxApp project"]
+image::kb/docs/php/php-proj-win.png[title="Projects window displays MyAjaxApp project"]
 
 
 . Before beginning to code, quickly try running the application to ensure that configuration between the IDE, your server, and browser is set up properly. 
@@ -126,7 +130,7 @@ NOTE: If you have difficulty setting up your project or establishing communicati
 [[html]]
 === Using the HTML Editor
 
-image::./palette.png[title="Palette displaying HTML elements"] 
+image::kb/docs/php/palette.png[title="Palette displaying HTML elements"] 
 
 Now that you are certain your environment is set up correctly, begin by developing the auto-complete interface that will be viewed by users. Because the index page that we'll create does not require any server-side scripting elements, start by creating an HTML page and setting it as the entry point for the application.
 
@@ -181,7 +185,7 @@ You can view large icons (as displayed here) by right-clicking in the Palette an
 * Method: GET
 * Name: autofillform
 
-image::./php-insert-form.png[title="Insert form dialog"]
+image::kb/docs/php/php-insert-form.png[title="Insert form dialog"]
 
 Click OK. The HTML `<form>` tags are inserted into the page containing the attributes you specified. (GET is applied by default, and so is not explicitly declared.)
 
@@ -196,7 +200,7 @@ Click OK. The HTML `<form>` tags are inserted into the page containing the attri
 * Cell Spacing: 0
 * Cell Padding: 5
 
-image::./insert-table.png[title="Insert table dialog"]
+image::kb/docs/php/insert-table.png[title="Insert table dialog"]
 
 
 . Right-click inside the Source Editor and choose Format. This tidies up the code. Your form should now display similar to that below:
@@ -249,20 +253,20 @@ image::./insert-table.png[title="Insert table dialog"]
 
 ----
 When you type, try using the IDE's built-in code completion support. For example, type in `<i`, then press Ctrl-Space. A list of suggested options displays below your cursor, and a description of the selected element appears in a box above. You can in fact press Ctrl-Space at anytime you are coding in the Source Editor to bring up possible options. Also, if there is only one possible option, pressing Ctrl-Space will automatically complete the element name. 
-image:./code-completion.png[title="Ctrl-Space triggers code completion in the Source Editor"] 
+image:kb/docs/php/code-completion.png[title="Ctrl-Space triggers code completion in the Source Editor"] 
 The `onkeyup` attribute that you typed in above points to a JavaScript function named `doCompletion()`. This function is called each time a key is pressed in the form text field, and maps to the JavaScript call depicted in the Ajax <<flow-diagram,flow diagram>> above.
 
 
 . Before moving on to work in the JavaScript editor, make the new `index.html` file replace the `index.php` file as the entry point for the application. 
 
-To do so, right-click the project node in the Projects window and choose Properties. Select the *Run Configuration* category, then enter `index.html` in the Index File field. image:./php-entry-point.png[title="Specify the application's entry point in the Project Properties window"]
+To do so, right-click the project node in the Projects window and choose Properties. Select the *Run Configuration* category, then enter `index.html` in the Index File field. image:kb/docs/php/php-entry-point.png[title="Specify the application's entry point in the Project Properties window"]
 
 
 . Click OK to save changes and exit the Project Properties window.
 
 
-. Run the project to see what it looks like in a browser. Click the Run Project ( image:./run-project-btn.png[] ) button. The `index.html` file displays in your default browser. 
-image:./index-page.png[title="Run project to view its current state in browser"]
+. Run the project to see what it looks like in a browser. Click the Run Project ( image:kb/docs/php/run-project-btn.png[] ) button. The `index.html` file displays in your default browser. 
+image:kb/docs/php/index-page.png[title="Run project to view its current state in browser"]
 
 
 [[javascript]]
@@ -272,7 +276,7 @@ The IDE's JavaScript Editor provides many advanced editing capabilities, such as
 
 JavaScript code completion is automatically provided when you code in `.js` files, as well as within `<script>` tags when you work with other technologies (i.e., HTML, RHTML, JSP, PHP). When using the JavaScript Editor, the IDE provides you with browser-compatibility information, depending on the browser types and versions you specify in the JavaScript Options panel. Open the JavaScript Options panel by choosing Tools > Options (NetBeans > Preferences on Mac), then Miscellaneous > JavaScript.
 
-image::./php-javascript-options.png[title="JavaScript Options panel"]
+image::kb/docs/php/php-javascript-options.png[title="JavaScript Options panel"]
 
 The IDE provides out-of-the-box support for Firefox, Internet Explorer, Safari, and Opera. From the JavaScript Options panel, you can also specify the JavaScript engine version that code completion applies to.
 
@@ -532,7 +536,7 @@ class ComposerData {
 Implement the logic to handle the `autocomplete` URL that is received by the incoming request. Instead of creating a new PHP file using the File wizard as demonstrated in the previous section, modify the existing `index.php` file for this purpose.
 
 1. In the Projects window, click the `index.php` file node. The file name becomes editable, enabling you to modify the name. 
-image:./edit-file-name.png[title="Click on file nodes to edit names"]
+image:kb/docs/php/edit-file-name.png[title="Click on file nodes to edit names"]
 
 
 . Name the file `autocomplete`, then click Enter. Double-click the new `autocomplete.php` file to have it display in the editor.
@@ -901,14 +905,14 @@ The dynamic update to the `complete-table` element represents the final step of 
 
 At this stage, you have completed all the code needed for the functionality of the application. To see the results of your efforts, try running the application now.
 
-1. Run the project to see what it looks like in a browser. Click the Run Project ( image:./run-project-btn.png[] ) button. The `index.html` file displays in your browser. 
-image:./no-css.png[title="Successful deployment without stylesheet"]
+1. Run the project to see what it looks like in a browser. Click the Run Project ( image:kb/docs/php/run-project-btn.png[] ) button. The `index.html` file displays in your browser. 
+image:kb/docs/php/no-css.png[title="Successful deployment without stylesheet"]
 
 To attach a stylesheet to your application, simply create a CSS (Cascading Style Sheets) file and link to it from your presentation page(s). When you work in CSS files, the IDE provides you with code completion support, as well as several other features that can aid in producing stylesheet rules. These include:
 
 * *CSS Style Builder:* An interface designed to enable you to create rules using a selection of controls and widgets. (Window > Other > CSS Style Builder)
 * *CSS Preview:* A preview window which, when you place your cursor within a rule, displays sample text rendered according to the declaration block of that rule. (Window > Other > CSS Preview)
-* *Style Rule Editor:* A dialog enabling you to create rules based on classes, ID's and HTML elements, and set their position in the document hierarchy. (Create Rule ( image:./style-rule-editor-btn.png[] ) button, located in upper-left region of CSS editor toolbar)
+* *Style Rule Editor:* A dialog enabling you to create rules based on classes, ID's and HTML elements, and set their position in the document hierarchy. (Create Rule ( image:kb/docs/php/style-rule-editor-btn.png[] ) button, located in upper-left region of CSS editor toolbar)
 
 NetBeans 6.9 provides Rename Refactoring and Find Usages support. This support is available not only in css files, but in all files containing embedded CSS code (e.g., HTML, PHP). CSS classes, id's and type elements can be refactored in all project files. To make use of this refactoring support, press Ctrl-R on a given CSS element and use the provided dialog to perform the rename action. You can also preview changes before performing the rename action. To utilize Find Usages support, right-click a CSS element and choose Find Usages. See link:http://wiki.netbeans.org/wiki/index.php?title=NewAndNoteworthy69m1&section=T-25#Web_Languages[+NewAndNoteworthy69m1+] for more details.
 

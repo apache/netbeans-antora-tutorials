@@ -30,6 +30,10 @@
 :description: NetBeans Visual Library Tutorial for Java Applications - Apache NetBeans
 :keywords: Apache NetBeans Platform, Platform Tutorials, NetBeans Visual Library Tutorial for Java Applications
 
+ifdef::env-github[]
+:imagesdir: ../../images
+endif::[]
+
 In this tutorial, you will learn how to use the main features provided by the  link:https://bits.netbeans.org/dev/javadoc/org-netbeans-api-visual/overview-summary.html[NetBeans Visual Library API].
 
 
@@ -41,9 +45,9 @@ In this tutorial, you will learn how to use the main features provided by the  l
 Also, you will use 3 icons in the tutorial. You can right-click them here and save them locally, then copy them to the application's location, after you create the application later in this tutorial. Here are the 3 icons:
 
 
-image::./vislib_red.gif[] 
-image::./vislib_blue.gif[] 
-image::./vislib_green.gif[]
+image::tutorials/vislib_red.gif[] 
+image::tutorials/vislib_blue.gif[] 
+image::tutorials/vislib_green.gif[]
 
 
 == Setting Up the Application
@@ -59,14 +63,14 @@ In this section, we use a wizard to create a Java application.
 In the Name and Location panel, type  ``VisLibDemo``  in the Project Name field:
 
 
-image::./vislib_vislib-java-1.png[]
+image::tutorials/vislib_vislib-java-1.png[]
 
 Click Finish.
 
 The IDE creates the  ``VisLibDemo``  project. Add the three images above to the main package. You should now see this:
 
 
-image::./vislib_vislib-java-2.png[]
+image::tutorials/vislib_vislib-java-2.png[]
 
 
 == Adding the Libraries
@@ -89,7 +93,7 @@ In this section, we add the two libraries you need to work with the Visual Libra
 You now have the only two JARs you will need. You should now see this:
 
 
-image::./vislib_vislib-java-3.png[]
+image::tutorials/vislib_vislib-java-3.png[]
 
 
 == Creating the Container
@@ -137,7 +141,7 @@ public class Main  extends JPanel {
 1. Run the application and you should see a simple JFrame:
 
 
-image::./vislib_vislib-java-4.png[]
+image::tutorials/vislib_vislib-java-4.png[]
 
 Now that you have a  ``JScrollPane`` , you're ready to create a scene!
 
@@ -295,7 +299,7 @@ private void initComponents() {
 1. Run the application and you should see this:
 
 
-image::./vislib_vislib-java-5.png[]
+image::tutorials/vislib_vislib-java-5.png[]
 
 Now that you have a scene with some widgets, we can begin integrating some actions!
 

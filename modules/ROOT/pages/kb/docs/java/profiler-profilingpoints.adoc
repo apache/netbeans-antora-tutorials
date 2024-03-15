@@ -29,6 +29,10 @@
 :description: Using Profiling Points in NetBeans IDE - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Using Profiling Points in NetBeans IDE
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 NetBeans IDE includes a powerful profiling tool that can provide important information about the runtime behavior of your application. The NetBeans profiling tool easily enables you to monitor thread states, CPU performance and the memory usage of your application from within the IDE, and imposes relatively low overhead.
 
 This document describes how to use profiling points as an alternative way of setting up and controlling the profiling session. Profiling points are similar to debugger breakpoints in that you place them directly in the source code and they can trigger behavior when hit. Once you set a profiling point it becomes part of the project until you delete it. You can open the Profiling Points window to view, modify and delete the Profiling Points in your projects.
@@ -58,14 +62,14 @@ The easiest way to set a profiling point is in the source code in the editor win
 2. In the source editor, right-click in the line where you want to add the profiling point and choose *Profiling* > *Insert Profiling Point* to open the New Profiling Point wizard.
 3. Select a profiling point type and the project. Click Next.
 
-image::./ppoints-newstopwatch.png[title="Screenshot of New Profiling Point dialog box"]
+image::kb/docs/java/ppoints-newstopwatch.png[title="Screenshot of New Profiling Point dialog box"]
 
 
 . Type a name for the profiling point and customize the properties of the profiling point. Click Finish.
 
 When you click Finish, an icon representing the profiling point type appears in the left margin of the source editor next to the line where you inserted the profiling point.
 
-image::./ppoints-icons.png[title="Profiling Points annotations in margin of source editor"] 
+image::kb/docs/java/ppoints-icons.png[title="Profiling Points annotations in margin of source editor"] 
 
 === Enabling, Disabling and Editing Profiling Points
 
@@ -73,7 +77,7 @@ When no profiling session is running, you can edit, enable and disable individua
 
 When a profiling session is running, the Profiling Points window displays how many times each profiling point was hit and enables you to view a report of the results.
 
-image::./ppoints-window.png[title="Screenshot of Profiling Points window"]
+image::kb/docs/java/ppoints-window.png[title="Screenshot of Profiling Points window"]
 
 You can quickly navigate to a specific profiling point in your source code by opening the Profiling Points window and right-clicking the profiling point name and choosing Show Source.
 
@@ -86,7 +90,7 @@ Alternatively, you can right-click the profiling point name in the list and choo
 
 If you choose to edit a profiling point, the Customize Profiling Point dialog box opens.
 
-image::./ppoints-customize.png[title="Screenshot of Customize Profiling Point dialog box"] 
+image::kb/docs/java/ppoints-customize.png[title="Screenshot of Customize Profiling Point dialog box"] 
 
 === Viewing Active Profiling Points in a Project
 
@@ -99,7 +103,7 @@ You can use profiling points when you are analyzing memory usage or application 
 
 The link to show active profiling points is only available when the Advanced profiling option is selected.
 
-image::./points-active.png[title="Screenshot of Active Profiling Points dialog box"]
+image::kb/docs/java/points-active.png[title="Screenshot of Active Profiling Points dialog box"]
 
 When you click Show active Profiling Points, a dialog box opens that lists all the profiling points that are set in the project. Profiling points that are set but disabled are greyed out.
 
@@ -151,11 +155,11 @@ When you choose Timestamp and duration, the dialog box automatically sets the st
 
 . Modify the *Location (stop)* setting to change the end line to a couple lines after the begin line. Click Finish.
 
-image::./stopwatch-dialog.png[title="Screenshot of New Profiling Point dialog box"]
+image::kb/docs/java/stopwatch-dialog.png[title="Screenshot of New Profiling Point dialog box"]
 
 When you set the profiling point, annotations for the start point and end point appear in the left margin of the editor.
 
-image::./ppoints-editor-stopwatch.png[title="Profiling points active for the profiling session"]
+image::kb/docs/java/ppoints-editor-stopwatch.png[title="Profiling points active for the profiling session"]
 
 If you open the Profiling Points window you can see that the stopwatch profiling point is added to the list.
 
@@ -166,7 +170,7 @@ If you open the Profiling Points window you can see that the stopwatch profiling
 
 . In the Select Profiling Task dialog box, click the *CPU* profiling task and select the *Advanced (instrumented)* option.
 
-image::./select-profiling-task1.png[title="Select Profiling Task dialog box"]
+image::kb/docs/java/select-profiling-task1.png[title="Select Profiling Task dialog box"]
 
 *Note.* Profiling points can be used when analyzing performance or memory usage.
 
@@ -176,11 +180,11 @@ image::./select-profiling-task1.png[title="Select Profiling Task dialog box"]
 
 If you click *Show active profiling points* you can view the profiling points that are enabled for the profiling session.
 
-image::./ppoints-profile-stopwatch-act.png[title="Profiling points active for the profiling session"]
+image::kb/docs/java/ppoints-profile-stopwatch-act.png[title="Profiling points active for the profiling session"]
 
 When you click Run, the IDE launches the Anagram Game application and starts the profiling session. If you open the Profiling Points window you can see if the Stopwatch profiling point was hit. After the profiling point is hit you can click *report* in the Results column of the window to open a window that displays data about the profiling point and the length of time it took to execute the code fragment between the begin and end stopwatch profiling points.
 
-image::./ppoints-result-stopwatch.png[title="Screenshot of report of results for Stopwatch profiling point"]
+image::kb/docs/java/ppoints-result-stopwatch.png[title="Screenshot of report of results for Stopwatch profiling point"]
 
 *Note.* If this is the first time that you are profiling a project, see xref:./profiler-intro.adoc[+Introduction to Profiling Java Applications in NetBeans IDE+] for details on calibration and profiler integration.
 
@@ -199,7 +203,7 @@ To take a snapshot using a profiling point, perform the following steps.
 5. Select either *Profiling data snapshot* or *Heap dump* as the Setting.
 6. Specify a location where you want the files to be saved or keep the default location. Click Finish.
 
-image::./ppoints-profile-snapheap.png[title="New Take Snapshot profiling point with heap dump selected"]
+image::kb/docs/java/ppoints-profile-snapheap.png[title="New Take Snapshot profiling point with heap dump selected"]
 
 
 . Click Profile Main Project in the toolbar.
@@ -220,7 +224,7 @@ When you use a Take Snapshot profiling point, the resulting snapshots or heap du
 
 *Note.* If you specify that snapshots should be saved in a location other than the project folder, the snapshots are not automatically listed in the Saved Snapshots list. To open snapshots not listed in the Saved Snapshots list, click the Load button next to the list and navigate to the location of the saved snapshot.
 
-image::./saved-snapshots.png[title="Screenshot of New Reset Results pane"]
+image::kb/docs/java/saved-snapshots.png[title="Screenshot of New Reset Results pane"]
 
 For more about working with snapshots and heap dumps, see the following documents.
 
@@ -238,7 +242,7 @@ To set a Reset Results profiling point, perform the following steps.
 4. Select *Reset Results* as the Profiling Point Type. Click Next.
 5. Specify a name for the profiling point and ensure the location of the profiling point is correct. Click Finish.
 
-image::./ppoints-newreset.png[title="Screenshot of New Reset Results pane"]
+image::kb/docs/java/ppoints-newreset.png[title="Screenshot of New Reset Results pane"]
 
 
 . Click Profile Main Project in the toolbar.
@@ -253,7 +257,7 @@ If you click *Show active profiling points* you can view the profiling points th
 
 When you click Run, the IDE launches the Anagram Game application and starts the profiling session. If you open the Profiling Points window you can see if the Reset Results profiling point was hit. If the profiling point was hit, you can click *report* in the Results column to open a window displaying data about the profiling point.
 
-image::./ppoints-results-reset.png[title="Screenshot of report of results for Reset profiling point"]
+image::kb/docs/java/ppoints-results-reset.png[title="Screenshot of report of results for Reset profiling point"]
 
 xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 

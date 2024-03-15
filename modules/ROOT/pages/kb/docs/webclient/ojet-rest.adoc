@@ -29,6 +29,10 @@
 :description: Interacting with RESTful Web Services in Oracle JET - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Interacting with RESTful Web Services in Oracle JET
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This document provides a step-by-step set of instructions guiding you through the process of getting started with RESTful Web Services with the link:http://oraclejet.org[+Oracle JavaScript Extension Toolkit (JET)+]. JET empowers web and mobile developers by providing a modular toolkit based on modern JavaScript, CSS3, and HTML5 design and development principles.
 
 
@@ -42,7 +46,7 @@ In this exercise you set up an Oracle JET application and explore its default co
 [start=2]
 . Open the project into an editor or IDE of your choice, such as NetBeans IDE, which displays the application as follows:
 
-image::./navdrawer.png[]
+image::kb/docs/webclient/navdrawer.png[]
 
 Spend some time browsing through the application structure. In the next section, you'll be introduced to the main concepts of the application structure.
 
@@ -103,7 +107,7 @@ Read about link:http://docs.oracle.com/middleware/jet230/jet/reference-jet/oj.Ar
 
 You should now see a table with data in your application:
 
-image::./ojtable.png[]
+image::kb/docs/webclient/ojtable.png[]
 
 
 == Scenario 2: Oracle JET Common Model

@@ -29,6 +29,10 @@
 :description: Generating a JavaServer Faces 2.x CRUD Application from a Database - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Generating a JavaServer Faces 2.x CRUD Application from a Database
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 In this tutorial, you will use the NetBeans IDE to create a web application that interacts with a back-end database. The application provides you with the ability to view and modify data contained in the database - otherwise referred to as _CRUD_ (Create, Read, Update, Delete) functionality. The application that you will develop relies on the following technologies.
 
 * *JavaServer Faces (JSF) 2.x* for front-end web pages, validation handling, and management of the request-response cycle.
@@ -114,14 +118,14 @@ Perform the following steps to create a database and connect to it from the IDE.
 5. Right-click the new node and choose Connect.
 6. Choose File > Open File from the main menu and navigate to the extracted file `mysql_create_consult.sql`. Click Open. The file automatically opens in the SQL editor. 
 
-image::./run-sql-script.png[title="Open SQL files in the IDE's editor"]
+image::kb/docs/web/run-sql-script.png[title="Open SQL files in the IDE's editor"]
 
 
 . Make sure that the `consult` database is selected in the Connection drop-down list in the SQL editor toolbar, then click the Run SQL ( images:./run-sql-btn.png[] ) button.
 
 When you click Run SQL, the following output appears in the Output window.
 
-image::./run-sql-output.png[title="Output window provides information on SQL execution"]
+image::kb/docs/web/run-sql-output.png[title="Output window provides information on SQL execution"]
 
 
 
@@ -130,13 +134,13 @@ image::./run-sql-output.png[title="Output window provides information on SQL exe
 
 To confirm that the tables were created correctly, expand the Tables node under the database connection node. You can expand a table node to see the table columns, indexes and any foreign keys. You can right-click a column and choose Properties to view additional information about the column.
 
-image::./services-window-tables.png[title="Services window displays database connections, tables, table columns, indexes, and foreign keys"]
+image::kb/docs/web/services-window-tables.png[title="Services window displays database connections, tables, table columns, indexes, and foreign keys"]
 
 *Note:* If you do not see any tables under the Tables node, right-click the Tables node and choose Refresh.
 
 Looking at the structure of the `consult` database, you can see that the database contains tables that have a variety of relationships and various field types. When creating entity classes from a database, the IDE automatically generates the appropriate code for the various field types.
 
-image::./diagram_consult.png[title="Entity-relationship diagram of consult database"]
+image::kb/docs/web/diagram_consult.png[title="Entity-relationship diagram of consult database"]
 
 The following table describes the tables found in the `consult` database.
 
@@ -209,7 +213,7 @@ After connecting to a database in the IDE, you can use the Entity Classes from D
 2. Select New Data Source from the Data Source drop-down list to open the Create Data Source dialog.
 3. Type `jdbc/consult` as the JNDI Name and select the `jdbc:mysql://localhost:3306/consult` connection as the Database Connection. 
 
-image::./create-datasource.png[title="Specify a JNDI name and database connection to create a datasource"]
+image::kb/docs/web/create-datasource.png[title="Specify a JNDI name and database connection to create a datasource"]
 
 
 . Click OK to close the dialog box and return to the wizard. The tables in the `consult` database appear in the Available Tables listbox.
@@ -217,7 +221,7 @@ image::./create-datasource.png[title="Specify a JNDI name and database connectio
 
 . Click the Add All button to select all tables contained in the database. Click Next. 
 
-image::./new-entities-wizard.png[]
+image::kb/docs/web/new-entities-wizard.png[]
 
 
 . Type `jpa.entities` as the Package name.
@@ -229,7 +233,7 @@ When you click Finish, the IDE generates the entity classes in the `jpa.entities
 
 When using the wizard to create entity classes from a database, the IDE examines the relationships between database tables. In the Projects window, if you expand the `jpa.entities` package node, you can see that the IDE generated an entity class for each table except for the `PROJECT_CONSULTANT` table. The IDE did not create an entity class for `PROJECT_CONSULTANT` because the table is a join table.
 
-image::./projects-window-entities.png[title="screenshot of Projects window showing generated entity classes"]
+image::kb/docs/web/projects-window-entities.png[title="screenshot of Projects window showing generated entity classes"]
 
 The IDE also generated two additional classes for the tables with composite primary keys: `CLIENT` and `PROJECT`. The primary key classes for these tables (`ClientPK.java` and `ProjectPK.java`) have `PK` appended to the name.
 
@@ -265,7 +269,7 @@ The Available Entity Classes box lists the seven entity classes contained in the
 
 . Click Add All to move all the classes to the Selected Entity Classes box. 
 
-image::./newjsf-wizard.png[title="New JSF Pages from Entity Classes wizard displays all entity classes contained in project"] 
+image::kb/docs/web/newjsf-wizard.png[title="New JSF Pages from Entity Classes wizard displays all entity classes contained in project"] 
 
 Click Next.
 
@@ -278,11 +282,11 @@ Click Next.
 
 . Enter '`/resources/Bundle`' into the Localization Bundle Name field. This will generate a package named `resources` which the `Bundle.properties` file will reside in. (If you leave this blank, the properties bundle will be created in the project's default package.) 
 
-image::./newjsf-wizard2.png[title="Specify package and folder names for generated files"]
+image::kb/docs/web/newjsf-wizard2.png[title="Specify package and folder names for generated files"]
 
 To let the IDE better accommodate your project conventions, you can customize any files generated by the wizard. Click the Customize Template link to modify the file templates used by the wizard. 
 
-image::./customize-template.png[title="Customize templates for files generated by the wizard"] 
+image::kb/docs/web/customize-template.png[title="Customize templates for files generated by the wizard"] 
 
 In general, you can access and make changes to all templates maintained by the IDE using the Template Manager (Tools > Templates).
 
@@ -292,7 +296,7 @@ In general, you can access and make changes to all templates maintained by the I
 
 If you expand the Web Pages node, you can see that the IDE generated a folder for each of the entity classes. Each folder contains the files `Create.xhtml`, `Edit.xhtml`, `List.xhtml` and `View.xhtml`. The IDE also modified the `index.xhtml` file by inserting links to each of the `List.xhtml` pages.
 
-image::./projects-jsfpages.png[title="Facelets pages for each entity class are generated by the wizard"]
+image::kb/docs/web/projects-jsfpages.png[title="Facelets pages for each entity class are generated by the wizard"]
 
 Each JSF managed bean is specific to the four corresponding Facelets files and includes code that invokes methods in the appropriate session bean.
 
@@ -309,7 +313,7 @@ The Facelets template file is used by each of the four Facelets files for each e
 
 If you expand the Source Packages node you can see the session beans, JSF managed beans, utility classes, and properties bundle that the wizard generated.
 
-image::./projects-generated-classes70.png[title="screenshot of Source Packages directory in Projects window showing classes generated by wizard"]
+image::kb/docs/web/projects-generated-classes70.png[title="screenshot of Source Packages directory in Projects window showing classes generated by wizard"]
 
 The wizard also generated a Faces Configuration file (`faces-config.xml`) in order to register the location of the properties bundle. If you expand the Configuration Files node and open `faces-config.xml` in the XML editor, you can see that the following entry is included.
 
@@ -352,7 +356,7 @@ The following is a series of short, optional exercises that help you to become f
 
 When the application's welcome page displays, you are provided with a list of links enabling you to view entries contained in each database table.
 
-image::./welcome-page-links.png[title="Links to display database contents for each table"]
+image::kb/docs/web/welcome-page-links.png[title="Links to display database contents for each table"]
 
 The links were added to the welcome page (`index.xhtml`) when you completed the JSF Pages from Entity Classes wizard. They are provided as entry points into the Facelets pages that provide CRUD functionality on the Consulting Agency database.
 
@@ -389,7 +393,7 @@ The links were added to the welcome page (`index.xhtml`) when you completed the 
 
 . Click the '`Show All Consultant Items`' link. Looking at the code above, you can see that the target page is `/consultant/List.xhtml`. (In JSF 2.x, the file extension is inferred due to implicit navigation.) 
 
-image::./empty-consultants-list.png[title="Consultants table is currently empty"] 
+image::kb/docs/web/empty-consultants-list.png[title="Consultants table is currently empty"] 
 
 The database currently doesn't contain any sample data. You can add data manually by clicking the '`Create New Consultant`' link and using the provided web form. This triggers the `/consultant/Create.xhtml` page to display. You can also run an SQL script in the IDE to populate tables with sample data. The following sub-sections explore both options.
 
@@ -408,7 +412,7 @@ Depending on the database server you are working with (MySQL or JavaDB), you can
 1. Choose File > Open File from the main menu, then navigate to the location of the script on your computer. Click Open. The file automatically opens in the IDE's SQL editor.
 2. Make sure that the `consult` database is selected in the Connection drop-down list in the SQL editor toolbar. 
 
-image::./run-sql-insert.png[title="Open the script in the IDE's SQL editor"]
+image::kb/docs/web/run-sql-insert.png[title="Open the script in the IDE's SQL editor"]
 
 Either right-click in the editor and choose Run Statement, or click the Run SQL ( images:./run-sql-btn.png[] ) button. You can see the result of the script execution in the Output window.
 
@@ -421,7 +425,7 @@ Either right-click in the editor and choose Run Statement, or click the Run SQL 
 [.feature]
 --
 
-image::./consultants-list-small.png[role="left", xref="image$./consultants-list.png"]
+image::kb/docs/web/consultants-list-small.png[role="left", xref="image$./consultants-list.png"]
 
 --
 
@@ -430,14 +434,14 @@ image::./consultants-list-small.png[role="left", xref="image$./consultants-list.
 
 You can use the IDE's database table viewer to display and modify table data maintained directly in the database. For example, right-click the `consultant` table in the Services window, and choose View Data.
 
-image::./view-data.png[title="Choose View Data from the right-click menu of database tables"]
+image::kb/docs/web/view-data.png[title="Choose View Data from the right-click menu of database tables"]
 
 The SQL query used to perform the action displays in the upper portion of the editor, and a graphical view of the table displays beneath.
 
 [.feature]
 --
 
-image::./view-data-table-small.png[role="left", xref="image$./view-data-table.png"]
+image::kb/docs/web/view-data-table-small.png[role="left", xref="image$./view-data-table.png"]
 
 --
 
@@ -464,7 +468,7 @@ To display line numbers, right-click in the editor's left margin and choose Show
 
 . Use the IDE's Go to File dialog to open `template.xhtml`. Press Alt-Shift-O (Ctrl-Shift-O on Mac), then begin typing `template`. 
 
-image::./go-to-file.png[title="Use the Go to File dialog to quickly open project files"]
+image::kb/docs/web/go-to-file.png[title="Use the Go to File dialog to quickly open project files"]
 
 Click OK (or press Enter).
 
@@ -472,7 +476,7 @@ Click OK (or press Enter).
 
 . The template applies the `<ui:insert>` tags to insert content from other files into its title and body. Place your cursor on the `<ui:insert>` tag, then press Ctrl-Space to invoke a documentation popup window. 
 
-image::./doc-popup.png[title="Press Ctrl-Space to invoke a documentation popup on Facelets tags"]
+image::kb/docs/web/doc-popup.png[title="Press Ctrl-Space to invoke a documentation popup on Facelets tags"]
 
 You can press Ctrl-Space on JSF tags and their attributes to invoke a documentation pop-up. The documentation you see is taken from the descriptions provided in the official link:http://javaserverfaces.java.net/nonav/docs/2.1/vdldocs/facelets/index.html[JSF Tag Library Documentation].
 
@@ -485,7 +489,7 @@ You can press Ctrl-Space on JSF tags and their attributes to invoke a documentat
 [.feature]
 --
 
-image::./localized-messages-small.png[role="left", xref="image$./localized-messages.png"]
+image::kb/docs/web/localized-messages-small.png[role="left", xref="image$./localized-messages.png"]
 
 --
 
@@ -512,17 +516,17 @@ In other words, the `action` value typically refers to a method in a JSF managed
 
 . Place your cursor on `consultantController` and press Ctrl-Space. The editor's code completion indicates that `consultantController` is a JSF managed bean. 
 
-image::./code-completion-managed-bean.png[title="Code completion is provided for JSF managed beans"]
+image::kb/docs/web/code-completion-managed-bean.png[title="Code completion is provided for JSF managed beans"]
 
 
 . Move your cursor to `prepareCreate` and press Ctrl-Space. Code completion lists methods contained in the `ConsultantController` managed bean. 
 
-image::./code-completion-properties.png[title="Code completion is provided for class methods"]
+image::kb/docs/web/code-completion-properties.png[title="Code completion is provided for class methods"]
 
 
 . Press Ctrl (⌘ on Mac), then hover your mouse over `prepareCreate`. A link is formed, enabling you to navigate directly to the `prepareCreate()` method in the `ConsultantController` managed bean. 
 
-image::./editor-navigation.png[title="Use editor navigation to quickly navigate source code"]
+image::kb/docs/web/editor-navigation.png[title="Use editor navigation to quickly navigate source code"]
 
 
 . Click the link and view the `prepareCreate()` method (displayed below).
@@ -570,13 +574,13 @@ The method returns `Create`. The `NavigationHandler` gathers information behind 
 
 . Click Save. When you do so, a validation error is flagged for the `StatusId` field. 
 
-image::./create-new-consultant.png[title="Enter sample data into the form"] 
+image::kb/docs/web/create-new-consultant.png[title="Enter sample data into the form"] 
 
 Why did this happen? Reexamine the <<er-diagram,entity-relationship diagram for the Consulting Agency database>>. As stated in the <<relationships,relationships table>> above, the `CONSULTANT` and `CONSULTANT_STATUS` tables share a non-nullable, one-to-many relationship. Therefore, every entry in the `CONSULTANT` table must contain a reference to an entry in the `CONSULTANT_STATUS` table. This is denoted by the `consultant_fk_consultant_status` foreign key that links the two tables.
 
 You can view foreign keys held by tables by expanding a table's Foreign Keys node in the Services window (Ctrl-5; ⌘-5 on Mac).
 
-image::./consultant-fk.png[title="Examine foreign key attributes in the Services window"]
+image::kb/docs/web/consultant-fk.png[title="Examine foreign key attributes in the Services window"]
 
 
 . To overcome the validation error, select `entity.ConsultantStatus[statusId=A]` from the `StatusId` drop-down list. 
@@ -624,7 +628,7 @@ This sub-section demonstrates how you can use the editor's code completion, docu
 
 Press Ctrl-Space on `itemsAvailableSelectOne`. The editor's code completion indicates that the `ConsultantStatusController`'s `getItemsAvailableSelectOne()` method returns an array of `SelectItem` objects. 
 
-image::./code-completion-returned-object.png[title="Code completion displays returned classes for methods"]
+image::kb/docs/web/code-completion-returned-object.png[title="Code completion displays returned classes for methods"]
 
 
 . Press Ctrl (⌘ on Mac), then hover your mouse over `itemsAvailableSelectOne`. A link is formed, enabling you to navigate directly to the `getItemsAvailableSelectOne()` method in the `ConsultantStatus` entity's source code. Click this link.
@@ -632,7 +636,7 @@ image::./code-completion-returned-object.png[title="Code completion displays ret
 
 . Place your cursor on the `SelectItem[]` return value in the method signature, and press Ctrl-Space to invoke the documentation pop-up. 
 
-image::./documentation-select-item.png[title="Press Ctrl-Space to invoke documentation support"]
+image::kb/docs/web/documentation-select-item.png[title="Press Ctrl-Space to invoke documentation support"]
 
 Click the web browser ( images:./web-browser-icon.png[] ) icon in the documentation window to open the Javadoc in an external web browser.
 
@@ -641,7 +645,7 @@ As you can see, the `SelectItem` class belongs to the JSF framework. The `UISele
 
 . Press Ctrl (⌘ on Mac), then hover your mouse over `findAll()`. A pop-up appears, displaying the method signature. 
 
-image::./method-signature.png[title="View pop-ups of method signatures in the editor"] 
+image::kb/docs/web/method-signature.png[title="View pop-ups of method signatures in the editor"] 
 
 You can see that here `ejbFacade.findAll()` returns a `List` of `ConsultantStatus` objects.
 
@@ -691,7 +695,7 @@ public String toString() {
 
 Inspect the `StatusId` drop-down. You'll see that it now displays the status ID and description for the one record contained in the database's `CONSULTANT_STATUS` table.
 
-image::./drop-down.png[title="StatusId drop-down displays items according to ConsultantStatus entity's toString() method"]
+image::kb/docs/web/drop-down.png[title="StatusId drop-down displays items according to ConsultantStatus entity's toString() method"]
 
 
 [[troubleshooting]]
@@ -769,7 +773,7 @@ You will use the property values that are specified in `glassfish-resources.xml`
 [.feature]
 --
 
-image::./gf-admin-console-sm.png[role="left", xref="image$./gf-admin-console-lg.png"]
+image::kb/docs/web/gf-admin-console-sm.png[role="left", xref="image$./gf-admin-console-lg.png"]
 
 --
 
@@ -779,7 +783,7 @@ You can see the JDBC resources that are currently registered with the server. Yo
 
 . Click the *JDBC Connection Pools* node and click New in the New JDBC Connection Pool pane. 
 
-image::./gf-new-jdbc-pool1.png[title="New JDBC Connection Pool pane in the GlassFish Admin Console"]
+image::kb/docs/web/gf-new-jdbc-pool1.png[title="New JDBC Connection Pool pane in the GlassFish Admin Console"]
 
 
 . Type *consultPool* as the Pool Name, select *javax.sql.ConnectionPoolDataSource* as the Resource Type and select *MySql* as the Database Driver Vendor. Click Next.
@@ -787,7 +791,7 @@ image::./gf-new-jdbc-pool1.png[title="New JDBC Connection Pool pane in the Glass
 
 . In Step 2, locate and specify the values for the *URL*, *username* and *password* properties. Click Finish. 
 
-image::./gf-new-jdbc-pool2.png[title="New JDBC Connection Pool panel in the GlassFish Admin Console"]
+image::kb/docs/web/gf-new-jdbc-pool2.png[title="New JDBC Connection Pool panel in the GlassFish Admin Console"]
 
 You can find the values for the properties in `glassfish-resources.xml`.
 
@@ -800,13 +804,13 @@ The new connection pool is created on the server when you click Finish and a nod
 
 . Type *jdbc/consult* for the JNDI Name and select *consultPool* in the Pool Name drop-down list. Click OK. 
 
-image::./gf-new-jdbc-resource.png[title="New JDBC Resource pane in the GlassFish Admin Console"]
+image::kb/docs/web/gf-new-jdbc-resource.png[title="New JDBC Resource pane in the GlassFish Admin Console"]
 
 The new JDBC resource is created on the server when you click OK and a node for the resource is displayed under the JDBC Resources node.
 
 In the Service window of the IDE, you can expand the Resources node under the GlassFish Server and see that IDE added the new resources. You might need to refresh the view (right-click Resources and choose Refresh) to view the changes.
 
-image::./gf-services-jdbc-resources.png[title="JDBC Resources displayed in the Services window of the IDE"]
+image::kb/docs/web/gf-services-jdbc-resources.png[title="JDBC Resources displayed in the Services window of the IDE"]
 
 For more tips on troubleshooting problems when using MySQL and the IDE, see the following documents:
 

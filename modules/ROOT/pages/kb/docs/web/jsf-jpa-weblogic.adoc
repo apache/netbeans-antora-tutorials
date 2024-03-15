@@ -29,10 +29,14 @@
 :description: Developing an Enterprise Application for Oracle WebLogic Server - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Developing an Enterprise Application for Oracle WebLogic Server
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This tutorial demonstrates how to use the IDE to create a web application that uses JavaServer Faces (JSF) 2.x and the Java Persistence API (JPA) 2.0 and then deploy the application to the Oracle WebLogic Server. In this tutorial you will register the WebLogic Server with the IDE, and then use wizards in the IDE to create a JDBC resource and entity and bean classes. You will then use the IDE to deploy the application to the server and register the new datasource.
 
 
-image::./netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
+image::kb/docs/web/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
 
 
 *To follow this tutorial, you need the following software and resources.*
@@ -102,7 +106,7 @@ The IDE will automatically identify the domain for the server instance.
 
 *Note.* If you are registering an instance of WebLogic Server 12c (12.1.1.0) you do not need to enable JPA 2.0 because JPA 2.0 is enabled by default. If you are registering an instance of WebLogic Server 11g Rel 1 (10.3.4 or 10.3.5) you can enable JPA 2.0 when you register the server or in the Servers manager after the server is registered. See the section <<01e,Enabling Support for JPA 2.0 on Oracle WebLogic Server 11g>> below for more details.
 
-image::./add-weblogic-server2.png[title="Add Server wizard"]
+image::kb/docs/web/add-weblogic-server2.png[title="Add Server wizard"]
 
 When you click Finish, the Oracle WebLogic Server will appear under the Servers node in the Services window.
 
@@ -112,7 +116,7 @@ You can right-click the Oracle WebLogic Server node to perform various actions, 
 * Open the Admin Console in your browser
 * View the Server Log in the Output window of the IDE
 
-image::./weblogic-services-window1.png[title="WebLogic Server in the Services window"]  
+image::kb/docs/web/weblogic-services-window1.png[title="WebLogic Server in the Services window"]  
 
 
 === Opening the Admin Console
@@ -137,7 +141,7 @@ When you choose View Admin Console, the login screen of the server opens in your
 
 After you log in, you will see the Home Page of the Admin Console in your browser.
 
-image::./admin-console1.png[title="Oracle WebLogic Server Admin Console"]
+image::kb/docs/web/admin-console1.png[title="Oracle WebLogic Server Admin Console"]
 
 
 === Enabling Support for JPA 2.0 on Oracle WebLogic Server 11g 
@@ -154,7 +158,7 @@ To enable support for JPA 2.0 in the Servers manager and set the default persist
 
 Alternatively, you can choose Tools > Servers from the main menu to open the Server manager.
 
-image::./weblogic-properties-enablejpa.png[title="Domain tab in Servers manager"]
+image::kb/docs/web/weblogic-properties-enablejpa.png[title="Domain tab in Servers manager"]
 
 The Domain tab of the Servers manager enables you to view and modify the username and password.
 
@@ -182,7 +186,7 @@ When you click Enable JPA 2, the IDE will modify the WebLogic Server classpath t
 
 . Select *TopLink* in the Default JPA Provider dropdown list. Click Save.
 
-image::./admin-console-jpa.png[title="JPA tab in Oracle WebLogic Server Admin Console"]
+image::kb/docs/web/admin-console-jpa.png[title="JPA tab in Oracle WebLogic Server Admin Console"]
 
 When you click Save, Oracle TopLink will be the default persistence provider for applications deployed to the server when no persistence provider is explicitly specified by the application.
 
@@ -207,7 +211,7 @@ In this exercise you will use the New Project wizard to create a web application
 
 *Note.* Java EE 6 Web is only available if you registered an instance of WebLogic Server 12c.
 
-image::./new-project-ee6.png[title="Weblogic selected in New Project wizard"]
+image::kb/docs/web/new-project-ee6.png[title="Weblogic selected in New Project wizard"]
 
 
 . Select JavaServer Faces framework.
@@ -215,11 +219,11 @@ image::./new-project-ee6.png[title="Weblogic selected in New Project wizard"]
 
 . Select JSF 2.x from the Server Library dropdown list. Click Finish.
 
-image::./projectwizard-serverlib.png[title="Frameworks panel New Project wizard"]
+image::kb/docs/web/projectwizard-serverlib.png[title="Frameworks panel New Project wizard"]
 
 When you click Finish, the IDE creates the web application project and opens  ``index.xhtml``  in the editor. In the Projects window you can see that the IDE created the  ``weblogic.xml``  descriptor file and  ``web.xml``  under the Configuration Files node.
 
-image::./wl-projects-window1.png[title="weblogic.xml selected in Projects window"]
+image::kb/docs/web/wl-projects-window1.png[title="weblogic.xml selected in Projects window"]
 
 If you open  ``web.xml``  in the editor you can see that  ``faces/index.xhtml``  is specified as the default index page. If you open  ``weblogic.xml``  in the editor the file will be similar to the following.
 
@@ -250,7 +254,7 @@ If you open  ``web.xml``  in the editor you can see that  ``faces/index.xhtml`` 
 ----
 * If the target server is WebLogic Server 11g (10.3.4 or 10.3.5), the server installation includes the libraries necessary for using JSF 1.2 and JSF 2.x in your applications but they are deactivated by default. You need to deploy and install the JSF 2.x libraries before you can start using the libraries. If the library is not already installed, the IDE will prompt you and can install the library for you if you choose the library in the New Project wizard. The library only needs to be installed once.
 
-image::./install-libraries-dialog.png[title="Resolve Missing Server Library dialog"]
+image::kb/docs/web/install-libraries-dialog.png[title="Resolve Missing Server Library dialog"]
 
 After you create the application, when you view the  ``weblogic.xml``  descriptor file you can see that the IDE modified the file to specify the JSF library that will be used with the application.
 
@@ -285,7 +289,7 @@ In this exercise you will create and open a connection to the database.
 3. Right-click the MySQL Server node and choose Create Database.
 4. Select *sample* in the New Database Name dropdown list. Click OK.
 
-image::./create-db.png[title="Create Database dialog box"]
+image::kb/docs/web/create-db.png[title="Create Database dialog box"]
 
 *Note.* Depending on how you configured your database, you may need to explicitly specify access permissions for the new database.
 
@@ -297,7 +301,7 @@ When you click OK, the IDE creates the sample database and populates the databas
 
 When you click Connect, a database connection node for the database appears under the Databases node. You can expand the node to view the database tables.
 
-image::./services-window2.png[title="Sample database node in in the Services window"]
+image::kb/docs/web/services-window2.png[title="Sample database node in in the Services window"]
 
 The IDE uses the database connection to connect to the database and retrieve the database details. The IDE also uses the details from the database connection to generate the XML file that the WebLogic Server uses to create the data sources on the server and identify the appropriate drivers.
 
@@ -325,7 +329,7 @@ To manage persistence in the application you only need to create a persistence u
 9. Choose the MySQL sample database connection. Click OK to close the dialog box.
 10. Click Finish in the New Persistence Unit wizard.
 
-image::./new-persistence-eclipselink1.png[title="New Persistence Unit wizard"]
+image::kb/docs/web/new-persistence-eclipselink1.png[title="New Persistence Unit wizard"]
 
 When you click Finish,  ``persistence.xml``  is created for your project and opens in the editor. You can click Source in the toolbar of the editor to open  ``persistence.xml``  in the XML source editor. This file contains all the information the server needs to manage the entities and persistence of the application.
 
@@ -397,11 +401,11 @@ In this exercise you will build and deploy the web application to the WebLogic S
 
 When you click Run, the IDE builds the project and deploys the WAR archive to the WebLogic Server and creates and registers the new JDBC datasource. The welcome page of the application (link:http://localhost:7001/WebLogicCustomer/[+http://localhost:7001/WebLogicCustomer/+]) opens in your browser.
 
-image::./browser-welcome.png[title="Welcome page in browser"]
+image::kb/docs/web/browser-welcome.png[title="Welcome page in browser"]
 
 If you log in to the Admin Console, you can click Deployments in the Your Deployed Resources section to see a table with the resources that are currently deployed to the server.
 
-image::./adminconsole-deployments.png[title="Deployments table in WebLogic Server Admin Console"]
+image::kb/docs/web/adminconsole-deployments.png[title="Deployments table in WebLogic Server Admin Console"]
 
 You can click the name of each of the resources to view additional details about the resource. You can also delete resources in the Deployments table.
 
@@ -409,11 +413,11 @@ You can click the name of each of the resources to view additional details about
 
 * If you deployed the application to WebLogic Server 10.3.4 or 10.3.5 you can see in the table that the JSF 2.0 library was also deployed to the server in addition to the  ``WebLogicCustomer.war``  web application and the  ``jdbc/mysql-sample``  JDBC configuration. 
 
-image::./admin-console-deployments.png[title="Deployments table in WebLogic Server Admin Console"]
+image::kb/docs/web/admin-console-deployments.png[title="Deployments table in WebLogic Server Admin Console"]
 
 * If you expand the Oracle WebLogic Server instance in the Services window, you can view the applications and resources that are deployed to the server. You can see that the JDBC resources were created on the server and that the JSF libraries were installed.
 
-image::./weblogic-services-window2.png[title="WebLogic Server applications and resources in the Services window"]
+image::kb/docs/web/weblogic-services-window2.png[title="WebLogic Server applications and resources in the Services window"]
 
 For more information about deploying applications, see link:http://download.oracle.com/docs/cd/E12840_01/wls/docs103/deployment/index.html[+Deploying Applications to WebLogic Server +]
 

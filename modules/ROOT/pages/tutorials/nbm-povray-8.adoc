@@ -30,6 +30,10 @@
 :description: Writing POV-Ray Support for NetBeans VIII—Implementing ViewService and its Actions - Apache NetBeans
 :keywords: Apache NetBeans Platform, Platform Tutorials, Writing POV-Ray Support for NetBeans VIII—Implementing ViewService and its Actions
 
+ifdef::env-github[]
+:imagesdir: ../../images
+endif::[]
+
 This is a continuation of the tutorial for building a POV-Ray rendering application on the NetBeans Platform. If you have not read the  xref:./nbm-povray-1.adoc[first],  xref:./nbm-povray-2.adoc[second],  xref:./nbm-povray-3.adoc[third],  xref:./nbm-povray-4.adoc[fourth],  xref:./nbm-povray-5.adoc[fifth],  xref:./nbm-povray-6.adoc[sixth], and  xref:./nbm-povray-7.adoc[seventh] parts of this tutorial, you may want to start there.
 
 
@@ -265,7 +269,7 @@ private class ViewAction extends AbstractAction {
 At this point, we are ready to run the code. Note that POV-Ray files now have a working View menu item:
 
 
-image::./povray_71_ch8_pic1.png[]
+image::tutorials/povray_71_ch8_pic1.png[]
 
 
 == Icon-Badging—Adding File Listening Support
@@ -645,18 +649,18 @@ Here we have defined a set of constants that are paths to icons, and depending o
 1. Create the necessary image files in the `org.netbeans.examples.modules.povfile` package—here are the ones used in the tutorial:
 
 * *hasImageBadge.png* 
-image:./povray_hasImageBadge.png[]
+image:tutorials/povray_hasImageBadge.png[]
 * *hasNoImageBadge.png* 
-image:./povray_hasNoImageBadge.png[]
+image:tutorials/povray_hasNoImageBadge.png[]
 * *needsRenderBadge.png* 
-image:./povray_needsRenderBadge.png[]
+image:tutorials/povray_needsRenderBadge.png[]
 
 [start=6]
 1. 
 Run the application. Notice the icon badging, and the changes when you render or remove rendered images:
 
 
-image::./povray_71_ch8_pic2.png[]
+image::tutorials/povray_71_ch8_pic2.png[]
 
 
 == Next Steps

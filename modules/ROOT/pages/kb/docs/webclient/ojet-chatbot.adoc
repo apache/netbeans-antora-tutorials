@@ -29,6 +29,10 @@
 :description: Chatbot Integration with Oracle JET - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Chatbot Integration with Oracle JET
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This document provides a step-by-step set of instructions guiding you through the process of integrating link:https://www.oracle.com/solutions/mobile/bots.html[+IBCS chatbots+] with the link:http://oraclejet.org[+Oracle JavaScript Extension Toolkit (JET)+]. JET empowers web and mobile developers by providing a modular toolkit based on modern JavaScript, CSS3, and HTML5 design and development principles.
 
 
@@ -42,7 +46,7 @@ In this exercise you set up an Oracle JET application and explore its default co
 [start=2]
 . Open the project into an editor or IDE of your choice, such as NetBeans IDE, which displays the application as follows:
 
-image::./navdrawer.png[]
+image::kb/docs/webclient/navdrawer.png[]
 
 Spend some time browsing through the application structure. In the next section, you'll be introduced to the main concepts of the application structure.
 
@@ -53,7 +57,7 @@ In this step, now configure the Intelligent Bot Webhook channel. Then try out th
 
 1. Return to the Intelligent Bot user interface in a new browser tab, select the *Settings* button on the left menu, then the *Channels* tab and finally click the *Add Channel* button.
 
-image::./ccm029.png[]
+image::kb/docs/webclient/ccm029.png[]
 
 
 [start=2]
@@ -67,7 +71,7 @@ image::./ccm029.png[]
 
 1. In the application, in the  ``src/js``  folder, create a folder named  ``jet-composites`` . Unzip the content of the ZIP file into it, in a folder named  ``bot-client`` :
 
-image::./t060001.png[]
+image::kb/docs/webclient/t060001.png[]
 
 
 [start=2]
@@ -107,7 +111,7 @@ Can't get yours to work? Try  ``71DB044C-0624-4533-9C98-B8E76BAF919D``  as the c
 . 
 Run the application and interact with the ChatBot.
 
-image::./t060004.png[]
+image::kb/docs/webclient/t060004.png[]
 
 You have now hooked your ChatBot into an Oracle JET application.
 

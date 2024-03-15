@@ -29,6 +29,10 @@
 :description: Creating and Running an Application Client on the GlassFish Server - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Creating and Running an Application Client on the GlassFish Server
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This tutorial shows how to create a simple application client and access an Enterprise JavaBean (EJB) deployed to GlassFish server 3. In this tutorial you will first create an enterprise applications that contains a simple session bean and a Java class library project that contains a remote interface for the session bean. You will then create an application client that accesses the session bean through the remote interface in the class library. The class library JAR that contains the remote interface is added to the classpath of the enterprise application and the application client.
 
 *Tutorial Exercises*
@@ -73,7 +77,7 @@ The library JAR is easy to distribute to any clients that may need to call the E
 1. Choose File > New Project (Ctrl-Shift-N; ⌘-Shift-N on Mac) and select Java Class Library in the Java category. Click Next.
 2. Type *EJBRemoteInterface* for the Project Name. Click Finish.
 
-image::./appclient-newclasslibrary.png[title="New Class Library project wizard"]
+image::kb/docs/javaee/appclient-newclasslibrary.png[title="New Class Library project wizard"]
 
 When you click Finish, the IDE creates a Java Class Library project. In the next section you will create a Java EE enterprise application and an EJB module. You will then use a wizard to create a session bean and the remote interface for your session bean in the Class Library project. The application client will access the session bean via the interface in the class library.
 
@@ -92,11 +96,11 @@ In this section you will use the New Project wizard to create an enterprise appl
 3. Select GlassFish Server for the Server.
 4. Confirm that Create EJB Module is selected and deselect Create Web Application Module. Click Finish.
 
-image::./appclient-newentappejb.png[title="Create EJB Module is selected in the New Enterprise Application wizard"]
+image::kb/docs/javaee/appclient-newentappejb.png[title="Create EJB Module is selected in the New Enterprise Application wizard"]
 
 When you click Finish, the IDE creates an enterprise application and an EJB module. In the Projects window, you can see that the EJB Module project is listed under the Java EE Modules node of the enterprise application project.
 
-image::./appclient-projects-entappejb1.png[title="Projects window showing open projects"]
+image::kb/docs/javaee/appclient-projects-entappejb1.png[title="Projects window showing open projects"]
 
 You can see that three types of projects are now listed in the Projects window: class library, enterprise application and EJB module.
 
@@ -112,13 +116,13 @@ In this exercise you will use a wizard to create a session bean in the EJB modul
 5. Select the Remote option for Create Interface.
 6. Select the *EJBRemoteInterface* project from the dropdown list. Click Finish.
 
-image::./appclient-wizard-newsessionbean.png[title="New Session Bean wizard"]
+image::kb/docs/javaee/appclient-wizard-newsessionbean.png[title="New Session Bean wizard"]
 
 When you click Finish, the IDE creates the session bean in the  ``ejb``  package in the EJB module and opens the class in the editor. You can see that  ``MySession``  implements the  ``MySessionRemote``  interface and that the EJBRemoteInterface JAR was added as a library of the EJB module.
 
 The wizard also creates a remote interface named  ``MySessionRemote``  in the  ``ejb``  package of the EJBRemoteInterface project. The IDE automatically adds the Java EE 6 API Library that is required for the EJB interface.
 
-image::./appclient-projects-entappejb2.png[title="Projects window showing the session bean and remote interface"] 
+image::kb/docs/javaee/appclient-projects-entappejb2.png[title="Projects window showing the session bean and remote interface"] 
 
 
 === Adding a Business Method
@@ -182,7 +186,7 @@ NOTE: If you are deploying to GlassFish 3.0.1, you need to create the applicatio
 
 Note that you do not need to add the project to an enterprise application.
 
-image::./appclient-wizard-newentappclient.png[title="Create Application Client selected in the New Project wizard"]
+image::kb/docs/javaee/appclient-wizard-newentappclient.png[title="Create Application Client selected in the New Project wizard"]
 
 When you click Finish, the IDE creates the application client project and opens  ``Main.java``  in the editor.
 
@@ -197,7 +201,7 @@ If the class library project is not open, you can add the class library to the p
 2. Right-click in the source code and choose Insert Code (Alt-Insert; Ctrl-I on Mac) and select Call Enterprise Bean to open the Call Enterprise Bean dialog.
 3. Expand the EntAppEJB project node and select MySession. Click OK.
 
-image::./appclient-callenterprise.png[title="Call Enterprise Bean dialog"]
+image::kb/docs/javaee/appclient-callenterprise.png[title="Call Enterprise Bean dialog"]
 
 The dialog automatically selects Remote as the interface type. When you click OK, the IDE adds the following annotation to  ``Main.java`` .
 
@@ -234,7 +238,7 @@ Alternatively, you can expand source package and right-click the  ``Main.java`` 
 
 When you click Run, the IDE builds the application client project and deploys the JAR archive to the server. You can see the message from the application client in the Output window.
 
-image::./appclient-buildoutput.png[title="The result in the Output window"]
+image::kb/docs/javaee/appclient-buildoutput.png[title="The result in the Output window"]
 
 If you want to create additional EJBs, you can simply add the new remote interfaces of the EJBs to the EJBRemoteInterface class library project.
 

@@ -29,6 +29,10 @@
 :description: Composite Component Architecture in Oracle JET - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Composite Component Architecture in Oracle JET
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This document provides a step-by-step set of instructions guiding you through the process of creating link:http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=composite&demo=basic[+Composite Components+] with the link:http://oraclejet.org[+Oracle JavaScript Extension Toolkit (JET)+]. JET empowers web and mobile developers by providing a modular toolkit based on modern JavaScript, CSS3, and HTML5 design and development principles.
 
 
@@ -42,7 +46,7 @@ In this exercise you set up an Oracle JET application and explore its default co
 [start=2]
 . Open the project into an editor or IDE of your choice, such as NetBeans IDE, which displays the application as follows:
 
-image::./navdrawer.png[]
+image::kb/docs/webclient/navdrawer.png[]
 
 Spend some time browsing through the application structure. In the next section, you'll be introduced to the main concepts of the application structure.
 
@@ -53,7 +57,7 @@ In this exercise, you create your first link:http://www.oracle.com/webfolder/tec
 
 1. In  ``src/js``  create a folder named  ``jet-composites``  or any other name. In that folder, create another folder, named  ``customer`` . In the  ``customer``  folder, create the three files you see below, that is,  ``customer.html`` ,  ``customer.json``  and  ``loader.js`` , shown below:
 
-image::./cca-1.png[]
+image::kb/docs/webclient/cca-1.png[]
 
 
 [start=2]
@@ -163,7 +167,7 @@ In the  ``define``  block, load the following, at the end of the list of referen
 . 
 Look in the browser and you should see the following:
 
-image::./cca-2.png[]
+image::kb/docs/webclient/cca-2.png[]
 
 
 == Next Steps

@@ -29,6 +29,9 @@
 :description: Lesson 3: Creating a New Application User - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Lesson 3: Creating a New Application User
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
 
 In this lesson you expand the application with the Create a New Wisher functionality.
 
@@ -40,7 +43,7 @@ The Create a New Wisher use case consists of three steps:
 2. <<implementCreateNewWisher,The user switches to the createNewWisher.php page for creating a new wisher>>.
 3. After creating a new wisher, the user switches to editWishList.php, where he creates a wish list for the user.
 
-image::./page-flow-diagram-l3.png[]
+image::kb/docs/php/page-flow-diagram-l3.png[]
 
 The current document is a part of the Creating a Database Application in the NetBeans IDE for PHP tutorial.
 
@@ -475,19 +478,19 @@ Please confirm your password: <input type="password" name="password2"/><br/>
 
 1. Run the application. The index page opens.
 
-image::./index-php-3.png[]
+image::kb/docs/php/index-php-3.png[]
 
 
 
 . On the index page, click the link next to the text Still don't have a wish list? The following form opens:
 
-image::./create-new-wisher-empty-form.png[]
+image::kb/docs/php/create-new-wisher-empty-form.png[]
 
 
 
 . Leave the fields empty and click Register. An error message displays.
 
-image::./create-new-wisher-name-empty.png[]
+image::kb/docs/php/create-new-wisher-name-empty.png[]
 
 
 
@@ -499,13 +502,13 @@ image::./create-new-wisher-name-empty.png[]
 
 . Enter Bob in the Your name field, specify the same password in both password fields and click Register. The page that opens is empty but the redirection passed correctly as the URL ends with editWishList.php:
 
-image::./edit-wish-list-empty.png[]
+image::kb/docs/php/edit-wish-list-empty.png[]
 
 
 
 . To check that the data is stored in the database, navigate to wishers on the Services window below the wislist1 node and from the context menu choose View Data 
 
-image::./wishers.png[]
+image::kb/docs/php/wishers.png[]
 
 
 == Application Source Code after the Current Lesson Is Completed

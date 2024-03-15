@@ -29,6 +29,10 @@
 :description: Handling Images in a Java GUI Application - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Handling Images in a Java GUI Application
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 Handling images in an application is a common problem for many beginning Java programmers. The standard way to access images in a Java application is by using the `link:http://download.oracle.com/javase/6/docs/api/java/lang/ClassLoader.html#getResource(java.lang.String)[+getResource()+]` method. This tutorial shows you how to use the IDE's GUI Builder to generate the code to include images (and other resources) in your application. In addition, you will learn how to customize the way the IDE generates image handling code.
 
 The application that results from this tutorial will be a simple JFrame that contains one JLabel that displays a single image.
@@ -44,7 +48,7 @@ The application that results from this tutorial will be a simple JFrame that con
 [.feature]
 --
 
-image::./newproj-small.png[role="left", xref="image$./newproj.png"]
+image::kb/docs/java/newproj-small.png[role="left", xref="image$./newproj.png"]
 
 --
 
@@ -74,7 +78,7 @@ For now, the form should look something like the following image:
 [.feature]
 --
 
-image::./form-small.png[role="left", xref="image$./form.png"]
+image::kb/docs/java/form-small.png[role="left", xref="image$./form.png"]
 
 --
 
@@ -90,7 +94,7 @@ When you use images or other resources in an application, typically you create a
 [.feature]
 --
 
-image::./package-small.png[role="left", xref="image$./package.png"]
+image::kb/docs/java/package-small.png[role="left", xref="image$./package.png"]
 
 --
 
@@ -100,7 +104,7 @@ image::./package-small.png[role="left", xref="image$./package.png"]
 
 In the Projects window, you should see a new package appear within the `Source Packages` folder.
 
-image::./project-with-imagepack.png[]
+image::kb/docs/java/project-with-imagepack.png[]
 
 
 == Displaying the Image on the Label
@@ -117,7 +121,7 @@ The icon property editor is displayed.
 [.feature]
 --
 
-image::./importimage-small.png[role="left", xref="image$./importimage.png"]
+image::kb/docs/java/importimage-small.png[role="left", xref="image$./importimage.png"]
 
 --
 
@@ -134,7 +138,7 @@ image::./importimage-small.png[role="left", xref="image$./importimage.png"]
 [.feature]
 --
 
-image::./targetfolder-small.png[role="left", xref="image$./targetfolder.png"]
+image::kb/docs/java/targetfolder-small.png[role="left", xref="image$./targetfolder.png"]
 
 --
 
@@ -151,7 +155,7 @@ After you click OK, the IDE does the following things:
 [.feature]
 --
 
-image::./label-added-small.png[role="left", xref="image$./label-added.png"]
+image::kb/docs/java/label-added-small.png[role="left", xref="image$./label-added.png"]
 
 --
 
@@ -163,7 +167,7 @@ At this point, you can do some simple things to improve the appearance of the fo
 [.feature]
 --
 
-image::./centered-small.png[role="left", xref="image$./centered.png"]
+image::kb/docs/java/centered-small.png[role="left", xref="image$./centered.png"]
 
 --
 
@@ -212,7 +216,7 @@ First you need to set the project's main class. When you set the main class, the
 [.feature]
 --
 
-image::./mainclass-small.png[role="left", xref="image$./mainclass.png"]
+image::kb/docs/java/mainclass-small.png[role="left", xref="image$./mainclass.png"]
 
 --
 
@@ -229,7 +233,7 @@ image::./mainclass-small.png[role="left", xref="image$./mainclass.png"]
 
 You can view the build products of the application in the Files window. The `build` folder contains the compiled class. The `dist` folder contains a runnable JAR file that contains the compiled class and the image.
 
-image::./files.png[]
+image::kb/docs/java/files.png[]
 
 *To run the project:*
 
@@ -250,7 +254,7 @@ If you need to be able to choose the image to display programmatically, you can 
 
 [.feature]
 --
-image:./custom-code-small.png[role="left", xref="image$./custom-code.png"]
+image:kb/docs/java/custom-code-small.png[role="left", xref="image$./custom-code.png"]
 --
 
 The Custom Code option in this property editor lets you fill in the parameter of the `setIcon` method yourself. You can fill in this parameter with the necessary logic or with a call to a separate method that you have hand-coded elsewhere in the class.
@@ -258,7 +262,7 @@ The Custom Code option in this property editor lets you fill in the parameter of
 [.feature]
 --
 
-image::./custom-view-small.png[role="left", xref="image$./custom-view.png"]
+image::kb/docs/java/custom-view-small.png[role="left", xref="image$./custom-view.png"]
 
 --
 

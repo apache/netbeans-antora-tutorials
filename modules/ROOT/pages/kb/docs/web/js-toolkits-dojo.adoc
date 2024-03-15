@@ -30,11 +30,15 @@
 :keywords: Apache NetBeans, Tutorials, Connecting a Dojo Tree to an ArrayList using JSON
 include::front::partial$database.adoc[]
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 Web 2.0 features are becoming increasingly predominant in web applications. Many web applications now use JavaScript toolkits such as link:http://www.dojotoolkit.org/[+Dojo+], which allow web pages to behave more like desktop interfaces while overcoming browser incompatibilities and utilizing code that is maintainable, accessible, and standards-compliant.
 
 This tutorial has been adapted from the link:http://developers.sun.com/learning/javaoneonline/j1lab.jsp?lab=LAB-5573&yr=2009&track=1[+Java One Hands-On Lab: Leveraging JavaScript Toolkits for End-to-End Connectivity in Web Applications+], and demonstrates how to add and configure a link:http://dojocampus.org/explorer/#Dijit_Tree_Basic[+Dojo Tree widget+] in a web page and enable the server-side to respond to Tree requests in JSON format. In doing so, you will utilize a set of freely available Java classes from link:http://json.org[+http://json.org+] to process data from an ArrayList into JSON format.
 
-image::./netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
+image::kb/docs/web/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
 
 
 
@@ -67,7 +71,7 @@ _ _
 * The NetBeans IDE Java EE download bundle enables you to optionally install and register the GlassFish Server Open Source Edition with the IDE. You require a server to simulate client-server communication in this tutorial.
 * The completed project looks as follows: 
 
-image::./dojo-tree-complete.png[title="Completed exercise viewed in a browser"]
+image::kb/docs/web/dojo-tree-complete.png[title="Completed exercise viewed in a browser"]
 
 
 
@@ -81,7 +85,7 @@ Begin by opening the sample project in the IDE. When the project is open, expand
 
 When you open the `DojoTreeSample` project in the IDE you will see that the project is badged with an error badge to indicate that a reference problem exists.
 
-image::./proj-win-ref-problems.png[title="Project reference problems are indicated by red text and error badge"]
+image::kb/docs/web/proj-win-ref-problems.png[title="Project reference problems are indicated by red text and error badge"]
 
 The reference problem exists because the Java classes used in the project (`Tribe`, and `TribeDataManager`) reference classes found in the JSON JAR file, which you will later add in the section <<addJSON,Adding the JSON JAR Files to the Project>>.
 
@@ -104,11 +108,11 @@ You can see that a  ``resources``  folder is listed under the `Web Pages` node i
 
 *Note.* Depending on your configuration, you might need to resolve a missing server problem. If you see a  ``<Missing Java EE Server>``  node under the `Libraries` node, right-click the project node and choose Resolve Missing Server Problem in the popup menu.
 
-image::./proj-win-dojo-resources.png[title="Dojo and Dijit libraries are added to the Project's 'resources' folder"]
+image::kb/docs/web/proj-win-dojo-resources.png[title="Dojo and Dijit libraries are added to the Project's 'resources' folder"]
 
 Select the GlassFish Server in the Resolve References dialog box. Click OK.
 
-image::./dojo-add-server.png[title="Dojo and Dijit libraries are added to the Project's 'resources' folder"]
+image::kb/docs/web/dojo-add-server.png[title="Dojo and Dijit libraries are added to the Project's 'resources' folder"]
 
 At this stage, you have successfully opened the `DojoTreeSample` project in the IDE and confirmed that the Dojo libraries are included in the application. In the next step, you will begin working in the HTML file that will display the Tree widget to the end user.
 
@@ -264,7 +268,7 @@ You now need to copy the JSON sources that you download to the  ``json``  projec
 
 When you expand the package you can see the  ``json``  sources.
 
-image::./proj-win-json-sources.png[title="Sources are now contained in the new 'json' project"]
+image::kb/docs/web/proj-win-json-sources.png[title="Sources are now contained in the new 'json' project"]
 
 
 . Right-click the `json` project node in the Projects window and choose Clean and Build to build the project.
@@ -273,7 +277,7 @@ When you build your project, all Java classes get compiled into `.class` files. 
 
 After you build the `json` project, open the Files window (Ctrl-2; ⌘-2 on Mac) and expand the `json` folder. The `build` folder contains the compiled sources from the `JSON-java-master.zip` file and the `dist` folder contains the JAR file which the `DojoTreeSample` project needs to reference.
 
-image::./files-win-compiled-classes.png[title="Compiled sources can be viewed in a project's 'build' folder"]
+image::kb/docs/web/files-win-compiled-classes.png[title="Compiled sources can be viewed in a project's 'build' folder"]
 
 Now that you have the `json.jar` file, you can resolve the reference problems that the `DojoTreeSample` project has been exhibiting since you opened it.
 
@@ -285,7 +289,7 @@ Alternatively, you can right-click the Libraries node and choose Add Project in 
 
 When you exit the dialog, the `json.jar` file is listed under the project's `Libraries` node.
 
-image::./libraries-json-jar.png[title="JAR file is referenced by the project"]
+image::kb/docs/web/libraries-json-jar.png[title="JAR file is referenced by the project"]
 
 *Note: *Although the `json.jar` file is listed under the project's `Libraries` node, it is referenced from its original location - not copied and added to the project (e.g., you won't be able to locate it under the `DojoTreeSample` project in the Files window). Therefore, if you change the location of the JAR file, the reference will be broken.
 
@@ -345,7 +349,7 @@ public JSONObject toJSONObject() throws JSONException {
 
 . Switch back to `TribeDataManager` (Ctrl-Tab) and examine the methods included in the class. Open the Navigator (Ctrl-7; ⌘-7 on Mac) to view a list of fields and properties contained in the class. 
 
-image::./dojo-navigator.png[title="Use the Navigator to view class fields and properties"] 
+image::kb/docs/web/dojo-navigator.png[title="Use the Navigator to view class fields and properties"] 
 
 The most significant method contained therein is `getIndiansAsJSONObject()`. This method scans the ArrayList, processes the data, and returns it in the form of a `JSONObject`. The `String` form of the JSONObject is what is required by Dojo's `ItemFileReadStore`.
 
@@ -377,7 +381,7 @@ public static JSONObject getIndiansAsJSONObject() throws JSONException {
 
 . Open the Javadoc on the `getIndiansAsJSONObject()` method. You can do this by returning to the Navigator (Ctrl-7; ⌘-7 on Mac) and hovering over the method. Otherwise, choose Window > Other > Javadoc from the main menu, then click on the method signature in the editor. 
 
-image::./javadoc-window.png[title="The Javadoc for TribeDataManager provides an example of JSON data"]
+image::kb/docs/web/javadoc-window.png[title="The Javadoc for TribeDataManager provides an example of JSON data"]
 
 
 . Examine the example of JSON data that is provided in the Javadoc. Note that the format of the data conforms to the examples provided in the link:http://o.dojotoolkit.org/book/dojo-book-0-9/part-3-programmatic-dijit-and-dojo/what-dojo-data/available-stores/dojo-data-item[+Dojo documentation+].
@@ -389,7 +393,7 @@ You will implement a servlet that calls the `getIndiansAsJSONObject()` method in
 
 1. Set a breakpoint on the method (click the line number (i.e., line 99) in the left margin of the editor). 
 
-image::./debugger-breakpoint.png[title="Use the Java Debugger to step through code"]
+image::kb/docs/web/debugger-breakpoint.png[title="Use the Java Debugger to step through code"]
 
 
 . Select the  ``DojoTreeSample``  project in the Projects window.
@@ -423,7 +427,7 @@ In the next step, you'll create a servlet which will handle incoming requests by
 1. In the Projects window, right-click the `dojo.indians` source package and choose New > Servlet.
 2. In the New Servlet wizard, type *`TribeServlet`* for the class name. Confirm that `dojo.indians` is specified as the package. Click Next. 
 
-image::./new-servlet-wizard.png[title="Use the New Servlet wizard to create servlets"]
+image::kb/docs/web/new-servlet-wizard.png[title="Use the New Servlet wizard to create servlets"]
 
 
 . Confirm that the default Servlet Name and URL Patterns values are correct. Click Finish to generate the skeleton class for the servlet.

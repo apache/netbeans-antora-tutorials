@@ -29,6 +29,10 @@
 :description: Using the WebSocket API in a Web Application - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Using the WebSocket API in a Web Application
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This tutorial demonstrates how to create a simple web application that enables collaboration between client browsers that are connected to a single server application. When a user draws a graphic element on a canvas in the client browser the element appears on the canvas of all connected clients. How does it work? When the browser loads the web page a client-side script sends a WebSocket handshake request to the application server. The application can accept JSON and binary messages from the clients connected in the session and broadcast the messages to all the connected clients.
 
 In this tutorial you will create a web application that uses the Java API for WebSocket (link:http://www.jcp.org/en/jsr/detail?id=356[+JSR 356+]) to enable bi-directional communication between browser clients and the application server. The Java API for WebSocket provides support for creating WebSocket Java components, initiating and intercepting WebSocket events and creating and consuming WebSocket text and binary messages. The tutorial will also demonstrate how you can use the Java API for JSON Processing (link:http://jcp.org/en/jsr/detail?id=353[+JSR 353+]) to produce and consume JSON. The Java API for WebSocket and the Java API for JSON Processing are part of the Java EE 7 platform (link:http://jcp.org/en/jsr/detail?id=342[+JSR 342+]).
@@ -96,7 +100,7 @@ The goal of this exercise is to create a web application project using the New P
 5. Select *GlassFish Server 4.0* for the Server.
 6. Set the Java EE Version to *Java EE 7 Web*. Click Finish.
 
-image::./websocket-newproject.png[title="Server and Java EE versions in the New Project wizard"]
+image::kb/docs/javaee/websocket-newproject.png[title="Server and Java EE versions in the New Project wizard"]
 
 When you click Finish, the IDE creates the project and opens the project in the Projects window.
 
@@ -118,7 +122,7 @@ In this exercise you will use a wizard in the IDE to help you create the WebSock
 4. Select  ``org.sample.whiteboardapp``  in the Package dropdown list.
 5. Type */whiteboardendpoint* as the WebSocket URI. Click Finish.
 
-image::./websocket-newendpoint.png[title="WebSocket Endpoint in the New File wizard"]
+image::kb/docs/javaee/websocket-newendpoint.png[title="WebSocket Endpoint in the New File wizard"]
 
 When you click Finish the IDE generates the WebSocket Endpoint class and opens the file in the source editor. In the editor you can see that the IDE generated some annotations that are part of the WebSocket API. The class is annotated with  ``link:https://javaee-spec.java.net/nonav/javadocs/javax/websocket/server/ServerEndpoint.html[+@ServerEndpoint+]``  to identify the class as an endpoint and the WebSocket URI is specified as a parameter of the annotation. The IDE also generated a default  ``onMessage``  method that is annotated with  ``link:https://javaee-spec.java.net/nonav/javadocs/javax/websocket/OnMessage.html[+@OnMessage+]`` . A method annotated with  ``@OnMessage``  is invoked each time that the client receives a WebSocket message.
 
@@ -175,7 +179,7 @@ You can see that the  ``onOpen``  and  ``onClose``  methods are annotated with  
 
 Use the hints and code completion in the source editor to help you generate the methods. Click the hint glyph in the left margin next to the class declaration (or place the insert cursor in the class declaration and type Alt-Enter) and select the method in the popup menu. The code completion can help you code the method.
 
-image::./websocket-endpoint-hint.png[title="Code Hint in the Source Editor"]
+image::kb/docs/javaee/websocket-endpoint-hint.png[title="Code Hint in the Source Editor"]
 
 
 
@@ -274,7 +278,7 @@ When the page loads the JavaScript functions will print the message that the bro
 
 When you run the application the IDE will start the GlassFish server and build and deploy the application. The index page will open in your browser and you will see the following message in the browser window.
 
-image::./websocket-browser1.png[title="Connected to endpoint message in browser window"]
+image::kb/docs/javaee/websocket-browser1.png[title="Connected to endpoint message in browser window"]
 
 In the browser window you can see the following endpoint where messages are accepted:  ``http://localhost:8080/WhiteboardApp/whiteboardendpoint`` 
 
@@ -391,7 +395,7 @@ For more about  ``javax.json.JsonObject`` , see the Java API for JSON Processing
 
 You can select getter and setter in the Insert Code popup menu (Alt-Ins on Windows; Ctrl-I on Mac) to open the Generate Getters and Setter dialog box. Alternatively, you can choose Source > Insert Code from the main menu.
 
-image::./websocket-generategetter.png[title="Generate Getter and Setter dialog box"]
+image::kb/docs/javaee/websocket-generategetter.png[title="Generate Getter and Setter dialog box"]
 
 
 
@@ -407,7 +411,7 @@ image::./websocket-generategetter.png[title="Generate Getter and Setter dialog b
 
 You can choose Constructor in the Insert Code popup menu (Ctrl-I).
 
-image::./websocket-generateconstructor.png[title="Generate Constructor popup menu"]
+image::kb/docs/javaee/websocket-generateconstructor.png[title="Generate Constructor popup menu"]
 
 
 
@@ -772,11 +776,11 @@ NOTE:  You might need to undeploy the previous application from the application 
 
 If you view the browser messages you can see that a string is sent via JSON to the endpoint each time you click in the canvas.
 
-image::./websocket-onebrowser.png[title="Canvas with figures in browser and JSON displayed in web console"]
+image::kb/docs/javaee/websocket-onebrowser.png[title="Canvas with figures in browser and JSON displayed in web console"]
 
 If you open another browser to  ``http://localhost:8080/WhiteboardApp/``  you can see that each time you click in the canvas in one browser the new circle or square is reproduced in the canvas of the other browser.
 
-image::./websocket-twobrowsers.png[title="Two browsers sending JSON via the endpoint"]
+image::kb/docs/javaee/websocket-twobrowsers.png[title="Two browsers sending JSON via the endpoint"]
 
 
 == Sending Binary Data to the Endpoint
@@ -936,7 +940,7 @@ No data is sent when the Online checkbox is deselected, but the client will stil
 
 If you add the Send Snapshot button and the Online checkbox and run the application again you will see the new elements in the index page. If you open another browser and deselect the Online button you can see that the JSON message is not sent to the endpoint when you click in the canvas.
 
-image::./websocket-onebrowser-binary.png[title="Web console in browser displaying message that binary data was sent"]
+image::kb/docs/javaee/websocket-onebrowser-binary.png[title="Web console in browser displaying message that binary data was sent"]
 
 If you click Send Snapshot the binary data is sent to the endpoint and broadcast to the connected clients.
 

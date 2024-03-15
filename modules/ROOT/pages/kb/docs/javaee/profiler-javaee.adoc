@@ -30,6 +30,10 @@
 :description: Profiling an Enterprise Application in NetBeans IDE - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Profiling an Enterprise Application in NetBeans IDE
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 NetBeans IDE includes a powerful profiling tool that can provide important information about the runtime behavior of enterprise applications. Using the profiling tool you can easily monitor thread states and obtain data on the CPU performance and memory usage of an application.
 
 In this document you will use the profiling tool to obtain data about a simple enterprise application that is deployed as an WAR to an application server. This document shows how to use the IDE to obtain profiling results about the following.
@@ -154,14 +158,14 @@ You can view additional monitoring information by clicking the Telemetry Overvie
 
 When monitoring an enterprise application, the Memory(Heap) and Memory (GC) graphs can help you quickly see the memory usage of the application. You can place your cursor over the graph to open a tooltip with more detailed information. If the heap size or the number of surviving generations is steadily increasing, it could indicate a memory leak. If you suspect a memory leak, you may then want to profile the application's memory usage.
 
-image::./monitor-memory-telemetry.png[title="Memory (GC) graph showing the GC information"] 
+image::kb/docs/javaee/monitor-memory-telemetry.png[title="Memory (GC) graph showing the GC information"] 
 
 
 == Analyzing the Performance of the Application
 
 The Analyze CPU Performance task enables you to see data on the method-level CPU performance (execution time) of your application and the number of times methods are invoked. You can choose to analyze the performance of the entire application or select a profiling root to limit the profiling to a part of the application code.
 
-image::./sample-task.png[title="Sample Application mode selected in the CPU pane of Select Profiling Task dialog box"]
+image::kb/docs/javaee/sample-task.png[title="Sample Application mode selected in the CPU pane of Select Profiling Task dialog box"]
 
 When you choose the analyze CPU performance task in the Profiling Tasks window you can choose how much of the application you want to profile by selecting one of the following options.
 
@@ -194,7 +198,7 @@ In this exercise you will analyze the performance of the application by selectin
 
 NOTE:  This filter will limit the classes that are instrumented to the classes that are found in the enterprise application project. Click *Show filter value* to see a list of the filtered classes.
 
-image::./sample-task.png[title="Sample Application mode selected in the CPU pane of Select Profiling Task dialog box"]
+image::kb/docs/javaee/sample-task.png[title="Sample Application mode selected in the CPU pane of Select Profiling Task dialog box"]
 
 You can see on the scale in the dialog that the overhead will be relatively low.
 
@@ -202,7 +206,7 @@ You can see on the scale in the dialog that the overhead will be relatively low.
 
 . Click the Live Profiling Results button in the Profiler window to open the Live Profiling Results tab.
 
-image::./sample-task-results.png[title="Results of Sample Application mode"]
+image::kb/docs/javaee/sample-task-results.png[title="Results of Sample Application mode"]
 
 In the Live Profiling Results tab you can see the execution time for the  ``service``  method for the servlet in the  ``Servlet2Stateless``  class and that the method was invoked one time.
 
@@ -219,7 +223,7 @@ In this exercise you will analyze the performance of the application by instrume
 4. Select the *Advanced (instrumented)* mode.
 5. Select *Profile only project classes* from the Filter drop-down list. Click Run.
 
-image::./advanced-cpu-task.png[title="Profile Application mode selected in the CPU pane of Select Profiling Task dialog box"]
+image::kb/docs/javaee/advanced-cpu-task.png[title="Profile Application mode selected in the CPU pane of Select Profiling Task dialog box"]
 
 You can see on the scale in the dialog that the overhead will be higher than in the Quick profile mode.
 
@@ -229,7 +233,7 @@ You can see on the scale in the dialog that the overhead will be higher than in 
 
 You can see that the Live Profiling Results tab shows the execution time for the  ``init``  and  ``service``  methods for the servlet in the  ``Servlet2Stateless``  class and that each method was invoked one time. The  ``init``  method in the  ``StatelessSessionBean``  class was also invoked.
 
-image::./cpu-pane1-results.png[title="Results of Profile Application mode"]
+image::kb/docs/javaee/cpu-pane1-results.png[title="Results of Profile Application mode"]
 
 NOTE:  By default, the auto-refresh mode is active so that the data displayed is refreshed every few seconds. You can activate and de-activate the auto-refresh mode by clicking the Auto-Refresh button in the toolbar.
 
@@ -239,13 +243,13 @@ To improve the readability of the collected data, you can use the Results filter
 
 . In the web browser, type your name in the field and click Submit Query.
 
-image::./cpu-pane1-results1.png[title="Results of Profile Application mode"]
+image::kb/docs/javaee/cpu-pane1-results1.png[title="Results of Profile Application mode"]
 
 When you click Submit Query, you can see that the Live Profiling Results tab is updated to reflect the action in the web browser. Clicking the button invoked the  ``sayHello``  method in the  ``StatelessSessionBean``  class and invoked the  ``init``  method again. The  ``service``  method for the servlet in the  ``Servlet2Stateless``  was also invoked again. The tab also displays how much time was spent in each of the methods.
 
 You can click the DrillDown button to see a graphic representation of the relative time spent in various areas of the application, for example, servlets, listeners, etc. You can click on the graphic to drill down into the displayed profiling results.
 
-image::./drill-down.png[title="Drilldown graph of relative time spent in servlets in the application"]
+image::kb/docs/javaee/drill-down.png[title="Drilldown graph of relative time spent in servlets in the application"]
 
 Instrumenting an application will always impose some overhead when profiling the application. In such a simple application the overhead is not noticeable, but in a complex application the overhead can be quite significant. You can reduce the overhead by limiting the classes that are profiled by selecting a profiling root method.
 
@@ -256,11 +260,11 @@ In this exercise you will profile only part of the application. You should use t
 
 To profile part of an application you need to set one or more profiling root methods. The IDE instruments only those methods that are called by a thread entering a profiling root method. For example, if you set the  ``sayHello``  method in the  ``StatelessSessionBean``  class as the root method and use the Profile only project classes filter, the IDE will start instrumenting methods when the method is invoked and an application thread enters the method. In this application the  ``init``  constructor will not be instrumented because it is invoked before  ``sayHello`` .
 
-image::./profileroot-sayhello-project.png[title="Drilldown graph of relative time spent in servlets in the application"]
+image::kb/docs/javaee/profileroot-sayhello-project.png[title="Drilldown graph of relative time spent in servlets in the application"]
 
 If you select the Profile all classes filter the IDE will instrument all methods called by  ``sayHello`` , including any Java core classes.
 
-image::./profileroot-sayhello-all.png[title="Drilldown graph of relative time spent in servlets in the application"]
+image::kb/docs/javaee/profileroot-sayhello-all.png[title="Drilldown graph of relative time spent in servlets in the application"]
 
 NOTE: In a more complex application you may want to specify several root methods. You can select individual methods, entire classes and packages as profiling roots.
 
@@ -281,17 +285,17 @@ To profile part of an application you need to first specify the root methods. By
 
 . Expand the ServletStateless node and select the  ``service``  method in the Servlets package. Click OK.
 
-image::./edit-profiling-roots.png[title="Web Application View in Edit Profiling Roots dialog"]
+image::kb/docs/javaee/edit-profiling-roots.png[title="Web Application View in Edit Profiling Roots dialog"]
 
 Alternatively, you can choose the Package View to view all the source packages in the application and select the  ``service``  method in the  ``Servlet2Stateless``  class in the  ``servlet.stateless``  package.
 
-image::./edit-profiling-roots-pkg.png[title="Package View in Edit Profiling Roots dialog"]
+image::kb/docs/javaee/edit-profiling-roots-pkg.png[title="Package View in Edit Profiling Roots dialog"]
 
 NOTE:  Notice that the  ``Servlet2Stateless``  constructor is not selected. You can use the Edit Profiling Roots dialog to limit the instrumentation to specific methods in a class. If you do not want to limit the instrumentation to specific methods, you can use the Package View to select an entire class or package. For example, if you select the  ``Servlet2Stateless``  class in the Package View of the Edit Profiling Roots dialog box, the IDE will instrument the  ``init``  constructor and the  ``service``  method.
 
 If you click the Advanced button you can see that the  ``service``  method is listed as the only root method in the Edit Profiling Roots (Advanced) dialog box. You can click Add to explicitly define a method by typing the method signature and class.
 
-image::./edit-profilingroots-pkg-adv.png[title="Edit Profiling Roots (Advanced) dialog"]
+image::kb/docs/javaee/edit-profilingroots-pkg-adv.png[title="Edit Profiling Roots (Advanced) dialog"]
 
 
 
@@ -303,13 +307,13 @@ In the Select Profiling Task dialog box you can see that the Advanced profiling 
 
 . Select *Profile only project classes* from the Filter drop-down list. Click Run.
 
-image::./advanced-cpu-task-custom.png[title="Profile Application mode selected with a custom profiling root"]
+image::kb/docs/javaee/advanced-cpu-task-custom.png[title="Profile Application mode selected with a custom profiling root"]
 
 When you click Run, the IDE builds and deploys the application and opens the web browser to the servlet page.
 
 The IDE displays the profiling results in the Live Profiling Results tab.
 
-image::./cpu-pane2-results.png[title="Results of instrumenting methods using a profiling root"]
+image::kb/docs/javaee/cpu-pane2-results.png[title="Results of instrumenting methods using a profiling root"]
 
 You can see that the IDE only displays the results for the method specified as the profiling root. The application thread has not entered any other methods in the application after entering the profiling root.
 
@@ -319,7 +323,7 @@ Though the application has entered other methods since entering the profiling ro
 
 . In the web browser, type your name in the field and click Submit Query.
 
-image::./cpu-pane2-results1.png[title="Results of instrumenting methods using a profiling root after invoking sayHello method"]
+image::kb/docs/javaee/cpu-pane2-results1.png[title="Results of instrumenting methods using a profiling root after invoking sayHello method"]
 
 When you click Submit Query, you can see that the Live Profiling Results tab is updated to reflect the action in the web browser. Clicking the button invoked the  ``sayHello``  method in the  ``StatelessSessionBean``  class one time. The  ``service``  method was also invoked again.
 
@@ -332,7 +336,7 @@ The results display the performance of the application, but may not accurately r
 
 . After the profiling results are reset, type your name and click Submit Query one more time.
 
-image::./cpu-pane2-results2.png[title="Results of instrumenting methods using a profiling root after invoking sayHello method"]
+image::kb/docs/javaee/cpu-pane2-results2.png[title="Results of instrumenting methods using a profiling root after invoking sayHello method"]
 
 If you look at the profiling results, in many cases you may see that the performance has improved.
 
@@ -347,11 +351,11 @@ When you are analyzing CPU performance you can reduce the profiling overhead by 
 
 You can create custom filters to use in specific projects or for specific types of profiling. For example, if you want an instrumentation filter to use when profiling web applications on the Oracle WebLogic server, you can click "Edit filter sets" to create a filter set that excludes Java Core Classes, Oracle WebLogic Classes and NetBeans Classes (useful when HTTP Monitor is enabled). You can then give the filter set a name such as "WebLogic Webapp Exclusive" and then choose that filter from the Filter drop-down list when profiling applications deployed to the WebLogic server.
 
-image::./custom-filter.png[title="dialog box that appears when profiling a project for the first time"]
+image::kb/docs/javaee/custom-filter.png[title="dialog box that appears when profiling a project for the first time"]
 
 You can define a simple instrumentation filter by selecting Quick Filter from the Filter drop-down list to open the Set Quick Filter dialog box. You can then quickly edit the list of packages or classes that are instrumented. This creates a Quick Filter that you can then select from the Filter drop-down list.
 
-image::./set-quick-filter.png[title="dialog box that appears when profiling a project for the first time"]
+image::kb/docs/javaee/set-quick-filter.png[title="dialog box that appears when profiling a project for the first time"]
 
 For more information about defining and using instrumentation filters, consult the profiling documentation in the IDE.
 
@@ -400,11 +404,11 @@ NOTE:  If you select this option you will notice that the Overhead meter will in
 
 . Deselect *Use defined Profiling Points* (if selected). Click Run.
 
-image::./profile-memory-advanced.png[title="Select Profiling Task dialog showing Memory task and options"]
+image::kb/docs/javaee/profile-memory-advanced.png[title="Select Profiling Task dialog showing Memory task and options"]
 
 When you click Run, the IDE compiles the application, starts the server in profile mode and deploys the application to the server. To view the profiling results, click Live Results in the Profiler window to open the Live Results window. The Live Results window displays information on the size and number of objects that are allocated on the target JVM. In addition to the objects allocated by the enterprise application, the results also include all the objects allocated by the application server.
 
-image::./profile-memory-results.png[title="Profiling Results tab showing results of profiling memory usage"]
+image::kb/docs/javaee/profile-memory-results.png[title="Profiling Results tab showing results of profiling memory usage"]
 
 By default the results are sorted and displayed by the number of Live Bytes, but you can click a column header to change how the results are displayed. You can also filter the results by typing a class name in the filter box below the list.
 

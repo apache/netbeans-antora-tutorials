@@ -30,11 +30,15 @@
 :keywords: Apache NetBeans, Tutorials, Using the C/C++ Tool Collection Descriptor - NetBeans IDE Tutorial
 include::front::partial$database.adoc[]
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 //_Contributed by link:mailto:alexander.simon@oracle.com[+_Alexander Simon_+]
 //March 2014_ [Revision number: V8.0-1]
 
 
-image::./netbeans-stamp.png[title="Content on this page applies to the NetBeans IDE 8.0"]
+image::kb/docs/cnd/netbeans-stamp.png[title="Content on this page applies to the NetBeans IDE 8.0"]
 
 
 *To follow this tutorial, you need the following software.*
@@ -319,7 +323,7 @@ Notice the debug flags are set to -g3 and -gdwarf-2, which are different from th
 
 The project tree should look similar to the following:
 
-image::./project.png[title="Project tree"]
+image::kb/docs/cnd/project.png[title="Project tree"]
 
 The Unit Test folders might not exist.
 
@@ -335,7 +339,7 @@ The Unit Test folders might not exist.
 
 The IDE shows the new tool collection:
 
-image::./options.png[title="Options panel"]
+image::kb/docs/cnd/options.png[title="Options panel"]
 
 [start=20]
 . Create a new C/C++ sample project  ``Welcome``  by selecting File > New Project > Samples > C/C++ > Welcome.

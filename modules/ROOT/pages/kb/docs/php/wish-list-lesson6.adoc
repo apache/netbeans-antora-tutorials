@@ -29,6 +29,9 @@
 :description: Lesson 6: Adding a New Wish to the Database - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Lesson 6: Adding a New Wish to the Database
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
 
 In this lesson you expand the application functionality with two features:
 
@@ -37,7 +40,7 @@ In this lesson you expand the application functionality with two features:
 
 To implement this functionality, you edit the  `editWishList.php`  file and create the new file  `editWish.php` .
 
-image::./page-flow-diagram-l6.png[]
+image::kb/docs/php/page-flow-diagram-l6.png[]
 
 The current document is a part of the xref:./wish-list-tutorial-main-page.adoc[+Creating a CRUD Application in the NetBeans IDE for PHP+] tutorial.
 
@@ -435,12 +438,12 @@ The form redirects the user to the front index.php page upon pressing the Back t
 
 1. Run the application. On the  `index.php`  page, fill in the fields: in the Username field, enter "Tom", in the Password field, enter "tomcat".
 
-image::./user-logon-to-edit-wish-list.png[]
+image::kb/docs/php/user-logon-to-edit-wish-list.png[]
 
 
 . Press the Edit My Wish List button. The  `editWishList.php`  page opens. 
 
-image::./edit-wish-list-add-wish.png[]
+image::kb/docs/php/edit-wish-list-add-wish.png[]
 
 
 . Press the Back to Main Page button. The  `index.php`  page opens.
@@ -451,7 +454,7 @@ image::./edit-wish-list-add-wish.png[]
 
 . Press the Add Wish button. The  `editWish.php`  page opens. Fill in the form.
 
-image::./new-wish.png[] 
+image::kb/docs/php/new-wish.png[] 
 
 Press the Back to the List button. The  `editWishList.php`  page opens but the entered wish is not added.
 
@@ -461,7 +464,7 @@ Press the Back to the List button. The  `editWishList.php`  page opens but the e
 
 . Press the Add Wish button again. The  `editWish.php`  page opens. Fill in the form and press the Save Changes button. The  `editWishList.php`  page shows an updated list of wishes. 
 
-image::./edit-wish-list-updated.png[]
+image::kb/docs/php/edit-wish-list-updated.png[]
 
 [[_application_source_code_after_the_current_lesson_is_completed]]
 == Application Source Code after the Current Lesson Is Completed

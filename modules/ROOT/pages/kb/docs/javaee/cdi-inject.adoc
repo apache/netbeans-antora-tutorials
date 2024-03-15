@@ -29,6 +29,10 @@
 :description: Working with Injection and Qualifiers in CDI - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Working with Injection and Qualifiers in CDI
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 _Contributed by Andy Gibson_
 
 
@@ -83,7 +87,7 @@ CDI is an API for injecting contexts and dependencies. In Seam and Spring, depen
 
 In the following example, you create an `ItemProcessor` that takes a list of items from a class that implements the `ItemDao` interface. You take advantage of CDI's `@Inject` annotation to demonstrate how it is possible to _inject_ a bean into another class. The following diagram depicts the scenario you construct in this exercise.
 
-image::./cdi-diagram-inject.png[title="Use CDI injection to loosely couple classes in your application"]
+image::kb/docs/javaee/cdi-diagram-inject.png[title="Use CDI injection to loosely couple classes in your application"]
 
 DAO stands for _data access object_.
 
@@ -106,7 +110,7 @@ DAO stands for _data access object_.
 
 . Enter *Item* as the class name, then type in *exercise2* as the package. (The new package is created upon completing the wizard.) 
 
-image::./java-class-wizard.png[title="Create a new Java class using the File wizard"]
+image::kb/docs/javaee/java-class-wizard.png[title="Create a new Java class using the File wizard"]
 
 
 
@@ -133,13 +137,13 @@ public class Item {
 
 . Add getter and setter methods to the class. To do so, ensure that your cursor is placed between the class definition (i.e., between the class' curly brackets), then right-click in the editor and choose Insert Code (Alt-Insert; Ctrl-I on Mac). Choose Getter and Setter. 
 
-image::./insert-code.png[title="Create getters and setters using the Insert Code popup"]
+image::kb/docs/javaee/insert-code.png[title="Create getters and setters using the Insert Code popup"]
 
 
 
 . Select the `Item` check box (doing so selects all properties contained in the class). 
 
-image::./generate-getters-setters.png[title="Select the class checkbox to select all properties contained in the class"]
+image::kb/docs/javaee/generate-getters-setters.png[title="Select the class checkbox to select all properties contained in the class"]
 
 
 
@@ -179,7 +183,7 @@ public class Item {
 
 . Create a constructor that takes both `value` and `limit` arguments. Again, the IDE can assist with this. Press Ctrl-Space within the class definition and choose the '`Item(int value, int limit) - generate`' option. 
 
-image::./generate-constructor.png[title="Press Ctrl-Space to utilize the editor's code completion facilities"] 
+image::kb/docs/javaee/generate-constructor.png[title="Press Ctrl-Space to utilize the editor's code completion facilities"] 
 
 The following constructor is added to the class.
 
@@ -267,7 +271,7 @@ public class ItemProcessor {
 
 . Fix imports. Either right-click in the editor and choose Fix Imports, or press Ctrl-Shift-I (⌘-Shift-I on Mac). 
 
-image::./fix-imports.png[title="Right-click in the editor and choose Fix Imports to add import statements to the class"]
+image::kb/docs/javaee/fix-imports.png[title="Right-click in the editor and choose Fix Imports to add import statements to the class"]
 
 
 
@@ -337,7 +341,7 @@ Click the New File ( images:./new-file-btn.png[] ) button or press Ctrl-N (⌘-N
 
 . Type in *process* as the file name, then click Finish. 
 
-image::./new-jsf-page.png[title="Create a new Facelets page using the JSF file wizard"]
+image::kb/docs/javaee/new-jsf-page.png[title="Create a new Facelets page using the JSF file wizard"]
 
 
 
@@ -358,7 +362,7 @@ image::./new-jsf-page.png[title="Create a new Facelets page using the JSF file w
 
 Use the IDE's Go to File dialog to quickly open the `web.xml` file. Choose Navigate > Go to File from the IDE's main menu (Alt-Shift-O; Ctrl-Shift-O on Mac), then type '`web`'. 
 
-image::./go-to-file.png[title="Use the Go to File dialog to quickly locate a project file"]
+image::kb/docs/javaee/go-to-file.png[title="Use the Go to File dialog to quickly locate a project file"]
 
 
 
@@ -378,7 +382,7 @@ image::./go-to-file.png[title="Use the Go to File dialog to quickly locate a pro
 
 . Click the '`Execute`' button that displays on the page. Switch back to the IDE and examine the GlassFish server log. The server log displays in the Output window (Ctrl-4; ⌘-4 on Mac) under the GlassFish Server tab. When the button is clicked, the log lists the items from our default DAO implementation. 
 
-image::./output-window.png[title="Examine the server log in the IDE's Output window"] 
+image::kb/docs/javaee/output-window.png[title="Examine the server log in the IDE's Output window"] 
 
 TIP: Right-click in the Output window and choose Clear (Ctrl-L; ⌘-L on Mac) to clear the log. In the above image, the log was cleared just prior to clicking the '`Execute`' button.#
 
@@ -395,7 +399,7 @@ A CDI qualifier is an annotation that can be applied at the class level to indic
 
 To demonstrate the need for a qualifier in the application we are building, let's add another DAO class to our application which also implements the `ItemDao` interface. The following diagram depicts the scenario you are constructing in this exercise. CDI must be able to determine which bean implementation should be used at an injection point. Because there are two implementations of `ItemDao`, we can resolve this by creating a qualifier named `Demo`. Then, we "tag" both the bean we want to use, as well as the injection point in `ItemProcessor`, with a `@Demo` annotation.
 
-image::./cdi-diagram-qualify.png[title="Use CDI injection and qualifiers to loosely couple classes in your application"]
+image::kb/docs/javaee/cdi-diagram-qualify.png[title="Use CDI injection and qualifiers to loosely couple classes in your application"]
 
 Perform the following steps.
 

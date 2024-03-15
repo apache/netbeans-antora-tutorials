@@ -29,6 +29,10 @@
 :description: GUI Builder Visual Feedback Legend - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, GUI Builder Visual Feedback Legend
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This document describes visual feedback the IDE's GUI Builder (formerly code-named Matisse) provides during the process of Java GUI creation.
 
 
@@ -37,30 +41,30 @@ This document describes visual feedback the IDE's GUI Builder (formerly code-nam
 Alignment guidelines appear only when adding or moving components, indicating the preferred positions to which components snap when the mouse button is released. Once positioned, alignment guidelines are replaced by solid lines illustrating the common alignments shared among components as well as anchoring indicators.
 
 |===
-|*Inset* |image:./legend5.png[] |Insets are the preferred spacings between components and the containers within which they are located. Insets are suggested by dashed horizontal and vertical guidelines. 
+|*Inset* |image:kb/docs/java/legend5.png[] |Insets are the preferred spacings between components and the containers within which they are located. Insets are suggested by dashed horizontal and vertical guidelines. 
 
-|*Offset* |image:./legend30.png[] |Offsets are the preferred spacings between adjacent components. Offsets are suggested by dashed horizontal and vertical guidelines. 
+|*Offset* |image:kb/docs/java/legend30.png[] |Offsets are the preferred spacings between adjacent components. Offsets are suggested by dashed horizontal and vertical guidelines. 
 
-|*Baseline* |image:./legend13.png[] |Baseline alignment is the preferred relationship between adjacent components containing display text. Baseline alignment is suggested by dashed a horizontal guideline. 
+|*Baseline* |image:kb/docs/java/legend13.png[] |Baseline alignment is the preferred relationship between adjacent components containing display text. Baseline alignment is suggested by dashed a horizontal guideline. 
 
 |*Edge*
 
  |
 
-image:./legend12.png[]
+image:kb/docs/java/legend12.png[]
 
-image:./legend14.png[]
+image:kb/docs/java/legend14.png[]
 
-image:./legend32.png[]
+image:kb/docs/java/legend32.png[]
 
-image:./legend33.png[]
+image:kb/docs/java/legend33.png[]
 
  |
 Edge alignments (Top, Bottom, Left, and Right) are the alignment relationships possible between adjacent components. Edge alignments are suggested by dashed horizontal and vertical guidelines. 
 
-|*Indentation* |image:./legend31b.png[] |Indentation alignment is a special alignment relationship in which one component is located below another and offset slightly to the right. Indentation alignment is suggested by the appearance of two vertical dashed guidelines. 
+|*Indentation* |image:kb/docs/java/legend31b.png[] |Indentation alignment is a special alignment relationship in which one component is located below another and offset slightly to the right. Indentation alignment is suggested by the appearance of two vertical dashed guidelines. 
 
-|*Preferred Distance* |image:./legend34.png[] |Preferred distances (Small, Medium, and Large) are gap sizes between adjacent components. Preferred distances are suggested by dashed horizontal or vertical guidelines. 
+|*Preferred Distance* |image:kb/docs/java/legend34.png[] |Preferred distances (Small, Medium, and Large) are gap sizes between adjacent components. Preferred distances are suggested by dashed horizontal or vertical guidelines. 
 |===
 
 
@@ -72,9 +76,9 @@ Once components have snapped into position, solid anchoring indicators appear il
 
 
 |===
-|*Container* |image:./legend50.png[] |Anchors connecting individual components to the containers within which they are located are represented by small semi-circular indicators with dashed lines extending from the container edge to the component itself. 
+|*Container* |image:kb/docs/java/legend50.png[] |Anchors connecting individual components to the containers within which they are located are represented by small semi-circular indicators with dashed lines extending from the container edge to the component itself. 
 
-|*Component* |image:./legend51.png[] |Anchors connecting individual components to adjacent components are represented by small semi-circular indicators with dashed lines extending from the one component to the other. 
+|*Component* |image:kb/docs/java/legend51.png[] |Anchors connecting individual components to adjacent components are represented by small semi-circular indicators with dashed lines extending from the one component to the other. 
 |===
 
 
@@ -86,13 +90,13 @@ Once components have snapped into position, solid anchoring indicators appear il
 |===
 |*Same Size* 
 
-| image:./legend28.png[] image:./legend29.png[]
+| image:kb/docs/java/legend28.png[] image:kb/docs/java/legend29.png[]
 
 | Same Sizing is the state in which a group of components (adjacent or otherwise) are all set to have the same width or height. Same Sizing is illustrated by the appearance of small rectangular indicators appearing on the top edge of each component for which the property is set. 
 
 |*Auto-Resizing* 
 
-| image:./legend42.png[] image:./legend41.png[] image:./legend43.png[]
+| image:kb/docs/java/legend42.png[] image:kb/docs/java/legend41.png[] image:kb/docs/java/legend43.png[]
 
 | Auto-Resizing is the state in which a component's width or height is set to resize dynamically at runtime. Auto-Resizing is indicated by the state of the horizontal and vertical Resizing buttons (called Change horizontal resizeability and Change vertical resizeability respectively) in the GUI Builder's toolbar. Auto-Resizing is enabled by selecting  ``resizable``  in the Other Properties list in the Properties window. 
 |===
@@ -103,9 +107,9 @@ Once components have snapped into position, solid anchoring indicators appear il
 == Highlighting and Handles
 
 |===
-|* Highlighting* |image:./legend10.png[] |Orange highlighting indicates where a selected component is going to be placed. 
+|* Highlighting* |image:kb/docs/java/legend10.png[] |Orange highlighting indicates where a selected component is going to be placed. 
 
-|*Handles* |image:./legend11.png[] |Small square resize handles appear around a component's perimeter when a component is selected. Clicking, holding, and dragging a handle on the edge of a component resizes the latter. 
+|*Handles* |image:kb/docs/java/legend11.png[] |Small square resize handles appear around a component's perimeter when a component is selected. Clicking, holding, and dragging a handle on the edge of a component resizes the latter. 
 |===
 
 

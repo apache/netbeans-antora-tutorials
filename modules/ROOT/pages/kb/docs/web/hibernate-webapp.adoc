@@ -29,6 +29,10 @@
 :description: Using Hibernate in a Web Application - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Using Hibernate in a Web Application
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 In this tutorial, you use the NetBeans IDE to create and deploy a web application that displays data from a database. The web application uses the Hibernate framework as the persistence layer for retrieving and storing plain old Java objects (POJOs) to a relational database.
 
 Hibernate is framework that provides tools for object relational mapping (ORM). The tutorial demonstrates how to add support for the Hibernate framework to the IDE and create the necessary Hibernate files. After creating the Java objects and configuring the application to use Hibernate, you create a JSF managed bean and JSF 2.0 pages to display the data.
@@ -40,7 +44,7 @@ Before starting this tutorial you may want to familiarize yourself with the foll
 * xref:./jsf20-intro.adoc[+Introduction to JavaServer Faces 2.x+]
 
 
-image::./netbeans-stamp-74-73-72.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3 and 7.4"]
+image::kb/docs/web/netbeans-stamp-74-73-72.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3 and 7.4"]
 
 
 *To follow this tutorial, you need the following software and resources.*
@@ -75,7 +79,7 @@ For more information on configuring the IDE to work with MySQL, see the xref:kb/
 3. Right-click the MySQL Server node and choose Create Database.
 4. Select the Sakila database from the New Database Name drop down list in the Create MySQL Database dialog box. Click OK.
 
-image::./create-sakila-mysql.png[title="Screenshot of Create MySQL Database dialog"]
+image::kb/docs/web/create-sakila-mysql.png[title="Screenshot of Create MySQL Database dialog"]
 
 When you click OK a Sakila node appears under the MySQL Server node.
 
@@ -111,13 +115,13 @@ For this tutorial there is little reason to copy project libraries to a dedicate
 
 *Note:* If the sakila database is not available as an option in the Frameworks panel in the wizard, check to see if the connection is listed under the Databases node in the Services window. If the connection is not there, you need to create the database connection.
 
-image::./hib-newwebapp.png[title="Frameworks panel of New Project wizard showing adding Hibernate support to project"]
+image::kb/docs/web/hib-newwebapp.png[title="Frameworks panel of New Project wizard showing adding Hibernate support to project"]
 
 When you click Finish, the IDE creates the web application project and opens the  ``hibernate.cfg.xml``  file and  ``index.xhtml``  in the editor.
 
 If you expand the Libraries node in the Projects window, you can see that the IDE added the Hibernate libraries to the project.
 
-image::./hib-libraries.png[title="Screenshot of Projects window showing Hibernate libraries"] 
+image::kb/docs/web/hib-libraries.png[title="Screenshot of Projects window showing Hibernate libraries"] 
 
 
 == Modifying the Hibernate Configuration File
@@ -131,7 +135,7 @@ In this exercise you will edit the default properties specified in  ``hibernate.
 3. Click Add to open the Add Hibernate Property dialog box.
 4. In the dialog box, select the  ``hibernate.show_sql``  property and set the value to  ``true`` . This enables the debug logging of the SQL statements.
 
-image::./add-property-showsql.png[title="Add Hibernate Property dialog box showing setting value for the hibernate.show_sql property"]
+image::kb/docs/web/add-property-showsql.png[title="Add Hibernate Property dialog box showing setting value for the hibernate.show_sql property"]
 
 
 . Expand the Miscellaneous Properties node and click Add.
@@ -139,7 +143,7 @@ image::./add-property-showsql.png[title="Add Hibernate Property dialog box showi
 
 . In the dialog box, select the  ``properties hibernate.current_session_context_class``  and set the value to  ``thread``  to enable Hibernate's automatic session context management.
 
-image::./add-property-sessioncontext.png[title="Add Hibernate Property dialog box showing setting value for the hibernate.current_session_context_class property"]
+image::kb/docs/web/add-property-sessioncontext.png[title="Add Hibernate Property dialog box showing setting value for the hibernate.current_session_context_class property"]
 
 
 . Click Add again under the Miscellaneous Properties node and select  ``hibernate.query.factory_class``  in the Property Name dropdown list.
@@ -147,7 +151,7 @@ image::./add-property-sessioncontext.png[title="Add Hibernate Property dialog bo
 
 . Select *org.hibernate.hql.classic.ClassicQueryTranslatorFactory* as the Property Value. Click OK.
 
-image::./add-property-factoryclass.png[title="Add Hibernate Property dialog box showing setting value for the hibernate.query.factory_class property"]
+image::kb/docs/web/add-property-factoryclass.png[title="Add Hibernate Property dialog box showing setting value for the hibernate.query.factory_class property"]
 
 If you click the XML tab in the editor you can see the file in XML view. Your file should look similar to the following (the three new properties are bold):
 
@@ -185,7 +189,7 @@ In this section you use the New File wizard to create the helper class  ``Hibern
 2. Select Hibernate from the Categories list and HibernateUtil.java from the File Types list. Click Next.
 3. Type *HibernateUtil* for the class name and *dvdrental* for the package. Click Finish.
 
-image::./hibernate-util-wizard.png[title="Screenshot of HibernateUtil wizard"]
+image::kb/docs/web/hibernate-util-wizard.png[title="Screenshot of HibernateUtil wizard"]
 
 When you click Finish,  ``HibernateUtil.java``  opens in the editor. You can close the file because you do not need to edit the file.
 
@@ -221,7 +225,7 @@ To create the Hibernate reverse engineering file, perform the following steps.
 
 Click Finish.
 
-image::./hibernate-reveng-wizard.png[title="New Hibernate Reverse Engineering wizard"]
+image::kb/docs/web/hibernate-reveng-wizard.png[title="New Hibernate Reverse Engineering wizard"]
 
 The wizard generates a  ``hibernate.reveng.xml``  reverse engineering file and opens the file in the editor. You can close the reverse engineering file because you will not need to edit the file.
 
@@ -241,7 +245,7 @@ To create the POJOS and mapping files using a wizard, perform the following step
 5. Ensure that the *Domain Code* and *Hibernate XML Mappings* options are selected.
 6. Select *dvdrental* for the Package name. Click Finish.
 
-image::./hibernate-pojo-wizard2.png[title="Generate Hibernate Mapping Files and POJOs wizard"]
+image::kb/docs/web/hibernate-pojo-wizard2.png[title="Generate Hibernate Mapping Files and POJOs wizard"]
 
 When you click Finish the IDE generates POJOs and Hibernate mapping files with the fields mapped to the columns specified in  ``hibernate.reveng.xml`` . The IDE also adds mapping entries to  ``hibernate.cfg.xml`` .
 
@@ -273,7 +277,7 @@ When you click Finish the IDE generates POJOs and Hibernate mapping files with t
 
 You can expand the  ``dvdrental``  package to see the files generated by the wizard.
 
-image::./hib-projectswindow.png[title="Projects window showing generated POJOs"]
+image::kb/docs/web/hib-projectswindow.png[title="Projects window showing generated POJOs"]
 
 You can use the Hibernate Mapping wizard if you want to create a Hibernate mapping file that maps a specific table to a specific class.
 
@@ -333,7 +337,7 @@ from Film
 
 When you click Run HQL Query you can see the results of the query in the bottom window of the HQL query editor.
 
-image::./hibernate-hqleditor1.png[title="Generate Hibernate Mapping Files and POJOs wizard"]
+image::kb/docs/web/hibernate-hqleditor1.png[title="Generate Hibernate Mapping Files and POJOs wizard"]
 
 If you click the SQL button you can see the equivalent SQL query.
 
@@ -496,7 +500,7 @@ You will use the Managed Bean name  ``filmController``  as the value for the  ``
 
 . Set Scope to Session. Click Finish.
 
-image::./hib-newmanagedbean.png[title="New JSF Managed Bean wizard"]
+image::kb/docs/web/hib-newmanagedbean.png[title="New JSF Managed Bean wizard"]
 
 When you click Finish, the IDE creates the bean class and opens the class in the editor. The IDE added the  ``@ManagedBean``  and  ``@SessionScoped``  annotations.
 
@@ -825,7 +829,7 @@ You will now create the  ``browse.xhtml``  page for displaying details of the se
 1. Right-click DVDStore project node in the Projects window and choose New > Other.
 2. Select Facelets Template Client in the JavaServer Faces category. Click Next.
 
-image::./hib-faceletsclient.png[title="Facelets Template Client file type in New File wizard"]
+image::kb/docs/web/hib-faceletsclient.png[title="Facelets Template Client file type in New File wizard"]
 
 
 . Type *browse* for the File Name.
@@ -836,7 +840,7 @@ image::./hib-faceletsclient.png[title="Facelets Template Client file type in New
 
 . Expand the Web Pages folder and select  ``template.xhtml`` . Click Select File.
 
-image::./hib-browsetemplate.png[title="Select the template in the Browse Files dialog"]
+image::kb/docs/web/hib-browsetemplate.png[title="Select the template in the Browse Files dialog"]
 
 
 . Select *<ui:composition>* for the Generated Root Tag. Click Finish.
@@ -945,7 +949,7 @@ The basics of the application are now complete. You can now run the application 
 
 The IDE saves all changed files, builds the application, and deploys the application to the server. The IDE opens a browser window to the URL  ``http://localhost:8080/DVDStore/``  that displays the list of films.
 
-image::./hib-browser1.png[title="Screenshot of browser displaying film list on index page"]
+image::kb/docs/web/hib-browser1.png[title="Screenshot of browser displaying film list on index page"]
 
 
 . In your browser, click "View" to load  ``browse.xhtml``  to view the film details.

@@ -29,6 +29,10 @@
 :description: Deploying a PHP Application on a Remote Web Server Using the NetBeans IDE - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Deploying a PHP Application on a Remote Web Server Using the NetBeans IDE
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 Normally, a real-life PHP application is run on a remote server. Remote applications are accessed either through a version control system or through File Transfer Protocol (FTP).
 
 NOTE: NetBeans provides basic support for FTP/SFTP, sufficient for a lone developer to work on a simple project. If you are working on a complex project or with multiple developers, you should use a version control system. NetBeans IDE supports a number of version control systems. See our xref:kb/docs/ide/subversion.adoc[+Subversion+] and xref:kb/docs/ide/git.adoc[+Git+] tutorials, for example. If you must use FTP/SFTP with a complex project, consider using the IDE in combination with a full-featured FTP client, and editing the PHP project in the IDE as a local web site.
@@ -80,7 +84,7 @@ On the Run Configurations panel, choose Remote Web Site (FTP, SFTP) from the Run
 
 If you are creating a new project with the PHP Application from Remote Server wizard, you do not need to choose from the Run As dropdown list. The wizard automatically takes you to the Remote Connection panel. This panel has only Project URL, Remote Connections and Upload Directory fields.
 
-image::./ftp-run-config-blank.png[]
+image::kb/docs/php/ftp-run-config-blank.png[]
 
 
 === Specifying the (S)FTP Connection Settings
@@ -96,7 +100,7 @@ To create an FTP connection:
 7. Fill in the Password field. In this example the password is  ``qwerty1234`` .
 8. In the Initial Directory field, enter the name of your account directory on the FTP server. In this example, no account directory is specified, enter a slash in the field. 
 
-image::./manageremoteconnections.png[]
+image::kb/docs/php/manageremoteconnections.png[]
 
 
 
@@ -117,19 +121,19 @@ After you choose the remote connection for your project, select whether to uploa
 *On Save:* Every change (create, edit, rename, delete) is immediately propagated to your remote server. If the operation takes more than 1 second, a progress bar is shown.
 *Manually:* Files are never uploaded automatically. You must use the IDE's manual upload function, described in this section.
 
-image::./ftp-run-config.png[]
+image::kb/docs/php/ftp-run-config.png[]
 
 To manually upload files from your project to your FTP server, right-click the Source Files node of your project and select Upload. Note that you can also download files from your FTP server in the same menu.
 
-image::./beta-source-upload.png[]
+image::kb/docs/php/beta-source-upload.png[]
 
 When you start to upload files, a dialog opens with a tree view of the source files. In this dialog, you can select individual files to upload or not upload. For more information, see the link:http://blogs.oracle.com/netbeansphp/entry/new_download_upload_dialog[+NetBeans PHP blog entry+] on the File Upload dialog.
 
-image::./file-upload-dialog.png[]
+image::kb/docs/php/file-upload-dialog.png[]
 
 While you upload files, the results of your upload appear in an output tab.
 
-image::./upload-output.png[]
+image::kb/docs/php/upload-output.png[]
 
 
 [[remote-synchronization]]
@@ -145,7 +149,7 @@ For developers who must work over (S)FTP in multiple developer environments with
 
 1. In the Projects window (Ctrl-1), expand the node for the PHP project that you want to synchronize. Right-click the Source Files node. The context menu appears, including the Synchronize option. 
 
-image::./sync-ctxmenuitem.png[]
+image::kb/docs/php/sync-ctxmenuitem.png[]
 
 
 
@@ -153,41 +157,41 @@ image::./sync-ctxmenuitem.png[]
 
 The Remote Synchronization dialog shows a table of project files. The remote versions on the file are on the left and the local versions are on the right. In the center column is an icon showing the operation that the IDE will perform on synchronization. Warning icons are on the far left. A summary of operations and problems appears at the bottom of the table. A verbose description of any errors appears below the table. Above the table are sets of checkboxes for filtering which problems and operations the dialog shows. For detailed information about this dialog, click Help.
 
-image::./main-dialog.png[]
+image::kb/docs/php/main-dialog.png[]
 
 
 
 . Select multiple items in the table. At the bottom of the table the summary now only includes those items.
 
-image::./multiple-items.png[]
+image::kb/docs/php/multiple-items.png[]
 
 
 
 . Right-click the selected items. A context menu of possible operations appears. 
 
-image::./context-menu.png[]
+image::kb/docs/php/context-menu.png[]
 
 
 
 . If an item has a Resolve Conflicts error icon, select that item. A description of the error appears at the bottom of the table.
 
-image::./error-item.png[]
+image::kb/docs/php/error-item.png[]
 
 
 
-. Select the item with an error. Select Diff... image:./diff-icon.png[] from either the row of buttons or from the context menu. The Diff dialog opens. In this dialog, scroll down to each difference between the remote and local versions of the file. In the graphics view, you can apply or refuse to apply the remote change to your local file. If you want to edit the file manually, switch to the Textual tab. When you are finished with the diff, click OK. You return to the Remote Synchronization dialog. The operation for the file changes to Upload and the file is marked with an asterisk, because you changed it.
+. Select the item with an error. Select Diff... image:kb/docs/php/diff-icon.png[] from either the row of buttons or from the context menu. The Diff dialog opens. In this dialog, scroll down to each difference between the remote and local versions of the file. In the graphics view, you can apply or refuse to apply the remote change to your local file. If you want to edit the file manually, switch to the Textual tab. When you are finished with the diff, click OK. You return to the Remote Synchronization dialog. The operation for the file changes to Upload and the file is marked with an asterisk, because you changed it.
 
-image::./diff.png[]
+image::kb/docs/php/diff.png[]
 
 
 
 . If you have no conflict, click Synchronize. If you selected Show Summary Before Start, the Synchronize summary appears so you can review the operations one more time before performing the synchronization. If you approve of the operations, click OK.
 
-image::./sync-summary.png[]
+image::kb/docs/php/sync-summary.png[]
 
 The IDE performs the synchronization. You can follow the progress of the synchronization in a window that the IDE opens.
 
-image::./sync-progress.png[]
+image::kb/docs/php/sync-progress.png[]
 
 
 == Running a PHP Application
@@ -197,7 +201,7 @@ To run a PHP application on a remote server:
 
 1. On the Properties panel, make sure that the Remote Web Site is chosen from the <<chooisngRunConfigurationType,Run As dropdown list>>.
 2. Check the Run Configuration settings.
-3. If the project is set as main, click image:./run-main-project-button.png[] on the toolbar.
+3. If the project is set as main, click image:kb/docs/php/run-main-project-button.png[] on the toolbar.
 4. If the project is not set as main, position the cursor on the project node and choose Run from the popup menu.
 
 

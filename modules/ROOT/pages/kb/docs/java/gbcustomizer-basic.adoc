@@ -29,6 +29,10 @@
 :description: Designing a Basic Java Form Using the GridBag Customizer - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Designing a Basic Java Form Using the GridBag Customizer
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This tutorial is the first in a two-part series that demonstrates how to design a simple Java form using the basic features of the NetBeans IDE GridBag Customizer.
 The series is intended as a guide to show how you can layout your GUI components without manually writing your layout code and then perform additional changes in an existing form to implement a specific target layout that is required by the project.
 
@@ -62,7 +66,7 @@ The sample form opens in the GUI Builder Design view.
 [.feature]
 --
 
-image::./sampleform-small.png[role="left", xref="image$./sampleform.png"]
+image::kb/docs/java/sampleform-small.png[role="left", xref="image$./sampleform.png"]
 
 --
 
@@ -80,7 +84,7 @@ The Customize Layout dialog box opens as shown below.
 [.feature]
 --
 
-image::./customizerdialog-small.png[role="left", xref="image$./customizerdialog.png"]
+image::kb/docs/java/customizerdialog-small.png[role="left", xref="image$./customizerdialog.png"]
 
 --
 
@@ -97,21 +101,21 @@ The components in the sample form are already added but not laid out correctly.
 
 A toolbar with five buttons is located above the Grid area. It provides convenient access to common commands, such as undoing, redoing, enabling uniform gaps, hiding empty rows and columns, and testing the layout.
 
-image::./toolbar.png[]
+image::kb/docs/java/toolbar.png[]
 
 
 === Property Customizer
 
 The Property Customizer is positioned in the top left corner of the Customize Layout dialog box. It allows for easy modification of the most common layout constraints such as  ``Anchor`` ,  ``Insets`` , etc.
 
-image::./propcustomizer.png[]
+image::kb/docs/java/propcustomizer.png[]
 
 
 === Property Sheet
 
 The Property Sheet is located below the Property Customizer. It displays the layout constraints of the selected components.
 
-image::./propsheet.png[]
+image::kb/docs/java/propsheet.png[]
 
 
 == Laying Out Components
@@ -135,7 +139,7 @@ The components are now placed in accordance with the target layout.
 [.feature]
 --
 
-image::./layout1-small.png[role="left", xref="image$./layout1.png"]
+image::kb/docs/java/layout1-small.png[role="left", xref="image$./layout1.png"]
 
 --
 
@@ -157,7 +161,7 @@ The  ``First Name:``  and  ``Surname:``  text fields are extended to span betwee
 [.feature]
 --
 
-image::./tfieldsresized-small.png[role="left", xref="image$./tfieldsresized.png"]
+image::kb/docs/java/tfieldsresized-small.png[role="left", xref="image$./tfieldsresized.png"]
 
 --
 
@@ -171,16 +175,16 @@ To make the text fields wide enough to fill their display areas horizontally wit
 [.feature]
 --
 
-image::./horizontalset-small.png[role="left", xref="image$./horizontalset.png"]
+image::kb/docs/java/horizontalset-small.png[role="left", xref="image$./horizontalset.png"]
 
 --
 
 
 === Previewing
 
-Now that you have successfully completed the  ``ContactsBasicInitial``  form layout, you can try your interface to see the results. You can preview your form as you work by clicking the Test Layout button (image:./testbutton.png[]) in the Customizer's toolbar. The form opens in its own window, allowing you to test it prior to building and running.
+Now that you have successfully completed the  ``ContactsBasicInitial``  form layout, you can try your interface to see the results. You can preview your form as you work by clicking the Test Layout button (image:kb/docs/java/testbutton.png[]) in the Customizer's toolbar. The form opens in its own window, allowing you to test it prior to building and running.
 
-image::./designpreview.png[]
+image::kb/docs/java/designpreview.png[]
 
 The preview is useful to test dynamic behaviour of the layout, i.e. how the layout behaves when the designed container is resized.
 
@@ -207,9 +211,9 @@ To make the designed container resize correctly in a horizontal direction, do th
 9. Select  ``Horizontal``  in the  ``Fill``  combobox and press Enter.
 10. Type  ``1.0``  in the  ``Weight X``  layout constraint value field and press Enter.
 
-To verify that the designed container resizes correctly in horizontal direction, click the Test Layout button (image:./testbutton.png[]) in the Customizer's toolbar and drag the borders of the  ``ContactsBasicInitial``  form.
+To verify that the designed container resizes correctly in horizontal direction, click the Test Layout button (image:kb/docs/java/testbutton.png[]) in the Customizer's toolbar and drag the borders of the  ``ContactsBasicInitial``  form.
 
-image::./resizedpreview.png[]
+image::kb/docs/java/resizedpreview.png[]
 
 
 === Anchoring
@@ -220,7 +224,7 @@ During horizontal resizing of the  ``ContactsBasicInitial``  form in the previou
 
 To change this behaviour, specify the  ``Anchor``  layout constraint as follows:
 
-1. Select the combo-box to the right of the  ``State``  label and click the arrow button (image:./arrowbutton.png[]) to the right of the  ``Anchor``  combobox in the <<01d,Property Sheet>> of the Customizer.
+1. Select the combo-box to the right of the  ``State``  label and click the arrow button (image:kb/docs/java/arrowbutton.png[]) to the right of the  ``Anchor``  combobox in the <<01d,Property Sheet>> of the Customizer.
 2. Choose  ``Line Start``  from the drop-down list.
 
 The  ``State``  combo-box is anchored to the left side of the form when the latter is resized horizontally now.
@@ -228,7 +232,7 @@ The  ``State``  combo-box is anchored to the left side of the form when the latt
 [.feature]
 --
 
-image::./comboanchored-small.png[role="left", xref="image$./comboanchored.png"]
+image::kb/docs/java/comboanchored-small.png[role="left", xref="image$./comboanchored.png"]
 
 --
 
@@ -238,14 +242,14 @@ To get the labels aligned to the left instead of to the center as they are at th
 
 NOTE: You can select multiple components by pressing the left mouse button on the first component, holding it, and dragging it pressed to the last component as if drawing a rectangle that encloses all the labels. After you release the mouse all the five components are highlighted with orange borders and green background as shown below.
 
-image::./multiselect.png[]
+image::kb/docs/java/multiselect.png[]
 
 
 
 . Change the  ``Anchor``  layout constraint of the labels to  ``Line Start`` .
 The labels are anchored to the left.
 
-image::./linestartanchor.png[]
+image::kb/docs/java/linestartanchor.png[]
 
 
 === Spacing
@@ -258,14 +262,14 @@ In the current layout, the components are placed too close to each other. To sep
 2. Press the button to the right of the Insets constraint text field.
 3. In the displayed dialog box, change  ``Top:``  and  ``Left:``  values to  ``5``  and click OK.
 
-image::./insets.png[]
+image::kb/docs/java/insets.png[]
 
 Your form should look now like the one from the  ``ContactsBasicFinal.java``  file if you open it.
 
 [.feature]
 --
 
-image::./contactsbasicfinal-small.png[role="left", xref="image$./contactsbasicfinal.png"]
+image::kb/docs/java/contactsbasicfinal-small.png[role="left", xref="image$./contactsbasicfinal.png"]
 
 --
 

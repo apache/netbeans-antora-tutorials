@@ -29,6 +29,10 @@
 :description: Running Web Applications on Oracle Cloud - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Running Web Applications on Oracle Cloud
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 The Oracle Cloud is an enterprise cloud for business. The Oracle Cloud offers self-service business applications delivered on an integrated development and deployment platform with tools to rapidly extend and create new services. For more information about Oracle Cloud, see the link:https://cloud.oracle.com[+Oracle Cloud homepage+].
 
 This document shows you how to register the Oracle Cloud with NetBeans IDE and some of the Oracle Cloud features that are supported in the IDE. This document discusses some of the advantages and disadvantages of working completely on the Cloud versus working with a local server and then deploying to the Cloud. At the end you create a simple web application, following the instructions in xref:./quickstart-webapps.adoc[+Introduction to Web Applications+], and run it on Oracle Cloud.
@@ -36,7 +40,7 @@ This document shows you how to register the Oracle Cloud with NetBeans IDE and s
 You might also want to look at the link:https://blogs.oracle.com/javatraining/entry/oracle_cloud_development_with_netbeans[+Oracle Cloud Development with NetBeans and Eclipse (OEPE)+] series of tutorials on the Java Training Beat blog.
 
 
-image::./netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
+image::kb/docs/web/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
 
 
 *To follow this tutorial, you need the following software and resources.*
@@ -107,12 +111,12 @@ You need to register the Oracle Cloud in the IDE's Services window before you ca
 1. Open the Services window in the IDE (Window > Services or Ctrl-5).
 2. Right-click the Cloud node and select Add Cloud to open the Add Cloud Provider wizard.
 
-image::./add-cloud.png[]
+image::kb/docs/web/add-cloud.png[]
 
 
 . In the Choose Cloud field, select Oracle Cloud and click Next to open the Oracle Cloud panel. 
 
-image::./oracle-cloud1.png[]
+image::kb/docs/web/oracle-cloud1.png[]
 
 
 . Fill in all fields. Browse for the folder containing the Oracle Java Cloud Service SDK JAR. Click Next.
@@ -127,11 +131,11 @@ When you click Next the IDE tests the connection to the cloud. A list of Cloud s
 
 Oracle Cloud is now listed under the Cloud node in the Services window. You can right-click the Oracle Cloud node to open a context menu that provides commands for refreshing the list of services, opening a list of jobs and logs, removing the cloud instance or viewing the cloud's properties.
 
-image::./cloud-contextmenu.png[]
+image::kb/docs/web/cloud-contextmenu.png[]
 
 When you register Oracle Cloud in the IDE an instance of the Oracle Cloud Remote server node also appears under the Servers node. (If it does not appear, right-click the Oracle Cloud node and select Refresh.)
 
-image::./registered-cloud-and-server.png[]
+image::kb/docs/web/registered-cloud-and-server.png[]
 
 You can expand the Oracle Cloud Remote node to view a list of the applications that are deployed to the remote server.
 
@@ -142,18 +146,18 @@ Every request that NetBeans IDE sends to the Oracle Cloud results in a job. Ever
 
 Right-click the Oracle Cloud node and select View Jobs and Logs. In the editor window, a list appears of the last 50 jobs and logs. It takes a moment to load. The jobs list does not refresh automatically. Click Refresh to refresh the list.
 
-image::./jobs-n-logs.png[]
+image::kb/docs/web/jobs-n-logs.png[]
 
 
 == Oracle Cloud Remote Server
 
 Oracle Cloud Remote server is an instance of Oracle WebLogic running on Oracle Cloud. Expand the Oracle Cloud Remote node and see a list of applications running on that server. You can right-click an application to open a popup menu that contains commands for starting, stopping and undeploying the application. You can click View in the menu to open the application home page in a browser.
 
-image::./webapp-contextmenu.png[]
+image::kb/docs/web/webapp-contextmenu.png[]
 
 To update the list of deployed applications, right-click the Oracle Cloud Remote node and select Refresh.
 
-image::./server-contextmenu.png[]
+image::kb/docs/web/server-contextmenu.png[]
 
  
 
@@ -174,12 +178,12 @@ You must manually change the web application's server between your local server 
 
 1. In the Projects window, right-click the application's node and select Properties.
 
-image::./project-contextmenu.png[]
+image::kb/docs/web/project-contextmenu.png[]
 
 
 . In the Project Properties, select the Run category.
 
-image::./run-properties.png[]
+image::kb/docs/web/run-properties.png[]
 
 
 . From the Server drop-down list, select the server you want (either Oracle Cloud Remote or local Oracle WebLogic). The server must be registered in the IDE. You can add a server by right-clicking the Servers node in the Services window.
@@ -193,7 +197,7 @@ Go to xref:./quickstart-webapps.adoc[+Introduction to Developing Web Application
 
 Before you deploy the application to the Oracle Cloud Remote server, open the Output window (Window > Output > Output or Ctrl-4). Note the Oracle Cloud Remote Deployment tab in the output window. This tab shows you the progress of the deployment.
 
-image::./output-cloud-tab.png[]
+image::kb/docs/web/output-cloud-tab.png[]
 
 
 [[crud]]
@@ -215,10 +219,10 @@ Use the HR username and password when you register the HR schema with NetBeans I
 
 . Create a Java Web Application using Java EE5 and your on-premises installation of WebLogic server. Enable the JSF framework for the application.
 
-image::./crudapp-eevers.png[]
+image::kb/docs/web/crudapp-eevers.png[]
 
 
-image::./crudapp-jsf.png[]
+image::kb/docs/web/crudapp-jsf.png[]
 
 
 . In the Projects window, right-click the project's root node and select New > Entity Classes from Database. The Entity Classes from Database wizard opens.
@@ -226,17 +230,17 @@ image::./crudapp-jsf.png[]
 
 . In the Entity Classes from Database wizard, select New Data Source from the Data Source drop-down box. The Create Data Source dialog opens.
 
-image::./crudapp-newdatasource.png[]
+image::kb/docs/web/crudapp-newdatasource.png[]
 
 
 . Name this datasource to match the database service name in your registered Oracle Cloud account.
 
-image::./cloud-db-name.png[]
+image::kb/docs/web/cloud-db-name.png[]
 
 
 . Select the OracleXE HR database connection you created in Step 1. Click OK. The Create Data Source dialog closes.
 
-image::./create-datasource.png[]
+image::kb/docs/web/create-datasource.png[]
 
 
 . In the Entity Classes from Database wizard, the Available Tables field fills with the HR schema table names. Select one of the tables, such as EMPLOYEES, and click Add. Click through the rest of the wizard, giving an arbitrary name to the package containing the entity classes and accepting all default values in other fields.
@@ -260,7 +264,7 @@ You now have a local version of a Java web application using CRUD and JSF. You c
 1. In the Projects window, right-click the project's root node and select Properties.
 2. Select the Run category in the Properties window. In this category, expand the Server drop-down list and select Oracle Cloud Remote. Click OK.
 
-image::./crudapp-properties.png[]
+image::kb/docs/web/crudapp-properties.png[]
 
 
 . In the Projects window, expand the project's Configuration Files node and double-click ` persistence.xml`. The file opens in the XML Editor's Design view.
@@ -268,7 +272,7 @@ image::./crudapp-properties.png[]
 
 . Under Table Generation Strategy, select Create. 
 
-image::./crudapp-persistence.png[]
+image::kb/docs/web/crudapp-persistence.png[]
 
 
 . If your on-premises WebLogic server has JPA 2.0 enabled, you must change the persistence provider from the default EclipseLink, which uses JPA 2.0, to a JPA 1.0 provider such as OpenJPA.
@@ -292,7 +296,7 @@ NetBeans IDE helps prevent whitelist-related errors by notifying you of whitelis
 
 1. In the Projects window, right-click <<create-webapp,the web application you created>> and select New > Servlet. The New Servlet wizard opens.
 
-image::./new-servlet.png[]
+image::kb/docs/web/new-servlet.png[]
 
 
 . Give the servlet an arbitrary name, select an existing package for it and click Finish. The servlet class opens in the editor.
@@ -300,24 +304,24 @@ image::./new-servlet.png[]
 
 . Find the servlet's  ``processRequest``  method, type  ``System.ex``  in the method body and press Ctrl-Space to open code completion. Code completion does not offer you the possibility to complete  ``System.exit``  because  ``System.exit``  is disallowed by the Oracle Cloud whitelist. The IDE shows  ``exit``  with a line through it.
 
-image::./cc-failure.png[]
+image::kb/docs/web/cc-failure.png[]
 
 
 . Finish typing  ``System.exit(1);`` . A warning appears. Scroll the cursor over the warning icon, and a tooltip appears informing you that  ``java.lang.System.exit``  is not allowed.
 
-image::./whitelist-warning.png[]
+image::kb/docs/web/whitelist-warning.png[]
 
 
 . In the Projects window, right-click the application's node and select Verify. Open the Output window (Window > Output > Output or Ctrl-4). The Output window includes a Whitelist tab that shows errors due to whitelist restrictions.
 
-image::./whitelist-output.png[]
+image::kb/docs/web/whitelist-output.png[]
 
 
 . Open the Action Items window (Window > Action Items or Ctrl-6). Whitelist violations appear as a separate group of action items.
 
 *Tip:* Turn on Group Action Items by Category (bottom button on left) to see whitelist violations more easily.
 
-image::./whitelist-tasks.png[]
+image::kb/docs/web/whitelist-tasks.png[]
 
 
 . Try to deploy the project. A warning dialog appears informing you that whitelist violations were detected and asking if you want to continue with deployment. Click No. The dialog disappears.
@@ -328,7 +332,7 @@ In the Projects window, right-click the application's node and select Properties
 
 When a web application's server is set to Oracle Cloud Remote, the Oracle Cloud whitelist applies both to that project and any of that project's subprojects. For example, an Enterprise application set to run on Oracle Cloud Remote has the Oracle Cloud whitelist apply to the Enterprise application itself and any EJB modules or web applications that are part of the Enterprise application. Both the project and its subprojects have a Whitelist category in their Project Properties. You can use the Project Properties dialog to set whitelists separately for the project and its individual subprojects.
 
-image::./whitelist-properties.png[]
+image::kb/docs/web/whitelist-properties.png[]
 
 xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 

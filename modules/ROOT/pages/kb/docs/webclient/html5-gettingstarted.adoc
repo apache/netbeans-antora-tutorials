@@ -29,6 +29,10 @@
 :description: Getting Started with HTML5 Applications - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Getting Started with HTML5 Applications
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This document demonstrates how to create an HTML5 project in the IDE and some of the features in the IDE that support the use of JavaScript and CSS in your project. In this document you will create a simple HTML5 application that uses a jQuery JavaScript library to modify a list in a web page.
 
 This document also demonstrates how to install the NetBeans Connector extension for the Chrome browser from the Chrome Web Store.
@@ -68,7 +72,7 @@ NOTE: The IDE will open the Chrome Web Store in the default browser. If Chrome i
 1. Choose File > New Project to open the New Project wizard.
 2. Select *HTML5/JS Application* in the *HTML/JavaScript* category. Click Next.
 
-image::./html5-newproject1.png[title="HTML5 Application template in the New Project wizard"]
+image::kb/docs/webclient/html5-newproject1.png[title="HTML5 Application template in the New Project wizard"]
 
 
 
@@ -95,24 +99,24 @@ When you click Finish the IDE creates a new HTML5 project and opens  ``index.htm
 [start=7]
 . Click Go to Chrome Web Store in the Install Chrome Extension dialog box.
 
-image::./html5-offline-extension1.png[title="Install Chrome Extension dialog box"]
+image::kb/docs/webclient/html5-offline-extension1.png[title="Install Chrome Extension dialog box"]
 
 When you click Go to Chrome Web Store the NetBeans Connector page in the Chrome Web Store opens in the Chrome browser.
 
 Note: The Install Chrome Extension displays a button that you will click after the extension is installed.
 
-image::./html5-rerun-dialog.png[title="Install Chrome Extension dialog box"]
+image::kb/docs/webclient/html5-rerun-dialog.png[title="Install Chrome Extension dialog box"]
 
 
 
 [start=8]
 . Go to the Chrome browser and click Add to Chrome in the NetBeans Connector page. Click Add when you are prompted to confirm that you want to add the extension.
 
-image::./html5-chrome-netbeanshome.png[title="NetBeans Connector page in the Chrome Web Store"]
+image::kb/docs/webclient/html5-chrome-netbeanshome.png[title="NetBeans Connector page in the Chrome Web Store"]
 
 When the extension is installed you will see a notification that the extension was added and that the NetBeans Connector icon will be visible in the URL location bar when you run a NetBeans HTML5 project in the Chrome browser.
 
-image::./html5-install-extension2.png[title="Confirmation in that extension was installed"]
+image::kb/docs/webclient/html5-install-extension2.png[title="Confirmation in that extension was installed"]
 
 
 
@@ -125,7 +129,7 @@ After the extension is installed you will see the NetBeans Connector icon in the
 
 If you open the Chrome Extensions page ( ``chrome://extensions/`` ) for the Chrome browser you will see that the extension is now enabled.
 
-image::./html5-install-extension3.png[title="NetBeans Connector extension is enabled in Chrome Extensions"]
+image::kb/docs/webclient/html5-install-extension3.png[title="NetBeans Connector extension is enabled in Chrome Extensions"]
 
 NOTE: Alternatively, you can install the NetBeans Connector extension directly from the Chrome Web Store by performing the following steps.
 
@@ -133,7 +137,7 @@ NOTE: Alternatively, you can install the NetBeans Connector extension directly f
 2. Search the Chrome Web Store for the Netbeans Connector extension.
 3. Click Add To Chrome in the search results page and click Add when you are prompted to add the extension. 
 
-image::./html5-install-extension1.png[title="NetBeans Connector extension in Chrome Web Store"]
+image::kb/docs/webclient/html5-install-extension1.png[title="NetBeans Connector extension in Chrome Web Store"]
 
 === Offline Installation of the Extension
 
@@ -141,21 +145,21 @@ If you are unable to connect to the Chrome Web Store you can install the NetBean
 
 1. Click Not Connected in the Install Chrome Extension dialog box.
 
-image::./html5-offline-extension1.png[title="Install Chrome extension dialog box"]
+image::kb/docs/webclient/html5-offline-extension1.png[title="Install Chrome extension dialog box"]
 
 
 
 [start=2]
 . Click *locate* in the dialog box to open the NetBeans IDE installation folder on your local system that contains the * ``netbeans-chrome-connector.crx`` * extension.
 
-image::./html5-offline-extension2.png[title="NetBeans Connector extension is enabled in Chrome Extensions"]
+image::kb/docs/webclient/html5-offline-extension2.png[title="NetBeans Connector extension is enabled in Chrome Extensions"]
 
 
 
 [start=3]
 . Open the Chrome extensions page ( ``chrome://extensions/`` ) in your Chrome browser.
 
-image::./html5-offline-extension3.png[title="NetBeans Connector extension is enabled in Chrome Extensions"]
+image::kb/docs/webclient/html5-offline-extension3.png[title="NetBeans Connector extension is enabled in Chrome Extensions"]
 
 
 
@@ -181,7 +185,7 @@ Perform the following steps to run an HTML5 application in the Embedded WebKit B
 
 1. Select Embedded WebKit Browser in the dropdown list in the toolbar.
 
-image::./html5-embedded1.png[title="List of target browsers for HTML5 applications in the dropdown list in the toolbar"]
+image::kb/docs/webclient/html5-embedded1.png[title="List of target browsers for HTML5 applications in the dropdown list in the toolbar"]
 
 
 
@@ -190,7 +194,7 @@ image::./html5-embedded1.png[title="List of target browsers for HTML5 applicatio
 
 When you run application the Web Browser window opens in the IDE.
 
-image::./html5-embedded2.png[title="Embedded WebKit Browser window"]
+image::kb/docs/webclient/html5-embedded2.png[title="Embedded WebKit Browser window"]
 
 You can click the icons in the toolbar of the Web Browser tab to enable Inspect mode and to quickly switch between different display sizes.
 
@@ -201,7 +205,7 @@ In this exercise you will use the New Project wizard in the IDE to create a new 
 1. Select File > New Project (Ctrl-Shift-N; ⌘-Shift-N on Mac) in the main menu to open the New Project wizard.
 2. Select the *HTML5/JavaScript* category and then select *HTML5/JS Application*. Click Next.
 
-image::./html5-newproject1.png[title="HTML5 Application template in the New Project wizard"]
+image::kb/docs/webclient/html5-newproject1.png[title="HTML5 Application template in the New Project wizard"]
 
 
 
@@ -212,7 +216,7 @@ image::./html5-newproject1.png[title="HTML5 Application template in the New Proj
 [start=4]
 . In Step 3. Site Template, select No Site Template. Click Next.
 
-image::./html5-newproject2.png[title="Site Templates panel in the New HTML5 Application wizard"]
+image::kb/docs/webclient/html5-newproject2.png[title="Site Templates panel in the New HTML5 Application wizard"]
 
 When you select the No Site Template option the wizard generates a basic empty NetBeans HTML5 project. If you click Finish now the project will only contain a Site Root folder and an  ``index.html``  file in the Site Root folder.
 
@@ -225,7 +229,7 @@ NOTE: You must be online to create a project that is based on one of the online 
 [start=5]
 . In Step 4. Tools, select only "Bower", which is the standard HTML5 dependency management tool that you can use via the IDE.
 
-image::./html5-newproject3.png[title="Tools panel in the New HTML5 Application wizard"]
+image::kb/docs/webclient/html5-newproject3.png[title="Tools panel in the New HTML5 Application wizard"]
 
 
 [start=6]
@@ -233,7 +237,7 @@ image::./html5-newproject3.png[title="Tools panel in the New HTML5 Application w
 
 When you click Finish the IDE creates the project and displays a node for the project in the Projects window and opens the  ``index.html``  file in the editor.
 
-image::./html5-projectswindow1.png[title="JavaScript Libraries panel in the New HTML5 Application wizard"]
+image::kb/docs/webclient/html5-projectswindow1.png[title="JavaScript Libraries panel in the New HTML5 Application wizard"]
 
 You can now test that your project displays correctly in the Chrome browser.
 
@@ -242,7 +246,7 @@ You can now test that your project displays correctly in the Chrome browser.
 [start=7]
 . Confirm that Chrome with NetBeans Connector integration is selected in the browser dropdown table in the toolbar. 
 
-image::./html5-js-selectbrowser.png[title="Browser selected in dropdown list in toolbar"]
+image::kb/docs/webclient/html5-js-selectbrowser.png[title="Browser selected in dropdown list in toolbar"]
 
 
 
@@ -251,7 +255,7 @@ image::./html5-js-selectbrowser.png[title="Browser selected in dropdown list in 
 
 When you choose Run the IDE opens a tab in the Chrome browser and displays the default  ``index.html``  page of the application. The Browser DOM window opens in the IDE and displays the DOM tree of the page that is open in the browser.
 
-image::./html5-runproject.png[title="Application in the Chrome browser tab"]
+image::kb/docs/webclient/html5-runproject.png[title="Application in the Chrome browser tab"]
 
 You will notice that there is a yellow bar in the browser tab that notifies you that the NetBeans Connector is debugging the tab. The IDE and the browser are connected and are able to communicate with each other when the yellow bar is visible. When you launch an HTML5 application from the IDE the JavaScript debugger is automatically enabled. When you save changes to a file or make changes to a CSS style sheet you do not need to reload the page because the browser window is automatically updated to display the changes.
 
@@ -259,7 +263,7 @@ If you close the yellow bar or click Cancel you will break the connection betwee
 
 You will also notice that the NetBeans icon is visible in the URL location field of the browser. You can click the icon to open a menu that provides various options for changing the display size of the browser and for enabling the Inspect in NetBeans mode.
 
-image::./html5-runproject2.png[title="NetBeans menu in the Chrome browser tab"]
+image::kb/docs/webclient/html5-runproject2.png[title="NetBeans menu in the Chrome browser tab"]
 
 If you select one of the default devices in the menu the browser window will resize to the dimensions of the device. This enables you to see how the application will look on the selected device. HTML5 applications are usually designed to respond to the size of the screen of the device on which they are viewed. You can use JavaScript and CSS rules that respond to the screen size and modify how the application is displayed so that the layout is optimized for the device.
 
@@ -269,28 +273,28 @@ In this exercise you will set up Bower (link:http://bower.io[+bower.io+]) and us
 
 1. Right-click the project and choose Properties.
 
-image::./html5-bower-1.png[title="bower1"]
+image::kb/docs/webclient/html5-bower-1.png[title="bower1"]
 
 
 
 [start=2]
 . If Bower has not been installed, you will see the tab below. Click Configure Bower. If Bower has been installed, skip to step 5 below.
 
-image::./html5-bower-2.png[title="bower2"]
+image::kb/docs/webclient/html5-bower-2.png[title="bower2"]
 
 
 
 [start=3]
 . Click the Install Bower link and go through the steps required for setting up Bower. To use Bower, you will also need Node, NPM, and Git. All these are standard tools used in the JavaScript ecosystem. Familiarize yourself with them if needed before continuining.
 
-image::./html5-bower-3.png[title="bower3"]
+image::kb/docs/webclient/html5-bower-3.png[title="bower3"]
 
 
 
 [start=4]
 . Specify the location of the Bower installation. Click Apply.
 
-image::./html5-bower-4.png[title="bower4"]
+image::kb/docs/webclient/html5-bower-4.png[title="bower4"]
 
 
 
@@ -299,7 +303,7 @@ image::./html5-bower-4.png[title="bower4"]
 
 You can use the text field in the panel to filter the list of JavaScript libraries. For example, type *jq* in the field to help you find the  ``jquery``  libraries. You can Ctrl-click the names of the libraries to select multiple libraries.
 
-image::./html5-bower-5.png[title="bower5"]
+image::kb/docs/webclient/html5-bower-5.png[title="bower5"]
 
 NOTE: You can click on the library version number in the Version column to open a popup window that enables you to select older versions of the library. By default the wizard displays the most recent version.
 
@@ -307,14 +311,14 @@ NOTE: For this tutorial, choose the latest version of the libraries.
 
 When you have completed this step, you should see the below.
 
-image::./html5-bower-6.png[title="bower6"]
+image::kb/docs/webclient/html5-bower-6.png[title="bower6"]
 
 
 
 [start=6]
 . Click OK and Bower will download the JavaScript libraries and, once the process is complete, you should see them in the Projects window.
 
-image::./html5-bower-7.png[title="bower7"]
+image::kb/docs/webclient/html5-bower-7.png[title="bower7"]
 
 == Editing the HTML File
 
@@ -331,7 +335,7 @@ The ZIP archive contains two folders with files that you need to add to the proj
 
 Note: If you are looking at the directory structure of the project, you need to copy the folders into the  ``public_html``  folder.
 
-image::./html5-fileswindow.png[title="NetBeans menu in the Chrome browser tab"]
+image::kb/docs/webclient/html5-fileswindow.png[title="NetBeans menu in the Chrome browser tab"]
 
 
 
@@ -360,7 +364,7 @@ image::./html5-fileswindow.png[title="NetBeans menu in the Chrome browser tab"]
 
 You can use the code completion in the editor to help you.
 
-image::./html5-editor1.png[title="Code completion in the editor"]
+image::kb/docs/webclient/html5-editor1.png[title="Code completion in the editor"]
 
 
 
@@ -431,7 +435,7 @@ image::./html5-editor1.png[title="Code completion in the editor"]
 
 When you save your changes the page automatically reloads in the browser and the page should look similar to the following image.
 
-image::./html5-runproject3.png[title="Reloaded page in in the Chrome browser tab"]
+image::kb/docs/webclient/html5-runproject3.png[title="Reloaded page in in the Chrome browser tab"]
 
 
 
@@ -453,11 +457,11 @@ image::./html5-runproject3.png[title="Reloaded page in in the Chrome browser tab
 
 Press Ctrl-Space to use the code completion in the editor when you add the CSS rules.
 
-image::./html5-editor2.png[title="Code completion of CSS rules in the editor"]
+image::kb/docs/webclient/html5-editor2.png[title="Code completion of CSS rules in the editor"]
 
 If you open the Browser DOM window you can see the current structure of the page.
 
-image::./dom-browser.png[title="Browser DOM window showing DOM tree"]
+image::kb/docs/webclient/dom-browser.png[title="Browser DOM window showing DOM tree"]
 
 
 
@@ -586,11 +590,11 @@ This `<div>` element encloses the contents of the page (the four sets of `<h3>` 
 
 You can add the selector to the element in the Edit CSS Rules dialog box. To open the Edit CSS Rules dialog box, right-click in the  ``<div>``  tag in the editor and choose Edit CSS Rules in the popup menu. Alternatively, if the insert cursor is in the  ``<div>``  tag in the editor you can click the Edit CSS Rules button (images:./newcssrule.png[title="Code completion in the editor"]) in the CSS Styles window (Window > Web > CSS Styles).
 
-image::./html5-cssstyles.png[title="CSS Styles window"]
+image::kb/docs/webclient/html5-cssstyles.png[title="CSS Styles window"]
 
 In the CSS Rules dialog box, select  ``id``  as the Selector Type and type *infolist* as the Selector. Confirm that Apply Changes to the Element is selected.
 
-image::./html5-cssrules.png[title="Edit CSS Rules dialog box"]
+image::kb/docs/webclient/html5-cssrules.png[title="Edit CSS Rules dialog box"]
 
 When you click OK in the dialog box a CSS rule for the  ``infolist``  selector is automatically added to the  ``basecss.css``  style sheet.
 
@@ -601,17 +605,17 @@ When you click OK in the dialog box a CSS rule for the  ``infolist``  selector i
 
 When you save your changes the page in the web browser reloads automatically. You can see that the layout of the page has changed and that the page now uses the CSS style rules that are defined in the  ``basecss.css``  style sheet. One of the lists below the  ``<h3>``  is open but the others are now collapsed. You can click an  ``<h3>``  element to expand the list.
 
-image::./html5-runproject5.png[title="The final project loaded in the browser"]
+image::kb/docs/webclient/html5-runproject5.png[title="The final project loaded in the browser"]
 
 The jQuery accordion function now modifies all the page elements that are contained in the  ``infolist``  DOM object. In the Navigator window you can see the structure of the HTML file and that the  ``div``  element that is identified by  ``id=infolist`` .
 
-image::./navigator3.png[title="Browser DOM window"]
+image::kb/docs/webclient/navigator3.png[title="Browser DOM window"]
 
 You can right-click on an element in the Navigator window and choose Go To Source to quickly navigate to the location of that element in the source file.
 
 In the Browser DOM window you can see the DOM elements in the page that is rendered in the browser and the JQuery styles that are applied to the elements.
 
-image::./dom-browser3.png[title="Browser DOM window"]
+image::kb/docs/webclient/dom-browser3.png[title="Browser DOM window"]
 
 When Inspect in NetBeans Mode is enabled in the browser, when you select an element in the browser window the element is highlighted in the Browser DOM window.
 
@@ -627,7 +631,7 @@ You can save your project as a site template that you can use as a template to c
 
 If you expand the nodes in the tree in the dialog box you can see the files that will be included in the site template.
 
-image::./html5-sitetemplate.png[title="Create Site Template dialog box"]
+image::kb/docs/webclient/html5-sitetemplate.png[title="Create Site Template dialog box"]
 
 You can see that the site template will include the  ``index.html``  file, the CSS style sheet, the images used in the project, though not the JavaScript libraries since Bower can be used by anyone using the template to manage the libraries. The site template can also include any configuration files and tests.
 

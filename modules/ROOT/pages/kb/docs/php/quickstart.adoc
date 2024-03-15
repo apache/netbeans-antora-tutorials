@@ -30,6 +30,10 @@
 :keywords: Apache NetBeans, Tutorials, NetBeans IDE PHP Quick Start Tutorial
 :page-reviewed: 2019-02-02
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This document provides general guidelines for preparing the environment for PHP development, setting up a PHP project, and developing and running your first PHP application in the NetBeans IDE for PHP.
 
 == Requirements
@@ -67,14 +71,14 @@ To start PHP development in the NetBeans IDE for PHP, you first need to create a
 2. In the Categories list, choose PHP.
 3. In the Projects area, choose PHP Application and click Next. The New PHP Project > Name and Location panel opens. 
 
-image::./new-project-name-location.png[title="Name and Location panel of New PHP Project wizard, with Source Folder location as XAmpp document root."]
+image::kb/docs/php/new-project-name-location.png[title="Name and Location panel of New PHP Project wizard, with Source Folder location as XAmpp document root."]
 
 
 . In the Project Name text field, enter  ``NewPHPProject`` .
 . In the Sources Folder field, browse for your PHP document root and create a subfolder there called  ``NewPHPProject`` . The document root is the folder where the web server looks for files to open in the browser. The document root is specified in the web server xref:index.adoc#configuration[+configuration file+]. For example, on Xampp, the document root is XAMPP_HOME/htdocs.
 . Leave all other fields with their default values. Click Next. The Run Configuration window opens. 
 
-image::./new-project-run-config.png[]
+image::kb/docs/php/new-project-run-config.png[]
 
 
 . In the Run As drop-down list, select Local Web Site. The project will run on your local Apache server. Your other options are to run the project remotely via FTP and to run it from the command line.
@@ -88,7 +92,7 @@ Learn more about xref:./project-setup.adoc[+Setting up a PHP project in NetBeans
 1. Start the IDE, choose File > Open Project. The Open Project dialog box opens.
 2. Select  ``NewPHPProject``  and click Open Project. The NewPHPProject tree appears in the Projects window and the project's  ``index.php``  file opens in the editor and in the Navigator window. 
 
-image::./getting-started-open-new-project.png[]
+image::kb/docs/php/getting-started-open-new-project.png[]
 
 
 . Enter the following code inside the  ``<?php ?>``  block:
@@ -102,7 +106,7 @@ image::./getting-started-open-new-project.png[]
 
 . To run the project, position the cursor on the NewPHPProject node and choose Run from the context menu. The figure below shows what you should see in the browser window:
 
-image::./getting-started-browser-hello-world.png[]
+image::kb/docs/php/getting-started-browser-hello-world.png[]
 
 Congratulations! Your program works!
 

@@ -29,6 +29,10 @@
 :description: Connecting to Oracle Database from NetBeans IDE - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Connecting to Oracle Database from NetBeans IDE
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 NetBeans IDE includes built-in support for Oracle Database. You can easily establish a connection from inside the IDE and begin working with the database. This tutorial demonstrates how to use a local installation of Oracle Database 10_g_ Express Edition (Oracle Database XE), a lightweight database that is free to develop, deploy, and distribute.
 
 This document shows how to <<connect,set up a connection to a local installation>> of Oracle Database XE from the NetBeans IDE, use the IDE's built-in SQL editor to <<createuser,handle the database data>>, and how to <<oci8,enable the OCI 8 PHP extension>> to write PHP code that connects to an Oracle database.
@@ -68,7 +72,7 @@ In this exercise you will test and create a new connection to the database.
 1. Start the Oracle database.
 2. Open the Services window (Window > Services or Ctrl-5;⌘-5 on Mac). In the Services window, right-click the Databases node and choose New Connection. 
 
-image::./new-connection.png[]
+image::kb/docs/ide/new-connection.png[]
 
 
 . In the New Connection wizard, select Oracle Thin in the Driver dropdown list.
@@ -104,7 +108,7 @@ For the purpose of our tutorial, enter  ``system``  (the default database admini
 
 If the attempt is successful, the message "Connection succeeded" is displayed in the wizard.
 
-image::./customize-conn.png[]
+image::kb/docs/ide/customize-conn.png[]
 
 
 . Select  ``HR``  in the Select Schema dropdown list. Click Finish.
@@ -114,7 +118,7 @@ NOTE: You need to unlock the HR schema before you can access it in NetBeans. Unl
 The new connection will appear under the Databases node in the Services window. You can expand it and start browsing the database object's structure. 
 Change the display name for the connection node: choose Properties from the node's popup menu and click the ellipsis button for the Display Name property. Enter OracleDB as the Display Name and click OK.
 
-image::./connection.png[]
+image::kb/docs/ide/connection.png[]
 
 NOTE: Although the steps above demonstrate the case of connecting to a local database instance, the steps for connecting to a _remote_ database are the same. The only difference is that instead of specifying  ``localhost``  as the hostname, enter the IP address or hostname of the remote machine where Oracle Database is installed.
 
@@ -132,12 +136,12 @@ Let's create a new database user account to manipulate tables and data in the da
 
 1. In the Services window, right-click the OracleDB connection node and choose Execute Command. This opens the NetBeans IDE's SQL editor, in which you can enter SQL commands that will be sent to the database.
 
-image::./execute.png[]
+image::kb/docs/ide/execute.png[]
 
 
 . To create a new user, enter the following command in the SQL Editor window and click the Run SQL button on the toolbar. 
 
-image::./create-user.png[]
+image::kb/docs/ide/create-user.png[]
 
 [source,sql]
 ----
@@ -181,19 +185,19 @@ In this example, you want the user  ``jim``  to create a copy of the  ``Departme
 
 When you created the user  ``jim`` , the Select privilege was limited to the  ``Departments``  table.
 
-image::./hr-view.png[]
+image::kb/docs/ide/hr-view.png[]
 
 
 . Right-click the  ``Departments``  table node and select Grab Structure. Save the  ``.grab``  file on your disk.
 . Expand the  ``JIM``  schema, right-click the  ``Tables``  node and choose Recreate Table. 
 Point to the  ``.grab``  file that you created. 
 
-image::./recreate.png[]
+image::kb/docs/ide/recreate.png[]
 
 
 . Review the SQL script that will be used to create the table. Click OK. 
 
-image::./nametable.png[]
+image::kb/docs/ide/nametable.png[]
 
 When you click OK, the new  ``DEPARTMENTS``  table is created and appears under the  ``JIM``  schema node. If you right-click the table node and choose View Data you will see that the table is empty.
 
@@ -204,7 +208,7 @@ NOTE: To enter the data manually, perform the following steps.
 1. Right-click the  ``DEPARTMENTS``  table under the  ``JIM``  schema and choose View Data.
 2. Click the Insert Records icon on the View Data toolbar and to open the Insert Record window. 
 
-image::./insert-rec.png[]
+image::kb/docs/ide/insert-rec.png[]
 
 
 . Type in the fields to enter the data. Click OK.
@@ -260,7 +264,7 @@ To open the Favorites window, click Window > Favorites in the main menu (press C
 
 . Right-click the  ``locations.sql``  file and choose Run File.
 
-image::./run-file.png[]
+image::kb/docs/ide/run-file.png[]
 
 NOTE: If more than one database connection is registered with the IDE, the IDE might prompt you to select the correct connection.
 
@@ -269,13 +273,13 @@ NOTE: If more than one database connection is registered with the IDE, the IDE m
 
 You can see that the  ``Locations``  table with data was added to the  ``JIM``  schema.
 
-image::./second-table.png[]
+image::kb/docs/ide/second-table.png[]
 
 
 . Right-click the Locations table node and choose View Data to see the table contents. You will see the contents of the Locations table.
 You can insert new records and modify existing data directly in this view window. 
 
-image::./view-data1.png[]
+image::kb/docs/ide/view-data1.png[]
 
 
 . Next, we run a query to display information from two tables: Departments and Locations.
@@ -294,7 +298,7 @@ ORDER by DEPARTMENT_NAME;
 
 This SQL query returns the rows from the Departments table whose location_id values are equal to the values in the matching column in the Locations table, with the results being ordered by the Department name. Note that you cannot insert new records directly in the results of this query, as you could do in the representation of a single table.
 
-image::./join.png[]
+image::kb/docs/ide/join.png[]
 
 You can save the SQL join query as a View (right-click the View node and choose Create View) and run it conveniently whenever you want. For this, the database user should be granted the privilege to Create View that our sample user does not have. You can log in under the system account, grant  ``jim``  the Create View privilege (with this SQL statement: "grant create view to jim;") and try creating your own view.
 
@@ -304,21 +308,21 @@ You can save the SQL join query as a View (right-click the View node and choose 
 If you were following this tutorial, you already used the capabilities of the NetBeans IDE SQL Editor. Here we list several other capabilities of the NetBeans IDE SQL Editor that might be useful to you.
 
 1. *GUI View of Database Tables*. When you right-click a table node in the Services window and choose View Data, the IDE displays a visual representation of the table and its data (as shown in the figure above). You can also add, modify, and delete table data directly in this view.
-* To add a record, click the Insert Records image:./row-add.png[] icon and insert new data in the Insert Records window that opens. Click the Show SQL button to see the SQL code for this operation. The table will be automatically updated with the new records.
-* To modify a record, double-click directly inside any cell in the GUI View of a table and type the new value. Until the change is committed, the modified text is shown in green. To commit your changes, click the Commit Changes image:./row-commit.png[] icon. To cancel changes, click the Cancel Edits image:./row-commit.png[] icon.
-* To delete a row, select it and click the Delete Selected Records image:./row-commit.png[] icon.
+* To add a record, click the Insert Records image:kb/docs/ide/row-add.png[] icon and insert new data in the Insert Records window that opens. Click the Show SQL button to see the SQL code for this operation. The table will be automatically updated with the new records.
+* To modify a record, double-click directly inside any cell in the GUI View of a table and type the new value. Until the change is committed, the modified text is shown in green. To commit your changes, click the Commit Changes image:kb/docs/ide/row-commit.png[] icon. To cancel changes, click the Cancel Edits image:kb/docs/ide/row-commit.png[] icon.
+* To delete a row, select it and click the Delete Selected Records image:kb/docs/ide/row-commit.png[] icon.
 
 [start=2]
-. *Keep Prior Tabs*. Click the Keep Prior Tabs image:./keepoldresulttabs.png[] icon on the SQL Editor toolbar to keep the windows with the results of previous queries open. This can be helpful if you want to compare the results of several queries.
+. *Keep Prior Tabs*. Click the Keep Prior Tabs image:kb/docs/ide/keepoldresulttabs.png[] icon on the SQL Editor toolbar to keep the windows with the results of previous queries open. This can be helpful if you want to compare the results of several queries.
 
 [start=3]
-. *SQL History* (Ctrl-Alt-Shift-H). Use the SQL History image:./sql-history.png[] icon on the SQL Editor toolbar to view all SQL statements that you ran for each of the database connections. Choose the connection from the drop-down list, find the SQL statement that you need and click Insert to place the statement to the SQL Command window.
+. *SQL History* (Ctrl-Alt-Shift-H). Use the SQL History image:kb/docs/ide/sql-history.png[] icon on the SQL Editor toolbar to view all SQL statements that you ran for each of the database connections. Choose the connection from the drop-down list, find the SQL statement that you need and click Insert to place the statement to the SQL Command window.
 
 [start=4]
 . *Connection list*. If you have several database connections and you need to quickly switch between them in the SQL Editor, use the Connections drop-down list.
 
 [start=5]
-. *Run SQL Statements*. To run the entire statement that is currently in the SQL Command window, click the Run SQL image:./runsql.png[]icon. If you want to run only a part of SQL, select it in the SQL Command window, right-click the selection and choose Run Selection. In this case, only the selected part will be executed.
+. *Run SQL Statements*. To run the entire statement that is currently in the SQL Command window, click the Run SQL image:kb/docs/ide/runsql.png[]icon. If you want to run only a part of SQL, select it in the SQL Command window, right-click the selection and choose Run Selection. In this case, only the selected part will be executed.
 
 
 
@@ -340,7 +344,7 @@ For more information about enabling OCI 8, and especially for using OCI 8 with a
 
 When OCI 8 is enabled, NetBeans IDE for PHP accesses this extension for code completion and debugging.
 
-image::./oci-cc.png[]
+image::kb/docs/ide/oci-cc.png[]
 
 
 == Using OCI JDBC Driver with the NetBeans IDE
@@ -355,7 +359,7 @@ OCI driver packages are available in the same JAR file as the JDBC Thin driver (
 4. In the Customize Connection dialog box, provide the connection details: IP address, port, SID, username and password.
 Notice the difference in the JDBC URL for the OCI and Thin drivers. 
 
-image::./oci-connection.png[]
+image::kb/docs/ide/oci-connection.png[]
 
 
 == Troubleshooting

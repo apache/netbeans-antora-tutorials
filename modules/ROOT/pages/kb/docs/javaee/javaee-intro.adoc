@@ -29,11 +29,15 @@
 :description: Introduction to Support for Java EE Technology in NetBeans IDE - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Introduction to Support for Java EE Technology in NetBeans IDE
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 NetBeans IDE has been developed in close cooperation with the Java EE and GlassFish teams to provide the tightest integration and easiest possible use of the Java EE specification. NetBeans IDE is the best way to quickly learn and become productive in Java EE programming.
 
 This document provides an introduction to the major concepts of the Java EE specifications and how they relate to your hands-on programming. The following topics are covered:
 
-image::./netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
+image::kb/docs/javaee/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
 
 * <<annotations,Annotations Instead of Deployment Descriptors>>
 * <<ejb,Simplified EJB Software Development>>
@@ -74,7 +78,7 @@ public class HelloWorldSessionBean implements mypackage.HelloWorldSessionLocal {
 
 Code completion provides access to annotation attributes specific to the item under the cursor. For example, when you press Ctrl-Space in the brackets of a  ``@WebService()``  annotation, you see the following:
 
-image::./jax-ws-annotate.png[]
+image::kb/docs/javaee/jax-ws-annotate.png[]
 
 Each attribute has default values. Therefore, you do not need to specify any attributes unless you want to use a value other than the default value. In simple cases, the default value is sufficient, which means that you do not even need to provide attributes at all.
 

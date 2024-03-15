@@ -29,6 +29,10 @@
 :description: Adding Support For A Web Framework - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Adding Support For A Web Framework
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This document provides a general description of how to add support for a web framework in NetBeans IDE. The steps provided show how you can add support by installing a web framework plugin into the IDE using the Plugins manager. After you install the plugin you will be able to select the framework in the New Project wizard when you create a web project. The new web project that you create will contain the necessary infrastructure specific to the chosen framework.
 
 The easiest way to add support for a particular web framework is by installing a NetBeans plugin using the IDE's Plugins manager if the plugin is available. This is convenient if you have Internet access while working in the IDE. Plugins for many web frameworks are also available via the link:http://plugins.netbeans.org/PluginPortal/[+NetBeans Plugin Portal+]. If you do not have regular Internet access, you can download the plugin modules (e.g., from the Plugin Portal) when you have the opportunity, then install them into the IDE at a later time.
@@ -38,7 +42,7 @@ In this tutorial you will add support for the Apache Struts 2 framework by downl
 *Note: *The IDE bundles support for the xref:./jsf20-support.adoc[+JavaServer Faces 2.x+] and xref:./quickstart-webapps-struts.adoc[+Struts 1.3.10+] and xref:./quickstart-webapps-spring.adoc[+Spring 3.x and 4.x+] frameworks. The specific version of the bundled framework depends upon the version of the IDE.
 
 
-image::./netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
+image::kb/docs/web/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
 
 
 *To complete this tutorial, you need the following software and resources.*
@@ -103,7 +107,7 @@ NetBeans plugins can be identified by the  ``.nbm``  extension.
 
 . In the Add Plugins dialog, navigate to the directory that contains the plugins and select the NetBeans plugins. Click Open.
 
-image::./plugin-archive-contents.png[title="The zip archive contains the NetBeans plugins"]
+image::kb/docs/web/plugin-archive-contents.png[title="The zip archive contains the NetBeans plugins"]
 
 Hold down the Ctrl key to select multiple items.
 
@@ -116,7 +120,7 @@ A description of the selected plugin is displayed in the right pane of the Plugi
 [.feature]
 --
 
-image::./add-plugins-sm.png[role="left", xref="image$./add-plugins.png"]
+image::kb/docs/web/add-plugins-sm.png[role="left", xref="image$./add-plugins.png"]
 
 --
 
@@ -141,13 +145,13 @@ Various update centers are already registered with the IDE by default. To see a 
 [.feature]
 --
 
-image::./pluginsmanager-settings-sm.png[role="left", xref="image$./pluginsmanager-settings.png"]
+image::kb/docs/web/pluginsmanager-settings-sm.png[role="left", xref="image$./pluginsmanager-settings.png"]
 
 --
 
 If you want to register a new update center, click the Add button in the Settings tab and supply the details in the Update Center Customizer.
 
-image::./uc-customizer.png[title="Update Center Customizer dialog box"] 
+image::kb/docs/web/uc-customizer.png[title="Update Center Customizer dialog box"] 
 
 
 === Registering the NetBeans Plugin Portal Update Center
@@ -165,7 +169,7 @@ After you install the plugin, the NetBeans Plugin Portal Update Center is added 
 [.feature]
 --
 
-image::./portal-uc-plugin-sm.png[role="left", xref="image$./portal-uc-plugin.png"]
+image::kb/docs/web/portal-uc-plugin-sm.png[role="left", xref="image$./portal-uc-plugin.png"]
 
 --
 
@@ -176,7 +180,7 @@ Click Reload Catalog to update the list of plugins.
 [.feature]
 --
 
-image::./portal-uc-list-sm.png[role="left", xref="image$./portal-uc-list.png"]
+image::kb/docs/web/portal-uc-list-sm.png[role="left", xref="image$./portal-uc-list.png"]
 
 --
 
@@ -202,13 +206,13 @@ You can add framework support to a web application either through the New Projec
 3. Step through the wizard and accept any default settings. Specify a server to deploy the application to by choosing one that is already registered with the IDE (i.e., the GlassFish server or Tomcat).
 4. In the Frameworks panel of the New Project wizard, choose the framework that you want to add. Click Finish. 
 
-image::./newproject-wizard-frameworks-sm.png[title="Struts 2 Support listed in Frameworks panel of the New Project wizard"]
+image::kb/docs/web/newproject-wizard-frameworks-sm.png[title="Struts 2 Support listed in Frameworks panel of the New Project wizard"]
 
 In this example, support for the Struts2 framework is selected in the Frameworks panel. You can see that the Frameworks panel now offers the option to choose either Struts 1.3.8 (bundled with the IDE) or Struts2 (added by installing a plugin). The Struts 2 support plugin adds the Struts2 option to the New Projects wizard and displays tabs with options for Configuration and Libraries. The Configuration tab provides the option to create an example page in the project. The Libraries tab enables you to select the version of the Struts2 libraries that you want to add to the classpath.
 
 When you click Finish, the IDE creates the web application. The additional files that the wizard creates will vary according to the framework. In this example, the wizard created the  ``struts.xml``  XML configuration file in the Source Packages folder and added the required Struts2 libraries to the classpath. The wizard also automatically added a Servlet filter class and a filter mapping to  ``web.xml`` .
 
-image::./project-structure-frameworks.png[title="Logical structure of Struts web application displayed in Projects window"]  
+image::kb/docs/web/project-structure-frameworks.png[title="Logical structure of Struts web application displayed in Projects window"]  
 
 
 === Adding Framework Support to an Existing Project
@@ -224,12 +228,12 @@ When you select Frameworks, the right panel displays a Used Frameworks text area
 
 . Click the Add button, then select the framework you want to use and click OK. 
 
-image::./properties-add-framework.png[title="JavaServer Faces framework selected in the Add Framework dialog opened from the Project Properties window"]
+image::kb/docs/web/properties-add-framework.png[title="JavaServer Faces framework selected in the Add Framework dialog opened from the Project Properties window"]
 
 
 . Depending on the chosen framework, you can specify further framework-specific configuration settings or components in the Project Properties window. 
 
-image::./add-icefaces.png[title="Adding a library for the ICEfaces component suite to the project"]
+image::kb/docs/web/add-icefaces.png[title="Adding a library for the ICEfaces component suite to the project"]
 
 For example, if you want to specify the ICEfaces component suite you can select ICEfaces in the Components tab of the Project Properties window and specify the ICEfaces library.
 

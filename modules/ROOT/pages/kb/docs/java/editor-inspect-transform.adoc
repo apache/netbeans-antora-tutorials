@@ -30,6 +30,11 @@
 :keywords: Apache NetBeans, Tutorials, Refactoring with Inspect and Transform in the NetBeans IDE Java Editor
 :experimental:
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
+
 The NetBeans IDE Java Editor features an Inspect and Transform feature, which is a refactoring tool for running various inspections and transformations on the selected scope of files at once. It also enables a user to define a custom inspection.
 
 In this tutorial, you will learn to perform a code review using inspections with refactoring and predefined set of inspections, manage configurations, and create custom inspections.
@@ -38,7 +43,7 @@ In this tutorial, you will learn to perform a code review using inspections with
 
 In addition to the required software listed above you should have the link:https://netbeans.org/projects/samples/downloads/download/Samples/Java/inspecttransform.zip[+InspectTransform.zip+] file unzipped into your NetBeans project folder and opened in the NetBeans IDE as follows:
 
-image::./proj.png[]
+image::kb/docs/java/proj.png[]
 
 
 == Running Inspections
@@ -48,7 +53,7 @@ The *Single Inspection* option in the *Inspect and Transform* dialog box (*Refac
 [.feature]
 --
 
-image::./manage-inspections-small.png[role="left", xref="image$./manage-inspections.png"]
+image::kb/docs/java/manage-inspections-small.png[role="left", xref="image$./manage-inspections.png"]
 
 --
 
@@ -57,7 +62,7 @@ The Search field enables you to check if a required inspection is available usin
 [.feature]
 --
 
-image::./search-small.png[role="left", xref="image$./search.png"]
+image::kb/docs/java/search-small.png[role="left", xref="image$./search.png"]
 
 --
 
@@ -76,7 +81,7 @@ The suggested refactoring changes display in the preview panel.
 [.feature]
 --
 
-image::./single-inspection-small.png[role="left", xref="image$./single-inspection.png"]
+image::kb/docs/java/single-inspection-small.png[role="left", xref="image$./single-inspection.png"]
 
 --
 +
@@ -100,7 +105,7 @@ The  ``Migrate to JDK 5``  configuration available in the IDE by default incorpo
 [.feature]
 --
 
-image::./jdk5-conf-small.png[role="left", xref="image$./jdk5-conf.png"]
+image::kb/docs/java/jdk5-conf-small.png[role="left", xref="image$./jdk5-conf.png"]
 
 --
 
@@ -113,7 +118,7 @@ The  ``Migrate to JDK 7``  configuration available in the IDE by default incorpo
 [.feature]
 --
 
-image::./jdk7-conf-small.png[role="left", xref="image$./jdk7-conf.png"]
+image::kb/docs/java/jdk7-conf-small.png[role="left", xref="image$./jdk7-conf.png"]
 
 --
 
@@ -130,7 +135,7 @@ Changes that convert the code to JDK 7 syntax display in the preview panel.
 [.feature]
 --
 
-image::./jdk7-ref-small.png[role="left", xref="image$./jdk7-ref.png"]
+image::kb/docs/java/jdk7-ref-small.png[role="left", xref="image$./jdk7-ref.png"]
 
 --
 +
@@ -143,7 +148,7 @@ The  ``Migrate to JDK 8``  configuration available in the IDE by default incorpo
 [.feature]
 --
 
-image::./jdk8-conf-small.png[role="left", xref="image$./jdk8-conf.png"]
+image::kb/docs/java/jdk8-conf-small.png[role="left", xref="image$./jdk8-conf.png"]
 
 --
 
@@ -163,7 +168,7 @@ NOTE: To configure the code style rules for import statements:
 [.feature]
 --
 
-image::./org-imports-small.png[role="left", xref="image$./org-imports.png"]
+image::kb/docs/java/org-imports-small.png[role="left", xref="image$./org-imports.png"]
 
 --
 +
@@ -180,7 +185,7 @@ The preview panel displays one occurrence proposed for the Import section of the
 [.feature]
 --
 
-image::./imports-ref-small.png[role="left", xref="image$./imports-ref.png"]
+image::kb/docs/java/imports-ref-small.png[role="left", xref="image$./imports-ref.png"]
 
 --
 +
@@ -202,7 +207,7 @@ A  `Custom > Inspection`  node is created in the Inspections list.
 [.feature]
 --
 
-image::./custom-hint-small.png[role="left", xref="image$./custom-hint.png"]
+image::kb/docs/java/custom-hint-small.png[role="left", xref="image$./custom-hint.png"]
 
 --
 +
@@ -212,7 +217,7 @@ image::./custom-hint-small.png[role="left", xref="image$./custom-hint.png"]
 [.feature]
 --
 
-image::./script-small.png[role="left", xref="image$./script.png"]
+image::kb/docs/java/script-small.png[role="left", xref="image$./script.png"]
 
 --
 +
@@ -221,7 +226,7 @@ image::./script-small.png[role="left", xref="image$./script.png"]
 [.feature]
 --
 
-image::./hint-file-small.png[role="left", xref="image$./hint-file.png"]
+image::kb/docs/java/hint-file-small.png[role="left", xref="image$./hint-file.png"]
 
 --
 +
@@ -238,7 +243,7 @@ Your custom inspection is done and ready to be applied.
 [.feature]
 --
 
-image::./mycustomhint-small.png[role="left", xref="image$./mycustomhint.png"]
+image::kb/docs/java/mycustomhint-small.png[role="left", xref="image$./mycustomhint.png"]
 
 --
 +

@@ -30,6 +30,10 @@
 :keywords: Apache NetBeans, Tutorials, Configuring PHP Development Environment in Windows
 :page-reviewed: 2019-02-02
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This tutorial shows you two ways of configuring your PHP development environment on the Windows operating system. The first and most convenient way is to install and configure an AMP (Apache, MySQL, PHP) package. This tutorial shows you how to install the XAMPP package. The second way is to install and configure each component separately.
 
 == Requirements
@@ -96,7 +100,7 @@ WARNING: On Windows Vista sometimes  ``xampp-control.exe``  will not run. You ca
 
 WARNING: The  ``winmysqladmin.exe file`` , which is launched by the Admin button for MySQL, does not work. A cascade of error messages appears, which can only be stopped by manually terminating the  ``winmysqladmin``  process. You cannot launch  ``winmysqladmin.exe``  from the command line, either. See link:http://bugs.xampp.org/view.php?id=71[+http://bugs.xampp.org/view.php?id=71+].
 
-image::./xampp-control-panel.png[]
+image::kb/docs/php/xampp-control-panel.png[]
 
 
 . The Svc checkboxes indicate that a module is installed as a Windows service and will start automatically on system startup. You can install or uninstall Windows services by selecting or unselecting the Svc checkbox. Uninstalling a Windows service does not uninstall the module, but it does require you to start the module manually. The XAMPP control panel includes buttons for stopping and starting modules and opening their administration consoles.
@@ -105,12 +109,12 @@ image::./xampp-control-panel.png[]
 
 1. Run your browser and enter the following URL:  ``http://localhost`` . The XAMPP welcome page opens:
 
-image::./xampp-welcome-page.png[]
+image::kb/docs/php/xampp-welcome-page.png[]
 
 
 . To ensure that the Apache and MySQL servers have been installed as system services, restart your operating system, run the browser, and enter the  ``http://localhost``  URL again. The XAMPP welcome page opens. Note that the XAMPP welcome page includes a menu in the left margin through which you can check the status of XAMPP components and run  ``phpinfo()`` , among other useful features.  ``phpinfo()``  returns a screen with configuration information about your XAMPP components. 
 
-image::./xampp-phpinfo.png[]
+image::kb/docs/php/xampp-phpinfo.png[]
 
 ==== Installing and Enabling the XDebug Debugger
 
@@ -197,7 +201,7 @@ On Microsoft Vista, do not install the Apache Server to the default location, wh
 ----
 The Apache welcome test page opens: 
 
-image::./install-apache-it-works-port80.png[]
+image::kb/docs/php/install-apache-it-works-port80.png[]
 
 ===== Troubleshooting
 
@@ -237,7 +241,7 @@ NOTE: If there is no installer available for the version of PHP you want to inst
 * Save the file in the htdocs folder as `test.php`. The default path is  ``C:\Program Files\Apache Software Foundation\Apache<version>\htdocs\test.php`` 
 * Run the browser and enter the following URL:  ``http://localhost:<port>/test.php`` . The following page opens:
 
-image::./install-php-test.png[]
+image::kb/docs/php/install-php-test.png[]
 
 ===== Troubleshooting
 

@@ -29,6 +29,9 @@
 :description: The NetBeans E-commerce Tutorial - Conclusion - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, The NetBeans E-commerce Tutorial - Conclusion
 
+ifdef::env-github[]
+:imagesdir: ../../../../../images
+endif::[]
 
 == Tutorial Contents
 
@@ -52,7 +55,7 @@
 * <<acknowledge,Acknowledgments>>
 * <<disclaimer,Disclaimer>>
 
-image::./netbeans-stamp-68-69.png[title="Content on this page applies to NetBeans IDE, versions 6.8 and 6.9"]
+image::kb/docs/javaee/ecommerce/netbeans-stamp-68-69.png[title="Content on this page applies to NetBeans IDE, versions 6.8 and 6.9"]
 
 Congratulations! You have now finished developing the `AffableBean` application. By following this tutorial, you incrementally built a simple e-commerce application using Java-based technologies. In the process, you became familiar with the NetBeans IDE, and have learned how to use it for the development of Java EE and web projects. Referring back to the xref:./design.adoc#requirements[+customer requirements+], you can confirm that each requirement has been fully implemented, and through continuous feedback from the Affable Bean staff, you are confident that they'll be satisfied with the final product. At this stage however, you may ask, "What specifically needs to be delivered to the customer?" and "How can the application become deployed to the customer's production server so that it functions online?" This tutorial unit briefly discusses next steps in terms of handing off deliverables, and concludes with a discussion on how using a framework such as JavaServer Faces could improve the application and benefit your experience when developing future projects.
 
@@ -132,7 +135,7 @@ The six lifecycle phases, according to link:http://www.amazon.com/JavaServer-Fac
 5. *Invoke Application:* Invokes any application logic needed to fulfill the request and navigate to a new page if needed.
 6. *Render Response:* Saves state and renders a response to the requesting client.^<<footnote2,[2]>>^
 
-image::./jsf-request-processing-lifecycle.png[title="The JSF request processing lifecycle"]
+image::kb/docs/javaee/ecommerce/jsf-request-processing-lifecycle.png[title="The JSF request processing lifecycle"]
 
 One important concept of the JSF framework is the server-side UI component tree, or Faces _View_. This component tree is built and maintained in server memory for each client request, and is primarily associated with the first and last phases of the request processing lifecycle depicted above. Consequently, the application is able to maintain state between requests in a way that doesn't involve any manual coding on the part of the developer. In other words, the request processing lifecycle handles synchronization between the server-side View and that which is presented to the client. This enables you, the Java web developer, to focus on code that is specific to your business problem.
 
@@ -293,7 +296,7 @@ xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 [[about]]
 == About the NetBeans E-commerce Tutorial
 
-image::./logo.png[] 
+image::kb/docs/javaee/ecommerce/logo.png[] 
 
 The NetBeans E-commerce Tutorial and sample application were conceived of and written by Troy Giunipero. The application began as a project arising out of Sun's link:http://research.sun.com/SEED/[+SEED program+], and was developed from January 2009 to November 2010. The tutorial was prepared as part of ongoing efforts to provide documentation for the IDE's xref:kb/docs/java-ee.adoc[+Java EE &amp; Java Web Learning Trail+].
 

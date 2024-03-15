@@ -29,6 +29,10 @@
 :description: Writing JUnit Tests in NetBeans IDE - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Writing JUnit Tests in NetBeans IDE
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This tutorial introduces the basics of writing and running JUnit unit tests in NetBeans IDE. Testing an application is an integral part of the development cycle, and writing and maintaining unit tests can help ensure that the individual methods in your source code work correctly. The IDE's integrated support for the JUnit unit testing framework enables you to quickly and easily create JUnit tests and test suites.
 
 In this tutorial you create simple JUnit 3 and JUnit 4 unit tests and test suites for a Java class library project. The first part of the tutorial shows how to create tests in JUnit 3. The second part shows how to create the same tests in JUnit 4 using JUnit annotations. It is not necessary to complete both parts of the tutorial because the tests are the same, but seeing how the tests are written in both versions enables you to see some of the changes introduced in JUnit 4.
@@ -64,7 +68,7 @@ In this exercise you copy the files  ``Utils.java``  and  ``Vectors.java``  from
 [.feature]
 --
 
-image::./projects-window.png[]
+image::kb/docs/java/projects-window.png[]
 
 --
 
@@ -102,7 +106,7 @@ When you change the name of the test class, you will see a warning about changin
 [.feature]
 --
 
-image::./junit3-vectors-createtests.png[]
+image::kb/docs/java/junit3-vectors-createtests.png[]
 
 --
 
@@ -112,7 +116,7 @@ image::./junit3-vectors-createtests.png[]
 [.feature]
 --
 
-image::./junit3-select-version.png[]
+image::kb/docs/java/junit3-select-version.png[]
 
 --
 
@@ -123,7 +127,7 @@ When you click Select, the IDE creates the  ``VectorsJUnit3Test.java``  test cla
 [.feature]
 --
 
-image::./projects-window2.png[]
+image::kb/docs/java/projects-window2.png[]
 
 --
 
@@ -458,14 +462,14 @@ When you run the test you will see one of the following results in the JUnit Tes
 
 [.feature]
 --
-image:./junit3-test-pass-sm.png[role="left", xref="image$./junit3-test-pass.png"]
+image:kb/docs/java/junit3-test-pass-sm.png[role="left", xref="image$./junit3-test-pass.png"]
 --
 
 In this image (click the image to see a larger image) you can see that the project passed all the tests. The left pane displays the results of the individual test methods and the right pane displays the test output. If you look at the output you can see the order that the tests were run. The  ``println``  that you added to each of the test methods printed out the name of the test to the output window. You can also see that in  ``UtilJUnit3Test``  the  ``setUp``  method was run before each test method and the  ``tearDown``  method was run after each method.
 
 [.feature]
 --
-image:./junit3-test-fail-sm.png[role="left", xref="image$./junit3-test-fail.png"]
+image:kb/docs/java/junit3-test-fail-sm.png[role="left", xref="image$./junit3-test-fail.png"]
 --
 
 In this image (click the image to see a larger image) you can see that the project failed one of the tests. The  ``testTimeout``  method took too long to complete and the test thread was interrupted, causing that test to fail. It took longer than 1000 milliseconds to compute the factorial of the randomly generated number (22991).
@@ -500,7 +504,7 @@ When you change the name of the test class, you will see a warning about changin
 [.feature]
 --
 
-image::./junit4-vectors-createtests.png[]
+image::kb/docs/java/junit4-vectors-createtests.png[]
 
 --
 
@@ -510,7 +514,7 @@ image::./junit4-vectors-createtests.png[]
 [.feature]
 --
 
-image::./junit4-select-version.png[]
+image::kb/docs/java/junit4-select-version.png[]
 
 --
 
@@ -519,7 +523,7 @@ When you click OK, the IDE creates the  ``VectorsJUnit4Test.java``  test class i
 [.feature]
 --
 
-image::./projects-window3.png[]
+image::kb/docs/java/projects-window3.png[]
 
 --
 
@@ -862,7 +866,7 @@ When you run  ``UtilsJUnit4Test.java``  the IDE only runs the tests in the test 
 
 [.feature]
 --
-image:./junit4-utilstest-pass-sm.png[role="left", xref="image$./junit4-utilstest-pass.png"]
+image:kb/docs/java/junit4-utilstest-pass-sm.png[role="left", xref="image$./junit4-utilstest-pass.png"]
 --
 
 In this image (click the image to see a larger image) you can see that the IDE ran the JUnit test on  ``Utils.java``  and that the class passed all the tests. The left pane displays the results of the individual test methods and the right pane displays the test output. If you look at the output you can see the order that the tests were run. The  ``println``  that you added to each of the test methods printed out the name of the test to Test Results window and the Output window.
@@ -893,7 +897,7 @@ If you selected JUnit 3 as the version for your tests, the IDE can generate JUni
 4. Select the  ``sample``  package to create the test suite in the sample folder in the test packages folder.
 5. Deselect Test Initializer and Test Finalizer. Click Finish.
 
-image::./junit-testsuite-wizard.png[]
+image::kb/docs/java/junit-testsuite-wizard.png[]
 
 When you click Finish, the IDE creates the test suite class in the  ``sample``  package and opens the class in the editor. The test suite will contain the following code.
 
@@ -973,21 +977,21 @@ When you run the test suite the IDE runs the tests included in the suite in the 
 
 [.feature]
 --
-image:./junit3-suite-results-sm.png[role="left", xref="image$./junit3-suite-results.png"]
+image:kb/docs/java/junit3-suite-results-sm.png[role="left", xref="image$./junit3-suite-results.png"]
 --
 
 In this image (click the image to see a larger image) you can see the test results for a JUnit 3 test suite. The test suite ran the  ``UtilsJUnit3Test``  and  ``VectorsJUnit3Test``  test classes as a single test and displayed the test results in the left pane as the results of a single test. The output in the right pane is the same as when you run the test individually.
 
 [.feature]
 --
-image:./junit4-suite-results-sm.png[role="left", xref="image$./junit4-suite-results.png"]
+image:kb/docs/java/junit4-suite-results-sm.png[role="left", xref="image$./junit4-suite-results.png"]
 --
 
 In this image (click the image to see a larger image) you can see the test results for a JUnit 4 test suite. The test suite ran the  ``UtilsJUnit4Test``  and  ``VectorsJUnit4Test``  test classes as a single test and displayed the test results in the left pane as the results of a single test. The output in the right pane is the same as when you run the test individually.
 
 [.feature]
 --
-image:./junitmix3and4-suite-results-sm.png[role="left", xref="image$./junitmix3and4-suite-results.png"]
+image:kb/docs/java/junitmix3and4-suite-results-sm.png[role="left", xref="image$./junitmix3and4-suite-results.png"]
 --
 
 In this image (click the image to see a larger image) you can see the test results for a mixed test suite. This test suite includes the JUnit 4 test suite and one of the JUnit 3 test classes. The test suite ran the  ``UtilsJUnit3Test.java``  and  ``JUnit4TestSuite.java``  test classes as a single test and displayed the test results in the left pane as the results of a single test. The output in the right pane is the same as running the test individually.

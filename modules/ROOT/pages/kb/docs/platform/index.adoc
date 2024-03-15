@@ -31,6 +31,9 @@
 :page-reviewed: 2020-03-22
 :keywords: Apache NetBeans Platform, Platform Tutorials, NetBeans Platform Learning Trail
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
 
 == What is the NetBeans Platform?
 
@@ -80,7 +83,7 @@ reading the documents below. In particular, the book, published in 2014,
 
 [.feature]
 --
-image::./nbp4beginners.jpg[role="left", link="https://leanpub.com/nbp4beginners"]
+image::kb/docs/platform/nbp4beginners.jpg[role="left", link="https://leanpub.com/nbp4beginners"]
 --
 
 *  xref:tutorials/nbm-runtime-container.adoc[Runtime Container Tutorial]
@@ -90,7 +93,7 @@ image::./nbp4beginners.jpg[role="left", link="https://leanpub.com/nbp4beginners"
 
 [.feature]
 --
-image::./refcard70.png[role="left", link="https://dzone.com/refcardz/netbeans-platform-70"]
+image::kb/docs/platform/refcard70.png[role="left", link="https://dzone.com/refcardz/netbeans-platform-70"]
 --
 
 ==== Quick Overviews
@@ -168,7 +171,7 @@ NOTE: These tutorials are alphabetically ordered.
 
 [.feature]
 --
-image::./five-easy-extend.png[role="left", link="http://www.youtube.com/watch?v=h4k5JpluJM8"]
+image::kb/docs/platform/five-easy-extend.png[role="left", link="http://www.youtube.com/watch?v=h4k5JpluJM8"]
 --
 
 == Using Maven with the NetBeans Platform
@@ -251,7 +254,7 @@ image::./five-easy-extend.png[role="left", link="http://www.youtube.com/watch?v=
 
 [.feature]
 --
-image::./nbp4beginners.jpg[role="left", link="https://leanpub.com/nbp4beginners"]
+image::kb/docs/platform/nbp4beginners.jpg[role="left", link="https://leanpub.com/nbp4beginners"]
 --
 
 *  link:https://link.springer.com/book/10.1007/978-1-4302-4102-7["The Definitive Guide to NetBeans Platform 7"]

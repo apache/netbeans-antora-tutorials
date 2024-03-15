@@ -29,6 +29,10 @@
 :description: Creating a Database Driven Application With PHP - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Creating a Database Driven Application With PHP
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 == Lesson 1a: Creating a MySQL Database
 
 This lesson describes the last preliminary step in developing the Wish List application, that of creating a sample database with test data. To complete the steps in this tutorial, you will need a database in which to store data of wishers. With the NetBeans IDE you can perform all these activities through the IDE interface. 
@@ -55,13 +59,13 @@ Before you create a database you need to create its User who will be granted the
 1. Start the IDE, switch to the Services window (Ctrl-5), and expand the Databases node.
 2. To connect to the MySQL database server, navigate to the  ``MySQL Server``  node and from the context menu choose Connect. 
 
-image::./mysql-ctxmenu-connect.png[]
+image::kb/docs/php/mysql-ctxmenu-connect.png[]
 
 
 
 . The NetBeans IDE connects to the MySQL server, checks for the databases available through the server, detects the system  ``mysql``  database, and adds the corresponding new node  ``mysql``  to the Databases tree. 
 
-image::./mysql_node_added.png[]
+image::kb/docs/php/mysql_node_added.png[]
 
 
 
@@ -70,14 +74,14 @@ To connect to the system database, navigate to the  ``mysql``  node and from the
 
 NOTE: If you have connected to the `mysql` database before, this dialog does not appear. Instead, the new connection node simply appears in the tree.
 
-image::./create-new-database-connection.png[] 
+image::kb/docs/php/create-new-database-connection.png[] 
 
 The New Database Connection dialog box shows the message "Connection established." Click OK. A new node named  ``jdbc:mysql://localhost:3306/mysql``  is added to the Databases tree.
 
 
 . Navigate to the  ``jdbc:mysql://localhost:3306/mysql``  node and from the context menu choose Execute Command. 
 
-image::./execute-command.png[] 
+image::kb/docs/php/execute-command.png[] 
 
 An SQL Command window opens. In the SQL Command window, use syntax similar to the following statement:
 
@@ -96,7 +100,7 @@ To create the database:
 * In the Database Name field, enter wishlist.
 * Switch on the Grant full access to user checkbox and from the drop down list select  ``phpuser@localhost``  Click OK.
 
-image::./create-user.png[]
+image::kb/docs/php/create-user.png[]
 
 The "Grant full access to user" function does not always work. If it does not work, <<EstablishConnection,connect to the database>> as the root user and send the SQL query [examplecode]# ``GRANT ALL ON wishlist.* TO phpuser@localhost`` #.
 
@@ -109,13 +113,13 @@ At the end of the previous section, you created the `wishlist` database with a c
 
 1. In the Services window, right-click the Databases node and select New Connection. The New Connection Wizard opens.
 
-image::./databases-ctxmenu-newconnection.png[]
+image::kb/docs/php/databases-ctxmenu-newconnection.png[]
 
 
 
 . In the New Connection Wizard's Locate Driver panel, select the `MySQL (Connector/J Driver).` Click Next. The Customize Connection panel opens.
 
-image::./locate-driver.png[]
+image::kb/docs/php/locate-driver.png[]
 
 
 . In the Database field, type `wishlist`.
@@ -123,11 +127,11 @@ image::./locate-driver.png[]
 
 . In the User Name and Password edit boxes, enter the name and the password specified in section <<CreateUser,Creating the Owner (User) of the Database>> (in our example  ``phpuser``  and  ``phpuserpw``  respectively). Tick Remember Password. Click Test Connection, and if the connection succeeds, click OK. 
 
-image::./phpuser-connection.png[]
+image::kb/docs/php/phpuser-connection.png[]
 
 The corresponding new connection node is displayed in the Databases tree. Now you can delete the `root` user's connection to the `wishlist` database. Click the  ``jdbc:mysql://localhost:3306/wishlist [root on Default schema]``  connection and choose Delete.
 
-image::./new-database-connection-added.png[]
+image::kb/docs/php/new-database-connection-added.png[]
 
 
 == Designing the Structure of the Wishlist Database
@@ -137,7 +141,7 @@ To arrange and store all the necessary data you need two tables:
 * A wishers table for storing names and passwords of registered users
 * A wishes table for storing descriptions of wishes
 
-image::./wishlist-db.png[]
+image::kb/docs/php/wishlist-db.png[]
 
 The wishers table contains three fields:
 
@@ -250,7 +254,7 @@ NOTE: You can also execute the queries one after another as described in item 2.
 
 . To view the test data, click the right mouse button on the relevant table and from the context menu choose View Data. 
 
-image::./view-test-data.png[]
+image::kb/docs/php/view-test-data.png[]
 
 To get some general understanding of database principles and design patterns, check the following tutorial: link:http://www.tekstenuitleg.net/en/articles/database_design_tutorial/1[+http://www.tekstenuitleg.net/en/articles/database_design_tutorial/1+].
 

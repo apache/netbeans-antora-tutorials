@@ -30,6 +30,10 @@
 :description: Creating an Enterprise Application with EJB 3.1 - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Creating an Enterprise Application with EJB 3.1
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This tutorial takes you through the basics of developing a Java EE 6 enterprise application and demonstrates some of the EJB 3.1 technology features that were introduced as part of the Java EE 6 specification. In this tutorial you will create an enterprise application that enables a user to post to and retrieve messages from a database.
 
 The application contains an EJB module and a web module. The EJB module contains an entity class, a session facade for the entity class and a message-driven bean. The web module contains servlets for displaying and posting messages and a singleton session bean that counts the number of users in the session.
@@ -110,13 +114,13 @@ Click Next.
 
 . Select Create EJB Module and Create Web Application Module. Click Finish.
 
-image::./new-entapp-wizard.png[title="New Project wizard"]
+image::kb/docs/javaee/new-entapp-wizard.png[title="New Project wizard"]
 
 When you click Finish, the IDE creates three projects: NewsApp, NewsApp-ejb and NewsApp-war. If you expand the NewsApp node in the Projects window, you can see that the enterprise application project does not contain any sources. All the sources will be contained in the two modules that the wizard created and which are listed under the Java EE Modules node.
 
 The enterprise application project only contains configuration and packaging details about the application. When you build and run an enterprise application the IDE creates an EAR archive and deploys the EAR to the server. In some cases, the enterprise application project will contain deployment descriptor files with additional information, but deployment descriptor files are not required when you create a Java EE enterprise application that is deployed to GlassFish Server.
 
-image::./ejb-projectswindow.png[title="Projects window showing structure of the application"] 
+image::kb/docs/javaee/ejb-projectswindow.png[title="Projects window showing structure of the application"] 
 
 
 == Coding the EJB Module
@@ -143,7 +147,7 @@ To create the  ``NewsEntity``  class, perform the following steps.
 9. For the Data Source, choose a data source (for example, select  ``jdbc/sample``  if you want to use JavaDB).
 10. Confirm that the persistence unit is using the Java Transaction API and that the Table Generation Strategy is set to Create so that the tables based on your entity classes are created when the application is deployed.
 
-image::./new-pu-wizard.png[title="Provider and Database panel"]
+image::kb/docs/javaee/new-pu-wizard.png[title="Provider and Database panel"]
 
 
 
@@ -168,7 +172,7 @@ private String body;
 
 . Select the  ``body``  and  ``title``  fields in the dialog box. Click Generate.
 
-image::./ejb-gettersetter.png[title="Generate Getters and Setters dialog box"]
+image::kb/docs/javaee/ejb-gettersetter.png[title="Generate Getters and Setters dialog box"]
 
 When you click Generate, the IDE adds getter and setter methods for the fields.
 
@@ -195,7 +199,7 @@ To create the message-driven bean, perform the following steps:
 6. In the Add Message Destination dialog box, type *jms/NewMessage* and select Queue for the destination type. Click OK.
 7. Confirm that the project destination is correct. Click Finish.
 
-image::./ejb-newmessage.png[title="New Message-Driven Bean Wizard"]
+image::kb/docs/javaee/ejb-newmessage.png[title="New Message-Driven Bean Wizard"]
 
 When you click Finish, the bean class  ``NewMessage.java``  opens in the Source Editor. You can see that the IDE added the  ``@MessageDriven``  annotation and configuration properties to the class.
 
@@ -298,7 +302,7 @@ To create the session facade, perform the following steps:
 3. Select  ``ejb.NewsEntity``  from the list of available entity classes and click Add to move the class to the Selected Entity Classes pane. Click Next.
 4. Check that the Package is set to  ``ejb`` . Click Finish.
 
-image::./ejb-sessionforentity.png[title="New Message-Driven Bean Wizard"]
+image::kb/docs/javaee/ejb-sessionforentity.png[title="New Message-Driven Bean Wizard"]
 
 When you click Finish, the IDE generates the session facade class  ``NewsEntityFacade.java``  and  ``AbstractFacade.java``  and opens the files in the editor. As you can see in the generated code, the annotation  ``@Stateless``  is used to declare  ``NewsEntityFacade.java``  as a stateless session bean component. The IDE also adds the  ``PersistenceContext``  annotation to inject the resource directly into the session bean component.  ``NewsEntityFacade.java``  extends  ``AbstractFacade.java`` , which contains the business logic and manages the transaction.
 
@@ -328,7 +332,7 @@ To create the singleton session bean, perform the following steps.
 4. Type *ejb* for the Package name.
 5. Select Singleton. Click Finish.
 
-image::./ejb-newsingleton.png[title="Creating a singleton session bean in the New Session Bean wizard"]
+image::kb/docs/javaee/ejb-newsingleton.png[title="Creating a singleton session bean in the New Session Bean wizard"]
 
 When you click Finish, the IDE creates the singleton session bean class and opens the class in the editor. You can see that the IDE added the annotation  ``@Singleton``  to the class to declare a singleton session bean. The wizard also annotated the class with  ``@LocalBean`` .
 
@@ -364,7 +368,7 @@ When you implement  ``HttpSessionListener`` , the IDE displays a warning in the 
 
 . Click the warning badge in the left margin and choose "Implement all abstract methods".
 
-image::./ejb-implementabstract.png[title="Editor hint to implement abstract methods"]
+image::kb/docs/javaee/ejb-implementabstract.png[title="Editor hint to implement abstract methods"]
 
 The IDE adds the  ``sessionCreated``  and  ``sessionDestroyed``  methods.
 
@@ -621,7 +625,7 @@ out.println("</body>");
 
 NOTE: When selecting the libraries to import for  ``Connection`` ,  ``ConnectionFactory`` ,  ``Session``  and  ``Queue`` , *confirm that you import the  ``javax.jms``  libraries*.
 
-image::./import-jms.png[title="Select the JMS libraries in the Fix All Imports dialog"]
+image::kb/docs/javaee/import-jms.png[title="Select the JMS libraries in the Fix All Imports dialog"]
 
 
 
@@ -642,7 +646,7 @@ To set the relative URL and run the application, do the following:
 
 When you run the project, the  ``ListNews``  servlet opens in your browser and displays a list of the messages in the database. When you first run the project, the database is empty, but you can click Add Message to add a message.
 
-image::./ejb-browser1.png[title="The ListNews Servlet page"]
+image::kb/docs/javaee/ejb-browser1.png[title="The ListNews Servlet page"]
 
 When you add a message with the  ``PostMessage``  servlet, the message is sent to the message-driven bean for writing to persistent storage, and the  ``ListNews``  servlet is called to display the messages in the database. The list of messages in the database retrieved by  ``ListNews``  often does not yet contain the new message because our message service is asynchronous.
 

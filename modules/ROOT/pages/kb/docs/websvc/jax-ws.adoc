@@ -29,12 +29,16 @@
 :description: Getting Started with JAX-WS Web Services - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Getting Started with JAX-WS Web Services
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 link:http://www.jcp.org/en/jsr/detail?id=224[+Java API for XML Web Services (JAX-WS), JSR 224+], is an important part of the Java EE platform. A follow-up to the release of Java API for XML-based RPC 1.1(JAX-RPC), JAX-WS simplifies the task of developing web services using Java technology. It addresses some of the issues in JAX-RPC 1.1 by providing support for multiple protocols such as SOAP 1.1, SOAP 1.2, XML, and by providing a facility for supporting additional protocols along with HTTP. JAX-WS uses JAXB 2.0 for data binding and supports customizations to control generated service endpoint interfaces. With its support for annotations, JAX-WS simplifies web service development and reduces the size of runtime JAR files.
 
 This document demonstrates the basics of using the IDE to develop a JAX-WS web service. After you create the web service, you write three different web service clients that use the web service over a network, which is called "consuming" a web service. The three clients are a Java class in a Java SE application, a servlet, and a JSP page in a web application. A more advanced tutorial focusing on clients is xref:./client.adoc[+Developing JAX-WS Web Service Clients+].
 
 
-image::./netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
+image::kb/docs/websvc/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
 
 * Consuming the Web Service in
 
@@ -121,7 +125,7 @@ You can either deploy your web service in a web container or in an EJB container
 2. Name the web service  ``CalculatorWS``  and type  ``org.me.calculator``  in Package. Leave Create Web Service from Scratch selected.
 3. If you are creating a Java EE project on GlassFish or WebLogic, select Implement Web Service as a Stateless Session Bean. 
 
-image::./generate-ws-ee6.png[]
+image::kb/docs/websvc/generate-ws-ee6.png[]
 
 [start=4]
 . Click Finish. The Projects window displays the structure of the new web service and the source code is shown in the editor area.
@@ -138,13 +142,13 @@ The goal of this exercise is to add to the web service an operation that adds tw
 1. Either:
 * Change to the Design view in the editor. 
 
-image::./design-view.png[]
+image::kb/docs/websvc/design-view.png[]
 
 Or:
 
 * Find the web service's node in the Projects window. Right-click that node. A context menu opens.
 
-image::./add-op-cx-menu-item.png[]
+image::kb/docs/websvc/add-op-cx-menu-item.png[]
 
 [start=2]
 . Click Add Operation in either the visual designer or the context menu. The Add Operation dialog opens.
@@ -161,7 +165,7 @@ image::./add-op-cx-menu-item.png[]
 You now see the following:
 
 
-image::./jaxws-60-add-operation.png[]
+image::kb/docs/websvc/jaxws-60-add-operation.png[]
 
 [start=6]
 . Click OK at the bottom of the Add Operation dialog box. You return to the editor.
@@ -172,14 +176,14 @@ image::./jaxws-60-add-operation.png[]
 The visual designer now displays the following:
 
 
-image::./design-view-with-op.png[title="Web service visual designer showing added operation"]
+image::kb/docs/websvc/design-view-with-op.png[title="Web service visual designer showing added operation"]
 
 [start=8]
 . Click Source and view the code that you generated in the previous steps. It differs whether you created the service as an Java EE stateless bean or not. Can you see the difference in the screenshots below? (A Java EE 6 or Java EE 7 service that is not implemented as a stateless bean resembles a Java EE 5 service.)
 
-image::./jaxws-60-source.png[] 
+image::kb/docs/websvc/jaxws-60-source.png[] 
 
-image::./stateless-ejb-code1.png[]
+image::kb/docs/websvc/stateless-ejb-code1.png[]
 
 *Note.* In NetBeans IDE 7.3 and 7.4 you will notice that in the generated  ``@WebService``  annotation the service name is specified explicitly:
  ``@WebService(serviceName = "CalculatorWS")`` .
@@ -212,18 +216,18 @@ If you are using the Tomcat Web Server, there is no test client. You can only ru
 1. Right-click the project and choose Deploy. The IDE starts the application server, builds the application, and deploys the application to the server. You can follow the progress of these operations in the CalculatorWSApplication (run-deploy) and the GlassFish server or Tomcat tabs in the Output view.
 2. In the IDE's Projects tab, expand the Web Services node of the CalculatorWSApplication project. Right-click the CalculatorWS node, and choose Test Web Service. 
 
-image::./jax-ws-testws.png[]
+image::kb/docs/websvc/jax-ws-testws.png[]
 
 The IDE opens the tester page in your browser, if you deployed a web application to the GlassFish server. For the Tomcat Web Server and deployment of EJB modules, the situation is different:
 
 * If you deployed to the GlassFish server, type two numbers in the tester page, as shown below: 
 
-image::./jax-ws-tester.png[]
+image::kb/docs/websvc/jax-ws-tester.png[]
 
 The sum of the two numbers is displayed:
 
 
-image::./jax-ws-tester2.png[]
+image::kb/docs/websvc/jax-ws-tester2.png[]
 
 
 == [[Samples]] 
@@ -248,12 +252,12 @@ In this section, you create a standard Java application. The wizard that you use
 2. Right-click the  ``CalculatorWS_Client_Application``  node and choose New > Web Service Client. The New Web Service Client wizard opens.
 3. Select Project as the WSDL source. Click Browse. Browse to the CalculatorWS web service in the CalculatorWSApplication project. When you have selected the web service, click OK.
 
-image::./browse-ws.png[]
+image::kb/docs/websvc/browse-ws.png[]
 
 [start=4]
 . Do not select a package name. Leave this field empty.
 
-image::./javaclient-pkg.png[]
+image::kb/docs/websvc/javaclient-pkg.png[]
 
 [start=5]
 . Leave the other settings at default and click Finish.
@@ -261,12 +265,12 @@ image::./javaclient-pkg.png[]
 The Projects window displays the new web service client, with a node for the  ``add``  method that you created:
 
 
-image::./ws-ref-in-client-project.png[]
+image::kb/docs/websvc/ws-ref-in-client-project.png[]
 
 [start=6]
 . Double-click your main class so that it opens in the Source Editor. Drag the  ``add``  node below the  ``main()``  method.
 
-image::./dnd-add.png[]
+image::kb/docs/websvc/dnd-add.png[]
 
 You now see the following:
 
@@ -339,7 +343,7 @@ The New Web Service Client wizard opens.
 [start=4]
 . Select the CalculatorWS web service in the CalculatorWSApplication project. Click OK to close the Browse Web Services dialog box.
 
-image::./browse-ws.png[]
+image::kb/docs/websvc/browse-ws.png[]
 
 [start=5]
 . Confirm that the package name is empty in the New Web Service Client wizard and leave the other settings at the default value. Click Finish.
@@ -440,7 +444,7 @@ protected void processRequest(HttpServletRequest request, HttpServletResponse re
 
 The server starts, the application is built and deployed, and the browser opens, displaying the calculation result, as shown below: 
 
-image::./jaxws-60-webclient.png[]
+image::kb/docs/websvc/jaxws-60-webclient.png[]
 
 
 === Client 3: JSP Page in Web Application
@@ -465,7 +469,7 @@ If JSP is not available in the popup menu, choose New > Other and select JSP in 
 [start=6]
 . Select Project as the WSDL source. Click Browse. Browse to the CalculatorWS web service in the CalculatorWSApplication project. When you have selected the web service, click OK.
 
-image::./browse-ws.png[]
+image::kb/docs/websvc/browse-ws.png[]
 
 [start=7]
 . Do not select a package name. Leave this field empty.
@@ -475,7 +479,7 @@ image::./browse-ws.png[]
 
 The Projects window displays the new web service client, as shown below:
 
-image::./ws-ref-in-jsp-client.png[]
+image::kb/docs/websvc/ws-ref-in-jsp-client.png[]
 
 [start=9]
 . In the Web Service References node, expand the node that represents the web service. The  ``add``  operation, which you will invoke from the client, is now exposed.
@@ -510,7 +514,7 @@ Change the value for  ``i``  and  ``j``  from 0 to other integers, such as 3 and
 
 The server starts, if it wasn't running already. The application is built and deployed, and the browser opens, displaying the calculation result:
 
-image::./jax-ws-project-jsp-result.png[]
+image::kb/docs/websvc/jax-ws-project-jsp-result.png[]
 
 
 xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]

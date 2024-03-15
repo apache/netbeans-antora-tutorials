@@ -29,6 +29,10 @@
 :description: Creating a Simple Web Application Using a MySQL Database - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Creating a Simple Web Application Using a MySQL Database
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 Written by Troy Giunipero
 
 This document describes how to create a simple web application that connects to a MySQL database server. It also covers some basic ideas and technologies in web development, such as link:http://www.oracle.com/technetwork/java/overview-138580.html[+JavaServer Pages+] (JSP), link:http://www.oracle.com/technetwork/java/index-jsp-135995.html[+JavaServer Pages Standard Tag Library+] (JSTL), the link:http://docs.oracle.com/javase/tutorial/jdbc/overview/index.html[+Java Database Connectivity+] (JDBC) API, and two-tier, client-server architecture. This tutorial is designed for beginners who have a basic understanding of web development and are looking to apply their knowledge using a MySQL database.
@@ -38,7 +42,7 @@ link:http://www.mysql.com[+MySQL+] is a popular open source database management 
 This tutorial is a continuation from the xref:kb/docs/ide/mysql.adoc[+Connecting to a MySQL Database+] tutorial and assumes that you have already created a MySQL database named `MyNewDatabase`, which you have registered a connection for in the NetBeans IDE. The table data used in that tutorial is contained in link:https://netbeans.org/projects/samples/downloads/download/Samples%252FJava%2520Web%252Fifpwafcad.sql[+ifpwafcad.sql+] and is also required for this tutorial. This SQL file creates two tables, `Subject` and `Counselor`, then populates them with sample data. If needed, save this file to your computer, then open it in the NetBeans IDE and run it on the MySQL database named `MyNewDatabase`.
 
 
-image::./netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
+image::kb/docs/web/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
 
 
 *To follow this tutorial, you need the following software and resources.*
@@ -72,7 +76,7 @@ Simple web applications can be designed using a _two-tier architecture_, in whic
 
 The application you build in this tutorial involves the creation of two JSP pages. In each of these pages you use HTML and CSS to implement a simple interface, and apply JSTL technology to perform the logic that directly queries the database and inserts the retrieved data into the two pages. The two database tables, `Subject` and `Counselor`, are contained in the MySQL database, `MyNewDatabase`, which you create by completing the xref:kb/docs/ide/mysql.adoc[+Connecting to a MySQL Database+] tutorial. Consider the following two-tier scenario.
 
-image::./ifpwafcad-structure.png[title="Sample structure of a two-tier web application"]
+image::kb/docs/web/ifpwafcad-structure.png[title="Sample structure of a two-tier web application"]
 
 The welcome page (`index.jsp`) presents the user with a simple HTML form. When a browser requests `index.jsp`, the JSTL code within the page initiates a query on `MyNewDatabase`. It retrieves data from the `Subject` database table, and inserts it into to the page before it is sent to the browser. When the user submits his or her selection in the welcome page's HTML form, the submit initiates a request for the response page (`response.jsp`). Again, the JSTL code within the page initiates a query on `MyNewDatabase`. This time, it retrieves data from both the `Subject` and `Counselor` tables and inserts it into to the page, allowing the user to view data based upon his or her selection when the page is returned to the browser.
 
@@ -81,12 +85,12 @@ In order to implement the scenario described above, you develop a simple applica
 
 === index.jsp
 
-image::./index-page.png[title="index.jsp displayed in a browser"] 
+image::kb/docs/web/index-page.png[title="index.jsp displayed in a browser"] 
 
 
 === response.jsp
 
-image::./response-page.png[title="response.jsp displayed in a browser"]
+image::kb/docs/web/response-page.png[title="response.jsp displayed in a browser"]
 
 
 
@@ -97,7 +101,7 @@ Begin by creating a new Java web project in the IDE:
 
 1. Choose File > New Project (Ctrl-Shift-N; ⌘-Shift-N on Mac) from the main menu. Select the Java Web category, then select Web Application. Click Next. 
 
-image::./new-project.png[title="Use the IDE's New Project wizard to create a new project"]
+image::kb/docs/web/new-project.png[title="Use the IDE's New Project wizard to create a new project"]
 
 The New Project wizard allows you to create an empty web application in a standard IDE project. The standard project uses an IDE-generated Ant build script to compile, deploy, and run the application.
 
@@ -114,7 +118,7 @@ The New Project wizard allows you to create an empty web application in a standa
 
 . In the Java EE Version field, select *Java EE 5*. 
 
-image::./server-settings.png[title="Specify server settings in the New Web Application wizard"]
+image::kb/docs/web/server-settings.png[title="Specify server settings in the New Web Application wizard"]
 
 Java EE 6 and Java EE 7 web projects do not require the use of the `web.xml` deployment descriptor, and the NetBeans project template does not include the `web.xml` file in Java EE 6 and Java EE 7 projects. However, this tutorial demonstrates how to declare a data source in the deployment descriptor, and it does not rely on any features specific to Java EE 6 or Java EE 7, so you can set the project version to Java EE 5.
 
@@ -144,7 +148,7 @@ Confirm that `index.jsp` is open in the editor. If the file is not already open,
 2. Change the text between the `<h1>` tags to: `Welcome to IFPWAFCAD, the International Former Professional Wrestlers' Association for Counseling and Development!`.
 3. Open the IDE's Palette by choosing Window > Palette (Ctrl-Shift-8; ⌘-Shift-8 on Mac) from the main menu. Hover your pointer over the Table icon from the HTML category and note that the default code snippet for the item displays. 
 
-image::./palette.png[title="Palette displays code snippet when hovering over an item"] 
+image::kb/docs/web/palette.png[title="Palette displays code snippet when hovering over an item"] 
 
 [tips]#You can configure the Palette to your liking - right-click in the Palette and choose Show Big Icons and Hide Item Names to have it display as in the image above.#
 
@@ -181,7 +185,7 @@ The HTML table code is generated and added to your page.
 
 . For the bottom row of the table, insert an HTML form. To do so, place your cursor between the second pair of `<td>` tags, then double-click the HTML form ( images:./html-form-icon.png[] ) icon in the Palette. In the Insert Form dialog, type in `response.jsp` in the Action text field, then click OK. 
 
-image::./insert-form.png[title="Specify form settings in the Insert Form dialog"]
+image::kb/docs/web/insert-form.png[title="Specify form settings in the Insert Form dialog"]
 
 
 . Type in the following content between the `<form>` tags (new content shown in *bold*):
@@ -250,7 +254,7 @@ The number of options for the drop-down is currently not important. Later in the
 
 To view this page in a browser, right-click in the editor and choose Run File (Shift-F6; Fn-Shift-F6 on Mac). When you do this, the JSP page is automatically compiled and deployed to your server. The IDE opens your default browser to display the page from its deployed location.
 
-image::./browser-output.png[title="index.jsp displays in a browser"]
+image::kb/docs/web/browser-output.png[title="index.jsp displays in a browser"]
 
 
 [[responsePage]]
@@ -262,7 +266,7 @@ In order to prepare the interface for `response.jsp` you must first create the f
 2. In the JSP File Name field, enter `response`. Note that Web Pages is currently selected for the Location field, meaning that the file will be created in the project's `web` directory. This is the same location as where the `index.jsp` welcome page resides.
 3. Accept any other default settings and click Finish. A template for the new `response.jsp` page is generated and opens in the editor. A new JSP node also displays under Web Pages in the Projects window. 
 
-image::./response-jsp-node.png[title="response.jsp node appears in the Projects window"]
+image::kb/docs/web/response-jsp-node.png[title="response.jsp node appears in the Projects window"]
 
 
 . In the editor, change the title to: `IFPWAFCAD - \{placeholder}`.
@@ -305,7 +309,7 @@ image::./response-jsp-node.png[title="response.jsp node appears in the Projects 
 
 To view this page in a browser, right-click in the editor and choose Run File (Shift-F6; Fn-Shift-F6 on Mac). The page compiles, is deployed to the GlassFish server, and opens in your default browser.
 
-image::./browser-response.png[title="response.jsp displays in a browser"]
+image::kb/docs/web/browser-response.png[title="response.jsp displays in a browser"]
 
 
 [[stylesheet]]
@@ -421,7 +425,7 @@ The following steps demonstrate how to declare a connection pool, and a data sou
 1. Open the New File wizard by pressing the New File ( images:./new-file-btn.png[] ) button in the IDE's main toolbar. Select the GlassFish server category, then select JDBC Resource and click Next.
 2. In step 2, General Attributes, choose the Create New JDBC Connection Pool option, then in the JNDI Name text field, type in *jdbc/IFPWAFCAD*. 
 
-image::./jdbc-resource-wizard.png[title="Specify data source settings in the JDBC Resource wizard"] 
+image::kb/docs/web/jdbc-resource-wizard.png[title="Specify data source settings in the JDBC Resource wizard"] 
 
 [tips]#The JDBC data source relies on link:http://www.oracle.com/technetwork/java/jndi/index.html[+JNDI+], the Java Naming and Directory Interface. The JNDI API provides a uniform way for applications to find and access data sources. For more information, see link:http://docs.oracle.com/javase/jndi/tutorial/[+The JNDI Tutorial+].#
 
@@ -434,7 +438,7 @@ image::./jdbc-resource-wizard.png[title="Specify data source settings in the JDB
 
 . In Step 4, type in *IfpwafcadPool* for JDBC Connection Pool Name. Make sure the Extract from Existing Connection option is selected, and choose `jdbc:mysql://localhost:3306/MyNewDatabase` from the drop-down list. Click Next. 
 
-image::./jdbc-resource-wizard2.png[title="Specify connection pool settings in the JDBC Resource wizard"] 
+image::kb/docs/web/jdbc-resource-wizard2.png[title="Specify connection pool settings in the JDBC Resource wizard"] 
 
 *Note: *The wizard detects any database connections that have been set up in the IDE. Therefore, you need to have already created a connection to the `MyNewDatabase` database at this point. You can verify what connections have been created by opening the Services window (Ctrl-5; ⌘-5 on Mac) and looking for connection nodes ( images:./connection-node-icon.png[] ) under the Databases category.
 
@@ -443,7 +447,7 @@ image::./jdbc-resource-wizard2.png[title="Specify connection pool settings in th
 
 Note that the IDE extracts information from the database connection you specified in the previous step, and sets name-value properties for the new connection pool.
 
-image::./jdbc-resource-wizard3.png[title="Default values are based on information extracted from the selected database connection"]
+image::kb/docs/web/jdbc-resource-wizard3.png[title="Default values are based on information extracted from the selected database connection"]
 
 
 . Click Finish. The wizard generates a `glassfish-resources.xml` file that contains entries for the data source and connection pool you specified.
@@ -455,7 +459,7 @@ To confirm that a new data source and connection pool are indeed registered with
 1. In the Projects window, right-click the IFPWAFCAD project node and choose Deploy. The server starts up if not already running, and the project is compiled and deployed to it.
 2. Open the Services window (Ctrl-5; ⌘-5 on Mac) and expand the Servers > GlassFish > Resources > JDBC > JDBC Resources and Connection Pools nodes. Note that the new data source and connection pool are now displayed: 
 
-image::./services-window-glassfish.png[title="New data source and connection pool displayed in Services window"]
+image::kb/docs/web/services-window-glassfish.png[title="New data source and connection pool displayed in Services window"]
 
 
 [[referenceDataSource]]
@@ -477,7 +481,7 @@ Perform the following steps to reference the data source in the application's de
 
 The Description field is optional, but you can enter a human-readable description of the resource, e.g., `Database for IFPWAFCAD application`.
 
-image::./add-resource-reference.png[title="Specify resource properties in the Add Resource Reference dialog"]
+image::kb/docs/web/add-resource-reference.png[title="Specify resource properties in the Add Resource Reference dialog"]
 
 The new resource is now listed under the Resource References heading.
 
@@ -508,7 +512,7 @@ In order to demonstrate this, open the Servers manager (Choose Tools > Servers).
 1. Choose Tools > Servers to open the Servers manager. Select the GlassFish server in the left pane.
 2. In the main pane, select the Enable JDBC Driver Deployment option. 
 
-image::./servers-window.png[title="JDBC Driver Deployment option enables automatic driver deployment"]
+image::kb/docs/web/servers-window.png[title="JDBC Driver Deployment option enables automatic driver deployment"]
 
 
 . Before you close the Servers manager, make a note of the path indicated in the Domains folder text field. When you connect to the GlassFish server in the IDE, you are actually connecting to an _instance_ of the application server. Each instance runs applications in a unique domain, and the Domain Name field indicates the name of the domain your server is using. As shown in the image above, the driver JAR file should be located within `domain1`, which is the default domain created upon installing the GlassFish server.
@@ -522,7 +526,7 @@ image::./servers-window.png[title="JDBC Driver Deployment option enables automat
 
 . Deploy your project to the server. In the IDE's Projects window, choose Deploy from the right-click menu of the project node. You can view progress in the IDE's Output window (Ctrl-4; ⌘-4 on Mac). The output indicates that the MySQL driver is deployed to a location in the GlassFish server. 
 
-image::./output-window.png[title="Output window indicates that the MySQL driver has been deployed"] 
+image::kb/docs/web/output-window.png[title="Output window indicates that the MySQL driver has been deployed"] 
 
 Now, if you return to the `domain1/lib` subfolder on your computer, you can see that the `mysql-connector-java-5.1.6-bin.jar` file has been automatically added.
 
@@ -559,7 +563,7 @@ Now you can implement the code that dynamically retrieves and displays data for 
 
 The IDE provides several database-specific JSTL snippets which you can select from the Palette (Ctrl-Shift-8; ⌘-Shift-8 on Mac).
 
-image::./palette-db.png[title="Choose database-specific JSTL snippets from the Palette"]
+image::kb/docs/web/palette-db.png[title="Choose database-specific JSTL snippets from the Palette"]
 
 
 ==== index.jsp
@@ -568,7 +572,7 @@ In order to dynamically display the contents of the form in `index.jsp`, you nee
 
 1. Hover your mouse over the DB Report item in the Palette. 
 
-image::./db-report.png[title="Type 'db' and press Ctrl-Space to access database-specific JSTL snippets"]
+image::kb/docs/web/db-report.png[title="Type 'db' and press Ctrl-Space to access database-specific JSTL snippets"]
 
 The DB Report item uses the `<sql:query>` tag to create an SQL query, then it uses the `<c:forEach>` tag to loop through the query's `resultset` and output the retrieved data.
 
@@ -580,7 +584,7 @@ The DB Report item uses the `<sql:query>` tag to create an SQL query, then it us
 * *Data Source:* `jdbc/IFPWAFCAD`
 * *Query Statement:* `SELECT subject_id, name FROM Subject`
 
-image::./insert-db-report.png[title="Use the Insert DB Report dialog to specify query-specific details"]
+image::kb/docs/web/insert-db-report.png[title="Use the Insert DB Report dialog to specify query-specific details"]
 
 
 . Click OK. The following content is generated in the `index.jsp` file. (New content shown in *bold*.)
@@ -627,7 +631,7 @@ Note that the IDE automatically added `taglib` directives needed for the JSTL ta
 
 When you choose Run, the IDE deploys the project to the GlassFish server, the index page is compiled into a servlet, and the welcome page opens in your default browser. The code generated from the DB Report item creates the following table in the welcome page.
 
-image::./db-report-table.png[title="Use DB Report for quick prototyping of database table data"]
+image::kb/docs/web/db-report-table.png[title="Use DB Report for quick prototyping of database table data"]
 
 As you can see, the DB Report item enables you to quickly test your database connection, and enables you to view table data from the database in your browser. This can be particularly useful when prototyping.
 
@@ -736,7 +740,7 @@ The response page provides details for the counselor who corresponds to the subj
 * *Data Source:* `jdbc/IFPWAFCAD`
 * *Query Statement:* `SELECT * FROM Subject, Counselor WHERE Counselor.counselor_id = Subject.counselor_idfk AND Subject.subject_id = ? <sql:param value="${param.subject_id}"/>`
 
-image::./insert-db-query2.png[title="Use the Insert DB Query dialog to specify query-specific details"]
+image::kb/docs/web/insert-db-query2.png[title="Use the Insert DB Query dialog to specify query-specific details"]
 
 
 . Click OK. The following content is generated in the `response.jsp` file. (New content shown in *bold*.)
@@ -839,7 +843,7 @@ Click the Run Project ( images:./run-project-btn.png[] ) button in the main tool
 
 When `index.jsp` displays in the browser, select a subject from the drop-down list and click `submit`. You should now be forwarded to the `response.jsp` page, showing details corresponding to your selection.
 
-image::./response-display.png[title="response.jsp displayed in a browser, showing data retrieved from database"]
+image::kb/docs/web/response-display.png[title="response.jsp displayed in a browser, showing data retrieved from database"]
 
 This concludes the Creating a Simple Web Application Using a MySQL Database tutorial. This document demonstrated how to create a simple web application that connects to a MySQL database. It also demonstrated how to construct an application using a basic two-tier architecture, and utilized numerous technologies including JSP, JSTL, JDBC, and JNDI as a means of accessing and displaying data dynamically.
 
@@ -865,12 +869,12 @@ Use the IDE's Services window (Ctrl-5; ⌘-5 on Mac) to ensure that the MySQL se
 * To connect to the MySQL database server, right-click the MySQL Server node and choose Connect.
 * If a connection node ( images:./db-connection-node.png[] ) for `MyNewDatabase` does not display in the Services window, you can create a connection by right-clicking the MySQL driver node ( images:./driver-node.png[] ) and choosing Connect Using. Enter the required details in the dialog that displays. 
 
-image::./new-db-connection-dialog.png[title="Establish a database connection in the IDE using the New Database Connection dialog"] 
+image::kb/docs/web/new-db-connection-dialog.png[title="Establish a database connection in the IDE using the New Database Connection dialog"] 
 
 [tips]#The fields provided in the New Database Connection dialog mirror the URL string entered in the Show JDBC URL option. Therefore, if you know the URL (e.g., `jdbc:mysql://localhost:3306/MyNewDatabase`) you can paste it into the Show JDBC URL field, and the remaining dialog fields become automatically populated.#
 * To ensure that the `Subject` and `Counselor` tables exist and that they contain sample data, expand the `MyNewDatabase` connection node ( images:./db-connection-node.png[] ) and locate the `MyNewDatabase` catalog node ( images:./db-catalog-node.png[] ). Expand the catalog node to view existing tables. You can view table data by right-clicking a table node and choosing View Data. 
 
-image::./services-window-view-data.png[title="View table data by choosing View Data from the right-click menu of a database table node"]
+image::kb/docs/web/services-window-view-data.png[title="View table data by choosing View Data from the right-click menu of a database table node"]
 
 
 [[datasource]]
@@ -918,7 +922,7 @@ Ensure that the connection pool is working correctly for the server.
 4. In the tree on the left side of the console, expand the Resources > JDBC > JDBC Connection Pools > `IfpwafcadPool` node. Details for the `IfpwafcadPool` connection pool display in the main window.
 5. Click the Ping button. If the connection pool is set up correctly, you will see a '`Ping Succeeded`' message. 
 
-image::./ping-succeeded.png[title="Test your connection pool by clicking Ping in the GlassFish server Admin Console"]
+image::kb/docs/web/ping-succeeded.png[title="Test your connection pool by clicking Ping in the GlassFish server Admin Console"]
 
 
 . If the ping fails, click the Additional Properties tab and ensure that the listed property values are correctly set.

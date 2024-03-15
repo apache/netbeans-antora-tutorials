@@ -29,6 +29,10 @@
 :description: Getting Started with Cordova Applications - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Getting Started with Cordova Applications
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This document demonstrates how to create an HTML5 project in the IDE that is packaged as a mobile application and run in a mobile device simulator. When you create an HTML5 application you have the option to create the application using an Apache Cordova site template. Apache Cordova provides a group of APIs that enable you to develop an application with HTML, CSS and JavaScript that is packaged as a native mobile application. The application runs on the mobile device and can access the native functions of the device such as the GPS or camera. By using the Cordova APIs a developer can build a mobile application without writing any native code.
 
 This document demonstrates how to install the software that is necessary to install and develop an application with Cordova. After you install Cordova you will use the Cordova template in the New Project wizard to create a Cordova application. You will then add some code and run the application in the mobile device simulator. This tutorial will use the iOS simulator, but the steps are similar if you want to use an Android device emulator.
@@ -192,7 +196,7 @@ For this tutorial you will create a very basic HTML5 project that has an  ``inde
 1. Select File > New Project (Ctrl-Shift-N; ⌘-Shift-N on Mac) in the main menu to open the New Project wizard.
 2. Select the *HTML5* category and then select *Cordova Application*. Click Next.
 
-image::./cordova-newproject-wizard1.png[title="Cordova Application template in the New Project wizard"]
+image::kb/docs/webclient/cordova-newproject-wizard1.png[title="Cordova Application template in the New Project wizard"]
 
 [start=3]
 . Type *CordovaMapApp* for the Project Name and specify the directory on your computer where you want to save the project. Click Next.
@@ -200,7 +204,7 @@ image::./cordova-newproject-wizard1.png[title="Cordova Application template in t
 [start=4]
 . In Step 3. Site Template, confirm that Download Online Template is selected and that the Cordova Hello World template is selected in the list. Click Next.
 
-image::./cordova-newproject-wizard2.png[title="Site Templates panel in the New HTML5 Application wizard"]
+image::kb/docs/webclient/cordova-newproject-wizard2.png[title="Site Templates panel in the New HTML5 Application wizard"]
 
 *Note:* You must be online to create a project that is based on one of the online templates in the list.
 
@@ -210,7 +214,7 @@ image::./cordova-newproject-wizard2.png[title="Site Templates panel in the New H
 
 You can use the text field in the panel to filter the list of JavaScript libraries. For example, type *jq* in the field to help you find the  ``jquery``  libraries. You can Ctrl-click the names of the libraries to select multiple libraries.
 
-image::./cordova-newproject-wizard3.png[title="JavaScript Libraries panel in the New HTML5 Application wizard"]
+image::kb/docs/webclient/cordova-newproject-wizard3.png[title="JavaScript Libraries panel in the New HTML5 Application wizard"]
 
 *Notes.*
 
@@ -222,7 +226,7 @@ image::./cordova-newproject-wizard3.png[title="JavaScript Libraries panel in the
 
 When you click Finish the IDE creates the project and displays a node for the project in the Projects window and opens the  ``index.html``  file in the editor.
 
-image::./cordova-projects-window1.png[title="Projects window"]
+image::kb/docs/webclient/cordova-projects-window1.png[title="Projects window"]
 
 If you expand the  ``js/libs``  folder in the Projects window you can see that the JavaScript libraries that you specified in the New Project wizard were automatically added to the project. You can remove a JavaScript library from a project by right-clicking the JavaScript file and choosing Delete in the popup menu.
 
@@ -234,14 +238,14 @@ You can now test that your project runs and is deployed to the emulator for your
 [start=7]
 . Click the browser select icon in the toolbar and confirm that your target mobile device emulator is selected in the Cordova column in the table. In the Cordova column you can select the Android Emulator or iOS Simulator (requires OS X and XCode). 
 
-image::./cordova-select-browser.png[title="Browser selected in dropdown list in toolbar"]
+image::kb/docs/webclient/cordova-select-browser.png[title="Browser selected in dropdown list in toolbar"]
 
 [start=8]
 . Click the Run icon in the toolbar.
 
 When you choose Run the IDE deploys the Cordova application to the emulator.
 
-image::./cordova-ios7-run.png[title="Application in the iOS Simulator"]
+image::kb/docs/webclient/cordova-ios7-run.png[title="Application in the iOS Simulator"]
 
 *Note.* If you are deploying to the iOS Simulator the simulator should open automatically. If you are deploying the application to an Android emulator you will need to configure and start the emulator before you run the application. To watch a screencast that demonstrates deploying a Cordova application to the Android emulator, see xref:kb/docs/web/html5-cordova-screencast.adoc[+Video of Getting Started with Cordova Development+].
 
@@ -285,7 +289,7 @@ In the editor you can see that the IDE generated some code based on the Cordova 
 
 You can see the path to the files in the Projects window and you can use the code completion in the editor to help you.
 
-image::./cordova-code-completion.png[title="Code completion in the editor"]
+image::kb/docs/webclient/cordova-code-completion.png[title="Code completion in the editor"]
 
 [start=3]
 . Add the following link to the Google Maps JavaScript API between the `<head>` tags.
@@ -366,7 +370,7 @@ In this exercise you will modify the list of Cordova plugins that are installed 
 1. Right-click the project node in the Projects window and choose Properties in the popup menu.
 2. Select *Cordova* in the list of categories. 
 
-image::./cordova-properties-application.png[title="Cordova Plugins tab in the Project Properties window"]
+image::kb/docs/webclient/cordova-properties-application.png[title="Cordova Plugins tab in the Project Properties window"]
 
 You can use the Application tab to view and edit the Cordova configuration details about the application that are specified in `config.xml`.
 
@@ -384,7 +388,7 @@ The Selected pane displays a list of the plugins that are installed in the appli
 [start=4]
 . Remove all plugins except Device API, Dialogs (Notifications) and Geolocation. Click OK. 
 
-image::./cordova-properties-plugins.png[title="Cordova Plugins tab in the Project Properties window"]
+image::kb/docs/webclient/cordova-properties-plugins.png[title="Cordova Plugins tab in the Project Properties window"]
 
 
 === Editing the JavaScript File
@@ -495,15 +499,15 @@ function gotPosition(position) {
 
 On the iOS Simulator you are prompted to allow the application to use your current location.
 
-image::./cordova-ios7-run1.png[title="Prompt for location in the application"]
+image::kb/docs/webclient/cordova-ios7-run1.png[title="Prompt for location in the application"]
 
 You can test a simulated location in the iOS Simulator by selecting Debug > Location > Custom Location from the main menu of the iOS Simulator to open the Custom Location dialog box.
 
-image::./cordova-ios-customlocation.png[title="Custom Location dialog box in iOS Simulator"]
+image::kb/docs/webclient/cordova-ios-customlocation.png[title="Custom Location dialog box in iOS Simulator"]
 
 If you enter 48.8582 in the Latitude field and 2.2945 in the Longitude field for your current location the application will display your location as the Eiffel Tower on the map.
 
-image::./cordova-ios7-run3.png[title="Application when using a custom location in the iOS Simulator"]
+image::kb/docs/webclient/cordova-ios7-run3.png[title="Application when using a custom location in the iOS Simulator"]
 
 
 == Debugging the Application
@@ -525,27 +529,27 @@ var point = new google.maps.LatLng(position.coords.latitude, position.coords.lon
 
 When you run the application the debugger will hit the breakpoint when the application tries to determine your current location.
 
-image::./cordova-debug-breakpoint1.png[title="Debugger stopped on breakpoint"]
+image::kb/docs/webclient/cordova-debug-breakpoint1.png[title="Debugger stopped on breakpoint"]
 
 If you hover your cursor over the variables you can see a tooltip that displays details about the variable. If your cursor is over the `latitude` variable the value of the variable is displayed in the tooltip.
 
-image::./cordova-debug-variables1b.png[title="Tooltip showing variables"]
+image::kb/docs/webclient/cordova-debug-variables1b.png[title="Tooltip showing variables"]
 
 If your cursor is over `position` or `coords` the tooltip contains an arrow that you can click to expand the tooltip.
 
-image::./cordova-debug-variables1a.png[title="Tooltip showing variables"]
+image::kb/docs/webclient/cordova-debug-variables1a.png[title="Tooltip showing variables"]
 
 The expanded tooltip enables you to see the values in greater detail.
 
-image::./cordova-debug-variables2.png[title="Tooltip showing variables"]
+image::kb/docs/webclient/cordova-debug-variables2.png[title="Tooltip showing variables"]
 
 In this case it is easier to view the values in the Variables window. In the Variables window you can see the latitude and longitude of your current location.
 
-image::./cordova-debug-variables.png[title="Variables window"]
+image::kb/docs/webclient/cordova-debug-variables.png[title="Variables window"]
 
 In the Network Monitor window you can see a list of the application requests.
 
-image::./cordova-network-monitor.png[title="Variables window"]
+image::kb/docs/webclient/cordova-network-monitor.png[title="Variables window"]
 
 
 [[summary]]

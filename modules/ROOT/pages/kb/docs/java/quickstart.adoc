@@ -32,6 +32,10 @@
 :page-reviewed: 2019-04-06
 :experimental:
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 Welcome to Apache NetBeans IDE!
 
 In this tutorial, which should take about 10 minutes to complete, you are given a quick introduction to the basic Java development workflow in NetBeans IDE. 
@@ -51,7 +55,7 @@ Take the steps below to set up a new Java project.
 [.feature]
 --
 
-image::./proj-wizard-maven2-small.png[role="left", xref="image$./proj-wizard-maven2.png"]
+image::kb/docs/java/proj-wizard-maven2-small.png[role="left", xref="image$./proj-wizard-maven2.png"]
 
 --
 
@@ -65,7 +69,7 @@ NOTE: The first time you create a new Java project, you will be prompted to down
 [.feature]
 --
 
-image::./proj-wizard2-maven-small.png[role="left", xref="image$./proj-wizard2-maven.png"]
+image::kb/docs/java/proj-wizard2-maven-small.png[role="left", xref="image$./proj-wizard2-maven.png"]
 
 --
 Click Finish.
@@ -79,7 +83,7 @@ Right-click the package name and choose New | Java Class, (as shown in the figur
 [.feature]
 --
 
-image::./proj-wizard3-maven-small.png[role="left", xref="image$./proj-wizard3-maven.png"]
+image::kb/docs/java/proj-wizard3-maven-small.png[role="left", xref="image$./proj-wizard3-maven.png"]
 
 --
 
@@ -88,7 +92,7 @@ In the New Java Class wizard, type `Main` in the Class Name field, (as shown in 
 [.feature]
 --
 
-image::./proj-wizard4-maven-small.png[role="left", xref="image$./proj-wizard4-maven.png"]
+image::kb/docs/java/proj-wizard4-maven-small.png[role="left", xref="image$./proj-wizard4-maven.png"]
 
 --
 
@@ -105,7 +109,7 @@ You should see the following components, (as shown in the figure below):
 [.feature]
 --
 
-image::./proj-opened-maven-small.png[role="left", xref="image$./proj-opened-maven.png"]
+image::kb/docs/java/proj-opened-maven-small.png[role="left", xref="image$./proj-opened-maven.png"]
 
 --
 
@@ -128,7 +132,7 @@ You should now see the following:
 [.feature]
 --
 
-image::./file-opened-maven-small.png[role="left", xref="image$./file-opened-maven.png"]
+image::kb/docs/java/file-opened-maven-small.png[role="left", xref="image$./file-opened-maven.png"]
 
 --
 
@@ -137,7 +141,7 @@ Notice that when you press kbd:[Ctrl+Space], the editor shows you multiple ways 
 [.feature]
 --
 
-image::./editor-cc-maven2-small.png[role="left", xref="image$./editor-cc-maven2.png"]
+image::kb/docs/java/editor-cc-maven2-small.png[role="left", xref="image$./editor-cc-maven2.png"]
 
 --
 
@@ -149,7 +153,7 @@ Make sure to save the Java source file, right-click the project and choose Run o
 
 In the Output window (which can be opened from the Window menu), you should see the below.
 
-image::./run-output-maven-small.png[role="left", xref="image$./run-output-maven.png"]
+image::kb/docs/java/run-output-maven-small.png[role="left", xref="image$./run-output-maven.png"]
 
 Congratulations! Your application works.
 

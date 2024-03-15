@@ -29,6 +29,10 @@
 :description: CSS3 Flexible Box and Oracle JET - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, CSS3 Flexible Box and Oracle JET
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This document provides a step-by-step set of instructions guiding you through the process of working with link:http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=composite&demo=basic[+Composite Components+] in link:http://oraclejet.org[+Oracle JavaScript Extension Toolkit (JET)+] applications. JET empowers web and mobile developers by providing a modular toolkit based on modern JavaScript, CSS3, and HTML5 design and development principles.
 
 Flexible boxes, or flexbox, is a new layout mode in CSS3. Use of flexbox ensures that elements behave predictably when the page layout must accommodate different screen sizes and different display devices. For many applications, the flexible box model provides an improvement over the block model in that it does not use floats, nor do the flex container's margins collapse with the margins of its contents.
@@ -56,7 +60,7 @@ In this exercise you set up an Oracle JET application and explore its default co
 [start=2]
 . Open the project into an editor or IDE of your choice, such as NetBeans IDE, which displays the application as follows:
 
-image::./navdrawer.png[]
+image::kb/docs/webclient/navdrawer.png[]
 
 Spend some time browsing through the application structure. In the next section, you'll be introduced to the main concepts of the application structure.
 
@@ -87,7 +91,7 @@ Right now, what we've got is one "div", which has been set as an "oj-flex-item".
 
 In the browser, you now see a little border, and you can tell where the flex-item is rendered:
 
-image::./flex-001.png[]
+image::kb/docs/webclient/flex-001.png[]
 
 Therefore, the "oj-panel" is very useful when laying out items, to see where the containers and items are fitting within the page, regardless of whether you ultimately want to use "oj-panel" in the actual release of your product. It enables you to see what the padding is, while you can also use different colors in the background by using different alternate panels, via "oj-panel-alt".
 
@@ -106,7 +110,7 @@ Therefore, the "oj-panel" is very useful when laying out items, to see where the
 
 Of course, the above will have this result:
 
-image::./flex-002.png[]
+image::kb/docs/webclient/flex-002.png[]
 
 
 [start=4]
@@ -127,7 +131,7 @@ image::./flex-002.png[]
 </div>
 ----
 
-image::./flex-003.png[]
+image::kb/docs/webclient/flex-003.png[]
 
 
 [start=5]
@@ -150,7 +154,7 @@ image::./flex-003.png[]
 
 Now we have some padding in there:
 
-image::./flex-004.png[]
+image::kb/docs/webclient/flex-004.png[]
 
 That's the default that "oj-margin" gives us, from the Oracle Alta UI spec. Rather than overriding it, if needed, the better approach is to create your own CSS margin class, since the various Oracle JET components also make use of "oj-margin" and hence if you change "oj-margin" itself, you may end up with unintended side effects.
 
@@ -158,7 +162,7 @@ That's the default that "oj-margin" gives us, from the Oracle Alta UI spec. Rath
 [start=6]
 . Where we are now is that we have three "oj-flex-items", which are all contained by the "oj-flex" container in "index.html". Now, let's say that in the second row, i.e., the second "oj-flex-item", we want to put three or four other items:
 
-image::./flex-005.png[]
+image::kb/docs/webclient/flex-005.png[]
 
 Getting to the above point is as simple as nesting new "oj-flex-items", like this, i.e., below, only the items in bold have been added:
 
@@ -214,7 +218,7 @@ However, probably you don't need that whole border along the outside of the seco
 
 The above is the only change we have made and now we have the following layout:
 
-image::./flex-006.png[]
+image::kb/docs/webclient/flex-006.png[]
 
 
 [start=8]
@@ -224,11 +228,11 @@ image::./flex-006.png[]
 [start=9]
 . If you remove "oj-panel" and "oj-margin" from that "div" element, you will have a layout like this:
 
-image::./flex-007.png[]
+image::kb/docs/webclient/flex-007.png[]
 
 The inner items are now all in a row, without a panel around them. Once you set up a container, by default, the items inside it are going to resize to fit the container. So, if you remove one of the inner items, in "incidents.html", you will automatically have the resize effect and the result will be as follows:
 
-image::./flex-008.png[]
+image::kb/docs/webclient/flex-008.png[]
 
 Automatically, the inner items stretch across and take up the space in order to position the three items equally.
 
@@ -267,7 +271,7 @@ Let's now go a step further and add inner items to the third "div", after making
 
 The result is as follows:
 
-image::./flex-009.png[]
+image::kb/docs/webclient/flex-009.png[]
 
 There are now 4 columns in the middle and 2 across the bottom. As you resize this, the rows are maintained, becoming smaller and smaller as you make the browser smaller.
 
@@ -308,7 +312,7 @@ If we only want the columnar direction on small, there are classes for small onl
 
 And now, only when the resolution is small, will you see the columnar layout:
 
-image::./flex-010.png[]
+image::kb/docs/webclient/flex-010.png[]
 
 Also notice that the container below the one we've been working with is still making use of the default "row" direction.
 

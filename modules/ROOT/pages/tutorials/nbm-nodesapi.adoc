@@ -30,6 +30,10 @@
 :description: NetBeans System Properties Module Tutorial - Apache NetBeans
 :keywords: Apache NetBeans Platform, Platform Tutorials, NetBeans System Properties Module Tutorial
 
+ifdef::env-github[]
+:imagesdir: ../../images
+endif::[]
+
 This tutorial is intended to demonstrate aspects of the  link:https://bits.netbeans.org/dev/javadoc/org-openide-nodes/org/openide/nodes/package-summary.html[NetBeans Nodes API].
 
 // NOTE: If you are using an earlier version of Apache NetBeans, see  link:74/nbm-nodesapi.html[the previous version of this document].
@@ -570,10 +574,10 @@ Once you have coded the main files, you must include the icons you'd like to use
 Alternatively, use the icons below:
 
 
-image::./sysprops_allPropsIcon.gif[]
+image::tutorials/sysprops_allPropsIcon.gif[]
 
 
-image::./sysprops_onePropIcon.gif[]
+image::tutorials/sysprops_onePropIcon.gif[]
 
 Note that the  ``setIconBaseWithExtension``  statements in the constructors of  ``AllPropsNode.java``  and  ``OnePropNode.java``  set the location of the icons.
 
@@ -593,7 +597,7 @@ The module is built and installed in the target IDE or Platform. The target IDE 
 1. In the IDE's Services window (Ctrl-5), you should see the new node, together with its many subnodes:
 
 
-image::./sysprops_nbm-sysprops-70-2.png[]
+image::tutorials/sysprops_nbm-sysprops-70-2.png[]
 
 
 == Next Steps

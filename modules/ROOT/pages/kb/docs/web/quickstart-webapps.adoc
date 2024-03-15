@@ -29,10 +29,14 @@
 :description: Introduction to Developing Web Applications - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Introduction to Developing Web Applications
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This document takes you through the basics of using NetBeans IDE to develop web applications. It demonstrates how to create a simple web application, deploy it to a server, and view its presentation in a browser. The application employs a link:http://www.oracle.com/technetwork/java/javaee/jsp/index.html[+JavaServer Pages+]™ (JSP) page to ask you to input your name. It then uses a JavaBeans component to persist the name during the HTTP session, and retrieves the name for output on a second JSP page.
 
 
-image::./netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
+image::kb/docs/web/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
 
 
 *To follow this tutorial, you need the following software and resources.*
@@ -75,7 +79,7 @@ _ _
 
 The IDE creates the  ``_$PROJECTHOME_/HelloWeb``  project folder. You can view the project's file structure in the Files window (Ctrl-2), and its logical structure in the Projects window (Ctrl-1).
 
-image::./projects-window.png[]
+image::kb/docs/web/projects-window.png[]
 
 The project folder contains all of your sources and project metadata, such as the project's Ant build script. The HelloWeb project opens in the IDE. The welcome page,  ``index.jsp`` , opens in the Source Editor in the main window.
 
@@ -124,7 +128,7 @@ name = null;
 
 The Encapsulate Fields dialog opens, listing the  ``name``  field. Notice that Fields' Visibility is by default set to private, and Accessors' Visibility to public, indicating that the access modifier for class variable declaration will be specified as private, whereas getter and setter methods will be generated with  ``public``  and  ``private``  modifiers, respectively.
 
-image::./encapsulatefields-dialog.png[]
+image::kb/docs/web/encapsulatefields-dialog.png[]
 
 
 . Click Refactor.
@@ -180,7 +184,7 @@ The Insert Form dialog box displays.
 
 Click OK. An HTML form is added to the  ``index.jsp``  file.
 
-image::./input-form.png[]
+image::kb/docs/web/input-form.png[]
 
 
 . Drag a Text Input item to a point just before the  ``</form>``  tag, then specify the following values:
@@ -227,7 +231,7 @@ Click OK. An HTML button is added between the  ``<form>``  tags.
 2. 
 In the Palette to the right of the Source Editor, expand JSP and drag a Use Bean item to a point just below the  ``<body>``  tag in the Source Editor. The Insert Use Bean dialog opens. Specify the values shown in the following figure.
 
-image::./usebean-dialog.png[]
+image::kb/docs/web/usebean-dialog.png[]
 
 * *ID: *mybean
 * *Class: *org.mypackage.hello.NameHandler
@@ -298,7 +302,7 @@ The IDE uses an Ant build script to build and run your web applications. The IDE
 
 . The IDE opens an output window that shows the progress of running the application. Look at the HelloWeb tab in the Output window. In this tab, you can follow all the steps that the IDE performs. If there is a problem, the IDE displays error information in this window.
 
-image::./app-output-tab.png[]
+image::kb/docs/web/app-output-tab.png[]
 
 
 . The IDE opens an output window showing the server status. Look at the tab in the Output window with the name of your server.
@@ -307,19 +311,19 @@ image::./app-output-tab.png[]
 
 The server output window is very informative about problems running Web applications. The server's logs can also be helpful. They are located in the server's relevant domain directory. You can also view the IDE log, visible by selecting View > IDE log.
 
-image::./gf-output-tab.png[]
+image::kb/docs/web/gf-output-tab.png[]
 
 
 . 
 The  ``index.jsp``  page opens in your default browser. Note that the browser window may open before the IDE displays the server output.
 
-image::./result1.png[]
+image::kb/docs/web/result1.png[]
 
 
 . 
 Enter your name in the text box, then click OK. The  ``response.jsp``  page displays, providing you with a simple greeting.
 
-image::./result2.png[]
+image::kb/docs/web/result2.png[]
 
 
 == Troubleshooting

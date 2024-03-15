@@ -29,13 +29,17 @@
 :description: Web Service Passing Binary Data, pt 5: Creating the Swing Client - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Web Service Passing Binary Data, pt 5: Creating the Swing Client
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 The goal of this exercise is to create a client for the web service you previously created and deployed, and then add a GUI interface to that client. The interface displays the images that the web service passes as binary data.
 
 You can download a complete version of the client from the link:https://netbeans.org/projects/samples/downloads/download/Samples%252FWeb%2520Services%252FWeb%2520Service%2520Passing%2520Binary%2520Data%2520--%2520EE6%252FFlowerClient.zip[+NetBeans Samples Catalog+].
 
 *Lessons In This Tutorial*
 
-image::./netbeans-stamp-74-73-72.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3 and 7.4"]
+image::kb/docs/websvc/netbeans-stamp-74-73-72.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3 and 7.4"]
 
 1. xref:./flower_overview.adoc[+Overview+]
 2. xref:./flower_ws.adoc[+Creating the Web Service+]
@@ -71,12 +75,12 @@ In this section, you create a web application. Within this application, you crea
 3. Right-click the  ``FlowerClient``  project node and choose New > Web Service Client from the context menu. The New Web Service Client wizard opens.
 4. Select the WSDL URL radio button and paste the URL of the WSDL file into that field. (By default, the URL is  ``http://localhost:8080/FlowerAlbumService/FlowerServiceService?wsdl`` . Find the URL in the browser by testing the web service and replacing  ``?Tester``  with  ``?wsdl``  at the end of the URL.) Accept all other default values, including a blank package name. 
 
-image::./ws-client-wiz.png[]
+image::kb/docs/websvc/ws-client-wiz.png[]
 
 [start=5]
 . Click Finish. The IDE downloads the WSDL file, adds client stubs for interacting with the web service, and adds nodes to the Projects window in the Java application project. 
 
-image::./client-generated-sources.png[title="Projects view showing new web service client"]
+image::kb/docs/websvc/client-generated-sources.png[title="Projects view showing new web service client"]
 
 
 [[design-jframe]]
@@ -89,12 +93,12 @@ If you do not want to design the JFrame form yourself, you can download a predes
 1. Right-click the  ``FlowerClient``  node and select New > JFrame Form. Name the frame  ``FlowerFrame`` . Place it in the  ``flowerclient``  package.
 2. The  ``FlowerFrame``  opens in the editor. Open the Palette if it is not open. Extend the bottom boundary of the frame by around one-third.
 
-image::./opened-flowerform.png[]
+image::kb/docs/websvc/opened-flowerform.png[]
 
 [start=3]
 . Drag a JPanel from the Swing Containers section of the Palette to the  ``FlowerFrame`` . Expand it to fill the entire  ``FlowerFrame`` . 
 
-image::./add-panel.png[]
+image::kb/docs/websvc/add-panel.png[]
 
 [start=4]
 . Right-click the Panel in the Design View. Select Change Variable Name... from the context menu. Name the panel  ``gardenFlowersPanel`` .
@@ -156,7 +160,7 @@ image::./add-panel.png[]
 
 The JFrame Form is now completely designed. At this point, the  ``FlowerFrame``  looks as follows. 
 
-image::./designed-form.png[title="Completed Flower Frame showing button texts instead of images"]
+image::kb/docs/websvc/designed-form.png[title="Completed Flower Frame showing button texts instead of images"]
 
 
 == Binding the JFrame Components
@@ -172,7 +176,7 @@ In this section, you initialize the components in the constructor and bind the c
 
 1. Change to the Source view of the editor. Locate the beginning of the  ``FlowerFrame``  class body and the  ``FlowerFrame``  constructor.
 
-image::./ff-empty-constructor.png[]
+image::kb/docs/websvc/ff-empty-constructor.png[]
 
 . At the top of the class body of  ``FlowerFrame`` , before the constructor, create an array of strings of the names of every flower.
 
@@ -372,7 +376,7 @@ The  ``FlowerFrame``  is now complete.
 
 1. Open the  ``Main.java``  class in the editor.
 
-image::./main-empty.png[]
+image::kb/docs/websvc/main-empty.png[]
 
 [start=2]
 . In the class body, before the  ``main``  method, initialize an  ``int``  variable for the number of downloaded pictures.

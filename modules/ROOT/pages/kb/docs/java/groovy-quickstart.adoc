@@ -30,6 +30,10 @@
 :keywords: Apache NetBeans, Tutorials, Introduction to Groovy
 :page-reviewed: 2019-01-26
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This document gets you started with link:http://groovy.codehaus.org/[+Groovy+] in NetBeans IDE. You will create a Java application, add a JFrame, and retrieve a simple message from a Groovy file.
 
 == Creating the Application
@@ -50,7 +54,7 @@ In this section you will create a JFrame and a Groovy class.
 1. Right-click the project node in the Projects window and choose New > Other to open the New File dialog box.
 2. Select JFrame Form in the Swing GUI Forms category. Click Next.
 
-image::./groovy-newjframe.png[]
+image::kb/docs/java/groovy-newjframe.png[]
 
 
 
@@ -60,7 +64,7 @@ image::./groovy-newjframe.png[]
 
 . Type *org.demo* as the Package. Click Finish.
 
-image::./groovy-newjframe2.png[]
+image::kb/docs/java/groovy-newjframe2.png[]
 
 When you click Finish the IDE creates the JFrame form and opens the file in the editor.
 
@@ -72,7 +76,7 @@ When you click Finish the IDE creates the JFrame form and opens the file in the 
 
 . Select Groovy Class in the Groovy category. Click Next.
 
-image::./groovy-newgroovyclass.png[]
+image::kb/docs/java/groovy-newgroovyclass.png[]
 
 
 
@@ -110,7 +114,7 @@ class GreetingProvider {
 
 . Open the Palette (Window > Palette from the main menu) and drag and drop a Text Field element ( ``jTextField`` ) from the Palette and into the JFrame.
 
-image::./groovy-jtextfield.png[]
+image::kb/docs/java/groovy-jtextfield.png[]
 
 
 
@@ -133,7 +137,7 @@ public class DisplayJFrameForm extends javax.swing.JFrame {
 
 You can use code completion in the Java class to find the methods you need in the Groovy class.
 
-image::./groovy-codecompletion.png[]
+image::kb/docs/java/groovy-codecompletion.png[]
 
 WARNING: JIRA link:https://issues.apache.org/jira/browse/NETBEANS-1996[] has to be solved for the Java editor to recognize the Groovy reference and for code completion shown above to work. Despite that, and even though the Java editor shows the Groovy reference with a red underline, you can still follow the step below and successfully run the application.
 
@@ -144,7 +148,7 @@ WARNING: JIRA link:https://issues.apache.org/jira/browse/NETBEANS-1996[] has to 
 
 When you choose Run, the IDE compiles and launches the application.
 
-image::./groovy-runproject.png[]
+image::kb/docs/java/groovy-runproject.png[]
 
 In the window of the application you can see that the text from the Groovy class is displayed in the text field.
 

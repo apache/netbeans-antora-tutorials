@@ -29,12 +29,16 @@
 :description: Integrating an Applet in a Web Application - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Integrating an Applet in a Web Application
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 An applet is a program written in the Java programming language that can be included in an HTML page, much in the same way an image is included in a page. The application that you build in this tutorial shows you how to build and deploy applets in the IDE.
 
 *Note: *Though there are no project templates that are specifically designed for creating applets in the IDE, you can easily develop them in a Java project and package them in a web project, as shown in this tutorial.
 
 
-image::./netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
+image::kb/docs/web/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
 
 
 *To follow this tutorial, you need the following software and resources.*
@@ -123,7 +127,7 @@ The IDE creates the applet source file in the specified package. The applet sour
 
 Alternatively, if you are designing an Applet Form instead, use the xref:kb/docs/java/quickstart-gui.adoc[+Designing a Swing GUI in NetBeans IDE+] document to create something like the following:
 
-image::./movie-magic-quiz-design.png[]
+image::kb/docs/web/movie-magic-quiz-design.png[]
 
 For detailed information on writing applets, see The Java^TM^ Tutorial's link:http://download.oracle.com/javase/tutorial/deployment/applet/index.html[+Applets+] section.
 
@@ -137,15 +141,15 @@ The applet that you created can be run from the IDE. This section shows you how 
 
 Right-click the MyApplet.java file node in the Projects window and choose Run File from the contextual menu. The  ``MyApplet.html``  launcher file, with the applet embedded, is created in the  ``build``  folder, which you can see if you switch to the Files window (Ctrl-2):
 
-image::./built-project-files.png[]
+image::kb/docs/web/built-project-files.png[]
 
 The applet is launched in the Applet Viewer:
 
-image::./appletviewer.png[]
+image::kb/docs/web/appletviewer.png[]
 
 Applet forms are also displayed in the Applet Viewer:
 
-image::./movie-magic-quiz.png[]
+image::kb/docs/web/movie-magic-quiz.png[]
 
 
 == Embedding an Applet in a Web Application
@@ -226,7 +230,7 @@ images:./appletinbrowser-small.png[role="left", xref="image$./appletinbrowser.pn
 
 For applet forms, you should see something similar to the following:
 
-image::./movie-magic-quiz-html.png[]
+image::kb/docs/web/movie-magic-quiz-html.png[]
 
 
 xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]

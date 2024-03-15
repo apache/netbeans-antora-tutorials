@@ -29,6 +29,10 @@
 :description: Guided Video Tours of NetBeans IDE - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Guided Video Tours of NetBeans IDE
 
+ifdef::env-github[]
+:imagesdir: ../../../images
+endif::[]
+
 Tour the screencasts below to discover the new and noteworthy features of NetBeans IDE.
 
 
@@ -51,7 +55,7 @@ Watch the xref:kb/docs/ide/overview-screencast.adoc[NetBeans IDE 8.0 Overview Vi
 
 [cols="1,1",grid="none",frame="none"]
 !================================
-a!image::./smartmigration.png[link="java/jdk8-migration-screencast.html"] 
+a!image::kb/docs/smartmigration.png[link="java/jdk8-migration-screencast.html"] 
 //role="left", 
 
 Time: 14:00
@@ -67,7 +71,7 @@ This screencast is a guide to the key features of language enhancements in Java 
 |
 [cols="1,1",grid="none",frame="none"]
 !================================
-a!image::./primefaces.png[link="javaee/maven-primefaces-screencast.html"] 
+a!image::kb/docs/primefaces.png[link="javaee/maven-primefaces-screencast.html"] 
 //role="left", 
 
 Time: 4:39
@@ -85,7 +89,7 @@ This screencast demonstrates how you can use NetBeans IDE 8.0 to create a comple
 |
 [cols="1,1",grid="none",frame="none"]
 !================================
-a!image::./me8.png[link="javame/nb_me8_screencast.html"] 
+a!image::kb/docs/me8.png[link="javame/nb_me8_screencast.html"] 
 role="left", 
 
 Time: 6:38
@@ -130,7 +134,7 @@ This screencast demonstrates installation and usage of link:http://www.oracle.co
 
 [cols="1,1",grid="none",frame="none"]
 !================================
-a!image::./jdk8-lambda.png[link="java/jdk8-nb74-screencast.html"] 
+a!image::kb/docs/jdk8-lambda.png[link="java/jdk8-nb74-screencast.html"] 
 //role="left",
 
 Time: 3:44
@@ -146,7 +150,7 @@ This screencast demonstrates how to set up NetBeans IDE 7.4 to use JDK 8, togeth
 |
 [cols="1,1",grid=none,frame=none]
 !================================
-a!image::./html5-javaee.png[link="javaee/javaee-gettingstarted-js-screencast.html"] 
+a!image::kb/docs/html5-javaee.png[link="javaee/javaee-gettingstarted-js-screencast.html"] 
 //role="left", 
 
 Time: 5:10
@@ -162,7 +166,7 @@ This screencast shows that you can expose RESTful web service endpoints via a wi
 | 
 [cols="1,1",grid=none,frame=none]
 !================================
-a!image::./html5-cordova.png[link="kb/docs/web/html5-cordova-screencast.html"] 
+a!image::kb/docs/html5-cordova.png[link="kb/docs/web/html5-cordova-screencast.html"] 
 //ole="left", 
 
 Time: 5:08
@@ -178,7 +182,7 @@ This screencast demonstrates how to create HTML5 applications, that is, how to c
 | 
 [cols="1,1",grid=none,frame=none]
 !================================
-a!image::./javaee-primefaces.png[link="javaee/javaee-gettingstarted-pf-screencast.html"] 
+a!image::kb/docs/javaee-primefaces.png[link="javaee/javaee-gettingstarted-pf-screencast.html"] 
 //role="left", 
 
 Time: 5:05
@@ -194,7 +198,7 @@ This screencast shows how easily PrimeFaces applications can be created with Mav
 |
 [cols="1,1",grid=none,frame=none]
 !================================
-a!image::./javagui-javafx.png[link="java/nb_fx_screencast.html"] 
+a!image::kb/docs/javagui-javafx.png[link="java/nb_fx_screencast.html"] 
 //role="left", 
 
 Time: 7:04
@@ -210,7 +214,7 @@ This screencast demonstrates JavaFX-related features that are implemented in Net
 |
 [cols="1,1",grid=none,frame=none]
 !================================
-a!image::./javame-thumb.png[link="javame/nb_me8_screencast.html"] 
+a!image::kb/docs/javame-thumb.png[link="javame/nb_me8_screencast.html"] 
 //role="left", 
 
 Time: 4:22
@@ -226,7 +230,7 @@ This screencast demonstrates the support for the Java ME SDK in NetBeans IDE. Th
 |
 [cols="1,1",grid=none,frame=none]
 !================================
-a!image::./git-thumb.png[link="ide/github_nb_screencast.html"] 
+a!image::kb/docs/git-thumb.png[link="ide/github_nb_screencast.html"] 
 //role="left", 
 
 Time: 5:52
@@ -242,7 +246,7 @@ This screencast demonstrates how to set up a Git repository in NetBeans IDE and 
 |
 [cols="1,1",grid=none,frame=none]
 !================================
-a!image::./clone_thumb.png[link="ide/git_nb_ssh_screencast.html"] 
+a!image::kb/docs/clone_thumb.png[link="ide/git_nb_ssh_screencast.html"] 
 //role="left", 
 
 Time: 3:25

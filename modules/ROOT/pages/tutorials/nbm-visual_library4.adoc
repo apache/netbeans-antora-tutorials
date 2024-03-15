@@ -30,6 +30,10 @@
 :description: DRAFT: NetBeans Visual Library Widget Creation Tutorial - Apache NetBeans
 :keywords: Apache NetBeans Platform, Platform Tutorials, DRAFT: NetBeans Visual Library Widget Creation Tutorial
 
+ifdef::env-github[]
+:imagesdir: ../../images
+endif::[]
+
 In this tutorial, you will learn about a different approach to creating widgets in Visual Library scenes. Other approaches are described in other tutorials:
 
 *  xref:./nbm-visual_library.adoc[NetBeans Visual Library Tutorial.] In this introductory tutorial to the Visual Library, you are shown how widgets can be created when the user drags-and-drops an item from the Component Palette.
@@ -105,7 +109,7 @@ Type  ``ToolVisualizer``  in Class Name Prefix. Optionally, add an icon with a d
 Multiple files are generated, one of them is  ``ToolVisualizerTopComponent`` . Open this file in Design mode. You should now see this:
 
 
-image::./vislib_65-shapetopcomponent.png[]
+image::tutorials/vislib_65-shapetopcomponent.png[]
 
 
 [start=4]
@@ -196,16 +200,16 @@ class ToolWidget extends LabelWidget {
 1. Run the application.
 
 
-image::./vislib4_result-1.png[]
+image::tutorials/vislib4_result-1.png[]
 
 
-image::./vislib4_result-2.png[]
+image::tutorials/vislib4_result-2.png[]
 
 
-image::./vislib4_result-3.png[]
+image::tutorials/vislib4_result-3.png[]
 
 
-image::./vislib4_result-4.png[]
+image::tutorials/vislib4_result-4.png[]
 
 Congratulations, you have completed your first Visual Library scene.
 

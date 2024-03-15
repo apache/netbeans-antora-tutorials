@@ -29,6 +29,10 @@
 :description: Getting Started with Contexts and Dependency Injection and JSF 2.x - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Getting Started with Contexts and Dependency Injection and JSF 2.x
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 _Contributed by Andy Gibson_
 
 == Contexts and Dependency Injection
@@ -87,7 +91,7 @@ NOTE:  The Java EE version that you select determines the CDI version that is en
 
 For more details on the types of CDI archives, see link:http://docs.oracle.com/javaee/7/tutorial/doc/cdi-adv001.htm[+Packaging CDI Applications+] in the Java EE 7 Tutorial.
 
-image::./new-web-application1.png[title="The CDI option, when selected, generates a beans.xml file for the project"]
+image::kb/docs/javaee/new-web-application1.png[title="The CDI option, when selected, generates a beans.xml file for the project"]
 
 
 
@@ -106,7 +110,7 @@ When you click Finish, the IDE generates the web application project and opens t
 
 . In the Projects window, expand the Libraries > GlassFish Server node you can see that the `weld-osgi-bundle.jar` library was automatically added. The GlassFish Server includes Weld, which is JBoss' implementation of the JSR-299 CDI specification. 
 
-image::./projects-window1.png[title="New project contains CDI's beans.xml file and the GlassFish library includes the Weld JAR file"]
+image::kb/docs/javaee/projects-window1.png[title="New project contains CDI's beans.xml file and the GlassFish library includes the Weld JAR file"]
 
 If you specified Java EE 6 Web as the Java EE version when you created the project, note that the Web Pages > WEB-INF folder includes a `beans.xml` file. This file is currently empty, but can be used to specify bean related information in XML as an alternative to annotations.
 
@@ -119,7 +123,7 @@ This exercise demonstrates how you can wire CDI managed beans to Facelets pages 
 1. In the Projects window, right-click the Source Packages node and choose New > Java Class.
 2. In the New Java Class wizard, name the class *MessageServerBean*, and type in *exercise1* as the Package. (The new package is created upon completing the wizard.) Click Finish. 
 
-image::./new-java-class.png[title="Create new Java classes using the Java Class wizard"]
+image::kb/docs/javaee/new-java-class.png[title="Create new Java classes using the Java Class wizard"]
 
 The new package and class are generated, and the class opens in the editor.
 
@@ -171,13 +175,13 @@ NOTE:  The  ``@Dependent``  annotation defines the scope of the managed bean. In
 TIP: You can press Ctrl-Space in EL expressions to take advantage of code completion suggestions. The editor's code completion lists managed beans and their properties. Because the `@Named` annotation transforms the `MessageServerBean` class into a CDI managed bean, it becomes accessible within EL syntax, just as though it were a JSF managed bean.# 
 
 
-image::./facelets-el-completion.png[title="Create new Java classes using the Java Class wizard"]
+image::kb/docs/javaee/facelets-el-completion.png[title="Create new Java classes using the Java Class wizard"]
 
 
 
 . Click the Run Project ( images:./run-project-btn.png[] ) button in the IDE's main toolbar. The project is compiled and deployed to GlassFish, and the application welcome page (`index.xhtml`) opens in the browser. You can see the "Hello World!" message from the `MessageServerBean` displayed on the page. 
 
-image::./browser-output1.png[title="Application welcome page displays MessageServerBean details"]
+image::kb/docs/javaee/browser-output1.png[title="Application welcome page displays MessageServerBean details"]
 
 
 
@@ -228,7 +232,7 @@ public class MessageServerBean {
 
 . Save the file (Ctrl-S; ⌘-S on Mac), then go to your browser and refresh. You will see output similar to the following: 
 
-image::./browser-output-ejb1.png[title="Using the @Stateless annotation transforms MessageServerBean into an EJB"] 
+image::kb/docs/javaee/browser-output-ejb1.png[title="Using the @Stateless annotation transforms MessageServerBean into an EJB"] 
 
 Amazingly, we turned our POJO into a fully-featured EJB with just one annotation. We saved changes then refreshed the page, and our changes appeared. In doing so it wasn't necessary to create any weird project configurations, local interfaces or arcane deployment descriptors.
 

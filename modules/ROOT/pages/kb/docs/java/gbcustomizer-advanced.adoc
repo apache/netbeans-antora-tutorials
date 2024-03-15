@@ -29,6 +29,10 @@
 :description: Designing an Advanced Java Form Using the GridBag Customizer - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Designing an Advanced Java Form Using the GridBag Customizer
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This tutorial is the second in a two-part series that demonstrates how to design an advanced Java form using the advanced features of the NetBeans IDE GridBag Customizer.
 The series is intended as a guide to show how you can layout your GUI components without manually writing your layout code and then perform additional changes in an existing form to implement a specific target layout that is required by the project.
 
@@ -71,7 +75,7 @@ The sample form opens in the GUI Builder Design view.
 [.feature]
 --
 
-image::./sampleform-small.png[role="left", xref="image$./sampleform.png"]
+image::kb/docs/java/sampleform-small.png[role="left", xref="image$./sampleform.png"]
 
 --
 
@@ -87,7 +91,7 @@ The Customize Layout dialog box opens as shown below.
 [.feature]
 --
 
-image::./customizerdialog-small.png[role="left", xref="image$./customizerdialog.png"]
+image::kb/docs/java/customizerdialog-small.png[role="left", xref="image$./customizerdialog.png"]
 
 --
 
@@ -98,7 +102,7 @@ NOTE: In this tutorial the GridBagLayout is already set. In case you work with a
 
 In this section you will use the advanced features of the GridBag Customizer to reorganize the  ``ContactsAdvancedInitial``  form components in accordance with the target layout shown below.
 
-image::./targetlayout.png[]
+image::kb/docs/java/targetlayout.png[]
 
 NOTE: To view the target layout in your NetBeans IDE, in the Projects tab, expand  ``Source Packages > tutorial``  and double-click  ``ContactsAdvancedFinal.java`` . 
 The  ``ContactsAdvancedFinal``  form with the target layout opens in the GUI Builder Design view.
@@ -111,11 +115,11 @@ The  ``Phone``  section of the existing form features three phone entries. To en
 1. In the Customize Layout dialog box, right-click the header of the row that contains  ``Home Phone:``  information.
 2. Choose  ``Insert Row Before`` .
 
-image::./insertrow.png[]
+image::kb/docs/java/insertrow.png[]
 
 A new row is added as in the following figure.
 
-image::./rowinserted.png[]
+image::kb/docs/java/rowinserted.png[]
 
 
 === Adding New Components
@@ -128,7 +132,7 @@ To add a new label and text field to the newly added row, complete the following
 [.feature]
 --
 
-image::./addcomponent-small.png[role="left", xref="image$./addcomponent.png"]
+image::kb/docs/java/addcomponent-small.png[role="left", xref="image$./addcomponent.png"]
 
 --
 
@@ -142,7 +146,7 @@ Highlighted  ``JLabel1``  displays in the first cell.
 . From the context menu, choose  ``Add Components > Swing Controls > Text Field`` .
 Highlighted  ``JTextField1``  displays in the second cell.
 
-image::./highlightedtextfield.png[]
+image::kb/docs/java/highlightedtextfield.png[]
 
 After the components are added, their gridbag constraints must be specified to align them with other components.
 
@@ -153,15 +157,15 @@ With the  ``JTextField1``  component selected in the Grid Area, do the following
 3. In the Anchor combobox scroll-down and select  ``Baseline`` .
 4. In the Weight X text field, enter  ``1.0``  and press Enter.
 
-image::./textfieldconstraints.png[]
+image::kb/docs/java/textfieldconstraints.png[]
 
 In the Grid Area, select the  ``JLabel1``  component and specify its  ``Anchor``  constraint by scrolling down and selecting  ``Baseline Leading``  in the Property Sheet.
 
-Select both the  ``JLabel1``  and  ``JTextField1``  components in the Grid Area, click the browse button (image:./browsebutton.png[]) to the right of the  ``Insets``  text field. The  ``Insets``  dialog box displays. Enter  ``5``  in the  ``Top:``  text field, and click OK.
+Select both the  ``JLabel1``  and  ``JTextField1``  components in the Grid Area, click the browse button (image:kb/docs/java/browsebutton.png[]) to the right of the  ``Insets``  text field. The  ``Insets``  dialog box displays. Enter  ``5``  in the  ``Top:``  text field, and click OK.
 
 The form should look like shown below.
 
-image::./constraintsset.png[]
+image::kb/docs/java/constraintsset.png[]
 
 NOTE: The GridBag Customizer helps you to add, remove, and change the position of components in the layout. To change properties of the components in the layout like background or text, use the GUI Builder Design window.
 
@@ -188,7 +192,7 @@ To change the layout of the  ``Phone``  section and position of four existing te
 2. In the Customize Layout dialog box, control-click the four  ``JTextField``  components to select them.
 3. Drag the right edge of the text fields to the left and drop it so that the text fields occupy just the second grid column, in other words, so that they no longer occupy the third and fourth grid columns.
 
-image::./textfieldsonecolumn.png[]
+image::kb/docs/java/textfieldsonecolumn.png[]
 
 The GridBag Customizer can resize several components together thus making room for the second column of text fields.
 
@@ -202,24 +206,24 @@ The GridBag Customizer can resize several components together thus making room f
 
 . Position the cursor over the selection and drag them to the right of the top two text fields.
 
-image::./movesecondcolumn.png[]
+image::kb/docs/java/movesecondcolumn.png[]
 
 NOTE: Before dragging make sure the cursor is not changed into a two-way arrow, otherwise you will resize the selection instead.
 
 After you move the components, the form should look like shown below.
 
-image::./extrarows.png[]
+image::kb/docs/java/extrarows.png[]
 
 To discard the redundant rows 10 and 11 (row indices 9 and 10 respectively), right-click the row headers and choose  ``Delete Row``  from the context menu.
 
 The  ``Phone``  section became more compact.
 
-image::./textfieldsmoved.png[]
+image::kb/docs/java/textfieldsmoved.png[]
 
 To fix spacing of the second column here, do as follows:
 
 1. Control-click the  ``Skype:``  and  ``Home Phone:``  labels to select them in the Grid Area.
-2. Click the browse button (image:./browsebutton.png[]) to the right of the  ``Insets``  text field.
+2. Click the browse button (image:kb/docs/java/browsebutton.png[]) to the right of the  ``Insets``  text field.
 The  ``Insets``  dialog box displays.
 
 
@@ -230,12 +234,12 @@ The  ``Insets``  dialog box displays.
 
 The grid based layout sometimes introduces unnecessary dependencies that need to be resolved by means of subcontainers.
 
-If you click the Test Layout button in the toolbar (image:./testlayoutbutton.png[] ) and test horizontal resizeability of the current layout, you will notice that unwanted space is created around the Browse, OK, and Cancel buttons.
+If you click the Test Layout button in the toolbar (image:kb/docs/java/testlayoutbutton.png[] ) and test horizontal resizeability of the current layout, you will notice that unwanted space is created around the Browse, OK, and Cancel buttons.
 
 [.feature]
 --
 
-image::./unwantedspace-small.png[role="left", xref="image$./unwantedspace.png"]
+image::kb/docs/java/unwantedspace-small.png[role="left", xref="image$./unwantedspace.png"]
 
 --
 
@@ -247,7 +251,7 @@ This happens because the fourth column comprises both text fields and buttons (t
 [.feature]
 --
 
-image::./enclose-small.png[role="left", xref="image$./enclose.png"]
+image::kb/docs/java/enclose-small.png[role="left", xref="image$./enclose.png"]
 
 --
 
@@ -257,7 +261,7 @@ NOTE: The  ``Enclose in Container``  action creates a new subcontainer in the ce
 
 Repeat the two steps listed above for the  ``City:``  text field and the  ``Browse``  button to the right of it, to enclose them into a subcontainer like shown below.
 
-image::./enclosecity.png[]
+image::kb/docs/java/enclosecity.png[]
 
 Now you want to fix the unwanted space around the  ``OK``  and  ``Cancel``  buttons as follows:
 
@@ -266,22 +270,22 @@ Now you want to fix the unwanted space around the  ``OK``  and  ``Cancel``  butt
 3. Right-click the selection and choose  ``Enclose in Container``  from the context menu.
 A new subcontainer is created for the buttons.
 
-image::./subcontainerbuttons.png[]
+image::kb/docs/java/subcontainerbuttons.png[]
 
 NOTE: None of the components in the subcontainer is resizable. Therefore, they are placed next to each other in the center of the container, which is the default anchoring.
 
 To change the anchoring of the whole subcontainer, complete the following steps:
 
-1. Ensure that the subcontainer with the  ``OK``  and  ``Cancel``  buttons is selected and click the arrow button (image:./arrowbutton.png[]) to the right of the  ``Anchor``  combobox.
+1. Ensure that the subcontainer with the  ``OK``  and  ``Cancel``  buttons is selected and click the arrow button (image:kb/docs/java/arrowbutton.png[]) to the right of the  ``Anchor``  combobox.
 2. Scroll down and choose  ``Line End``  from the list.
 
-image::./subcontainerlineend.png[]
+image::kb/docs/java/subcontainerlineend.png[]
 
 The layout looks fine but the subcontainer with the  ``OK``  and  ``Cancel``  buttons occupies only the last two cells in the last row.
 In case the  ``OK``  and  ``Cancel``  buttons become wider (for example, during the translation into a different language), they will push the right edges of the  ``Work Phone:``  and  ``Cell Phone:``  text fields. 
 To avoid this potential issue and let the subcontainer occupy all cells in the bottom row, select the subcontainer and drag its left border to the beginning of the row.
 
-image::./subcontainerresized.png[]
+image::kb/docs/java/subcontainerresized.png[]
 
 The subcontainer occupies all cells in the bottom row.
 
@@ -298,7 +302,7 @@ Complete the steps listed below to add a button to an existing subcontainer:
 [.feature]
 --
 
-image::./designsubcontainer-small.png[role="left", xref="image$./designsubcontainer.png"]
+image::kb/docs/java/designsubcontainer-small.png[role="left", xref="image$./designsubcontainer.png"]
 
 --
 
@@ -310,7 +314,7 @@ An empty cell for the new button displays.
 [.feature]
 --
 
-image::./emptycell-small.png[role="left", xref="image$./emptycell.png"]
+image::kb/docs/java/emptycell-small.png[role="left", xref="image$./emptycell.png"]
 
 --
 
@@ -322,21 +326,21 @@ A new  ``jButton1``  button is added.
 [.feature]
 --
 
-image::./newbutton-small.png[role="left", xref="image$./newbutton.png"]
+image::kb/docs/java/newbutton-small.png[role="left", xref="image$./newbutton.png"]
 
 --
 
 
 
-. Click the Baseline-Related Anchor button (image:./baselineanchor.png[]) in the Property Customizer to align the new button with the two existing ones in the row.
+. Click the Baseline-Related Anchor button (image:kb/docs/java/baselineanchor.png[]) in the Property Customizer to align the new button with the two existing ones in the row.
 
 
-. Click the browse button (image:./browsebutton.png[]) to the right of the Insets text field. The Insets dialog box displays. Enter 5 in the Top: text field, and click OK.
+. Click the browse button (image:kb/docs/java/browsebutton.png[]) to the right of the Insets text field. The Insets dialog box displays. Enter 5 in the Top: text field, and click OK.
 
 
 . To check how the main container layout looks now, right-click the designed subcontainer and choose  ``Design Parent Container``  from the context menu.
 
-image::./designparentcontainer.png[]
+image::kb/docs/java/designparentcontainer.png[]
 
 NOTE: The context menu does not display if you right-click the buttons.
 
@@ -349,7 +353,7 @@ To rename the button, complete the following steps:
 3. Delete the selected text and enter  ``Help`` .
 4. Press Enter.
 
-image::./finallayout.png[]
+image::kb/docs/java/finallayout.png[]
 
 
 == Summary

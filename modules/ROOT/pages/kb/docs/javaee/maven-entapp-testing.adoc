@@ -29,6 +29,10 @@
 :description: Testing a Maven Enterprise Application - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Testing a Maven Enterprise Application
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This tutorial demonstrates how to test a simple enterprise application using NetBeans IDE and Maven archetypes. In this tutorial you create an enterprise application that contains an entity class and a session bean. You will use a wizard to create a simple test class for the bean class and then run the test in the IDE. The test class will create an instance of the GlassFish embedded EJB container to test the connection to the database.
 
 // old NOTE:  If you are using GlassFish 3.1.x, please see xref:../../73/javaee/maven-entapp-testing.adoc[+Testing a Maven Enterprise Application with Embedded GlassFish Server 3.1+]
@@ -121,7 +125,7 @@ In this exercise you use the New Project wizard to create a Java EE web applicat
 
 When you click Finish the IDE creates the web application and opens the project in the Projects window.
 
-image::./maven-testing-projects.png[title="Projects window showing generated projects"]
+image::kb/docs/javaee/maven-testing-projects.png[title="Projects window showing generated projects"]
 
 If you expand the project node in the Projects window you can see that the  ``javaee-web-api``  JAR is listed as a project dependency and that the JDK is listed as a Java dependency. The IDE generated the project POM ( ``pom.xml`` ) and the file is listed under the Project Files node.
 
@@ -152,7 +156,7 @@ Alternatively, you can choose File > New File (Ctrl-N; ⌘-N on Mac) from the ma
 
 . Confirm that Use Java Transaction APIs is selected and select Drop and Create as the Table Generation Strategy. Click Finish.
 
-image::./maven-testing-pu.png[title="Projects window showing generated projects"]
+image::kb/docs/javaee/maven-testing-pu.png[title="Projects window showing generated projects"]
 
 When you click Finish the IDE generates the MyEntity class and opens the class in the source editor. The IDE adds the  ``eclipselink`` ,  ``javax.persistence``  and  ``org.eclipse.persistence.jpa.modelgen.processor``  artifacts as project dependencies.
 
@@ -197,7 +201,7 @@ public class MyEntity implements Serializable {
 
 . Click the hint in the left margin next to the class declaration and choose the *Create default constructor* hint.
 
-image::./maven-testing-createconstructor.png[title="Projects window showing generated projects"]
+image::kb/docs/javaee/maven-testing-createconstructor.png[title="Projects window showing generated projects"]
 
 
 
@@ -280,7 +284,7 @@ public class MyEntityFacade extends AbstractFacade<MyEntity> {
 
 . Fix your imports to add the required import statements. Save your changes. 
 
-image::./maven-testing-fiximports.png[title="Projects window showing generated projects"]
+image::kb/docs/javaee/maven-testing-fiximports.png[title="Projects window showing generated projects"]
 
 NOTE:  Confirm that * ``javax.persistence.Query`` * is selected in the Fix All Imports dialog box.
 
@@ -396,7 +400,7 @@ NOTE:   ``_<INSTALLATION_PATH>_``  is the absolute path to your local GlassFish 
 
 . Locate the 4.0 JAR in the search results and click Add.
 
-image::./add-shell-dependency.png[title="Test Results window"]
+image::kb/docs/javaee/add-shell-dependency.png[title="Test Results window"]
 
 When you click Add the IDE adds the dependency to the POM.
 
@@ -432,7 +436,7 @@ When you choose Test the IDE will build application and run the test phase of th
 
 You can see the results of the test in the Test Results window. You can open the Test Results window by choosing Window > Output > Test Results from the main menu.
 
-image::./maven-test-results.png[title="Test Results window"]
+image::kb/docs/javaee/maven-test-results.png[title="Test Results window"]
 
 In the Test Results window you can click the Show Passed icon (images:./test-ok_16.png[title="Show Passed icon"]) to display a list of all the tests that passed. In this example you can see that nine tests passed. If you look in the Output window you can see that only one test was run and eight tests were skipped. Skipped tests are included in the list of tests that passed in the Test Results window.
 

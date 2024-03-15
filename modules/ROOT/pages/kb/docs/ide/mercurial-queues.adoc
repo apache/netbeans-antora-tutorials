@@ -29,6 +29,10 @@
 :description: Using Support for Mercurial Queues in NetBeans IDE - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Using Support for Mercurial Queues in NetBeans IDE
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 The NetBeans IDE provides support for the Mercurial Queues extension. The IDE's Mercurial Queues support allows you to create, review or switch between patches within the IDE, as well as refresh patches with local modifications as you fix bugs or update to a new base revision. This document demonstrates how to perform basic patch-specific tasks in the IDE by guiding you through the standard workflow when using Mercurial versioning software for managing patches.
 
 == Enabling the Mercurial Queues Support
@@ -58,7 +62,7 @@ The Create Patch dialog box displays.
 [.feature]
 --
 
-image::./create-patch-small.png[role="left", xref="image$./create-patch.png"]
+image::kb/docs/ide/create-patch-small.png[role="left", xref="image$./create-patch.png"]
 
 --
 
@@ -66,8 +70,8 @@ image::./create-patch-small.png[role="left", xref="image$./create-patch.png"]
 . Specify the name for a patch in the Patch Name text field.
 . Provide the description of a patch in the Patch Message field.
 Alternatively, choose either of the following options and click OK afterwards:
-* click the Recent Messages button (image:./recent.png[]) to select a message from a list of most recent commit messages
-* click the Load Template button (image:./load.png[]) to select a message template for a commit message.
+* click the Recent Messages button (image:kb/docs/ide/recent.png[]) to select a message from a list of most recent commit messages
+* click the Load Template button (image:kb/docs/ide/load.png[]) to select a message template for a commit message.
 
 NOTE: The provided description of a patch will be used as a commit message when <<finish,turning the patch into a permanent changeset>>.
 
@@ -87,15 +91,15 @@ The Refresh Patch dialog box displays.
 [.feature]
 --
 
-image::./refresh-patch-small.png[role="left", xref="image$./refresh-patch.png"]
+image::kb/docs/ide/refresh-patch-small.png[role="left", xref="image$./refresh-patch.png"]
 
 --
 
 
 . Provide the description of a patch in the Patch Message field.
 Alternatively, choose either of the following options and click OK afterwards:
-* click the Recent Messages button (image:./recent.png[]) to select a message from a list of most recent commit messages
-* click the Load Template button (image:./load.png[]) to select a message template for a commit message.
+* click the Recent Messages button (image:kb/docs/ide/recent.png[]) to select a message from a list of most recent commit messages
+* click the Load Template button (image:kb/docs/ide/load.png[]) to select a message template for a commit message.
 
 NOTE: The provided description of a patch will be used as a commit message when <<finish,turning the patch into a permanent changeset>>.
 
@@ -115,7 +119,7 @@ The Diff Viewer displays differences found in the current patch and all your unc
 [.feature]
 --
 
-image::./qdiff-small.png[role="left", xref="image$./qdiff.png"]
+image::kb/docs/ide/qdiff-small.png[role="left", xref="image$./qdiff.png"]
 
 --
 
@@ -137,11 +141,11 @@ The following icons enable you to make changes directly within the Graphical Dif
 |===
 |Icon |Name |Function 
 
-|image:./replace.png[] |*Replace* |Inserts the highlighted text from the previous patch into the current patch. 
+|image:kb/docs/ide/replace.png[] |*Replace* |Inserts the highlighted text from the previous patch into the current patch. 
 
-|image:./replace-all.png[] |*Replace All* |Reverts current version of a patch to the state of its selected previous version. 
+|image:kb/docs/ide/replace-all.png[] |*Replace All* |Reverts current version of a patch to the state of its selected previous version. 
 
-|image:./remove.png[] |*Remove* |Removes the highlighted text from the current version of a patch so that it mirrors the previous version of a patch. 
+|image:kb/docs/ide/remove.png[] |*Remove* |Removes the highlighted text from the current version of a patch so that it mirrors the previous version of a patch. 
 |===
 
 == Switching Between Patches
@@ -153,7 +157,7 @@ NOTE: To switch between patches there _must_ be _no_ local modifications in the 
 1. Choose  ``Team``  >  ``Queues``  >  ``Go To Patch``  from the main menu (alternatively, right-click the project name and select  ``Mercurial``  >  ``Queues``  > `` Go To Patch``  from the pop-up menu).
 The Go To Patch dialog box displays a list of all patches available in a stack.
 
-image::./go-patch.png[]
+image::kb/docs/ide/go-patch.png[]
 
 NOTE: Names of applied patches display in bold. Choose  ``Team``  >  ``Queues``  >  ``Pop All Patches``  to remove the applied patches from the top of the stack and update the working directory to undo the effects of the applied patches.
 
@@ -171,7 +175,7 @@ NOTE: To apply all saved patches in the repository, choose  ``Team``  >  ``Queue
 1. Choose  ``Team``  >  ``Queues``  >  ``Finish Patches``  from the main menu (alternatively, right-click the project name and select  ``Mercurial``  >  ``Queues``  >  ``Finish Patches``  from the pop-up menu).
 The Finish Patches dialog box displays.
 
-image::./finish-patches.png[]
+image::kb/docs/ide/finish-patches.png[]
 
 
 . Select the name of a patch to be finished in the patches field.

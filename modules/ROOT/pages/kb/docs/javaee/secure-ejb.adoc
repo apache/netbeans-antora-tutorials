@@ -29,6 +29,10 @@
 :description: Building Secure Enterprise Beans in Java EE - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Building Secure Enterprise Beans in Java EE
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 Support for the Java EE specification in NetBeans IDE enables you to take full advantage of the many Java EE features simplifying application development. A significant development in the Java EE 5 specification was the incorporation of annotations. Using annotations enables you to eliminate a lot of the boilerplate code used when coding applications and minimizes the amount of configuration needed when deploying your application.
 
 One area that has become greatly simplified through the use of annotations is the development and configuration of enterprise beans. Annotations enable you to specify many configuration properties that were previously specified in deployment descriptor files, making many of the deployment descriptor files unnecessary. Though applications may still require some deployment descriptor files (such as  ``web.xml`` ), the IDE's multi-view deployment descriptor editor makes editing the files much easier.
@@ -69,13 +73,13 @@ In this example, you only want users from the group  ``bank_users``  to access t
 3. Expand the *server-config* node under the Configurations node in the left navigation bar.
 4. Click *Security > Realms > file* to open the Edit Realm frame.
 
-image::./console-file-realm.png[title="Selecting the file realm node in admin console of application server"]
+image::kb/docs/javaee/console-file-realm.png[title="Selecting the file realm node in admin console of application server"]
 
 
 
 . Click the Manage Users button at the top of the Edit Realm panel to open the File Users panel.
 
-image::./console-edit-realm.png[title="Edit Realm panel node in admin console of application server"]
+image::kb/docs/javaee/console-edit-realm.png[title="Edit Realm panel node in admin console of application server"]
 
 
 
@@ -96,11 +100,11 @@ image::./console-edit-realm.png[title="Edit Realm panel node in admin console of
 
 The form should resemble the following image.
 
-image::./console-new-user.png[title="New File Realm User panel in admin console of application server"]
+image::kb/docs/javaee/console-new-user.png[title="New File Realm User panel in admin console of application server"]
 
 When you click OK, the server will create the user and open the File Users panel. You will see that there is now a user named  ``manager`` .
 
-image::./console-file-users.png[title="File Users panel in admin console with list of users"]
+image::kb/docs/javaee/console-file-users.png[title="File Users panel in admin console with list of users"]
 
 Now that the user is created, you will create an enterprise application that will check that the user is able to see the data.
 
@@ -139,7 +143,7 @@ Click Next.
 
 . Select Create EJB Module and deselect Create Web Application Module. Click Finish.
 
-image::./new-entapp-wizard.png[title="New File Realm User panel in admin console of application server"] 
+image::kb/docs/javaee/new-entapp-wizard.png[title="New File Realm User panel in admin console of application server"] 
 
 
 === Securing a Method in a Session Bean
@@ -153,13 +157,13 @@ Security annotations can be applied individually to each method in a class, or t
 3. Select Remote in project for the interface type.
 4. Select SecureRemoteInterface in the dropdown list. Click Finish.
 
-image::./new-sessionbean-wizard.png[title="Remote interface selected in New Session Bean wizard"]
+image::kb/docs/javaee/new-sessionbean-wizard.png[title="Remote interface selected in New Session Bean wizard"]
 
 When you click Finish, the IDE creates the  ``AccountStatus``  class and opens the file in the source editor.
 
 The IDE also creates the  ``AccountStatusRemote``  remote interface for the bean in the  ``bean``  package in the SecureRemoteInterface class library project and added the SecureRemoteInterface class library JAR to the classpath of the EJB module project.
 
-image::./projects-window-bean.png[title="Projects window showing session bean and class library on classpath"]
+image::kb/docs/javaee/projects-window-bean.png[title="Projects window showing session bean and class library on classpath"]
 
 If you open the Libraries category of the Properties dialog box of the EJB module you will see that the JAR is added to the compile-time libraries.
 
@@ -226,7 +230,7 @@ Alternatively, you can open the New File wizard by choosing File > New File from
 
 . Select the GlassFish Descriptor file type in the GlassFish category. Click Next.
 
-image::./new-gf-descriptor.png[title="GlassFish descriptor file type in the New File wizard"]
+image::kb/docs/javaee/new-gf-descriptor.png[title="GlassFish descriptor file type in the New File wizard"]
 
 
 
@@ -236,7 +240,7 @@ When you click Finish, the IDE creates  ``glassfish-application.xml``  and opens
 
 If you expand the Secure enterprise application project node in the Projects window, you can see that the descriptor file is created under the Configuration Files node.
 
-image::./glassfish-application-descriptor.png[title="Security tab in the multi-view editor"]
+image::kb/docs/javaee/glassfish-application-descriptor.png[title="Security tab in the multi-view editor"]
 
 
 
@@ -247,7 +251,7 @@ image::./glassfish-application-descriptor.png[title="Security tab in the multi-v
 
 The editor should now be similar to the following.
 
-image::./security-tab-descriptor.png[title="Security tab in the multi-view editor"]
+image::kb/docs/javaee/security-tab-descriptor.png[title="Security tab in the multi-view editor"]
 
 
 
@@ -290,7 +294,7 @@ When you click Finish,  ``Main.java``  opens in the source editor.
 
 . In the Call Enterprise Bean dialog box, expand the Secure-ejb node and select AccountStatus. Click OK.
 
-image::./call-enterprise-bean.png[title="interface selected in the Call Enterprise Bean dialog box"]
+image::kb/docs/javaee/call-enterprise-bean.png[title="interface selected in the Call Enterprise Bean dialog box"]
 
 The IDE adds the following code to the application client to look up the session bean.
 
@@ -331,7 +335,7 @@ When you click Deploy, the IDE builds the EAR file, starts the application serve
 
 . Right-click the SecureAppClient project node in the Projects window and choose Run. A dialog box appears prompting you for a username and password.
 
-image::./login-window.png[title="Login window prompting for username and password"]
+image::kb/docs/javaee/login-window.png[title="Login window prompting for username and password"]
 
 
 

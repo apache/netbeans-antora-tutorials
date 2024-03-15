@@ -29,6 +29,10 @@
 :description: Strategies for Intermodular Communication in Oracle JET - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Strategies for Intermodular Communication in Oracle JET
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This document provides a step-by-step set of instructions guiding you through the different approaches for communicating between modules defined by the link:http://oraclejet.org[+Oracle JavaScript Extension Toolkit (JET)+]. JET empowers web and mobile developers by providing a modular toolkit based on modern JavaScript, CSS3, and HTML5 design and development principles.
 
 
@@ -42,7 +46,7 @@ In this exercise you set up an Oracle JET application.
 [start=2]
 . Open the project into an editor or IDE of your choice, such as NetBeans IDE, which displays the application as follows:
 
-image::./navdrawer.png[]
+image::kb/docs/webclient/navdrawer.png[]
 
 Spend some time browsing through the application structure before continuing.
 
@@ -117,7 +121,7 @@ Make sure to include  ``ojs/ojtrain``  in the  ``require``  block in  ``main.js`
 
 In the browser, notice that you have now replaced the navigation list with a train-based step component:
 
-image::./ojtrain.png[]
+image::kb/docs/webclient/ojtrain.png[]
 
 
 [start=6]

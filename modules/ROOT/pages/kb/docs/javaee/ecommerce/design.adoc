@@ -30,6 +30,9 @@
 :keywords: Apache NetBeans, Tutorials, The NetBeans E-commerce Tutorial - Designing the Application
 include::front::partial$database.adoc[]
 
+ifdef::env-github[]
+:imagesdir: ../../../../../images
+endif::[]
 
 The application that you design in this tutorial is based on a real-world scenario. After being introduced to the tutorial scenario, you consolidate a high-level list of customer requirements. You then prepare a diagram of the application's business process flow, and a series of _mockups_ which help both you and your customer get a clearer picture of how the final application will look to an end-user. Finally, you break down the customer requirements into a set of implementation tasks, and structure your application so that the responsibilities and interactions among functional components are clearly defined.
 
@@ -116,7 +119,7 @@ a|
 [.feature]
 --
 
-image:./mockup-index-small.png[role="left", xref="image$./mockup-index.png"]
+image:kb/docs/javaee/ecommerce/mockup-index-small.png[role="left", xref="image$./mockup-index.png"]
 
 --
 
@@ -130,7 +133,7 @@ a|
 [.feature]
 --
 
-image:./mockup-category-small.png[role="left", xref="image$./mockup-category.png"]
+image:kb/docs/javaee/ecommerce/mockup-category-small.png[role="left", xref="image$./mockup-category.png"]
 
 --
 a|
@@ -142,7 +145,7 @@ a|
 [.feature]
 --
 
-image:./mockup-cart-small.png[role="left", xref="image$./mockup-cart.png"]
+image:kb/docs/javaee/ecommerce/mockup-cart-small.png[role="left", xref="image$./mockup-cart.png"]
 
 --
 a|
@@ -164,7 +167,7 @@ a|
 [.feature]
 --
 
-image::./mockup-checkout-small.png[role="left", xref="image$./mockup-checkout.png"]
+image::kb/docs/javaee/ecommerce/mockup-checkout-small.png[role="left", xref="image$./mockup-checkout.png"]
 
 --
 a|
@@ -179,7 +182,7 @@ a|
 [.feature]
 --
 
-image::./mockup-confirmation-small.png[role="left", xref="image$./mockup-confirmation.png"]
+image::kb/docs/javaee/ecommerce/mockup-confirmation-small.png[role="left", xref="image$./mockup-confirmation.png"]
 
 --
 a|
@@ -215,7 +218,7 @@ To help consolidate the relationships between the proposed mockups and better il
 
 The diagram displays the visual and functional components of each page, and highlights the primary actions available to the user in order to navigate through the site to complete a purchase.
 
-image::./process-flow.png[title="The process flow of the AffableBean application"]
+image::kb/docs/javaee/ecommerce/process-flow.png[title="The process flow of the AffableBean application"]
 
 
 
@@ -238,7 +241,7 @@ There are various design patterns already in existence which provide considerabl
 * *View:* The view renders the contents of a model. It gets data from the model and specifies how that data should be presented. It updates data presentation when the model changes. A view also forwards user input to a controller.
 * *Controller:* The controller defines application behavior. It dispatches user requests and selects views for presentation. It interprets user inputs and maps them into actions to be performed by the model. In a web application, user inputs are HTTP GET and POST requests. A controller selects the next view to display based on the user interactions and the outcome of the model operations.
 
-image::./mvc-model.png[title="The Model View Controller pattern"]
+image::kb/docs/javaee/ecommerce/mvc-model.png[title="The Model View Controller pattern"]
 
 
 Adhering to the MVC design pattern provides you with numerous benefits:
@@ -251,7 +254,7 @@ Adhering to the MVC design pattern provides you with numerous benefits:
 
 You can apply the MVC pattern to the application that you develop for the Affable Bean company. You can use a servlet as a _controller_ to handle incoming requests. The pages from the <<processFlowDiagram,business process flow diagram>> can be mapped to _views_. Finally, the business data, which will be maintained in a database, can be accessed and modified in the application using link:http://java.sun.com/products/ejb/[+EJB+] session beans with link:http://java.sun.com/javaee/technologies/persistence.jsp[+JPA+] entity classes. These components represent the _model_.
 
-image::./mvc-diagram.png[title="MVC diagram of the AffableBean application"]
+image::kb/docs/javaee/ecommerce/mvc-diagram.png[title="MVC diagram of the AffableBean application"]
 
 
 

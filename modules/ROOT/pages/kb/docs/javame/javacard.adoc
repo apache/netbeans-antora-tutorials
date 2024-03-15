@@ -30,8 +30,11 @@
 :keywords: Apache NetBeans, Tutorials, Java Card Development Quick Start Guide
 include::front::partial$database.adoc[]
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
 
-image::./java-smart-card-sm.jpg[]
+image::kb/docs/javame/java-smart-card-sm.jpg[]
 
 _Contributed by Tim Boudreau, maintained by Ruth Kusterer_
 
@@ -45,7 +48,7 @@ Java Card is an interesting platform to work with - a JVM that runs on link:{wik
 
 *To complete this tutorial, you need the following software and resources:*
 
-image::./netbeans-stamp.gif[title="Content on this page applies to the NetBeans IDE 6.8 and 6.9"]
+image::kb/docs/javame/netbeans-stamp.gif[title="Content on this page applies to the NetBeans IDE 6.8 and 6.9"]
 
 |===
 |Software or Resource |Version Required 
@@ -75,7 +78,7 @@ NOTE: the Java Card plugin works on any operating system, but the Java Card Refe
 * Java Card is the plugin that adds Java Card project support to the NetBeans IDE.
 * The Java Card 3.0.2 Runtime Bundle is required only if you do not already have a copy of the Java Card Reference Implementation installed.
 
-image::./install-javacard-plugins.png[]
+image::kb/docs/javame/install-javacard-plugins.png[]
 
 
 [start=4]
@@ -86,11 +89,11 @@ image::./install-javacard-plugins.png[]
 
 If you downloaded the Java Card 3.0.2 Runtime Bundle from the Plugin Manager, the Java Card SDK is already set up as a platform for you. However if downloaded and installed the Platform from link:http://java.sun.com/javacard/devkit/[+java.sun.com+] you can use the Tools > Java Platforms menu to add the Java Card Platform to the IDE the same way as registering any Java platform.
 
-image::./installPlatform.png[]
+image::kb/docs/javame/installPlatform.png[]
 
 Once you have set up the Java Card platform it is listed in the Services tab in the IDE. If the Services tab isn't visible, choose Windows > Services from the menu.
 
-image::./services-tab.png[]
+image::kb/docs/javame/services-tab.png[]
 
 One "platform" may have multiple "devices". You deploy a project to a specific device on a specific platform.
 
@@ -99,17 +102,17 @@ One "platform" may have multiple "devices". You deploy a project to a specific d
 
 Choose File > New Project from the menu, and click the Java Card category. There are several kinds of Java Card projects you can create. All of them are built with link:http://ant.apache.org/[+Apache Ant+], just like NetBeans Java SE projects.
 
-image::./choose-project-type.png[]
+image::kb/docs/javame/choose-project-type.png[]
 
 Classic Applet projects create a traditional Java Card applet for smaller devices, just like the applets used in Java Card 2.0 and older. Classic library projects are like Classic Applet projects, without the applet — it's some code that you expect to be on the device, that might be shared between applets.
 
 Extended Applet and Library projects use the extended API in Java Card 3.0—so you can use java.lang.String and so forth. The boot classpath will be different for Classic and Extended projects, so, for example, code completion will not show java.lang.String in Classic projects, but will in Extended projects.
 
-image::./create-applet-app.png[]
+image::kb/docs/javame/create-applet-app.png[]
 
 Web Application projects are probably the coolest feature of Java Card 3.0. You get a skeleton project with a Servlet implemented, and you have access to the full Servlet API. This is vastly easier to work with than either of the Applet-style application types—you don't need any special code on the client to interact with an application running on a device, just a web browser! You can test your applications locally using the Reference Implementation and your desktop web browser.
 
-image::./create-web-app.png[]
+image::kb/docs/javame/create-web-app.png[]
 
 
 == Working With a Project
@@ -122,13 +125,13 @@ Right-click the project node in the Project tab and choose Properties from the c
 
 Working on a Java Card web application is just like working on any other web application that you deploy to a servlet container. Press the Run button in the toolbar to run the Hello World sample. When running a Java Card web app, a web browser window will open, showing the servlet's output:  ``Hello from webapplication1.MyServlet`` .
 
-image::./editor.png[]
+image::kb/docs/javame/editor.png[]
 
 When you run applet-type projects, the NetBeans IDE offers two useful interfaces: command-line output, and the Java Card console. Use the console to interact with the applet: You can send data in hexadecimal and read the replies.
 
 Tip: The RI contains further sample projects that are ready to be opened and run in the NetBeans IDE.
 
-image::./run-customizer.png[]
+image::kb/docs/javame/run-customizer.png[]
 
 
 == Using Special Plugin Features
@@ -144,29 +147,29 @@ While these two things are somewhat complicated, the NetBeans plug-ins do their 
 
 * When you select the Applets tab in the Project Properties dialog, the project scans its classpath for all Java Card applet subclasses it can find:
 
-image::./customize-applets-pre.png[]
+image::kb/docs/javame/customize-applets-pre.png[]
 
 * Once it has found them, the dialog allows you to select what applets are actually deployed, and customize the AID values used, deployment parameters and so forth. The IDE validates all of the data you entered, so that it is hard to enter invalid data:
 
-image::./customize-applets.png[]
+image::kb/docs/javame/customize-applets.png[]
 
 * If you want to deploy two instances of the same applet, you can set that up as well; however, for simple cases where you just want to deploy one applet instance, you don't need to think about it:
 
-image::./customize-instances.png[]
+image::kb/docs/javame/customize-instances.png[]
 
 * For testing running applets, you do not need to hand-write an entire APDU script—you can use the built-in Console to interact with deployed applets directly:
 
-image::./open-console.png[]
+image::kb/docs/javame/open-console.png[]
 
-image::./shell.png[]
+image::kb/docs/javame/shell.png[]
 
 * The "package AID" for Classic projects (they are only allowed to contain one Java package) is also taken care of by the IDE, but is customizable.
 
-image::./create-project-package-aid.png[]
+image::kb/docs/javame/create-project-package-aid.png[]
 
 * Part of all AID values in your projects will be an ISO-assigned vendor ID (called the RID). For quickly getting started, the IDE will generate a random value for the RID, which is fine for development and testing. If you have an offical RID, you can enter that in Tools > Options and it will be used for all new projects. Click the Generate button in the Project Properties to update the values in existing projects.
 
-image::./global-rid.png[]
+image::kb/docs/javame/global-rid.png[]
 
 
 == Integrating Third-Party SDKs

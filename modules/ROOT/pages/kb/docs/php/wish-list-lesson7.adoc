@@ -29,6 +29,10 @@
 :description: Lesson 7: Updating and Deleting Entries in the Database - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Lesson 7: Updating and Deleting Entries in the Database
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 In this lesson you will expand the application's functionality with two features:
 
 * <<_editing_a_wish,Editing a wish>>
@@ -36,7 +40,7 @@ In this lesson you will expand the application's functionality with two features
 
 To implement these features, you edit the  `editWishList.php`  and  `editWish.php`  files. You also create a new file named  `deleteWish.php` .
 
-image::./page-flow-diagram-l7.png[]
+image::kb/docs/php/page-flow-diagram-l7.png[]
 
 The current document is a part of the Creating a CRUD Application in the NetBeans IDE for PHP tutorial.
 
@@ -406,19 +410,19 @@ The code checks that the  `wishID`  element in the  `$_POST`  array is not an em
 
 1. Run the application. On the index.php page, fill in the fields: in the Username field, enter "Tom", in the Password field, enter "tomcat".
 
-image::./user-logon-to-edit-wish-list.png[]
+image::kb/docs/php/user-logon-to-edit-wish-list.png[]
 
 
 
 . Press the Edit My Wish List button. The  `editWishList.php`  page opens.
 
-image::./edit-wish-list-edit-wish.png[]
+image::kb/docs/php/edit-wish-list-edit-wish.png[]
 
 
 
 . Click Edit next to Icecream. The  `editWish.php`  page opens.
 
-image::./edit-wish.png[]
+image::kb/docs/php/edit-wish.png[]
 
 
 . Edit the fields and press Back to the List. The  `editWishList.php`  page opens but the changes are not saved.
@@ -426,13 +430,13 @@ image::./edit-wish.png[]
 
 . Press Edit next to Icecream. Clear the Describe your wish field and press Save Changes. An error message is displayed.
 
-image::./editWishEmptyDescription.png[]
+image::kb/docs/php/editWishEmptyDescription.png[]
 
 
 
 . Enter Chocolate icecream in the Describe your wish field and press Save Changes. The  `editWishList.php`  page opens with the updated list.
 
-image::./editWishListWishAdded.png[]
+image::kb/docs/php/editWishListWishAdded.png[]
 
 
 == Deleting a Wish
@@ -592,7 +596,7 @@ The entire table, including the form with the Edit button inside the  `while ` l
 
 To check that the functionality is implemented correctly, press Delete next to any item on the  `editWishList.php`  page. The item is no longer on the list.
 
-image::./deleteWish.png[]
+image::kb/docs/php/deleteWish.png[]
 
 
 == Application Source Code after the Current Lesson Is Completed

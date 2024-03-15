@@ -29,6 +29,10 @@
 :description: Getting Started with JMX Monitoring in NetBeans IDE - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Getting Started with JMX Monitoring in NetBeans IDE
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 The NetBeans JMX Module integrates JMX technology right into your workflow in the NetBeans IDE. This module allows you to quickly develop management applications, add management to existing applications, develop manager applications, and monitor the state of the Virtual Machine.
 
 This document has been updated for the JMX Wizard module version 3.0, for NetBeans IDE 6.5 and newer, and running on top of JDK 6 or JDK 7. You can download the JMX module from the Update Center.
@@ -37,7 +41,7 @@ NOTE: This document is a short and quick introduction to the JMX module for NetB
 
 This getting started document gives you an overview of the JMX module features:
 
-image::./netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
+image::kb/docs/java/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
 
 * Wizards to create JMX MBeans and Managers.
 * Actions to update exisiting MBeans by adding attributes and operations, implementing the  ``MBeanRegistration``  interface, or implementing the  ``NotificationEmitter``  interface.
@@ -89,7 +93,7 @@ After you have installed the JMX plugin and your project is open, you can access
 * *Several types of JMX MBeans.* An MBean can represent a device, an application, or any resource that needs to be managed. MBeans expose a management interface: a set of readable and/or writable attributes and a set of invokable operations, along with a self-description. The management interface does not change throughout the life of an MBean instance. MBeans can also emit notifications when certain defined events occur. JMX MBeans need to be registered into an MBean Server.
 * *JMX Manager.* A JMX Manager is any application that connects to a remote JMX MBean Server.
 
-image::./jmx-newfile.png[title="New File Wizards in JMX category"]
+image::kb/docs/java/jmx-newfile.png[title="New File Wizards in JMX category"]
 
 
 == Updating MBeans
@@ -130,11 +134,11 @@ After you install the JMX and JConsole plugins you will see that the following b
 |===
 |Button |Description 
 
-|image:./run-project24.png[title="Run Main Project with Monitoring and Management button"] |Run Main Project with Monitoring and Management 
+|image:kb/docs/java/run-project24.png[title="Run Main Project with Monitoring and Management button"] |Run Main Project with Monitoring and Management 
 
-|image:./debug-project24.png[title="Debug Main Project with Monitoring and Management button"] |Debug Main Project with Monitoring and Management 
+|image:kb/docs/java/debug-project24.png[title="Debug Main Project with Monitoring and Management button"] |Debug Main Project with Monitoring and Management 
 
-|image:./console24.png[title="Start JConsole Management Console button"] |Start JConsole Management Console 
+|image:kb/docs/java/console24.png[title="Start JConsole Management Console button"] |Start JConsole Management Console 
 |===
 
 *Note.* JConsole is part of the Java Platform and can be used independently from the IDE. For details, refer to the following resources.
@@ -151,7 +155,7 @@ The JMX module includes a sample application with JMX monitoring built into it.
 2. In Samples, select the JMX category.
 3. Select the Anagram Game Managed with JMX project. 
 
-image::./jmx-newproject.png[title="Anagram Game Managed with JMX in New Project wizard"]
+image::kb/docs/java/jmx-newproject.png[title="Anagram Game Managed with JMX in New Project wizard"]
 
 
 . Click Next. There is no need to change the supplied default project name or location values. Confirm that the Set as Main Project checkbox is selected. Click Finish.
@@ -166,7 +170,7 @@ image::./jmx-newproject.png[title="Anagram Game Managed with JMX in New Project 
 
 Clicking this button launches and displays the Anagram Game:
 
-image::./jmx-anagram.png[title="Anagram Game"]
+image::kb/docs/java/jmx-anagram.png[title="Anagram Game"]
 
 The JConsole window is also displayed.
 
@@ -174,7 +178,7 @@ The JConsole window is also displayed.
 
 . In the JConsole window, select the MBeans tab and in the tree layout on the left open down all nodes under  ``anagrams.toy.com``  as shown below.
 
-image::./jmx-jconsole1.png[title="JConsole window"]
+image::kb/docs/java/jmx-jconsole1.png[title="JConsole window"]
 
 
 . Select the Notifications node and click on the Subscribe button at the bottom so that JConsole will receive a new notification each time an anagram is solved.
@@ -188,7 +192,7 @@ image::./jmx-jconsole1.png[title="JConsole window"]
 
 . Click on the Attributes node and notice the attributes values are updated: 
 
-image::./jmx-jconsole2.png[title="JConsole window showing updated values"]
+image::kb/docs/java/jmx-jconsole2.png[title="JConsole window showing updated values"]
 
 xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 

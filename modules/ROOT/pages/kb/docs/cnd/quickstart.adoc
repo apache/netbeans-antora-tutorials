@@ -30,13 +30,17 @@
 :keywords: Apache NetBeans, Tutorials, C/C++ Projects Quick Start Tutorial
 include::front::partial$database.adoc[]
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 //Contributed by _Ann Rice_ and maintained by _Susan Morgan_ 
 //_March 2014_ [Revision number: V8.0-1]
 
 The following short tutorial takes you through the basic steps of creating and configuring a C or C{pp} project in NetBeans IDE.
 
 
-image::./netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE  7.2 and more recent"]
+image::kb/docs/cnd/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE  7.2 and more recent"]
 
 
 
@@ -78,7 +82,7 @@ With a C/C{pp} Application, Dynamic Library, or Static Library project, the IDE 
 2. In the wizard, select the C/C++ category.
 3. The wizard gives you a choice of several types of new projects. Select C/C++ Application and click Next. 
 
-image::./creating_application.png[]
+image::kb/docs/cnd/creating_application.png[]
 
 [start=4]
 . Create a new C/C++ Application project from the wizard using the defaults. You can choose the name of the project and the location of the project.
@@ -97,12 +101,12 @@ A project has both a logical and a physical view. You can switch between the log
 
 1. Select the Files tab. This window shows the physical view of your project. It displays files and folders as they are stored on disk. 
 
-image::./files_tab.png[]
+image::kb/docs/cnd/files_tab.png[]
 
 [start=2]
 . Select the Projects tab. This window shows the logical view of your project. 
 
-image::./projects_tab.png[]
+image::kb/docs/cnd/projects_tab.png[]
 
 Most commands that you run on a project are available in the Projects tab, not the Files tab.
 
@@ -124,7 +128,7 @@ You can add new files to your project.
 1. Right-click the Source Files folder and choose New > C++ Source File.
 2. On the Name and Location page of the New File dialog box, type  ``newfile``  in the File Name field. 
 
-image::./adding_files.png[] 
+image::kb/docs/cnd/adding_files.png[] 
 
 
 [start=3]
@@ -160,7 +164,7 @@ The Project Properties dialog box contains build and configuration information f
 
 * Right-click the project node of the  ``CppApplication_1``  project and choose Properties. 
 
-image::./project_properties.png[]
+image::kb/docs/cnd/project_properties.png[]
 
 You can modify the build tool defaults, compiler settings, and other configuration settings in the Project Properties dialog box by selecting a node in the left panel and modifying the properties in the right panel. Select some of the nodes and property values and notice the properties you can set. When you set General properties, you are setting them in all configurations of the project. When you set Build, Run, or Debug properties, you are setting properties in the currently selected configuration.
 
@@ -229,7 +233,7 @@ To create the  ``Arguments``  project, set some arguments, and run the project:
 6. In the Project Properties dialog box, select the Run node.
 7. In the Run Command text field, type 1111 2222 3333. Click OK. 
 
-image::./setting_arguments.png[]
+image::kb/docs/cnd/setting_arguments.png[]
 
 [start=8]
 . Right-click the project node and choose Run.The application runs. Your arguments are displayed in the Output window.
@@ -269,7 +273,7 @@ Extract the pthreads library in your Windows user directory.
 [start=7]
 . On the Select Mode page, click the Browse button. In the Select Project Folder dialog box, navigate to the directory where you saved  ``loki-0.1.7`` . Select the  ``loki-0.1.7``  directory. Click Select. 
 
-image::./existing_sources_project1.png[] 
+image::kb/docs/cnd/existing_sources_project1.png[] 
 
 
 [start=8]
@@ -277,7 +281,7 @@ image::./existing_sources_project1.png[]
 
 The project is created and opened in the Projects tab, and the IDE automatically runs the Clean and Build actions specified in the existing Makefile. The project is also automatically configured for code assistance.
 
-image::./existing_sources_project2.png[]
+image::kb/docs/cnd/existing_sources_project2.png[]
 
 
 === Creating a C/C++ Project from a Binary File
@@ -292,7 +296,7 @@ On the Select Binary File page of the New Project wizard, click the Browse butto
 
 The root directory for the source files from which the binary was built is filled in automatically. By default, only the source files from which the binary was built are included in the project. By default, dependencies are included in the project. The shared libraries required by the project are automatically listed.
 
-image::./binary_project.png[]
+image::kb/docs/cnd/binary_project.png[]
 
 [start=5]
 . Click Next.

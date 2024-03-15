@@ -30,6 +30,9 @@
 :keywords: Apache NetBeans, Tutorials, Make Dependency Checking
 include::front::partial$database.adoc[]
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
 
 //Contributed by Alexey Vladykin
 //March 2014 [Revision number: V8.0-1]
@@ -37,7 +40,7 @@ include::front::partial$database.adoc[]
 This tutorial shows you how to enable the NetBeans IDE to check file dependencies in your projects when building. Dependency checking is performed by the  ``make``  utility through instructions in the  ``Makefile`` .
 
 
-image::./netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.3 and 7.4 and 8.0"]
+image::kb/docs/cnd/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.3 and 7.4 and 8.0"]
 
 
 
@@ -81,7 +84,7 @@ Dependency checking can be controlled for each particular project. You may want 
 3. In the build properties, select the checkbox for Enable Make Dependency Checking.
 
 
-image::./project-checkbox.png[] 
+image::kb/docs/cnd/project-checkbox.png[] 
 
 
 === Enabling Dependency Checking by Default for New Projects
@@ -96,7 +99,7 @@ You can set a default state for dependency checking so that new projects you cre
 4. Select the checkbox for Enable dependency checking in generated makefiles
 
 
-image::./global-checkbox.png[]
+image::kb/docs/cnd/global-checkbox.png[]
 
 
 === Notes
@@ -114,7 +117,7 @@ The build process of every C/C++ project in NetBeans is described in a  ``Makefi
 
 Makefiles used by NetBeans IDE for a C/C++ project are shown below.
 
-image::./makefiles.png[]
+image::kb/docs/cnd/makefiles.png[]
 
 The master  ``Makefile``  is generated once and you can edit it manually. Makefiles in  ``nbproject``  directory are not meant for manual editing; they are updated automatically by the IDE. The file  ``Makefile-_CONF_.mk``  in the illustration represents multiple files for all your project configurations, such as  ``Makefile-Release.mk`` ,  ``Makefile-Debug.mk`` , and so on.
 

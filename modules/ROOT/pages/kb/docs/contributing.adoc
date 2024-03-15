@@ -29,6 +29,10 @@
 :description: Tutorial Contribution Guidelines
 :experimental:
 
+ifdef::env-github[]
+:imagesdir: ../../../images
+endif::[]
+
 The Apache NetBeans Tutorials were included in the third donation from Oracle to the Apache Software Foundation. Many of these tutorials need to be reviewed. Everybody can help out in the review process. All you need is a web browser, a GitHub account and a basic knowledge of link:https://asciidoc.org/[AsciiDoc].
 
 This page describes some tips, tricks and conventions for reviewing tutorials for Apache NetBeans.
@@ -48,12 +52,12 @@ All web pages can be edited directly in GitHub. To do so follow these instructio
 
 1. Click the "See this page in GitHub" link at the bottom of any page.
 
-image::./contributing-link.png[title="Click the 'See this page in GitHub' link to edit a page"]
+image::kb/docs/contributing-link.png[title="Click the 'See this page in GitHub' link to edit a page"]
 
 
 1. You will then be redirected to GitHub. Once there click the "Edit this file" button.
 
-image::./contributing-button.png[title="Edit button in GitHub"]
+image::kb/docs/contributing-button.png[title="Edit button in GitHub"]
 
 If you don't have edit permissions you always can clone the link:https://github.com/apache/netbeans-website[website repository in GitHub] and edit the file in your own clone, and then submit that as a Pull Request against the main Apache NetBeans website repository.
 
@@ -169,7 +173,7 @@ Images in a table should be inlined, i.e., using the `single colon` image constr
 
 [source, asciidoc]
 ----
-image:images/image.png[] 
+image:<pathinantoraimages>image.png[] 
 ----
 
 === Block images and screenshots
@@ -180,7 +184,7 @@ paragraph of their own. Example:
 [source, asciidoc]
 ----
 
-image::./image.png[title="This is the image caption"] 
+image::<pathinantoraimages>image.png[title="This is the image caption"] 
 
 ----
 
@@ -197,7 +201,7 @@ Clickable screenshots are generated using a "[.feature]" tag above a paragraph t
 [.feature]
 --
 
-image::./the-title-of-the-image-small.png[role="left", title="Click to enlarge", xref="image$./the-title-of-the-image-big.png"]
+image::<pathinantoraimages>the-title-of-the-image-small.png[role="left", title="Click to enlarge", xref="image$./the-title-of-the-image-big.png"]
 
 --
 ----

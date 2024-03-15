@@ -29,6 +29,10 @@
 :description: Creating a Maven Swing Application Using Hibernate - NetBeans IDE Tutorial - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Creating a Maven Swing Application Using Hibernate - NetBeans IDE Tutorial
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 In this tutorial, you use the NetBeans IDE to create a Java Swing application from a Maven archetype. The application uses the Hibernate framework as the persistence layer to retrieve POJOs (plain old Java objects) from a relational database. The tutorial demonstrates how wizards in the IDE can help you create the necessary Hibernate files and add Hibernate dependencies to the POM. After creating the Java objects and configuring the application to use Hibernate, you create a GUI interface for searching and displaying the data.
 
 Support for Maven is fully integrated in NetBeans IDE and Maven 3 is bundled with the IDE. You can create applications from the bundled Maven archetypes or from archetypes in remote repositories in the New Project wizard. The Maven Repository Browser enables you to explore your local and remote Maven repositories, examine artifacts and add project dependencies to the project's POM.
@@ -68,7 +72,7 @@ For more information on configuring the IDE to work with MySQL, see the xref:kb/
 3. Right-click the MySQL Server node and choose Create Database.
 4. Select the Sakila database from the New Database Name drop down list in the Create MySQL Database dialog box. Click OK.
 
-image::./create-sakila-mysql.png[title="Screenshot of Create MySQL Database dialog"]
+image::kb/docs/java/create-sakila-mysql.png[title="Screenshot of Create MySQL Database dialog"]
 
 When you click OK the IDE will run a script to create the Sakila database and populate the database tables. You can see the results of running the script in the Output window. A node for the Sakila database is also added under the MySQL Server node.
 
@@ -112,7 +116,7 @@ To browse and update the Maven repositories perform the following steps.
 3. Expand a repository node to view the artifacts.
 4. Right-click a repository node and choose Update Index in the popup menu to update the repository.
 
-image::./maven-repositories.png[title="Maven Repositories in Services window"]
+image::kb/docs/java/maven-repositories.png[title="Maven Repositories in Services window"]
 
 When your cursor is over an artifact, the IDE displays a tooltip with the artifact's coordinates. You can double-click an artifact's JAR file to view additional details about the artifact.
 
@@ -136,7 +140,7 @@ The New Project wizard enables you to create a Maven project from a Maven archet
 1. Choose File > New Project (Ctrl-Shift-N; ⌘-Shift-N on Mac) from the main menu to open the New Project wizard.
 2. Select Java Application from the Maven category. Click Next. 
 
-image::./maven-project-wizard.png[title="Maven Archetypes in New Project wizard"]
+image::kb/docs/java/maven-project-wizard.png[title="Maven Archetypes in New Project wizard"]
 
 
 . Type *DVDStoreAdmin* for the project name and set the project location.
@@ -182,17 +186,17 @@ The Hibernate configuration file ( ``hibernate.cfg.xml`` ) contains information 
 5. Click Browse and specify the  ``src/main/resources``  directory as the Location (if not already specified). Click Next.
 6. Select the sakila connection in the Database Connection drop down list. Click Finish.
 
-image::./hib-config.png[title="Dialog for selecting database connection"]
+image::kb/docs/java/hib-config.png[title="Dialog for selecting database connection"]
 
 When you click Finish the IDE opens  ``hibernate.cfg.xml``  in the editor. The configuration file contains information about a single database.
 
 If you expand the Dependencies node in the Projects window you can see that the IDE added the required Hibernate artifacts. The IDE lists all direct and transitive dependencies required to compile the project under the Dependencies node. The artifacts that are direct dependencies (dependencies that are specified in the project's POM) are indicated by color JAR icons. An artifact is greyed out if it is a transitive dependency (an artifact that is the dependency of one or more direct dependencies).
 
-image::./maven-project-libs.png[title="Dependencies under Libraries node in Projects window"]
+image::kb/docs/java/maven-project-libs.png[title="Dependencies under Libraries node in Projects window"]
 
 You can view details of artifacts by right-clicking a JAR and choosing View Artifact Details. The Artifact Viewer contains tabs that provide details about the selected artifact. For example, the Basic tab provides details about the artifact's coordinates and available versions. The Graph tab provides a visual representation of the dependencies of the selected artifact.
 
-image::./maven-artifacts-viewer.png[title="Graphs tab or Artifact Viewer showing dependencies"]
+image::kb/docs/java/maven-artifacts-viewer.png[title="Graphs tab or Artifact Viewer showing dependencies"]
 
 You can also use the Graphs tab to discover and resolve version conflicts among dependencies.
 
@@ -205,7 +209,7 @@ In this exercise you will edit the default properties specified in  ``hibernate.
 3. Click Add to open the Add Hibernate Property dialog box.
 4. In the dialog box, select the  ``hibernate.show_sql``  property and set the value to  ``true`` . Click OK. This enables the debug logging of the SQL statements.
 
-image::./add-property-showsql.png[title="Add Hibernate Property dialog box showing setting value for the hibernate.show_sql property"]
+image::kb/docs/java/add-property-showsql.png[title="Add Hibernate Property dialog box showing setting value for the hibernate.show_sql property"]
 
 
 . Click Add under the Miscellaneous Properties node and select  ``hibernate.query.factory_class``  in the Property Name dropdown list.
@@ -215,7 +219,7 @@ image::./add-property-showsql.png[title="Add Hibernate Property dialog box showi
 
 *Note.* Do not select the value from the drop-down list.
 
-image::./add-property-factoryclass-4.png[title="Add Hibernate Property dialog box showing setting value for the hibernate.query.factory_class property"]
+image::kb/docs/java/add-property-factoryclass-4.png[title="Add Hibernate Property dialog box showing setting value for the hibernate.query.factory_class property"]
 
 If you click the XML tab in the editor you can see the file in XML view. Your file should look similar to the following:
 
@@ -251,7 +255,7 @@ In this section you use the New File wizard to create the helper class  ``Hibern
 2. Select Hibernate from the Categories list and HibernateUtil.java from the File Types list. Click Next.
 3. Type *HibernateUtil* for the class name and *sakila.util* as the package name. Click Finish.
 
-image::./maven-hibutil-wizard.png[title="Hibernate Util wizard"]
+image::kb/docs/java/maven-hibutil-wizard.png[title="Hibernate Util wizard"]
 
 When you click Finish,  ``HibernateUtil.java``  opens in the editor. You can close the file because you do not need to edit the file.
 
@@ -288,7 +292,7 @@ The Hibernate Mapping Files and POJOs from a Database wizard generates files bas
 5. Ensure that the *Domain Code* and *Hibernate XML Mappings* options are selected.
 6. Type *sakila.entity* for the Package name. Click Finish.
 
-image::./mapping-pojos-wizard.png[title="Generate Hibernate Mapping Files and POJOs wizard"]
+image::kb/docs/java/mapping-pojos-wizard.png[title="Generate Hibernate Mapping Files and POJOs wizard"]
 
 When you click Finish, the IDE generates the POJO  ``Actor.java``  with all the required fields in the  ``src/main/java/sakila/entity``  directory. The IDE also generates a Hibernate mapping file in the  ``src/main/resources/sakila/entity``  directory and adds the mapping entry to  ``hibernate.cfg.xml`` .
 
@@ -361,7 +365,7 @@ You can enable the Horizontal Resizable property for the text fields to ensure t
 
 In Design view your form should look similar to the following image.
 
-image::./hib-jframe-form.png[title="GUI form in Design view of the editor"]
+image::kb/docs/java/hib-jframe-form.png[title="GUI form in Design view of the editor"]
 
 Now that you have a form you need to create the code to assign events to the form elements. In the next exercise you will construct queries based on Hibernate Query Language to retrieve data. After you construct the queries you will add methods to the form to invoke the appropriate query when the Query button is pressed.
 
@@ -383,11 +387,11 @@ When you click Build, the IDE will download the necessary artifacts to your loca
 . Right-click  ``hibernate.cfg.xml``  and choose Run HQL Query to open the HQL Editor.
 
 
-. Test the connection by typing  ``from Actor``  in the HQL Query Editor. Click the Run HQL Query button ( image:./run_hql_query_16.png[title="Run HQL Query button"] ) in the toolbar.
+. Test the connection by typing  ``from Actor``  in the HQL Query Editor. Click the Run HQL Query button ( image:kb/docs/java/run_hql_query_16.png[title="Run HQL Query button"] ) in the toolbar.
 
 When you click Run HQL Query you should see the query results in the bottom pane of the HQL Query Editor.
 
-image::./hib-query-hqlresults.png[title="HQL Query Editor showing HQL query results"]
+image::kb/docs/java/hib-query-hqlresults.png[title="HQL Query Editor showing HQL query results"]
 
 
 . Type the following query in the HQL Query Editor and click Run HQL Query to check the query results when the search string is 'PE'.
@@ -557,20 +561,20 @@ To compile and launch this application, perform the following tasks.
 
 Alternatively, you can click the Browse button and choose the main class in the dialog box.
 
-image::./browse-main-class.png[title="Setting the main class in the Browse Main Classes dialog"]
+image::kb/docs/java/browse-main-class.png[title="Setting the main class in the Browse Main Classes dialog"]
 
 
 . Click Run Project in the main toolbar to launch the application.
 
 When you invoke the Run action on a Maven project in the IDE, the IDE runs the Maven goals associated with the Run action. The IDE has default goals bound to IDE actions according to the project packaging. You can view the goals bound to the Run action in the Actions pane of the project's Properties window
 
-image::./maven-projectproperties.png[title="Actions pane of DVDStoreAdmin project properties window"]
+image::kb/docs/java/maven-projectproperties.png[title="Actions pane of DVDStoreAdmin project properties window"]
 
 You can customize the binding of goals to actions in the Actions pane of the project's Properties window.
 
 The GUI form opens when you launch the application. Type in a search string in the First Name or Last Name text field and click Query to search for an actor and see the details.
 
-image::./application-run.png[title="DVDStoreAdmin application showing results"]
+image::kb/docs/java/application-run.png[title="DVDStoreAdmin application showing results"]
 
 If you look in the Output window of the IDE you can see the SQL query that retrieved the displayed results.
 
@@ -635,7 +639,7 @@ public class Actor *implements Serializable* {
 
 . In the Generate Getters and Setters dialog box, select all the fields and click Generate.
 
-image::./getters-setters.png[title="Generate Getters and Setters dialog box"]
+image::kb/docs/java/getters-setters.png[title="Generate Getters and Setters dialog box"]
 
 In the Generate Getters and Setters dialog box, you can use the Up arrow on the keyboard to move the selected item to the Actor node and then press the Space bar to select all fields in Actor.
 
@@ -651,7 +655,7 @@ After you create the POJO for the table you will want to create an Hibernate Map
 4. Type *sakila.entity.Actor* for the Class to Map.
 5. Select *actor* from the Database Table drop down list if not already selected. Click Finish.
 
-image::./mapping-wizard.png[title="Generate Hibernate Mapping Files wizard"]
+image::kb/docs/java/mapping-wizard.png[title="Generate Hibernate Mapping Files wizard"]
 
 When you click Finish the  ``Actor.hbm.xml``  Hibernate mapping file opens in the source editor. The IDE also automatically adds an entry for the mapping resource to  ``hibernate.cfg.xml`` . You can view the entry details by expanding the Mapping node in the Design view of  ``hibernate.cfg.xml``  or in the XML view. The  ``mapping``  entry in the XML view will look like the following:
 

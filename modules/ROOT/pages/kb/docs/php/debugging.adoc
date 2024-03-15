@@ -29,6 +29,10 @@
 :description: Debugging PHP Source Code in the NetBeans IDE - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Debugging PHP Source Code in the NetBeans IDE
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 *To follow this tutorial, you need the following software and resources.*
 
 |===
@@ -68,7 +72,7 @@ The NetBeans IDE Options include a tab for changing certain default settings for
 
 *Note: *The Debugging tab was introduced in NetBeans IDE version 7.1. Earlier versions of NetBeans have debugging options in the General PHP tab. Not all options in version 7.1 are available in earlier versions.
 
-image::./php-debugging-options.png[]
+image::kb/docs/php/php-debugging-options.png[]
 
 You can change the following options in this panel:
 
@@ -100,24 +104,24 @@ The editor enables you to view the contents of files. So when you are debugging,
 
 When you run a debugging session, the debugger toolbar displays above the editor.
 
-image::./debugger-toolbar2.png[title="Debugger toolbar in suspended state"]
+image::kb/docs/php/debugger-toolbar2.png[title="Debugger toolbar in suspended state"]
 
 The toolbar provides you with the following actions:
 
 |===
-|*Finish Session* ( image:./finish-session-button.png[] ) |Finish debugging session 
+|*Finish Session* ( image:kb/docs/php/finish-session-button.png[] ) |Finish debugging session 
 
-|*Pause* ( image:./pause-button.png[] ) |Suspend debugging session 
+|*Pause* ( image:kb/docs/php/pause-button.png[] ) |Suspend debugging session 
 
-|*Resume* ( image:./resume-button.png[] ) |Resume debugging session 
+|*Resume* ( image:kb/docs/php/resume-button.png[] ) |Resume debugging session 
 
-|*Step Over* ( image:./step-over-button.png[] ) |Step over an execution statement 
+|*Step Over* ( image:kb/docs/php/step-over-button.png[] ) |Step over an execution statement 
 
-|*Step Into* ( image:./step-into-button.png[] ) |Step into a function call 
+|*Step Into* ( image:kb/docs/php/step-into-button.png[] ) |Step into a function call 
 
-|*Step Out* ( image:./step-out-button.png[] ) |Step out of the current function call 
+|*Step Out* ( image:kb/docs/php/step-out-button.png[] ) |Step out of the current function call 
 
-|*Run to Cursor* ( image:./run-to-cursor-button.png[] ) |Run execution to the position of the cursor 
+|*Run to Cursor* ( image:kb/docs/php/run-to-cursor-button.png[] ) |Run execution to the position of the cursor 
 |===
 
  
@@ -131,22 +135,22 @@ Set breakpoints in your files to tell the debugger where to stop during executio
 
 To set a breakpoint, click in the left margin of the editor on the line where you want the breakpoint to be set.
 
-image::./set-breakpoint.png[title="Breakpoints can be set in the editor"]
+image::kb/docs/php/set-breakpoint.png[title="Breakpoints can be set in the editor"]
 
-You can remove the breakpoint by clicking on the breakpoint badge ( image:./breakpoint-badge.png[] ).
+You can remove the breakpoint by clicking on the breakpoint badge ( image:kb/docs/php/breakpoint-badge.png[] ).
 
-It is also possible to temporarily disable breakpoints. To do so, right-click on a breakpoint badge and unselect Breakpoint > ✔Enabled. This toggles the breakpoint into a disabled state, resulting in a grey badge ( image:./disabled-breakpoint-badge.png[] ) displaying in the left margin.
+It is also possible to temporarily disable breakpoints. To do so, right-click on a breakpoint badge and unselect Breakpoint > ✔Enabled. This toggles the breakpoint into a disabled state, resulting in a grey badge ( image:kb/docs/php/disabled-breakpoint-badge.png[] ) displaying in the left margin.
 
 If the debugger encounters a breakpoint upon executing, it stops on the breakpoint, enabling you to examine variables in the debugging windows, and step through any code following the breakpoint.
 
-image::./stop-on-breakpoint.png[title="Debugger suspends on breakpoints"] 
+image::kb/docs/php/stop-on-breakpoint.png[title="Debugger suspends on breakpoints"] 
 
 
 === Examining Tooltips
 
 When the debugger is suspended during a debugging session, you can hover your mouse over a PHP identifier in the editor to display a tooltip. If the identifier is valid in the selected call stack frame, its value is displayed. You can also select PHP expressions. The value of the expression is shown in a tooltip.
 
-image::./tool-tip.png[title="Tool tips display in the editor"]
+image::kb/docs/php/tool-tip.png[title="Tool tips display in the editor"]
 
 
 ==  Debugger Windows
@@ -163,20 +167,20 @@ When you start a debugging session, a set of Debugger windows opens below the ma
 
 All debugger windows can be accessed from the IDE's Window > Debugging menu. Once a debugging session is active, you can begin making use of the debugger windows.
 
-image::./debugger-menu.png[title="Debugger menu accessed from the IDE's main menu"]
+image::kb/docs/php/debugger-menu.png[title="Debugger menu accessed from the IDE's main menu"]
 
 
 === Sessions Window
 
 The Sessions window shows any debugging sessions that are currently active. When you start a PHP debugging session, you can see an entry for the PHP debugger in the Sessions window.
 
-image::./sessions-win.png[]
+image::kb/docs/php/sessions-win.png[]
 
 The NetBeans IDE also enables you to run multiple debugger sessions simultaneously. For example, you can debug a Java and a PHP project at the same time. In this case, you can identify two sessions listed in the Sessions window.
 
-image::./sessions-win2.png[]
+image::kb/docs/php/sessions-win2.png[]
 
-The current session (i.e., the session that you can control using the debugger toolbar) is indicated by the more prominent icon ( image:./current-session-icon.png[] ). To switch sessions, you can double-click on the session you want to make current, or right-click a non-current session and choose Make Current.
+The current session (i.e., the session that you can control using the debugger toolbar) is indicated by the more prominent icon ( image:kb/docs/php/current-session-icon.png[] ). To switch sessions, you can double-click on the session you want to make current, or right-click a non-current session and choose Make Current.
 
 *Note: *It is not recommended to switch sessions if the session you are currently working in is suspended.
 
@@ -187,7 +191,7 @@ You can also use the right-click pop-up window to terminate a session (right-cli
 
 When the debugger is suspended, the Variables window displays the variables of the current `window` object for the selected callstack frame. A node is displayed for every variable in the current window. Superglobals are grouped under a separate node.
 
-image::./vars-win.png[]
+image::kb/docs/php/vars-win.png[]
 
  
 
@@ -203,7 +207,7 @@ Setting watches destabilizes XDebug and is not recommended. Watches are disabled
 
 The Call Stack window lists the sequence of calls made during execution. When the debugger is suspended, the Call Stack window shows the sequence of function calls (i.e., the _call stack_). On initial suspension, the top-most stack frame is selected automatically. Double-click on a function call in the window to go to that line in the editor. If the call is made to a PHP class, the Navigator window will also go to that line when you double-click the call.
 
-image::./call-stack-win.png[]
+image::kb/docs/php/call-stack-win.png[]
 
 You can double-click on a call stack frame to select it, then explore any variable or expression values for that frame in the <<localVar, Variables>> and <<watches,Watches>> windows.
 
@@ -212,7 +216,7 @@ You can double-click on a call stack frame to select it, then explore any variab
 
 The Threads window indicates which PHP script is currently active and whether it is suspended at a breakpoint or running. If the script is running, you need to go to the browser window and interact with the script.
 
-image::./threads-win.png[] 
+image::kb/docs/php/threads-win.png[] 
 
 
 === Sources Window
@@ -224,7 +228,7 @@ The Sources window displays all the files and scripts loaded for the debugging s
 
 You can use the Breakpoints window to view all breakpoints that you have set in the IDE.
 
-image::./breakpoints-win.png[]
+image::kb/docs/php/breakpoints-win.png[]
 
 From the Breakpoints window you can enable or disable breakpoints in the Context window. You can also create breakpoint groups.
 
@@ -238,7 +242,7 @@ The following procedure is the workflow of a typical debugging session.
 1. Start the ide and open the file that contains the source code that you want to debug.
 2. Set a breakpoint at each line where you want the debugger to pause. To set a breakpoint, place the cursor at the beginning of a line and press Ctrl-F8/⌘-F8 or choose Debug > Toggle Line Breakpoint.
 3. In the Projects window, navigate to the current project node, click the right mouse button, and choose Debug from the popup menu. The IDE opens the Debugger windows and runs the project in the debugger until the breakpoint is reached. 
-NOTE: If the current project is set as Main, you can choose Debug  > Debug Main Project, or press Ctrl-F5, or click image:./debug-main-project-button.png[].
+NOTE: If the current project is set as Main, you can choose Debug  > Debug Main Project, or press Ctrl-F5, or click image:kb/docs/php/debug-main-project-button.png[].
 
 
 . Switch to the Local Variables window. The window shows all the variables that have been initialized within the current function, their types, and values.
@@ -271,10 +275,10 @@ Now you can make an additional check during debugging.
 . To pause the debugging session, choose Debug > Pause.
 
 
-. To continue the debugging session, choose Debug > Continue or press image:./continue-debugging-session.png[].
+. To continue the debugging session, choose Debug > Continue or press image:kb/docs/php/continue-debugging-session.png[].
 
 
-. To cancel the debugging session, press image:./stop-debugging-session.png[].
+. To cancel the debugging session, press image:kb/docs/php/stop-debugging-session.png[].
 
 
 . 
@@ -347,47 +351,47 @@ The code contains three functions:
 ----
 
 
-. To start debugging, click image:./debug-main-project-button.png[]. The debugger stops at the breakpoint.
+. To start debugging, click image:kb/docs/php/debug-main-project-button.png[]. The debugger stops at the breakpoint.
 
 
 . Press F7 three times. The debugger stops at the line where the function  ``calculate_sum_of_factorials ()``  is called. The Local Variables window shows the variables  ``$m``  and  ``$n``  with their values:
 
-image::./degugger-stopped-at-function-call.png[]
+image::kb/docs/php/degugger-stopped-at-function-call.png[]
 
 
 
 . To step into the function  ``calculate_sum_of_factorials()`` , press F7. The debugger starts to execute the code within the function  ``calculate_sum_of_factorials ()``  and stops at the call of the function  ``calculate_factorial()`` . 
 
-image::./call-of-embedded-function.png[] 
+image::kb/docs/php/call-of-embedded-function.png[] 
 
 The Local Variables window now shows the local variables  ``$argument1``  and  ``$argument2``  that are declared within the function  ``calculate_sum_of_factorials ()`` . 
 
-image::./variables-inside-function-call-another-function.png[]
+image::kb/docs/php/variables-inside-function-call-another-function.png[]
 
 
 
 . Press F7. The debugger starts to execute the code with the function  ``calculate_factorial()`` . The Call Stack window shows the stack of calls to the functions in the reverse order with the last called function at the top of the list: 
 
-image::./call-stack.png[]
+image::kb/docs/php/call-stack.png[]
 
 
 
 . Press F7 to step into the loop. View the values of the variables in the Variables window. 
 
-image::./local-variables-inside-loop.png[]
+image::kb/docs/php/local-variables-inside-loop.png[]
 
 
 
 . When you make sure that the code works correctly, press Ctrl-F7/⌘-F7 to cancel the function execution. The program returns to the line next after the call of the function  ``calculate_factorial()`` . 
 NOTE: Alternatively, you can press F7 until the program completes execution of the function  ``calculate_factorial()`` . You will also return to the line next after its call. 
 
-image::./call-of-embedded-function-second-time.png[]
+image::kb/docs/php/call-of-embedded-function-second-time.png[]
 
 
 
 . Because you have just checked the function  ``calculate_factorial()``  and know that it works correctly, you can skip its execution ("step over"). To step over, press F8. The program stops at the call of the function  ``calculate_sum()`` . 
 
-image::./cal-of-embedded-function-calculate-sum.png[]
+image::kb/docs/php/cal-of-embedded-function-calculate-sum.png[]
 
 
 
@@ -396,7 +400,7 @@ image::./cal-of-embedded-function-calculate-sum.png[]
 
 . To step over, press F8. In either case the debugger stops at the last line in the function  ``calculate_sum_of_factorials()`` .
 
-image::./return-result.png[]
+image::kb/docs/php/return-result.png[]
 
 
 
@@ -405,7 +409,7 @@ image::./return-result.png[]
 
 . Press F7 till the debugger exits the program. The browser window opens and shows the result of program execution:
 
-image::./program-output.png[]
+image::kb/docs/php/program-output.png[]
 
 
 == Using Additional Watches
@@ -445,7 +449,7 @@ return $result;
 ----
 compare the value of the expression in the Watches window and the value of $result in the Local Variables window. They should be the same but they differ. 
 
-image::./watches.png[]
+image::kb/docs/php/watches.png[]
 
 This example is very simple and is supposed to give some general notion of using watches.
 

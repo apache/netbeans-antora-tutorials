@@ -29,6 +29,10 @@
 :description: Using Git Support in NetBeans IDE - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Using Git Support in NetBeans IDE
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 The Apache NetBeans IDE provides support for the link:https://git-scm.com/[Git version control system]. The IDE's Git features let you perform versioning tasks directly from your projects and code within the IDE. This document demonstrates how to perform versioning tasks in the IDE by guiding you through the standard workflow when using Git.
 
 Git is a free and open source, distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Every Git clone is a full-fledged repository with complete history and full revision tracking capabilities, not dependent on network access or a central server. Branching and merging are fast and easy to do. Git is used for version control of files, much like tools such as Mercurial, Subversion, CVS, and Perforce.
@@ -42,7 +46,7 @@ To initialize a Git repository from existing files that are not in source contro
 [.feature]
 --
 
-image::./initialize-git-repo-small.png[role="left", xref="image$./initialize-git-repo.png"]
+image::kb/docs/ide/initialize-git-repo-small.png[role="left", xref="image$./initialize-git-repo.png"]
 
 --
 
@@ -52,11 +56,11 @@ image::./initialize-git-repo-small.png[role="left", xref="image$./initialize-git
 A  ``.git``  subfolder is created in the folder you specified in step 3 above (your NetBeans project folder by default), which is your Git repository where all the data of your project snapshots are stored. Git starts versioning all files in the folder you specified.
 You can open  ``Window``  >  ``Output``  >  ``Output``  to view the IDE's report about the progress of the repository creation under your local working directory.
 
-image::./output-init.png[]
+image::kb/docs/ide/output-init.png[]
 
 All the project files are marked  ``Added``  in your Working Tree. To view a file <<viewFileStatus,status>>, place the cursor over the file name in the Projects window. The status of the file in the Working Tree displays in green to the right of the slash like shown in the following picture.
 
-image::./new-locally.png[]
+image::kb/docs/ide/new-locally.png[]
 
 After you initialized the Git repository, you either <<add,add>> files or directly <<committing,commit>> them to the Git repository.
 
@@ -68,7 +72,7 @@ To get a copy of an already existing Git repository, you need to clone it. Make 
 [.feature]
 --
 
-image::./clone-wizard-small.png[role="left", xref="image$./clone-wizard.png"]
+image::kb/docs/ide/clone-wizard-small.png[role="left", xref="image$./clone-wizard.png"]
 
 --
 
@@ -113,7 +117,7 @@ NOTE: You need to have a GitHub account and be a project member in order to clon
 [.feature]
 --
 
-image::./github-repo-small.png[role="left", xref="image$./github-repo.png"]
+image::kb/docs/ide/github-repo-small.png[role="left", xref="image$./github-repo.png"]
 
 --
 
@@ -123,7 +127,7 @@ image::./github-repo-small.png[role="left", xref="image$./github-repo.png"]
 [.feature]
 --
 
-image::./github-branches-small.png[role="left", xref="image$./github-branches.png"]
+image::kb/docs/ide/github-branches-small.png[role="left", xref="image$./github-branches.png"]
 
 --
 
@@ -141,14 +145,14 @@ By default Clone Name is filled out with the actual Git repository name.
 [.feature]
 --
 
-image::./github-destination-small.png[role="left", xref="image$./github-destination.png"]
+image::kb/docs/ide/github-destination-small.png[role="left", xref="image$./github-destination.png"]
 
 --
 
 1. Click Finish.
 After the repository is cloned, the Clone Completed message displays.
 
-image::./clone-completed.png[]
+image::kb/docs/ide/clone-completed.png[]
 
 1. Choose the desired option.
 
@@ -175,7 +179,7 @@ When adding files to a Git repository, the IDE composes and saves snapshots of y
 
 
 [start=4]
-. In the Commit dialog box, select the Changes between HEAD and Index ( image:./changes-head-index.png[] ) toggle button. This displays the list of files that are already staged.
+. In the Commit dialog box, select the Changes between HEAD and Index ( image:kb/docs/ide/changes-head-index.png[] ) toggle button. This displays the list of files that are already staged.
 
 
 [start=5]
@@ -190,7 +194,7 @@ When adding files to a Git repository, the IDE composes and saves snapshots of y
 
 
 [start=3]
-. In the Commit dialog box, select the Select the Changes between HEAD and Working Tree (image:./changes-head-wt.png[]) toggle button. This displays the list of files that are not staged.
+. In the Commit dialog box, select the Select the Changes between HEAD and Working Tree (image:kb/docs/ide/changes-head-wt.png[]) toggle button. This displays the list of files that are not staged.
 
 
 [start=4]
@@ -200,7 +204,7 @@ When adding files to a Git repository, the IDE composes and saves snapshots of y
 
 NOTE: The <<viewFileStatus,status>> of the file in the HEAD displays in green to the left of the slash like shown in the following picture.
 
-image::./new.png[]
+image::kb/docs/ide/new.png[]
 
 The action works recursively if invoked on folders while respecting the NetBeans IDE flat folder content structure.
 
@@ -224,25 +228,25 @@ When you open a versioned file in the IDE's Source Editor, you can view real-tim
 
 The Source Editor's left margin shows changes occurring on a line-by-line basis. When you modify a given line, changes are immediately shown in the left margin.
 
-image::./left-margin.png[]
+image::kb/docs/ide/left-margin.png[]
 
 NOTE: You can click on a color grouping in the margin to call versioning commands. For example, the picture below shows widgets available to you when clicking a red icon which indicates that lines have been removed from your local copy:
 
-image::./left-widgets.png[]
+image::kb/docs/ide/left-widgets.png[]
 
 The Source Editor's right margin provides you with an overview that displays changes made to your file as a whole, from top to bottom. Color coding is generated immediately when you make changes to your file.
 
-image::./right-margin.png[]
+image::kb/docs/ide/right-margin.png[]
 
 *Note*: You can click on a specific point within the margin to bring your inline cursor immediately to that location in the file. To view the number of lines affected, hover your mouse over the colored icons in the right margin:
 
-image::./right-lines-number.png[]
+image::kb/docs/ide/right-lines-number.png[]
 
 === Viewing File Status Information
 
-When you are working in the Projects (Ctrl-1), Files (Ctrl-2), Favorites (Ctrl-3), or Versioning views, the IDE provides several visual features that aid in viewing status information about your files. In the example below, notice how the badge (e.g. image:./blue-badge.png[]), color of the file name, and adjacent status label, all coincide with each other to provide you with a simple but effective way to keep track of versioning information on your files:
+When you are working in the Projects (Ctrl-1), Files (Ctrl-2), Favorites (Ctrl-3), or Versioning views, the IDE provides several visual features that aid in viewing status information about your files. In the example below, notice how the badge (e.g. image:kb/docs/ide/blue-badge.png[]), color of the file name, and adjacent status label, all coincide with each other to provide you with a simple but effective way to keep track of versioning information on your files:
 
-image::./file-status.png[]
+image::kb/docs/ide/file-status.png[]
 
 Badges, color coding, file status labels, and perhaps most importantly, the Git Diff Viewer all contribute to your ability to effectively view and manage versioning information in the IDE.
 
@@ -260,11 +264,11 @@ The following table displays the color scheme used for badges:
 |UI Component |Description
 
 |*Blue Badge*
-image:./blue-badge.png[]
+image:kb/docs/ide/blue-badge.png[]
 |Indicates the presence of files that have been modified, added or deleted in your working tree. For packages, this badge applies only to the package itself and not its subpackages. For projects or folders, the badge indicates changes within that item, or any of the contained subfolders.
 
 |*Red Badge*
-image:./red-badge.png[]
+image:kb/docs/ide/red-badge.png[]
 |Marks projects, folders or packages that contain _conflicting_ files. For packages, this badge applies only to the package itself and not its subpackages. For projects or folders, the badge indicates conflicts within that item, or any of the contained subfolders.
 |===
 
@@ -276,23 +280,23 @@ Color coding is applied to file names in order to indicate their current status 
 |Color |Example |Description
 
 |*No specific color (black)* |
-image:./black-text.png[]
+image:kb/docs/ide/black-text.png[]
 |Indicates that the file has no changes.
 
 |*Blue* |
-image:./blue-text.png[]
+image:kb/docs/ide/blue-text.png[]
 |Indicates that the file has been locally modified.
 
 |*Green* |
-image:./green-text.png[]
+image:kb/docs/ide/green-text.png[]
 |Indicates that the file has been locally added.
 
 |*Red* |
-image:./red-text.png[]
+image:kb/docs/ide/red-text.png[]
 |Indicates that the file is in a merge conflict.
 
 |*Gray* |
-image:./gray-text.png[]
+image:kb/docs/ide/gray-text.png[]
 |Indicates that the file is ignored by Git and will not be included in versioning commands (e.g. Update and Commit). Files cannot be ignored if they are versioned.
 |===
 
@@ -305,7 +309,7 @@ To open the Versioning view, select a versioned file or folder (e.g. from the Pr
 [.feature]
 --
 
-image::./versioning-view-small.png[role="left", xref="image$./versioning-view.png"]
+image::kb/docs/ide/versioning-view-small.png[role="left", xref="image$./versioning-view.png"]
 
 --
 
@@ -317,31 +321,31 @@ The Versioning view toolbar also includes buttons that enable you to invoke the 
 |Icon |Name |Function
 
 |
-image:./changes-head-wt.png[]
+image:kb/docs/ide/changes-head-wt.png[]
 |*Changes between HEAD and Working Tree* |Displays a list of files that are either already staged or only modified/created and not staged yet.
 
 |
-image:./changes-head-index.png[]
+image:kb/docs/ide/changes-head-index.png[]
 |*Changes between HEAD and Index* |Displays a list of files that are staged.
 
 |
-image:./changes-index-wt.png[]
+image:kb/docs/ide/changes-index-wt.png[]
 |*Changes between Index and Working Tree* |Displays files that have differences between their staged and Working Tree states.
 
 |
-image:./refresh.png[]
+image:kb/docs/ide/refresh.png[]
 |*Refresh Statuses* |Refreshes the status of the selected files and folders. Files displayed in the Versioning view can be refreshed to reflect any changes that may have been made externally.
 
 |
-image:./open-diff.png[]
+image:kb/docs/ide/open-diff.png[]
 |*Open Diff* |Opens the Diff Viewer providing you with a side-by-side comparison of your local copies and the versions maintained in the repository.
 
 |
-image:./update.png[]
+image:kb/docs/ide/update.png[]
 |*Revert Modifications* |Displays the <<revertdialog,Revert Modifications>> dialog box.
 
 |
-image:./commit-button.png[]
+image:kb/docs/ide/commit-button.png[]
 |*Commit Changes* |Displays the <<commitdialog,Commit>> dialog box.
 |===
 
@@ -350,7 +354,7 @@ You can access other Git commands in the Versioning view by selecting a table ro
 [.feature]
 --
 
-image::./versioning-right-click-small.png[role="left", xref="image$./versioning-right-click.png"]
+image::kb/docs/ide/versioning-right-click-small.png[role="left", xref="image$./versioning-right-click.png"]
 
 --
 
@@ -367,7 +371,7 @@ A graphical Diff Viewer opens for the selected file(s) and revisions in the IDE'
 [.feature]
 --
 
-image::./diff-viewer-small.png[role="left", xref="image$./diff-viewer.png"]
+image::kb/docs/ide/diff-viewer-small.png[role="left", xref="image$./diff-viewer.png"]
 
 --
 
@@ -381,35 +385,35 @@ The Diff Viewer toolbar also includes buttons that enable you to invoke the most
 |Icon |Name |Function
 
 |
-image:./changes-head-wt.png[]
+image:kb/docs/ide/changes-head-wt.png[]
 |*Changes between HEAD and Working Tree* |Displays a list of files that are either already staged or only modified/created and not staged yet.
 
 |
-image:./changes-head-index.png[]
+image:kb/docs/ide/changes-head-index.png[]
 |*Changes between HEAD and Index* |Displays a list of files that are staged.
 
 |
-image:./changes-index-wt.png[]
+image:kb/docs/ide/changes-index-wt.png[]
 |*Changes between Index and Working Tree* |Displays files that have differences between their staged and working tree states.
 
 |
-image:./nextdiff.png[]
+image:kb/docs/ide/nextdiff.png[]
 |*Go to Next Difference* |Displays next difference in the file.
 
 |
-image:./prevdiff.png[]
+image:kb/docs/ide/prevdiff.png[]
 |*Go to Previous Difference* |Displays previous difference in the file.
 
 |
-image:./refresh.png[]
+image:kb/docs/ide/refresh.png[]
 |*Refresh Statuses* |Refreshes the status of the selected files and folders. Files displayed in the Versioning window can be refreshed to reflect any changes that may have been made externally.
 
 |
-image:./update.png[]
+image:kb/docs/ide/update.png[]
 |*Revert Modifications* |Displays the <<revertdialog,Revert Modifications>> dialog box.
 
 |
-image:./commit-button.png[]
+image:kb/docs/ide/commit-button.png[]
 |*Commit Changes* |Displays the <<commitdialog,Commit>> dialog box.
 |===
 
@@ -419,15 +423,15 @@ If you are performing a diff on your local copy in the Working Tree, the IDE ena
 |Icon |Name |Function
 
 |
-image:./insert.png[]
+image:kb/docs/ide/insert.png[]
 |*Replace* |Inserts the highlighted text into your Working Tree copy.
 
 |
-image:./arrow.png[]
+image:kb/docs/ide/arrow.png[]
 |*Move All* |Reverts the whole local Working Tree copy.
 
 |
-image:./remove.png[]
+image:kb/docs/ide/remove.png[]
 |*Remove* |Removes the highlighted text from the local Working Tree copy.
 |===
 
@@ -439,7 +443,7 @@ To throw away local changes made to selected files in your Working Tree and repl
 2. Choose  ``Team``  >  ``Revert Modifications``  from the main menu.
 The  ``Revert Modifications``  dialog box displays.
 
-image::./revert.png[]
+image::kb/docs/ide/revert.png[]
 
 1. Specify additional options (e.g.,  ``Revert only Uncommitted Changes in Index to HEAD`` ) .
 2. Click Revert.
@@ -458,7 +462,7 @@ The  ``Commit``  dialog box displays.
 [.feature]
 --
 
-image::./commit-small.png[role="left", xref="image$./commit.png"]
+image::kb/docs/ide/commit-small.png[role="left", xref="image$./commit.png"]
 
 --
 
@@ -477,10 +481,10 @@ Two toggle buttons that switch the mode in which the actual commit is to be perf
 |===
 |UI Component |Name |Description
 
-|image:./changes-head-index.png[]
+|image:kb/docs/ide/changes-head-index.png[]
 |*Changes between HEAD and Index* |Displays a list of files that are staged.
 
-|image:./changes-head-wt.png[]
+|image:kb/docs/ide/changes-head-wt.png[]
 |*Changes between HEAD and Working Tree* |Displays a list of files that are either already staged or only modified/created and not staged yet.
 |===
 
@@ -491,8 +495,8 @@ Two toggle buttons that switch the mode in which the actual commit is to be perf
 NOTE: You need to install the JIRA or Subversion plugin to start tracking issues in the IDE.
 
 1. Type in a commit message in the  ``Commit Message``  text area. Alternatively, you can do any of the following:
-* click the  ``Recent Messages``  ( image:./recent-msgs.png[] ) icon located in the upper right corner to view and select from a list of messages that you have previously used,
-* click the  ``Load Template``  (image:./msg-template.png[]) icon located in the upper right corner to select a message template.
+* click the  ``Recent Messages``  ( image:kb/docs/ide/recent-msgs.png[] ) icon located in the upper right corner to view and select from a list of messages that you have previously used,
+* click the  ``Load Template``  (image:kb/docs/ide/msg-template.png[]) icon located in the upper right corner to select a message template.
 
 
 . After specifying actions for individual files, click  ``Commit`` .
@@ -523,7 +527,7 @@ The Create Branch dialog box displays.
 [.feature]
 --
 
-image::./create-branch-small.png[role="left", xref="image$./create-branch.png"]
+image::kb/docs/ide/create-branch-small.png[role="left", xref="image$./create-branch.png"]
 
 --
 
@@ -536,7 +540,7 @@ The branch is added to the  ``Branches/Local``  folder of the Git repository.
 [.feature]
 --
 
-image::./branch-added-small.png[role="left", xref="image$./branch-added.png"]
+image::kb/docs/ide/branch-added-small.png[role="left", xref="image$./branch-added.png"]
 
 --
 
@@ -552,7 +556,7 @@ The Checkout Selected Revision dialog box displays.
 [.feature]
 --
 
-image::./chkout-rev-small.png[role="left", xref="image$./chkout-rev.png"]
+image::kb/docs/ide/chkout-rev-small.png[role="left", xref="image$./chkout-rev.png"]
 
 --
 
@@ -576,7 +580,7 @@ The Checkout Selected Paths dialog box displays.
 [.feature]
 --
 
-image::./chkout-path-small.png[role="left", xref="image$./chkout-path.png"]
+image::kb/docs/ide/chkout-path-small.png[role="left", xref="image$./chkout-path.png"]
 
 --
 
@@ -598,7 +602,7 @@ The Merge Revision dialog box displays.
 [.feature]
 --
 
-image::./merge-small.png[role="left", xref="image$./merge.png"]
+image::kb/docs/ide/merge-small.png[role="left", xref="image$./merge.png"]
 
 --
 
@@ -644,7 +648,7 @@ The Fetch from Remote Repository wizard displays.
 [.feature]
 --
 
-image::./fetch-small.png[role="left", xref="image$./fetch.png"]
+image::kb/docs/ide/fetch-small.png[role="left", xref="image$./fetch.png"]
 
 --
 
@@ -664,7 +668,7 @@ The Pull from Remote Repository wizard displays.
 [.feature]
 --
 
-image::./pull-small.png[role="left", xref="image$./pull.png"]
+image::kb/docs/ide/pull-small.png[role="left", xref="image$./pull.png"]
 
 --
 
@@ -684,7 +688,7 @@ The Push to Remote Repository wizard displays.
 [.feature]
 --
 
-image::./push-small.png[role="left", xref="image$./push.png"]
+image::kb/docs/ide/push-small.png[role="left", xref="image$./push.png"]
 
 --
 

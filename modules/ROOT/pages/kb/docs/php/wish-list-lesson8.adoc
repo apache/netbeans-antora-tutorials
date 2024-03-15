@@ -29,6 +29,9 @@
 :description: Lesson 8: Making the Application Look Better Using the CSS Technology - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Lesson 8: Making the Application Look Better Using the CSS Technology
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
 
 In this lesson you learn how to do the following:
 
@@ -156,7 +159,7 @@ All the recommendations and suggestions concerning the application design are op
 1. Click the right mouse button on the Source Files node and from the context menu choose New > Cascading Style Sheet.
 2. On the Cascading Style Sheet panel, in the File Name edit box enter wishlist. Click Finish. 
 
-image::./newCascadingStyleSheetFile.png[]
+image::kb/docs/php/newCascadingStyleSheetFile.png[]
 
 The new file  `wishlist.css`  is shown in the project tree.
 

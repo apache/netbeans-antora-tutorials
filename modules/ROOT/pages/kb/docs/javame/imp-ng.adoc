@@ -29,6 +29,10 @@
 :description: Creating, Debugging, and Profiling a Mobile Embedded Application - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Creating, Debugging, and Profiling a Mobile Embedded Application
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 Sungmoon Cho, Alyona Stashkova
 
 Mobile embedded applications are employed in small embedded devices such as industrial metering devices, vending machines, security systems, modems, home electronics devices, and similar devices with either simple or no display and with some limited network connectivity. This example shows you how to develop a new Java ME embedded project in the NetBeans IDE using the Oracle Java Micro Edition Embedded platform that includes support for link:http://jcp.org/en/jsr/detail?id=228[+JSR 228+], the Information Module Profile-Next Generation API (IMP-NG). It will also explain how to debug and profile your own IMlet using NetBeans support for Oracle Java ME Embedded.
@@ -72,7 +76,7 @@ When the installation is complete, the Java (TM) ME Platform SDK Device Manager 
 [.feature]
 --
 
-image::./plugins-small.png[role="left", xref="image$./plugins.png"]
+image::kb/docs/javame/plugins-small.png[role="left", xref="image$./plugins.png"]
 
 --
 
@@ -86,7 +90,7 @@ image::./plugins-small.png[role="left", xref="image$./plugins.png"]
 [.feature]
 --
 
-image::./installer-small.png[role="left", xref="image$./installer.png"]
+image::kb/docs/javame/installer-small.png[role="left", xref="image$./installer.png"]
 
 --
 
@@ -105,7 +109,7 @@ The Java Platform Manager dialog box displays.
 [.feature]
 --
 
-image::./jpmanager-small.png[role="left", xref="image$./jpmanager.png"]
+image::kb/docs/javame/jpmanager-small.png[role="left", xref="image$./jpmanager.png"]
 
 --
 
@@ -129,7 +133,7 @@ The IDE displays the Choose directory to search for platforms dialog box.
 [.feature]
 --
 
-image::./jpdetected-small.png[role="left", xref="image$./jpdetected.png"]
+image::kb/docs/javame/jpdetected-small.png[role="left", xref="image$./jpdetected.png"]
 
 --
 
@@ -138,7 +142,7 @@ The Oracle Java ME Platform is now registered in the Netbeans IDE.
 [.feature]
 --
 
-image::./jpregistered-small.png[role="left", xref="image$./jpregistered.png"]
+image::kb/docs/javame/jpregistered-small.png[role="left", xref="image$./jpregistered.png"]
 
 --
 
@@ -165,7 +169,7 @@ The New Project dialog box displays.
 [.feature]
 --
 
-image::./newappname-small.png[role="left", xref="image$./newappname.png"]
+image::kb/docs/javame/newappname-small.png[role="left", xref="image$./newappname.png"]
 
 --
 
@@ -180,7 +184,7 @@ image::./newappname-small.png[role="left", xref="image$./newappname.png"]
 . Click Finish.
 An IMP-NG application with an IMLet is created in a standard IDE project.
 
-image::./prjcreated.png[]
+image::kb/docs/javame/prjcreated.png[]
 
 
 
@@ -223,7 +227,7 @@ The IMPNGPhone1 emulator starts and displays the EmbeddedApp application running
 [.feature]
 --
 
-image::./emulator-small.png[role="left", xref="image$./emulator.png"]
+image::kb/docs/javame/emulator-small.png[role="left", xref="image$./emulator.png"]
 
 --
 
@@ -234,7 +238,7 @@ In the Output window, you should see the output from the program, `Hello, world!
 [.feature]
 --
 
-image::./output-small.png[role="left", xref="image$./output.png"]
+image::kb/docs/javame/output-small.png[role="left", xref="image$./output.png"]
 
 --
 
@@ -272,7 +276,7 @@ Before profiling your application, you need to install the Java ME SDK Tools plu
 [.feature]
 --
 
-image::./available-plugins-small.png[role="left", xref="image$./available-plugins.png"]
+image::kb/docs/javame/available-plugins-small.png[role="left", xref="image$./available-plugins.png"]
 
 --
 
@@ -299,7 +303,7 @@ NOTE: You are prompted to integrate the profiler when a project is going to be p
 [.feature]
 --
 
-image::./enable-small.png[role="left", xref="image$./enable.png"]
+image::kb/docs/javame/enable-small.png[role="left", xref="image$./enable.png"]
 
 --
 
@@ -324,7 +328,7 @@ The IDE displays the profile data in the `cpu:_time_` window.
 [.feature]
 --
 
-image::./cpu-small.png[role="left", xref="image$./cpu.png"]
+image::kb/docs/javame/cpu-small.png[role="left", xref="image$./cpu.png"]
 
 --
 

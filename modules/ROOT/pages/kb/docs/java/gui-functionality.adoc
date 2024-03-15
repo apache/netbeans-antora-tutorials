@@ -29,6 +29,10 @@
 :description: Introduction to GUI Building - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Introduction to GUI Building
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 Contributed by Saleem Gul and Tomas Pavek
 
 This beginner tutorial teaches you how to create a simple graphical user interface and add simple back-end functionality. In particular we will show how to code the behavior of buttons and fields in a Swing form.
@@ -72,7 +76,7 @@ Next we will use the Palette to populate our application's front end with a JPan
 
 Once you are done dragging and positioning the aforementioned components, the JFrame should look something like the following screenshot.
 
-image::./Figure1.png[]
+image::kb/docs/java/Figure1.png[]
 
 If you do not see the Palette window in the upper right corner of the IDE, choose Window > Palette.
 
@@ -97,7 +101,7 @@ In this step we are going to rename the display text of the components that were
 
 Your Finished GUI should now look like the following screenshot:
 
-image::./Figure2.png[]
+image::kb/docs/java/Figure2.png[]
 
 
 == Exercise 3: Adding Functionality

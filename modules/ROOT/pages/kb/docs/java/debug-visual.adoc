@@ -30,6 +30,10 @@
 :keywords: Apache NetBeans, Tutorials, Using the Visual Debugger in NetBeans IDE
 :experimental:
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This tutorial describes how to use the Visual Debugger to help you locate and debug the code for visual elements in your Java GUI applications. Specifically, you can use the Visual Debugger in Java Swing and JavaFX GUI applications.
 
 You will use the Visual Debugger to explore the Anagram Game sample project, which is a Java Swing application distributed with NetBeans. This document will demonstrate how to take a GUI snapshot of the application and then work with the snapshot to locate source code, add listeners to events, and view the event log of GUI components.
@@ -65,7 +69,7 @@ Choose Debug > Take GUI Snapshot from the main menu.When you choose Take GUI Sna
 [.feature]
 --
 
-image::./debug-fullscreen.png[role="left", xref="image$./debug-fullscreen.png"]
+image::kb/docs/java/debug-fullscreen.png[role="left", xref="image$./debug-fullscreen.png"]
 
 --
 
@@ -81,23 +85,23 @@ The commands can also be invoked from the Navigator window by right-clicking the
 
 1. In the GUI snapshot, select the Guess button. When you select a component in the snapshot, the IDE displays details about the selected component in the Properties window. If the Properties window is not visible you can choose Window > Properties from the main menu to open the window.
 
-image::./debug-snapshot.png[]
+image::kb/docs/java/debug-snapshot.png[]
 
 The IDE also displays the location of the component in the form hierarchy in the Navigator window. If the Navigator window is not visible you can choose Window > Navigator from the main menu to open the window.
 
-image::./debug-navigator.png[]
+image::kb/docs/java/debug-navigator.png[]
 
 
 
 . Right-click the Guess button in the snapshot and choose Go to Component Declaration from the popup menu. When you choose Go to Component Declaration, the IDE opens the source file in the editor and moves the cursor to the line in the code where  ``guessButton``  is declared.
 
-image::./debug-gotodeclaration.png[]
+image::kb/docs/java/debug-gotodeclaration.png[]
 
 
 
 . Right-click the Guess button in the snapshot again and choose Go to Component Source. When you choose Go to Component Source, the IDE opens the source file in the editor and moves the cursor to the line in the source code for the JButton component.
 
-image::./debug-gotosource.png[]
+image::kb/docs/java/debug-gotosource.png[]
 
 You can use the Go to Hierarchy Addition command in the GUI snapshot to locate the line in the source code where a component is added to its container. The Go to Hierarchy Addition command is disabled by default. You can enable the command in the Options window.
 
@@ -110,7 +114,7 @@ You can use the Go to Hierarchy Addition command in the GUI snapshot to locate t
 
 The IDE will open the source code in the editor at the line where the component is added, as shown below:
 
-image::./debug-hierarchy.png[]
+image::kb/docs/java/debug-hierarchy.png[]
 
 === Exploring Component Events
 
@@ -118,7 +122,7 @@ This exercise will demonstrate how you can use the GUI snapshot and the Events w
 
 1. Right-click the Guess button in the snapshot and choose Show Listeners from the popup menu. When you choose Show Listeners, the IDE opens the Events window. You can see that the Custom Listeners node is expanded.
 
-image::./debug-customlisteners.png[]
+image::kb/docs/java/debug-customlisteners.png[]
 
 
 
@@ -133,7 +137,7 @@ image::./debug-customlisteners.png[]
 
 . Select the  ``java.awt.event.KeyListener``  listener from the dialog. Click OK.
 
-image::./debug-select-listener.png[]
+image::kb/docs/java/debug-select-listener.png[]
 
 This listener is now listening for keyboard events in the text field.
 
@@ -141,7 +145,7 @@ This listener is now listening for keyboard events in the text field.
 
 . In the Anagram Game application, type some characters in the text field. When you type a character in the text field, the event is recorded in the events log. If you expand the Event Log node you can see that each keystroke is now logged. New events appear each time that you type in the Anagram Game application text field. If you expand an individual event, for example  ``keyPressed`` , you can see the properties of that event in the log.
 
-image::./debug-eventlog.png[]
+image::kb/docs/java/debug-eventlog.png[]
 
 If you expand the "Called From..." node for an event you can see the stack trace for the event.
 

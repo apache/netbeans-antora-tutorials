@@ -29,6 +29,10 @@
 :description: Adding a File Chooser to a Java Application - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Adding a File Chooser to a Java Application
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 _Contributed by Petr Dvorak link:http://blogs.oracle.com/joshis/entry/a_quick_jfilechooser_demo[+(Dec 2009)+], maintained by Alyona Stashkova_
 
 This tutorial shows how to add a file chooser to a Java application using the  ``javax.swing.JFileChooser``  component. You could code it all by hand, but using the NetBeans GUI Builder is a smart way that will save you a bit of work. As part of the exercise, you will create a small Java application that loads a  ``.txt``  file into a Text Area.
@@ -36,7 +40,7 @@ This tutorial shows how to add a file chooser to a Java application using the  `
 You can download link:https://netbeans.org/projects/samples/downloads/download/Samples%252FJava%252FJFileChooserDemo.zip[+the resulting project with a file chooser+]. 
 
 
-image::./netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.0 and more recent"]
+image::kb/docs/java/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.0 and more recent"]
 
 
 *To complete this tutorial, you need the following software and resources.*
@@ -61,7 +65,7 @@ First you create a new Java Application:
 [.feature]
 --
 
-image::./newproj-small.png[role="left", xref="image$./newproj.png"]
+image::kb/docs/java/newproj-small.png[role="left", xref="image$./newproj.png"]
 
 --
 
@@ -83,7 +87,7 @@ In this section, you create a  ``JFrame``  container and add a few components to
 [.feature]
 --
 
-image::./newjframeform-small.png[role="left", xref="image$./newjframeform.png"]
+image::kb/docs/java/newjframeform-small.png[role="left", xref="image$./newjframeform.png"]
 
 --
 
@@ -103,7 +107,7 @@ image::./newjframeform-small.png[role="left", xref="image$./newjframeform.png"]
 [.feature]
 --
 
-image::./menubaradded-small.png[role="left", xref="image$./menubaradded.png"]
+image::kb/docs/java/menubaradded-small.png[role="left", xref="image$./menubaradded.png"]
 
 --
 
@@ -117,7 +121,7 @@ image::./menubaradded-small.png[role="left", xref="image$./menubaradded.png"]
 [.feature]
 --
 
-image::./menuitemadded-small.png[role="left", xref="image$./menuitemadded.png"]
+image::kb/docs/java/menuitemadded-small.png[role="left", xref="image$./menuitemadded.png"]
 
 --
 
@@ -133,7 +137,7 @@ image::./menuitemadded-small.png[role="left", xref="image$./menuitemadded.png"]
 
 . Specify the action handler for the Open menu item. Right-click the menu item and choose Events > Action > action Performed from the context menu. The GUI Builder automatically switches to the Source view and a new event handler method named  ``OpenActionPerformed()``  is generated. The Navigator window should look as follows:
 
-image::./openactionperformednavigator.png[]
+image::kb/docs/java/openactionperformednavigator.png[]
 
 
 
@@ -142,7 +146,7 @@ image::./openactionperformednavigator.png[]
 [.feature]
 --
 
-image::./highlighting-small.png[role="left", xref="image$./highlighting.png"]
+image::kb/docs/java/highlighting-small.png[role="left", xref="image$./highlighting.png"]
 
 --
 
@@ -171,7 +175,7 @@ image::./highlighting-small.png[role="left", xref="image$./highlighting.png"]
 [.feature]
 --
 
-image::./textareadded-small.png[role="left", xref="image$./textareadded.png"]
+image::kb/docs/java/textareadded-small.png[role="left", xref="image$./textareadded.png"]
 
 --
 
@@ -182,7 +186,7 @@ image::./textareadded-small.png[role="left", xref="image$./textareadded.png"]
 [.feature]
 --
 
-image::./jfilechooserdemoview_final-small.png[role="left", xref="image$./jfilechooserdemoview_final.png"]
+image::kb/docs/java/jfilechooserdemoview_final-small.png[role="left", xref="image$./jfilechooserdemoview_final.png"]
 
 --
 
@@ -203,7 +207,7 @@ As an alternative to the  ``Add From Palette``  context menu, you can also drag 
 
 . Right-click the  ``JFileChooser``  node and rename the variable to `fileChooser`.
 
-image::./navigator_jframe.png[]
+image::kb/docs/java/navigator_jframe.png[]
 
 You have added a File Chooser. Next you tune the File Chooser to display the title that you want, add a custom file filter, and integrate the File Chooser into your application.
 
@@ -255,7 +259,7 @@ Now you add a custom file filter that makes the File Chooser display only  ``*.t
 [.feature]
 --
 
-image::./combobox-small.png[role="left", xref="image$./combobox.png"]
+image::kb/docs/java/combobox-small.png[role="left", xref="image$./combobox.png"]
 
 --
 
@@ -301,7 +305,7 @@ NOTE: To learn how to implement smarter, switchable file filters, have a look at
 1. Right-click the JFileChooserDemo project and select Run to start the sample project.
 2. In the Run Project dialog box select the `jfilechooserdemo.resources.JFileChooserDemo` main class and click OK.
 
-image::./run.png[]
+image::kb/docs/java/run.png[]
 
 
 
@@ -310,7 +314,7 @@ image::./run.png[]
 [.feature]
 --
 
-image::./result_jfilechooserdemo-small.png[role="left", xref="image$./result_jfilechooserdemo.png"]
+image::kb/docs/java/result_jfilechooserdemo-small.png[role="left", xref="image$./result_jfilechooserdemo.png"]
 
 --
 

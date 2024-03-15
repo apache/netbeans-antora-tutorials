@@ -30,6 +30,10 @@
 :description: Writing POV-Ray Support for NetBeans III—Implementing a Project Type - Apache NetBeans
 :keywords: Apache NetBeans Platform, Platform Tutorials, Writing POV-Ray Support for NetBeans III—Implementing a Project Type
 
+ifdef::env-github[]
+:imagesdir: ../../images
+endif::[]
+
 This is a continuation of the tutorial for building a POV-Ray rendering application on the NetBeans Platform. If you have not read the  xref:./nbm-povray-1.adoc[first] and  xref:./nbm-povray-2.adoc[second] parts of this tutorial, you may want to start there.
 
 
@@ -44,7 +48,7 @@ There are a few APIs which we will need to use classes from—so before starting
 Right-click the  ``povsuite``  application, choose Properties, and then select the Libraries tab. In the Libraries tab, expand the "ide" node, and select Project API, Project UI, and Project UI API, as shown below:
 
 
-image::./povray_71_ch3_pic0.png[]
+image::tutorials/povray_71_ch3_pic0.png[]
 
 Finally, click the Resolve button, which includes a number of additional modules into your application.
 
@@ -55,7 +59,7 @@ Click OK above.
 1. Right-click the  ``povsuite``  project and choose Run. The application starts up. Now that it includes several project-related modules, you should see a number of new features, accessed from many new menu items, as shown below:
 
 
-image::./povray_71_ch3_pic2.png[]
+image::tutorials/povray_71_ch3_pic2.png[]
 
 Now we're going to extend the project functionality to include support for a new project type for PovRay projects. That means we'll need to use several APIs, on which we need to set dependencies in the Povray Projects module.
 
@@ -64,7 +68,7 @@ Now we're going to extend the project functionality to include support for a new
 1. Right-click the Povray Projects module in the Projects window in the IDE package, and choose Properties from the popup menu. Open the Libraries tab of the dialog:
 
 
-image::./povray_71_ch3_pic1.png[]
+image::tutorials/povray_71_ch3_pic1.png[]
 
 
 [start=4]
@@ -75,7 +79,7 @@ image::./povray_71_ch3_pic1.png[]
 In the dialog that appears, type "ProjectFactory". The Projects API module should become selected in the list below—it is the module that provides this class, so we need a dependency on it to be able to use the class.
 
 
-image::./povray_71_ch3_pic3.png[]
+image::tutorials/povray_71_ch3_pic3.png[]
 
 Press Enter or Click OK, and then either press Tab and then Space, or click the Add Dependency button to add another dependency.
 
@@ -95,12 +99,12 @@ Press Enter or Click OK, and then either press Tab and then Space, or click the 
 You should now see the following:
 
 
-image::./povray_71_ch3_pic4.png[]
+image::tutorials/povray_71_ch3_pic4.png[]
 
 Click OK to dismiss the dialog. The Libraries node of the project should now show you the dependencies you have set:
 
 
-image::./povray_71_ch3_pic5.png[]
+image::tutorials/povray_71_ch3_pic5.png[]
 
 
 == Creating the Project Factory
@@ -112,7 +116,7 @@ As with `DataObjects` and `DataLoaders`, the system keeps a registry of things t
 1. Right-click the `org.netbeans.examples.modules.povproject` package, and choose New > Java Class:
 
 
-image::./povray_71_ch3_pic6.png[]
+image::tutorials/povray_71_ch3_pic6.png[]
 
 
 [start=2]
@@ -671,7 +675,7 @@ The final method, `findPath()` allows a user to use a keystroke to select whatev
 [.feature]
 --
 imageone 
-image:./povray_scenes.gif[role="left", xref="image$./povray_scenes.gif"]
+image:tutorials/povray_scenes.gif[role="left", xref="image$./povray_scenes.gif"]
 --
 . Create a new java package "resources" underneath `org.netbeans.examples.modules.povproject`, and copy or save the image file there, modifying the file name in the source code if necesary.
 
@@ -699,7 +703,7 @@ public class PovProjectFactory implements ProjectFactory {
 1. In the Files window, expand the 'build' folder and notice that the META-INF/services folder has been created for you, via the build process, at which time a NetBeans annotation processor processed the @ServiceProvider annotation:
 
 
-image::./povray_71_ch3_pic7.png[]
+image::tutorials/povray_71_ch3_pic7.png[]
 
 
 [start=4]
@@ -728,21 +732,21 @@ We now have a working (albeit not terribly useful) implementation of POV-Ray pro
 Run the application, go to File | Open Project, and when you browse to the temporary directory created above, you should see that your project is recognized:
 
 
-image::./povray_71_ch3_pic8.png[]
+image::tutorials/povray_71_ch3_pic8.png[]
 
 
 [start=3]
 1. Open the project. In the Projects window, you will see the logical view created above:
 
 
-image::./povray_71_ch3_pic9.png[]
+image::tutorials/povray_71_ch3_pic9.png[]
 
 
 [start=4]
 1. In the Files window, you will see all the files in the project:
 
 
-image::./povray_71_ch3_pic10.png[]
+image::tutorials/povray_71_ch3_pic10.png[]
 
 
 == Next Steps

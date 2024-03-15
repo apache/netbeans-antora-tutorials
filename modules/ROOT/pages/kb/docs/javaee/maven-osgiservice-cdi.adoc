@@ -29,6 +29,10 @@
 :description: Using CDI to Inject OSGi Bundles as Services in NetBeans IDE - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Using CDI to Inject OSGi Bundles as Services in NetBeans IDE
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This document demonstrates how the integrated support for the link:http://www.osgi.org/Main/HomePage[+Open Services Gateway Initiative+] (OSGi) framework in NetBeans IDE simplifies the process of creating OSGi bundles and using the bundles in your projects. In this tutorial you will create two simple OSGi bundles from the Maven OSGi bundle archetype and then deploy the bundles to the GlassFish Server Open Source Edition 3.1.
 
 After you create the basic OSGi bundles, you will create a web client application and use CDI to inject the bundles as a service. You will then deploy the web application as a bundle to the server. The tutorial will then demonstrate how to use the OSGi Admin Console to work with OSGi bundles.
@@ -96,7 +100,7 @@ In this section you will create a parent POM project for the OSGi bundles that y
 1. Choose New Project (Ctrl-Shift-N; ⌘-Shift-N on Mac) from the main menu.
 2. Select POM Project from the Maven category.
 
-image::./cdi-newpomproject.png[title="Maven POM Project archetype in the New Project wizard"]
+image::kb/docs/javaee/cdi-newpomproject.png[title="Maven POM Project archetype in the New Project wizard"]
 
 
 
@@ -176,7 +180,7 @@ In this exercise you will use the New Project wizard to create an OSGi bundle pr
 1. Choose File > New Project to open the New Project wizard.
 2. Choose OSGi Bundle from Maven category. Click Next.
 
-image::./cdi-new-osgiproject.png[title="Maven OSGi Bundle archetype in the New Project wizard"]
+image::kb/docs/javaee/cdi-new-osgiproject.png[title="Maven OSGi Bundle archetype in the New Project wizard"]
 
 
 
@@ -278,7 +282,7 @@ public interface Hello {
 
 After you build the project, if you open the Files window and expand the project node you can see that  ``MavenHelloServiceApi-1.0-SNAPSHOT.jar``  is created in the  ``target``  folder.
 
-image::./cdi-manifest.png[title="view the contents of the compiled JAR in the Files window"]
+image::kb/docs/javaee/cdi-manifest.png[title="view the contents of the compiled JAR in the Files window"]
 
 The  ``maven-bundle-plugin``  handles the generation of the  ``MANIFEST.MF``  file when you build the project. If you open the  ``MANIFEST.MF``  file in the compiled JAR you will see that the plugin generated a manifest header that declares the export packages. For OSGi, all bundles that you want to be exposed and available to other bundles must be listed in the  ``Export-Package``  element in  ``MANIFEST.MF`` .
 
@@ -351,7 +355,7 @@ When you implement  ``Hello`` , the IDE will display an error that you need to r
 
 . Select MavenHelloServiceApi OSGi Bundle. Click Add.
 
-image::./cdi-add-dependency.png[title="Open Projects tab in the Add Library dialog"]
+image::kb/docs/javaee/cdi-add-dependency.png[title="Open Projects tab in the Add Library dialog"]
 
 
 
@@ -360,7 +364,7 @@ image::./cdi-add-dependency.png[title="Open Projects tab in the Add Library dial
 
 . Expand the  ``com.mycompany.mavenhelloserviceimpl``  package and double-click  ``Activator.java``  to open the file in the editor.
 
-image::./cdi-activator.png[title="Activator class in the Projects window"]
+image::kb/docs/javaee/cdi-activator.png[title="Activator class in the Projects window"]
 
 The IDE automatically created the  ``Activator.java``  bundle activator class in your project. A bundle activator is used to manage the lifecycle of a bundle. The bundle activator class is declared in the  ``MANIFEST.MF``  of the bundle and instantiated when the bundle is started by the container.
 
@@ -420,7 +424,7 @@ When you build the bundle, the plugin will generate a Manifest Header in the bun
 
 NOTE:  Remove any older versions of the artifact that are listed under the Dependencies node by right-clicking the artifact and choosing Remove Dependency. The only dependencies should be the MavenHelloServiceApi project and the  ``org.osgi.core``  artifact.
 
-image::./cdi-implproject.png[title="Activator class in the Projects window"]
+image::kb/docs/javaee/cdi-implproject.png[title="Activator class in the Projects window"]
    
 
 
@@ -562,7 +566,7 @@ In this exercise you will specify dependency elements in the parent POM project.
 
 After you add the GlassFish repository to the POM, if you view the list of repositories under the Maven Repositories node in the Services window you will see that the IDE automatically added a node for the GlassFish repository. By default, the IDE displays a node for the Local Maven repository. When an open project specifies a repository, the IDE automatically adds a node for the repository under the Maven Repositories node.
 
-image::./cdi-maven-repositories.png[title="GlassFish repository in the Maven Repositories window"]
+image::kb/docs/javaee/cdi-maven-repositories.png[title="GlassFish repository in the Maven Repositories window"]
 
 In this exercise you added additional artifacts and artifact versions that will be used in the project. You also added the GlassFish repository that contains the  ``osgi-cdi-api``  artifacts.
 
@@ -656,7 +660,7 @@ For more details about the differences between the  ``bean-discovery-mode``  val
 
 . Click the Dependency Management tab in the Add Library dialog and choose the  ``osgi-cdi-api``  artifact that you specified in the parent POM project. Click Add.
 
-image::./cdi-add-dependency3.png[title="Dependency Management tab in the Add Library dialog"]
+image::kb/docs/javaee/cdi-add-dependency3.png[title="Dependency Management tab in the Add Library dialog"]
 
 
 
@@ -859,7 +863,7 @@ Right-click the GlassFish server node in the Services window and choose View Dom
 
 Click Install and accept the license.
 
-image::./cdi-glassfish-addons.png[title="Update Tool GlassFish Admin Console"]
+image::kb/docs/javaee/cdi-glassfish-addons.png[title="Update Tool GlassFish Admin Console"]
 
 
 
@@ -876,7 +880,7 @@ link:http://www.java.net/forum/topic/glassfish/glassfish/cannot-start-web-consol
 
 . Click the OSGi Console tab to view a list of the deployed OSGi bundles. 
 
-image::./cdi-glassfish-console.png[title="Dependency Management tab in the Add Library dialog"]
+image::kb/docs/javaee/cdi-glassfish-console.png[title="Dependency Management tab in the Add Library dialog"]
 
 NOTE:  You might be prompted to enter the username and password to view the list of OSGi bundles. Confirm that the authorization dialog is not hidden if you do not see a list of bundles in the OSGi Console tab. The default username for the GlassFish 4 server is  ``admin``  if you installed the server when you installed the IDE. The password is empty by default.
 

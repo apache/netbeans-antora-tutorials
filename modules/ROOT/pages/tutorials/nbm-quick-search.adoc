@@ -30,6 +30,10 @@
 :description: Quick Search Integration Tutorial - Apache NetBeans
 :keywords: Apache NetBeans Platform, Platform Tutorials, Quick Search Integration Tutorial
 
+ifdef::env-github[]
+:imagesdir: ../../images
+endif::[]
+
 This tutorial shows you how to write a module that plugs custom items into the NetBeans Quick Search feature.
 
 // NOTE: If you are using an earlier version of Apache NetBeans, see  link:74/nbm-quick-search.html[the previous version of this document].
@@ -52,7 +56,7 @@ In addition, however, the  link:https://bits.netbeans.org/dev/javadoc/org-netbea
 In this tutorial, you create a module that integrates items from  link:http://netbeans.dzone.com[NetBeans Zone] with the Quick Search feature:
 
 
-image::./qsearch_72_result-2.png[]
+image::tutorials/qsearch_72_result-2.png[]
 
 
 == Creating the Module Project
@@ -81,7 +85,7 @@ In this section, we use a wizard to create a stub Java class and layer entries n
 1. Right-click the "NetBeansZoneSearch" project node and choose New > Other. In the New File dialog, choose Module Development > Quick Search Provider: 
 
 
-image::./qsearch_72_newfilewizard.png[]
+image::tutorials/qsearch_72_newfilewizard.png[]
 
 
 [start=2]
@@ -95,14 +99,14 @@ image::./qsearch_72_newfilewizard.png[]
 You should now see the following:
 
 
-image::./qsearch_72_newfilewizard2.png[]
+image::tutorials/qsearch_72_newfilewizard2.png[]
 
 
 [start=3]
 1. Click Finish. The Projects window should now look as follows:
 
 
-image::./qsearch_72_newproject.png[]
+image::tutorials/qsearch_72_newproject.png[]
 
 The Java stub that has been created is as follows:
 
@@ -168,14 +172,14 @@ There are two ways of making an external JAR file available to a module:
 Right-click the project, choose Properties, and wrap the JAR as shown below:
 
 
-image::./qsearch_72_wrapjar.png[]
+image::tutorials/qsearch_72_wrapjar.png[]
 
 
 [start=3]
 1. Look in the Files window and notice that you have your  ``Tidy.jar``  in a new folder, named  ``release/modules/ext``  folder:
 
 
-image::./qsearch_72_wrapjar2.png[]
+image::tutorials/qsearch_72_wrapjar2.png[]
 
 In addition, towards the end of the  ``project.xml``  file, which is in the  ``nbproject``  folder, notice the XML elements below, i.e., right near the end of the file:
 
@@ -342,19 +346,19 @@ Let's now install the module and then use the quick search feature integration. 
 1. In the Projects window, right-click the project and choose Run. A new instance of the IDE starts up and installs the Quick Search integration module. In the top-right of the IDE, you will find your Quick Search feature:
 
 
-image::./qsearch_72_result-1.png[]
+image::tutorials/qsearch_72_result-1.png[]
 
 
 [start=2]
 1. Type a string in the Quick Search feature and, if the string matches the title of something on NetBeans Zone, the item from NetBeans Zone is included in the result:
 
 
-image::./qsearch_72_result-2.png[]
+image::tutorials/qsearch_72_result-2.png[]
 
 If you type the command prefix that you defined in the  ``layer.xml`` , followed by a space, then only the related category is searched:
 
 
-image::./qsearch_72_result-3.png[]
+image::tutorials/qsearch_72_result-3.png[]
 
 
 [start=3]
@@ -386,7 +390,7 @@ The previous sections assumed that you were creating a module for NetBeans IDE. 
 1. Run the NetBeans Platform application and you should see that the Quick Search feature is now available and functioning:
 
 
-image::./qsearch_72_app-result-1.png[]
+image::tutorials/qsearch_72_app-result-1.png[]
 
 
 [start=3]
@@ -412,7 +416,7 @@ image::./qsearch_72_app-result-1.png[]
 1. Run the NetBeans Platform application and you should see that the Quick Search feature is now in the menu bar:
 
 
-image::./qsearch_72_app-result-2.png[]
+image::tutorials/qsearch_72_app-result-2.png[]
 
 xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 

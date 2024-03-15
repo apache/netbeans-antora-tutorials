@@ -29,7 +29,11 @@
 :description: JSF 2.x Support in NetBeans IDE - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, JSF 2.x Support in NetBeans IDE
 
-image::./netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
+image::kb/docs/web/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
 
 NetBeans IDE provides numerous features that enable built-in support for JavaServer Faces (JSF) 2.0 and 2.1. The IDE's JSF 2.x support builds upon its previous support for JavaServer Faces, and includes versatile editor enhancements for Facelets pages, various facilities for working with entity classes, and a suite of JSF wizards for common development tasks, such as creating JSF managed beans, Facelets templates and composite components.
 
@@ -55,11 +59,11 @@ Using the GlassFish server, or any other Java EE-compliant server, you can creat
 
 Use the IDE's Project wizard to create a new Java web application. To do so, click the New Project ( images:./new-project-btn.png[] ) button in the IDE's main toolbar, or press Ctrl-Shift-N (⌘-Shift-N on Mac). When you arrive at Step 4: Frameworks, select JavaServer Faces.
 
-image::./new-proj-wizard-framework.png[title="Add JSF Framework support when creating a project"]
+image::kb/docs/web/new-proj-wizard-framework.png[title="Add JSF Framework support when creating a project"]
 
 After selecting JavaServer Faces, various configuration options become available to you, as shown in the above image. You can determine how your project has access to JSF 2.x libraries. Click the Configuration tab to specify how the Faces servlet will be registered in the project's deployment descriptor.
 
-image::./jsf-configuration.png[title="Specify Faces servlet settings under the Configuration tab"]
+image::kb/docs/web/jsf-configuration.png[title="Specify Faces servlet settings under the Configuration tab"]
 
 
 [[addingSupport]]
@@ -71,7 +75,7 @@ If you want to add JSF 2.x support to an existing Java web application, you can 
 2. Select the Frameworks category and then click the Add button.
 3. Select JavaServer Faces in the Add a Framework dialog box. Click OK. 
 
-image::./add-framework.png[title="Add JSF support to an existing project"]
+image::kb/docs/web/add-framework.png[title="Add JSF support to an existing project"]
 
 After selecting JavaServer Faces, various configuration options become available, such as specifying the path to JSF 2.x libraries, and registration of the Faces servlet in the project's deployment descriptor.
 
@@ -101,23 +105,23 @@ The IDE's Facelets editor provides numerous features that facilitate JSF develop
 
 You can press Ctrl-Space to invoke code completion and documentation support, where applicable.
 
-image::./doc-support.png[title="Press Ctrl-Space to invoke code completion and documentation support"]
+image::kb/docs/web/doc-support.png[title="Press Ctrl-Space to invoke code completion and documentation support"]
 
 When your cursor is not positioned on a tag, pressing Ctrl-Space will invoke a pop-up list of items. These items can equally be accessed from the IDE's <<palette,Palette>> (Ctrl-Shift-8; ⌘-Shift-8 on Mac).
 
 You can also type a prefix before pressing Ctrl-Space, e.g., `jsf`, to filter items.
 
-image::./code-completion.png[title="Press Ctrl-Space in the editor to invoke a list of items"]
+image::kb/docs/web/code-completion.png[title="Press Ctrl-Space in the editor to invoke a list of items"]
 
 You can press Ctrl-Space to invoke code completion for Facelets namespaces.
 
-image::./namespace.png[title="Press Ctrl-Space to complete Facelets namespaces"]
+image::kb/docs/web/namespace.png[title="Press Ctrl-Space to complete Facelets namespaces"]
 
 Similarly, if you type in a JSF tag whose namespace has not been declared in the page, the IDE automatically adds it to the page's `<html>` tag.
 
 The editor provides completion support for Expression Language (EL) syntax. Press Ctrl-Space on EL code to invoke suggestions for implicit objects, JSF managed beans, and their properties.
 
-image::./el-code-completion.png[title="Press Ctrl-Space on EL expressions to invoke completion support for implicit objects, JSF managed beans, and bean properties"]
+image::kb/docs/web/el-code-completion.png[title="Press Ctrl-Space on EL expressions to invoke completion support for implicit objects, JSF managed beans, and bean properties"]
 
 You can also highlight code snippets in the editor, and choose Convert to Composite Component in order to create JSF composite components. See the <<composite,Composite Component wizard>> for more details.
 
@@ -143,7 +147,7 @@ If you include a `faces-config.xml` file in your JSF project, you can press Ctrl
 
 If you prefer to enter navigation rules and managed beans using dialogs rather than hand-coding them, the IDE provides several JSF-specific dialogs for this purpose. These are accessible from the editor's right-click menu.
 
-image::./faces-config-menu.png[title="JSF-specific dialogs provided in faces-config.xml's right-click menu"]
+image::kb/docs/web/faces-config-menu.png[title="JSF-specific dialogs provided in faces-config.xml's right-click menu"]
 
 The IDE provides two distinct _views_ for the `faces-config.xml` file: the Source view, which displays the XML source code, and the PageFlow view, which is a graphical interface that depicts JSF navigation rules defined in the `faces-config.xml` file.
 
@@ -164,7 +168,7 @@ For example, if your file contains the following navigation rule:
 
 The PageFlow view displays the following relationship, indicating that a navigation from `greeting.xhtml` to `success.xhtml` occurs when "`response`" is passed to JSF's `NavigationHandler`.
 
-image::./page-flow.png[title="PageFlow view displays navigation relationships"]
+image::kb/docs/web/page-flow.png[title="PageFlow view displays navigation relationships"]
 
 Double-clicking components in the PageFlow view enables you to navigate directly to the source file. For example, when you double-click the `greeting.xhtml` component, the `greeting.xhtml` file opens in the editor. Likewise, if you double-click the arrow between the two components, the editor will focus on the navigation rule defined in the `faces-config.xml` XML view.
 
@@ -177,7 +181,7 @@ The NetBeans IDE provides numerous wizards that facilitate development with JSF 
 
 All wizards are accessible via the IDE's generic File wizard. To access the File wizard, press the New File ( images:./new-file-btn.png[] ) button, or choose File > New File from the main menu (or press Ctrl-N; ⌘-N on Mac). JSF-specific wizards are listed within the JavaServer Faces category.
 
-image::./file-wizard.png[title="JSF-oriented wizards are accessible from the File wizard"]
+image::kb/docs/web/file-wizard.png[title="JSF-oriented wizards are accessible from the File wizard"]
 
 The following wizards are available to you when working in a Java web project with JSF support.
 
@@ -195,7 +199,7 @@ The following wizards are available to you when working in a Java web project wi
 
 Use the JSF Page wizard to create Facelets and JSP pages for your project. In the IDE's File wizard, select the JavaServer Faces category, then select JSF Page. In JSF 2.x, Facelets is the preferred way to declare JSF pages. The Facelets option in the wizard is selected by default. Select the JSP File option if you want to create new JSP pages, or JSP fragments (`.jspf` files).
 
-image::./jsf-file-wizard.png[title="Create Facelets pages using the IDE's JSF File wizard"]
+image::kb/docs/web/jsf-file-wizard.png[title="Create Facelets pages using the IDE's JSF File wizard"]
 
 
 [[managedBean]]
@@ -205,7 +209,7 @@ You can create JSF managed beans for your application using the IDE's Managed Be
 
 By default, any metadata that you specify in the wizard is translated into annotations that are applied to the managed bean once it is generated. For example, in the image below, you can create a new, session-scoped class named `NewJSFManagedBean` and name it `myManagedBean`.
 
-image::./managed-bean.png[title="Create JSF managed beans using the IDE's Managed Bean wizard"]
+image::kb/docs/web/managed-bean.png[title="Create JSF managed beans using the IDE's Managed Bean wizard"]
 
 When the managed bean is generated, it appears as follows with appropriate annotations.
 
@@ -251,11 +255,11 @@ Like all JSF-related wizards, you can access the Composite Component wizard from
 
 The following example describes the actions that occur, and facilities at your disposal, when invoking the Composite Component wizard on the snippet, '`<p>This is the composite component.</p>`'.
 
-image::./convert-comp-component.png[title="Highlight a snippet, and choose Convert to Composite Component from the right-click menu"]
+image::kb/docs/web/convert-comp-component.png[title="Highlight a snippet, and choose Convert to Composite Component from the right-click menu"]
 
 The Composite Component wizard opens, containing the selected snippet in its Implementation Section panel.
 
-image::./comp-component.png[title="Composite Component wizard displays containing the selected code snippet"]
+image::kb/docs/web/comp-component.png[title="Composite Component wizard displays containing the selected code snippet"]
 
 By default, the wizard creates an `ezcomp` folder to contain composite components. For example, if you are creating a new component named `myComponent`, the wizard generates a `myComponent.xhtml` Facelets page, residing in the `resources/ezcomp` folder of your application's web root.
 
@@ -283,7 +287,7 @@ When you complete the wizard, the composite component source file is generated f
 
 Also, a new component tag is inserted into the location in the editor where you highlighted the snippet. In this case, the generated tag is: `<ez:myComponent/>`. Note that the IDE automatically adds the namespace where the composite component resides to the page's `<html>` tag.
 
-image::./comp-component-editor.png[title="Component tag is automatically inserted into your page"]
+image::kb/docs/web/comp-component-editor.png[title="Component tag is automatically inserted into your page"]
 
 The IDE also supports hyperlinking to composite component source files. You can navigate to a composite component from a Facelets page by pressing Ctrl (⌘ on Mac) while hovering your mouse over the component tag. Clicking the hyperlink causes the composite component source file to open in the editor.
 
@@ -301,7 +305,7 @@ See the topic <<jsfPages,Creating JSF Pages from Entity Classes>> under <<entity
 
 Use the Facelets Template wizard to generate a Facelets template. From the JavaServer Faces category in the IDE's <<fileWizard,File wizard>>, select Facelets Template. You can choose from eight unique layout styles, and specify whether the layout is implemented using CSS or an HTML `<table>` tag.
 
-image::./template-wizard.png[title="Create a Facelets template using the Facelets Template wizard"]
+image::kb/docs/web/template-wizard.png[title="Create a Facelets template using the Facelets Template wizard"]
 
 The wizard creates an XHTML template file using `<h:head>` and `<h:body>` tags, and places associated stylesheets in the `resources/css` folder of your application's web root. The wizard generates a `default.css` file, and a `cssLayout.css` or `tableLayout.css` file, depending on your layout selection.
 
@@ -313,7 +317,7 @@ To view your template in a browser, right-click in the editor and choose View. A
 
 Use the Facelets Template Client wizard to generate a page that references a Facelets template in your project. From the JavaServer Faces category in the IDE's <<fileWizard,File wizard>>, select Facelets Template Client. You can specify the location of the Facelets Template that is used by the client. You can specify if the root tag is  ``<html>``  or  ``<ui:composition>`` 
 
-image::./new-template-client.png[title="Create a Client for a Facelets template using the Facelets Template Client wizard"]
+image::kb/docs/web/new-template-client.png[title="Create a Client for a Facelets template using the Facelets Template Client wizard"]
 
 For more details on using Facelets templates and clients, see the section on xref:./jsf20-intro.adoc#template[+Applying a Facelets Template+] in the xref:./jsf20-intro.adoc[+Introduction to JavaServer Faces 2.x in NetBeans IDE+].
 
@@ -349,7 +353,7 @@ To use the JSF Pages from Entity Classes wizard, <<fileWizard,access the IDE's F
 
 When you reach Step 3: Generate JSF Pages and Classes, you can specify the locations of the files that will be generated.
 
-image::./jsf-entity-wizard.png[title="Specify the locations of the files that will be generated"]
+image::kb/docs/web/jsf-entity-wizard.png[title="Specify the locations of the files that will be generated"]
 
 For example, if you are applying the wizard to a `Customer` entity class, the settings shown in the image above will generate the following files:
 
@@ -394,7 +398,7 @@ You can access the Form from Entity dialog either by <<popup,pressing Ctrl-Space
 
 For example, in the following image, a `Customer` entity class already exists in the `my.org` package of the given project. A `customerController` managed bean also already exists in the given project, and the managed bean contains a property named `selected` which returns a `Customer` object.
 
-image::./jsf-form-from-entity.png[title="Use the Form from Entity dialog to generate a JSF Form using Entity data"]
+image::kb/docs/web/jsf-form-from-entity.png[title="Use the Form from Entity dialog to generate a JSF Form using Entity data"]
 
 *Note: *Select the 'Generate read only view' option to create a form that contains read-only fields. When this option is selected, the IDE applies `<h:outputText>` tags for form fields, whereas `<h:inputText>` tags are applied when the option is not selected.
 
@@ -432,7 +436,7 @@ You can access the Data Table from Entity dialog either by <<popup,pressing Ctrl
 
 For example, in the following image, a `Product` entity class already exists in the `my.org.entity` package of the given project. A `productController` managed bean also exists in the project, and the managed bean contains a method named `getProductItems()` which returns a `List` of `Product` objects.
 
-image::./jsf-data-table-from-entity.png[title="Use the Data Table from Entity dialog to generate a JSF data table from entity data"]
+image::kb/docs/web/jsf-data-table-from-entity.png[title="Use the Data Table from Entity dialog to generate a JSF data table from entity data"]
 
 When you complete the dialog, the IDE generates code for your Facelets page. For example, a `Product` entity class containing a `productId` property is displayed in the following format:
 
@@ -467,11 +471,11 @@ To modify the template used for the generated code, click the Customize Template
 
 When working in Facelets pages, you can take advantage of the IDE's Palette to drag and drop JSF tags onto the page. You can access the Palette either by choosing Window > Palette from the main menu, or press Ctrl-Shift-8 (⌘-Shift-8 on Mac).
 
-image::./palette.png[title="Use the IDE's Palette to drag and drop common JSF components onto a Facelets page"]
+image::kb/docs/web/palette.png[title="Use the IDE's Palette to drag and drop common JSF components onto a Facelets page"]
 
 You can also choose Source > Insert Code (Alt-Insert; Ctrl-I on Mac) from the IDE's main menu to invoke a pop-up list that contains JSF-specific components contained in the Palette.
 
-image::./insert-code.png[title="In the editor, press Alt-Insert (Ctrl-I on Mac) to invoke a list of JSF-specific components"]
+image::kb/docs/web/insert-code.png[title="In the editor, press Alt-Insert (Ctrl-I on Mac) to invoke a list of JSF-specific components"]
 
 The Palette provides you with five JSF-related components:
 

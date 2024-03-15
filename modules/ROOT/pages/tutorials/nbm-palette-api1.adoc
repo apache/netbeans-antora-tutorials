@@ -30,6 +30,10 @@
 :description: NetBeans Code Snippet Module Tutorial - Apache NetBeans
 :keywords: Apache NetBeans Platform, Platform Tutorials, NetBeans Code Snippet Module Tutorial
 
+ifdef::env-github[]
+:imagesdir: ../../images
+endif::[]
+
 This tutorial demonstrates how to create and add code snippets to the HTML/JSP Component Palette. Code snippets are small pieces of code that can be dragged from a component palette and dropped in the Source Editor. They serve to speed up coding. The HTML/JSP Component Palette has several code snippets already, but you might want to add some additional ones and share them with others.
 
 // NOTE: If you are using an earlier version of Apache NetBeans, see link:74/nbm-palette-api1.html[the previous version of this document].
@@ -117,10 +121,10 @@ import org.netbeans.spi.palette.PaletteItemRegistration;
 1. Add two icons to the module, such as these below, in locations defined by the  ``icon16``  element and the  ``icon32``  element above:
 
 
-image::./codesnippet_BR32.png[]
+image::tutorials/codesnippet_BR32.png[]
 
 
-image::./codesnippet_BR16.png[]
+image::tutorials/codesnippet_BR16.png[]
 
 
 [start=5]
@@ -387,17 +391,17 @@ NOTE: You can choose either of the two approaches above, depending on your requi
 1. Add a 16x16 pixel icon and a 32x32 pixel icon to the new  ``resources``  folder. Name them  ``BR16.png``  and  ``BR32.png`` . They can also be in other icon formats, such as GIF or JPG. Make sure that the resource is correctly declared in the  ``BR.xml``  file. You can right-click them here and then save them to your module's source structure:
 
 
-image::./codesnippet_BR32.png[]
+image::tutorials/codesnippet_BR32.png[]
 
 
-image::./codesnippet_BR16.png[]
+image::tutorials/codesnippet_BR16.png[]
 
 
 [start=4]
 1. If you want to use a properties file for declaring the palette item's display name and tooltip, which implies that you are using the 1.0 DTD, add the following to the  ``Bundle.properties``  file:
 
 
-image::./codesnippet_bundle-60.png[]
+image::tutorials/codesnippet_bundle-60.png[]
 
 
 === Registering the Code Snippet
@@ -437,7 +441,7 @@ Now we need to think about installation and distribution. Install and try out th
 1. Create a new HTML file in the IDE. When the HTML file opens, it displays the Component Palette (Ctrl-Shift-8) with one additional code snippet, called "New Line", with a tooltip that displays the result of drag-and-dropping the item:
 
 
-image::./codesnippet_71_result.png[]
+image::tutorials/codesnippet_71_result.png[]
 
 
 [start=3]
@@ -463,7 +467,7 @@ Use the New File dialog (Ctrl-N) to create a  ``JPanel``  in the  ``org.netbeans
 1. Use the Pallette (Ctrl-Shift-8) to drag and drop a  ``JLabel``  and a  ``JTextField``  onto the  ``JPanel``  and arrange the  ``JPanel``  as follows:
 
 
-image::./codesnippet_customizer-in-palette-60.png[]
+image::tutorials/codesnippet_customizer-in-palette-60.png[]
 
 
 [start=4]

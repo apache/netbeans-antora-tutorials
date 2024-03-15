@@ -29,6 +29,10 @@
 :description: Working With a Team Server in NetBeans IDE - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Working With a Team Server in NetBeans IDE
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 A Team Server provides various services that are designed to help increase the productivity of developers by providing an infrastructure for developers collaborating on a project. To work with a Team Server, install the Team Server plugin from the NetBeans Update Center. The plugin will automatically register an instance of the link:https://java.net[+java.net+] team server. After you register a Team Server with the IDE, you can take advantage of the services offered by the Team Server for your hosted projects.
 
 
@@ -70,7 +74,7 @@ To take advantage of Team Server services in the IDE, you need to install the Te
 1. Choose Window > Plugins to open the Plugins manager.
 2. Select the Available Plugins tab in the Plugins manager and select the Team Server plugin.
 
-image::./team-plugin.png[title="Team Server plugin selected in Plugins manager"]
+image::kb/docs/ide/team-plugin.png[title="Team Server plugin selected in Plugins manager"]
 
 
 . Click Install in the Plugins manager and step through the plugin installation process.
@@ -83,17 +87,17 @@ NOTE: You might need to install additional plugins that are required by the Team
 . Choose Team > Team Server > Add Team Server in the main menu to open the New Team Server dialog box.
 . Type the Name and URL of the Team Server. Click Add.
 
-image::./add-team-server.png[title="Add Team Server dialog"]
+image::kb/docs/ide/add-team-server.png[title="Add Team Server dialog"]
 
 NOTE: The IDE will check to confirm that the team server that you are adding is a valid team server instance that is built on the Kenai infrastructure.
 
 In the Services window you can see the new team server is listed under the Team Servers node. The java.net team server is added by default when you install the plugin and is also listed under the Team Servers node.
 
-image::./services-window.png[title="Team Servers node in Services window"]
+image::kb/docs/ide/services-window.png[title="Team Servers node in Services window"]
 
 You can log in to any registered team server instance by choose Team > Team Server > Login from the main menu. Alternatively, you can right-click the name of the server under the Team Servers node in the Services window and choose Login or click Login in the Team Dashboard.
 
-image::./user-login.png[title="Add Team Server dialog"]
+image::kb/docs/ide/user-login.png[title="Add Team Server dialog"]
 
 After you register the Team Server and log in, you can open the Team Dashboard for an overview of your projects and to search for other projects that are hosted on the Team Server. To create projects on a Team Server you must have an account with the Team Server.
 
@@ -115,12 +119,12 @@ Alternatively, you can open a Team Server project in the Team Dashboard and then
 
 . In the Get Sources from Team Server wizard, click Browse to specify the project repository.
 
-image::./get-sources.png[title="Get Sources from Team Server dialog"]
+image::kb/docs/ide/get-sources.png[title="Get Sources from Team Server dialog"]
 
 
 . In the Browse Team Projects dialog, type a search term and then click Search.
 
-image::./browse-projects.png[title="Browse Team Projects dialog"]
+image::kb/docs/ide/browse-projects.png[title="Browse Team Projects dialog"]
 
 The IDE searches the Team Server instance for projects containing the search terms and displays the results in the dialog box.
 
@@ -128,7 +132,7 @@ The IDE searches the Team Server instance for projects containing the search ter
 . Select a project from the list. Click OK.
 . To select a specific folder in the repository, click Browse next to the Folder to Get dropdown list and select a folder in the Browse Repository Folders dialog.
 
-image::./folder-to-get.png[title="Browse Repository Folders dialog"]
+image::kb/docs/ide/folder-to-get.png[title="Browse Repository Folders dialog"]
 
 
 . Specify a location on your local system for the local repository of the sources. Click Get From Team Server.

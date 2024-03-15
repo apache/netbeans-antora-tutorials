@@ -29,6 +29,10 @@
 :description: Applying @Alternative Beans and Lifecycle Annotations - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Applying @Alternative Beans and Lifecycle Annotations
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 _Contributed by Andy Gibson_
 
 == Contexts and Dependency Injection
@@ -79,7 +83,7 @@ CDI offers the use of the `@Alternative` annotation which lets you package multi
 
 To demonstrate this, consider the following scenario. We inject an `ItemValidator` into our main `ItemProcessor` class. The `ItemValidator` is implemented by both `DefaultItemValidator` and `RelaxedItemValidator`. Based on our deployment requirements, we'd like to use `DefaultItemValidator` for most cases, but also require `RelaxedItemValidator` for a specific deployment. To resolve this, we annotate both beans, then specify which bean to use for a given deployment by adding an entry to the application's `beans.xml` file.
 
-image::./cdi-diagram-alternative.png[title="Use CDI injection to loosely couple classes in your application"]
+image::kb/docs/javaee/cdi-diagram-alternative.png[title="Use CDI injection to loosely couple classes in your application"]
 
 1. Begin by extracting the sample start project from the `cdiDemo2.zip` file (See the <<requiredSoftware,table listing required resources>> above.) Open the project in the IDE by choosing File > Open Project (Ctrl-Shift-O; ⌘-Shift-O on Mac), then selecting the project from its location on your computer.
 2. Right-click the project node in the Projects window and choose Properties.
@@ -176,7 +180,7 @@ INFO: Item = exercise2.Item@4715c34e [Value=24, Limit=19] valid = false
 INFO: Item = exercise2.Item@65c95a57 [Value=89, Limit=32] valid = false
 ----
 
-image::./output-window.png[title="View the server log in the Output window"]
+image::kb/docs/javaee/output-window.png[title="View the server log in the Output window"]
 
 
 
@@ -245,7 +249,7 @@ public class RelaxedItemValidator implements ItemValidator {
 
 Type '`@Al`' then press Ctrl-Space to invoke code completion. Because only one option is filtered, the `@Alternative` annotation is completed, and the corresponding import statement for `javax.enterprise.inject.Alternative` is automatically added to the top of the file. Typically, pressing Ctrl-Space on annotations also provides a Javadoc documentation popup.
 
-image::./code-completion-alternative.png[title="Press Ctrl-Space on annotations to invoke Javadoc documentation"]
+image::kb/docs/javaee/code-completion-alternative.png[title="Press Ctrl-Space on annotations to invoke Javadoc documentation"]
 
 Switch to `DefaultItemValidator` (press Ctrl-Tab) and make the following change.
 
@@ -271,7 +275,7 @@ If you deployed the application now you would get an 'unsatisfied dependency' er
 
 . Use the IDE's Go to File dialog to quickly open the `beans.xml` file. Choose Navigate > Go to File from the IDE's main menu (Alt-Shift-O; Ctrl-Shift-O on Mac), then type '`beans`'. Click OK. 
 
-image::./go-to-file.png[title="Use the Go to File dialog to quickly locate a project file"]
+image::kb/docs/javaee/go-to-file.png[title="Use the Go to File dialog to quickly locate a project file"]
 
 
 
@@ -315,7 +319,7 @@ You can see that the `RelaxedItemValidator` implementation is being used, as the
 
 In this exercise, you inject an `ItemErrorHandler` into the main `ItemProcessor` class. Because `FileErrorReporter` is the only implementation of the `ItemErrorHandler` interface, it is selected for the injection. To set up lifecycle-specific actions for the class, you use the `@PostConstruct` and `@PreDestroy` annotations from the Managed Bean specification (included in link:http://jcp.org/en/jsr/detail?id=316[+JSR 316: Java Platform, Enterprise Edition 6 Specification+]).
 
-image::./cdi-diagram-lifecycle.png[title="Use CDI injection to loosely couple classes in your application"]
+image::kb/docs/javaee/cdi-diagram-lifecycle.png[title="Use CDI injection to loosely couple classes in your application"]
 
 Continuing with the example, create an `ItemErrorHandler` interface to handle invalid items when they are discovered.
 

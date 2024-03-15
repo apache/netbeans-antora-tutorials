@@ -29,13 +29,17 @@
 :description: Code Templates in NetBeans IDE for PHP - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Code Templates in NetBeans IDE for PHP
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 Code templates are prewritten snippets of code provided by NetBeans IDE. You can paste a snippet into your code by using code completion or the template's abbreviation followed by the Tab key. You can also surround your code with appropriate PHP snippets. Finally, you can define your own code templates. This tutorial shows how to use code templates and suggests useful cases for defining your own code templates.
 
 == Defined PHP Code Templates
 
 To view the code templates that are defined in NetBeans, open Tools > Options (NetBeans > Preferences on Mac), select the Editor features, and select the Code Templates tab. To see the PHP code templates, select PHP in the Languages drop-down list. A table appears of code template abbreviations and expanded texts. If you select a code template in the table, its expanded text appears in the Expanded Text tab.
 
-image::./code-template-options.png[]
+image::kb/docs/php/code-template-options.png[]
 
 In this image the new class ( ``cls)``  code template is selected, and in the Expanded Text tab you see what the template looks like when it's expanded. In the next section, you use the Tab function to expand this template in your code.
 
@@ -55,7 +59,7 @@ After you insert the template, the IDE helps you <<edit-parameters,edit paramete
 
 Look again at the Code Templates tab in the Options dialog. At the bottom there is a drop-down field for selecting the Expand Template On key-combo. This is the key-combo you press after typing in the code template's abbreviation in order to expand the code template. By default the Tab key is selected but you can select other combos instead.
 
-image::./expand-template-on.png[]
+image::kb/docs/php/expand-template-on.png[]
 
 The rest of this section assumes that you have the default Tab key selected in the Expand Template on: field.
 
@@ -68,7 +72,7 @@ When the abbreviation for a template is also part of a keyword for code completi
 
 *Caution:* Spell the abbreviation correctly! Expansion does not work if you misspell the abbreviation.
 
-image::./expanding-template-with-abb.png[]
+image::kb/docs/php/expanding-template-with-abb.png[]
 
 
 
@@ -76,7 +80,7 @@ image::./expanding-template-with-abb.png[]
 
 NOTE: Placeholder names are discussed in more detail in the <<placeholder,Placeholder name section>>.
 
-image::./select-constructor-name.png[]
+image::kb/docs/php/select-constructor-name.png[]
 
 
 
@@ -94,7 +98,7 @@ To insert a code template by using code completion, type the beginning of the ex
 2. Wait for the code completion dialog to open.
 3. Locate the new class template, which is listed with its abbreviation ( ``cls`` ). The PHPDoc frame shows the expanded template.
 
-image::./insert-template-with-cc.png[]
+image::kb/docs/php/insert-template-with-cc.png[]
 
 
 
@@ -103,7 +107,7 @@ image::./insert-template-with-cc.png[]
 
 . The placeholder class name ( ``*class_name*`` ) is selected automatically. You can move between placeholders by pressing Tab. You can immediately type the name you want for the class and this name overwrites the placeholder. Press Enter when you are done and the IDE selects the name of the first function, which in this case is the constructor.
 
-image::./select-constructor-name.png[]
+image::kb/docs/php/select-constructor-name.png[]
 
 
 
@@ -124,7 +128,7 @@ You can surround your code with the following PHP templates:
 
 In addition, you can <<create,create a new template>> that can surround code if the template includes the `allowSurround` <<complex,parameter hint>>. (Hat tip to the link:http://www.mybelovedphp.com/2012/05/14/tips-for-using-the-netbeans-editor-for-kohana-and-kostache-mustache-templates-using-surround-with/[+ My Beloved PHP blog+].)
 
-To surround code with a template, select the code and open the Surround with... dialog. To open the Surround with... dialog, either press Alt-Enter or click the Hint image:./hint-icon.png[] icon.
+To surround code with a template, select the code and open the Surround with... dialog. To open the Surround with... dialog, either press Alt-Enter or click the Hint image:kb/docs/php/hint-icon.png[] icon.
 
 *To surround code with an if(true) template:*
 
@@ -142,37 +146,37 @@ To surround code with a template, select the code and open the Surround with... 
 
 . Select the line  ``$b = 10;`` 
 
-image::./selected-variable.png[]
+image::kb/docs/php/selected-variable.png[]
 
 
 
-. Click the Hint image:./hint-icon.png[] icon or press Alt-Enter. The Surround with... dialog opens.
+. Click the Hint image:kb/docs/php/hint-icon.png[] icon or press Alt-Enter. The Surround with... dialog opens.
 
-image::./surround-hint.png[]
+image::kb/docs/php/surround-hint.png[]
 
 
 
 . Click `` Surround with if{*true*){...`` 
 
-image::./surround-if-true.png[]
+image::kb/docs/php/surround-if-true.png[]
 
 
 
 . The IDE surrounds the line  ``$b = 10;``  with an  ``if(*true*){... `` template.
 
-image::./inserted-if-true.png[]
+image::kb/docs/php/inserted-if-true.png[]
 
 The IDE automatically inserts the nearest preceding suitable variable as the  ``if``  statement's condition. In this case, that variable is  ``$a`` , because  ``$a``  is a boolean and the  ``if(*true*){} `` statement takes a boolean variable as its condition. Furthermore, the condition is automatically selected for editing, in case the variable that the IDE inserts into the condition is not the correct variable. This means you can begin typing the correct variable immediately after the template is inserted. Code completion can help you select the correct variable in this case.
 
 NOTE: The  ``if(*true*){}``  template is described in detail in the section <<complex,Parameter defined by hints>>.
 
-image::./change-condition.png[]
+image::kb/docs/php/change-condition.png[]
 
 Press Enter to exit the statement's condition. The cursor moves to the appropriate location, which in this case is the end of the line  ``$b = 10;`` . You can edit the condition and press Enter or accept the automatically inserted condition and press Enter. In either case the cursor exits the condition and moves to the appropriate location.
 
-image::./cursor-after-not-editing.png[]
+image::kb/docs/php/cursor-after-not-editing.png[]
 
-image::./cursor-after-editing.png[]
+image::kb/docs/php/cursor-after-editing.png[]
 
 The next section contains more details about editing the parameters in expanded templates.
 
@@ -184,17 +188,17 @@ In the sections on inserting templates into your code, you saw how the IDE autom
 
 1. In an empty PHP block, type  ``for``  and press Ctrl-Space to open code completion. Select the iteration template (abbreviation  ``iter`` ) and press Enter. A new iteration is inserted into your code.
 
-image::./iter-cc.png[]
+image::kb/docs/php/iter-cc.png[]
 
 
 
 . The iteration has two variables as parameters,  ``$index``  and  ``$array`` .  ``$index``  is selected automatically for editing. (Pressing Tab moves between parameters.)
 
-image::./iteration1.png[]
+image::kb/docs/php/iteration1.png[]
 
 Type  ``i`` . All three instances of  ``$index``  change to  ``$i`` .
 
-image::./iteration2.png[]
+image::kb/docs/php/iteration2.png[]
 
 
 
@@ -223,7 +227,7 @@ The NetBeans IDE PHP editor also helps identify the correct method for variables
 
 . After the line declaring the  ``$arr``  array, type  ``fore``  and use code completion to insert the `` foreach``  template (abbreviation:  ``fore`` ).
 
-image::./cc-foreach.png[]
+image::kb/docs/php/cc-foreach.png[]
 
 
 
@@ -240,7 +244,7 @@ image::./cc-foreach.png[]
 
 . After  ``$value`` , type  ``->`` . Code completion offers you the correct methods for the  ``$value``  variable, which is derived from the array  ``$arr`` .
 
-image::./value-method-cc.png[]
+image::kb/docs/php/value-method-cc.png[]
 
 == PHP Code Template Syntax
 
@@ -267,7 +271,7 @@ In the simplest case, a code template parameter is an arbitrary placeholder valu
 
 For example, consider the new class template  ``(cls)``  that this tutorial shows in the sections <<define,Defined PHP Templates>> and <<expand-with-abb,Expanding the code template by using the abbreviation + Tab>>. The expanded text of the new class template begins  ``class $\{className}`` . Here, the word  ``class``  is PHP code and  ``$\{className}``  is a parameter. This parameter is only an arbitrary placeholder value for the name of the class. When the IDE expands the template,  ``$\{className}``  becomes  ``*class_name*`` . The IDE expects that  ``*class_name*``  is only a placeholder value and automatically selects this value for you to edit.
 
-image::./expanding-template-with-abb.png[]
+image::kb/docs/php/expanding-template-with-abb.png[]
 
 
 === Reserved names
@@ -289,7 +293,7 @@ class ${ClassName} {
 
 After the template expands, the placeholder  ``*class_name*``  is selected automatically (1). Press Enter, and the placeholder  ``*__construct*``  is selected automatically (2). There are no other values to edit. Press Enter again, and the cursor moves to the location indicated by  ``$\{cursor}``  in the template's text (3).
 
-image::./cursor-position-changes.png[]
+image::kb/docs/php/cursor-position-changes.png[]
 
 
 === Parameter defined by hints
@@ -327,11 +331,11 @@ Examine the parameter  ``${CONDITION variableFromPreviousAssignment instanceof="
 
 For example, when the line  ``$b = 10``  in the following code snippet is surrounded by an `` if(*true*) `` code template...
 
-image::./selected-variable.png[]
+image::kb/docs/php/selected-variable.png[]
 
 ...the IDE looks for the closest boolean variable that was assigned previously, finds  ``$a`` , and generates an  ``if``  statement with the condition  ``$a`` [=true]. The condition is automatically selected for editing, so the PHP programmer can change  ``$a``  to another variable or to  ``!$a`` .
 
-image::./inserted-if-true.png[]
+image::kb/docs/php/inserted-if-true.png[]
 
 The following table lists the hints used in PHP code templates and descriptions of the hints.
 
@@ -364,13 +368,13 @@ You can create your own code templates in NetBeans IDE. This section tells you h
 
 1. Open Tools > Options (NetBeans > Preferences on Mac), select the Editor features, and select the Code Templates tab. 
 
-image::./code-template-options.png[]
+image::kb/docs/php/code-template-options.png[]
 
 
 
 . Click New to open the New Code Template dialog box. Type in the abbreviation you want for the template and click OK. 
 
-image::./new-abb.png[]
+image::kb/docs/php/new-abb.png[]
 
 
 
@@ -378,7 +382,7 @@ image::./new-abb.png[]
 
 NOTE: To learn about the syntax of the code template's expanded text, see the section <<syntax,PHP Code Template Syntax.>>
 
-image::./new-abb-text.png[]
+image::kb/docs/php/new-abb-text.png[]
 
 The following sections describe some use cases for creating your own PHP code templates. If you have any further use cases to suggest, please share them with the community at the link:http://forums.netbeans.org/php-users.html[+PHP Users' Forum.+]
 
@@ -403,7 +407,7 @@ The following code template inserts a PHP  ``echo``  statement into HTML.
  
 |===
 
-image::./uc-php.png[]
+image::kb/docs/php/uc-php.png[]
 
 == Use case: Joomla
 
@@ -424,7 +428,7 @@ defined('_JEXEC')or die('Restricted access');$\{cursor}
  
 |===
 
-image::./uc-joomdef.png[]
+image::kb/docs/php/uc-joomdef.png[]
 
 == Use case: MySQL connection
 
@@ -445,7 +449,7 @@ $$${CONLINK newVarName default="link"} = mysql_connect('localhost', 'mysql_us
  
 |===
 
-image::./uc-mycon.png[]
+image::kb/docs/php/uc-mycon.png[]
 
 
 == Use case: Action in Zend controller
@@ -467,7 +471,7 @@ public function $\{functionName}Action () {$\{selection}$\{cursor}  }
  
 |===
 
-image::./uc-zfact.png[]
+image::kb/docs/php/uc-zfact.png[]
 
 
 === Use case: Zend form element
@@ -489,5 +493,5 @@ $$${ELEMENT newVarName default="element"} = new Zend_Form_Element_Submit('submit
  
 |===
 
-image::./uc-zelement.png[]
+image::kb/docs/php/uc-zelement.png[]
 

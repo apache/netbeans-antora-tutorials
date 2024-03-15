@@ -30,6 +30,10 @@
 :description: Creating an Enterprise Application Using Maven - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Creating an Enterprise Application Using Maven
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This tutorial demonstrates how to create a simple enterprise application using NetBeans IDE and Maven archetypes. The tutorial also provides some explanations and tips on using the IDE to create and build Maven applications.
 
 In this tutorial you create an enterprise application that is packaged as an EAR archive and deployed to GlassFish Server Open Source Edition 3. You create the application using the Maven Enterprise Application archetype in the New Project wizard. The application contains an EJB project that contains a persistent entity class, a message-driven bean and a session bean facade for the entity. The application also contains a web project that contains two servlets.
@@ -132,7 +136,7 @@ The IDE includes several Maven archetypes in the New Project wizard to help you 
 1. Choose File > New Project (Ctrl-Shift-N; ⌘-Shift-N on Mac) from the main menu.
 2. Select Enterprise Application from the Maven category. Click Next.
 
-image::./maven-newproject1.png[title="Maven Enterprise Application project type in the New Project wizard"]
+image::kb/docs/javaee/maven-newproject1.png[title="Maven Enterprise Application project type in the New Project wizard"]
 
 
 
@@ -141,7 +145,7 @@ image::./maven-newproject1.png[title="Maven Enterprise Application project type 
 
 . (Optional) Modify the artifact details. Click Next. 
 
-image::./maven-newproject2.png[title="Maven Project details in the New Project wizard"]
+image::kb/docs/javaee/maven-newproject2.png[title="Maven Project details in the New Project wizard"]
 
 
 
@@ -160,13 +164,13 @@ When you click Finish, the IDE creates the following projects from the Maven Ent
 * *Assembly.* (MavenEnterpriseApp) The Assembly project is used to assemble an EAR archive from the EJB and WAR archives. The Assembly project does not contain any sources.
 * *Enterprise Application.* (MavenEnterpriseApp-ear) The Enterprise Application project does not contain any sources. The Enterprise Application only contains a POM file ( ``pom.xml`` ) with details about the modules contained in the enterprise application.
 
-image::./maven-projectswindow2.png[title="Projects window showing generated projects"]
+image::kb/docs/javaee/maven-projectswindow2.png[title="Projects window showing generated projects"]
 
 After you create the enterprise application project, the enterprise application project will be badged if any dependencies are unavailable. If you expand the Dependencies node for the MavenEnterpriseApp-ear project, you can see if any required libraries are missing or not on the classpath. The enterprise application project has dependencies on the JAR and WAR that will be packaged and available after you compile the EJB project and the web project. You can see that  ``MavenEnterpriseApp-ejb``  and  ``MavenEnterpriseApp-web``  are listed as dependencies.
 
 In some cases you will see a Maven icon in the status bar that you can click to run a priming build and resolve missing dependencies.
 
-image::./priming-build.png[title="The Maven icon in the status bar enables you to run a priming build"] 
+image::kb/docs/javaee/priming-build.png[title="The Maven icon in the status bar enables you to run a priming build"] 
 
 
 == Coding the EJB Project
@@ -193,7 +197,7 @@ You can keep the other default options (persistence unit name, EclipseLink persi
 
 . Ensure that Use Java Transaction APIs is selected and that the Table Generation Strategy is set to Create so that the tables based on your entity classes are created when the application is deployed. Click Finish.
 
-image::./maven-persistenceunit.png[title="New Persistence Unit wizard"]
+image::kb/docs/javaee/maven-persistenceunit.png[title="New Persistence Unit wizard"]
 
 When you click Finish, the IDE creates the XML file  ``persistence.xml``  and opens the file in the editor. In the Projects window, you can see that the file was created in the  ``Other Sources > src/main/resources > META-INF``  directory. The file contains details about connecting to the database and how transactions are managed. If you click the Source tab in the editor, you can see the following details about the persistence unit.
 
@@ -261,13 +265,13 @@ In a Maven project, the  ``glassfish-resources.xml``  file is located in the  ``
 5. Click the Add button next to the Project Destination field to open the Add Message Destination dialog box.
 6. In the Add Message Destination dialog box, type *jms/NewMessage* and select Queue for the destination type. Click OK.
 
-image::./maven-messagedestination.png[title="Add Message Destination dialog"]
+image::kb/docs/javaee/maven-messagedestination.png[title="Add Message Destination dialog"]
 
 
 
 . Confirm that the project destination is correct. Click Next.
 
-image::./maven-newmdb.png[title="New Message-Driven Bean wizard"]
+image::kb/docs/javaee/maven-newmdb.png[title="New Message-Driven Bean wizard"]
 
 
 
@@ -385,7 +389,7 @@ In this exercise you will use a wizard to create a session bean facade for the N
 
 When you click Finish the IDE generates two session facade classes:  ``AbstractFacade.java`` , and  ``NewsEntityFacade.java``  which extends the abstract facade class. The abstract facade class defines several methods that are commonly used with entity classes.
 
-image::./maven-sessionwizard.png[title="Session Beans for Entity Classes wizard"]
+image::kb/docs/javaee/maven-sessionwizard.png[title="Session Beans for Entity Classes wizard"]
 
 
 == Coding the Web Application
@@ -410,7 +414,7 @@ When you click Finish, the class  ``ListNews.java``  opens in the Source Editor.
 
 . In the Call Enterprise Bean dialog box, expand the MavenEnterpriseApp-ejb node and select NewsEntityFacade. Click OK.
 
-image::./maven-callbean.png[title="Call Enterprise Bean dialog"]
+image::kb/docs/javaee/maven-callbean.png[title="Call Enterprise Bean dialog"]
 
 When you click OK, the EJB resource is injected into the servlet using the  ``@EJB``  annotation.
 
@@ -482,15 +486,15 @@ public class PostMessage extends HttpServlet {
 
 . Fix your imports to import the * ``javax.jms`` * libraries.
 
-image::./maven-searchdepend1.png[title="Fix All Imports dialog"]
+image::kb/docs/javaee/maven-searchdepend1.png[title="Fix All Imports dialog"]
 
 NOTE:  If the IDE does not offer  ``javax.jms``  as an option, you can search the repositories for the correct artifact by clicking the suggestion icon in the margin next to  ``private ConnectionFactory connectionFactory;``  and choosing Search Dependency at Maven Repositories.
 
-image::./maven-searchdependencies.png[title="Hint in editor to search repositories for dependencies"]
+image::kb/docs/javaee/maven-searchdependencies.png[title="Hint in editor to search repositories for dependencies"]
 
 You can use the Search in Maven Repositories dialog to locate the  ``javaee-api-6.0``  artifact that contains  ``ConnectionFactory`` .
 
-image::./maven-searchdepend2.png[title="Search in Maven Repositories dialog"]
+image::kb/docs/javaee/maven-searchdepend2.png[title="Search in Maven Repositories dialog"]
 
 
 
@@ -553,7 +557,7 @@ NOTE:  You might need to uncomment the code if you are using an earlier version 
 
 . Fix your imports and save your changes.
 
-image::./maven-jms-imports.png[title="Fix All Imports dialog"]
+image::kb/docs/javaee/maven-jms-imports.png[title="Fix All Imports dialog"]
 
 NOTE:  You want to import the * ``javax.jms`` * libraries for  ``Connection`` ,  ``ConnectionFactory`` ,  ``Session``  and  ``Queue`` .
 
@@ -569,15 +573,15 @@ In this exercise you will examine the POM ( ``pom.xml`` ) of the web project and
 
 In this application, the EJB JAR and the WAR archives will be packaged in an EAR archive. If you look at the  ``pom.xml``  of the MavenEnterpriseApp-ear project, you can see that the EJB and WAR are declared as dependencies.
 
-image::./maven-earpom.png[title="pom.xml of EAR project"]
+image::kb/docs/javaee/maven-earpom.png[title="pom.xml of EAR project"]
 
 If you look at the  ``pom.xml``  of the web project in the editor you can see that the EJB archive is declared as a dependency and the scope is specified as  ``provided`` . When the value of the scope element of an artifact is  ``provided`` , the artifact will not be included during packaging. The web project requires the EJB archive as a dependency, but for this application you do not want the EJB archive to be included in the WAR during packaging because the EJB archive will be available and provided as part of the EAR archive.
 
-image::./maven-webpom.png[title="pom.xml of Web App project"]
+image::kb/docs/javaee/maven-webpom.png[title="pom.xml of Web App project"]
 
 You can open  ``pom.xml``  in the editor and click the Graph tab to see a visual representation of the project dependencies. If you are using an older version of the IDE you can right-click in  ``pom.xml``  in the editor and choose Show Dependency Graph. You can place your cursor over an artifact to display a tooltip with the artifact details.
 
-image::./maven-webpomgraph.png[title="Graph of dependencies"]
+image::kb/docs/javaee/maven-webpomgraph.png[title="Graph of dependencies"]
 
 Perform the following steps to modify the POM of the web project to add a  ``scope``  element to the dependency on the  ``javaee-api``  artifact.
 
@@ -602,7 +606,7 @@ If the value is not  ``provided``  you need to edit the POM to make the followin
 
 You can use the code completion in the POM editor to help you edit the file.
 
-image::./maven-addscope-javaee.png[title="code completion for scope element in POM"]
+image::kb/docs/javaee/maven-addscope-javaee.png[title="code completion for scope element in POM"]
 
 By declaring that the dependency is provided, Maven will not package the artifact when building the WAR archive.
 
@@ -623,15 +627,15 @@ To build the EAR archive, perform the following step.
 
 When you build the EAR project using the Reactor plugin, the sub-projects that are dependencies of the EAR project are built before the EAR project is built. The Output window displays the build order.
 
-image::./maven-reactor1.png[title="Output window showing Reactor build order"]
+image::kb/docs/javaee/maven-reactor1.png[title="Output window showing Reactor build order"]
 
 The results of the build are also displayed in the Output window.
 
-image::./maven-reactor2.png[title="Output window showing Reactor build status"]
+image::kb/docs/javaee/maven-reactor2.png[title="Output window showing Reactor build status"]
 
 After you build the EAR project, you can see the final EAR archive inside the  ``target``  directory under the EAR project node in the Files window.
 
-image::./maven-earfileswindow1.png[title="Files window showing EAR archive"]
+image::kb/docs/javaee/maven-earfileswindow1.png[title="Files window showing EAR archive"]
 
 If you used the default artifact name  ``com.mycompany`` , you can use the Maven Repository Browser to view the build artifacts by expanding  ``com.mycompany``  in the Local Repository.
 
@@ -659,7 +663,7 @@ link:http://localhost:8080/MavenEnterpriseApp-web/ListNews[+http://localhost:808
 
 When you first run the project, the database is empty and there are no messages to display.
 
-image::./maven-browser1.png[title="ListNews page open in the browser"]
+image::kb/docs/javaee/maven-browser1.png[title="ListNews page open in the browser"]
 
 
 
@@ -668,7 +672,7 @@ image::./maven-browser1.png[title="ListNews page open in the browser"]
 
 . Type a message in the form in the PostMessage servlet. Click Submit Query.
 
-image::./maven-browser2.png[title="PostMessage page open in the browser"]
+image::kb/docs/javaee/maven-browser2.png[title="PostMessage page open in the browser"]
 
 When you add a message with the PostMessage servlet, the message is sent to the message-driven bean for writing to persistent storage, and the ListNews servlet is called to display the messages in the database. The list of messages in the database retrieved by ListNews often does not yet contain the new message because our message service is asynchronous.
 

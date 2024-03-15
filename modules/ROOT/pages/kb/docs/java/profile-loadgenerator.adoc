@@ -29,6 +29,10 @@
 :description: Using a Load Generator in NetBeans IDE
 :keywords: Using a Load Generator in NetBeans IDE
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 When testing the performance of an application, it can be beneficial to perform your tests under a typical load. This can be difficult if you are running your application in a development environment. One way to emulate an application running under load is through the use of a load generator script. This document presents an overview of load generator support offered by the IDE.
 
 Instead of supplying its own load generator runtime, the IDE relies on integrating third party tools. NetBeans IDE supports the Apache JMeter Load Testing Tool (link:http://jakarta.apache.org/jmeter[+homepage+]) to replay load testing scripts. To use the JMeter tool in the IDE, you first need to download the required plugins from the Update Center.
@@ -73,7 +77,7 @@ To download the plugins, do the following:
 1. Choose Tools > Plugins from the main menu to open the Plugins manager.
 2. Click the Available Plugins tab and select the checkboxes for the JMeter Kit and Load Generator plugins. Click Install.
 
-image::./generator-plugin.png[title="Load Generator plugins in Plugins manager"]
+image::kb/docs/java/generator-plugin.png[title="Load Generator plugins in Plugins manager"]
 
 
 . Step through the installer to download and install the plugins and click Finish. Click Close to close the Plugins Manager.
@@ -100,7 +104,7 @@ To create a new load test script, do the following:
 
 When you create a new script, the IDE places the script under the Load Generator Scripts node in the Projects window. In the Files window, you can see that the IDE saves the script in the  ``jmeter``  directory. If you already have a load testing script created outside of the IDE, you can create a  ``jmeter``  directory and add the script to the directory to run the script from within the IDE.
 
-image::./new-plan.png[] 
+image::kb/docs/java/new-plan.png[] 
 
 
 === Editing a Load Testing Script
@@ -109,7 +113,7 @@ The JMeter external editor enables you to modify the script according to the nee
 
 For more information about editing the JMeter testing scripts, see the link:http://jakarta.apache.org/jmeter/usermanual/index.html[+JMeter User Manual+].
 
-image::./jmeter-externaledit.png[title="JMeter load testing script in project structure"] 
+image::kb/docs/java/jmeter-externaledit.png[title="JMeter load testing script in project structure"] 
 
 
 === Starting a Load Testing Script
@@ -120,13 +124,13 @@ The load testing script can be started in the following ways:
 
 In the *Services* window, right-click the Load Generators node and choose *JMeter > Start*. This action will bring up a browse dialog where you can specify the script to run.
 
-image::./jmeter-services.png[]
+image::kb/docs/java/jmeter-services.png[]
 
 * *From the Select Profiling Task window*
 
 When profiling a web application you can specify a load testing script to be run in the Select Profiling Task window. The selected script will be started right before the browser window opens.
 
-image::./jmeter-profilewindow72.png[]
+image::kb/docs/java/jmeter-profilewindow72.png[]
 
 
 === Stopping and Restarting a Load Testing Script
@@ -135,11 +139,11 @@ You can stop and restart a load testing script from either the *Output window* o
 
 A JMeter tab opens in the *Output window* after the script has been loaded. The window displays the current state of the load generator. In the left margin of the Output window there are controls to start, stop or restart the script.
 
-image::./jmeter-output.png[title="Output window showing Load Generator status"]
+image::kb/docs/java/jmeter-output.png[title="Output window showing Load Generator status"]
 
 The current status of the load generator is also displayed in the *Services window*. You can stop and restart a script by selecting a node under the JMeter node and choosing an item from the popup menu.
 
-image::./jmeter-services2.png[title="Services window showing status of Load Generator"]
+image::kb/docs/java/jmeter-services2.png[title="Services window showing status of Load Generator"]
 
 
 

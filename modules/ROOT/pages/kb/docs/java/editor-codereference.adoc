@@ -34,6 +34,11 @@
 :experimental:
 :backslash: &#92;
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
+
 //================================================= The Title and Metadata (End)
 
 //============================================================= Preamble (Start)
@@ -104,7 +109,7 @@ To customize the highlight colors, select:
 
 In the editor, you can quickly collapse and expand blocks of code, such as method declarations, Javadoc comments, import statements, etc. Collapsible blocks are indicated by a gray line with a minus sign in a box attached to the top of the line in the left-hand margin of the editor. Expandable blocks are indicated by a box with a plus sign in the same margin.
 
-image::./code-folded2a.png[]
+image::kb/docs/java/code-folded2a.png[]
 
 The easiest way to collapse a specific block of code is to double-click the gray line in the left-hand margin, the number of collapsed lines within the  block are then displayed. You can quickly review the collapsed parts of your code by doing a mouse over the folded elements.
 
@@ -182,11 +187,11 @@ and the editor automatically completes the word you're typing. Repeatedly pressi
 
 The first time kbd:[Ctrl+Space] is pressed only items matching the type, in this example an  `int`, are shown.
 
-image::./codecompletion3.png[]
+image::kb/docs/java/codecompletion3.png[]
 
 Press kbd:[Ctrl+Space] a second time and _all_ available items are shown, regardless of whether they match the provided type, as shown below.
 
-image::./codecompletion4.png[]
+image::kb/docs/java/codecompletion4.png[]
 
 Also, you can select for *Language: Java* the *Auto Popup on Typing Any Java Identifier Part* checkbox and, as you type keywords etc., code completion automatically presents you with an appropriate list of options.
 
@@ -198,7 +203,7 @@ Code completion is "smart", and will present the most  relevant suggestions at t
 
 In the example below, the editor suggests inserting the  `LinkedHashMap`  constructor from the  `java.util`  package.
 
-image::./smartcompletion1.png[]
+image::kb/docs/java/smartcompletion1.png[]
 
 If the "smart" suggestions are not the ones you want to use, press kbd:[Ctrl+Space] again to see the complete list.
 
@@ -210,7 +215,7 @@ Instead of typing consecutive characters, and then calling code completion, you 
 
 For example, type  `IE` , press  kbd:[Ctrl+Space] , and you will see a list of suggestions that match via camel case completion using the letter  `I`  and then the letter  `E` .
 
-image::./camelcase.png[]
+image::kb/docs/java/camelcase.png[]
 
 //==============================================================================
 
@@ -220,7 +225,7 @@ Use code completion to complete keywords in your code. The editor analyzes the c
 
 In the example below, the  `ColorChooser`  class needs to extend the  `JPanel`  class. You can quickly add the keyword  `extends`  from the suggested items.
 
-image::./keywords.png[]
+image::kb/docs/java/keywords.png[]
 
 //==============================================================================
 
@@ -230,7 +235,7 @@ When you are adding a new field or a variable, use code completion to choose a n
 
 Type a prefix for the new name, press  kbd:[Ctrl+Space]  and select the name you want to use from the list of suggestions.
 
-image::./names.png[]
+image::kb/docs/java/names.png[]
 
 //==============================================================================
 
@@ -250,7 +255,7 @@ You can invoke the tooltips with method parameters by pressing:
 
 or, selecting *Source > Show Method Parameters* from the menu bar at any time.
 
-image::./parameter.png[]
+image::kb/docs/java/parameter.png[]
 
 //==============================================================================
 
@@ -260,7 +265,7 @@ You can use the  kbd:[Tab] key to quickly fill in the most commonly used prefixe
 
 Type  `System.out.p`  and wait for code completion to show all fields and methods that start with "p". All the suggestions will be related to "print".
 
-image::./prefixcompletion.png[]
+image::kb/docs/java/prefixcompletion.png[]
 
 Press the  kbd:[Tab]  key and the editor automatically fills in the "print". You can continue and type "l" and, after pressing kbd:[Tab] again, "println" will be added.
 
@@ -270,7 +275,7 @@ Press the  kbd:[Tab]  key and the editor automatically fills in the "print". You
 
 Sometimes you may not remember how an item starts, making it difficult to use code completion. For example, to see all items that relate to listening to property changes, you can use subword completion, so if you type  `prop` you will see all method calls that relate to property change listening.
 
-image::./subcompletion.png[]
+image::kb/docs/java/subcompletion.png[]
 
 To implement this feature, select:
 
@@ -290,7 +295,7 @@ You can then type part of the method you want to call, in this case `prop`, then
 
 When you need to type a chain of commands, you can use code completion. By  pressing  kbd:[Ctrl+Space]  twice all available chains will be shown. The editor scans: variables, fields, and methods that are in the visible context. It will then suggest a chain that satisfies the expected type.
 
-image::./chain.png[]
+image::kb/docs/java/chain.png[]
 
 
 //==============================================================================
@@ -299,7 +304,7 @@ image::./chain.png[]
 
 When you want to complete a statement and, at the same time, require to make use of a static import statement, use code completion. By pressing  kbd:[Ctrl+Space]  twice, all available static import statements will be shown.
 
-image::./static.png[]
+image::kb/docs/java/static.png[]
 
 If you would like static import statements to be added automatically, select:
 
@@ -317,7 +322,7 @@ then from the *Language: Java*,  *Category: Imports* pane select the *Prefer Sta
 
 Time can be wasted when code completion returns classes that you seldom or never use. When you invoke code completion, a lightbulb within the returned items indicates that you can exclude them from the code completion list.
 
-image::./exclude2-small.png[]
+image::kb/docs/java/exclude2-small.png[]
 
 You can add or modify your exclusion rules either when "Configure excludes" is selected from the code completion list or, by selecting:
 
@@ -329,7 +334,7 @@ You can add or modify your exclusion rules either when "Configure excludes" is s
 
 then in the *Language: Java* pane, make your changes to the *Packages/classes:* list.
 
-image::./exclude.png[]
+image::kb/docs/java/exclude.png[]
 
 //==============================================================================
 
@@ -337,7 +342,7 @@ image::./exclude.png[]
 
 When you are using the Java Persistence Annotation specification (JPA), you can complete SQL expressions in  `@NamedQuery`  statements via code completion.
 
-image::./jpacompletion.png[]
+image::kb/docs/java/jpacompletion.png[]
 
 In the code completion window, icons are used to distinguish different members of the Java language. See <<Appendix A: Icons in the Code Completion Window>> at the end of this document to see the meanings of these icons.
 
@@ -349,9 +354,9 @@ In the code completion window, icons are used to distinguish different members o
 
 There are several ways of working with import statements. The editor constantly checks your code for the correct use of import statements and immediately warns you when non-imported classes or unused import statements are detected.
 
-image::./imports3.png[]
+image::kb/docs/java/imports3.png[]
 
-When a non-imported class is found, the image:./bulberror1.png[] error mark appears in the IDE's left-hand margin (also called the _glyph margin_). Click the error mark and choose whether to: add the missing import, create this class in the current package or, create this class in the current class.
+When a non-imported class is found, the image:kb/docs/java/bulberror1.png[] error mark appears in the IDE's left-hand margin (also called the _glyph margin_). Click the error mark and choose whether to: add the missing import, create this class in the current package or, create this class in the current class.
 
 While you are typing, press:
 
@@ -371,13 +376,13 @@ To add an import only for the type at which the cursor is located, press:
 |*macOS*(TM) |kbd:[Ctrl+Shift+I]
 |===
 
-image::./imports2.png[]
+image::kb/docs/java/imports2.png[]
 
 When you select a class from the code completion window, the editor automatically adds an import statement for it, so you do not need to worry about this.
 
-image::./imports.png[]
+image::kb/docs/java/imports.png[]
 
-If there are unused import statements in your code, select the image:./bulberror.png[] warning mark in the editor left-hand margin. Then choose either: to remove one unused import or, all unused imports.
+If there are unused import statements in your code, select the image:kb/docs/java/bulberror.png[] warning mark in the editor left-hand margin. Then choose either: to remove one unused import or, all unused imports.
 
 In the editor, unused imports are underlined in yellow. See the <<Semantic Coloring and Highlighting>> section for details.
 
@@ -419,7 +424,7 @@ or, choose *Source > Insert Code...* from the menu bar or, right-click and selec
 
 In the example below, we are going to generate a constructor for the  `ColorChooser`  class. Select Constructor from the Code Generation box, and specify the fields that will be initialized by the constructor. The editor will generate the constructor with the specified parameters.
 
-image::./codegeneration1.png[]
+image::kb/docs/java/codegeneration1.png[]
 
 //==============================================================================
 
@@ -427,11 +432,11 @@ image::./codegeneration1.png[]
 
 You can also generate code from the code completion window. In this example, we use the same code fragment as above to demonstrate code generation from the code completion window.
 
-image::./codegeneration2.png[]
+image::kb/docs/java/codegeneration2.png[]
 
 Press kbd:[Ctrl+Space] to open the code completion window and choose the following item:  `ColorChooser(String name, int number) - generate`. The editor generates a constructor with the specified parameters.
 
-In the code completion window, the constructors that can be generated automatically  are marked with the image:./newconstructor.png[] icon and the " `generate` " note.
+In the code completion window, the constructors that can be generated automatically  are marked with the image:kb/docs/java/newconstructor.png[] icon and the " `generate` " note.
 
 For more explanation of the icons and their meanings, see <<Appendix A: Icons in the Code Completion Window>>.
 
@@ -449,9 +454,9 @@ A Code Template is a predefined piece of code that has an abbreviation associate
 
 === Using Code Templates
 
-Code templates are marked with the image:./codetemplateicon.png[] icon in the code completion window.
+Code templates are marked with the image:kb/docs/java/codetemplateicon.png[] icon in the code completion window.
 
-image::./livetemplate.png[]
+image::kb/docs/java/livetemplate.png[]
 
 You can use code templates by selecting one from the code completion window or,
 by typing its abbreviation, found by selecting:
@@ -509,7 +514,7 @@ To display Javadoc, place the cursor on an element in your code and, press:
 
 or choose *Source > Show Documentation* from the menu bar. The Javadoc for this element is displayed in a popup window.
 
-image::./javadoc.png[]
+image::kb/docs/java/javadoc.png[]
 
 From the menu bar, select *Window > IDE Tools > Javadoc Documentation* to open the Javadoc window, in which the documentation is refreshed automatically for the location of your cursor.
 
@@ -519,7 +524,7 @@ From the menu bar, select *Window > IDE Tools > Javadoc Documentation* to open t
 
 Place the cursor above a method or a class that has no Javadoc, type  `"/**` ", and press  kbd:[Enter] .
 
-image::./javadoc1.png[]
+image::kb/docs/java/javadoc1.png[]
 
 The IDE creates a skeletal structure for a Javadoc comment filled with some content. If you have a Javadoc window open, you will see the changes immediately while you are typing.
 
@@ -527,9 +532,9 @@ The IDE creates a skeletal structure for a Javadoc comment filled with some cont
 
 === Using Javadoc Hints
 
-The editor displays hints when Javadoc is missing or Javadoc tags are needed by displaying the bulb icon  image:./bulb.gif[] in the left-hand margin, click the bulb icon to fix Javadoc errors.
+The editor displays hints when Javadoc is missing or Javadoc tags are needed by displaying the bulb icon  image:kb/docs/java/bulb.gif[] in the left-hand margin, click the bulb icon to fix Javadoc errors.
 
-image::./javadoc2.png[]
+image::kb/docs/java/javadoc2.png[]
 
 If you do not want to see the hints related to Javadoc, select:
 
@@ -547,7 +552,7 @@ and clear the *JavaDoc* checkbox in the list of hints that are displayed.
 
 Code completion is available for Javadoc tags.
 
-image::./javadoc3.png[]
+image::kb/docs/java/javadoc3.png[]
 
 Type the `@` symbol and wait until the code completion window opens, depending on your settings, you may need to press  kbd:[Ctrl+Space]. Then select the required tag from the drop-down list.
 
@@ -557,7 +562,7 @@ Type the `@` symbol and wait until the code completion window opens, depending o
 
 To generate Javadoc for a project, select *Run > Generate Javadoc* from the menu bar or,  right-click the project in the *Projects* window and choose Generate Javadoc. The IDE will generate the Javadoc and open it in a separate browser window.
 
-image::./generate.png[]
+image::kb/docs/java/generate.png[]
 
 In the example above, you can see a sample output of the Generate Javadoc command. If there are some warnings or errors, they are also displayed in this window.
 
@@ -569,7 +574,7 @@ To customize Javadoc formatting options, right-click the project in the *Project
 
 To identify the places in your code that need Javadoc comments and quickly insert these comments, you can use the Javadoc Analyzer tool available in the Java editor.
 
-image::./analyze-javadoc.png[]
+image::kb/docs/java/analyze-javadoc.png[]
 
 To analyze and fix Javadoc comments:
 
@@ -601,9 +606,9 @@ Hints are displayed automatically by default. However, if you want to view all h
 |*macOS*(TM) |kbd:[Ctrl+Enter]
 |===
 
-For example, try typing `myBoolean=true`. The editor detects that this variable is not defined. Click the hint icon image:./bulberror1.png[] and, see the editor suggests that you create a field, a method parameter, or a local variable.
+For example, try typing `myBoolean=true`. The editor detects that this variable is not defined. Click the hint icon image:kb/docs/java/bulberror1.png[] and, see the editor suggests that you create a field, a method parameter, or a local variable.
 
-image::./quickfixes.png[]
+image::kb/docs/java/quickfixes.png[]
 
 //==============================================================================
 
@@ -611,7 +616,7 @@ image::./quickfixes.png[]
 
 You can easily surround pieces of your code with various statements, such as  `for`,  `while`,  `if`,  `try/catch`, etc.
 
-Select a block in your code that you want to surround with a statement and click the bulb icon image:./bulb.gif[] in the left-hand margin or, choose *Source > Fix Code* from the menu bar or, press:
+Select a block in your code that you want to surround with a statement and click the bulb icon image:kb/docs/java/bulb.gif[] in the left-hand margin or, choose *Source > Fix Code* from the menu bar or, press:
 
 
 [cols="1,4"]
@@ -622,7 +627,7 @@ Select a block in your code that you want to surround with a statement and click
 
 The editor displays a pop-up list of suggestions from which you can select the statement you need.
 
-image::./surroundwith.png[]
+image::kb/docs/java/surroundwith.png[]
 
 //==============================================================================
 
@@ -703,7 +708,7 @@ Open the *Options/Preferences...* window and click *Import*. Specify the locatio
 
 In the figure below, you can see an example of a coloring scheme. Depending upon your custom settings, your colors might look differently from those shown.
 
-image::./coloring.png[]
+image::kb/docs/java/coloring.png[]
 
 * Distinct colors are used for: keywords (blue), variables and fields (green), and parameters (orange).
 
@@ -717,7 +722,7 @@ image::./coloring.png[]
 
 === Using Highlights
 
-image::./highlightelement.png[]
+image::kb/docs/java/highlightelement.png[]
 
 The IDE highlights usages of the same element, matching braces, method exit points, and exception throwing points.
 
@@ -783,7 +788,7 @@ If you know the name of the type (class, interface, annotation or enum), file, o
 
 or, select *Navigate > Go to Type...* from the menu bar.
 
-image::./gototype.png[]
+image::kb/docs/java/gototype.png[]
 
 *Go to file*, press:
 
@@ -807,7 +812,7 @@ or, select *Navigate > Go to Symbol...* from the menu bar.
 
 *Go to line*, press kbd:[Ctrl+G] or, select *Navigate > Go to Line* from the menu bar, and enter the line number to which you want to jump.
 
-image::./gotoline.png[]
+image::kb/docs/java/gotoline.png[]
 
 //==============================================================================
 
@@ -815,7 +820,7 @@ image::./gotoline.png[]
 
 To quickly return to your last edit, even if it is in another file or project, press kbd:[Ctrl+Q] or use the button in the top left corner of the Java editor toolbar. The last edited document opens, and the cursor is at the position, which you edited last.
 
-image::./jumplastedit.png[]
+image::kb/docs/java/jumplastedit.png[]
 
 //==============================================================================
 
@@ -823,7 +828,7 @@ image::./jumplastedit.png[]
 
 Breadcrumbs are displayed along the bottom of the editor, the position of the cursor in the document determines the breadcrumbs displayed. To activate breadcrumbs, select *View > Show Breadcrumbs* from the menu bar.
 
-image::./breadcrumbs.png[]
+image::kb/docs/java/breadcrumbs.png[]
 
 Click on an arrow associated with a breadcrumb to see all available class members and select to jump to them.
 
@@ -855,17 +860,17 @@ or, select *Navigate > Forward*, from the menu bar.
 
 Alternatively, you can press the corresponding buttons on the editor toolbar, see the figure below. The file opens and the cursor is placed at the location of your last edit. When you click one of these buttons, you can expand the list of the recent files and click to navigate to any of them.
 
-image::./jumprecentfile.png[]
+image::kb/docs/java/jumprecentfile.png[]
 
 * You can toggle between files and windows by pressing kbd:[Ctrl+Tab]. After you press kbd:[Ctrl+Tab], a pop-up window opens containg two panes: the left-hand pane shows a list of all open files and, the right-hand pane shows a list of all windows. Hold down the kbd:[Ctrl] key then press and release the kbd:[Tab] key to move forward  through the list. Hold down kbd:[Ctrl+Shift] then press and release the kbd:[Tab] key to move backward through the list. When your required file is highlighted release all keys to switch to that file.
 
 NOTE: If you continue pressing the kbd:[Tab] key you will also cycle through the windows list as well.
 
-image::./togglefile.png[]
+image::kb/docs/java/togglefile.png[]
 
 * You can show all open documents by pressing, kbd:[Shift+F4] or, select *Windows > Documents...* from the menu bar. After you have selected the *Documents* window, all open files are shown. Order the files based on your needs and choose the file you would like to open.
 
-image::./shift-f4.png[]
+image::kb/docs/java/shift-f4.png[]
 
 //==============================================================================
 
@@ -885,7 +890,7 @@ Alternatively, you can select *View > Show Editor Toolbar* from the menu bar. Th
 
 A bookmarked line is shown with a small blue icon in the left margin, as shown below.
 
-image::./bookmark.png[]
+image::kb/docs/java/bookmark.png[]
 
 To remove the bookmark, press the key combination again.
 
@@ -909,7 +914,7 @@ To go to the previous bookmark, press:
 
 Automatically a pop-up list of bookmarks appears containing all the bookmarks visited in your current session, including those files that are not currently open in the editor.
 
-image::./bookmark2.png[]
+image::kb/docs/java/bookmark2.png[]
 
 You can move forward or backward by repeatedly releasing and pressing the kbd:[.] key or kbd:[,] key as appropriate to highlight your chosen bookmark. Then when you release the whole key combination the cursor is moved to the bookmark in your code.
 
@@ -917,7 +922,7 @@ If the file is not the topmost, the editor will switch to that file and move the
 
 If you select the *Bookmarks* item in the pop-up list, as shown in the figure above or, when you select *Window > IDE Tools > Bookmarks* from the menu bar, the *Bookmarks* window opens.
 
-image::./bookmark3-small.png[]
+image::kb/docs/java/bookmark3-small.png[]
 
 The *Bookmarks* window contains two panes: one showing all visited bookmarks in the current session and, the other a view of the code related to the currently highlighted bookmark. You cannot edit anything in this window, it is there so that you can see if the correct bookmark has been selected in the bookmarks pane.
 
@@ -929,7 +934,7 @@ In the bookmarks pane you can select either a *Tree View* or, a *Table View*. In
 
 The Navigator window provides structured views of the file you are working with and lets you quickly navigate between different parts of the file.
 
-image::./navigatorwindow.png[]
+image::kb/docs/java/navigatorwindow.png[]
 
 To open the Navigator window, choose *Window > Navigator* or, press:
 
@@ -959,55 +964,55 @@ In the Navigator window, you can do the following:
 
 |Icon |Meaning |Variants | Meaning
 
-|image:./annotation_type.png[] |Annotation type |  |
+|image:kb/docs/java/annotation_type.png[] |Annotation type |  |
 
-|image:./class_16.png[] |Class |  |
+|image:kb/docs/java/class_16.png[] |Class |  |
 
-|image:./package.png[] |Package |  |
+|image:kb/docs/java/package.png[] |Package |  |
 
-|image:./enum.png[] |Enum type |  |
+|image:kb/docs/java/enum.png[] |Enum type |  |
 
-|image:./code_template.png[] |Code Template |  |
+|image:kb/docs/java/code_template.png[] |Code Template |  |
 
-|image:./constructor_16.png[] |Constructor |image:./new_constructor_16.png[] |New constructor (generate)
+|image:kb/docs/java/constructor_16.png[] |Constructor |image:kb/docs/java/new_constructor_16.png[] |New constructor (generate)
 
-|  |  |image:./constructor_protected_16.png[] |Protected constructor
+|  |  |image:kb/docs/java/constructor_protected_16.png[] |Protected constructor
 
-|  |  |image:./constructor_private_16.png[] |Private constructor
+|  |  |image:kb/docs/java/constructor_private_16.png[] |Private constructor
 
-|  |  |image:./constructor_package_private_16.png[] |Package private constructor
+|  |  |image:kb/docs/java/constructor_package_private_16.png[] |Package private constructor
 
-|image:./field_16.png[] |Field |image:./field_protected_16.png[] |Protected field
+|image:kb/docs/java/field_16.png[] |Field |image:kb/docs/java/field_protected_16.png[] |Protected field
 
-|  |  |image:./field_private_16.png[] |Private field
+|  |  |image:kb/docs/java/field_private_16.png[] |Private field
 
-|  |  |image:./field_package_private_16.png[] |Package private field
+|  |  |image:kb/docs/java/field_package_private_16.png[] |Package private field
 
-|image:./field_static_16.png[] |Static field |image:./field_static_protected_16.png[] |Protected static field
+|image:kb/docs/java/field_static_16.png[] |Static field |image:kb/docs/java/field_static_protected_16.png[] |Protected static field
 
-|  |  |image:./field_static_private_16.png[] |Private static field
+|  |  |image:kb/docs/java/field_static_private_16.png[] |Private static field
 
-|  |  |image:./field_static_package_private_16.png[] |Package private static field
+|  |  |image:kb/docs/java/field_static_package_private_16.png[] |Package private static field
 
-|image:./interface.png[] |Interface |  |
+|image:kb/docs/java/interface.png[] |Interface |  |
 
-|image:./javakw_16.png[] |Java keyword |  |
+|image:kb/docs/java/javakw_16.png[] |Java keyword |  |
 
-|image:./method_16.png[] |Method |image:./method_protected_16.png[] |Protected method
+|image:kb/docs/java/method_16.png[] |Method |image:kb/docs/java/method_protected_16.png[] |Protected method
 
-|  |  |image:./method_private_16.png[] |Private method
+|  |  |image:kb/docs/java/method_private_16.png[] |Private method
 
-|  |  |image:./method_package_private_16.png[] |Package private method
+|  |  |image:kb/docs/java/method_package_private_16.png[] |Package private method
 
-|image:./method_static_16.png[] |Static method |image:./method_static_protected_16.png[] |Protected static method
+|image:kb/docs/java/method_static_16.png[] |Static method |image:kb/docs/java/method_static_protected_16.png[] |Protected static method
 
-|  |  |image:./method_static_private_16.png[] |Private static method
+|  |  |image:kb/docs/java/method_static_private_16.png[] |Private static method
 
-|  |  |image:./method_static_package_private_16.png[] |Package private static method
+|  |  |image:kb/docs/java/method_static_package_private_16.png[] |Package private static method
 
-|image:./localVariable.png[] |Local variable |  |
+|image:kb/docs/java/localVariable.png[] |Local variable |  |
 
-|image:./attribute_16.png[] |Attribute |  |
+|image:kb/docs/java/attribute_16.png[] |Attribute |  |
 |===
 
 //=============================================================== Appendix (End)

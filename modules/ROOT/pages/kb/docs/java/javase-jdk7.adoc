@@ -29,12 +29,16 @@
 :description: Overview of JDK 7 Support in NetBeans IDE - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Overview of JDK 7 Support in NetBeans IDE
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 The NetBeans IDE supports Java 7 language features, such as the diamond operator, strings in switch, multicatch, etc. When you use these constructs in your code, the IDE recognizes them, offers correct classes in code completion, correctly highlights errors, and lets you automatically fix syntax. Thus, the NetBeans IDE helps you write code that is compatible with link:http://docs.oracle.com/javase/specs/jls/se7/html/index.html[+the Java Language Specification, Java SE 7 Edition+].
 
 In this tutorial, you learn how the IDE handles Java 7 language constructs.
 
 
-image::./netbeans-stamp-80-74.png[title="Content on this page applies to NetBeans IDE 7.4 and 8.0"]
+image::kb/docs/java/netbeans-stamp-80-74.png[title="Content on this page applies to NetBeans IDE 7.4 and 8.0"]
 
 
 *To complete this tutorial, you need the software and resources listed in the following table.*
@@ -58,7 +62,7 @@ To check JDK 7 is registered in the NetBeans IDE:
 [.feature]
 --
 
-image::./platform-small.png[role="left", xref="image$./platform.png"]
+image::kb/docs/java/platform-small.png[role="left", xref="image$./platform.png"]
 
 --
 
@@ -80,7 +84,7 @@ To check your project is configured to use the registered JDK for compilation, r
 [.feature]
 --
 
-image::./props-libs-small.png[role="left", xref="image$./props-libs.png"]
+image::kb/docs/java/props-libs-small.png[role="left", xref="image$./props-libs.png"]
 
 --
 
@@ -91,7 +95,7 @@ image::./props-libs-small.png[role="left", xref="image$./props-libs.png"]
 [.feature]
 --
 
-image::./props-sources-small.png[role="left", xref="image$./props-sources.png"]
+image::kb/docs/java/props-sources-small.png[role="left", xref="image$./props-sources.png"]
 
 --
 
@@ -140,7 +144,7 @@ If the pasted code is formatted incorrectly in the editor, press Alt-Shift-F to 
 . In the Projects window, right-click the project's node and choose Run File. You will see the output of the application, which is the RGB code for the red color. 
 You can see that the build is successful and the application works when the target platform and source format is JDK 7.
 
-image::./output.png[]
+image::kb/docs/java/output.png[]
 
 
 
@@ -151,7 +155,7 @@ You can immediately see that the JDK6 parser does not recognize the syntax. The 
 [.feature]
 --
 
-image::./error-small.png[role="left", xref="image$./error.png"]
+image::kb/docs/java/error-small.png[role="left", xref="image$./error.png"]
 
 --
 
@@ -191,7 +195,7 @@ With JDK 7 being the Source/Binary Format, the IDE recognizes such cases and off
 [.feature]
 --
 
-image::./convert-small.png[role="left", xref="image$./convert.png"]
+image::kb/docs/java/convert-small.png[role="left", xref="image$./convert.png"]
 
 --
 
@@ -270,7 +274,7 @@ public class SwitchTest {
 [.feature]
 --
 
-image::./converted-small.png[role="left", xref="image$./converted.png"]
+image::kb/docs/java/converted-small.png[role="left", xref="image$./converted.png"]
 
 --
 

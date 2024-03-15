@@ -29,6 +29,10 @@
 :description: Lesson 5: Adding Security. Implementing Application User Logon - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Lesson 5: Adding Security. Implementing Application User Logon
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 In this lesson you implement the logon functionality for a wisher. This affects the following files:
 
 *  `index.php` 
@@ -277,7 +281,7 @@ To check that the logon functionality works correctly on the  `index.php`  front
 2. On the  `index.php`  page, enter Tom in the Username edit box and Tim in the Password edit box.
 3. Press Edit My Wish List. An error message is displayed (Note that browser window below is reduced to 600px width, which adds some line breaks): 
 
-image::./incorrectNamePasswordIndex.png[]
+image::kb/docs/php/incorrectNamePasswordIndex.png[]
 
 
 
@@ -286,7 +290,7 @@ image::./incorrectNamePasswordIndex.png[]
 
 . Press Edit My Wish list. The editWishList.php page is displayed: 
 
-image::./SuccessfulLogonOnIndexRedirectToEditWishList.png[]
+image::kb/docs/php/SuccessfulLogonOnIndexRedirectToEditWishList.png[]
 
 [[application_source_code_after_the_current_lesson_is_completed]]
 == Application Source Code after the Current Lesson Is Completed

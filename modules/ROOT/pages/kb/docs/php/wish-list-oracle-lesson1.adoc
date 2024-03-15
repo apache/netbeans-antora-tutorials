@@ -29,6 +29,9 @@
 :description: Lesson 1b: Creating Oracle Database Tables - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Lesson 1b: Creating Oracle Database Tables
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
 
 This lesson describes the last preliminary step in developing the Wish List application, that of creating a sample database with test data. To complete the steps in this tutorial, you will need a database in which to store data of wishers. With the NetBeans IDE you can perform all these activities through the IDE interface. 
 Before starting, see the tutorial requirements described in xref:./wish-list-tutorial-main-page.adoc[+Creating a CRUD Application with PHP - Main page+].
@@ -83,7 +86,7 @@ To arrange and store all the necessary data you need two tables:
 * A wishers table for storing names and passwords of registered users
 * A wishes table for storing descriptions of wishes
 
-image::./wishlist-db.png[]
+image::kb/docs/php/wishlist-db.png[]
 
 The wishers table contains three fields:
 
@@ -129,7 +132,7 @@ create table wishes (id number not null, wisher_id number not null,description v
 
 . Verify that the new tables are added to the database. If you are using NetBeans IDE to connect to the database, go to the Services window to the jdbc:oracle:thin:@localhost:1521:XE [phpuser on PHPUSER] connection node. The new tables are listed in the Tables node. (If they do not appear, right-click the connection and choose Refresh.) 
 
-image::./tables-in-services-window.png[]
+image::kb/docs/php/tables-in-services-window.png[]
 
 Note: You can download a set of SQL commands for creating the Oracle Database tables link:https://netbeans.org/projects/www/downloads/download/php%252FSQL-files-for-Oracle.zip[+here+].
 
@@ -224,7 +227,7 @@ commit;
 
 . Verify that you added test data. If you are using NetBeans IDE to view the test data, click the right mouse button on the relevant table and from the context menu choose View Data. 
 
-image::./view-test-data.png[]
+image::kb/docs/php/view-test-data.png[]
 
 To get some general understanding of database principles and design patterns, check the following tutorial: link:http://www.tekstenuitleg.net/en/articles/database_design_tutorial/1[+http://www.tekstenuitleg.net/en/articles/database_design_tutorial/1+].
 

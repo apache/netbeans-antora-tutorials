@@ -29,6 +29,10 @@
 :description: Internationalizing a GUI Form - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Internationalizing a GUI Form
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 The following tutorial takes you through some of the basic steps of internationalization in the NetBeans IDE. We will set up internationalization for one form and later on design that form. Then we internationalize the whole project, which contains several forms in a few different packages. You can internationalize applications either by specifying automatic internationalization or by using a special wizard.
 
 == Principle of Internationalization
@@ -54,20 +58,20 @@ In this exercise we will open the demo Java application project, which contains 
 2. Choose File > Open Project, navigate to the  ``InternationalizeDemo``  project that you extracted in the last step, and click Open. The project folder might be in a containing folder that is also called  ``InternationalizeDemo`` .
 3. Expand Source Packages > Demo and double-click  ``FindDialog.java`` . The sample form opens in the GUI Builder.
 
-image::./finddialog_ai18n.png[]
+image::kb/docs/java/finddialog_ai18n.png[]
 
 
 === Switch Automatic Internationalization On
 
 1. Select the root node in the Navigator Window (named  ``Form FindDialog`` ).
 
-image::./navigator.png[]
+image::kb/docs/java/navigator.png[]
 
 
 
 . In the Properties window, select the checkbox in the Automatic Internationalization property.
 
-image::./properties.png[]
+image::kb/docs/java/properties.png[]
 
 
 
@@ -75,7 +79,7 @@ image::./properties.png[]
 
 If the checkbox is selected, the IDE creates the  ``Bundle.properties``  file in the  ``demo``  package as it is set in the  ``Properties Bundle File``  property.
 
-image::./bundle_new.png[]
+image::kb/docs/java/bundle_new.png[]
 
 If you need to have the  ``Bundle.properties``  file in a different location, you can click the ellipsis (...) button to the right of the Properties Bundle File and choose a location or directly type the path in the property's text field.
 
@@ -114,7 +118,7 @@ Repeat the previous steps for all the components so that the form looks like the
 [.feature]
 --
 
-image::./finddialog_new_small.png[role="left", xref="image$./finddialog_new.png"]
+image::kb/docs/java/finddialog_new_small.png[role="left", xref="image$./finddialog_new.png"]
 
 --
 
@@ -136,7 +140,7 @@ To make the components the same width, complete the steps below:
 
 The new locale appears below the  ``Bundle.properties``  node, as shown below:
 
-image::./addlocale_new.png[]
+image::kb/docs/java/addlocale_new.png[]
 
 
 
@@ -148,7 +152,7 @@ image::./addlocale_new.png[]
 [.feature]
 --
 
-image::./bundles_new_small.png[role="left", xref="image$./bundles_new.png"]
+image::kb/docs/java/bundles_new_small.png[role="left", xref="image$./bundles_new.png"]
 
 --
 
@@ -169,7 +173,7 @@ The form is reopened and the Spanish locale is loaded in in the design, as shown
 [.feature]
 --
 
-image::./finddialog_es_new_small.png[role="left", xref="image$./finddialog_es_new.png"]
+image::kb/docs/java/finddialog_es_new_small.png[role="left", xref="image$./finddialog_es_new.png"]
 
 --
 
@@ -183,7 +187,7 @@ image::./finddialog_es_new_small.png[role="left", xref="image$./finddialog_es_ne
 [.feature]
 --
 
-image::./prjproperties_small.png[role="left", xref="image$./prjproperties.png"]
+image::kb/docs/java/prjproperties_small.png[role="left", xref="image$./prjproperties.png"]
 
 --
 
@@ -199,7 +203,7 @@ The IDE runs the  ``FindDialog``  dialog box in the Spanish locale like shown be
 [.feature]
 --
 
-image::./run_small.png[role="left", xref="image$./run.png"]
+image::kb/docs/java/run_small.png[role="left", xref="image$./run.png"]
 
 --
 
@@ -216,7 +220,7 @@ Generally, we have several files in the default locale and we are asked to adapt
 3. Enter  ``GUIFormExamples``  in the Project Name field and specify the project location (e.g.  ``/space/projects`` ).
 4. Click Finish.
 
-image::./formexamples.png[]
+image::kb/docs/java/formexamples.png[]
 
 
 === Preparing a Properties File
@@ -232,7 +236,7 @@ The IDE creates the  ``ContactEditor.properties``  file and opens it in the Sour
 
 Repeat previous steps to create another  ``Antenna.properties``  file.
 
-image::./ceprjprops.png[]
+image::kb/docs/java/ceprjprops.png[]
 
 
 === Invoking The Internationalization Wizard
@@ -247,7 +251,7 @@ The sources files appear in the first page of the Wizard as shown below:
 [.feature]
 --
 
-image::./i18nwizardone_small.png[role="left", xref="image$./i18nwizardone.png"]
+image::kb/docs/java/i18nwizardone_small.png[role="left", xref="image$./i18nwizardone.png"]
 
 --
 
@@ -264,7 +268,7 @@ image::./i18nwizardone_small.png[role="left", xref="image$./i18nwizardone.png"]
 [.feature]
 --
 
-image::./i18nwizardtwo_small.png[role="left", xref="image$./i18nwizardtwo.png"]
+image::kb/docs/java/i18nwizardtwo_small.png[role="left", xref="image$./i18nwizardtwo.png"]
 
 --
 
@@ -281,7 +285,7 @@ image::./i18nwizardtwo_small.png[role="left", xref="image$./i18nwizardtwo.png"]
 [.feature]
 --
 
-image::./i18nwizardthree_small.png[role="left", xref="image$./i18nwizardthree.png"]
+image::kb/docs/java/i18nwizardthree_small.png[role="left", xref="image$./i18nwizardthree.png"]
 
 --
 
@@ -323,7 +327,7 @@ If a hard-coded string does not need to be replaced, click the Skip button.
 [.feature]
 --
 
-image::./i18ndialog_small.png[role="left", xref="image$./i18ndialog.png"]
+image::kb/docs/java/i18ndialog_small.png[role="left", xref="image$./i18ndialog.png"]
 
 --
 
@@ -390,7 +394,7 @@ The Bundle Name field of the Insert Internationalized String dialog box shows  `
 
 . Type  ``Start``  in the Key drop-down box and  ``Start Find Dialog``  in the Value field. Then click OK.
 
-image::./insi18nstring.png[]
+image::kb/docs/java/insi18nstring.png[]
 
 
 

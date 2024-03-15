@@ -29,6 +29,10 @@
 :description: Using Data Bindings to Connect Components - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Using Data Bindings to Connect Components
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This document provides a step-by-step set of instructions guiding you through the process of connecting components to each other via data bindings, as provided by link:http://knockoutjs.com/[+Knockout.js+], which is the data binding library included in the link:http://oraclejet.org[+Oracle JavaScript Extension Toolkit (JET)+]. JET empowers developers by providing a modular toolkit based on modern JavaScript, CSS3, and HTML5 design and development principles.
 
 
@@ -38,7 +42,7 @@ In this section, you copy/paste Oracle JET components into your JET applications
 
 1. As described in xref:./ojet-cookbook.adoc[+Using the Oracle JET Cookbook+], you can copy/paste Oracle JET components from the Oracle JET Cookbook into your Oracle JET application. At this stage, you should have the link:http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=barChart&demo=default[+Bar Chart+] component in your application, as shown below:
 
-image::./cookbook-3.png[]
+image::kb/docs/webclient/cookbook-3.png[]
 
 
 [start=2]
@@ -88,7 +92,7 @@ Make sure to include the reference to the Select component at the end of the  ``
 . 
 In the browser, check that the application looks something like the below, that is, you should see a Bar Chart component and a Select component:
 
-image::./databinding-001.png[]
+image::kb/docs/webclient/databinding-001.png[]
 
 In the next section, you're going to bind the two components together.
 
@@ -111,7 +115,7 @@ In this section, you connect the components together enabling the user to select
 [start=4]
 . In the browser, switch to a different chart type in the Select component and notice that the Bart Chart component automatically updates itself:
 
-image::./databinding-002.png[]
+image::kb/docs/webclient/databinding-002.png[]
 
 You have now connected two Oracle JET components together. When the user makes a choice in the Select component, the Bar Chart automatically reflects the current choice.
 
@@ -155,7 +159,7 @@ In this section, you're on your own! As an exercise, instead of step-by-step ins
 
 Let's extend the scenario above and include  ``ojButtons``  for increasing and decreasing the value:
 
-image::./ojgauge.png[]
+image::kb/docs/webclient/ojgauge.png[]
 
 The HTML for the above is as follows, take note of the  ``click``  binding:
 

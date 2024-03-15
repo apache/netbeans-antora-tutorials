@@ -29,6 +29,10 @@
 :description: Using the Oracle JET Cookbook - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Using the Oracle JET Cookbook
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This document provides a step-by-step set of instructions guiding you through the process of getting started with the link:http://oraclejet.org[+Oracle JavaScript Extension Toolkit (JET)+]. JET empowers developers by providing a modular toolkit based on modern JavaScript, CSS3, and HTML5 design and development principles.
 
 
@@ -38,7 +42,7 @@ In this section, you learn how easy it is to use the Oracle JET Cookbook, which 
 
 1. Go to the on-line link:http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html[+Oracle JET Cookbook+].
 
-image::./cookbook-1.png[]
+image::kb/docs/webclient/cookbook-1.png[]
 
 
 [start=2]
@@ -48,7 +52,7 @@ image::./cookbook-1.png[]
 . 
 For example, let's take a look at the link:http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=barChart&demo=default[+Bar Chart+] component.
 
-image::./cookbook-2.png[]
+image::kb/docs/webclient/cookbook-2.png[]
 
 Notice that for each recipe in the Oracle JET Cookbook, a lot of explanations and documentation is included, together with the JavaScript and HTML that define the component.
 
@@ -61,13 +65,13 @@ In this section, you learn how you can customize recipes live in the Oracle JET 
 
 1. Let's imagine we'd like the chart to be incorporated into our application, though not the toolbar that is beneath it in the recipe in the Oracle JET Cookbook:
 
-image::./cookbook-8.png[]
+image::kb/docs/webclient/cookbook-8.png[]
 
 
 [start=2]
 . To achieve this, go to the HTML tab and use the mouse to select the div with id set to "myToolbar", as shown below:
 
-image::./cookbook-4.png[]
+image::kb/docs/webclient/cookbook-4.png[]
 
 Press the Delete key or right-click and delete the selected content.
 
@@ -75,13 +79,13 @@ Press the Delete key or right-click and delete the selected content.
 [start=3]
 . Click Apply, top right above the code:
 
-image::./cookbook-7.png[]
+image::kb/docs/webclient/cookbook-7.png[]
 
 
 [start=4]
 . The browser refreshes and the toolbar is no longer there:
 
-image::./cookbook-9.png[]
+image::kb/docs/webclient/cookbook-9.png[]
 
 
 [start=5]
@@ -100,11 +104,11 @@ In this section, you learn how easy it is to use the Oracle JET Cookbook, which 
 [start=2]
 . In NetBeans IDE, notice that there is component-specific code-completion, and documentation. Press Ctrl-Space within  ``ojChart``  to see it:
 
-image::./cookbook-5.png[]
+image::kb/docs/webclient/cookbook-5.png[]
 
 Similarly, press Ctrl-Space on a property and you will see code completion, and documentation, too:
 
-image::./cookbook-6.png[]
+image::kb/docs/webclient/cookbook-6.png[]
 
 Notice that the properties shown in the code completion are context-sensitive to the currently used Oracle JET component. For example, instead of  ``ojChart``  above, use a different component and then press Ctrl-Space over the properties and you will see that only properties that are applicable to the currently used Oracle JET component are shown.
 
@@ -172,7 +176,7 @@ Be careful not to copy everything in the JS tab in the Oracle JET Cookbook, beca
 . Run the application and you should see the following in the browser:
 
 
-image::./cookbook-3.png[]
+image::kb/docs/webclient/cookbook-3.png[]
 
 Notice that a tooltip is available as you hover over the chart and that, when you hover over the legend, the related area is highlighted in the chart.
 

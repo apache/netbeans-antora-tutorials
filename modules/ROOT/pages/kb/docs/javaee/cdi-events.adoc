@@ -29,6 +29,10 @@
 :description: Working with Events in CDI - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Working with Events in CDI
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 _Contributed by Andy Gibson_
 
 
@@ -83,7 +87,7 @@ In the previous tutorial, xref:./cdi-validate.adoc[+Applying @Alternative Beans 
 
 Using the application we've been building from the previous tutorials in the series, we don't require many changes to implement this. We can just provide another implementation of `ItemErrorHandler` (created in xref:./cdi-validate.adoc[+the previous tutorial+]), which raises an event each time it handles an item. We'll name this class `EventItemHandler`, inject it into the `ItemProcessor`, and use a `Notify` qualifier to select it for injection.
 
-image::./cdi-diagram-events.png[title="Use CDI injection to loosely couple classes in your application"]
+image::kb/docs/javaee/cdi-diagram-events.png[title="Use CDI injection to loosely couple classes in your application"]
 
 1. Begin by extracting the sample start project from the `cdiDemo3.zip` file (See the <<requiredSoftware,table listing required resources>> above.) Open the project in the IDE by choosing File > Open Project (Ctrl-Shift-O; ⌘-Shift-O on Mac), then selecting the project from its location on your computer.
 2. Create a class named `EventItemHandler`. Click the New File ( images:./new-file-btn.png[] ) button or press Ctrl-N (⌘-N on Mac) to open the File wizard.
@@ -112,11 +116,11 @@ We inject an instance of an `Event` where the event payload will be an `Item`. T
 
 . Fix all imports. Either right-click in the editor and choose Fix Imports, or press Ctrl-Shift-I (⌘-Shift-I on Mac). Be sure to select `javax.enterprise.event.Event` as the fully qualified name to the `Event` class. 
 
-image::./fix-all-imports.png[title="Right-click in the editor and choose Fix Imports to invoke the Fix Imports dialog"] 
+image::kb/docs/javaee/fix-all-imports.png[title="Right-click in the editor and choose Fix Imports to invoke the Fix Imports dialog"] 
 
 TIP: Press Ctrl-Space on `Event` to view the Javadoc definition of the class. The `fire()` method, used above, is also defined.# 
 
-image::./event-javadoc.png[title="Press Ctrl-Space to view Javadoc documentation on classes in the API"]
+image::kb/docs/javaee/event-javadoc.png[title="Press Ctrl-Space to view Javadoc documentation on classes in the API"]
 
 
 
@@ -195,7 +199,7 @@ public class ItemProcessor {
 
 . In the browser, click the '`Execute`' button, then return to the IDE and examine the server log in the Output window (Ctrl-4; ⌘-4 on Mac). Because the application that you have been building currently uses the `DefaultItemDao` to set up four `Item`s, then applies the `RelaxedItemValidator` on the `Item`s, you expect to see the `itemErrorHandler` fire twice. 
 
-image::./output-window.png[title="View the GlassFish server log displayed in Output window"] 
+image::kb/docs/javaee/output-window.png[title="View the GlassFish server log displayed in Output window"] 
 
 Currently though, we don't have anything observing the event. We can fix this by creating an _observer_ method using the `@Observes` annotation. This is the only thing needed to observe an event. To demonstrate, we can modify the `FileErrorReporter` (created in the xref:./cdi-validate.adoc[+previous tutorial+]) to respond to fired events by adding an observer method that calls its `handleItem()` method.
 
@@ -219,7 +223,7 @@ public class FileErrorReporter implements ItemErrorHandler {
 
 . Run the project (F6; fn-F6 on Mac) again, click the '`Execute`' button, then return to the IDE and examine the server log in the Output window. 
 
-image::./output-window2.png[title="View the GlassFish server log displayed in Output window"] 
+image::kb/docs/javaee/output-window2.png[title="View the GlassFish server log displayed in Output window"] 
 
 You see that the events are fired on the invalid objects as they were previously, but now the item information is being saved when each event is fired. You can also note that the lifecycle events are being observed, since a `FileErrorReporter` bean is created and closed for each fired event. (See xref:./cdi-validate.adoc[+Applying @Alternative Beans and Lifecycle Annotations+] for a discussion of lifecycle annotations, e.g., `@PostConstruct` and `@PreDestroy`.)
 
@@ -249,13 +253,13 @@ public class FileErrorReporter implements ItemErrorHandler { ... }
 ----
 [tips]#Press Ctrl-Space while you type in order to invoke the editor's code completion support. When choosing an item through code completion, any associated import statements are automatically added to the class.# 
 
-image::./code-completion.png[title="Press Ctrl-Space when typing to invoke code completion suggestions"]
+image::kb/docs/javaee/code-completion.png[title="Press Ctrl-Space when typing to invoke code completion suggestions"]
 
 
 
 . Run the project (F6; fn-F6 on Mac) again, click the '`Execute`' button, then return to the IDE and examine the server log in the Output window. 
 
-image::./output-window3.png[title="View the GlassFish server log displayed in Output window"] 
+image::kb/docs/javaee/output-window3.png[title="View the GlassFish server log displayed in Output window"] 
 
 Note that the `FileErrorReporter` bean is only created when the first event is fired, and is closed after the final event has been fired.
 

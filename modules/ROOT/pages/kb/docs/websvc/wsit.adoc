@@ -29,10 +29,14 @@
 :description: Advanced Web Service Interoperability - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Advanced Web Service Interoperability
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 Advanced Web Service Interoperability (WSIT), also referred to as Web Service "Quality of Service", encompasses components that enable interoperability between Java web services and .Net web services. This document demonstrates some of the support in the IDE for configuring a web service and client that use WSIT. For more information on using WSIT, see link:http://docs.oracle.com/cd/E19159-01/820-1072/ahibn/index.html[+Chapter 3 WSIT Example Using a Web Container and NetBeans IDE+] in link:http://docs.oracle.com/cd/E19159-01/820-1072/index.html[+The WSIT Tutorial+]
 
 
-image::./netbeans-stamp-74-73-72.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3 and 7.4"]
+image::kb/docs/websvc/netbeans-stamp-74-73-72.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3 and 7.4"]
 
 
 *To follow this tutorial, you need the following software and resources.*
@@ -85,7 +89,7 @@ In this exercise you will use the New Project wizard to create the sample, exami
 1. Choose File > New Project (Ctrl-Shift-N on Linux and Windows, ⌘-Shift-N on MacOS) to open the New Project wizard.
 2. Expand the Samples category and select the Web Services node and then select the Calculator sample. Click Next.
 
-image::./wsit-newproject.png[title="New Project wizard showing calculator sample"]
+image::kb/docs/websvc/wsit-newproject.png[title="New Project wizard showing calculator sample"]
 
 [start=3]
 . Confirm that a Java EE-compliant server is selected in the Server drop-down list. Click Finish.
@@ -97,12 +101,12 @@ When you click Finish the wizard creates two projects:
 
 The CalculatorClientApp service might be badged with an error icon because the IDE cannot find the WSDL for the CalculatorWS service. The error will be resolved after you deploy CalculatorApp and clean and build the CalculatorClientApp.
 
-image::./wsit-projects.png[title="Projects window displaying the web service and the client"]
+image::kb/docs/websvc/wsit-projects.png[title="Projects window displaying the web service and the client"]
 
 [start=4]
 . Double-click the CalculatorWS web service to open the file in the editor and click the Design tab at the top of the editor to view the web service in the visual designer.
 
-image::./wsit-design.png[title="CalculatorWS service in Design GUI (Visual Designer) tab"]
+image::kb/docs/websvc/wsit-design.png[title="CalculatorWS service in Design GUI (Visual Designer) tab"]
 
 *Note:* In the Quality of Service section in the design tab of the service you can see that _no_ options are enabled. As a result, the Quality of Service components have not been applied to this particular web service. You will look at a web service where a Quality of Service component _is_ enabled when you create the secure web service.
 
@@ -115,12 +119,12 @@ For a full tutorial on web services in the IDE, see xref:./jax-ws.adoc[+Getting 
 
 The server starts and the web service is deployed to the server. You will see a page open in your default browser that provides some details of the service.
 
-image::./wsit-browser1.png[title="CalculatorWS information window in browser"]
+image::kb/docs/websvc/wsit-browser1.png[title="CalculatorWS information window in browser"]
 
 [start=2]
 . Click on the WSDL link in the page in the browser to see the WSDL file that defines the web service. 
 
-image::./wsit-browser2.png[title="Calculator WS WSDL in browser"]
+image::kb/docs/websvc/wsit-browser2.png[title="Calculator WS WSDL in browser"]
 
 *Note.* If the WSDL does not display, check the URL in the browser's location bar. It should point to  ``http://localhost:_your_port_number_/CalculatorApp/CalculatorWSService?WSDL`` .
 
@@ -130,7 +134,7 @@ image::./wsit-browser2.png[title="Calculator WS WSDL in browser"]
 
 When you test the web service a page for testing the service opens in your browser.
 
-image::./wsit-browser3.png[title="Calculator WS Tester in browser"]
+image::kb/docs/websvc/wsit-browser3.png[title="Calculator WS Tester in browser"]
 
 The IDE can provide a client for testing your web service and open the test application in your browser. In the test application you can enter values for each of the fields defined in the web service. The test application has a button that is labeled after the name of the operation in the service. When you click the button you will see the result of invoking the operation.
 
@@ -146,7 +150,7 @@ If there are error icons for  ``ClientServlet.java`` , right-click the project n
 
 When you run the application an interface for the service opens in your browser.
 
-image::./wsit-browser4.png[title="Calculator Service client in browser"]
+image::kb/docs/websvc/wsit-browser4.png[title="Calculator Service client in browser"]
 
 [start=6]
 . Enter values in the two fields and click Get Result.
@@ -186,7 +190,7 @@ The SecureCalculatorClientApp service might be badged with an error icon because
 [start=5]
 . Click Edit Web Service Attributes to open the Web Service Attributes Editor.
 
-image::./wsit-quality-dialog.png[title="Quality of Service page in WS Attributes Editor"]
+image::kb/docs/websvc/wsit-quality-dialog.png[title="Quality of Service page in WS Attributes Editor"]
 
 In the Quality of Service tab you can see that a Version Compatibility option is selected. You should select the latest version that matches the version of Metro or .NET that is installed.
 
@@ -200,7 +204,7 @@ In this sample application the Username Authentication with Symmetric Keys secur
 [start=6]
 . Expand the Input Message and Output Message sections in the Quality of Service tab.
 
-image::./wsit-quality-dialog2.png[title="Quality of Service page with Message Parts button enabled"]
+image::kb/docs/websvc/wsit-quality-dialog2.png[title="Quality of Service page with Message Parts button enabled"]
 
 The Message Parts button is enabled for Input Message and Output Message if you select the Username Authentication with Symmetric Keys as the security mechanism.
 
@@ -210,7 +214,7 @@ The Message Parts button is enabled for Input Message and Output Message if you 
 [start=7]
 . Click the Message Parts button in the Input Message section.
 
-image::./wsit-messageparts.png[title="Message Parts dialog"]
+image::kb/docs/websvc/wsit-messageparts.png[title="Message Parts dialog"]
 
 In the Message Parts dialog box you can see security options for different elements. You can select a checkbox to enable or disable the parts that should be signed, encrypted and required. For each element you can specify the following options:
 
@@ -227,7 +231,7 @@ Next you will look at how the web service client's Quality of Service is configu
 [start=9]
 . Right-click the CalculatorWSService node and choose Edit Web Service Attributes in the popup menu to open the Web Service Attributes dialog box. 
 
-image::./wsit-qos-wsservice.png[title="Web service client quality of service dialog"]
+image::kb/docs/websvc/wsit-qos-wsservice.png[title="Web service client quality of service dialog"]
 
 You can see that a default user "wsitUser" and password exist. The default user and password were created in the "file" realm.
 
@@ -245,14 +249,14 @@ For a more detailed description of how to configure security for a web service c
 
 When you run the client the application is deployed and and the interface for the service opens in the browser.
 
-image::./wsit-browser-secure1.png[title="Secure web service client in browser"]
+image::kb/docs/websvc/wsit-browser-secure1.png[title="Secure web service client in browser"]
 
 [start=3]
 . Type a number in each of the fields and click Get Result.
 
 When you click Get Result the page will display a message that the client was authenticated and will display the result of the operation.
 
-image::./wsit-browser-secure2.png[title="Secure web service client in browser showing results"]
+image::kb/docs/websvc/wsit-browser-secure2.png[title="Secure web service client in browser showing results"]
 
 If you get an error message that authentication failed due to an invalid user/password pair, there is either a problem with the default user created by the IDE or there are mismatched credentials set on the client. In this case, you need to create the user/password pair manually. For instructions, please see link:http://docs.oracle.com/cd/E19159-01/820-1072/6ncp48v3b/index.html[+Chapter 7 Using WSIT Security+] in link:http://docs.oracle.com/cd/E19159-01/820-1072/index.html[+The WSIT Tutorial+].
 

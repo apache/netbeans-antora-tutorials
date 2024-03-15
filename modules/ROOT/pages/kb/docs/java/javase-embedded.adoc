@@ -29,6 +29,10 @@
 :description: Using Oracle Java SE Embedded Support in NetBeans IDE - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Using Oracle Java SE Embedded Support in NetBeans IDE
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 link:http://www.oracle.com/technetwork/java/embedded/overview/javase/index.html[+Oracle Java Standard Edition Embedded+] (Oracle Java SE Embedded) enables users to develop highly functional, reliable and portable applications for powerful embedded systems. NetBeans IDE supports Java SE Embedded features, such as footprint, memory, power, platform support, etc.
 
 In this tutorial, you will learn how to get started with Java SE Embedded in NetBeans IDE and how to use the IDE support for Java SE Embedded.
@@ -50,7 +54,7 @@ NOTE: The remote operating system must be UNIX. Windows is not supported.
 [.feature]
 --
 
-image::./plugins-small.png[role="left", xref="image$./plugins.png"]
+image::kb/docs/java/plugins-small.png[role="left", xref="image$./plugins.png"]
 
 --
 
@@ -75,7 +79,7 @@ The Java Platform Manager dialog box displays.
 [.feature]
 --
 
-image::./jpmanager-small.png[role="left", xref="image$./jpmanager.png"]
+image::kb/docs/java/jpmanager-small.png[role="left", xref="image$./jpmanager.png"]
 
 --
 
@@ -90,7 +94,7 @@ The IDE displays the Add Java Platform dialog box.
 [.feature]
 --
 
-image::./addjp-small.png[role="left", xref="image$./addjp.png"]
+image::kb/docs/java/addjp-small.png[role="left", xref="image$./addjp.png"]
 
 --
 
@@ -108,7 +112,7 @@ A new remote Java SE platform displays in the Java Platform Manager dialog box.
 [.feature]
 --
 
-image::./jpremote-small.png[role="left", xref="image$./jpremote.png"]
+image::kb/docs/java/jpremote-small.png[role="left", xref="image$./jpremote.png"]
 
 --
 
@@ -130,7 +134,7 @@ Now let us create a project that is going to be first run in the IDE and then on
 [.feature]
 --
 
-image::./wizard-small.png[role="left", xref="image$./wizard.png"]
+image::kb/docs/java/wizard-small.png[role="left", xref="image$./wizard.png"]
 
 --
 
@@ -156,7 +160,7 @@ The IDE creates and opens the Java SE project in the Projects window.
 
 To test your application, right-click the project name and choose Run from the context menu. The calculated output can be viewed in the Output window (Window > Output).
 
-image::./run-ide.png[]
+image::kb/docs/java/run-ide.png[]
 
 === Configuring a Project to Use a Remote Platform
 
@@ -172,7 +176,7 @@ To develop a Java SE embedded application on a remote platform using link:https:
 [.feature]
 --
 
-image::./jdk8-small.png[role="left", xref="image$./jdk8.png"]
+image::kb/docs/java/jdk8-small.png[role="left", xref="image$./jdk8.png"]
 
 --
 
@@ -184,7 +188,7 @@ JDK 8 is registered as a platform in the IDE.
 [.feature]
 --
 
-image::./jdk8registered-small.png[role="left", xref="image$./jdk8registered.png"]
+image::kb/docs/java/jdk8registered-small.png[role="left", xref="image$./jdk8registered.png"]
 
 --
 
@@ -200,7 +204,7 @@ image::./jdk8registered-small.png[role="left", xref="image$./jdk8registered.png"
 [.feature]
 --
 
-image::./prj-jdk8-small.png[role="left", xref="image$./prj-jdk8.png"]
+image::kb/docs/java/prj-jdk8-small.png[role="left", xref="image$./prj-jdk8.png"]
 
 --
 
@@ -211,7 +215,7 @@ image::./prj-jdk8-small.png[role="left", xref="image$./prj-jdk8.png"]
 [.feature]
 --
 
-image::./prj-source-jdk8-small.png[role="left", xref="image$./prj-source-jdk8.png"]
+image::kb/docs/java/prj-source-jdk8-small.png[role="left", xref="image$./prj-source-jdk8.png"]
 
 --
 
@@ -222,7 +226,7 @@ image::./prj-source-jdk8-small.png[role="left", xref="image$./prj-source-jdk8.pn
 [.feature]
 --
 
-image::./prj-jdk8-profile-small.png[role="left", xref="image$./prj-jdk8-profile.png"]
+image::kb/docs/java/prj-jdk8-profile-small.png[role="left", xref="image$./prj-jdk8-profile.png"]
 
 --
 
@@ -246,7 +250,7 @@ You can run and debug the application on a remote device after setting the proje
 [.feature]
 --
 
-image::./config-runtime-small.png[role="left", xref="image$./config-runtime.png"]
+image::kb/docs/java/config-runtime-small.png[role="left", xref="image$./config-runtime.png"]
 
 --
 
@@ -259,7 +263,7 @@ If you run the project on a remote platform (Run > Run Project (project name)), 
 [.feature]
 --
 
-image::./run-remote-small.png[role="left", xref="image$./run-remote.png"]
+image::kb/docs/java/run-remote-small.png[role="left", xref="image$./run-remote.png"]
 
 --
 
@@ -270,7 +274,7 @@ image::./run-remote-small.png[role="left", xref="image$./run-remote.png"]
 [.feature]
 --
 
-image::./switch-config-small.png[role="left", xref="image$./switch-config.png"]
+image::kb/docs/java/switch-config-small.png[role="left", xref="image$./switch-config.png"]
 
 --
 

@@ -30,6 +30,10 @@
 :keywords: Apache NetBeans, Tutorials, Storing NetBeans C/C++ Projects Under Version Control Systems
 include::front::partial$database.adoc[]
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 //Contributed by Vladimir Kvashin, maintained by Alyona Stashkova
 //March 2014 [Revision number: V8.0-1]
 
@@ -101,7 +105,7 @@ You can specify the list of such macros to ignore in the "Transient macros" fiel
 [.feature]
 --
 
-image::./proj_props_small.png[role="left", xref="image$./proj_props.png"]
+image::kb/docs/cnd/proj_props_small.png[role="left", xref="image$./proj_props.png"]
 
 --
 

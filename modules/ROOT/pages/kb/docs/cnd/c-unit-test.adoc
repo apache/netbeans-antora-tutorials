@@ -30,6 +30,10 @@
 :keywords: Apache NetBeans, Tutorials, Adding Unit Tests to a C Project - NetBeans IDE Tutorial
 include::front::partial$database.adoc[]
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 //_Contributed by link:mailto:susanm@netbeans.org[+_Susan Morgan_+] 
 //March 2014_ [Revision number: V8.0-1]
 
@@ -282,7 +286,7 @@ To explore the unit test features, you should first create a new C Application:
 2. In the project wizard, click C/C++ and then select C/C++ Application.
 3. In the New C/C++ Application dialog box, select Create Main file and select the C language. Accept the defaults for all other options.
 
-image::./c-unit-new-project.png[]
+image::kb/docs/cnd/c-unit-new-project.png[]
 
 [start=4]
 . Click Finish, and the Cpp_Application__x_ project is created.
@@ -290,7 +294,7 @@ image::./c-unit-new-project.png[]
 [start=5]
 . In the Projects window, open the Source Files folder and double-click the `main.c` file to open it in the editor. The file's content is similar to that shown here:
 
-image::./c-unit-mainc-initial.png[]
+image::kb/docs/cnd/c-unit-mainc-initial.png[]
 
 [start=6]
 . To give the program something to do, replace the code in the `main.c` file with the following code to create a simple factorial calculator:
@@ -325,7 +329,7 @@ int main(int argc, char** argv) {
 
 The file should look as follows after editing:
 
-image::./c-unit-mainc-edited.png[]
+image::kb/docs/cnd/c-unit-mainc-edited.png[]
 
 [start=7]
 . Save the file by pressing Ctrl+S.
@@ -334,7 +338,7 @@ image::./c-unit-mainc-edited.png[]
 . Build and run the project to make sure it works by clicking the Run button in the IDE toolbar.
 The output should look similar to the following if you enter 8 as the integer:
 
-image::./c-unit-output-factorial.png[]
+image::kb/docs/cnd/c-unit-output-factorial.png[]
 
 You might need to press Enter twice on some platforms.
 
@@ -347,7 +351,7 @@ Each test should contain one `main` function and generate one executable.
 
 1. In the Projects window, right-click the `main.c` source file and select Create Test > New CUnit Test.
 
-image::./c-unit-create-test.png[]
+image::kb/docs/cnd/c-unit-create-test.png[]
 
 A wizard opens to help you create the test.
 
@@ -371,7 +375,7 @@ The New CUnit Test folder contains the template files for the test. You can add 
 [start=6]
 . In the `newcunittest.c` file, notice the `#include "CUnit/Basic.h"` statement to access the CUnit library. The `newcunittest.c` file contains an automatically generated test function, `testFactorial`, for the `factorial()` function of `main.c`.
 
-image::./c-unit-includes.png[]
+image::kb/docs/cnd/c-unit-includes.png[]
 
 If the IDE did not find the `CUnit/Basic.h` file, you can edit the include path to point to the correct location. For example, if you installed CUnit in Windows to `C:\Tools\CUnit-2.1-2` you would edit the path to the following: 
 
@@ -390,7 +394,7 @@ The IDE opens a new Test Results window, and you should see output similar to th
 
 If you do not see the Test Results window, open it by choosing Window > IDE Tools > Test Results or by pressing Alt+Shift+R.
 
-image::./c-unit-run-test-orig.png[]
+image::kb/docs/cnd/c-unit-run-test-orig.png[]
 
 [start=2]
 . Notice that the Test Results window is split into two panels. 
@@ -407,19 +411,19 @@ If you look at the function you can see that it does not actually test anything,
 . Run the test again by right-clicking the New CUnit Test folder and selecting Test.
 The Test Results window should indicate that the test passed.
 
-image::./c-unit-run-test-pass.png[]
+image::kb/docs/cnd/c-unit-run-test-pass.png[]
 
 
 == Add Another CUnit Test
 
 1. Create a generic CUnit test template by right-clicking the Test Files folder and selecting New CUnit Test.
 
-image::./c-unit-new-cunit-test.png[]
+image::kb/docs/cnd/c-unit-new-cunit-test.png[]
 
 [start=2]
 . Name the test My CUnit Test and the test file name `mycunittest` and click Finish.
 
-image::./c-unit-create-mycunittest.png[]
+image::kb/docs/cnd/c-unit-create-mycunittest.png[]
 
 [start=3]
 . A new test folder called My CUnit Test is created and it contains a `mycunittest.c` file, which opens in the editor.
@@ -443,7 +447,7 @@ CU_ASSERT(2*2 == 5);
 [start=5]
 . Run the test as before and you should see:
 
-image::./c-unit-run-mytest1.png[]
+image::kb/docs/cnd/c-unit-run-mytest1.png[]
 
 [start=6]
 . Run all the tests from the IDE main menu by selecting Run > Test Project (Cpp_Application__x_) and see that both test suites run and display their success and failure in the Test Results window.
@@ -451,7 +455,7 @@ image::./c-unit-run-mytest1.png[]
 [start=7]
 . Mouse over the failed test to see more information about the failure.
 
-image::./c-unit-test-fail-annotation.png[]
+image::kb/docs/cnd/c-unit-test-fail-annotation.png[]
 
 [start=8]
 . Click the buttons in the left margin of the Test Results window to show and hide tests that pass or fail.
@@ -471,7 +475,7 @@ The debugger toolbar is displayed.
 [start=2]
 . Click the Step Into button to execute the program one statement at a time with each click of the button.
 
-image::./c-unit-debug-icons.png[]
+image::kb/docs/cnd/c-unit-debug-icons.png[]
 
 [start=3]
 . Open the Call Stack window by selecting Window > Debugging > Call Stack so you can watch the function calls as you step through the test.
@@ -483,12 +487,12 @@ The C simple test uses the IDE's own simple test framework. You do not need to d
 
 1. In the Projects window, right-click the  ``main.c``  source file and select Create Test > New C Simple Test.
 
-image::./c-unit-mainc-new-simple-test.png[]
+image::kb/docs/cnd/c-unit-mainc-new-simple-test.png[]
 
 [start=2]
 . In the wizard's Select Elements window, click the checkbox for the  ``main``  function, then click Next.
 
-image::./c-unit-mainc-new-simple-test-select.png[]
+image::kb/docs/cnd/c-unit-mainc-new-simple-test-select.png[]
 
 [start=3]
 . In the Name and Location window, keep the default name New C Simple Test and click Finish.
@@ -499,12 +503,12 @@ The New C Simple Test node is displayed under the Test Files folder.
 [start=4]
 . Expand the New C Simple Test folder, and see that it contains a file `newsimpletest.c`. This file should be open in the source editor.
 
-image::./c-unit-mainc-new-simple-test-folder.png[]
+image::kb/docs/cnd/c-unit-mainc-new-simple-test-folder.png[]
 
 [start=5]
 . Notice the `newsimpletest.c` file contains an automatically generated test function, `testFactorial`, for the `factorial()` function of `main.c`, just as with the CUnit test.
 
-image::./c-unit-mainc-new-simple-test-code.png[]
+image::kb/docs/cnd/c-unit-mainc-new-simple-test-code.png[]
 
 The  ``if``  statement should test a condition that, if true, indicates that the test failed. The  ``%%TEST_FAILED%%`` token triggers display of the graphical indicator of test failures in the Test Results window. The  ``if``  statement in the generated test sets the condition to be true by setting it to 1, so the test always fails when you run it unmodified.
 
@@ -611,7 +615,7 @@ int main(int argc, char** argv) {
 . In the Projects window, run the test by right-clicking New C Simple Test and choosing Test. 
 The Test Results should look as follows:
 
-image::./c-unit-simpletest-results.png[]
+image::kb/docs/cnd/c-unit-simpletest-results.png[]
 
 If you do not see testNew passed, click the green check button in the left margin of the Test Results window to display tests that passed.
 

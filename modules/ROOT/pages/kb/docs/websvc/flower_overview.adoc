@@ -29,6 +29,10 @@
 :description: Web Service Application Passing Binary Data, pt 1: Overview - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Web Service Application Passing Binary Data, pt 1: Overview
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 In this tutorial, you create a Java EE web application that contains a web service, which you implement as a stateless session bean. You also add a package with four JPEG files to the web application. The web service has two operations that are accessible by clients, for getting individual images and for getting a set of all 4 images as thumbnails. You add private methods that convert the JPEG files to byte arrays and convert those byte arrays to  ``Image``  objects. In Java EE you put these private methods directly in the web service, because the web service is also an EJB.
 
 After you create the web service, you deploy it to an instance of the GlassFish server 3.1 or later. You use the NetBeans IDE's built-in web service tester to view sample SOAP request and response messages.
@@ -41,7 +45,7 @@ You can download a complete version of service and client applications from the 
 
 *Lessons In This Tutorial*
 
-image::./netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
+image::kb/docs/websvc/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
 
 1. => Overview
 2. xref:./flower_ws.adoc[+ Creating the Web Service+]
@@ -76,7 +80,7 @@ link:images/honeysuckle.jpg[+honeysuckle.jpg+]
 
 At the end of this tutorial, you will have a running Java Swing application that consumes JPEG images via a web service, with the result displayed below.
 
-image::./running-client.png[title="JFrame showing all flower images passed from web service"]
+image::kb/docs/websvc/running-client.png[title="JFrame showing all flower images passed from web service"]
 
 
 == Next step:

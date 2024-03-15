@@ -29,6 +29,10 @@
 :description: Native Packaging in NetBeans IDE - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Native Packaging in NetBeans IDE
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 Native packaging was first introduced as a part of the JavaFX 2.2 SDK enabling you to package an application as a _native bundle_ and then installing and running the application without any external dependencies on a system JRE or JavaFX SDK. Next it became usable for Java SE projects as well.
 
 Native packaging does not change the deployment model of your application: it takes your application as it is, packages it together with Java runtime, and produces an installer that is common for the operating system you are using. The point is to make the whole thing independent on whatever Java runtime users have or do not have on the target machine. You can take such an installer and run it on a machine where there is no trace of Java, and it will install both the application and the necessary Java runtime bits.The size of such installers is quite big, because even a "Hello world" application will carry with itself a large portion of Java runtime artifacts.
@@ -89,7 +93,7 @@ The following figure shows what the Command Prompt should display if Inno Setup 
 [.feature]
 --
 
-image::./cmd_small.png[role="left", xref="image$./cmd.png"]
+image::kb/docs/java/cmd_small.png[role="left", xref="image$./cmd.png"]
 
 --
 
@@ -121,7 +125,7 @@ You will create a new Java SE project with the Anagram game example which is shi
 [.feature]
 --
 
-image::./new_javase_prj_small.png[role="left", xref="image$./new_javase_prj.png"]
+image::kb/docs/java/new_javase_prj_small.png[role="left", xref="image$./new_javase_prj.png"]
 
 --
 
@@ -136,7 +140,7 @@ The IDE creates and opens the Java SE project.
 To test that the created project works fine, run it by choosing Run > Run Project from the main menu.
 The Anagrams application should launch and display on your machine.
 
-image::./anagrams.png[]
+image::kb/docs/java/anagrams.png[]
 
 
 === Enabling Native Packaging in the IDE
@@ -145,7 +149,7 @@ The native packaging actions are disabled in the IDE by default.
 
 Right-click the AnagramGame project in the Projects window, to check the actions available for the created Java SE project in the IDE: there are no package related actions in the project's context menu.
 
-image::./context_wo_pkg.png[]
+image::kb/docs/java/context_wo_pkg.png[]
 
 *To enable native packaging actions for the project:*
 
@@ -155,7 +159,7 @@ image::./context_wo_pkg.png[]
 [.feature]
 --
 
-image::./enable_native_pkg_small.png[role="left", xref="image$./enable_native_pkg.png"]
+image::kb/docs/java/enable_native_pkg_small.png[role="left", xref="image$./enable_native_pkg.png"]
 
 --
 
@@ -164,7 +168,7 @@ image::./enable_native_pkg_small.png[role="left", xref="image$./enable_native_pk
 . Click OK.
 A Package as command is added to the project's context menu.
 
-image::./pkg_enabled.png[]
+image::kb/docs/java/pkg_enabled.png[]
 
 
 === Building an Application
@@ -179,7 +183,7 @@ The IDE displays the results in the Output window.
 [.feature]
 --
 
-image::./output_small.png[role="left", xref="image$./output.png"]
+image::kb/docs/java/output_small.png[role="left", xref="image$./output.png"]
 
 --
 
@@ -201,7 +205,7 @@ The IDE displays the progress and result of the packaging process in the Output 
 [.feature]
 --
 
-image::./output_se_exe_small.png[role="left", xref="image$./output_se_exe.png"]
+image::kb/docs/java/output_se_exe_small.png[role="left", xref="image$./output_se_exe.png"]
 
 --
 
@@ -209,7 +213,7 @@ NOTE: The IDE first logs some progress and then for some time it looks as if not
 
 When the  ``EXE``  installer is ready, it is placed in the  ``AnagramGame/dist/bundles/``  directory.
 
-image::./anagram_exe.png[]
+image::kb/docs/java/anagram_exe.png[]
 
 
 == Self-Contained Application Packaging in JavaFX Projects
@@ -236,7 +240,7 @@ You begin by creating a JavaFX project using the BrickBreaker sample project bun
 [.feature]
 --
 
-image::./new_javafx_prj_small.png[role="left", xref="image$./new_javafx_prj.png"]
+image::kb/docs/java/new_javafx_prj_small.png[role="left", xref="image$./new_javafx_prj.png"]
 
 --
 
@@ -251,7 +255,7 @@ The Brick Breaker application should launch and display on your machine.
 [.feature]
 --
 
-image::./brickbreaker_small.png[role="left", xref="image$./brickbreaker.png"]
+image::kb/docs/java/brickbreaker_small.png[role="left", xref="image$./brickbreaker.png"]
 
 --
 
@@ -262,7 +266,7 @@ To use the native packaging support in the IDE for your project, you need to ena
 
 If you right-click the Brick Breaker project, you will see no native packaging related actions in it.
 
-image::./javafx_wo_pkg.png[]
+image::kb/docs/java/javafx_wo_pkg.png[]
 
 *To enable native packaging actions in the project context menu:*
 
@@ -272,7 +276,7 @@ image::./javafx_wo_pkg.png[]
 [.feature]
 --
 
-image::./enable_native_pkg_fx_small.png[role="left", xref="image$./enable_native_pkg_fx.png"]
+image::kb/docs/java/enable_native_pkg_fx_small.png[role="left", xref="image$./enable_native_pkg_fx.png"]
 
 --
 
@@ -281,7 +285,7 @@ image::./enable_native_pkg_fx_small.png[role="left", xref="image$./enable_native
 . Click OK.
 The Package as item is added to the project's context menu.
 
-image::./pkg_fx_enabled.png[]
+image::kb/docs/java/pkg_fx_enabled.png[]
 
 
 === Building an Application
@@ -316,7 +320,7 @@ The IDE displays the progress and result of the packaging process in the Output 
 [.feature]
 --
 
-image::./output_fx_msi_small.png[role="left", xref="image$./output_fx_msi.png"]
+image::kb/docs/java/output_fx_msi_small.png[role="left", xref="image$./output_fx_msi.png"]
 
 --
 
@@ -324,7 +328,7 @@ NOTE: The IDE first logs some progress and then for some time it looks as if not
 
 The installable JavaFX application is located in the  ``BrickBreaker/dist/bundles/``  directory.
 
-image::./brickbreaker_msi.png[]
+image::kb/docs/java/brickbreaker_msi.png[]
 
 
 == Verifying the Installable Applications 

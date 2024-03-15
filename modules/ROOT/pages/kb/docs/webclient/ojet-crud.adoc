@@ -29,6 +29,10 @@
 :description: CRUD Application Development with Oracle JET - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, CRUD Application Development with Oracle JET
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This document provides a step-by-step set of instructions guiding you through the process of understanding and working with the link:http://oraclejet.org[+Oracle JavaScript Extension Toolkit (JET)+]. JET empowers web and mobile developers by providing a modular toolkit based on modern JavaScript, CSS3, and HTML5 design and development principles.
 
 
@@ -42,7 +46,7 @@ In this exercise you set up an Oracle JET application and explore its default co
 [start=2]
 . Open the project into an editor or IDE of your choice, such as NetBeans IDE, which displays the application as follows:
 
-image::./navdrawer.png[]
+image::kb/docs/webclient/navdrawer.png[]
 
 Spend some time browsing through the application structure. In the next section, you'll be introduced to the main concepts of the application structure.
 
@@ -53,17 +57,17 @@ In this exercise, you learn about the structure of Oracle JET applications.
 
 * Oracle JET applications are modular. Normally, a module consists of business logic defined in a JavaScript file and a view defined in an HTML file. By convention, the name of the JavaScript file is the same as the name of the HTML file, for each module in the application. By default, the JavaScript side of a module is located in the  ``src/js/viewModels``  folder, while its matching view is located in the  ``src/js/views``  folder, as shown below:
 
-image::./navdrawer_1.png[]
+image::kb/docs/webclient/navdrawer_1.png[]
 
 * Whenever you run  ``ojet build``  or  ``ojet serve`` , the  ``src``  folder is copied to the  ``web``  folder. Below, you see the  ``src``  folder and  ``web``  folder highlighted.
 
-image::./navdrawer_2.png[]
+image::kb/docs/webclient/navdrawer_2.png[]
 
 *Never* change the files in the  ``web``  folder. They will automatically be overwritten whenever  ``ojet build``  or  ``ojet serve``  is run. *Only* change the files in the  ``src``  folder, which will all be propagated to the  ``web``  folder whenever  ``oject build``  or  ``ojet serve``  is run.
 
 * The differences between the content of the  ``src``  folder and  ``web``  folder are highlighted below:
 
-image::./navdrawer_3.png[]
+image::kb/docs/webclient/navdrawer_3.png[]
 
 In the above screenshot, note the following:
 
@@ -72,7 +76,7 @@ In the above screenshot, note the following:
 * 
 The files that initialize the application are highlighted below:
 
-image::./navdrawer_6.png[]
+image::kb/docs/webclient/navdrawer_6.png[]
 
 In the above screenshot, note the following:
 
@@ -145,7 +149,7 @@ The HTML file has the following content:
 . 
 Check that your application structure in the  ``src``  folder is now as follows, that is, make sure that your new Home module is named correctly and is found in the default location, as shown below:
 
-image::./navdrawer_4.png[]
+image::kb/docs/webclient/navdrawer_4.png[]
 
 You have now created a new Oracle JET module. In the next section, you learn how to integrate it into the application.
 
@@ -200,7 +204,7 @@ Learn link:http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?comp
 [start=3]
 . You can now run the application and you should see the "Home" item in the navigation bar, which should route the application to the  ``home``  module:
 
-image::./navdrawer_5.png[]
+image::kb/docs/webclient/navdrawer_5.png[]
 
 
 [start=4]

@@ -30,6 +30,10 @@
 :keywords: Apache NetBeans, Tutorials, Introduction to Ajax for Java Web Applications
 :page-reviewed: 2022-01-21
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This document provides an introduction to Ajax and demonstrates some of the features in the NetBeans IDE that allow you to program faster and more efficiently when working with Ajax-related technologies. While learning about the low-level functionality of Ajax, you build a simple application that employs auto-completion in a text field. Content here has been adapted from Greg Murray's article and sample application from link:http://weblogs.java.net/blog/gmurray71/archive/2005/12/using_ajax_with_1.html[+Using Ajax with Java Technology+].
 
 Ajax stands for Asynchronous JavaScript and XML. In essence, Ajax is an efficient way for a web application to handle user interactions with a web page - a way that reduces the need to do a page refresh or full page reload for every user interaction. This enables rich behavior (similar to that of a desktop application or plugin-based web application) using a browser. Ajax interactions are handled asynchronously in the background. As this happens, a user can continue working with the page. Ajax interactions are initiated by JavaScript code. When the Ajax interaction is complete, JavaScript updates the HTML source of the page. The changes are made immediately without requiring a page refresh. Ajax interactions can be used to do things such as validate form entries (while the user is entering them) using server-side logic, retrieve detailed data from the server, dynamically update data on a page, and submit partial forms from the page.
@@ -66,11 +70,11 @@ version 7.x or 8.x
 
 Imagine a web page in which a user can search for information about musical composers. The page includes a field where the user can enter the name of the composer. In the example application, the entry field has an auto-complete feature. In other words, the user can type in part of the composer name, and the web application attempts to complete the name by listing all composers whose first or last name begins with the characters entered. The auto-complete feature saves the user from having to remember the complete name of the composer and can provide a more intuitive and direct path to the sought-after information.
 
-image::./sample-app.png[title="Sample application displayed in browser"]
+image::kb/docs/web/sample-app.png[title="Sample application displayed in browser"]
 
 Implementing auto-completion in a search field is something that can be performed using Ajax. Ajax works by employing an `XMLHttpRequest` object to pass requests and responses asynchronously between the client and server. The following diagram illustrates the process flow of the communication that takes place between the client and server.
 
-image::./ajax-process-flow.png[title="Ajax process flow diagram"]
+image::kb/docs/web/ajax-process-flow.png[title="Ajax process flow diagram"]
 
 
 The process flow of the diagram can be described by the following steps:
@@ -92,13 +96,13 @@ Begin by creating a new web application project in the IDE. The IDE contains bui
 1. Choose File > New Project. Under Categories, select Java Web. Under Projects, select Web Application then click Next.
 2. In the Name and Location panel, enter `MyAjaxApp` for Project Name. The Project Location field enables you to specify the location of the project on your computer. Leave other options at their defaults and click Next. 
 
-image::./java-name-location.png[title="Specify the name and location for your application project"]
+image::kb/docs/web/java-name-location.png[title="Specify the name and location for your application project"]
 
 
 [start=3]
 . In the Server and Settings panel, select the server you want to deploy your application to. Only servers that are registered with the IDE are listed. 
 
-image::./java-server-settings.png[title="Specify the server your application will be deployed to"]
+image::kb/docs/web/java-server-settings.png[title="Specify the server your application will be deployed to"]
 
 [start=4]
 . Accept other default settings and click Finish. The project is generated in your file system and opens in the IDE.
@@ -107,7 +111,7 @@ When Java-based web projects are created, an link:http://ant.apache.org/[+Ant+] 
 
 A default entry page is generated and opens in the IDE's Source Editor. Depending on the target server, the entry page will be either `index.jsp` or `index.html`.
 
-image::./java-proj-win.png[title="Projects window displays MyAjaxApp project"]
+image::kb/docs/web/java-proj-win.png[title="Projects window displays MyAjaxApp project"]
 
 Before beginning to code, quickly try running the application to ensure that configuration between the IDE, your server, and browser is set up properly.
 
@@ -119,7 +123,7 @@ The application is compiled, the application server starts and the application i
 
 === Using the HTML Editor
 
-image::./palette.png[title="Palette displaying HTML elements"] 
+image::kb/docs/web/palette.png[title="Palette displaying HTML elements"] 
 
 Now that you are certain your environment is set up correctly, begin by transforming your index page into the auto-completion interface that will be viewed by users.
 
@@ -171,7 +175,7 @@ You can view large icons (as displayed here) by right-clicking in the Palette an
 * Method: GET
 * Name: autofillform
 
-image::./insert-form.png[title="Insert form dialog"]
+image::kb/docs/web/insert-form.png[title="Insert form dialog"]
 
 Click OK. The HTML `<form>` tags are inserted into the page containing the attributes you specified. (GET is applied by default, and so is not explicitly declared.)
 
@@ -184,7 +188,7 @@ Click OK. The HTML `<form>` tags are inserted into the page containing the attri
 * Border Size: 0
 * Cell Padding: 5
 
-image::./insert-table.png[title="Insert table dialog"]
+image::kb/docs/web/insert-table.png[title="Insert table dialog"]
 
 
 . Right-click inside the Source Editor and choose Format. This tidies up the code. Your form should now display similar to that below:
@@ -240,7 +244,7 @@ image::./insert-table.png[title="Insert table dialog"]
 ----
 When you type, try using the IDE's built-in code completion support. For example, type in `<i`, then press Ctrl-Space. A list of suggested options displays below your cursor, and a description of the selected element appears in a box above. You can in fact press Ctrl-Space at anytime you are coding in the Source Editor to bring up possible options. Also, if there is only one possible option, pressing Ctrl-Space will automatically complete the element name. 
 
-image::./code-completion.png[title="Press Ctrl-Space in the editor to invoke code completion and documentation support"]
+image::kb/docs/web/code-completion.png[title="Press Ctrl-Space in the editor to invoke code completion and documentation support"]
 
 The `onkeyup` attribute that you typed in above points to a JavaScript function named `doCompletion()`. This function is called each time a key is pressed in the form text field, and maps to the JavaScript call depicted in the Ajax <<flow-diagram,flow diagram>> above.
 
@@ -252,7 +256,7 @@ The IDE's JavaScript Editor provides many advanced editing capabilities, such as
 
 JavaScript code completion is automatically provided when you code in `.js` files, as well as within `<script>` tags when you work with other technologies (i.e., HTML, RHTML, JSP, PHP). The IDE can provide you with some hints when you are editing JavaScript code. You can specify the JavaScript hints options by choosing Tools > Options (NetBeans > Preferences on Mac) to open the Options window and then selecting the JavaScript language in the Hints tab in the Editor category. You can also add your own JavaScript code templates in the Code Templates tab in the Options window.
 
-image::./javascript-options.png[title="JavaScript Hint 0ptions in Options window"]
+image::kb/docs/web/javascript-options.png[title="JavaScript Hint 0ptions in Options window"]
 
 Add a JavaScript file to the application and begin implementing `doCompletion()`.
 
@@ -516,12 +520,12 @@ Create a servlet to handle the `autocomplete` URL that is received by the incomi
 1. Right-click on the project node in the Projects window and choose New > Servlet to open the New Servlet wizard. (Choose Other and select Servlet from the Web category if Servlet is not displayed by default in the popup menu.)
 2. Name the servlet `AutoCompleteServlet`, and choose `com.ajax` from the drop-down list in the Package field. Click Next.
 
-image::./newservlet-name-location.png[]
+image::kb/docs/web/newservlet-name-location.png[]
 
 
 . In the Configure Servlet Deployment panel, change the URL pattern to *`/autocomplete`* so that it matches the URL that you previously set in the `XMLHttpRequest` object. 
 
-image::./newservlet-configure-deployment.png[]
+image::kb/docs/web/newservlet-configure-deployment.png[]
 
 This panel saves you the step of needing to manually add these details to the deployment descriptor.
 
@@ -538,12 +542,12 @@ You can override methods from superclasses using the IDE's Insert Code popup men
 
 1. Place your cursor beneath the `AutoCompleteServlet` class declaration in the Source Editor. Press Alt-Insert (Ctrl-I on Mac) to open the Generate Code popup menu. 
 
-image::./insert-code.png[title="Insert Code popup menu displayed in Source Editor"]
+image::kb/docs/web/insert-code.png[title="Insert Code popup menu displayed in Source Editor"]
 
 
 . Choose Override Method. In the dialog that displays, all classes that `AutoCompleteServlet` inherits from are displayed. Expand the GenericServlet node and select `init(Servlet Config config)`. 
 
-image::./new-override.png[title="Override dialog lists inherited classes"]
+image::kb/docs/web/new-override.png[title="Override dialog lists inherited classes"]
 
 
 . Click OK. The `init()` method is added in the Source Editor.
@@ -565,7 +569,7 @@ public void init(ServletConfig config) throws ServletException {
 
 . Add an import statement for `ServletContext`. You can do this by clicking on the lightbulb icon that displays in the left margin of the Source Editor 
 
-image::./import-hint.png[title="Import hints display in left margin of the Source Editor"]
+image::kb/docs/web/import-hint.png[title="Import hints display in left margin of the Source Editor"]
 
 The `doGet()` method needs to parse the URL of the request, retrieve data from the data store, and prepare a response in XML format. Note that the method declaration was generated when you created the class. To view it, you may need to expand the HttpServlet methods by clicking on the expand icon (images:./expand-icon.png[]) in the left margin.
 
@@ -1013,7 +1017,7 @@ At this stage, you have completed all the code needed for the functionality of t
 
 1. In the Projects window, right-click the project node and choose Run. The project is recompiled and deployed to the target server. Your browser opens, and you can see the index page. 
 
-image::./no-css.png[title="Successful deployment without stylesheet"]
+image::kb/docs/web/no-css.png[title="Successful deployment without stylesheet"]
 
 To add a stylesheet to your application, simply create a `.css` file and link to it from your presentation page(s). When you work in `.css` files, the IDE provides you with code completion support, as well as the following windows to help you generate and edit stylesheet rules.
 
@@ -1102,7 +1106,7 @@ a:hover {
 
 . Open the CSS Styles window by choosing Window > Web > CSS Styles. 
 
-image::./css-styles-window.png[title="CSS Styles window displaying h1 rule properties"]
+image::kb/docs/web/css-styles-window.png[title="CSS Styles window displaying h1 rule properties"]
 
 You can use the CSS Styles window to quickly view the properties and edit style rules. When you select a rule in the upper pane of the CSS Style window you can see the properties of the rule in the lower pane. You can add a CSS Rules to the stylesheet by clicking the Edit CSS Rules icon (images:./newcssrule.png[title="New CSS Property icon"]) in the toolbar of the upper pane. You can modify rules in the lower pane by editing the property sheet and add properties by clicking the Add Property icon (images:./newcssproperty.png[title="New CSS Property icon"]) in the toolbar of the lower pane.
 
@@ -1131,7 +1135,7 @@ You can use the CSS Styles window to quickly view the properties and edit style 
 
 You can use the code completion in the editor to help you select the style rule that you want to apply to the selector.
 
-image::./css-completion.png[title="CSS code completion in the editor"]
+image::kb/docs/web/css-completion.png[title="CSS code completion in the editor"]
 
 As indicated in `stylesheet.css`, this rule positions the `complete-table` element so that it displays slightly to the right of its parent element.
 
@@ -1165,7 +1169,7 @@ If the server is already running, you need to restart it in order to allow chang
 
 Now, when you run the application again, the HTTP monitor opens in the lower region of the IDE. You can select a record in the left pane, then click the tabs in the main window to view information concerning each request that is made.
 
-image::./http-monitor.png[title="HTTP Server monitor displays in the IDE"]
+image::kb/docs/web/http-monitor.png[title="HTTP Server monitor displays in the IDE"]
 
 You can verify the XML data that is sent from the server as a result of the asynchronous request made when a user enters a character in the auto-complete field.
 
@@ -1173,7 +1177,7 @@ You can verify the XML data that is sent from the server as a result of the asyn
 
 The response is generated in your browser. In this case, because the response consists of XML data, the browser displays the data in it's native XML viewer.
 
-image::./xml-data.png[title="HTTP Server monitor displays in the IDE"]
+image::kb/docs/web/xml-data.png[title="HTTP Server monitor displays in the IDE"]
 
 
 [[conclusion]]

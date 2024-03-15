@@ -30,6 +30,10 @@
 :keywords: Apache NetBeans, Tutorials, Editing and Navigating C/C++ Source Files - NetBeans IDE Tutorial
 include::front::partial$database.adoc[]
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 //_Contributed by _Ann Rice_ and maintained by _Susan Morgan_
 //March 2014_ [Revision number: V8.0]
 
@@ -79,7 +83,7 @@ You can use the Options window to configure default formatting style for your C 
 4. Select the C++ language from the Language drop-down list because the Quote project uses C++.
 5. Select the style you want to set from the Style drop-down list.
 
-image::./formatting_style.png[]
+image::kb/docs/cnd/formatting_style.png[]
 
 [start=6]
 . Modify the style properties as desired.
@@ -93,7 +97,7 @@ For some types of files, you can use the code folding feature to collapse blocks
 2. Click the collapse icon (small box with minus sign) in the left margin to fold the code of one of the methods.
 3. Mouse over the  ``{...}``  symbol to the right of the folded block to display the code in the block. 
 
-image::./code_folding.png[]
+image::kb/docs/cnd/code_folding.png[]
 
 
 === Using Semantic Highlighting
@@ -109,7 +113,7 @@ You can set an option so that when you click on a class, function, variable, or 
 7. Click on an occurrence of the  ``Customer``  class.
 8. All of the occurrences of the  ``Customer``  class in the file are highlighted with a yellow background. The right margin also shows markings that indicate points where an occurrence is located in the file. The markings let you see how many occurrences there are without scrolling through the file. You can click the markings to jump to the occurrences that they represent.
 
-image::./highlighting1.png[]
+image::kb/docs/cnd/highlighting1.png[]
 
 [start=9]
 . To easily navigate between the occurrences, press Alt+Down to go to the next occurrence, and press Alt+Up to go to the previous occurrence.
@@ -117,7 +121,7 @@ image::./highlighting1.png[]
 [start=10]
 . Open the  ``customer.h``  file, located in the Headers folder, and notice that class names are again highlighted in bold.
 
-image::./highlighting2.png[]
+image::kb/docs/cnd/highlighting2.png[]
 
 
 === Using Code Completion and Documentation
@@ -130,12 +134,12 @@ The IDE also dynamically searches for documentation for the classes, functions, 
 2. On the first blank line of the  ``quote.cc`` , type a capital C and press Ctrl-Space. The code completion box displays a short list that includes the  ``Cpu``  and  ``Customer``  classes. A documentation window also opens but displays "No documentation found" because the project source does not include documentation for its code.
 3. Expand the list of items by pressing Ctrl-Space again. 
 
-image::./code_completion1.png[]
+image::kb/docs/cnd/code_completion1.png[]
 
 [start=4]
 . Use your arrow keys or mouse to highlight a standard library function such as  ``calloc``  from the list, and the documentation window displays the man page for that function if the man page is accessible to the IDE. 
 
-image::./code-completion-documentation.png[]
+image::kb/docs/cnd/code-completion-documentation.png[]
 
 [start=5]
 . Select the  ``Customer``  class and press Enter.
@@ -143,12 +147,12 @@ image::./code-completion-documentation.png[]
 [start=6]
 . Complete the new instance of the  ``Customer``  class by typing "  ``andrew;`` ". On the next line, type the letter  ``a``  and press Ctrl-Space twice. The code completion box displays a list of choices starting with the letter  ``a`` , such as method arguments, class fields, and global names, that are accessible from the current context.
 
-image::./code_completion2.png[]
+image::kb/docs/cnd/code_completion2.png[]
 
 [start=7]
 . Double-click the  ``andrew``  option to accept it and type a period after it. Press Ctrl-Space and you are provided with a list of the public methods and fields of the  ``Customer``  class.
 
-image::./code_completion3.png[]
+image::kb/docs/cnd/code_completion3.png[]
 
 [start=8]
 . Delete the code you have added.
@@ -164,12 +168,12 @@ You can add comments to your code to automatically generate documentation for yo
 [start=2]
 . Type a slash and two asterisks and press Enter. The editor inserts a Doxygen-formatted comment for the  ``readNumberOf``  class. 
 
-image::./doxygen_comment.png[]
+image::kb/docs/cnd/doxygen_comment.png[]
 
 [start=3]
 . Add some descriptive text to each of the @param lines and save the file. 
 
-image::./doxygen_comment_edited.png[]
+image::kb/docs/cnd/doxygen_comment_edited.png[]
 
 [start=4]
 . Click the  ``readNumberOf``  class to highlight it in yellow, and click one of the occurrences marks on the right to jump to a location where the class is used.
@@ -177,7 +181,7 @@ image::./doxygen_comment_edited.png[]
 [start=5]
 . Click the  ``readNumberOf``  class in the line you jumped to, and press Ctrl-Shift-Space to show the documentation that you just added for the parameters.
 
-image::./doxygen_displayed.png[]
+image::kb/docs/cnd/doxygen_displayed.png[]
 
 [start=6]
 . Click anywhere else in the file to close the documentation window, and click on the  ``readNumberOf``  class again.
@@ -201,7 +205,7 @@ To see all the available code templates, modify the code templates, create your 
 2. In the Options dialog box, select Editor, and click the Code Templates tab.
 3. Select the appropriate language from the Language drop-down list.
 
-image::./code_templates.png[]
+image::kb/docs/cnd/code_templates.png[]
 
 
 === Using Pair Completion
@@ -228,7 +232,7 @@ You can use the Find In Projects dialog box to search projects for instances of 
 [start=2]
 . In the Find In Projects dialog box, select the Default Search tab or the Grep tab. The Grep tab uses the  ``grep``  utility, which provides a faster search, especially for remote projects. 
 
-image::./find_in_projects.png[]
+image::kb/docs/cnd/find_in_projects.png[]
 
 [start=3]
 . In the Grep tab, type the text or regular expression for which you want to search, specify the search scope and file name pattern, and select the check box Open in New Tab so you can save multiple searches in separate tabs.
@@ -239,7 +243,7 @@ The Search Results tab lists the files in which the text or regular expression i
 
 Buttons in the left margin enable you to change your view of the search results.
 
-image::./find_in_projects2.png[]
+image::kb/docs/cnd/find_in_projects2.png[]
 
 [start=5]
 . Click the Expand/Collapse button to collapse the list of files so only the filenames are shown. Click the other buttons to show the search results as a directory tree or as a list of files. These options are useful when you perform a search across multiple projects.
@@ -261,7 +265,7 @@ The Classes window lets you see all of the classes in your project, and the memb
 2. Expand the  ``Quote_1``  node in the Classes window. All classes in the project are listed.
 3. Expand the  ``Customer``  class. 
 
-image::./classes_window.png[]
+image::kb/docs/cnd/classes_window.png[]
 
 [start=4]
 . Double-click the  ``name``  variable to open the  ``customer.h``  header file.
@@ -274,7 +278,7 @@ The Navigator window provides a compact view of the file that is currently selec
 1. Click anywhere in the  ``quote.cc``  file in the Editor window.
 2. A compact view of the file is displayed in the Navigator window.
 
-image::./navigator_window.png[]
+image::kb/docs/cnd/navigator_window.png[]
 
 [start=3]
 . To navigate to an element of the file, double-click the element in the Navigator window and the cursor in the Editor window moves to that element.
@@ -293,7 +297,7 @@ You can use the Usages window to show you everywhere a class (structure), functi
 2. In the Find Usages dialog box, click Find.
 3. The Usages window opens and displays all of the usages of the  ``Customer``  class in the source files of the project.
 
-image::./usages_window.png[]
+image::kb/docs/cnd/usages_window.png[]
 
 [start=4]
 . Click the arrow buttons in the left margin to step through the occurrences and show them in the Editor, or change between logical and physical view. You can also filter the information using a second column of buttons in the left margin.
@@ -306,7 +310,7 @@ The Call Graph window displays two views of the calling relationships between fu
 1. In the  ``quote.cc``  file, right-click on the  ``main``  function and choose Show Call Graph.
 2. The Call Graph window opens and displays a tree and graphical view of all functions called from the  ``main``  function.
 
-image::./call_graph1.png[]
+image::kb/docs/cnd/call_graph1.png[]
 
 If you do not see all the functions as shown here, click the third button on the left side of the Call Graph window to show "who is called from this function."
 
@@ -317,12 +321,12 @@ If you do not see all the functions as shown here, click the third button on the
 [start=4]
 . Click the second button, called Bring Into Focus, on the left side of the window to focus on the  ``endl``  function, then click the fourth button Who Calls this Function to view all the functions that call the  ``endl``  function. 
 
-image::./call_graph2.png[]
+image::kb/docs/cnd/call_graph2.png[]
 
 [start=5]
 . Expand some of the nodes in the tree to see more functions.
 
-image::./call_graph3.png[]
+image::kb/docs/cnd/call_graph3.png[]
 
 
 === Using Hyperlinks
@@ -331,17 +335,17 @@ Hyperlink navigation lets you jump from the invocation of a class, method, varia
 
 1. In the  ``cpu.cc``  file of the  ``Quote_1``  project, mouse over line 37 while pressing Ctrl. The  ``ComputeSupportMetric`` function is highlighted and an annotation displays information about the function.
 
-image::./hyperlinks1.png[]
+image::kb/docs/cnd/hyperlinks1.png[]
 
 [start=2]
 . Click the hyperlink and the editor jumps to the definition of the function.
 
-image::./hyperlinks2.png[]
+image::kb/docs/cnd/hyperlinks2.png[]
 
 [start=3]
 . Mouse over the definition while pressing Ctrl, and click the hyperlink. The editor jumps to the declaration of the function in the  ``cpu.h``  header file.
 
-image::./hyperlinks3.png[]
+image::kb/docs/cnd/hyperlinks3.png[]
 
 [start=4]
 . Click the left arrow in the editor toolbar (second button from the left) and the editor jumps back to the definition in  ``cpu.cc`` .
@@ -349,7 +353,7 @@ image::./hyperlinks3.png[]
 [start=5]
 . Hover the mouse cursor over the green circle in the left margin and see the annotation that indicates that this method overrides another method.
 
-image::./overide_annotation.png[]
+image::kb/docs/cnd/overide_annotation.png[]
 
 [start=6]
 . Click the green circle to go to the overridden method and you jump to the  ``module.h``  header file, which shows a gray circle in the margin to indicate the method is overridden.
@@ -357,7 +361,7 @@ image::./overide_annotation.png[]
 [start=7]
 . Click the gray circle and the editor displays a list of methods that override this method.
 
-image::./overridden_by_list.png[]
+image::kb/docs/cnd/overridden_by_list.png[]
 
 [start=8]
 . Click the  ``Cpu::ComputeSupportMetric``  item and you jump back to the declaration of the method in the  ``cpu.h``  header file.
@@ -371,7 +375,7 @@ The Includes Hierarchy window lets you inspect all header and source files that 
 2. Right-click on the  ``#include "module.h"``  line in the file and choose Navigate > View Includes Hierarchy.
 3. By default, the Hierarchy window displays a plain list of files that directly include the header file. Click the right-most button at the bottom of the window to change the display to a tree view. Click the second button from the right to change the display to all files that include or are included. Expand the nodes in the tree view to see all of the source files that include the header file.
 
-image::./includes_hierarchy.png[]
+image::kb/docs/cnd/includes_hierarchy.png[]
 
 
 === Using the Type Hierarchy
@@ -382,7 +386,7 @@ The Type Hierarchy window lets you inspect all subtypes or supertypes of a class
 2. Right-click on the declaration of the  ``Module``  class and choose Navigate > View Type Hierarchy.
 3. The Hierarchy window displays all of the subtypes of the Module class.
 
-image::./type_hierarchy.png[]
+image::kb/docs/cnd/type_hierarchy.png[]
 
 
 == Next Steps

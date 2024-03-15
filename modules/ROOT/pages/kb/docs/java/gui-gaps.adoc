@@ -29,6 +29,10 @@
 :description: Gap Editing Support in the NetBeans GUI Builder - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Gap Editing Support in the NetBeans GUI Builder
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 A layout of a container in the Free Design mode consists of components and gaps between these components. Both the components and gaps are visualized in the Design view of the GUI Builder. The NetBeans IDE enables you to edit gaps directly in the GUI Builder.
 
 This tutorial demonstrates how to utilize gap editing to insert new UI components between other components as well as how to center components easily around a frame in the NetBeans GUI Builder without concern for the underlying layout manager. The tutorial is intended as a guide to show how you can perform changes in an existing form in the Free Design mode to implement a specific target layout that is required by the project.
@@ -55,18 +59,18 @@ This tutorial demonstrates how to utilize gap editing to insert new UI component
 3. Click Open Project.
 The Projects window should look like the following:
 
-image::./prj.png[]
+image::kb/docs/java/prj.png[]
 
 
 
 . Double-click the  ``Initial.java``  file.
 The sample form opens in the GUI Builder Design view.
 
-image::./initialform.png[]
+image::kb/docs/java/initialform.png[]
 
 NOTE: You can view the component hierarchy of the form in the Navigator window by choosing Window > Navigator from the main toolbar.
 
-image::./navigator.png[]
+image::kb/docs/java/navigator.png[]
 
 <<top,top>>
 
@@ -80,45 +84,45 @@ To add a  ``Middle Name``  row between the  ``First Name``  and  ``Last Name``  
 1. Click on the gap between the  ``First Name``  and  ``Last Name``  labels.
 The gap is highlighted with green.
 
-image::./gap-highlighted.png[]
+image::kb/docs/java/gap-highlighted.png[]
 
 
 
 . Hover the mouse pointer over the bottom part of the highlighted gap.
 The pointer is changed to a vertical resizable one.
 
-image::./gap-resizable.png[]
+image::kb/docs/java/gap-resizable.png[]
 
 
 
 . Enlarge the selected gap to 50 by pressing the left mouse button, dragging the pointer downward, and releasing the left mouse button.
 The new size of the gap is displayed in a tooltip.
 
-image::./resizing.png[]
+image::kb/docs/java/resizing.png[]
 
 
 
 . Add a new label into the created gap by dragging it from the Swing Controls section of the Palette and dropping it so that its left edge is aligned with the left edge of the  ``First Name``  label and its top edge has the suggested preferred gap from the  ``First Name``  row.
 
-image::./jlabel.png[]
+image::kb/docs/java/jlabel.png[]
 
 
 
 . Double-click the label and change the text of the label to  ``Middle Name:`` .
 
-image::./middle-name.png[]
+image::kb/docs/java/middle-name.png[]
 
 
 
 . Add a new text field to the right of the  ``Middle Name:``  label by dragging it from the Swing Controls section of the Palette and dropping it so that it is baseline-aligned with the  ``Middle Name``  label and its left edge is aligned with the other text fields.
 
-image::./textfield.png[]
+image::kb/docs/java/textfield.png[]
 
 
 
 . Drag the right edge of the text field to align it with the right edge of the other text fields.
 
-image::./textfield-resized.png[]
+image::kb/docs/java/textfield-resized.png[]
 
 
 
@@ -126,7 +130,7 @@ image::./textfield-resized.png[]
 
 The  ``Middle Name``  row is inserted between the form components.
 
-image::./middle-inserted-gap.png[]
+image::kb/docs/java/middle-inserted-gap.png[]
 
 <<top,top>>
 
@@ -139,11 +143,11 @@ To remove the remaining space between the  ``Middle Name``  and  ``Last Name``  
 
 NOTE: The NetBeans GUI Builder supports three preferred gaps for component placement -  ``default small`` ,  ``default medium`` , and  ``default large`` .
 
-image::./default-small.png[]
+image::kb/docs/java/default-small.png[]
 
 The gap between the form components is resized by using the mouse wheel and utilizing a preferred gap.
 
-image::./middle-inserted.png[]
+image::kb/docs/java/middle-inserted.png[]
 
 <<top,top>>
 
@@ -159,25 +163,25 @@ NOTE: A container helps specify where the components should be centered. It is p
 1. Select all the four buttons in the form.
 2. Right-click the selection and choose  ``Enclose In``  >  ``Panel``  from the popup menu.
 
-image::./enclose-panel.png[]
+image::kb/docs/java/enclose-panel.png[]
 
 The buttons are enclosed into a container.
 
-image::./buttons-enclosed.png[]
+image::kb/docs/java/buttons-enclosed.png[]
 
 *To remove the newly created gaps on the left and right side of the buttons, complete the following steps:*
 
 1. Right-click one of the buttons and choose Edit Layout Space from the popup menu.
 The Edit Layout Space dialog box is displayed.
 
-image::./edit-layout-space.png[]
+image::kb/docs/java/edit-layout-space.png[]
 
 
 
 . Set the size of the Left and Right gaps to 0 and click OK.
 The gaps to the left and right of the buttons are removed using the Edit Layout Space dialog box.
 
-image::./gaps-removed.png[]
+image::kb/docs/java/gaps-removed.png[]
 
 *To make the gaps above and below the container resizable, do as follows:*
 
@@ -190,7 +194,7 @@ The Edit Layout Space dialog box is displayed.
 [.feature]
 --
 
-image::./bottom-small.png[role="left", xref="image$./bottom.png"]
+image::kb/docs/java/bottom-small.png[role="left", xref="image$./bottom.png"]
 
 --
 
@@ -203,11 +207,11 @@ The gaps above and below the container with the buttons are made resizable.
 
 Drag the bottom edge of the container with the buttons to align with the bottom edges of the lists as shown below:
 
-image::./align.png[]
+image::kb/docs/java/align.png[]
 
 The container is stretched to match the height of the  ``Available Topics``  and  ``Selected Topics``  lists. The buttons are centered within the space determined by the enclosing container since the surrounding gaps have been marked as resizable.
 
-image::./buttons-centered.png[]
+image::kb/docs/java/buttons-centered.png[]
 
 <<top,top>>
 

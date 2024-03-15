@@ -30,10 +30,14 @@
 :keywords: Apache NetBeans, Tutorials, Getting Started with RESTful Web Services
 include::front::partial$database.adoc[]
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 REpresentational State Transfer (REST) is an architectural style for distributed hypermedia systems, such as the World Wide Web. Central to the RESTful architecture is the concept of resources identified by universal resource identifiers (URIs). These resources can be manipulated using a standard interface, such as HTTP, and information is exchanged using representations of these resources. In this tutorial, you first learn a bit about REST and then you are shown how NetBeans IDE supports this architectural style.
 
 
-image::./netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
+image::kb/docs/websvc/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
 
 
 *To follow this tutorial, you need the following software and resources.*
@@ -111,13 +115,13 @@ If you use the MySQL database server instead of JavaDB (Derby), you need to regi
 
 1. Register your MySQL server in the IDE, if the server is not registered. To register a MySQL server, go to the IDE's Services window, right-click the Databases node, and select Register MySQL server. 
 
-image::./register-mysql-server.png[]
+image::kb/docs/websvc/register-mysql-server.png[]
 
 [start=2]
 . 
 A dialog opens in which you type the configuration details of your MySQL server, including administrator user name and password. See "Configuring MySQL Server Properties" in xref:kb/docs/ide/install-and-configure-mysql-server.adoc[+Connecting to a MySQL Database+].
 
-image::./basic-mysql-properties.png[]
+image::kb/docs/websvc/basic-mysql-properties.png[]
 
 [start=3]
 . Start the MySQL server and connect to it. See "Starting the MySQL Server" in xref:kb/docs/ide/install-and-configure-mysql-server.adoc[+Connecting to a MySQL Database+].
@@ -125,22 +129,22 @@ image::./basic-mysql-properties.png[]
 [start=4]
 . Right-click the MySQL server node and select Create Database. The Create MySQL Database dialog opens. 
 
-image::./create-database.png[]
+image::kb/docs/websvc/create-database.png[]
 
 [start=5]
 . Type  ``sample``  as the new database name. Grant full access to your root user, or a user of your choice.
 
-image::./new-database-name.png[]
+image::kb/docs/websvc/new-database-name.png[]
 
 [start=6]
 . Click OK. A dialog opens informing you that  ``sample``  is the name of a sample database, and asking you if you want to create the tables, objects, and data for this database.
 
-image::./create-sample-contents.png[]
+image::kb/docs/websvc/create-sample-contents.png[]
 
 [start=7]
 . Click Yes. The IDE creates and populates the database, and adds a connection to the database.
 
-image::./generated-db.png[]
+image::kb/docs/websvc/generated-db.png[]
 
 
 == Creating RESTful Web Services from a Database
@@ -178,7 +182,7 @@ When you have a Java web application, add entity classes and RESTful web service
 
 1. Right-click the  ``CustomerDB``  node and choose New > Other > Web Services > RESTful Web Services from Database. The New RESTful Web Service wizard opens, on the Database Tables panel.
 
-image::./open-wizard.png[]
+image::kb/docs/websvc/open-wizard.png[]
 
 [start=2]
 . In the Database Tables panel, if you are using the GlassFish server, select the  ``jdbc/sample``  data source from the Data Source drop-down field.
@@ -187,27 +191,27 @@ If you are using Tomcat, select jdbc:derby://localhost:1527/sample. If the Derby
 
 *Note for MySQL users:* You have to create a new data source. Select New Data Source, give it an arbitrary descriptive name, and select the  ``jdbc:mysql://localhost:3306/sample``  database connection. You created this connection when you created the sample database on MySQL. 
 
-image::./new-mysql-datasource.png[]
+image::kb/docs/websvc/new-mysql-datasource.png[]
 
 
 [start=3]
 . Under Available Tables, select CUSTOMER and then click Add. The DISCOUNT_CODE table, which has a relationship with the CUSTOMER table, is also automatically added to the Selected Tables list. If you are using a MySQL database or some versions of Derby, the MICRO_MARKET table is also added. You now see the following (Derby version): 
 
-image::./select-tables.png[title="Database Tables panel of New Entity Classes from Database wizard, showing CUSTOMER and DISCOUNT_CODE tables selected"]
+image::kb/docs/websvc/select-tables.png[title="Database Tables panel of New Entity Classes from Database wizard, showing CUSTOMER and DISCOUNT_CODE tables selected"]
 
 [start=4]
 . Click Next. The Entity Classes page opens. Type  ``entities``  for the Package name. You now see the following (Derby version).
 
 *Note:* The RESTful Web Services from Database wizard automatically generates JAXB annotations. If you generate entity classes for a Java EE application with the Entity Classes from Database wizard, and you might later want to create RESTful web services from those entity classes, make sure the Generate JAXB Annotations box is checked. You can also add JAXB annotations by hand to entity classes before running the RESTful Web Services from Entity Classes wizard. For more information, see link:http://netbeans.dzone.com/nb-generate-simpler-rest[+NetBeans to Generate Simpler RESTful Web Services+].
 
-image::./entity-classes.png[]
+image::kb/docs/websvc/entity-classes.png[]
 
 [start=5]
 . Click Next. A panel opens in which you can set the name and location of generated service classes and packages. For Java EE projects, you have the option of changing the name and location of the REST application configuration class.
 
 For this tutorial, accept the defaults and click Finish. When you click Finish the IDE generates entity and service classes. In an Java EE project, the IDE also generates an application configuration class, which is a subclass of Application.
 
-image::./class-name-location.png[]
+image::kb/docs/websvc/class-name-location.png[]
 
 The IDE now generates the RESTful web services. When the IDE is finished, look in the Projects window. The generated entity classes are in the  ``entities``  package and services are in the  ``service``  package. Java EE RESTful web services from a database instantiate  ``EntityManager``  in each service class. This removes the need for JPA controller classes and generates simpler code.
 
@@ -222,7 +226,7 @@ The goal of this exercise is to try out your application. You will create a new 
 4. Select GlassFish Server as the target server and Java EE 6 Web or Java EE 7 Web as the Java EE version. Click Finish.
 5. Right-click the  ``CustomerDB``  project node and choose Test RESTful Web Services. A dialog opens asking if you want to generate the test client inside the service project or in another Java web project. This option lets you work around security restrictions in some browsers. You can use any Web project, as long as it is configured to deploy in the same server domain as the CustomerDB project. 
 
-image::./configure-test-client.png[]
+image::kb/docs/websvc/configure-test-client.png[]
 
 [start=6]
 . Select *Web Test Client in Project* and click Browse.
@@ -241,7 +245,7 @@ If the output window shows an error message that one or more classes fails to ex
 [start=9]
 . Open your browser to link:http://localhost:8080/WebServicesTest/test-resbeans.html[+http://localhost:8080/WebServicesTest/test-resbeans.html+] 
 
-image::./test-rest1.png[title="RESTful web service tester landing page in browser"]
+image::kb/docs/websvc/test-rest1.png[title="RESTful web service tester landing page in browser"]
 
 On the left-hand side is the set of root resources. Here they are named  ``entities.customer`` ,  ``entities.discountCodes``  and  ``entities.microMarket`` .
 
@@ -249,7 +253,7 @@ On the left-hand side is the set of root resources. Here they are named  ``entit
 [start=10]
 . Click the  ``entities.customer``  node. In the "Choose method to test" field, select either GET (application/json) or GET (application/xml). Click Test. The test client sends a request and displays the result in the Test Output section. The test client dispays the Raw View by default. The following image shows the response to an application/xml request.
 
-image::./test-rest-raw.png[]
+image::kb/docs/websvc/test-rest-raw.png[]
 
 There are 5 tabs in the Test Output section.
 

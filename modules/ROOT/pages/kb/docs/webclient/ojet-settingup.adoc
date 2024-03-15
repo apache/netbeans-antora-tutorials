@@ -29,6 +29,10 @@
 :description: Setting Up an Oracle JET Application - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Setting Up an Oracle JET Application
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This document provides a step-by-step set of instructions guiding you through the process of setting up an application based on link:http://oraclejet.org[+Oracle JavaScript Extension Toolkit (JET)+]. JET empowers web and mobile developers by providing a modular toolkit based on modern JavaScript, CSS3, and HTML5 design and development principles.
 
 
@@ -97,7 +101,7 @@ ojet create MyApp --template=navdrawer
 
 After the process completes, you should have an application structured as follows:
 
-image::./navdrawer.png[]
+image::kb/docs/webclient/navdrawer.png[]
 
 Open the application into an editor or IDE of your choice, such as NetBeans IDE, which displays the application as shown in the screenshot above.
 
@@ -114,7 +118,7 @@ ojet serve
 
 After the build completes, the browser opens and displays the application:
 
-image::./newhtml5project-9.png[]
+image::kb/docs/webclient/newhtml5project-9.png[]
 
 Congratulations, you have successfully set up an Oracle JET application. Repeat the steps above whenever you need to set up a new Oracle JET application.
 

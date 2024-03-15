@@ -29,6 +29,10 @@
 :description: Adding Java Management Extensions (JMX) Instrumentation to a Java Application - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Adding Java Management Extensions (JMX) Instrumentation to a Java Application
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 *Expected duration: 60 minutes*
 
 The NetBeans JMX Wizard Module integrates JMX technology right into your workflow in the NetBeans IDE. This module allows you to quickly develop management applications, add management to existing applications, develop manager applications, and monitor the state of the Virtual Machine.
@@ -38,7 +42,7 @@ This tutorial shows you how to add management to an existing application (the Ne
 
 == Tutorial exercises
 
-image::./netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
+image::kb/docs/java/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
 
 * <<Exercise_1,Exercise 1: Creating the NetBeans sample Anagram Game project>>
 * <<Exercise_2,Exercise 2: Creating the AnagramsStats JMX Standard MBean and its Management interface>>
@@ -120,7 +124,7 @@ Perform the following steps to create the JMX Standard MBean.
 2. Choose File > New File (Ctrl-N).
 3. From the JMX category, select Standard MBean. Click Next.
 
-image::./jmx-newfile.png[title="Standard MBean file type in New File Wizard"]
+image::kb/docs/java/jmx-newfile.png[title="Standard MBean file type in New File Wizard"]
 
 
 . Enter the following information Name and Location panel:
@@ -129,7 +133,7 @@ image::./jmx-newfile.png[title="Standard MBean file type in New File Wizard"]
 * Package:  ``com.toy.anagrams.mbeans`` 
 * Description:  ``Monitoring and Management of the Anagrams Game`` 
 
-image::./jmx-newmbean.png[]
+image::kb/docs/java/jmx-newmbean.png[]
 
 
 . Click Finish.
@@ -167,7 +171,7 @@ Perform the following steps to populate the MBean skeleton.
 * Access: ReadOnly
 * Description:  ``Number of solved anagrams`` 
 
-image::./jmx-addattribute.png[]
+image::kb/docs/java/jmx-addattribute.png[]
 
 The necessary code to expose the read only  ``LastThinkingTime``  and  ``NumSolvedAnagrams``  attributes is generated in both the  ``AnagramsStats``  MBean class and its interface.
 
@@ -194,7 +198,7 @@ Next you will add three more attributes to keep track of the minimum and maximum
 
 The dialog box should be similar to the following image.
 
-image::./jmx-addattribute2.png[title="Add Attribute dialog after adding 3 more attributes"]
+image::kb/docs/java/jmx-addattribute2.png[title="Add Attribute dialog after adding 3 more attributes"]
 
 *Note.* Notice that the attributes that you already created are listed in the dialog box.
 
@@ -213,7 +217,7 @@ image::./jmx-addattribute2.png[title="Add Attribute dialog after adding 3 more a
 * Exceptions: (leave empty)
 * Description:  ``Reset MBean state`` 
 
-image::./jmx-addoperation.png[title="Adding resetAll operation in Add Operation dialog"]
+image::kb/docs/java/jmx-addoperation.png[title="Adding resetAll operation in Add Operation dialog"]
 
 After you click OK you can see that the necessary code to expose the  ``resetAll``  operation was generated in both the  ``AnagramsStats``  MBean class and its interface.
 
@@ -230,7 +234,7 @@ After you click OK you can see that the necessary code to expose the  ``resetAll
 * Notification Type: (it is automatically set to  ``ATTRIBUTE_CHANGE`` )
 * Description:  ``Anagram is Solved`` 
 
-image::./jmx-changenotification.png[title="Adding change notification in Implement NotificationEmitter dialog"]
+image::kb/docs/java/jmx-changenotification.png[title="Adding change notification in Implement NotificationEmitter dialog"]
 
 Click OK.
 
@@ -382,13 +386,13 @@ initManagement();
 
 You also need to add a  ``throws Exception``  clause to the  ``Anagrams()``  constructor and surround the statement  ``new Anagrams().setVisible(true);``  with a try-catch in the  ``Main()``  method to compile. You can see the suggestion glyph in the left margin of the editor. You can place your insert cursor in the line in the code and type Alt-Enter to invoke the code hint in the source editor.
 
-image::./jmx-initmanagement-try.png[title="Code hint to add try-catch"]
+image::kb/docs/java/jmx-initmanagement-try.png[title="Code hint to add try-catch"]
 
 Here is what you should see at this stage [click to view larger image]:
 
 [.feature]
 --
-image:./jmx-initmanagement-sm.png[role="left", xref="image$./jmx-initmanagement.png"]
+image:kb/docs/java/jmx-initmanagement-sm.png[role="left", xref="image$./jmx-initmanagement.png"]
 --
 
 
@@ -396,7 +400,7 @@ image:./jmx-initmanagement-sm.png[role="left", xref="image$./jmx-initmanagement.
 
 In the  ``Anagrams.java``  source editor window, right-click *inside* the  ``initManagement()``  method body, select the JMX submenu and then the "Generate MBean Registration..." action. In the "Instantiate and Register MBean" panel that shows up, keep the "Register Existing MBean" radio-button selected, click the Browse button, choose the  ``AnagramsStats``  MBean class and click OK in the Browse panel. You should now see:
 
-image::./jmx-registermbeandialog.png[]
+image::kb/docs/java/jmx-registermbeandialog.png[]
 
 No need to change the automatically specified MBean Object Name and Constructor. Click OK, and you will see the generated MBean registration code in the  ``initManagement()``  method body.
 
@@ -462,7 +466,7 @@ Here is what you should see at this stage [click to view larger image]:
 
 [.feature]
 --
-image:./jmx-initmanagement2-sm.png[role="left", xref="image$./jmx-initmanagement2.png"]
+image:kb/docs/java/jmx-initmanagement2-sm.png[role="left", xref="image$./jmx-initmanagement2.png"]
 --
 
 You now need to add code to track the user's anagram solving experience.
@@ -502,7 +506,7 @@ You should now see the following in the editor [click to view larger image]:
 
 [.feature]
 --
-image:./jmx-stopthinking-sm.png[role="left", xref="image$./jmx-stopthinking.png"]
+image:kb/docs/java/jmx-stopthinking-sm.png[role="left", xref="image$./jmx-stopthinking.png"]
 --
 
 You have now finished linking the JMX management layer to the application layer. In the next section you will build and run the Anagrams Game application and look at the exposed management information through the JConsole GUI.
@@ -514,21 +518,21 @@ In this exercise, you will learn how to build and run your project, and connect 
 
 Perform the following steps to run the application and view the management information.
 
-1. A single step performs these three tasks: simply click the "Run Main Project with Monitoring and Management" button in the toolbar (  image:./run-project24.png[title="Run Main Project with Monitoring and Management button"])
+1. A single step performs these three tasks: simply click the "Run Main Project with Monitoring and Management" button in the toolbar (  image:kb/docs/java/run-project24.png[title="Run Main Project with Monitoring and Management button"])
 
 You can also invoke the action from the Run menu in the main menu.
 
 *Note.* The first time that you build and run the application the IDE displays a warning dialog that informs you that the  ``build.xml``  files will be updated. You can click OK in the dialog.
 
-image::./jmx-firsttime.png[title="Warning dialog when monitoring application for the first time"]
+image::kb/docs/java/jmx-firsttime.png[title="Warning dialog when monitoring application for the first time"]
 
 You can follow the execution in the Output window.
 
-image::./jmx-compiling.png[title="Output window displaying process"]
+image::kb/docs/java/jmx-compiling.png[title="Output window displaying process"]
 
 The IDE will build and launch the Anagram game and will automatically open the JConsole window.
 
-image::./jmx-anagram.png[title="Anagram Game"]
+image::kb/docs/java/jmx-anagram.png[title="Anagram Game"]
 
 *Notes.* You might see a Connection Failed warning in the Java Monitoring &amp; Management Console when the console attempts to connect to the Anagram Game process. For this tutorial you can click Insecure when you are prompted to authorize the connection.
 
@@ -539,7 +543,7 @@ image::./jmx-anagram.png[title="Anagram Game"]
 
 . In the tree layout in the left pane, expand all the nodes under  ``com.toy.anagrams.mbeans`` . 
 
-image::./jmx-jconsole-mbeans1.png[title="MBeans tab showing AnagramsStats node"]
+image::kb/docs/java/jmx-jconsole-mbeans1.png[title="MBeans tab showing AnagramsStats node"]
 
 
 . Select the Notifications node and click on the Subscribe button at the bottom so that JConsole will receive a new notification each time an anagram is solved.
@@ -555,14 +559,14 @@ The solutions to the anagrams (abstraction, ambiguous, arithmetic, backslash,...
 [.feature]
 --
 
-image::./jmx-jconsole-mbeans2-sm.png[role="left", xref="image$./jmx-jconsole-mbeans2.png"]
+image::kb/docs/java/jmx-jconsole-mbeans2-sm.png[role="left", xref="image$./jmx-jconsole-mbeans2.png"]
 
 --
 
 
 . Click on the Attributes node and notice the attributes values are updated: 
 
-image::./jmx-jconsole-mbeans3.png[title="MBeans tab showing AnagramsStats node"]
+image::kb/docs/java/jmx-jconsole-mbeans3.png[title="MBeans tab showing AnagramsStats node"]
 
 You can experiment with the JConsole interface and the Anagrams Game. For example, if you invoke the management operation  ``resetAll()``  you will see that the MBean attribute values are reset to 0.
 

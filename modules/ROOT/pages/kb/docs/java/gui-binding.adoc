@@ -29,10 +29,14 @@
 :description: Binding Beans and Data in a Java Application - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Binding Beans and Data in a Java Application
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This guide is an introduction to the support in NetBeans IDE for beans binding and data binding in Java applications.
 
 
-image::./netbeans-stamp-80-74-73.png[title="Content on this page applies to NetBeans IDE 7.1, 7.2, 7.3, 7.4 and 8.0"]
+image::kb/docs/java/netbeans-stamp-80-74-73.png[title="Content on this page applies to NetBeans IDE 7.1, 7.2, 7.3, 7.4 and 8.0"]
 
 
 *To complete this tutorial, you need the following software and resources.*
@@ -71,7 +75,7 @@ To illustrate the concept of beans binding and how the IDE supports it, we will 
 
 [.feature]
 --
-image:./numberslider-small.png[role="left", xref="image$./numberslider.png"]
+image:kb/docs/java/numberslider-small.png[role="left", xref="image$./numberslider.png"]
 --
 
 * Clear the Create Main Class checkbox.
@@ -93,7 +97,7 @@ image:./numberslider-small.png[role="left", xref="image$./numberslider.png"]
 [.feature]
 --
 
-image::./numberslider2-small.png[role="left", xref="image$./numberslider2.png"]
+image::kb/docs/java/numberslider2-small.png[role="left", xref="image$./numberslider2.png"]
 
 --
 
@@ -115,7 +119,7 @@ The resulting form might look something like the screenshot below. However, posi
 [.feature]
 --
 
-image::./slider-textfield-small.png[role="left", xref="image$./slider-textfield.png"]
+image::kb/docs/java/slider-textfield-small.png[role="left", xref="image$./slider-textfield.png"]
 
 --
 
@@ -139,7 +143,7 @@ NOTE: Bindings can be two-way (read/write), so that changes in the target are au
 [.feature]
 --
 
-image::./bind-dialog-small.png[role="left", xref="image$./bind-dialog.png"]
+image::kb/docs/java/bind-dialog-small.png[role="left", xref="image$./bind-dialog.png"]
 
 --
 
@@ -157,7 +161,7 @@ Choose Run > Run File, to run the file.
 
 The application should start in a separate window. Adjust the slider in the running application and watch the value change in the text field.
 
-image::./run-numberslider.png[]
+image::kb/docs/java/run-numberslider.png[]
 
 
 == Binding Custom Beans
@@ -244,7 +248,7 @@ Before binding a component to data from a database, you need to have done the fo
 [.feature]
 --
 
-image::./entity-wizard1-small.png[role="left", xref="image$./entity-wizard1.png"]
+image::kb/docs/java/entity-wizard1-small.png[role="left", xref="image$./entity-wizard1.png"]
 
 --
 
@@ -255,7 +259,7 @@ image::./entity-wizard1-small.png[role="left", xref="image$./entity-wizard1.png"
 [.feature]
 --
 
-image::./entity-wizard2-small.png[role="left", xref="image$./entity-wizard2.png"]
+image::kb/docs/java/entity-wizard2-small.png[role="left", xref="image$./entity-wizard2.png"]
 
 --
 
@@ -297,7 +301,7 @@ A JTable is created and its columns are bound to the columns in the database tab
 [.feature]
 --
 
-image::./bind-dialog-table-small.png[role="left", xref="image$./bind-dialog-table.png"]
+image::kb/docs/java/bind-dialog-table-small.png[role="left", xref="image$./bind-dialog-table.png"]
 
 --
 
@@ -311,7 +315,7 @@ image::./bind-dialog-table-small.png[role="left", xref="image$./bind-dialog-tabl
 [.feature]
 --
 
-image::./source-selected-small.png[role="left", xref="image$./source-selected.png"]
+image::kb/docs/java/source-selected-small.png[role="left", xref="image$./source-selected.png"]
 
 --
 
@@ -337,7 +341,7 @@ image::./source-selected-small.png[role="left", xref="image$./source-selected.pn
 [.feature]
 --
 
-image::./jlist-binding-small.png[role="left", xref="image$./jlist-binding.png"]
+image::kb/docs/java/jlist-binding-small.png[role="left", xref="image$./jlist-binding.png"]
 
 --
 
@@ -363,7 +367,7 @@ image::./jlist-binding-small.png[role="left", xref="image$./jlist-binding.png"]
 [.feature]
 --
 
-image::./combo-binding-small.png[role="left", xref="image$./combo-binding.png"]
+image::kb/docs/java/combo-binding-small.png[role="left", xref="image$./combo-binding.png"]
 
 --
 
@@ -377,7 +381,7 @@ image::./combo-binding-small.png[role="left", xref="image$./combo-binding.png"]
 
 . Bind to the property that you want to be affected by the user selection.
 
-image::./combo-item.png[]
+image::kb/docs/java/combo-item.png[]
 
 
 
@@ -413,7 +417,7 @@ jComboBox1.setRenderer(new DefaultListCellRenderer() {
 [.feature]
 --
 
-image::./custom-small.png[role="left", xref="image$./custom.png"]
+image::kb/docs/java/custom-small.png[role="left", xref="image$./custom.png"]
 
 --
 

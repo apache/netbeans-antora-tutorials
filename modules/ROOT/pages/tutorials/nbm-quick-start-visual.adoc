@@ -30,6 +30,10 @@
 :description: NetBeans Visual Library Tutorial for Standard Java SE Applications - Apache NetBeans
 :keywords: Apache NetBeans Platform, Platform Tutorials, NetBeans Visual Library Tutorial for Standard Java SE Applications
 
+ifdef::env-github[]
+:imagesdir: ../../images
+endif::[]
+
 In this tutorial, you will learn how to use the main features provided by the  link:https://bits.netbeans.org/dev/javadoc/org-netbeans-api-visual/overview-summary.html[NetBeans Visual Library API].
 
 
@@ -41,9 +45,9 @@ In this tutorial, you will learn how to use the main features provided by the  l
 Also, you will use 3 icons in the tutorial. You can right-click them here and save them locally, then copy them to the application's location, after you create the application later in this tutorial. Here are the 3 icons:
 
 
-image::./vislib_red.gif[] 
-image::./vislib_blue.gif[] 
-image::./vislib_green.gif[]
+image::tutorials/vislib_red.gif[] 
+image::tutorials/vislib_blue.gif[] 
+image::tutorials/vislib_green.gif[]
 
 
 == Setting Up the Application
@@ -59,7 +63,7 @@ In this section, we use a wizard to create a Java application.
 In the Name and Location panel, type  ``VisLibDemo``  in the Project Name field:
 
 
-image::./vislib_71_vislib-java-1.png[]
+image::tutorials/vislib_71_vislib-java-1.png[]
 
 Click Finish. The IDE creates the  ``VisLibDemo``  project.
 
@@ -68,7 +72,7 @@ Click Finish. The IDE creates the  ``VisLibDemo``  project.
 1. Add the three images above to the main package. You should now see this:
 
 
-image::./vislib_71_vislib-java-2.png[]
+image::tutorials/vislib_71_vislib-java-2.png[]
 
 
 == Adding the Libraries
@@ -94,7 +98,7 @@ In this section, we add the NetBeans Platform JARs you need, to be able to work 
 You now have the only NetBeans Platform JARs you will need:
 
 
-image::./vislib_71_vislib-java-3.png[]
+image::tutorials/vislib_71_vislib-java-3.png[]
 
 
 == Creating the Container
@@ -142,7 +146,7 @@ public class VisLibDemo extends JPanel {
 1. Run the application and you should see a simple JFrame:
 
 
-image::./vislib_71_vislib-java-4.png[]
+image::tutorials/vislib_71_vislib-java-4.png[]
 
 Now that you have a  ``JFrame`` , a  ``JPanel`` , and a  ``JScrollPane`` , you're ready to create a scene!
 
@@ -300,7 +304,7 @@ private void initComponents() {
 1. Run the application and you should see this:
 
 
-image::./vislib_vislib-java-5.png[]
+image::tutorials/vislib_vislib-java-5.png[]
 
 Now that you have a scene with some widgets, we can begin integrating some actions!
 
@@ -342,7 +346,7 @@ protected Widget attachNodeWidget(String arg) {
 1. Run the application. Drag a widget around and notice that alignment markers appear that help the user position a widget in relation to other widgets:
 
 
-image::./vislib_vislib-java-7.png[]
+image::tutorials/vislib_vislib-java-7.png[]
 
 
 [start=3]
@@ -430,7 +434,7 @@ protected Widget attachNodeWidget(String arg0) {
 1. Run the application, select a widget, hold down the Ctrl key, and then drag the mouse to another widget. You should then be able to connect widgets to each other, like this:
 
 
-image::./vislib_vislib-java-6.png[]
+image::tutorials/vislib_vislib-java-6.png[]
 
 Now that you have a basic idea of the features that the Visual Library API provides, see the section called "NetBeans APIs for Visualizing Data" on the  xref:../kb/docs/platform.adoc[NetBeans Platform Learning Trail].
 

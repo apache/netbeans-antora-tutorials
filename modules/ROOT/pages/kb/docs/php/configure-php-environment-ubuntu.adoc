@@ -30,6 +30,9 @@
 :keywords: Apache NetBeans, Tutorials, Configuring the PHP Development Environment in Linux Ubuntu
 :page-reviewed: 2019-02-02
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
 
 This tutorial shows how to configure the PHP development environment in the Ubuntu operating system (7.10 and later). This involves installing and configuring the PHP engine, a MySQL database, an Apache web server, and the XDebug debugger.
 
@@ -97,7 +100,7 @@ After you set up your PHP web stack, check that it is installed correctly and th
 
 To check that Apache and PHP are installed and running, open NetBeans IDE and xref:./project-setup.adoc[+create a PHP project+]. In the  ``index.php``  file, enter the PHP method  ``phpinfo()`` . Run the file. The standard PHP information page should display. 
 
-image::./ubuntu-phpinfo.png[]
+image::kb/docs/php/ubuntu-phpinfo.png[]
 
 [[troubleshooting]]
 ==== Troubleshooting
@@ -188,7 +191,7 @@ with
 <Directory /home/user/public_html/>
 ----
 
-image::./ubuntu-change-directory-root.png[]
+image::kb/docs/php/ubuntu-change-directory-root.png[]
 
 
 . Save the file  ``mysite`` 

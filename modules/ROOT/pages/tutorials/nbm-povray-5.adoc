@@ -30,6 +30,10 @@
 :description: Writing POV-Ray Support for NetBeans V—Creating an API - Apache NetBeans
 :keywords: Apache NetBeans Platform, Platform Tutorials, Writing POV-Ray Support for NetBeans V—Creating an API
 
+ifdef::env-github[]
+:imagesdir: ../../images
+endif::[]
+
 This is a continuation of the tutorial for building a POV-Ray rendering application on the NetBeans Platform. If you have not read the  xref:./nbm-povray-1.adoc[first],  xref:./nbm-povray-2.adoc[second],  xref:./nbm-povray-3.adoc[third], and  xref:./nbm-povray-4.adoc[fourth] parts of this tutorial, you may want to start there.
 
 
@@ -50,7 +54,7 @@ So it's generally healthy for the codebase to do it this way.
 1. Right-click the application's Modules node and choose Add New, as shown below:
 
 
-image::./povray_71_ch5_pic1.png[]
+image::tutorials/povray_71_ch5_pic1.png[]
 
 This is a faster mechanism for creating new modules, compared to going to File | New Project and then clicking through to the New Module wizard.
 
@@ -66,7 +70,7 @@ This is a faster mechanism for creating new modules, compared to going to File |
 Right-click the Libraries node of the Povray API project and choose Add Module Dependency.
 
 
-image::./povray_71_ch5_pic2.png[]
+image::tutorials/povray_71_ch5_pic2.png[]
 
 This is a faster mechanism for setting new module dependencies, compared to going to using the Project Properties window to do so.
 
@@ -169,7 +173,7 @@ Click the Autoload radio button—this means this module is a library—it will 
 The dialog should now look as follows:
 
 
-image::./povray_71_ch5_pic3.png[]
+image::tutorials/povray_71_ch5_pic3.png[]
 
 
 [start=9]

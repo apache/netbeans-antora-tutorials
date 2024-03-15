@@ -29,6 +29,10 @@
 :description: Using the Embedded EJB Container to Test Enterprise Applications - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Using the Embedded EJB Container to Test Enterprise Applications
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 This tutorial demonstrates how to create and run JUnit tests for a Java EE enterprise application. In this tutorial you will create a web application with an entity class and a session bean. You will first create a JUnit test class for the session bean and run the test in the embedded EJB container. You will then add an entity class to the project and modify the test class to add a test method for the entity class.
 
 *Tutorial Exercises*
@@ -135,7 +139,7 @@ In this exercise you will create a test class for the session bean that will tes
 2. Select JUnit in the Frameworks dropdown list.
 3. Use the default values in the Create Tests dialog box. Click OK.
 
-image::./create-tests-dialog.png[title="Create Tests dialog"]
+image::kb/docs/javaee/create-tests-dialog.png[title="Create Tests dialog"]
 
 NOTE:  The first time that you create a JUnit unit test you need to specify the JUnit version. Select JUnit 4.x in the Select JUnit Version dialog box and click Select.
 
@@ -145,7 +149,7 @@ In the Projects window you can see that the IDE generated the test class under t
 
 If you expand the Test Libraries node in the Projects window, you can see that the IDE automatically added GlassFish Server (embeddable container) and JUnit 4.x as test libraries. If you expand the GlassFish Server library, you can see that the library contains the  ``glassfish-embedded-static-shell.jar`` .
 
-image::./embedded-static-shell-jar.png[title="Structure of project in the Projects window"]
+image::kb/docs/javaee/embedded-static-shell-jar.png[title="Structure of project in the Projects window"]
 
 NOTE:  The  ``glassfish-embedded-static-shell.jar``  JAR does not contain the sources for the embedded EJB container. The  ``glassfish-embedded-static-shell.jar``  JAR requires a local installation of GlassFish. The classpath for the local GlassFish installation is determined by the target server for the project. You can change the target server in the project's Properties dialog box.
 
@@ -175,7 +179,7 @@ public void testAddNumbers() throws Exception {
 
 When you run the test, the Test Results window opens in the IDE and displays the progress and results of the test.
 
-image::./test-results1.png[title="Test Results window"]
+image::kb/docs/javaee/test-results1.png[title="Test Results window"]
 
 You will see output similar to the following in the Output window.
 
@@ -355,7 +359,7 @@ public class MyBeanTest {
 
 If you run the test again to confirm that the container is created and shut down correctly, you will see output similar to the following in the Test Results window.
 
-image::./test-results2a.png[title="Test Results window"]
+image::kb/docs/javaee/test-results2a.png[title="Test Results window"]
 
 You can see that the  ``setUpClass``  method ran before the  ``addNumbers``  test and printed "Opening the container".
 
@@ -377,7 +381,7 @@ In this section you will use the New Entity Class wizard to create an entity cla
 6. Use the default Persistence Unit Name and Persistence Provider.
 7. Select  ``jdbc/sample``  as the data source and Drop and Create as the strategy. Click Finish.
 
-image::./create-entity-wizard.png[title="Create Entity Class dialog"]
+image::kb/docs/javaee/create-entity-wizard.png[title="Create Entity Class dialog"]
 
 When you click Finish, the new entity class opens in the editor. If you expand the Configuration Files node in the Projects window, you can see that the IDE automatically generated the  ``persistence.xml``  file that defines the properties of the persistence unit  ``WebAppJUnitPU`` .
 
@@ -566,7 +570,7 @@ public void testInsert() throws Exception {
 
 The Test Results window will open and display output that is similar to the following.
 
-image::./test-results2b.png[title="Test Results window after adding testInsert test"]
+image::kb/docs/javaee/test-results2b.png[title="Test Results window after adding testInsert test"]
 
 You can see the progress of the tests and the order in which the tests were run from the print messages that were added to the test class.
 

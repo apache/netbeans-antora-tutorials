@@ -29,6 +29,10 @@
 :description: Developing a Java Management Extensions (JMX) Manager and Connecting to a Remote JMX Agent - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Developing a Java Management Extensions (JMX) Manager and Connecting to a Remote JMX Agent
 
+ifdef::env-github[]
+:imagesdir: ../../../../images
+endif::[]
+
 *Expected duration: 30 minutes*
 
 The NetBeans JMX Wizard Module integrates JMX technology right into your workflow in the NetBeans IDE. This module allows you to quickly develop management applications, add management to existing applications, develop manager applications, and monitor the state of the Virtual Machine.
@@ -43,7 +47,7 @@ This tutorial shows you how to perform the following actions:
 
 == Tutorial Exercises
 
-image::./netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
+image::kb/docs/java/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
 
 * <<Exercise_1,Creating the Management Sample Anagram Project>>
 * <<Exercise_2,Running the Agent>>
@@ -96,7 +100,7 @@ The goal of this exercise is to create a JMX agent to which the manager applicat
 2. In Samples, select the JMX category.
 3. Select the Anagram Game Managed with JMX project. 
 
-image::./jmx-newproject.png[title="Anagram Game Managed with JMX in New Project wizard"]
+image::kb/docs/java/jmx-newproject.png[title="Anagram Game Managed with JMX in New Project wizard"]
 
 
 . Click Next. There is no need to change the already the default project name and location values. Confirm that Set as Main Project is selected and click Finish.
@@ -114,7 +118,7 @@ The goal of this exercise is to start a Java application with the JMX remote man
 4. Deselect *Attach JConsole to Project*.
 5. Select *Enable RMI Remote Access*. Click OK.
 
-image::./jmx-properties1.png[title="Monitoring and Management category in project Properties dialog"]
+image::kb/docs/java/jmx-properties1.png[title="Monitoring and Management category in project Properties dialog"]
 
 You can provide a port on which the agent waits for incoming JMX requests. In this tutorial, we just keep the default port (1099). If you provided another port number, you would have to make the appropriate changes in every part of this tutorial. Also, in this tutorial, we do not specify a properties file. (For your own applications, we provide a wizard to help you create a management properties file.)
 
@@ -122,11 +126,11 @@ You can provide a port on which the agent waits for incoming JMX requests. In th
 
 . Choose Debug > Run Main Project with Monitoring and Management from the main menu to launch the Anagram Game application.
 
-Alternatively, click the Run Main Project with Monitoring and Management button in the toolbar (  image:./run-project24.png[title="Run Main Project with Monitoring and Management button"]).
+Alternatively, click the Run Main Project with Monitoring and Management button in the toolbar (  image:kb/docs/java/run-project24.png[title="Run Main Project with Monitoring and Management button"]).
 
 When you run the application the Anagram Game window will open. The JVM is listening for RMI access on local host port 1099. The JMX agent is running and waiting for the manger to send management requests.
 
-image::./jmx-anagram.png[title="Anagram Game"]
+image::kb/docs/java/jmx-anagram.png[title="Anagram Game"]
 
 You can minimize the Anagrams window, but do not quit the application.
 
@@ -141,7 +145,7 @@ In this exercise you will create a Java application project named  ``JMXAnagramM
 1. Choose File > New Project (Ctrl-Shift-N).
 2. Choose Java Application in the Java category. Click Next.
 
-image::./jmx-newjavaproject.png[title="New Java Project wizard"]
+image::kb/docs/java/jmx-newjavaproject.png[title="New Java Project wizard"]
 
 
 . Type *JMXAnagramManager* as the Project Name.
@@ -161,7 +165,7 @@ In this exercise, you will learn how to use the JMX Manager wizard to generate a
 1. Confirm that the JMXAnagramManager project is set as the main project.
 2. Choose File > New File (Ctrl-N; ⌘-N on Mac) and select JMX Manager in the JMX category. Click Next.
 
-image::./jmx-newjmxmanager.png[title="JMX Manager template in New File wizard"]
+image::kb/docs/java/jmx-newjmxmanager.png[title="JMX Manager template in New File wizard"]
 
 
 . Type *AnagramsManager* as the Class Name.
@@ -180,7 +184,7 @@ image::./jmx-newjmxmanager.png[title="JMX Manager template in New File wizard"]
 
 The RMI JMX Agent URL dialog box helps you enter a valid JMX URL, composed of a Protocol, a Host, a Port and an URL path.
 
-image::./jmx-jmxagenturl.png[title="default values in RMI JMX Agent URL dialog box"]
+image::kb/docs/java/jmx-jmxagenturl.png[title="default values in RMI JMX Agent URL dialog box"]
 
 A single element is provided in the protocol drop-down list. The Protocol field is writable, enabling you to enter your own protocol. The default protocol RMI JVM Agent is the RMI protocol used to connect to a JDK JMX agent. The Agent that you started earlier in this tutorial is of this nature.
 
@@ -194,7 +198,7 @@ When you click OK the JMX Agent URL field is updated with the full URL according
 [.feature]
 --
 
-image::./jmx-jmxagenturl2-sm.png[role="left", xref="image$./jmx-jmxagenturl2.png"]
+image::kb/docs/java/jmx-jmxagenturl2-sm.png[role="left", xref="image$./jmx-jmxagenturl2.png"]
 
 --
 

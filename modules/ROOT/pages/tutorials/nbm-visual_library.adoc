@@ -30,6 +30,10 @@
 :description: NetBeans Visual Library Tutorial - Apache NetBeans
 :keywords: Apache NetBeans Platform, Platform Tutorials, NetBeans Visual Library Tutorial
 
+ifdef::env-github[]
+:imagesdir: ../../images
+endif::[]
+
 In this tutorial, you will learn how to use the main features provided by the  link:https://bits.netbeans.org/dev/javadoc/org-netbeans-api-visual/overview-summary.html[NetBeans Visual Library API]. The library provides a set of reusable pieces, called "widgets". When you compose them together, you are able to create a visualization in a simple and flexible way. Each widget has, built into it, various properties, such as "layout", "border", and "actions". The set of predefined widgets provided by the library can be extended.
 
 All the pluggable pieces are declared as interfaces or abstract classes, such as "WidgetAction", "Anchor", "AnchorShape", "PointShape", "Animator", "Border", "GraphLayout", "LookFeel", "Layout", "SceneLayout", "Router", and "CollisionsCollector".
@@ -47,9 +51,9 @@ In summary, the Visual Library API is a visualization API, useful in the context
 Also, you will use 3 icons in the tutorial. You can right-click them here and save them locally, then copy them to the module project's location, after you create the module project later in this tutorial. Here are the 3 icons:
 
 
-image::./vislib_image1.png[] 
-image::./vislib_image2.png[] 
-image::./vislib_image3.png[]
+image::tutorials/vislib_image1.png[] 
+image::tutorials/vislib_image2.png[] 
+image::tutorials/vislib_image3.png[]
 
 All the information you need to know for working with the Visual Library API is collected at these two locations:
 
@@ -85,7 +89,7 @@ Type  ``Shape``  in Class Name Prefix. Optionally, add an icon with a dimension 
 A Java class is created, named  ``ShapeTopComponent`` . Open this file in "Design" mode. You should now see this:
 
 
-image::./vislib_71_shapetopcomponent.png[]
+image::tutorials/vislib_71_shapetopcomponent.png[]
 
 
 [start=6]
@@ -173,7 +177,7 @@ Notice that we are creating two views. The first will be a large view for visual
 A new instance of the application starts up. When the module installs, look under the Window menu and you will find a new menu item called "Shape", at the top of the list of menu items. Choose it and you will see the start of your Visual Library API implementation:
 
 
-image::./vislib_firstscene.png[]
+image::tutorials/vislib_firstscene.png[]
 
 
 == Creating a Component Palette for the Scene
@@ -213,14 +217,14 @@ associateLookup( Lookups.singleton(PaletteSupport.createPalette() ));
 Place the images found at the start of this tutorial into the  ``org.netbeans.shapesample.palette``  package. The Projects window should now look as follows:
 
 
-image::./vislib_71_proj-window.png[]
+image::tutorials/vislib_71_proj-window.png[]
 
 
 [start=6]
 1. Install the module again. The new Component Palette is shown to the right of the scene:
 
 
-image::./vislib_firstpalette.png[]
+image::tutorials/vislib_firstpalette.png[]
 
 When you try to drag and drop a widget onto the scene, nothing happens because you need a  ``LayerWidget``  on which you will be able to drop your widgets. You will be shown how to do so in the next section.
 
@@ -379,7 +383,7 @@ Notice that we set the image retrieved from the node. We also generate a random 
 Now you can drag and drop items from the palette. As you drag an item over the scene, you will see the drag image. When you drop an item, it becomes a widget and is visible within the scene as well as within the satellite view, as you can see here:
 
 
-image::./vislib_finishedscene.png[]
+image::tutorials/vislib_finishedscene.png[]
 
 
 == Adding Functionality to the Scene
@@ -405,10 +409,10 @@ getActions().addAction(ActionFactory.createZoomAction());
 While holding CTRL key, use the mouse wheel to zoom in and out of the scene:
 
 
-image::./vislib_zoom.png[]
+image::tutorials/vislib_zoom.png[]
 
 
-image::./vislib_unzoom.png[]
+image::tutorials/vislib_unzoom.png[]
 
 NOTE:  The shapes are rendered as images. SVG is currently not supported.
 
@@ -431,12 +435,12 @@ Earlier we added  `` link:https://bits.netbeans.org/dev/javadoc/org-netbeans-api
 The  ``InplaceEditorAction``  will let the user change the label:
 
 
-image::./vislib_editable.png[]
+image::tutorials/vislib_editable.png[]
 
 The  ``SelectAction``  will change the color of the label when the widget is selected, while the  ``HoverAction``  will change the color of the label when the mouse hovers over the widget:
 
 
-image::./vislib_selectable-hoverable.png[]
+image::tutorials/vislib_selectable-hoverable.png[]
 
 
 [start=1]

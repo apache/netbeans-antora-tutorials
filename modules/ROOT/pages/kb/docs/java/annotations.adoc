@@ -31,9 +31,9 @@
 
 This two-part tutorial demonstrates how you can attach annotation processors to a project and use them while working on your code in the IDE. NetBeans IDE includes built-in support for custom annotation processors. Now you can conveniently specify annotation processors to run with your project and see the results of annotation processing directly in the Java Editor through code completion and navigation.
 
-The xref:./annotations-lombok.adoc[+first part of the tutorial+] shows the use of the third-party annotation processor, link:http://projectlombok.org/[+Project Lombok+], in the NetBeans IDE.
+The xref:kb/docs/java/annotations-lombok.adoc[+first part of the tutorial+] shows the use of the third-party annotation processor, link:http://projectlombok.org/[+Project Lombok+], in the NetBeans IDE.
 
-The xref:./annotations-custom.adoc[+second part of the tutorial+] provides explanations of how to add a self-written annotation processor to a project. The sample code for this part of the tutorial is contributed by Jesse Glick.
+The xref:kb/docs/java/annotations-custom.adoc[+second part of the tutorial+] provides explanations of how to add a self-written annotation processor to a project. The sample code for this part of the tutorial is contributed by Jesse Glick.
 
 
 == Requirements
@@ -120,6 +120,6 @@ Add options that should be passed to the annotation processor associated with yo
 
 Read the following parts of the tutorial to learn how to use annotations in the IDE.
 
-* xref:./annotations-lombok.adoc[+Part I: Using Project Lombok for Custom Annotations+]
-* xref:./annotations-custom.adoc[+Part II: Using Own Custom Annotation Processor in the IDE+]
+* xref:kb/docs/java/annotations-lombok.adoc[+Part I: Using Project Lombok for Custom Annotations+]
+* xref:kb/docs/java/annotations-custom.adoc[+Part II: Using Own Custom Annotation Processor in the IDE+]
 

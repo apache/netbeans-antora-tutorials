@@ -149,6 +149,6 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 For additional information on using NetBeans IDE in a collaborative environment, see the following resources.
 
-* xref:./subversion.adoc[+Guided Tour of Subversion+]
+* xref:kb/docs/ide/subversion.adoc[+Guided Tour of Subversion+]
 * xref:kb/docs/tools.adoc[+Integration with External Tools and Services Learning Trail+]
 * link:http://www.oracle.com/pls/topic/lookup?ctx=nb8000&id=NBDAG348[+Working in a Collaborative Environment+] in _Developing Applications with NetBeans IDE_

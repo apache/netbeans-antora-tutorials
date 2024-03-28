@@ -55,7 +55,7 @@ JavaCC is a generator for Java lexers and Java parsers. A Java lexer and parser 
 
 This tutorial focuses specifically on lexers. Lexical analysis, or "lexing", is the process of converting a sequence of characters into a sequence of tokens. Functionality that performs lexical analysis is called a lexical analyzer, a lexer, or a scanner. In this tutorial, the term "lexer" will be used. A lexer typically exists as a single function called by a parser. For example, while a typical lexer recognizes parentheses as tokens, it does nothing to ensure that an opening parentheses is matched by a closing parentheses, which is a task for a parser.
 
-Part 2 of this tutorial, the  xref:./nbm-javacc-parser.adoc[JavaCC Parser Generator Integration Tutorial], shows you how to create a parser that parses the same text that the lexer in this tutorial lexes.
+Part 2 of this tutorial, the  xref:tutorials/nbm-javacc-parser.adoc[JavaCC Parser Generator Integration Tutorial], shows you how to create a parser that parses the same text that the lexer in this tutorial lexes.
 
 The NetBeans Platform provides hooks for integrating a lexer into your own Java desktop application on the NetBeans Platform. For example, in this tutorial, you use a sample grammar specification provided by JavaCC to generate a lexer and use it to create syntax coloring in an editor for a simplified Java language defined by the sample grammar specification:
 
@@ -93,7 +93,7 @@ The project contains all of your sources and project metadata, such as the proje
 
 In this section, we use a wizard to create the classes necessary for recognizing "SimpleJava" files, for which we will create the new "text/x-sj" MIME type, which will recognize files with ".sj" as their file extension.
 
-NOTE:  For details on the steps below, follow the  xref:./nbm-filetype.adoc[File Type Integration Tutorial].
+NOTE:  For details on the steps below, follow the  xref:tutorials/nbm-filetype.adoc[File Type Integration Tutorial].
 
 
 [start=1]
@@ -128,7 +128,7 @@ image:tutorials/javacc_71_JavaIcon.gif[]
 
 image::tutorials/javacc_72_code-4.png[]
 
-The newly generated files above are described in the  xref:./nbm-filetype.adoc[File Type Integration Tutorial].
+The newly generated files above are described in the  xref:tutorials/nbm-filetype.adoc[File Type Integration Tutorial].
 
 
 [start=5]
@@ -976,15 +976,14 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 == Next Steps
 
-This tutorial is the official version of the first part of  xref:wiki::wiki/How_to_create_support_for_a_new_language.adoc[http://wiki.netbeans.org/How_to_create_support_for_a_new_language], which, aside from being a rough draft, is partly obsolete and out of date for the NetBeans Platform.
+This tutorial is the official version of the first part of xref:wiki::wiki/How_to_create_support_for_a_new_language.adoc[], which, aside from being a rough draft, is partly obsolete and out of date for the NetBeans Platform.
 
-Part 2 of this tutorial, the  xref:./nbm-javacc-parser.adoc[JavaCC Parser Generator Integration Tutorial], shows you how to create a parser that parses the same text that the lexer in this tutorial lexes.
+Part 2 of this tutorial, the  xref:tutorials/nbm-javacc-parser.adoc[JavaCC Parser Generator Integration Tutorial], shows you how to create a parser that parses the same text that the lexer in this tutorial lexes.
 
 For more information about creating and developing NetBeans modules, see the following resources:
 
-*  link:https://netbeans.apache.org/platform/index.html[NetBeans Platform Homepage]
+*  xref:kb/docs/platform.adoc[NetBeans Platform Homepage]
 *  link:https://bits.netbeans.org/dev/javadoc/[NetBeans API List (Current Development Version)]
-*  xref:../kb/docs/platform.adoc[Other Related Tutorials]
 
 [[appendix]]
 == Appendix

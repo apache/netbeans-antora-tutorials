@@ -938,8 +938,8 @@ For more information about Java web development, see the following resources.
 
 * *NetBeans Articles and Tutorials*
 * xref:kb/docs/ide/mysql.adoc[+Connecting to a MySQL Database in NetBeans IDE+]. Covers the basics of working with a MySQL database in the IDE.
-* xref:./jsf20-intro.adoc[+Introduction to JavaServer Faces 2.x+]. An introductory tutorial describing how to use the JSF framework in a Java web project.
-* xref:./quickstart-webapps-spring.adoc[+Introduction to the Spring Framework+]. An introductory tutorial describing how to create an MVC web application using the Spring Framework.
+* xref:kb/docs/web/jsf20-intro.adoc[+Introduction to JavaServer Faces 2.x+]. An introductory tutorial describing how to use the JSF framework in a Java web project.
+* xref:kb/docs/web/quickstart-webapps-spring.adoc[+Introduction to the Spring Framework+]. An introductory tutorial describing how to create an MVC web application using the Spring Framework.
 * *Java Database Connectivity (JDBC)*
 * link:http://docs.oracle.com/javase/tutorial/jdbc/overview/index.html[+JDBC Overview+]
 * link:http://download.oracle.com/javase/6/docs/technotes/guides/jdbc/getstart/GettingStartedTOC.fm.html[+Getting Started with the JDBC API+]

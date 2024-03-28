@@ -52,7 +52,7 @@ endif::[]
 |===
 
 
-See the xref:front::download/index.adoc[NetBeans IDE Installation Instructions] and xref:./cpp-setup-instructions.adoc[Configuring the NetBeans IDE for C/C{pp}/Fortran]
+See the xref:front::download/index.adoc[NetBeans IDE Installation Instructions] and xref:kb/docs/cnd/cpp-setup-instructions.adoc[Configuring the NetBeans IDE for C/C{pp}/Fortran]
 for information about downloading and installing the required NetBeans software.
 
 
@@ -275,7 +275,7 @@ In Cygwin you can install CUnit using the standard Cygwin installer, setup-x86.e
 
 Be sure to use the correct version. You must use 64-bit Cygwin and CUnit if you are running 64-bit NetBeans IDE.
 
-If you have not yet installed Cygwin, see the general Cygwin installation info in xref:./cpp-setup-instructions.adoc#cygwin[Configuring NetBeans IDE for C/C{pp}/Fortran]. You can install CUnit by selecting it in the Libs category in the setup program.
+If you have not yet installed Cygwin, see the general Cygwin installation info in xref:kb/docs/cnd/cpp-setup-instructions.adoc#cygwin[Configuring NetBeans IDE for C/C{pp}/Fortran]. You can install CUnit by selecting it in the Libs category in the setup program.
 
 [[project]]
 == Create the Project for the Tutorial
@@ -463,7 +463,7 @@ image::kb/docs/cnd/c-unit-test-fail-annotation.png[]
 
 == Debug My CUnit Test
 
-You can debug tests using the same techniques you use to debug your project source files, as described in the xref:./debugging.adoc[Debugging C/C{pp} Projects Tutorial].
+You can debug tests using the same techniques you use to debug your project source files, as described in the xref:kb/docs/cnd/debugging.adoc[Debugging C/C{pp} Projects Tutorial].
 
 1. In the Projects window, right-click the My CUnit Test folder and select Step Into Test.
 

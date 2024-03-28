@@ -41,7 +41,7 @@ link:http://bits.netbeans.org/media/nb71_overview_video_smaller.mp4[+Download th
 
 == Related Links
 
-* xref:../index.adoc[+NetBeans IDE Tutorials+]
+* xref:kb/docs/index.adoc[+NetBeans IDE Tutorials+]
 * xref:front::community/index.adoc[+NetBeans Community+]
 
 xref:front::community/mailing-lists.adoc[Send Us Your Feedback]

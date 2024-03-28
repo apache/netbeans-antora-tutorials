@@ -35,7 +35,7 @@ endif::[]
 
 The Oracle Cloud is an enterprise cloud for business. The Oracle Cloud offers self-service business applications delivered on an integrated development and deployment platform with tools to rapidly extend and create new services. For more information about Oracle Cloud, see the link:https://cloud.oracle.com[+Oracle Cloud homepage+].
 
-This document shows you how to register the Oracle Cloud with NetBeans IDE and some of the Oracle Cloud features that are supported in the IDE. This document discusses some of the advantages and disadvantages of working completely on the Cloud versus working with a local server and then deploying to the Cloud. At the end you create a simple web application, following the instructions in xref:./quickstart-webapps.adoc[+Introduction to Web Applications+], and run it on Oracle Cloud.
+This document shows you how to register the Oracle Cloud with NetBeans IDE and some of the Oracle Cloud features that are supported in the IDE. This document discusses some of the advantages and disadvantages of working completely on the Cloud versus working with a local server and then deploying to the Cloud. At the end you create a simple web application, following the instructions in xref:kb/docs/web/quickstart-webapps.adoc[+Introduction to Web Applications+], and run it on Oracle Cloud.
 
 You might also want to look at the link:https://blogs.oracle.com/javatraining/entry/oracle_cloud_development_with_netbeans[+Oracle Cloud Development with NetBeans and Eclipse (OEPE)+] series of tutorials on the Java Training Beat blog.
 
@@ -191,7 +191,7 @@ image::kb/docs/web/run-properties.png[]
 
 == Creating a Web Application
 
-Go to xref:./quickstart-webapps.adoc[+Introduction to Developing Web Applications+] and complete that tutorial. Develop the web application on a local Oracle WebLogic server. After the application is complete, change the server to Oracle Cloud Remote and run the application.
+Go to xref:kb/docs/web/quickstart-webapps.adoc[+Introduction to Developing Web Applications+] and complete that tutorial. Develop the web application on a local Oracle WebLogic server. After the application is complete, change the server to Oracle Cloud Remote and run the application.
 
 *Note.* You need to install Oracle WebLogic Server locally and register the server with the IDE. See xref:kb/docs/javaee/weblogic-javaee-m1-screencast.adoc[+Video of Deploying a Web Application to Oracle WebLogic Server+] for more information.
 
@@ -207,7 +207,7 @@ NetBeans IDE and Oracle Cloud can be used in use cases where you have an Oracle 
 
 *Important: *The Oracle Cloud Remote WebLogic server does not support JPA 2.0. If your on-premises WebLogic server is JPA 2.0-enabled, either disable JPA 2.0 or use a JPA 1.0 persistence provider for CRUD applications.
 
-*Note: *This document gives only brief directions for creating entity classes and JSF pages. For a more detailed treatment, see xref:./jsf20-crud.adoc[+Generating a JavaServer Faces 2.0 CRUD Application from a Database+].
+*Note: *This document gives only brief directions for creating entity classes and JSF pages. For a more detailed treatment, see xref:kb/docs/web/jsf20-crud.adoc[+Generating a JavaServer Faces 2.0 CRUD Application from a Database+].
 
 *To create a CRUD Application with JSF:*
 

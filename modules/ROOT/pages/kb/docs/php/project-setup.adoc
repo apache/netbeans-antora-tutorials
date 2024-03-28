@@ -121,7 +121,7 @@ The document root is the folder where the local web server looks for files to op
 
 
 . If you want to store NetBeans metadata in a different location than your source files, select "Put NetBeans metadata into a separate directory." For example, you might want to store your sources in your document root but the NetBeans metadata in your NetBeansProjects directory.
-. Click Next. The Remote Connection panel opens. The tutorial xref:./remote-hosting-and-ftp-account.adoc[+Deploying a PHP Application to a Remote Web Server+] describes how to set up remote connections.
+. Click Next. The Remote Connection panel opens. The tutorial xref:kb/docs/php/remote-hosting-and-ftp-account.adoc[+Deploying a PHP Application to a Remote Web Server+] describes how to set up remote connections.
 
 
 == Specifying the Default Run Configuration of the New Project
@@ -136,7 +136,7 @@ A run configuration is a stored setting for running a PHP project. You can defin
 When you create a new PHP project, you create the project's default run configuration. To set the default run configuration for your project, choose the relevant option from the Run As dropdown list on the Run Configuration panel. The following options are available:
 
 * <<localServer,Local Web Site>>. To use this run configuration, you need the xref:kb/docs/php.adoc#configuration[+Apache http server installed+] and running.
-* xref:./remote-hosting-and-ftp-account.adoc[+Remote Web Site (FTP/SFTP) (Separate tutorial)+]. To use this configuration, you need a xref:./remote-hosting-and-ftp-account.adoc#registerHostingAccount[+hosting account+] on a remote server and an xref:./remote-hosting-and-ftp-account.adoc#createFTPAccount[+FTP account+] on this server.
+* xref:kb/docs/php/remote-hosting-and-ftp-account.adoc[+Remote Web Site (FTP/SFTP) (Separate tutorial)+]. To use this configuration, you need a xref:kb/docs/php/remote-hosting-and-ftp-account.adoc#registerHostingAccount[+hosting account+] on a remote server and an xref:kb/docs/php/remote-hosting-and-ftp-account.adoc#createFTPAccount[+FTP account+] on this server.
 * <<scriptCommandLine,Script>>. This run configuration does not require that a web server be installed and running. You only need a xref:kb/docs/php.adoc#configuration[+PHP engine+].
 
 The process for creating additional run configurations, or editing the default run configuration, is described in <<runConfiguration,Customizing the Project Setup: Run Configuration>>. It is almost identical to the process for creating the default run configuration, except that you use the Properties dialog of the existing project instead of the new project wizard.
@@ -165,7 +165,7 @@ The wizard detects the Apache installation type, either a component or within a 
 
 === Remote Web Site
 
-See the tutorial xref:./remote-hosting-and-ftp-account.adoc[+Deploying a PHP Application to a Remote Web Server+].
+See the tutorial xref:kb/docs/php/remote-hosting-and-ftp-account.adoc[+Deploying a PHP Application to a Remote Web Server+].
 
 
 === Script

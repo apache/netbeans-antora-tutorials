@@ -36,9 +36,9 @@ endif::[]
 
 In this tutorial, you will learn about a different approach to creating widgets in Visual Library scenes. Other approaches are described in other tutorials:
 
-*  xref:./nbm-visual_library.adoc[NetBeans Visual Library Tutorial.] In this introductory tutorial to the Visual Library, you are shown how widgets can be created when the user drags-and-drops an item from the Component Palette.
-*  xref:./nbm-visual_library2.adoc[NetBeans Visual Database Explorer Tutorial.] In this tutorial, you are shown how widgets can be created from tables in a database via a database connection in the Services window.
-*  xref:./nbm-visual_library3.adoc[NetBeans Visual Library Tutorial for Java Applications.] In this tutorial aimed at general Java SE applications, you are shown how widgets can be generated from the constructor of a NetBeans Visual Library Scene class.
+*  xref:tutorials/nbm-visual_library.adoc[NetBeans Visual Library Tutorial.] In this introductory tutorial to the Visual Library, you are shown how widgets can be created when the user drags-and-drops an item from the Component Palette.
+*  xref:tutorials/nbm-visual_library2.adoc[NetBeans Visual Database Explorer Tutorial.] In this tutorial, you are shown how widgets can be created from tables in a database via a database connection in the Services window.
+*  xref:tutorials/nbm-visual_library3.adoc[NetBeans Visual Library Tutorial for Java Applications.] In this tutorial aimed at general Java SE applications, you are shown how widgets can be generated from the constructor of a NetBeans Visual Library Scene class.
 
 In this tutorial, widgets are created in a slightly different way, more common to typical Visual Library scenarios. When the user clicks in a scene, a dialog will appear, where the user can specify certain attributes of the widget, after which the widget itself will be created. In other words, in contrast to the above tutorials, widgets will be created on-demand, that is, when the user requires them, when clicking in the scene, that is, without using the Component Palette.
 

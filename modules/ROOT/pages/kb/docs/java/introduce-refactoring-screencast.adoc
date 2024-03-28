@@ -54,6 +54,6 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 == Related links
 
-* xref:./editor-inspect-transform.adoc[+Refactoring with Inspect and Transform in the NetBeans IDE Java Editor+]
-* xref:./editor-codereference.adoc[+Code Assistance in the NetBeans IDE Java Editor: A Reference Guide+]
+* xref:kb/docs/java/editor-inspect-transform.adoc[+Refactoring with Inspect and Transform in the NetBeans IDE Java Editor+]
+* xref:kb/docs/java/editor-codereference.adoc[+Code Assistance in the NetBeans IDE Java Editor: A Reference Guide+]
 * xref:wiki::wiki/Refactoring.adoc[+Refactoring Simplified+]

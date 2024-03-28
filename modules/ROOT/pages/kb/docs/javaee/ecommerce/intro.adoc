@@ -46,40 +46,40 @@ endif::[]
 * <<seeAlso,See Also>>
 
 [start=2]
-. xref:./design.adoc[+Designing the Application+]
+. xref:kb/docs/javaee/ecommerce/design.adoc[+Designing the Application+]
 
 [start=3]
-. xref:./setup-dev-environ.adoc[+Setting up the Development Environment+]
+. xref:kb/docs/javaee/ecommerce/setup-dev-environ.adoc[+Setting up the Development Environment+]
 
 [start=4]
-. xref:./data-model.adoc[+Designing the Data Model+]
+. xref:kb/docs/javaee/ecommerce/data-model.adoc[+Designing the Data Model+]
 
 [start=5]
-. xref:./page-views-controller.adoc[+Preparing the Page Views and Controller Servlet+]
+. xref:kb/docs/javaee/ecommerce/page-views-controller.adoc[+Preparing the Page Views and Controller Servlet+]
 
 [start=6]
-. xref:./connect-db.adoc[+Connecting the Application to the Database+]
+. xref:kb/docs/javaee/ecommerce/connect-db.adoc[+Connecting the Application to the Database+]
 
 [start=7]
-. xref:./entity-session.adoc[+Adding Entity Classes and Session Beans+]
+. xref:kb/docs/javaee/ecommerce/entity-session.adoc[+Adding Entity Classes and Session Beans+]
 
 [start=8]
-. xref:./manage-sessions.adoc[+Managing Sessions+]
+. xref:kb/docs/javaee/ecommerce/manage-sessions.adoc[+Managing Sessions+]
 
 [start=9]
-. xref:./transaction.adoc[+Integrating Transactional Business Logic+]
+. xref:kb/docs/javaee/ecommerce/transaction.adoc[+Integrating Transactional Business Logic+]
 
 [start=10]
-. xref:./language.adoc[+Adding Language Support+]
+. xref:kb/docs/javaee/ecommerce/language.adoc[+Adding Language Support+]
 
 [start=11]
-. xref:./security.adoc[+Securing the Application+]
+. xref:kb/docs/javaee/ecommerce/security.adoc[+Securing the Application+]
 
 [start=12]
-. xref:./test-profile.adoc[+Testing and Profiling+]
+. xref:kb/docs/javaee/ecommerce/test-profile.adoc[+Testing and Profiling+]
 
 [start=13]
-. xref:./conclusion.adoc[+Conclusion+]
+. xref:kb/docs/javaee/ecommerce/conclusion.adoc[+Conclusion+]
 
 image::kb/docs/javaee/ecommerce/netbeans-stamp-68-69.png[title="Content on this page applies to NetBeans IDE, versions 6.8 and 6.9"]
 
@@ -94,7 +94,7 @@ Taking the time to master the IDE will ultimately lead you to become more effici
 
 The tutorial is modular in fashion, with each unit focusing on specific concepts, technologies, and features of the IDE. You can successfully follow a tutorial unit on its own using the provided setup instructions and application snapshots (from Unit 5 onward). However, you'll get the most benefit by working through all units consecutively, from beginning to end. This will also help to illustrate the development process.
 
-Unit 3, xref:./setup-dev-environ.adoc[+Setting up the Development Environment+] introduces you to the NetBeans IDE. In it, you create a Java web project which is the basis for the work you undertake in later tutorial units. In Unit 4, xref:./data-model.adoc[+Designing the Data Model+], you primarily work with link:http://wb.mysql.com/[+MySQL WorkBench+], a visual database design tool, to create a data model for the application. Each successive tutorial unit provides you with a _project snapshot_ that corresponds to the project's beginning state for that given unit. This enables you to work through a single tutorial unit outside of the E-commerce Tutorial's larger context. To use these snapshots, download them to your computer and open them in the IDE using the Open Project wizard (Ctrl-Shift-O; ⌘-Shift-O on Mac).
+Unit 3, xref:kb/docs/javaee/ecommerce/setup-dev-environ.adoc[+Setting up the Development Environment+] introduces you to the NetBeans IDE. In it, you create a Java web project which is the basis for the work you undertake in later tutorial units. In Unit 4, xref:kb/docs/javaee/ecommerce/data-model.adoc[+Designing the Data Model+], you primarily work with link:http://wb.mysql.com/[+MySQL WorkBench+], a visual database design tool, to create a data model for the application. Each successive tutorial unit provides you with a _project snapshot_ that corresponds to the project's beginning state for that given unit. This enables you to work through a single tutorial unit outside of the E-commerce Tutorial's larger context. To use these snapshots, download them to your computer and open them in the IDE using the Open Project wizard (Ctrl-Shift-O; ⌘-Shift-O on Mac).
 
 You can view a live demo of the application that you build in this tutorial: link:http://services.netbeans.org/AffableBean/[+NetBeans E-commerce Tutorial Demo Application+].
 
@@ -286,7 +286,7 @@ Consider what would be necessary if you wanted to create a Java-based web applic
 5. Establish a deployment method, i.e., a way to copy resources from your development directory to the server's deployment area.
 6. Bookmark or install relevant API documentation.
 
-For educative purposes, it is worthwhile to create and run a Java web project manually so that you are aware the necessary steps involved. But eventually, you'll want to consider using tools that reduce or eliminate the need to perform tedious or repetitious tasks, thereby enabling you to focus on developing code that solves specific business needs. An IDE streamlines the process outlined above. As demonstrated in Unit 3, xref:./setup-dev-environ.adoc[+Setting up the Development Environment+], you'll install NetBeans IDE with the GlassFish application server, and be able to set up a web application project with a conventional directory structure using a simple 3-step wizard. Furthermore, the IDE provides provides built-in API documentation which you can either call up as you code in the editor, or maintain open in an external window.
+For educative purposes, it is worthwhile to create and run a Java web project manually so that you are aware the necessary steps involved. But eventually, you'll want to consider using tools that reduce or eliminate the need to perform tedious or repetitious tasks, thereby enabling you to focus on developing code that solves specific business needs. An IDE streamlines the process outlined above. As demonstrated in Unit 3, xref:kb/docs/javaee/ecommerce/setup-dev-environ.adoc[+Setting up the Development Environment+], you'll install NetBeans IDE with the GlassFish application server, and be able to set up a web application project with a conventional directory structure using a simple 3-step wizard. Furthermore, the IDE provides provides built-in API documentation which you can either call up as you code in the editor, or maintain open in an external window.
 
 An IDE also typically handles project compilation and deployment in a way that is transparent to you as a developer. For example, the web project that you create in NetBeans includes an Ant build script that is used to compile, clean, package and deploy the project. This means that you can run your project from the IDE, and it will automatically be compiled and deployed, then open in your default browser. Taking this a step further, many IDEs support a Deploy on on Save feature. In other words, whenever you save changes to your project, the deployed version on your server is automatically updated. You can simply switch to the browser and refresh the page to view changes.
 
@@ -304,9 +304,9 @@ Finally, IDEs usually provide enhanced editor support. The editor is where you l
 The NetBeans IDE is a free, open-source integrated development environment written entirely in Java. It offers a range of tools for create professional desktop, enterprise, web, and mobile applications with the Java language, C/C++, and even scripting languages such as PHP, JavaScript, Groovy, and Ruby.
 
 // 
-// People are saying great things about NetBeans. For a list of testimonials, see xref:../../../../features/ide/testimonials.adoc[+NetBeans IDE Testimonials+]. 
+// People are saying great things about NetBeans. For a list of testimonials, see xref:features/ide/testimonials.adoc[+NetBeans IDE Testimonials+]. 
 // Many developers are migrating their applications to NetBeans from other IDEs. 
-// For reasons why, read xref:../../../../switch/realstories.adoc[+Real Stories From People Switching to NetBeans IDE+].
+// For reasons why, read xref:switch/realstories.adoc[+Real Stories From People Switching to NetBeans IDE+].
 
 The IDE provides many xref:kb/docs/web.adoc[+features for web development+], and several advantages over other IDEs. Here are several noteworthy points:
 
@@ -315,9 +315,9 @@ The IDE provides many xref:kb/docs/web.adoc[+features for web development+], and
 * *Profiling and Debugging Tools:* With NetBeans IDE xref:front::projects/profiler/index.adoc[+profiler+], you get real time insight into memory usage and potential performance bottlenecks. Furthermore, you can instrument specific parts of code to avoid performance degradation during profiling. The link:http://profiler.netbeans.org/docs/help/6.0/heapwalker.html[+HeapWalker+] tool helps you evaluate Java heap contents and find memory leaks.
 * *Customizable Projects:* Through the NetBeans IDE build process, which relies on industry standards such as link:https://ant.apache.org/[+Apache Ant+], link:http://www.gnu.org/software/make/[+make+], link:http://maven.apache.org/[+Maven+], and link:http://rake.rubyforge.org/[+rake+] - rather than a proprietary build process - you can easily customize projects and add functionality. You can build, run, and deploy projects to servers outside of the IDE.
 * *Collaboration Tools:* The IDE provides built-in support for version control systems such as CVS, Subversion, and Mercurial.
-* *Extensive Documentation:* There's a wealth of tips and instructions contained in the IDE's built-in help set. Simply press F1 (fn-F1 on Mac) on a component in the IDE to invoke the help set. Also, the IDE's xref:../../../index.adoc[+official knowledge base+] provides hundreds of online tutorials, articles and xref:front::community/media.adoc[+screencasts+] that are continuously being updated.
+* *Extensive Documentation:* There's a wealth of tips and instructions contained in the IDE's built-in help set. Simply press F1 (fn-F1 on Mac) on a component in the IDE to invoke the help set. Also, the IDE's xref:kb/docs/index.adoc[official knowledge base] provides hundreds of online tutorials, articles and xref:front::community/media.adoc[+screencasts+] that are continuously being updated.
 
-// For a more extensive list of reasons why you should consider choosing NetBeans, see xref:../../../../switch/why.adoc[+NetBeans IDE Connects Developers+].
+// For a more extensive list of reasons why you should consider choosing NetBeans, see xref:switch/why.adoc[+NetBeans IDE Connects Developers+].
 
 xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 

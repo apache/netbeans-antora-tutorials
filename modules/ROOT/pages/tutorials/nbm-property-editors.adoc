@@ -56,9 +56,9 @@ Often you may have a property for which either the standard property editor is n
 
 This tutorial is intended as a follow-on to these preceding tutorials, and its code is based on the code from them:
 
-*  xref:./nbm-selection-1.adoc[Selection Management Tutorial I - Using a TopComponent's Lookup]
-*  xref:./nbm-selection-2.adoc[NetBeans Selection Management Tutorial II - Using Nodes]
-*  xref:./nbm-nodesapi2.adoc[Using the Nodes API]
+*  xref:tutorials/nbm-selection-1.adoc[Selection Management Tutorial I - Using a TopComponent's Lookup]
+*  xref:tutorials/nbm-selection-2.adoc[NetBeans Selection Management Tutorial II - Using Nodes]
+*  xref:tutorials/nbm-nodesapi2.adoc[Using the Nodes API]
 
 If you have not yet done these tutorials, you should do them first; or at least ensure you are familiar with the content and approach used, and download the completed result of the third tutorial. 
 

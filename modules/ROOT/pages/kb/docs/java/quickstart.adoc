@@ -145,7 +145,7 @@ image::kb/docs/java/editor-cc-maven2-small.png[role="left", xref="image$./editor
 
 --
 
-For a full description of editor assistance features, see xref:./editor-codereference.adoc[Code Assistance in the NetBeans IDE Java Editor: A Reference Guide].
+For a full description of editor assistance features, see xref:kb/docs/java/editor-codereference.adoc[Code Assistance in the NetBeans IDE Java Editor: A Reference Guide].
 
 == Running the Application
 
@@ -159,4 +159,4 @@ Congratulations! Your application works.
 
 You can view the build output by opening the Files window (from the Window menu) and expanding the `target` node.
 
-You now know how to accomplish the most common Java development tasks. To learn the complete Java development workflow, including testing and debugging, see xref:./javase-intro.adoc[Developing General Java Applications].
+You now know how to accomplish the most common Java development tasks. To learn the complete Java development workflow, including testing and debugging, see xref:kb/docs/java/javase-intro.adoc[Developing General Java Applications].

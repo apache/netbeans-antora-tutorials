@@ -178,7 +178,7 @@ Look under some of the menus, click a few toolbar buttons, and explore the basis
 
 image::tutorials/porting_73_agp3.png[]
 
-Next, we create a first custom module. We will name it `AnagramCore` because, in the end, it will contain the essential parts of the application. Using subsequent tutorials on the  xref:../kb/docs/platform.adoc[NetBeans Platform Learning Trail], we will be able to add more features to the application, none of which will be manadatory parts, since the user will be able to plug them into the application. The core module, however, that is, `AnagramCore`, will be a required module in every distribution of the application.
+Next, we create a first custom module. We will name it `AnagramCore` because, in the end, it will contain the essential parts of the application. Using subsequent tutorials on the  xref:kb/docs/platform.adoc[NetBeans Platform Learning Trail], we will be able to add more features to the application, none of which will be manadatory parts, since the user will be able to plug them into the application. The core module, however, that is, `AnagramCore`, will be a required module in every distribution of the application.
 
 
 [start=3]
@@ -802,7 +802,7 @@ As shown above, you need to put the modules in a module suite. Then set a depend
 * *Learn from others.* Aside from joining the dev@platform.netbeans.org mailing list, also read the following two crucial articles:
 *  link:http://netbeans.dzone.com/10-tips-4-porting-2-netbeans[Top 10 Tips for Porting to the NetBeans Platform]
 *  link:http://java.dzone.com/news/how-to-split-into-modules[How to Split an Application into Modules?]
-* *Watch the Top 10 NetBeans APIs Screencast.* The  xref:./nbm-10-top-apis.adoc[screencast series] gives a good overview of the NetBeans Platform, with many useful code snippets and coding patterns.
+* *Watch the Top 10 NetBeans APIs Screencast.* The  xref:tutorials/nbm-10-top-apis.adoc[screencast series] gives a good overview of the NetBeans Platform, with many useful code snippets and coding patterns.
 xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 
@@ -811,5 +811,5 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 For more information about creating and developing NetBeans modules, see the following resources:
 
-*  xref:../kb/docs/platform.adoc[Other Related Tutorials]
+*  xref:kb/docs/platform.adoc[Other Related Tutorials]
 *  link:https://bits.netbeans.org/dev/javadoc/[NetBeans API Javadoc]

@@ -124,7 +124,7 @@ In the IDE's editor, add an `echo` statement to the index page:
 
 . In the Projects window, right-click on the project node and choose Run. The IDE opens your default browser and displays the Hello World message you just created in `index.php`. 
 
-NOTE: If you have difficulty setting up your project or establishing communication between the IDE, the server and browser, see xref:./project-setup.adoc[+Setting Up a PHP Project+] for a more thorough description. The xref:kb/docs/php.adoc[+PHP Learning Trail+] can provide more information on configuring your environment.
+NOTE: If you have difficulty setting up your project or establishing communication between the IDE, the server and browser, see xref:kb/docs/php/project-setup.adoc[+Setting Up a PHP Project+] for a more thorough description. The xref:kb/docs/php.adoc[+PHP Learning Trail+] can provide more information on configuring your environment.
 
 
 [[html]]
@@ -272,7 +272,7 @@ image:kb/docs/php/index-page.png[title="Run project to view its current state in
 [[javascript]]
 === Using the JavaScript Editor
 
-The IDE's JavaScript Editor provides many advanced editing capabilities, such as intelligent code completion, semantic highlighting, instant renaming and refactoring capabilities, as well as many more features. For more information on the JavaScript editing features in the IDE, see link:http://docs.oracle.com/cd/E50453_01/doc.80/e50452/dev_html_apps.htm#BACFIFIG[+Creating JavaScript Files+] in the link:http://www.oracle.com/pls/topic/lookup?ctx=nb8000&id=NBDAG[+Developing Applications with NetBeans IDE User's Guide+]. See link:http://wiki.netbeans.org/JavaScript[+http://wiki.netbeans.org/JavaScript+] for a detailed specification.
+The IDE's JavaScript Editor provides many advanced editing capabilities, such as intelligent code completion, semantic highlighting, instant renaming and refactoring capabilities, as well as many more features. For more information on the JavaScript editing features in the IDE, see link:http://docs.oracle.com/cd/E50453_01/doc.80/e50452/dev_html_apps.htm#BACFIFIG[+Creating JavaScript Files+] in the link:http://www.oracle.com/pls/topic/lookup?ctx=nb8000&id=NBDAG[+Developing Applications with NetBeans IDE User's Guide+]. See xref:wiki::wiki/JavaScript[] for a detailed specification.
 
 JavaScript code completion is automatically provided when you code in `.js` files, as well as within `<script>` tags when you work with other technologies (i.e., HTML, RHTML, JSP, PHP). When using the JavaScript Editor, the IDE provides you with browser-compatibility information, depending on the browser types and versions you specify in the JavaScript Options panel. Open the JavaScript Options panel by choosing Tools > Options (NetBeans > Preferences on Mac), then Miscellaneous > JavaScript.
 
@@ -392,7 +392,7 @@ and a `callback()` function <<callback,must later be defined>>. The HTTP interac
 The NetBeans IDE provides comprehensive support for web development using PHP. You can set up your development environment using an *AMP package, enabling you to edit and deploy from the IDE quickly and efficiently. The IDE allows you to configure your environment with a local server, as well as remotely, using FTP or SFTP. You can also configure an external debugger, such as link:http://xdebug.org/[+Xdebug+], and set up unit testing with link:http://www.phpunit.de/[+PHPUnit+] from the IDE's PHP Options window (Choose Tools > Options; NetBeans > Preferences on Mac, then select the PHP tab.) The PHP editor provides standard editing features such as code completion, syntax highlighting, mark occurrences, refactoring, code templates, documentation pop-up, code navigation, editor warnings and, for NetBeans 6.9, error badges for malformed syntax. See the xref:kb/docs/intro-screencasts.adoc[+NetBeans Video Tutorials and Demos+] page for screencasts on PHP support.
 
 For applications requiring a database, the IDE supports wide-ranging support for most main-stream databases, especially MySQL. See the xref:kb/articles/mysql.adoc[+NetBeans MySQL screencast+] 
-// need umbrella section and xref:../../../features/ide/database.adoc[+Database Integration+] 
+// need umbrella section and xref:features/ide/database.adoc[+Database Integration+] 
 features for more details.
 
 The business logic for the auto-complete application that you are building needs to process requests by retrieving data from the data store, then prepare and send the response. This is implemented here using a PHP file named `autocomplete`. Before you begin coding the file, set up the data store and the functionality required by the file to access data.
@@ -914,7 +914,10 @@ To attach a stylesheet to your application, simply create a CSS (Cascading Style
 * *CSS Preview:* A preview window which, when you place your cursor within a rule, displays sample text rendered according to the declaration block of that rule. (Window > Other > CSS Preview)
 * *Style Rule Editor:* A dialog enabling you to create rules based on classes, ID's and HTML elements, and set their position in the document hierarchy. (Create Rule ( image:kb/docs/php/style-rule-editor-btn.png[] ) button, located in upper-left region of CSS editor toolbar)
 
-NetBeans 6.9 provides Rename Refactoring and Find Usages support. This support is available not only in css files, but in all files containing embedded CSS code (e.g., HTML, PHP). CSS classes, id's and type elements can be refactored in all project files. To make use of this refactoring support, press Ctrl-R on a given CSS element and use the provided dialog to perform the rename action. You can also preview changes before performing the rename action. To utilize Find Usages support, right-click a CSS element and choose Find Usages. See link:http://wiki.netbeans.org/wiki/index.php?title=NewAndNoteworthy69m1&section=T-25#Web_Languages[+NewAndNoteworthy69m1+] for more details.
+NetBeans 6.9 provides Rename Refactoring and Find Usages support. This support is available not only in css files, but in all files containing embedded CSS code (e.g., HTML, PHP). CSS classes, id's and type elements can be refactored in all project files. 
+To make use of this refactoring support, press Ctrl-R on a given CSS element and use the provided dialog to perform the rename action. 
+You can also preview changes before performing the rename action. 
+To utilize Find Usages support, right-click a CSS element and choose Find Usages. 
 
 Perform the following steps to attach a stylesheet to your application.
 
@@ -923,7 +926,7 @@ Perform the following steps to attach a stylesheet to your application.
 3. Click Finish. The new file is added to the Projects window, and opens in the IDE's editor.
 4. In `stylesheet.css`, type in the following rules. You can make use of the IDE's code completion support by pressing Ctrl-Space at points when you want to call up suggestions.
 
-[source,java]
+[source,css]
 ----
 
 body {

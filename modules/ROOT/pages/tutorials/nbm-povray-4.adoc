@@ -34,7 +34,7 @@ ifdef::env-github[]
 :imagesdir: ../../images
 endif::[]
 
-This is a continuation of the tutorial for building a POV-Ray rendering application on the NetBeans Platform. If you have not read the  xref:./nbm-povray-1.adoc[first],  xref:./nbm-povray-2.adoc[second], and  xref:./nbm-povray-3.adoc[third] parts of this tutorial, you may want to start there.
+This is a continuation of the tutorial for building a POV-Ray rendering application on the NetBeans Platform. If you have not read the  xref:tutorials/nbm-povray-1.adoc[first],  xref:tutorials/nbm-povray-2.adoc[second], and  xref:tutorials/nbm-povray-3.adoc[third] parts of this tutorial, you may want to start there.
 
 
 == Project Templates
@@ -218,5 +218,5 @@ If we were using a version control system such as CVS to store our source code, 
 
 == Next Steps
 
-In the  xref:./nbm-povray-5.adoc[next section] we will create the API needed for communication between our two current modules.
+In the  xref:tutorials/nbm-povray-5.adoc[next section] we will create the API needed for communication between our two current modules.
 

@@ -210,7 +210,7 @@ image::kb/docs/java/run_small.png[role="left", xref="image$./run.png"]
 
 == Internationalizing an Entire Project
 
-Generally, we have several files in the default locale and we are asked to adapt them in order to be translated to other languages. The Internationalization Wizard is the perfect tool for this task, as it can internationalize multiple files at once. We will show this feature on the GUI Form examples project, which contains the form created in the xref:./quickstart-gui.adoc[+Designing a Swing GUI+] tutorial.
+Generally, we have several files in the default locale and we are asked to adapt them in order to be translated to other languages. The Internationalization Wizard is the perfect tool for this task, as it can internationalize multiple files at once. We will show this feature on the GUI Form examples project, which contains the form created in the xref:kb/docs/java/quickstart-gui.adoc[+Designing a Swing GUI+] tutorial.
 
 
 === Creating a Sample Project

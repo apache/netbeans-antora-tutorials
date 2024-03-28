@@ -41,11 +41,11 @@ You can download a complete sample of the web service from the link:https://netb
 
 image::kb/docs/websvc/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
 
-1. xref:./flower_overview.adoc[+Overview+]
-2. xref:./flower_ws.adoc[+ Creating the Web Service+]
+1. xref:kb/docs/websvc/flower_overview.adoc[+Overview+]
+2. xref:kb/docs/websvc/flower_ws.adoc[+ Creating the Web Service+]
 3. => Coding and Testing the Web Service
-4. xref:./flower_wsdl_schema.adoc[+ Modifying the Schema and WSDL Files to Pass Binary Data+]
-5. xref:./flower_swing.adoc[+ Creating the Swing Client+]
+4. xref:kb/docs/websvc/flower_wsdl_schema.adoc[+ Modifying the Schema and WSDL Files to Pass Binary Data+]
+5. xref:kb/docs/websvc/flower_swing.adoc[+ Creating the Swing Client+]
 6. <<coding-ws,Coding the Web Service>>
 7. <<retrieve-jpeg-as-bytes,Get a JPEG File as an Array of Bytes>>
 8. <<read-bytes-as-image,Read an Array of Bytes as an Image>>
@@ -388,7 +388,7 @@ image::kb/docs/websvc/ws-tester-badschema.png[]
 
 == Next step:
 
-xref:./flower_wsdl_schema.adoc[+ Modifying the Schema and WSDL Files to Pass Binary Data+]
+xref:kb/docs/websvc/flower_wsdl_schema.adoc[+ Modifying the Schema and WSDL Files to Pass Binary Data+]
 
 xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 

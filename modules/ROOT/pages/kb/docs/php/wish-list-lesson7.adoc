@@ -608,9 +608,9 @@ Oracle Database users: Click link:https://netbeans.org/projects/www/downloads/do
 
 == Next Steps
 
-xref:./wish-list-lesson6.adoc[+<< Previous lesson+] 
+xref:kb/docs/php/wish-list-lesson6.adoc[+<< Previous lesson+] 
 
-xref:./wish-list-lesson8.adoc[+Next lesson >>+] 
+xref:kb/docs/php/wish-list-lesson8.adoc[+Next lesson >>+] 
 
-xref:./wish-list-tutorial-main-page.adoc[+Back to the Tutorial main page+]
+xref:kb/docs/php/wish-list-tutorial-main-page.adoc[+Back to the Tutorial main page+]
 

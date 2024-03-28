@@ -32,7 +32,7 @@
 |===
 |This 6-minute screencast demonstrates some features of database support in NetBeans IDE. These features include support for MySQL and the Sakila database, an SQL Editor with code completion, displaying multiple rowsets, and SQL history.
 
-You can read more about database functionality at xref:./mysql.adoc[+Connecting to a MySQL Database+].
+You can read more about database functionality at xref:kb/docs/ide/mysql.adoc[+Connecting to a MySQL Database+].
 
 Author: Andrei Badea
 Time: 5:49

@@ -571,7 +571,7 @@ You have now successfully added a new module to the application and launched the
 image::tutorials/maven-commandline_72_p5.png[title="Screenshot of Message Dialog"] 
 image::tutorials/maven-commandline_72_p6.png[title="Screenshot of Message Dialog"]
 
-This tutorial demonstrated how you can use the Maven command line to create NetBeans Platform applications. For more examples on how to build NetBeans Platform applications and modules, see the tutorials listed in the  xref:../kb/docs/platform.adoc[NetBeans Platform Learning Trail].
+This tutorial demonstrated how you can use the Maven command line to create NetBeans Platform applications. For more examples on how to build NetBeans Platform applications and modules, see the tutorials listed in the  xref:kb/docs/platform.adoc[NetBeans Platform Learning Trail].
 
 xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
@@ -582,8 +582,8 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 This document described how to use the Maven build framework to create a new NetBeans Platform application without using NetBeans IDE. For more information about creating and developing applications, see the following resources.
 
-*  xref:./nbm-maven-quickstart.adoc[NetBeans Platform Quick Start Using Maven]
-*  xref:../kb/docs/platform.adoc[NetBeans Platform Learning Trail]
+*  xref:tutorials/nbm-maven-quickstart.adoc[NetBeans Platform Quick Start Using Maven]
+*  xref:kb/docs/platform.adoc[NetBeans Platform Learning Trail]
 *  link:https://bits.netbeans.org/dev/javadoc/[NetBeans API Javadoc]
 
 If you have any questions about the NetBeans Platform, feel free to write to the mailing list, dev@platform.netbeans.org, or view the  link:https://mail-archives.apache.org/mod_mbox/netbeans-dev/[NetBeans Platform mailing list archive].

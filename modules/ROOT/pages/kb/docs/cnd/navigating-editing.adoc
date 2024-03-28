@@ -53,7 +53,7 @@ The following short tutorial takes you through some of the features for navigati
 |===
 
 
-See the xref:front::download/index.adoc[NetBeans IDE 8.0 Installation Instructions] and xref:./cpp-setup-instructions.adoc[Configuring the NetBeans IDE for C/C{pp}/Fortran]
+See the xref:front::download/index.adoc[NetBeans IDE 8.0 Installation Instructions] and xref:kb/docs/cnd/cpp-setup-instructions.adoc[Configuring the NetBeans IDE for C/C{pp}/Fortran]
 for information about downloading and installing the required software.
 
 *Sample Projects*
@@ -391,6 +391,6 @@ image::kb/docs/cnd/type_hierarchy.png[]
 
 == Next Steps
 
-See xref:./debugging.adoc[Debugging C/C{pp} Projects] for a tutorial on using some of the features for debugging a C or C++ project in NetBeans IDE.
+See xref:kb/docs/cnd/debugging.adoc[Debugging C/C{pp} Projects] for a tutorial on using some of the features for debugging a C or C++ project in NetBeans IDE.
 
 xref:front::community/mailing-lists.adoc[Send Us Your Feedback]

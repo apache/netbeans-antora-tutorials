@@ -161,5 +161,5 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 == See Also
 
 * xref:kb/docs/web/quickstart-webapps.adoc[+Introduction to Developing Web Applications+]
-* xref:./profiler-intro.adoc[+Introduction to Profiling Java Applications+]
+* xref:kb/docs/java/profiler-intro.adoc[+Introduction to Profiling Java Applications+]
 * xref:kb/docs/java-ee.adoc[+Java EE &amp; Java Web Learning Trail+]

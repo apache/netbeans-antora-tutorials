@@ -62,7 +62,7 @@ image::tutorials/ant_ant-structure-0.png[]
 
 
 [start=2]
-1. Read  link:http://wiki.netbeans.org/AutoUpdateTask[http://wiki.netbeans.org/AutoUpdateTask].
+1. Read  xref:wiki::wiki/AutoUpdateTask[].
 
 [start=3]
 1. 

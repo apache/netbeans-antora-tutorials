@@ -500,8 +500,8 @@ For more information about Dojo, refer to the official documentation:
 * Online API Reference: link:http://api.dojotoolkit.org/[+http://api.dojotoolkit.org/+]
 * Dojo Demo: link:http://demos.dojotoolkit.org/demos/[+http://demos.dojotoolkit.org/demos/+]
 
-For more information about JavaScript and JavaScript toolkit features on xref:../../../index.adoc[+netbeans.org+], see the following resources:
+For more information about JavaScript and JavaScript toolkit features on xref:front::index.adoc[+netbeans.org+], see the following resources:
 
-* xref:./js-toolkits-jquery.adoc[+Using jQuery to Enhance the Appearance and Usability of a Web Page+]. An introduction to jQuery is provided, and steps are given showing how to apply jQuery's accordion widget to HTML markup in a web page.
-* xref:./ajax-quickstart.adoc[+Introduction to Ajax (Java)+]. Describes how to build a simple application using servlet technology while teaching the underlying process flow of an Ajax request.
+* xref:kb/docs/web/js-toolkits-jquery.adoc[+Using jQuery to Enhance the Appearance and Usability of a Web Page+]. An introduction to jQuery is provided, and steps are given showing how to apply jQuery's accordion widget to HTML markup in a web page.
+* xref:kb/docs/web/ajax-quickstart.adoc[+Introduction to Ajax (Java)+]. Describes how to build a simple application using servlet technology while teaching the underlying process flow of an Ajax request.
 * link:http://www.oracle.com/pls/topic/lookup?ctx=nb8000&id=NBDAG2272[+Creating JavaScript Files+] in _Developing Applications with NetBeans IDE_.

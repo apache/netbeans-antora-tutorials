@@ -43,11 +43,11 @@ You can download a complete sample of the web service from the link:https://netb
 
 image::kb/docs/websvc/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
 
-1. xref:./flower_overview.adoc[+Overview+]
-2. xref:./flower_ws.adoc[+Creating the Web Service+]
-3. xref:./flower-code-ws.adoc[+Coding and Testing the Web Service+]
+1. xref:kb/docs/websvc/flower_overview.adoc[+Overview+]
+2. xref:kb/docs/websvc/flower_ws.adoc[+Creating the Web Service+]
+3. xref:kb/docs/websvc/flower-code-ws.adoc[+Coding and Testing the Web Service+]
 4. => Modifying the Schema and WSDL Files to Pass Binary Data
-5. xref:./flower_swing.adoc[+ Creating the Swing Client+]
+5. xref:kb/docs/websvc/flower_swing.adoc[+ Creating the Swing Client+]
 
 
 == Modifying the Schema File and WSDL Files to Pass Binary Data
@@ -140,7 +140,7 @@ Now that the Tester application has confirmed that images are correctly being re
 
 == Next Step:
 
-xref:./flower_swing.adoc[+Creating the Swing Client+]
+xref:kb/docs/websvc/flower_swing.adoc[+Creating the Swing Client+]
 
 xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 

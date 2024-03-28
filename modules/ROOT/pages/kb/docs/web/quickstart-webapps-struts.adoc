@@ -709,6 +709,6 @@ This concludes the Introduction to the Struts Framework in NetBeans IDE. This do
 
 For related tutorials, see the following resources:
 
-* xref:./framework-adding-support.adoc[+Adding Support for a Web Framework+]. A general guide describing how to add web framework support to NetBeans IDE using the Plugin Manager.
-* xref:./quickstart-webapps-spring.adoc[+Introduction to the Spring Web Framework+]. Describes the basics of using NetBeans IDE to develop web applications using the Spring framework.
-* xref:./jsf20-intro.adoc[+Introduction to JavaServer Faces 2.0+]. A document describing how to wire a managed bean to web pages, and how to take advantage of Facelets templating. .
+* xref:kb/docs/web/framework-adding-support.adoc[+Adding Support for a Web Framework+]. A general guide describing how to add web framework support to NetBeans IDE using the Plugin Manager.
+* xref:kb/docs/web/quickstart-webapps-spring.adoc[+Introduction to the Spring Web Framework+]. Describes the basics of using NetBeans IDE to develop web applications using the Spring framework.
+* xref:kb/docs/web/jsf20-intro.adoc[+Introduction to JavaServer Faces 2.0+]. A document describing how to wire a managed bean to web pages, and how to take advantage of Facelets templating. .

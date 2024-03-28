@@ -169,5 +169,5 @@ xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 
 This concludes the introduction to Grails in NetBeans IDE. You now know how to create a basic application in the Grails framework using the IDE.
 
-For more information about Grails and Groovy technology on xref:../../../index.adoc[+netbeans.org+], see xref:kb/docs/java/groovy-quickstart.adoc[+Introduction to Groovy+].
+For more information about Grails and Groovy technology on xref:front::index.adoc[+netbeans.org+], see xref:kb/docs/java/groovy-quickstart.adoc[+Introduction to Groovy+].
 

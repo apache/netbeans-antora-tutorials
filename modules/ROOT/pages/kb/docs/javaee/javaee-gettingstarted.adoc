@@ -108,7 +108,7 @@ In this section you will create an entity class and a session facade for the ent
 
 The session facade for the entity class in this application is a stateless session bean. The Enterprise JavaBean (EJB) 3.1 architecture introduced as part of the Java EE 6 specification enables you to create session beans without the business interfaces that were required in EJB 3.0. The Java EE 6 specification also allows you to package EJB components directly in a WAR archive. This simplifies development of smaller web applications by eliminating the need to create separate EJB modules that are packaged as a JAR archive in an EAR archive. However, for larger enterprise applications that are distributed across different machines, you will still want to create EAR archives to separate your business logic from the presentation layer.
 
-For more about using EJB 3.1 in the IDE, see the tutorial xref:./javaee-entapp-ejb.adoc[+Creating an Enterprise Application with EJB 3.1+].
+For more about using EJB 3.1 in the IDE, see the tutorial xref:kb/docs/javaee/javaee-entapp-ejb.adoc[+Creating an Enterprise Application with EJB 3.1+].
 
 For more details about entity classes, see the chapter link:http://docs.oracle.com/javaee/7/tutorial/doc/persistence-intro.htm[+Introduction to the Java Persistence API+] in the link:http://download.oracle.com/javaee/7/tutorial/doc/[+Java EE 7 Tutorial+].
 
@@ -459,7 +459,7 @@ xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 
 For more information about using NetBeans IDE to develop Java EE applications, see the following resources:
 
-* xref:./javaee-intro.adoc[+Introduction to Java EE Technology+]
+* xref:kb/docs/javaee/javaee-intro.adoc[+Introduction to Java EE Technology+]
 * xref:kb/docs/web/jsf20-support.adoc[+JSF 2.x Support in NetBeans IDE+]
 * xref:kb/docs/java-ee.adoc[+Java EE &amp; Java Web Learning Trail+]
 

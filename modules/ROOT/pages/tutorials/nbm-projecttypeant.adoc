@@ -36,7 +36,7 @@ endif::[]
 
 This tutorial demonstrates how to create a new project type for projects that need to use Ant as their build tool.
 
-This tutorial assumes you want to create a project type for projects that need to use Ant as their build tool. If this is not the case, you should use the  xref:./nbm-projecttype.adoc[NetBeans Project Type Module Tutorial] instead.
+This tutorial assumes you want to create a project type for projects that need to use Ant as their build tool. If this is not the case, you should use the  xref:tutorials/nbm-projecttype.adoc[NetBeans Project Type Module Tutorial] instead.
 
 
 
@@ -728,6 +728,6 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 For more information about creating and developing NetBeans modules, see the following resources:
 
-*  xref:../kb/docs/platform.adoc[Other Related Tutorials]
+*  xref:kb/docs/platform.adoc[Other Related Tutorials]
 
 *  link:https://bits.netbeans.org/dev/javadoc/index.html[NetBeans API Javadoc]

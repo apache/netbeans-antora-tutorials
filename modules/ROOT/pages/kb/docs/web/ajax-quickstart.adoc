@@ -1190,9 +1190,9 @@ You may note that the application you built has numerous shortcomings, for examp
 [[seeAlso]]
 == See Also
 
-For more information about Ajax and Java technology on xref:../../../index.adoc[+netbeans.org+], see the following resources:
+For more information about Ajax and Java technology on xref:front::index.adoc[+netbeans.org+], see the following resources:
 
-* xref:./js-toolkits-jquery.adoc[+Using jQuery to Enhance the Appearance and Usability of a Web Page+]. Demonstrates how to integrate jQuery core and UI libraries into a NetBeans project.
-* xref:./js-toolkits-dojo.adoc[+Connecting a Dojo Tree to an ArrayList using JSON+]. Based on a JavaOne Hands-On Lab, this document shows how to implement a Dojo Tree widget into a web page and enable the server-side to respond to Tree requests in JSON format.
+* xref:kb/docs/web/js-toolkits-jquery.adoc[+Using jQuery to Enhance the Appearance and Usability of a Web Page+]. Demonstrates how to integrate jQuery core and UI libraries into a NetBeans project.
+* xref:kb/docs/web/js-toolkits-dojo.adoc[+Connecting a Dojo Tree to an ArrayList using JSON+]. Based on a JavaOne Hands-On Lab, this document shows how to implement a Dojo Tree widget into a web page and enable the server-side to respond to Tree requests in JSON format.
 * link:http://www.oracle.com/pls/topic/lookup?ctx=nb8000&id=NBDAG2272[+Creating JavaScript Files+] in _Developing Applications with NetBeans IDE_.
-* xref:./quickstart-webapps-wicket.adoc[+Introduction to the Wicket Web Framework+]. An introduction to creating reusable components and applying them to a web application using the Wicket framework.
+* xref:kb/docs/web/quickstart-webapps-wicket.adoc[+Introduction to the Wicket Web Framework+]. An introduction to creating reusable components and applying them to a web application using the Wicket framework.

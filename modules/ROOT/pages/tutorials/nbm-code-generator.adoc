@@ -159,7 +159,7 @@ public class DemoCodeGenerator implements CodeGenerator {
 
 == Coding the Code Generator Integration
 
-Next, we will implement the NetBeans Java Editor APIs introduced in the  xref:./nbm-copyfqn.adoc[NetBeans Java Language Infrastructure Tutorial].
+Next, we will implement the NetBeans Java Editor APIs introduced in the  xref:tutorials/nbm-copyfqn.adoc[NetBeans Java Language Infrastructure Tutorial].
 
 Below, we set dependencies on the required modules and then implement them in our own module.
 
@@ -294,4 +294,4 @@ For more information about creating and developing NetBeans modules, see the fol
 
 *  link:https://netbeans.apache.org/platform/index.html[NetBeans Platform Homepage]
 *  link:https://bits.netbeans.org/dev/javadoc/[NetBeans API List (Current Development Version)]
-*  xref:../kb/docs/platform.adoc[Other Related Tutorials]
+*  xref:kb/docs/platform.adoc[Other Related Tutorials]

@@ -354,7 +354,7 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 For more information about creating and developing NetBeans Module, see the following resources:
 
-*  link:http://wiki.netbeans.org/Java_DevelopersGuide[Java Developer's Guide]
-*  xref:./nbm-copyfqn.adoc[NetBeans Java Language Infrastructure Tutorial]
-*  xref:../kb/docs/platform.adoc[Other Related Tutorials]
+*  xref:wiki::wiki/Java_DevelopersGuide[Java Developer's Guide]
+*  xref:tutorials/nbm-copyfqn.adoc[NetBeans Java Language Infrastructure Tutorial]
+*  xref:kb/docs/platform.adoc[Other Related Tutorials]
 *  link:https://bits.netbeans.org/dev/javadoc/[NetBeans API Javadoc]

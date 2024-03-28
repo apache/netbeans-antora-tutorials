@@ -42,7 +42,7 @@ To implement this functionality, you edit the  `editWishList.php`  file and crea
 
 image::kb/docs/php/page-flow-diagram-l6.png[]
 
-The current document is a part of the xref:./wish-list-tutorial-main-page.adoc[+Creating a CRUD Application in the NetBeans IDE for PHP+] tutorial.
+The current document is a part of the xref:kb/docs/php/wish-list-tutorial-main-page.adoc[+Creating a CRUD Application in the NetBeans IDE for PHP+] tutorial.
 
 
 [[_application_source_code_from_the_previous_lesson]]
@@ -476,8 +476,8 @@ Oracle Database users: Click link:https://netbeans.org/projects/www/downloads/do
 [[_next_steps]]
 == Next Steps
 
-xref:./wish-list-lesson5.adoc[+<< Previous lesson+]
+xref:kb/docs/php/wish-list-lesson5.adoc[+<< Previous lesson+]
 
-xref:./wish-list-lesson7.adoc[+Next lesson >>+]
+xref:kb/docs/php/wish-list-lesson7.adoc[+Next lesson >>+]
 
-xref:./wish-list-tutorial-main-page.adoc[+Back to the Tutorial main page+]
+xref:kb/docs/php/wish-list-tutorial-main-page.adoc[+Back to the Tutorial main page+]

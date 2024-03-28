@@ -40,7 +40,7 @@ The application contains an EJB module and a web module. The EJB module contains
 
 Before starting this tutorial you may want to familiarize yourself with the following document.
 
-* xref:./javaee-gettingstarted.adoc[+Getting Started with Java EE Applications+]
+* xref:kb/docs/javaee/javaee-gettingstarted.adoc[+Getting Started with Java EE Applications+]
 
 *Tutorial Exercises*
 
@@ -727,8 +727,8 @@ xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 
 For more information about using NetBeans IDE to develop Java EE applications, see the following resources:
 
-* xref:./javaee-intro.adoc[+Introduction to Java EE Technology+]
-* xref:./javaee-gettingstarted.adoc[+Getting Started with Java EE Applications+]
+* xref:kb/docs/javaee/javaee-intro.adoc[+Introduction to Java EE Technology+]
+* xref:kb/docs/javaee/javaee-gettingstarted.adoc[+Getting Started with Java EE Applications+]
 * xref:kb/docs/web/quickstart-webapps.adoc[+Introduction to Developing Web Applications+]
 * xref:kb/docs/java-ee.adoc[+Java EE &amp; Java Web Learning Trail+]
 

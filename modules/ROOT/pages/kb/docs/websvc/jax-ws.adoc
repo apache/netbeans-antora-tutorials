@@ -35,7 +35,7 @@ endif::[]
 
 link:http://www.jcp.org/en/jsr/detail?id=224[+Java API for XML Web Services (JAX-WS), JSR 224+], is an important part of the Java EE platform. A follow-up to the release of Java API for XML-based RPC 1.1(JAX-RPC), JAX-WS simplifies the task of developing web services using Java technology. It addresses some of the issues in JAX-RPC 1.1 by providing support for multiple protocols such as SOAP 1.1, SOAP 1.2, XML, and by providing a facility for supporting additional protocols along with HTTP. JAX-WS uses JAXB 2.0 for data binding and supports customizations to control generated service endpoint interfaces. With its support for annotations, JAX-WS simplifies web service development and reduces the size of runtime JAR files.
 
-This document demonstrates the basics of using the IDE to develop a JAX-WS web service. After you create the web service, you write three different web service clients that use the web service over a network, which is called "consuming" a web service. The three clients are a Java class in a Java SE application, a servlet, and a JSP page in a web application. A more advanced tutorial focusing on clients is xref:./client.adoc[+Developing JAX-WS Web Service Clients+].
+This document demonstrates the basics of using the IDE to develop a JAX-WS web service. After you create the web service, you write three different web service clients that use the web service over a network, which is called "consuming" a web service. The three clients are a Java class in a Java SE application, a servlet, and a JSP page in a web application. A more advanced tutorial focusing on clients is xref:kb/docs/websvc/client.adoc[+Developing JAX-WS Web Service Clients+].
 
 
 image::kb/docs/websvc/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
@@ -241,7 +241,7 @@ A Maven Calculator Service and a Maven Calculator Client are available in Sample
 
 Now that you have deployed the web service, you need to create a client to make use of the web service's  ``add``  method. Here, you create three clients— a Java class in a Java SE application, a servlet, and a JSP page in a web application.
 
-*Note:* A more advanced tutorial focusing on clients is xref:./client.adoc[+Developing JAX-WS Web Service Clients+].
+*Note:* A more advanced tutorial focusing on clients is xref:kb/docs/websvc/client.adoc[+Developing JAX-WS Web Service Clients+].
 
 
 === Client 1: Java Class in Java SE Application
@@ -525,9 +525,9 @@ xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 
 For more information about using NetBeans IDE to develop Java EE applications, see the following resources:
 
-* xref:./client.adoc[+Developing JAX-WS Web Service Clients+]
-* xref:./rest.adoc[+Getting Started with RESTful Web Services+]
-* xref:./wsit.adoc[+Advanced Web Service Interoperability+]
+* xref:kb/docs/websvc/client.adoc[+Developing JAX-WS Web Service Clients+]
+* xref:kb/docs/websvc/rest.adoc[+Getting Started with RESTful Web Services+]
+* xref:kb/docs/websvc/wsit.adoc[+Advanced Web Service Interoperability+]
 * xref:kb/docs/web.adoc[+Web Services Learning Trail+]
 
 To send comments and suggestions, get support, and keep informed about the latest developments on the NetBeans IDE Java EE development features, xref:front::community/mailing-lists.adoc[+join the nbj2ee@netbeans.org mailing list+].

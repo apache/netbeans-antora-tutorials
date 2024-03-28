@@ -45,4 +45,4 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 == Related links
 
-* xref:./javase-jdk7.adoc[+Overview of JDK 7 Support in NetBeans IDE+]
+* xref:kb/docs/java/javase-jdk7.adoc[+Overview of JDK 7 Support in NetBeans IDE+]

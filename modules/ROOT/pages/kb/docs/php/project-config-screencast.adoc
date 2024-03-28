@@ -42,7 +42,7 @@ link:http://bits.netbeans.org/media/NetBeans65PHP_demo_part_I.flv[Download] [14 
 
 == Related links
 
-* xref:./editor-screencast.adoc[Demo of PHP support in NetBeans 6.5 - Part II: Editor Features]
+* xref:kb/docs/php/editor-screencast.adoc[Demo of PHP support in NetBeans 6.5 - Part II: Editor Features]
 * xref:kb/docs/php.adoc[The PHP Learning Trail]
 * link:http://blogs.oracle.com/netbeansphp/[NetBeans PHP Blog]
 

@@ -36,7 +36,7 @@ endif::[]
 
 This tutorial covers the most fundamental concept in the NetBeans Platform: the runtime container. The runtime container is the execution environment for the modules that make up a NetBeans Platform application. It consists of modules provided by the NetBeans Platform. In this tutorial, we will look at these modules, and use them in a very simple modular application.
 
-Before going further, you can watch this video series, which covers the same material as the rest of this tutorial:  xref:./nbm-10-top-apis.adoc[Top 10 NetBeans APIs]
+Before going further, you can watch this video series, which covers the same material as the rest of this tutorial:  xref:tutorials/nbm-10-top-apis.adoc[Top 10 NetBeans APIs]
 
 For troubleshooting purposes, you are welcome to download the link:https://github.com/bradh/NetBeansRuntimeTutorial[completed tutorial source code].
 
@@ -243,6 +243,6 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 To continue your journey on the NetBeans Platform, see:
 
 *  xref:kb/docs/platform.adoc[NNetBeans Platform Learning Trail]
-*  xref:./nbm-quick-start.adoc[NetBeans Platform Quick Start]
-*  xref:./nbm-selection-1.adoc[NetBeans Selection Management Tutorial I—Using a TopComponent's Lookup]
-*  xref:./nbm-10-top-apis.adoc[Top 10 NetBeans APIs]
+*  xref:tutorials/nbm-quick-start.adoc[NetBeans Platform Quick Start]
+*  xref:tutorials/nbm-selection-1.adoc[NetBeans Selection Management Tutorial I—Using a TopComponent's Lookup]
+*  xref:tutorials/nbm-10-top-apis.adoc[Top 10 NetBeans APIs]

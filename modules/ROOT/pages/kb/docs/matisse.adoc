@@ -103,33 +103,33 @@ link:http://www.oracle.com/technetwork/java/javafx/overview/index.html?ssSourceS
 
 === Getting Started with Swing
 
-* xref:./java/native_pkg.adoc[+Native Packaging in NetBeans IDE+]
-* xref:./java/gui-functionality.adoc[+Introduction to Java GUI Building+]
-* xref:./java/quickstart-gui.adoc[+Designing a Swing GUI in NetBeans IDE+]
-* xref:./java/quickstart-gui-legend.adoc[+NetBeans IDE GUI Builder Visual Feedback Legend+]
-* xref:./java/gui-image-display.adoc[+Handling Images in a GUI Application+]
-* xref:./java/gui-filechooser.adoc[+Adding a FileChooser to a GUI Application+]
-* xref:./java/gbcustomizer-basic.adoc[+Designing a Basic Java Form Using the GridBag Customizer+]
-* xref:./java/gbcustomizer-advanced.adoc[+Designing an Advanced Java Form Using the GridBag Customizer+]
-* xref:./java/gui-gaps.adoc[+Gap Editing Support in the NetBeans GUI Builder+]
-* xref:./java/debug-visual.adoc[+Using the Visual Debugger+]
+* xref:kb/docs/java/native_pkg.adoc[+Native Packaging in NetBeans IDE+]
+* xref:kb/docs/java/gui-functionality.adoc[+Introduction to Java GUI Building+]
+* xref:kb/docs/java/quickstart-gui.adoc[+Designing a Swing GUI in NetBeans IDE+]
+* xref:kb/docs/java/quickstart-gui-legend.adoc[+NetBeans IDE GUI Builder Visual Feedback Legend+]
+* xref:kb/docs/java/gui-image-display.adoc[+Handling Images in a GUI Application+]
+* xref:kb/docs/java/gui-filechooser.adoc[+Adding a FileChooser to a GUI Application+]
+* xref:kb/docs/java/gbcustomizer-basic.adoc[+Designing a Basic Java Form Using the GridBag Customizer+]
+* xref:kb/docs/java/gbcustomizer-advanced.adoc[+Designing an Advanced Java Form Using the GridBag Customizer+]
+* xref:kb/docs/java/gui-gaps.adoc[+Gap Editing Support in the NetBeans GUI Builder+]
+* xref:kb/docs/java/debug-visual.adoc[+Using the Visual Debugger+]
 
 === Java Persistence and Beans Binding
 
-* xref:./java/gui-binding.adoc[+Binding Beans and Data in a Java Application+]
-* xref:./java/hibernate-java-se.adoc[+Using Hibernate in a Java Swing Application+]
-* xref:./java/maven-hib-java-se.adoc[+Creating a Maven Swing Application Using Hibernate+]
+* xref:kb/docs/java/gui-binding.adoc[+Binding Beans and Data in a Java Application+]
+* xref:kb/docs/java/hibernate-java-se.adoc[+Using Hibernate in a Java Swing Application+]
+* xref:kb/docs/java/maven-hib-java-se.adoc[+Creating a Maven Swing Application Using Hibernate+]
 
 === Internationalization
 
-* xref:./java/gui-automatic-i18n.adoc[+Internationalizing a GUI Form+]
+* xref:kb/docs/java/gui-automatic-i18n.adoc[+Internationalizing a GUI Form+]
 
 == Screencasts
 
 * link:http://www.youtube.com/watch?v=ddJpDi5SWFc[+JavaFX Graphics Tips and Tricks+]
 * xref:front::blogs/geertjan/thanks_javafx_wysiwyg_html_editor.adoc[Thanks JavaFX: WYSIWYG HTML Editor for NetBeans IDE]
-* xref:./java/nb_fx_screencast.adoc[+Demo: JavaFX Support in NetBeans IDE+]
-* xref:./java/gui-builder-screencast.adoc[+Designing a Swing GUI in NetBeans IDE+]
+* xref:kb/docs/java/nb_fx_screencast.adoc[+Demo: JavaFX Support in NetBeans IDE+]
+* xref:kb/docs/java/gui-builder-screencast.adoc[+Designing a Swing GUI in NetBeans IDE+]
 
 == Community-Contributed Docs
 

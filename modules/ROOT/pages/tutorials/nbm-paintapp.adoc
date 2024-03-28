@@ -56,7 +56,7 @@ image::tutorials/paintapp_73_result-2.png[]
 
 This initial version is far from a full fledged paint application, but it demonstrates a very simple case of creating an application on top of the NetBeans Platform.
 
-NOTE:  The  xref:./nbm-google.adoc[NetBeans Plugin Quick Start] is a better tutorial for you if, instead of rich-client applications, you want to learn about NetBeans modules.
+NOTE:  The  xref:tutorials/nbm-google.adoc[NetBeans Plugin Quick Start] is a better tutorial for you if, instead of rich-client applications, you want to learn about NetBeans modules.
 
 
 == Setting Up the Paint Application
@@ -452,6 +452,6 @@ image::tutorials/paintapp_73_dist-1.png[]
 
 That's it! You have completed the Paint Application. You have learned how to set up a NetBeans Platform application and how to create a new window that displays something to the user.
 
-Next, you are recommended to work through the  xref:./nbm-crud.adoc[NetBeans Platform CRUD Application Tutorial], which will teach you how to create a business-oriented NetBeans Platform application that interacts with a database.
+Next, you are recommended to work through the  xref:tutorials/nbm-crud.adoc[NetBeans Platform CRUD Application Tutorial], which will teach you how to create a business-oriented NetBeans Platform application that interacts with a database.
 
 xref:front::community/mailing-lists.adoc[Send Us Your Feedback]

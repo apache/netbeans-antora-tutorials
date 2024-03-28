@@ -57,9 +57,9 @@ You can install the PHP engine, web server and database separately or use AMP (A
 
 The following documents contain instructions for one or two ways to set up a PHP web stack on your operating system. These instructions are not definitive. The web stack consists of third-party software, your environment may differ, and you might prefer a different AMP package or another way to set up PHP. You might need to supplement our instructions with your own investigations.
 
-* xref:./configure-php-environment-windows.adoc[+Configuring PHP Development Environment in Windows+]
-* xref:./configure-php-environment-ubuntu.adoc[+Configuring PHP Development Environment in the Ubuntu Linux Distribution+]
-* xref:./configure-php-environment-mac-os.adoc[+Configuring PHP Development Environment in Mac Operating System (Mac OS X)+]
+* xref:kb/docs/php/configure-php-environment-windows.adoc[+Configuring PHP Development Environment in Windows+]
+* xref:kb/docs/php/configure-php-environment-ubuntu.adoc[+Configuring PHP Development Environment in the Ubuntu Linux Distribution+]
+* xref:kb/docs/php/configure-php-environment-mac-os.adoc[+Configuring PHP Development Environment in Mac Operating System (Mac OS X)+]
 
 == Setting up a PHP Project in the NetBeans IDE for PHP
 
@@ -85,7 +85,7 @@ image::kb/docs/php/new-project-run-config.png[]
 . Leave the Project URL at default.
 . Click Finish. The IDE creates the project.
 
-Learn more about xref:./project-setup.adoc[+Setting up a PHP project in NetBeans+].
+Learn more about xref:kb/docs/php/project-setup.adoc[+Setting up a PHP project in NetBeans+].
 
 == Running Your First PHP Project
 

@@ -45,7 +45,7 @@ xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 
 == Related links
 
-* xref:./javaee-gettingstarted.adoc[+Getting Started with Java EE Applications in NetBeans IDE+]
-* xref:./javaee-intro.adoc[+Introduction to Java EE Technology+]
+* xref:kb/docs/javaee/javaee-gettingstarted.adoc[+Getting Started with Java EE Applications in NetBeans IDE+]
+* xref:kb/docs/javaee/javaee-intro.adoc[+Introduction to Java EE Technology+]
 * xref:kb/docs/web/jsf20-support.adoc[+JSF 2.0 Support in NetBeans IDE 6.8+]
 * xref:kb/docs/java-ee.adoc[+Java EE &amp; Java Web Learning Trail+]

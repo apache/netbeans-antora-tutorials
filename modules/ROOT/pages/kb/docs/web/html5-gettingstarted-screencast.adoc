@@ -41,8 +41,8 @@ link:http://bits.netbeans.org/media/html5-gettingstarted-final-screencast.mp4[+D
 
 |For more about working with HTML5 applications in NetBeans IDE, watch the following screencasts.
 
-* xref:./html5-css-screencast.adoc[+ HTML5 - Part 2: Working with CSS Style Sheets in HTML5 Applications+]
-* xref:./html5-javascript-screencast.adoc[+ HTML5 - Part 3: Testing and Debugging JavaScript in HTML5 Applications+]
+* xref:kb/docs/web/html5-css-screencast.adoc[+ HTML5 - Part 2: Working with CSS Style Sheets in HTML5 Applications+]
+* xref:kb/docs/web/html5-javascript-screencast.adoc[+ HTML5 - Part 3: Testing and Debugging JavaScript in HTML5 Applications+]
 
 xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
  
@@ -51,8 +51,8 @@ xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 
 == Related links
 
-* Demo:xref:./html5-css-screencast.adoc[+ HTML5 - Part 2: Working with CSS Style Sheets in HTML5 Applications+]
-* Demo:xref:./html5-javascript-screencast.adoc[+ HTML5 - Part 3: Testing and Debugging JavaScript in HTML5 Applications+]
+* Demo:xref:kb/docs/web/html5-css-screencast.adoc[+ HTML5 - Part 2: Working with CSS Style Sheets in HTML5 Applications+]
+* Demo:xref:kb/docs/web/html5-javascript-screencast.adoc[+ HTML5 - Part 3: Testing and Debugging JavaScript in HTML5 Applications+]
 * xref:kb/docs/webclient/html5-gettingstarted.adoc[+Getting Started with HTML5 Applications +]
 * xref:kb/docs/webclient/html5-editing-css.adoc[+Working with CSS Style Sheets in HTML5 Applications+]
 * xref:kb/docs/webclient/html5-js-support.adoc[+Debugging and Testing JavaScript in HTML5 Applications+]

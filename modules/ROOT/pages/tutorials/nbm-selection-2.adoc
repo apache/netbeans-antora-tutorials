@@ -35,7 +35,7 @@ ifdef::env-github[]
 :imagesdir: ../../images
 endif::[]
 
-This tutorial is part 2 of a series. The xref:./nbm-selection-1.adoc[previous tutorial] covered the basics of component-wide selection handling in NetBeans - how to provide objects from a ` xref:wiki::wiki/DevFaqWindowsTopComponent.adoc[TopComponent]`'s ` xref:wiki::wiki/DevFaqLookup.adoc[Lookup]`, and how to write other components that are sensitive to the `Lookup` of whatever component has focus. This tutorial assumes that you have completed the previous tutorial, and have the source code to hand, since we will be modifying it in this part.
+This tutorial is part 2 of a series. The xref:tutorials/nbm-selection-1.adoc[previous tutorial] covered the basics of component-wide selection handling in NetBeans - how to provide objects from a ` xref:wiki::wiki/DevFaqWindowsTopComponent.adoc[TopComponent]`'s ` xref:wiki::wiki/DevFaqLookup.adoc[Lookup]`, and how to write other components that are sensitive to the `Lookup` of whatever component has focus. This tutorial assumes that you have completed the previous tutorial, and have the source code to hand, since we will be modifying it in this part.
 
 This tutorial focuses on the  link:https://bits.netbeans.org/dev/javadoc/org-openide-nodes/overview-summary.html[Nodes API], which makes it possible to do more granular views and selection than just component-level selection. Of course, you could write a component that reads and writes into its own Lookup whatever it wants, and provides more granular selection logic that way. But the Nodes API makes it very easy to do this, and offers a number of advantages over doing it yourself.
 
@@ -66,7 +66,7 @@ Thanks to the components in the Explorer API, it is very easy to create your own
 
 == Creating an Explorer View
 
-The first thing you will do is some substantial modifications to your `MyEditor` editor component (from the xref:./nbm-selection-1.adoc[previous tutorial]). This starts with opening it in the editor.
+The first thing you will do is some substantial modifications to your `MyEditor` editor component (from the xref:tutorials/nbm-selection-1.adoc[previous tutorial]). This starts with opening it in the editor.
 
 
 [start=1]
@@ -341,5 +341,5 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 == Next Steps
 
-So you now have a view that can display `Node` s that expose some underlying model object (`Event` in your case). In the  xref:./nbm-nodesapi2.adoc[next tutorial], you will cover how to enhance the Nodes you have already created with actions, properties and more colorful display names.
+So you now have a view that can display `Node` s that expose some underlying model object (`Event` in your case). In the  xref:tutorials/nbm-nodesapi2.adoc[next tutorial], you will cover how to enhance the Nodes you have already created with actions, properties and more colorful display names.
 

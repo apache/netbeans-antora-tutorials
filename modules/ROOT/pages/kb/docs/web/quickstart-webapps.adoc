@@ -349,5 +349,5 @@ This concludes the Introduction to Developing Web Applications tutorial. This do
 
 For related and more advanced information about developing web applications in NetBeans IDE, see the following resources:
 
-* xref:./quickstart-webapps-struts.adoc[+Introduction to the Struts Web Framework+]. Describes the basics of using NetBeans IDE to develop web applications using the Struts framework.
+* xref:kb/docs/web/quickstart-webapps-struts.adoc[+Introduction to the Struts Web Framework+]. Describes the basics of using NetBeans IDE to develop web applications using the Struts framework.
 * xref:kb/docs/java-ee.adoc[+Java EE &amp; Java Web Learning Trail+]

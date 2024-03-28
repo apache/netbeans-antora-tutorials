@@ -32,19 +32,19 @@ To facilitate development of various types of applications, the NetBeans IDE pro
 
 === Databases
 
-- xref:./oracle-db.adoc[Connecting to Oracle Database from NetBeans IDE]
-- xref:./java-db.adoc[Working with the Java DB (Derby) Database]
-- xref:./mysql.adoc[Connecting to a MySQL Database]
-- xref:./install-and-configure-mysql-server.adoc[Setting Up the MySQL Database Server in the Windows Operating System]
+- xref:kb/docs/ide/oracle-db.adoc[Connecting to Oracle Database from NetBeans IDE]
+- xref:kb/docs/ide/java-db.adoc[Working with the Java DB (Derby) Database]
+- xref:kb/docs/ide/mysql.adoc[Connecting to a MySQL Database]
+- xref:kb/docs/ide/install-and-configure-mysql-server.adoc[Setting Up the MySQL Database Server in the Windows Operating System]
 
 === Source Code Management
 
-- xref:./git.adoc[Using Git in Apache NetBeans]
-- xref:./mercurial.adoc[Using Mercurial in Apache NetBeans]
-- xref:./mercurial-queues.adoc[Using Mercurial Queues in Apache NetBeans]
-- xref:./subversion.adoc[Using Subversion in Apache NetBeans]
-- xref:./cvs.adoc[Using CVS in Apache NetBeans]
-- xref:./clearcase.adoc[Using ClearCase in Apache NetBeans]
+- xref:kb/docs/ide/git.adoc[Using Git in Apache NetBeans]
+- xref:kb/docs/ide/mercurial.adoc[Using Mercurial in Apache NetBeans]
+- xref:kb/docs/ide/mercurial-queues.adoc[Using Mercurial Queues in Apache NetBeans]
+- xref:kb/docs/ide/subversion.adoc[Using Subversion in Apache NetBeans]
+- xref:kb/docs/ide/cvs.adoc[Using CVS in Apache NetBeans]
+- xref:kb/docs/ide/clearcase.adoc[Using ClearCase in Apache NetBeans]
 
 
 

@@ -354,5 +354,5 @@ getActions().addAction(ActionFactory.createZoomAction());
 [start=4]
 1. Run the application. Scroll the middle mousebutton, or do whatever your operating system requires for "zooming", and notice that the whole scene increases/decreases in size.
 
-Now that you have a basic idea of the features that the Visual Library API provides, see the section called "NetBeans APIs for Visualizing Data" on the  xref:../kb/docs/platform.adoc[NetBeans Platform Learning Trail].
+Now that you have a basic idea of the features that the Visual Library API provides, see the section called "NetBeans APIs for Visualizing Data" on the  xref:kb/docs/platform.adoc[NetBeans Platform Learning Trail].
 

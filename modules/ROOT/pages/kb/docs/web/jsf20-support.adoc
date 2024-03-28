@@ -86,7 +86,7 @@ After selecting JavaServer Faces, various configuration options become available
 
 The IDE's editor is language-specific, and provides support depending on the file type you are working in. Generally speaking, you can press Ctrl-Space on an element in your file to invoke code completion and API documentation. You can also take advantage of keyboard shortcuts and code templates.
 
-Choose Help > Keyboard Shortcuts Card from the IDE's main menu to view common keyboard shortcuts and code templates. For the full list, see the link:http://wiki.netbeans.org/KeymapProfileFor60[+NetBeans IDE 6.x Keyboard Shortcuts Specification+].
+Choose Help > Keyboard Shortcuts Card from the IDE's main menu to view common keyboard shortcuts and code templates. For the full list, see the xref:wiki::wiki/KeymapProfileFor60[NetBeans IDE 6.x Keyboard Shortcuts Specification].
 
 The IDE provides built-in Javadoc support for the link:http://javaserverfaces.java.net/nonav/docs/2.0/javadocs/index.html[+JSF 2.0 API+] and link:http://javaserverfaces.java.net/nonav/docs/2.1/javadocs/index.html[+JSF 2.1 API+], as well as JSF's link:http://javaserverfaces.java.net/nonav/docs/2.1/vdldocs/facelets/index.html[+Tag Library Documentation+]. To take advantage of these resources in your work, simply press Ctrl-Space on a given element in the editor.
 
@@ -319,7 +319,7 @@ Use the Facelets Template Client wizard to generate a page that references a Fac
 
 image::kb/docs/web/new-template-client.png[title="Create a Client for a Facelets template using the Facelets Template Client wizard"]
 
-For more details on using Facelets templates and clients, see the section on xref:./jsf20-intro.adoc#template[+Applying a Facelets Template+] in the xref:./jsf20-intro.adoc[+Introduction to JavaServer Faces 2.x in NetBeans IDE+].
+For more details on using Facelets templates and clients, see the section on xref:kb/docs/web/jsf20-intro.adoc#template[+Applying a Facelets Template+] in the xref:kb/docs/web/jsf20-intro.adoc[+Introduction to JavaServer Faces 2.x in NetBeans IDE+].
 
 
 
@@ -524,9 +524,9 @@ For more information about JSF 2.x, see the following resources.
 
 === NetBeans Articles and Tutorials
 
-* xref:./jsf20-intro.adoc[+Introduction to JavaServer Faces 2.x in NetBeans IDE+]
-* xref:./jsf20-crud.adoc[+Generating a JavaServer Faces 2.x CRUD Application from a Database+]
-* xref:../../samples/scrum-toys.adoc[+Scrum Toys - The JSF 2.0 Complete Sample Application+]
+* xref:kb/docs/web/jsf20-intro.adoc[+Introduction to JavaServer Faces 2.x in NetBeans IDE+]
+* xref:kb/docs/web/jsf20-crud.adoc[+Generating a JavaServer Faces 2.x CRUD Application from a Database+]
+* xref:samples/scrum-toys.adoc[+Scrum Toys - The JSF 2.0 Complete Sample Application+]
 * xref:kb/docs/javaee/javaee-gettingstarted.adoc[+Getting Started with Java EE Applications+]
 * xref:kb/docs/java-ee.adoc[+Java EE &amp; Java Web Learning Trail+]
 

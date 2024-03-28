@@ -64,7 +64,7 @@ If you have a hosting account on a remote Web server and an FTP account to trans
 
 To enable running a PHP application on a remote web server, you need to set up a run configuration that contains an FTP connection profile.
 
-If you already have a project with a default run configuration and you want to add a new remote run configuration, xref:./project-setup.adoc#managingProjectSetup[+customize your project+]:
+If you already have a project with a default run configuration and you want to add a new remote run configuration, xref:kb/docs/php/project-setup.adoc#managingProjectSetup[+customize your project+]:
 
 1. Click the right mouse button on the project node and choose Properties from the popup menu. The Project Properties panel opens.
 2. From the Categories list, choose Run Configuration. The Run Configurations panel opens.

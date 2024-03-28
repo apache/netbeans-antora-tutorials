@@ -55,7 +55,7 @@ Included in XAMPP Windows.
  
 |===
 
-Typically, development and debugging is performed on a local web server, while the production environment is located on a remote web server. Setting up a remote web server is described in xref:./remote-hosting-and-ftp-account.adoc[Deploying a PHP Application on a Remote Web Server Using the NetBeans IDE]. This tutorial has you set up a local web server. PHP support can be added to a number of local web servers (IIS, Xitami, and so on), but most commonly link:http://httpd.apache.org/download.cgi[+Apache HTTP Server+] is used. Apache HTTP server is included in the XAMPP AMP package used in this tutorial. For information on installing and configuring Apache HTTP server standalone, click link:http://httpd.apache.org/docs/2.2/install.html[+here+].
+Typically, development and debugging is performed on a local web server, while the production environment is located on a remote web server. Setting up a remote web server is described in xref:kb/docs/php/remote-hosting-and-ftp-account.adoc[Deploying a PHP Application on a Remote Web Server Using the NetBeans IDE]. This tutorial has you set up a local web server. PHP support can be added to a number of local web servers (IIS, Xitami, and so on), but most commonly link:http://httpd.apache.org/download.cgi[+Apache HTTP Server+] is used. Apache HTTP server is included in the XAMPP AMP package used in this tutorial. For information on installing and configuring Apache HTTP server standalone, click link:http://httpd.apache.org/docs/2.2/install.html[+here+].
 
 === Required Software
 
@@ -75,7 +75,7 @@ You can use a <<XAMPP, Package>>, that contains the required software, or <<inst
 
 === Using an AMP Package
 
-To have all the configuration settings for the PHP engine, the Apache HTTP Server, and the MySQL database server specified automatically, use an AMP package. This tutorial gives instructions only for the link:http://www.apachefriends.org/en/xampp-windows.html[+XAMPP-Windows+] package. For help with the WAMP package, please see the link:http://wiki.netbeans.org/HowToConfigureXDebug[+NetBeans XDebug Wiki+].
+To have all the configuration settings for the PHP engine, the Apache HTTP Server, and the MySQL database server specified automatically, use an AMP package. This tutorial gives instructions only for the link:http://www.apachefriends.org/en/xampp-windows.html[+XAMPP-Windows+] package. For help with the WAMP package, please see the xref:wiki::wiki/HowToConfigureXDebug[NetBeans XDebug Wiki].
 
 [[XAMPP]]
 ==== Installing and Configuring the XAMPP Package
@@ -120,7 +120,7 @@ image::kb/docs/php/xampp-phpinfo.png[]
 
 You need to configure your PHP stack to use XDebug. The process differs if you are using <<xdebug-xampp-171,XAMPP 1.7.1>>, which bundles PHP 5.2.6, or <<xdebug-xampp-172,XAMPP 1.7.2>>, which bundles PHP 5.3.
 
-Many users have experienced difficulties in getting XDebug to work on their systems. Please see link:http://wiki.netbeans.org/HowToConfigureXDebug[+our wiki+] and the link:http://forums.netbeans.org/viewforum.php?f=13&sid=5b63e6774fe7859b5edd35b1192d8efd[+NetBeans PHP Editor Users' Forum+] for assistance.
+Many users have experienced difficulties in getting XDebug to work on their systems. Please see xref:wiki::wiki/HowToConfigureXDebug[our wiki] and the link:http://forums.netbeans.org/viewforum.php?f=13&sid=5b63e6774fe7859b5edd35b1192d8efd[+NetBeans PHP Editor Users' Forum+] for assistance.
 
 [[xdebug-xampp-171]]
 ===== XDebug on XAMPP 1.7.1 (PHP 5.2)
@@ -163,7 +163,7 @@ NOTE: Make sure the paths you specify match the location of the corresponding fi
 
 . Save  ``php.ini`` .
 . Run the <<xamppConstolPanel,XAMPP Control Panel Application>> and restart the Apache server.
-See link:http://wiki.netbeans.org/HowToConfigureXDebug[+our wiki+] and the link:http://www.xdebug.org/docs/install[+XDebug documentation+] for more information on how to configure XDebug.
+See xref:wiki::wiki/HowToConfigureXDebug[our wiki] and the link:http://www.xdebug.org/docs/install[+XDebug documentation+] for more information on how to configure XDebug.
 
 [[xdebug-xampp-172]]
 ===== Xdebug on XAMPP 1.7.2 (PHP 5.3)
@@ -179,7 +179,7 @@ XAMPP 1.7.2 comes bundled with the appropriate Xdebug .dll file. You only have t
 7. Save  ``php.ini`` .
 8. Run the <<xamppConstolPanel,XAMPP Control Panel Application>> and restart the Apache server.
 
-See link:http://wiki.netbeans.org/HowToConfigureXDebug[+our wiki+] and the link:http://www.xdebug.org/docs/install[+XDebug documentation+] for more information on how to configure XDebug.
+See xref:wiki::wiki/HowToConfigureXDebug[our wiki] and the link:http://www.xdebug.org/docs/install[+XDebug documentation+] for more information on how to configure XDebug.
 
 === Installing the Components Separately
 

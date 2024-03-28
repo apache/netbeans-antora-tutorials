@@ -44,7 +44,7 @@ In this tutorial, you learn how to use the infrastructure of the NetBeans IDE in
 
 This tutorial is derived from the following sources:
 
-*  xref:wiki::wiki/NBI.adoc[http://wiki.netbeans.org/NBI]
+*  xref:wiki::wiki/NBI.adoc[]
 *  link:http://installer.netbeans.org/docs/nbi-devguide.html[http://installer.netbeans.org/docs/nbi-devguide.html]
 
 
@@ -441,6 +441,6 @@ Run the application via the executable in the "bin" folder and the JRE within th
 
 Now that you have learned how to create, customize, and bundle additional resources with the NetBeans installer, read the resources below for many additional details and other information that may be relevant to your business needs:
 
-*  xref:wiki::wiki/NBI.adoc[http://wiki.netbeans.org/NBI]
-*  link:http://installer.netbeans.org/docs/nbi-devguide.html[http://installer.netbeans.org/docs/nbi-devguide.html]
-xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
+* xref:wiki::wiki/NBI.adoc[]
+* link:http://installer.netbeans.org/docs/nbi-devguide.html[http://installer.netbeans.org/docs/nbi-devguide.html]
+* xref:front::community/mailing-lists.adoc[Send Us Your Feedback]

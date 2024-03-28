@@ -580,4 +580,4 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 For more information, see the following:
 
-* xref:./jmx-getstart.adoc[+Getting Started with JMX Monitoring in NetBeans IDE+]
+* xref:kb/docs/java/jmx-getstart.adoc[+Getting Started with JMX Monitoring in NetBeans IDE+]

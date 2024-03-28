@@ -159,12 +159,12 @@ JavaScript is an object-oriented scripting language primarily used in client-sid
 
 == Sample Applications
 
-* xref:../samples/pet-catalog.adoc[+Pet Catalog - Java EE 6 Sample Application+]
-* xref:../samples/scrum-toys.adoc[+Scrum Toys - The JSF 2.0 Complete Sample Application+]
-* xref:../samples/jsfjpa.adoc[+User Authentication Web App Using Java EE+]
-* xref:../samples/webjpa.adoc[+Using the Java Persistence API in a Stand-Alone Web App+]
-* xref:../samples/javaee-crud.adoc[+JSF CRUD Web Application with Java Persistence API+]
-* xref:../samples/javaee-stateless.adoc[+Dependency Injection with Stateless Session Beans+]
+* xref:samples/pet-catalog.adoc[+Pet Catalog - Java EE 6 Sample Application+]
+* xref:samples/scrum-toys.adoc[+Scrum Toys - The JSF 2.0 Complete Sample Application+]
+* xref:samples/jsfjpa.adoc[+User Authentication Web App Using Java EE+]
+* xref:samples/webjpa.adoc[+Using the Java Persistence API in a Stand-Alone Web App+]
+* xref:samples/javaee-crud.adoc[+JSF CRUD Web Application with Java Persistence API+]
+* xref:samples/javaee-stateless.adoc[+Dependency Injection with Stateless Session Beans+]
 
 == Community-Contributed Docs
 

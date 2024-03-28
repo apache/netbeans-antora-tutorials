@@ -37,7 +37,7 @@ This video is part of the xref:kb/docs/intro-screencasts.adoc[+Guided Video Tour
 
 == Related links
 
-* xref:../index.adoc[+NetBeans IDE Tutorials+]
+* xref:kb/docs/index.adoc[+NetBeans IDE Tutorials+]
 * xref:front::community/index.adoc[+NetBeans Community+]
 
 xref:front::community/mailing-lists.adoc[Send Us Your Feedback]

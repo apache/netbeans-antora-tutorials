@@ -29,7 +29,7 @@
 :description: Designing a Swing GUI in NetBeans IDE - Apache NetBeans
 :keywords: Apache NetBeans, Tutorials, Designing a Swing GUI in NetBeans IDE
 
-These screencasts walk you through designing a Swing GUI in the NetBeans IDE described in the xref:./quickstart-gui.adoc[+Designing a Swing GUI in NetBeans IDE+] tutorial.
+These screencasts walk you through designing a Swing GUI in the NetBeans IDE described in the xref:kb/docs/java/quickstart-gui.adoc[+Designing a Swing GUI in NetBeans IDE+] tutorial.
 
 In the screencasts, you will see how to add, insert, align, resize, and indent components to layout a GUI front-end that enables you to view and edit contact information of individuals included in an employee database. You will learn how to effectively use the capabilities of the IDE's GUI Builder.
 

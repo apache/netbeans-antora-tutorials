@@ -42,7 +42,7 @@ link:http://bits.netbeans.org/media/restproject.swf[+Download+] [20 MB]
 == Related links
 
 * link:https://www.java.net/blogs/caroljmcdonald[+download sample projects from Carol's Blog+]
-* xref:./rest.adoc[+Getting Started with RESTful Web Services+]
+* xref:kb/docs/websvc/rest.adoc[+Getting Started with RESTful Web Services+]
 
 xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
  |     

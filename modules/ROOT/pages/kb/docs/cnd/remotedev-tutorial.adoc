@@ -52,7 +52,7 @@ This document describes how to use remote development features of the NetBeans I
 |===
 
 
-See the xref:front::download/index.adoc[NetBeans IDE Installation Instructions] and xref:./cpp-setup-instructions.adoc[Configuring the NetBeans IDE for C/C{pp}/Fortran]
+See the xref:front::download/index.adoc[NetBeans IDE Installation Instructions] and xref:kb/docs/cnd/cpp-setup-instructions.adoc[Configuring the NetBeans IDE for C/C{pp}/Fortran]
 for information about downloading and installing the required software.
 
 
@@ -67,7 +67,7 @@ Have you ever wanted to develop a Solaris or Linux application from your laptop 
 
 When you do remote development, you run the NetBeans IDE on your client system and you can create projects, edit files, and use code assistance features the same way as you do for local projects. But when you build, run, or debug your project, the process runs on the remote Solaris or Linux server with output and input transferred to the client system. Ideally, you shouldn't see any difference in workflow between doing local and remote development once you've set up the remote build host.
 
-The IDE supports different modes of remote development, which are described in xref:./remote-modes.adoc[C/C{pp} Remote Development Modes]. You can determine how you want to develop on the remote host.
+The IDE supports different modes of remote development, which are described in xref:kb/docs/cnd/remote-modes.adoc[C/C{pp} Remote Development Modes]. You can determine how you want to develop on the remote host.
 
 
 === Requirements for Remote Development
@@ -333,7 +333,7 @@ image::kb/docs/cnd/remotedev-set-remote-host-menu.png[]
 * You can change the properties of a remote build host after initial setup, by right-clicking the host in the Services window and selecting Properties.
 * If you are using a remote host to build and run an application with a graphical UI, you can select Enable X11 Forwarding in the hosts properties to that the UI can be seen on your local system while it runs on the remote host.
 * If building your project remotely compiles libraries or generates other files in addition to the main build product, the IDE prompts you to download the files to the local system. You can select which changed files to download.
-* You can work on projects in full remote mode where the project and the tools are on the remote host. See the IDE's integrated help or the article xref:./remote-modes.adoc[C/C{pp} Remote Development Modes] for more information.
+* You can work on projects in full remote mode where the project and the tools are on the remote host. See the IDE's integrated help or the article xref:kb/docs/cnd/remote-modes.adoc[C/C{pp} Remote Development Modes] for more information.
 * You can access the remote host and tools information from the IDE's Tools menu as well as the Services window. Select Tools > Options > C/C++ > Build Tools and click the Edit button next to the Build Host list.
 * When using file sharing for project files, you can map the local and remote paths to the shared folder through the Path Mapping feature. You can set the mapping by doing one of the following:
 * In the Services window, open C/C++ Build Hosts, right-click the hostname and select Path Mapper.
@@ -346,7 +346,7 @@ See the following locations for more information:
 
 * The Help menu in the IDE provides access to extensive information about using the IDE.
 
-* The xref:./remote-modes.adoc[C/C{pp} Remote Development Modes article] describes different ways to use remote development
+* The xref:kb/docs/cnd/remote-modes.adoc[C/C{pp} Remote Development Modes article] describes different ways to use remote development
 
 * The xref:kb/docs/cnd.adoc[C/C{pp} Learning Trail] provides several articles and tutorials for developing in C/C++ in the IDE.
 

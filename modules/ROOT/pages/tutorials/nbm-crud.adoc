@@ -44,7 +44,7 @@ Once we have an editor, we begin adding CRUD functionality. First, the "R", stan
 
 At the end of the tutorial, you will have learned about a range of NetBeans Platform features that help you in creating applications of this kind. For example, you will have learned about the  `` link:https://bits.netbeans.org/dev/javadoc/org-openide-awt/org/openide/awt/UndoRedo.Manager.html[UndoRedo.Manager]``  and the  `` link:https://bits.netbeans.org/dev/javadoc/org-openide-explorer/org/openide/explorer/ExplorerManager.html[ExplorerManager]`` , as well as NetBeans Platform Swing components, such as  `` link:https://bits.netbeans.org/dev/javadoc/org-openide-windows/org/openide/windows/TopComponent.html[TopComponent]``  and  `` link:https://bits.netbeans.org/dev/javadoc/org-openide-explorer/org/openide/explorer/view/BeanTreeView.html[BeanTreeView]`` .
 
-// NOTE:  This document uses NetBeans IDE 8.0 and NetBeans Platform 8.0. If you are using an earlier version, see  link:74/nbm-crud.html[the previous version of this document]. A prerequisite for following this tutorial is that you have already completed and understood the  xref:./nbm-quick-start.adoc[NetBeans Platform Quick Start], while  link:https://leanpub.com/nbp4beginners[NetBeans Platform for Beginners] (published in 2014) is very highly recommended.
+// NOTE:  This document uses NetBeans IDE 8.0 and NetBeans Platform 8.0. If you are using an earlier version, see  link:74/nbm-crud.html[the previous version of this document]. A prerequisite for following this tutorial is that you have already completed and understood the  xref:tutorials/nbm-quick-start.adoc[NetBeans Platform Quick Start], while  link:https://leanpub.com/nbp4beginners[NetBeans Platform for Beginners] (published in 2014) is very highly recommended.
 
 
 
@@ -105,7 +105,7 @@ In this section, you generate entity classes from a selected database.
 
 image::tutorials/crud_72_db-1.png[]
 
-Alternatively, use any database you like and adapt the steps that follow to your particular use case. For Oracle Database, see  xref:../kb/docs/ide/oracle-db.adoc[Connecting to an Oracle Database]; for MySQL, see  xref:../kb/docs/ide/mysql.adoc[Connecting to a MySQL Database] for help.
+Alternatively, use any database you like and adapt the steps that follow to your particular use case. For Oracle Database, see  xref:kb/docs/ide/oracle-db.adoc[Connecting to an Oracle Database]; for MySQL, see  xref:kb/docs/ide/mysql.adoc[Connecting to a MySQL Database] for help.
 
 
 [start=2]
@@ -367,7 +367,7 @@ At the top of the class, declare and initialize the  ``ExplorerManager`` :
 private static ExplorerManager em = new ExplorerManager();
 ----
 
-Watch  xref:./nbm-10-top-apis.adoc[Top 10 NetBeans APIs] for details on the above code, especially the screencast dealing with the Nodes API and the Explorer &amp; Property Sheet API.
+Watch  xref:tutorials/nbm-10-top-apis.adoc[Top 10 NetBeans APIs] for details on the above code, especially the screencast dealing with the Nodes API and the Explorer &amp; Property Sheet API.
 
 
 [start=4]
@@ -733,7 +733,7 @@ private void modify() {
 }
 ----
 
-NOTE:  To use the above code snippet, you need to set up a dynamic Lookup, as described in the  xref:./nbm-quick-start.adoc[NetBeans Platform Quick Start]. Since the NetBeans Platform Quick Start is a prerequisite for following this tutorial, no time will be spent explaining dynamic Lookups here. If you do not know how to use  ``InstanceContent``  or if the term "dynamic Lookup" means nothing to you, please stop working on this tutorial and work through the NetBeans Platform Quick Start instead.
+NOTE:  To use the above code snippet, you need to set up a dynamic Lookup, as described in the  xref:tutorials/nbm-quick-start.adoc[NetBeans Platform Quick Start]. Since the NetBeans Platform Quick Start is a prerequisite for following this tutorial, no time will be spent explaining dynamic Lookups here. If you do not know how to use  ``InstanceContent``  or if the term "dynamic Lookup" means nothing to you, please stop working on this tutorial and work through the NetBeans Platform Quick Start instead.
 
 
 [start=4]
@@ -1101,7 +1101,7 @@ For information on embedding a database in a NetBeans Platform application, see 
 
 For more information about creating and developing applications, see the following resources:
 
-*  xref:../kb/docs/platform.adoc[NetBeans Platform Learning Trail]
+*  xref:kb/docs/platform.adoc[NetBeans Platform Learning Trail]
 *  link:https://bits.netbeans.org/dev/javadoc/[NetBeans API Javadoc]
 xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 

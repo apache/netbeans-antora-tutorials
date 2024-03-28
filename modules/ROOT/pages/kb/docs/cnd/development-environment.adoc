@@ -61,7 +61,7 @@ See the xref:front::download/index.adoc[NetBeans IDE Installation Instructions] 
 
 == Installing Tool Collections
 
-The Netbeans C/C{pp} module minimally requires a C compiler, C{pp} compiler, make utility, and gdb debugger. See xref:./cpp-setup-instructions.adoc[Configuring the NetBeans IDE for C/C{pp}/Fortran] for instructions on installing and configuring the required compilers and tools.
+The Netbeans C/C{pp} module minimally requires a C compiler, C{pp} compiler, make utility, and gdb debugger. See xref:kb/docs/cnd/cpp-setup-instructions.adoc[Configuring the NetBeans IDE for C/C{pp}/Fortran] for instructions on installing and configuring the required compilers and tools.
 
 
 == Specifying the Build Host
@@ -74,7 +74,7 @@ You can define remote build hosts in several ways:
 * Right-click a project, select Set Build Host > Manage Hosts, then click Add in the Build Host Manager dialog box.
 * Using the Options window: Choose Tools > Options > C/C++ > Build Tools and click the Edit button next to the Build Host list.
 
-See the xref:./remotedev-tutorial.adoc[C/C{pp} Remote Development Tutorial] for more information.
+See the xref:kb/docs/cnd/remotedev-tutorial.adoc[C/C{pp} Remote Development Tutorial] for more information.
 
 
 == Using the Tool Collection List

@@ -110,7 +110,7 @@ image::kb/docs/websvc/wsit-design.png[title="CalculatorWS service in Design GUI 
 
 *Note:* In the Quality of Service section in the design tab of the service you can see that _no_ options are enabled. As a result, the Quality of Service components have not been applied to this particular web service. You will look at a web service where a Quality of Service component _is_ enabled when you create the secure web service.
 
-For a full tutorial on web services in the IDE, see xref:./jax-ws.adoc[+Getting Started with JAX-WS Web Services+].
+For a full tutorial on web services in the IDE, see xref:kb/docs/websvc/jax-ws.adoc[+Getting Started with JAX-WS Web Services+].
 
 
 === Deploying and Testing the Calculator Sample
@@ -268,11 +268,11 @@ xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 
 For more information about using NetBeans IDE to develop Web Services, see the following resources:
 
-* xref:./client.adoc[+Developing JAX-WS Web Service Clients+]
-* xref:./jax-ws.adoc[+Getting Started with JAX-WS Web Services+]
-* xref:./rest.adoc[+Getting Started with RESTful Web Services+]
-* xref:./flower_overview.adoc[+Web Service Application Passing Binary Data+]
-// not sync with last release * xref:../../74/websvc/jaxb.adoc[+Binding WSDL to Java with JAXB+]
+* xref:kb/docs/websvc/client.adoc[+Developing JAX-WS Web Service Clients+]
+* xref:kb/docs/websvc/jax-ws.adoc[+Getting Started with JAX-WS Web Services+]
+* xref:kb/docs/websvc/rest.adoc[+Getting Started with RESTful Web Services+]
+* xref:kb/docs/websvc/flower_overview.adoc[+Web Service Application Passing Binary Data+]
+// not sync with last release * xref:74/websvc/jaxb.adoc[+Binding WSDL to Java with JAXB+]
 * xref:kb/docs/web.adoc[+Web Services Learning Trail+]
 
 To send comments and suggestions, get support, and keep informed about the latest developments on the NetBeans IDE Java EE development features, xref:front::community/mailing-lists.adoc[+join the nbj2ee@netbeans.org mailing list+].

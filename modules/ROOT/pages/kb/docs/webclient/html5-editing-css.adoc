@@ -37,7 +37,7 @@ HTML5 applications typically combine HTML, CSS and JavaScript to create applicat
 
 The NetBeans Connector extension for the Chrome browser can help you view applications as they would appear on various devices. The extension enables the Chrome browser and the IDE to communicate with each other. The Inspect in NetBeans mode can help you locate elements in your source code by selecting them in the browser. After you select an element in the browser you can use the IDE to view the CSS rules and properties that are applied to that element.
 
-For details on how to install the NetBeans Connector extension for the Chrome browser, see the tutorial xref:./html5-gettingstarted.adoc[+Getting Started with HTML5 Applications+].
+For details on how to install the NetBeans Connector extension for the Chrome browser, see the tutorial xref:kb/docs/webclient/html5-gettingstarted.adoc[+Getting Started with HTML5 Applications+].
 
 To watch a screencast of this tutorial, see xref:kb/docs/web/html5-css-screencast.adoc[+Video of Working with CSS Style Sheets in HTML5 Applications+].
 
@@ -70,7 +70,7 @@ link:http://lesscss.org/[+LESS+]
 
 == Creating the HTML5 Application
 
-In this tutorial you use a site template to create the HTML5 project. The site template that you use in this tutorial is the same template that was saved as a site template in the xref:./html5-gettingstarted.adoc[+Getting Started with HTML5 Applications+] tutorial. If you performed the steps in the Getting Started tutorial you can use the site template that you saved in the last section. Alternatively, you can download the HTML5DemoSiteTemplate.zip site template.
+In this tutorial you use a site template to create the HTML5 project. The site template that you use in this tutorial is the same template that was saved as a site template in the xref:kb/docs/webclient/html5-gettingstarted.adoc[+Getting Started with HTML5 Applications+] tutorial. If you performed the steps in the Getting Started tutorial you can use the site template that you saved in the last section. Alternatively, you can download the HTML5DemoSiteTemplate.zip site template.
 
 Perform the following steps to create the application from a site template.
 
@@ -89,7 +89,7 @@ When you click Finish the IDE creates the project and opens the  ``index.html`` 
 
 In this tutorial you will run the application in the Chrome browser with the NetBeans Connector extension installed. When the extension is installed you can use the NetBeans menu in the browser to easily resize the browser window to view the application as it would appear on some common devices.
 
-*Notes.* For this tutorial it is recommended that you use the Chrome browser and install the NetBeans extension for Chrome. See the tutorial xref:./html5-gettingstarted.adoc[+Getting Started with HTML5 Applications+] for details on how to install the NetBeans Connector extension.
+*Notes.* For this tutorial it is recommended that you use the Chrome browser and install the NetBeans extension for Chrome. See the tutorial xref:kb/docs/webclient/html5-gettingstarted.adoc[+Getting Started with HTML5 Applications+] for details on how to install the NetBeans Connector extension.
 
 Perform the following steps to run the application in the Chrome browser.
 
@@ -439,10 +439,10 @@ xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 [[seealso]]
 == See Also
 
-For more information about support for HTML5 applications in the IDE on xref:../../../index.adoc[+netbeans.org+], see the following resources:
+For more information about support for HTML5 applications in the IDE on xref:front::index.adoc[+netbeans.org+], see the following resources:
 
-* xref:./html5-gettingstarted.adoc[+Getting Started with HTML5 Applications+]. A document that demonstrates how to install the NetBeans Connector extension for Chrome and creating and running a simple HTML5 application.
-* xref:./html5-js-support.adoc[+Debugging and Testing JavaScript in HTML5 Applications+]. A document that demonstrates how the IDE provides tools that can help you debug and test JavaScript files in the IDE.
+* xref:kb/docs/webclient/html5-gettingstarted.adoc[+Getting Started with HTML5 Applications+]. A document that demonstrates how to install the NetBeans Connector extension for Chrome and creating and running a simple HTML5 application.
+* xref:kb/docs/webclient/html5-js-support.adoc[+Debugging and Testing JavaScript in HTML5 Applications+]. A document that demonstrates how the IDE provides tools that can help you debug and test JavaScript files in the IDE.
 * link:http://docs.oracle.com/cd/E50453_01/doc.80/e50452/dev_html_apps.htm[+Developing HTML5 Applications+] chapter in the link:http://www.oracle.com/pls/topic/lookup?ctx=nb8000&id=NBDAG[+Developing Applications with NetBeans IDE User's Guide+]
 
 For more information about jQuery, refer to the official documentation:

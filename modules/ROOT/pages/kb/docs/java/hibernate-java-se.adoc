@@ -42,10 +42,10 @@ The application that you build in this tutorial is a companion administration ap
 Before starting this tutorial you may want to familiarize yourself with the following documentation.
 
 * Hibernate documentation at link:http://www.hibernate.org/[+hibernate.org+].
-* xref:./gui-functionality.adoc[+Introduction to GUI Building+]
+* xref:kb/docs/java/gui-functionality.adoc[+Introduction to GUI Building+]
 * xref:kb/docs/ide/mysql.adoc[+Connecting to a MySQL Database+] tutorial.
 
-To build this application using Maven, see xref:./maven-hib-java-se.adoc[+Creating a Maven Swing Application Using Hibernate+].
+To build this application using Maven, see xref:kb/docs/java/maven-hib-java-se.adoc[+Creating a Maven Swing Application Using Hibernate+].
 
 
 image::kb/docs/java/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
@@ -249,7 +249,7 @@ Now that you have the POJO and necessary Hibernate-related files you can create 
 
 In this exercise you will create a simple JFrame Form with some fields for entering and displaying data. You will also add a button that will trigger a database query to retrieve the data.
 
-If you are not familiar with using the GUI builder to create forms, you might want to review the xref:./gui-functionality.adoc[+Introduction to GUI Building+] tutorial.
+If you are not familiar with using the GUI builder to create forms, you might want to review the xref:kb/docs/java/gui-functionality.adoc[+Introduction to GUI Building+] tutorial.
 
 
 === Creating the JFrame Form
@@ -629,6 +629,6 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 For additional information on creating Swing GUI applications, see the following tutorials.
 
-* xref:./quickstart-gui.adoc[+Designing a Swing GUI in NetBeans IDE+]
-* xref:./gui-functionality.adoc[+Introduction to GUI Building+]
+* xref:kb/docs/java/quickstart-gui.adoc[+Designing a Swing GUI in NetBeans IDE+]
+* xref:kb/docs/java/gui-functionality.adoc[+Introduction to GUI Building+]
 * xref:kb/docs/matisse.adoc[+Java GUI Applications Learning Trail+]

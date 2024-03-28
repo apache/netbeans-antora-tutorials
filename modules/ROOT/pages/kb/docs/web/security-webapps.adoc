@@ -669,7 +669,7 @@ In this tutorial, you created a secure web application. You edited security sett
 
 == See Also
 
-* xref:./quickstart-webapps.adoc[Introduction to Developing Web Applications]
+* xref:kb/docs/web/quickstart-webapps.adoc[Introduction to Developing Web Applications]
 * xref:kb/docs/java-ee.adoc[Java EE &amp; Java Web Learning Trail]
 
 

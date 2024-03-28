@@ -35,12 +35,12 @@ endif::[]
 
 == Tutorial Contents
 
-1. xref:./intro.adoc[+Introduction+]
-2. xref:./design.adoc[+Designing the Application+]
-3. xref:./setup-dev-environ.adoc[+Setting up the Development Environment+]
-4. xref:./data-model.adoc[+Designing the Data Model+]
-5. xref:./page-views-controller.adoc[+Preparing the Page Views and Controller Servlet+]
-6. xref:./connect-db.adoc[+Connecting the Application to the Database+]
+1. xref:kb/docs/javaee/ecommerce/intro.adoc[+Introduction+]
+2. xref:kb/docs/javaee/ecommerce/design.adoc[+Designing the Application+]
+3. xref:kb/docs/javaee/ecommerce/setup-dev-environ.adoc[+Setting up the Development Environment+]
+4. xref:kb/docs/javaee/ecommerce/data-model.adoc[+Designing the Data Model+]
+5. xref:kb/docs/javaee/ecommerce/page-views-controller.adoc[+Preparing the Page Views and Controller Servlet+]
+6. xref:kb/docs/javaee/ecommerce/connect-db.adoc[+Connecting the Application to the Database+]
 7. *Adding Entity Classes and Session Beans*
 * <<whatEJB,What are EJB and JPA Technologies?>>
 * <<whatSession,What are Session Beans?>>
@@ -51,22 +51,22 @@ endif::[]
 * <<seeAlso,See Also>>
 
 [start=8]
-. xref:./manage-sessions.adoc[+Managing Sessions+]
+. xref:kb/docs/javaee/ecommerce/manage-sessions.adoc[+Managing Sessions+]
 
 [start=9]
-. xref:./transaction.adoc[+Integrating Transactional Business Logic+]
+. xref:kb/docs/javaee/ecommerce/transaction.adoc[+Integrating Transactional Business Logic+]
 
 [start=10]
-. xref:./language.adoc[+Adding Language Support+]
+. xref:kb/docs/javaee/ecommerce/language.adoc[+Adding Language Support+]
 
 [start=11]
-. xref:./security.adoc[+Securing the Application+]
+. xref:kb/docs/javaee/ecommerce/security.adoc[+Securing the Application+]
 
 [start=12]
-. xref:./test-profile.adoc[+Testing and Profiling+]
+. xref:kb/docs/javaee/ecommerce/test-profile.adoc[+Testing and Profiling+]
 
 [start=13]
-. xref:./conclusion.adoc[+Conclusion+]
+. xref:kb/docs/javaee/ecommerce/conclusion.adoc[+Conclusion+]
 
 image::kb/docs/javaee/ecommerce/netbeans-stamp-68-69.png[title="Content on this page applies to NetBeans IDE, versions 6.8 and 6.9"]
 
@@ -75,11 +75,11 @@ This tutorial unit introduces the link:http://java.sun.com/products/ejb/[+Enterp
 * *Entity Classes from Database wizard:* Creates a Java Persistence API entity class for each selected database table, complete with named query annotations, fields representing columns, and relationships representing foreign keys.
 * *Session Beans for Entity Classes wizard:* Creates an EJB session facade for each entity class with basic access methods.
 
-These two wizards provide an efficient way for you to quickly set up the model for your application. If you reexamine the xref:./design.adoc#mvcDiagram[+MVC diagram+] for the application you are building, you can see where EJB session beans and JPA entity classes fit into its structure.
+These two wizards provide an efficient way for you to quickly set up the model for your application. If you reexamine the xref:kb/docs/javaee/ecommerce/design.adoc#mvcDiagram[+MVC diagram+] for the application you are building, you can see where EJB session beans and JPA entity classes fit into its structure.
 
 image::kb/docs/javaee/ecommerce/mvc-diagram.png[title="MVC diagram of the AffableBean application"]
 
-In this unit, the entity classes you create form a Java-based representation of the `affablebean` database. While each entity class represents a database table, instances of entity classes correspond to records that can be saved (i.e., _persisted_) to the database. The business logic of the application is encapsulated by session beans, which can either be used as _facade_ classes that enable CRUD (Create-Read-Update-Delete) access to entities (as demonstrated here), or they can contain code that implements actions specific to your application. (An example of this is provided in xref:./transaction.adoc[+Unit 9: Integrating Transactional Business Logic+]).
+In this unit, the entity classes you create form a Java-based representation of the `affablebean` database. While each entity class represents a database table, instances of entity classes correspond to records that can be saved (i.e., _persisted_) to the database. The business logic of the application is encapsulated by session beans, which can either be used as _facade_ classes that enable CRUD (Create-Read-Update-Delete) access to entities (as demonstrated here), or they can contain code that implements actions specific to your application. (An example of this is provided in xref:kb/docs/javaee/ecommerce/transaction.adoc[+Unit 9: Integrating Transactional Business Logic+]).
 
 You can view a live demo of the application that you build in this tutorial: link:http://services.netbeans.org/AffableBean/[+NetBeans E-commerce Tutorial Demo Application+].
 
@@ -104,7 +104,7 @@ You can view a live demo of the application that you build in this tutorial: lin
 * The NetBeans IDE requires the Java Development Kit (JDK) to run properly. If you do not have any of the resources listed above, the JDK should be the first item that you download and install.
 * The NetBeans IDE Java Bundle includes Java Web and EE technologies, which are required for the application you build in this tutorial.
 * The NetBeans IDE Java Bundle also includes the GlassFish server, which you require for this tutorial. You could link:http://glassfish.dev.java.net/public/downloadsindex.html[+download the GlassFish server independently+], but the version provided with the NetBeans download has the added benefit of being automatically registered with the IDE.
-* You can follow this tutorial unit without having completed previous units. To do so, see the xref:./setup.adoc[+setup instructions+], which describe how to prepare the database and establish connectivity between the IDE, GlassFish, and MySQL.
+* You can follow this tutorial unit without having completed previous units. To do so, see the xref:kb/docs/javaee/ecommerce/setup.adoc[+setup instructions+], which describe how to prepare the database and establish connectivity between the IDE, GlassFish, and MySQL.
 * link:https://netbeans.org/projects/samples/downloads/download/Samples%252FJavaEE%252Fecommerce%252FAffableBean_snapshot4.zip[+Snapshot 4+] of the `AffableBean` project is available for download and corresponds to state the project after completing this unit using NetBeans IDE 6.9.
 
 
@@ -134,8 +134,8 @@ You can think of EJB both as components, or Java classes that are incorporated i
 
 * *Pooling:* For each EJB component, the EJB platform creates a pool of component instances that are shared by clients. At any point in time, each pooled instance is only allowed to be used by a single client. As soon as an instance is finished servicing a client, it is returned to the pool for reuse instead of being frivolously discarded for the garbage collector to reclaim.
 * *Thread Safety:* EJB makes all components thread-safe and highly performant in ways athat are completely invisible. This means that you can write your server components as if you were developing a single-threaded desktop application. It doesn't matter how complex the component itself is; EJB will make sure it is thread-safe.
-* *Transactions:* EJB supports declarative transaction management that helps you add transactional behavior to components using simple configuration instead of code. In effect, you can designate any component method to be transactional. If the method completes normally, EJB commits the transaction and makes the data changes made by the method permanent. Otherwise the transaction is rolled back. Container-managed EJB transactions are demonstrated in Unit 9, xref:./transaction.adoc[+Integrating Transactional Business Logic+].
-* *Security:* EJB supports integration with the Java Authentication and Authorization Service (JAAS) API, so it is easy to completely externalize security and secure an application using simple configuration instead of cluttering up your application with security code.^<<footnote2,[2]>>^ In Unit 11, xref:./security.adoc#secureEJB[+Securing the Application+], a demonstration of EJB's link:http://download.oracle.com/javaee/6/api/javax/annotation/security/RolesAllowed.html[+@RolesAllowed+] annotation is provided.
+* *Transactions:* EJB supports declarative transaction management that helps you add transactional behavior to components using simple configuration instead of code. In effect, you can designate any component method to be transactional. If the method completes normally, EJB commits the transaction and makes the data changes made by the method permanent. Otherwise the transaction is rolled back. Container-managed EJB transactions are demonstrated in Unit 9, xref:kb/docs/javaee/ecommerce/transaction.adoc[+Integrating Transactional Business Logic+].
+* *Security:* EJB supports integration with the Java Authentication and Authorization Service (JAAS) API, so it is easy to completely externalize security and secure an application using simple configuration instead of cluttering up your application with security code.^<<footnote2,[2]>>^ In Unit 11, xref:kb/docs/javaee/ecommerce/security.adoc#secureEJB[+Securing the Application+], a demonstration of EJB's link:http://download.oracle.com/javaee/6/api/javax/annotation/security/RolesAllowed.html[+@RolesAllowed+] annotation is provided.
 
 
 [[jpa]]
@@ -185,7 +185,7 @@ EJB and JPA technologies are defined by the following specifications:
 
 These specifications define the technologies. To apply a technology to your project however, you must use an _implementation_ of the specification. When a specification becomes finalized, it includes a reference implementation, which is a free implementation of the technology. If you find this concept confusing, consider the following analogy: A musical composition (i.e., the notes on a page) defines a piece of music. When a musician learns the composition and records her performance, she provides an _interpretation_ of the piece. In this manner the musical composition is likened to the technical specification, and the musician's recording corresponds to the specification's implementation.
 
-See xref:./intro.adoc#jcp[+What is the Java Community Process?+] for an explanation of Java technical specifications, and how they are formally standardized.
+See xref:kb/docs/javaee/ecommerce/intro.adoc#jcp[+What is the Java Community Process?+] for an explanation of Java technical specifications, and how they are formally standardized.
 
 If you examine the download pages for the final releases of the EJB and JPA specifications, you'll find links to the following reference implementations:
 
@@ -263,7 +263,7 @@ image::kb/docs/javaee/ecommerce/entity-classes-69.png[title="NetBeans 6.9 - Enti
 
 image::kb/docs/javaee/ecommerce/entity-classes.png[title="View new entity classes in the Projects window"] 
 
-Note that the wizard generated an additional entity class, `OrderedProductPK`. Recall that the data model's `ordered_product` table uses a composite primary key that comprises the primary keys of both the `customer_order` and `product` tables. (See xref:./data-model.adoc#manyToMany[+Designing the Data Model - Creating Many-To-Many Relationships+].) Because of this, the persistence provider creates a separate entity class for the composite key, and _embeds_ it into the `OrderedProduct` entity. You can open `OrderedProduct` in the editor to inspect it. JPA uses the `@EmbeddedId` annotation to signify that the embeddable class is a composite primary key.
+Note that the wizard generated an additional entity class, `OrderedProductPK`. Recall that the data model's `ordered_product` table uses a composite primary key that comprises the primary keys of both the `customer_order` and `product` tables. (See xref:kb/docs/javaee/ecommerce/data-model.adoc#manyToMany[+Designing the Data Model - Creating Many-To-Many Relationships+].) Because of this, the persistence provider creates a separate entity class for the composite key, and _embeds_ it into the `OrderedProduct` entity. You can open `OrderedProduct` in the editor to inspect it. JPA uses the `@EmbeddedId` annotation to signify that the embeddable class is a composite primary key.
 
 [source,java]
 ----
@@ -374,7 +374,7 @@ Your application now contains a persistence model of the `affablebean` database 
 [[access]]
 == Accessing Data with EJBs
 
-In the xref:./connect-db.adoc[+previous tutorial unit+], you learned how to access the database from the application by configuring a data source on GlassFish, adding a resource reference to the application's deployment descriptor, and using JSTL `<sql>` tags in the application's JSP pages. This is a valuable technique, as it allows you to quickly set up prototypes that include data from the database. However, this is not a realistic scenario for medium to large-sized applications, or applications managed by a team of developers, as it would prove difficult to maintain or scale. Furthermore, if you are developing the application into multiple tiers or are adhering to the MVC pattern, you would not want to keep data-access code in your front-end. Using Enterprise beans with a persistence model enables you better conform to the MVC pattern by effectively decoupling the presentation and model components.
+In the xref:kb/docs/javaee/ecommerce/connect-db.adoc[+previous tutorial unit+], you learned how to access the database from the application by configuring a data source on GlassFish, adding a resource reference to the application's deployment descriptor, and using JSTL `<sql>` tags in the application's JSP pages. This is a valuable technique, as it allows you to quickly set up prototypes that include data from the database. However, this is not a realistic scenario for medium to large-sized applications, or applications managed by a team of developers, as it would prove difficult to maintain or scale. Furthermore, if you are developing the application into multiple tiers or are adhering to the MVC pattern, you would not want to keep data-access code in your front-end. Using Enterprise beans with a persistence model enables you better conform to the MVC pattern by effectively decoupling the presentation and model components.
 
 The following instructions demonstrate how to begin using the session and entity beans in the `AffableBean` project. You are going to remove the JSTL data access logic that you previously set up for the index and category pages. In its place, you'll utilize the data access methods provided by the session beans, and store the data in scoped variables so that it can be retrieved from front-end page views. We'll tackle the index page first, then move on to the more complicated category page.
 
@@ -501,7 +501,7 @@ image::kb/docs/javaee/ecommerce/index-page.png[title="Verify that the index page
 [[category]]
 === category page
 
-The xref:./design.adoc#category[+category page+] requires three pieces of data in order to render properly:
+The xref:kb/docs/javaee/ecommerce/design.adoc#category[+category page+] requires three pieces of data in order to render properly:
 
 1. *category data:* for left column category buttons
 2. *selected category:* the selected category is highlighted in the left column, and the name of the selected category displays above the product table

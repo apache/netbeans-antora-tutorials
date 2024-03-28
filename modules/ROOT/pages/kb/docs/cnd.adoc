@@ -35,32 +35,32 @@ When you install the NetBeans IDE with C/C++ support, the IDE includes project t
 
 == Getting Started 
 
-* xref:./cnd/cpp-setup-instructions.adoc[Configuring NetBeans IDE for C/C{pp}/Fortran]
+* xref:kb/docs/cnd/cpp-setup-instructions.adoc[Configuring NetBeans IDE for C/C{pp}/Fortran]
 
 == Tutorials and Articles
 
 === Creating C and C++ Projects
 
-* xref:./cnd/quickstart.adoc[C/C{pp} Projects Quick Start Tutorial]
-* xref:./cnd/development-environment.adoc[Defining Your C/C{pp} Project's Development Environment]
-* xref:./cnd/beginning-jni-linux.adoc[Beginning JNI with NetBeans IDE and C/{pp} Plugin on Linux]
+* xref:kb/docs/cnd/quickstart.adoc[C/C{pp} Projects Quick Start Tutorial]
+* xref:kb/docs/cnd/development-environment.adoc[Defining Your C/C{pp} Project's Development Environment]
+* xref:kb/docs/cnd/beginning-jni-linux.adoc[Beginning JNI with NetBeans IDE and C/{pp} Plugin on Linux]
 
 === Developing C and C++ Projects
 
-* xref:./cnd/navigating-editing.adoc[Editing and Navigating C/C{pp} Source Files Tutorial]
-* xref:./cnd/debugging.adoc[Debugging C/C{pp} Projects Tutorial]
-* xref:./cnd/remote-modes.adoc[Modes of C/C{pp} Remote Development]
-* xref:./cnd/remotedev-tutorial.adoc[C/C{pp} Remote Development Tutorial]
-* xref:./cnd/c-unit-test.adoc[Adding Unit Tests to a C/C{pp} Project]
+* xref:kb/docs/cnd/navigating-editing.adoc[Editing and Navigating C/C{pp} Source Files Tutorial]
+* xref:kb/docs/cnd/debugging.adoc[Debugging C/C{pp} Projects Tutorial]
+* xref:kb/docs/cnd/remote-modes.adoc[Modes of C/C{pp} Remote Development]
+* xref:kb/docs/cnd/remotedev-tutorial.adoc[C/C{pp} Remote Development Tutorial]
+* xref:kb/docs/cnd/c-unit-test.adoc[Adding Unit Tests to a C/C{pp} Project]
 
 == Tutorials and Articles
 
 === C and C++ Project How-tos
 
-* xref:./cnd/HowTos.adoc[C/C{pp} Application How-Tos]
-* xref:./cnd/depchecking.adoc[Make Dependency Checking]
-* xref:./cnd/toolchain.adoc[Using the C/C{pp} Tool Collection Descriptor]
-* xref:./cnd/cpp-vcs.adoc[Storing NetBeans C/C{pp} Projects Under VCS]
+* xref:kb/docs/cnd/HowTos.adoc[C/C{pp} Application How-Tos]
+* xref:kb/docs/cnd/depchecking.adoc[Make Dependency Checking]
+* xref:kb/docs/cnd/toolchain.adoc[Using the C/C{pp} Tool Collection Descriptor]
+* xref:kb/docs/cnd/cpp-vcs.adoc[Storing NetBeans C/C{pp} Projects Under VCS]
 
 
 == Community-Contributed Docs

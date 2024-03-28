@@ -41,7 +41,7 @@ link:http://bits.netbeans.org/media/nb731-javaee7-launch-final-with-sound.mp4[+D
 
 == Related Links
 
-* xref:../index.adoc[+NetBeans IDE Tutorials+]
+* xref:kb/docs/index.adoc[+NetBeans IDE Tutorials+]
 * xref:kb/docs/intro-screencasts.adoc[+NetBeans IDE Screencasts+]
 * xref:front::community/index.adoc[+NetBeans Community+]
 

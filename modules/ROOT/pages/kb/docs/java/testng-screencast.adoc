@@ -45,8 +45,8 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 == Related links
 
-* xref:./junit-intro.adoc[+Writing JUnit Tests in NetBeans IDE+]
-* xref:./debug-visual.adoc[+Using the Visual Debugger+]
-* Demo: xref:./debug-multithreaded-screencast.adoc[+Debugging a Multithreaded Application in NetBeans IDE+]
-* Demo: xref:./debug-stepinto-screencast.adoc[+Visual Step Into Action in NetBeans Debugger+]
-* Demo: xref:./debug-deadlock-screencast.adoc[+Deadlock Detection Using the NetBeans Debugger+]
+* xref:kb/docs/java/junit-intro.adoc[+Writing JUnit Tests in NetBeans IDE+]
+* xref:kb/docs/java/debug-visual.adoc[+Using the Visual Debugger+]
+* Demo: xref:kb/docs/java/debug-multithreaded-screencast.adoc[+Debugging a Multithreaded Application in NetBeans IDE+]
+* Demo: xref:kb/docs/java/debug-stepinto-screencast.adoc[+Visual Step Into Action in NetBeans Debugger+]
+* Demo: xref:kb/docs/java/debug-deadlock-screencast.adoc[+Deadlock Detection Using the NetBeans Debugger+]

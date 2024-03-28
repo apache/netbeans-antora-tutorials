@@ -33,7 +33,7 @@ ifdef::env-github[]
 :imagesdir: ../../../../images
 endif::[]
 
-The previous part of the annotations tutorial (xref:./annotations-lombok.adoc[Part I: Using Lombok for Custom Annotations]) showed how custom annotations work within NetBeans.
+The previous part of the annotations tutorial (xref:kb/docs/java/annotations-lombok.adoc[Part I: Using Lombok for Custom Annotations]) showed how custom annotations work within NetBeans.
 
 In this section of the tutorial, you will learn how to add a self-written custom annotation processor to a project in the IDE. This tutorial does not teach you how to write an annotation processor. It explains how to add it to a NetBeans IDE project.
 
@@ -462,7 +462,7 @@ image::kb/docs/java/demo-run.png[title="Projects window with Generated Sources"]
 
 See the following resources for more information about annotations in Java applications:
 
-* The previous part of the annotations tutorial: xref:./annotations-lombok.adoc[Part I: Using Lombok for Custom Annotations]).
+* The previous part of the annotations tutorial: xref:kb/docs/java/annotations-lombok.adoc[Part I: Using Lombok for Custom Annotations]).
 * Java SE Documentation - link:http://download.oracle.com/javase/6/docs/technotes/guides/language/annotations.html[+Annotations+]
 * Java SE Tutorial - link:http://download.oracle.com/javase/tutorial/java/javaOO/annotations.html[+Annotations+]
 * link:http://download.oracle.com/javase/6/docs/technotes/tools/windows/javac.html#processing[+Java Compiler: Annotation Processing Options+]

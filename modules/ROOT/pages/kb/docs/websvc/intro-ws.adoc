@@ -73,8 +73,8 @@ Tools to explore and test REST services:
 
 The following *knowledge base tutorials* involve creating and consuming REST services:
 
-* xref:./rest.adoc[+Getting Started with RESTful Web Services+]
-* xref:./zillow.adoc[+SaaS: Zillow+]
+* xref:kb/docs/websvc/rest.adoc[+Getting Started with RESTful Web Services+]
+* xref:kb/docs/websvc/zillow.adoc[+SaaS: Zillow+]
 
 ==  SOAP Web Services
 
@@ -102,10 +102,10 @@ Tools to explore and test SOAP services:
 
 The following *knowledge base tutorials* involve creating and consuming JAX-WS SOAP-based web services:
 
-* xref:./jax-ws.adoc[Getting Started with JAX-WS Web Services]
-* xref:./client.adoc[Developing JAX-WS Web Service Clients]
-* xref:./flower_overview.adoc[Web Service Passing Binary Data] - a separate learning trail about using web services to pass binary data which are displayed in a client using Swing components
-* xref:./wsit.adoc[Advanced Web Service Interoperability] (demonstrates WSIT)
+* xref:kb/docs/websvc/jax-ws.adoc[Getting Started with JAX-WS Web Services]
+* xref:kb/docs/websvc/client.adoc[Developing JAX-WS Web Service Clients]
+* xref:kb/docs/websvc/flower_overview.adoc[Web Service Passing Binary Data] - a separate learning trail about using web services to pass binary data which are displayed in a client using Swing components
+* xref:kb/docs/websvc/wsit.adoc[Advanced Web Service Interoperability] (demonstrates WSIT)
 
 == Conclusion & Comparison
 

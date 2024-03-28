@@ -34,7 +34,7 @@ ifdef::env-github[]
 :imagesdir: ../../images
 endif::[]
 
-This is a continuation of the tutorial for building a POV-Ray rendering application on the NetBeans Platform. If you have not read the  xref:./nbm-povray-1.adoc[first],  xref:./nbm-povray-2.adoc[second],  xref:./nbm-povray-3.adoc[third],  xref:./nbm-povray-4.adoc[fourth],  xref:./nbm-povray-5.adoc[fifth]  xref:./nbm-povray-6.adoc[sixth],  xref:./nbm-povray-7.adoc[seventh], and  xref:./nbm-povray-8.adoc[eighth] parts of this tutorial, you may want to start there.
+This is a continuation of the tutorial for building a POV-Ray rendering application on the NetBeans Platform. If you have not read the  xref:tutorials/nbm-povray-1.adoc[first],  xref:tutorials/nbm-povray-2.adoc[second],  xref:tutorials/nbm-povray-3.adoc[third],  xref:tutorials/nbm-povray-4.adoc[fourth],  xref:tutorials/nbm-povray-5.adoc[fifth]  xref:tutorials/nbm-povray-6.adoc[sixth],  xref:tutorials/nbm-povray-7.adoc[seventh], and  xref:tutorials/nbm-povray-8.adoc[eighth] parts of this tutorial, you may want to start there.
 
 
 == Project Action Support
@@ -533,5 +533,5 @@ image::tutorials/povray_71_ch9_pic5.png[]
 
 == Next Steps
 
-Congratulations! You have completed the POV-Ray tutorial. The  xref:./nbm-povray-10.adoc[next step] is to review the concepts you've learned and then continue your journey on the NetBeans Platform.
+Congratulations! You have completed the POV-Ray tutorial. The  xref:tutorials/nbm-povray-10.adoc[next step] is to review the concepts you've learned and then continue your journey on the NetBeans Platform.
 

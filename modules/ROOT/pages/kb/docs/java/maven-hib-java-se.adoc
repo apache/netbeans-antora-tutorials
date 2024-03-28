@@ -37,7 +37,7 @@ In this tutorial, you use the NetBeans IDE to create a Java Swing application fr
 
 Support for Maven is fully integrated in NetBeans IDE and Maven 3 is bundled with the IDE. You can create applications from the bundled Maven archetypes or from archetypes in remote repositories in the New Project wizard. The Maven Repository Browser enables you to explore your local and remote Maven repositories, examine artifacts and add project dependencies to the project's POM.
 
-To build this application using Ant, see xref:./hibernate-java-se.adoc[+Using Hibernate in a Java Swing Application+].
+To build this application using Ant, see xref:kb/docs/java/hibernate-java-se.adoc[+Using Hibernate in a Java Swing Application+].
 
 To build a Maven Java EE application, see xref:kb/docs/javaee/maven-entapp.adoc[+Creating an Enterprise Application Using Maven+].
 
@@ -302,7 +302,7 @@ Now that you have the POJO and necessary Hibernate-related files you can create 
 
 In this exercise you will create a simple JFrame Form with some fields for entering and displaying data. You will also add a button that will trigger a database query to retrieve the data.
 
-If you are not familiar with using the GUI builder to create forms, you might want to review the xref:./gui-functionality.adoc[+Introduction to GUI Building+] tutorial.
+If you are not familiar with using the GUI builder to create forms, you might want to review the xref:kb/docs/java/gui-functionality.adoc[+Introduction to GUI Building+] tutorial.
 
 === Creating the JFrame Form
 

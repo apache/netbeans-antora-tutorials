@@ -46,7 +46,7 @@ The current document is a part of the Creating a Database-Driven Application in 
 
 == Creating a PHP Project
 
-Select File > New Project (Ctrl-Shift-N on Windows and Linux, ⌘-Shift-N on MacOS). Create a new PHP project named "wishlist". When you create a PHP project, it contains the index file  ``index.php``  by default. For information on creating and configuring a PHP project, see xref:./project-setup.adoc[+Setting Up a PHP Project+].
+Select File > New Project (Ctrl-Shift-N on Windows and Linux, ⌘-Shift-N on MacOS). Create a new PHP project named "wishlist". When you create a PHP project, it contains the index file  ``index.php``  by default. For information on creating and configuring a PHP project, see xref:kb/docs/php/project-setup.adoc[+Setting Up a PHP Project+].
 
 
 == Defining a Page Flow Diagram
@@ -454,8 +454,8 @@ Oracle Database users: Click link:https://netbeans.org/projects/www/downloads/do
 
 == Next Step
 
-xref:./wish-list-lesson1.adoc[+<< Previous lesson+]
+xref:kb/docs/php/wish-list-lesson1.adoc[+<< Previous lesson+]
 
-xref:./wish-list-lesson3.adoc[+Next lesson >>+]
+xref:kb/docs/php//wish-list-lesson3.adoc[+Next lesson >>+]
 
-xref:./wish-list-tutorial-main-page.adoc[+Back to the Tutorial Main page+]
+xref:kb/docs/php//wish-list-tutorial-main-page.adoc[+Back to the Tutorial Main page+]

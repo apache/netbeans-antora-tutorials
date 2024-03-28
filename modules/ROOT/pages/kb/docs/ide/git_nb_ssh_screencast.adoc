@@ -53,6 +53,6 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 == Related links
 
 * xref:wiki::wiki/NewAndNoteworthyNB74.adoc[+NetBeans 74 New And Noteworthy+]
-* xref:./git.adoc[+Using Git Support in NetBeans IDE+]
+* xref:kb/docs/ide/git.adoc[+Using Git Support in NetBeans IDE+]
 * link:http://www.oracle.com/pls/topic/lookup?ctx=nb8000&id=NBDAG234[+Versioning Applications with Version Control+] in _Developing Applications with NetBeans IDE_
-* xref:./github_nb_screencast.adoc[+Video of Setting Up a GitHub Repository Using NetBeans IDE+]
+* xref:kb/docs/ide/github_nb_screencast.adoc[+Video of Setting Up a GitHub Repository Using NetBeans IDE+]

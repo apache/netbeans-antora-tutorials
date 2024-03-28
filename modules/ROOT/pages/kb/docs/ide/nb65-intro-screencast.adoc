@@ -43,7 +43,7 @@ link:http://mediacast.sun.com/users/sridharpreddy/media/IntroToNB65_sml.flv[+Dow
 
 * link:http://java.sun.com/developer/onlineTraining/[+Java Online Training+]
 * link:http://java.sun.com/javase/6/docs/[+Java SE Documentation+]
-* xref:../index.adoc[+NetBeans IDE Tutorials+]
+* xref:kb/docs/index.adoc[+NetBeans IDE Tutorials+]
 * link:http://java.sun.com/javase/[+Java SE Overview+]
 * link:http://developers.sun.com/events/techdays/[+Sun Tech Days+]
 

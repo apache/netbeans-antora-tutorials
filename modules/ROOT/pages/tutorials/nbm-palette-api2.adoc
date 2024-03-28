@@ -44,7 +44,7 @@ For troubleshooting purposes, you are welcome to download the link:http://web.ar
 
 In this tutorial, you implement several classes provided by the link:https://bits.netbeans.org/dev/javadoc/org-netbeans-spi-palette/overview-summary.html[NetBeans Palette API]. Then you register the new component palette in the  ``layer.xml``  file, for the  ``text/x-java``  MIME type. The palette that you create in this way will only be visible if a Java source file is open.
 
-If you do not want to create a new component palette, but only want to add a code snippet to an existing component palette, see the xref:./nbm-palette-api1.adoc[NetBeans Code Snippet Module Tutorial].
+If you do not want to create a new component palette, but only want to add a code snippet to an existing component palette, see the xref:tutorials/nbm-palette-api1.adoc[NetBeans Code Snippet Module Tutorial].
 
 
 == Setting up the Module Project
@@ -219,7 +219,7 @@ package org.netbeans.modules.javasourcefilepalette;
 import org.netbeans.spi.palette.PaletteItemRegistration;
 ----
 
-For all the details on the information referred to in this subsection, work through the xref:./nbm-palette-api1.adoc[NetBeans Code Snippet Module Tutorial].
+For all the details on the information referred to in this subsection, work through the xref:tutorials/nbm-palette-api1.adoc[NetBeans Code Snippet Module Tutorial].
 
 
 == Building and Installing the Module
@@ -244,5 +244,5 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 For more information about creating and developing NetBeans modules, see the following resources:
 
-* xref:../kb/docs/platform.adoc[Other Related Tutorials]
+* xref:kb/docs/platform.adoc[Other Related Tutorials]
 * link:https://bits.netbeans.org/dev/javadoc/index.html[NetBeans API Javadoc]

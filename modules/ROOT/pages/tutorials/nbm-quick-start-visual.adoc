@@ -436,7 +436,7 @@ protected Widget attachNodeWidget(String arg0) {
 
 image::tutorials/vislib_vislib-java-6.png[]
 
-Now that you have a basic idea of the features that the Visual Library API provides, see the section called "NetBeans APIs for Visualizing Data" on the  xref:../kb/docs/platform.adoc[NetBeans Platform Learning Trail].
+Now that you have a basic idea of the features that the Visual Library API provides, see the section called "NetBeans APIs for Visualizing Data" on the  xref:kb/docs/platform.adoc[NetBeans Platform Learning Trail].
 
 xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
@@ -445,5 +445,5 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 For more information about using NetBeans APIs, see the following resources:
 
-*  xref:../kb/docs/platform.adoc[Other Related Tutorials]
+*  xref:kb/docs/platform.adoc[Other Related Tutorials]
 *  link:https://bits.netbeans.org/dev/javadoc/[NetBeans API Javadoc]

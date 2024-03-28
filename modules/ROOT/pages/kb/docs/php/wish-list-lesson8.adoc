@@ -245,8 +245,8 @@ The NetBeans IDE team would like to thank Ozan Hazer for contributing the CSS an
 
 == Next Steps
 
-xref:./wish-list-lesson7.adoc[+<< Previous lesson+]
+xref:kb/docs/php/wish-list-lesson7.adoc[+<< Previous lesson+]
 
-xref:./wish-list-lesson9.adoc[+Next lesson >>+]
+xref:kb/docs/php/wish-list-lesson9.adoc[+Next lesson >>+]
 
-xref:./wish-list-tutorial-main-page.adoc[+Back to the Tutorial main page+]
+xref:kb/docs/php/wish-list-tutorial-main-page.adoc[+Back to the Tutorial main page+]

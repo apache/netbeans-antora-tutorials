@@ -741,9 +741,9 @@ xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 
 For more information about using NetBeans IDE to develop Java EE applications, see the following resources:
 
-* xref:./javaee-intro.adoc[+Introduction to Java EE Technology+]
-* xref:./javaee-gettingstarted.adoc[+Getting Started with Java EE Applications+]
-* xref:./maven-entapp-testing.adoc[+Testing a Maven Enterprise Application+]
+* xref:kb/docs/javaee/javaee-intro.adoc[+Introduction to Java EE Technology+]
+* xref:kb/docs/javaee/javaee-gettingstarted.adoc[+Getting Started with Java EE Applications+]
+* xref:kb/docs/javaee/maven-entapp-testing.adoc[+Testing a Maven Enterprise Application+]
 * xref:kb/docs/java-ee.adoc[+Java EE &amp; Java Web Learning Trail+]
 
 You can find more information about using Enterprise Beans in the link:http://download.oracle.com/javaee/7/tutorial/doc/[+Java EE 7 Tutorial+].

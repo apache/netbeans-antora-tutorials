@@ -36,7 +36,7 @@ endif::[]
 
 This tutorial demonstrates how to use the Maven build framework to create a simple NetBeans Platform application that can read from and write to a database. In this document you will use Maven archetypes to create the NetBeans Platform application and module, and the Swing UI toolkit and "Matisse" GUI Builder to create window components.
 
-This document is based on the Ant-based  xref:./nbm-crud.adoc[NetBeans Platform CRUD Application Tutorial] and can be used to understand some of the differences between using Ant and Maven to develop NetBeans Platform applications. After you understand how Maven is different from Ant, you can easily proceed through other tutorials on the  xref:../kb/docs/platform.adoc[NetBeans Platform Learning Trail].
+This document is based on the Ant-based  xref:tutorials/nbm-crud.adoc[NetBeans Platform CRUD Application Tutorial] and can be used to understand some of the differences between using Ant and Maven to develop NetBeans Platform applications. After you understand how Maven is different from Ant, you can easily proceed through other tutorials on the  xref:kb/docs/platform.adoc[NetBeans Platform Learning Trail].
 
 
 
@@ -50,8 +50,8 @@ NOTE:  This is [.underline]#not# a beginners tutorial. Before starting this tuto
 
 *  xref:wiki::wiki/MavenBestPractices.adoc[Best Practices for Maven in NetBeans IDE]
 *  link:http://www.sonatype.com/books/maven-book/reference/introduction.html[Chapter 1. Introducing Apache Maven] (from  link:http://www.sonatype.com/books/maven-book/reference/public-book.html[Maven: The Definitive Guide])
-*  xref:./nbm-maven-commandline.adoc[NetBeans Platform Command Line Tutorial]
-*  xref:./nbm-maven-quickstart.adoc[NetBeans Platform Quick Start Using Maven]
+*  xref:tutorials/nbm-maven-commandline.adoc[NetBeans Platform Command Line Tutorial]
+*  xref:tutorials/nbm-maven-quickstart.adoc[NetBeans Platform Quick Start Using Maven]
 
 Watch this YouTube movie before beginning to work on the tutorial because it shows the steps you will take below:
 
@@ -422,9 +422,9 @@ image::tutorials/maven-crud_72_new-editor-4.png[title="screenshot"]
 
 
 [start=7]
-1. Now that you have completed the steps above, you can refer to the Ant-based  xref:./nbm-crud.adoc[NetBeans Platform CRUD Application Tutorial], since all the Java code in that tutorial is applicable to the application you are creating here.
+1. Now that you have completed the steps above, you can refer to the Ant-based  xref:tutorials/nbm-crud.adoc[NetBeans Platform CRUD Application Tutorial], since all the Java code in that tutorial is applicable to the application you are creating here.
 
-You have a basic understanding of how developing with Maven is different from Ant. You can easily proceed through other tutorials on the  xref:../kb/docs/platform.adoc[NetBeans Platform Learning Trail] and apply them to your Maven scenarios.
+You have a basic understanding of how developing with Maven is different from Ant. You can easily proceed through other tutorials on the  xref:kb/docs/platform.adoc[NetBeans Platform Learning Trail] and apply them to your Maven scenarios.
 
 xref:front::community/mailing-lists.adoc[ Send Us Your Feedback]
 
@@ -435,7 +435,7 @@ xref:front::community/mailing-lists.adoc[ Send Us Your Feedback]
 
 This concludes the CRUD Tutorial. This document has described how to use the Maven build framework to create a new NetBeans Platform application with CRUD functionality. For more information about creating and developing applications, see the following resources.
 
-*  xref:../kb/docs/platform.adoc[NetBeans Platform Learning Trail]
+*  xref:kb/docs/platform.adoc[NetBeans Platform Learning Trail]
 *  link:https://bits.netbeans.org/dev/javadoc/[NetBeans API Javadoc]
 
 If you have any questions about the NetBeans Platform, feel free to write to the mailing list, dev@platform.netbeans.org, or view the  link:https://mail-archives.apache.org/mod_mbox/netbeans-dev/[NetBeans Platform mailing list archive].

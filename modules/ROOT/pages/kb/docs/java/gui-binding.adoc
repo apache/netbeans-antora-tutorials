@@ -470,7 +470,7 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 == See Also
 
 * link:http://www.oracle.com/pls/topic/lookup?ctx=nb8000&id=NBDAG2649[+Working with Database Applications and Beans Binding+] in _Developing Applications with NetBeans IDE_
-* xref:./gui-functionality.adoc[+Introduction to GUI Building+]
+* xref:kb/docs/java/gui-functionality.adoc[+Introduction to GUI Building+]
 * link:http://java.net/projects/beansbinding/[+Beans Binding - Java.net+]
 * link:http://docs.oracle.com/javase/tutorial/javabeans/index.html[+JavaBeans™ trail of the Java Tutorial+]
 * xref:wiki::wiki/NetBeansUserFAQ.adoc#GUI_Editor_.28Matisse.29[+GUI Editor FAQ+]

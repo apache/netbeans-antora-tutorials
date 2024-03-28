@@ -31,35 +31,35 @@ Below are resources for using NetBeans IDE to develop PHP applications and HTML5
 == Getting Started
 
 - xref:kb/docs/webclient/html5-gettingstarted.adoc[Getting Started with HTML5 Applications]
-- xref:./quickstart.adoc[Getting Started with PHP Applications]
+- xref:kb/docs/php/quickstart.adoc[Getting Started with PHP Applications]
 
 [[configuration]]
 == Configuration
 
-- xref:./configure-php-environment-mac-os.adoc[Configuring PHP, Apache, MySQL, and Xdebug for PHP development in MAC OS X]
-- xref:./configure-php-environment-windows.adoc[Configuring PHP Development Environment in Windows]
-- xref:./configure-php-environment-ubuntu.adoc[Configuring the PHP Development Environment in Linux Ubuntu]
+- xref:kb/docs/php/configure-php-environment-mac-os.adoc[Configuring PHP, Apache, MySQL, and Xdebug for PHP development in MAC OS X]
+- xref:kb/docs/php/configure-php-environment-windows.adoc[Configuring PHP Development Environment in Windows]
+- xref:kb/docs/php/configure-php-environment-ubuntu.adoc[Configuring the PHP Development Environment in Linux Ubuntu]
 
 == Tutorials and Articles
 
-- xref:./project-setup.adoc[Setting Up a PHP Project]
-- xref:./code-templates.adoc[Code Templates in NetBeans IDE for PHP]
-- xref:./ajax-quickstart.adoc[Introduction to Ajax for PHP Web Applications]
-- xref:./phpunit.adoc[Testing with PHPUnit and Selenium]
-- xref:./debugging.adoc[Debugging PHP Source Code in the NetBeans IDE]
-- xref:./remote-hosting-and-ftp-account.adoc[Deploying a PHP Application on a Remote Web Server Using the NetBeans IDE]
+- xref:kb/docs/php/project-setup.adoc[Setting Up a PHP Project]
+- xref:kb/docs/php/code-templates.adoc[Code Templates in NetBeans IDE for PHP]
+- xref:kb/docs/php/ajax-quickstart.adoc[Introduction to Ajax for PHP Web Applications]
+- xref:kb/docs/php/phpunit.adoc[Testing with PHPUnit and Selenium]
+- xref:kb/docs/php/debugging.adoc[Debugging PHP Source Code in the NetBeans IDE]
+- xref:kb/docs/php/remote-hosting-and-ftp-account.adoc[Deploying a PHP Application on a Remote Web Server Using the NetBeans IDE]
 
 == Creating a Database Driven Application With PHP
 
-- xref:./wish-list-tutorial-main-page.adoc[Main Page: Creating a Database Driven Application With PHP]
-- xref:./wish-list-lesson1.adoc[Lesson 1a: Creating a MySQL Database]
-- xref:./wish-list-oracle-lesson1.adoc[Lesson 1b: Creating Oracle Database Tables]
-- xref:./wish-list-lesson2.adoc[Lesson 2: Designing the Application. Reading from the Database]
-- xref:./wish-list-lesson3.adoc[Lesson 3: Creating a New Application User]
-- xref:./wish-list-lesson4.adoc[Lesson 4: Optimizing the Code]
-- xref:./wish-list-lesson5.adoc[Lesson 5: Adding Security. Implementing Application User Logon]
-- xref:./wish-list-lesson6.adoc[Lesson 6: Adding a New Wish to the Database]
-- xref:./wish-list-lesson7.adoc[Lesson 7: Updating and Deleting Entries In the Database]
-- xref:./wish-list-lesson8.adoc[Lesson 8: Making the Application Look Better Using CSS]
-- xref:./wish-list-lesson9.adoc[Lesson 9: Deploying the Application on a Remote Web Server]
+- xref:kb/docs/php/wish-list-tutorial-main-page.adoc[Main Page: Creating a Database Driven Application With PHP]
+- xref:kb/docs/php/wish-list-lesson1.adoc[Lesson 1a: Creating a MySQL Database]
+- xref:kb/docs/php/wish-list-oracle-lesson1.adoc[Lesson 1b: Creating Oracle Database Tables]
+- xref:kb/docs/php/wish-list-lesson2.adoc[Lesson 2: Designing the Application. Reading from the Database]
+- xref:kb/docs/php/wish-list-lesson3.adoc[Lesson 3: Creating a New Application User]
+- xref:kb/docs/php/wish-list-lesson4.adoc[Lesson 4: Optimizing the Code]
+- xref:kb/docs/php/wish-list-lesson5.adoc[Lesson 5: Adding Security. Implementing Application User Logon]
+- xref:kb/docs/php/wish-list-lesson6.adoc[Lesson 6: Adding a New Wish to the Database]
+- xref:kb/docs/php/wish-list-lesson7.adoc[Lesson 7: Updating and Deleting Entries In the Database]
+- xref:kb/docs/php/wish-list-lesson8.adoc[Lesson 8: Making the Application Look Better Using CSS]
+- xref:kb/docs/php/wish-list-lesson9.adoc[Lesson 9: Deploying the Application on a Remote Web Server]
 

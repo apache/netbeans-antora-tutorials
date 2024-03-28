@@ -36,7 +36,7 @@ endif::[]
 
 This tutorial shows you how to generate a parser with  link:https://javacc.github.io/javacc//[JavaCC] and use it to create features in a NetBeans editor.
 
-NOTE:  Prior to starting to work on this tutorial, you must have completed the  xref:./nbm-javacc-lexer.adoc[JavaCC Lexer Generator Integration Tutorial], since that tutorial shows how to create the module structure, file type support, and lexer used in the instructions that follow.
+NOTE:  Prior to starting to work on this tutorial, you must have completed the  xref:tutorials/nbm-javacc-lexer.adoc[JavaCC Lexer Generator Integration Tutorial], since that tutorial shows how to create the module structure, file type support, and lexer used in the instructions that follow.
 
 You will learn how to create several features in a NetBeans editor, based on your JavaCC parser, such as a syntax error parser, as shown below:
 
@@ -55,7 +55,7 @@ For troubleshooting purposes, you are welcome to download the  link:http://web.a
 
 == Generating a Parser from JavaCC
 
-Let's now use JavaCC to generate a parser, in the same way as we generated a lexer in the  xref:./nbm-javacc-lexer.adoc[JavaCC Lexer Generator Integration Tutorial]. We'll need to edit the JavaCC grammar file less than we did in the previous tutorial, since we're not going to remove the parser generator as we did last time.
+Let's now use JavaCC to generate a parser, in the same way as we generated a lexer in the  xref:tutorials/nbm-javacc-lexer.adoc[JavaCC Lexer Generator Integration Tutorial]. We'll need to edit the JavaCC grammar file less than we did in the previous tutorial, since we're not going to remove the parser generator as we did last time.
 
 
 [start=1]
@@ -1025,10 +1025,10 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 == Next Steps
 
-This tutorial is the official version of the second part of  link:http://wiki.netbeans.org/How_to_create_support_for_a_new_language[http://wiki.netbeans.org/How_to_create_support_for_a_new_language], which, aside from being a rough draft, is partly out of date for the NetBeans Platform.
+This tutorial is the official version of the second part of xref:wiki::wiki/How_to_create_support_for_a_new_language.adoc[], which, aside from being a rough draft, is partly out of date for the NetBeans Platform.
 
 For more information about creating and developing NetBeans modules, see the following resources:
 
-*  link:https://netbeans.apache.org/platform/index.html[NetBeans Platform Homepage]
+*  xref:kb/docs/platform.adoc[NetBeans Platform Homepage]
 *  link:https://bits.netbeans.org/dev/javadoc/[NetBeans API List (Current Development Version)]
-*  xref:../kb/docs/platform.adoc[Other Related Tutorials]
+

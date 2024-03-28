@@ -623,5 +623,5 @@ For more information about creating and developing NetBeans Module, see the foll
 
 *  xref:wiki::wiki/Java_DevelopersGuide.adoc[Java Developer's Guide]
 *  xref:wiki::wiki/RetoucheDeveloperFAQ.adoc[Retouche Developer FAQ]
-*  xref:../kb/docs/platform.adoc[Other Related Tutorials]
+*  xref:kb/docs/platform.adoc[Other Related Tutorials]
 *  link:https://bits.netbeans.org/dev/javadoc/[NetBeans API Javadoc]

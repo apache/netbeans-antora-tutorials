@@ -399,7 +399,7 @@ The database currently doesn't contain any sample data. You can add data manuall
 
 You can click the index link to return to the links listed in the welcome page. The links provide you with a view of the data held in each database table and trigger the `List.xhtml` file for each entity folder to display. As is later demonstrated, after you add data to the tables, other links will display for each entry enabling you to view (`View.xhtml`), edit (`Edit.xhmtl`), and destroy data for a single table record.
 
-*Note.* If the application fails to deploy, see the <<troubleshooting,troubleshooting section>> below. (Also see the troubleshooting section of xref:./mysql-webapp.adoc#troubleshoot[Creating a Simple Web Application Using a MySQL Database].)
+*Note.* If the application fails to deploy, see the <<troubleshooting,troubleshooting section>> below. (Also see the troubleshooting section of xref:kb/docs/web/mysql-webapp.adoc#troubleshoot[Creating a Simple Web Application Using a MySQL Database].)
 
 
 [[populateDB]]
@@ -815,7 +815,7 @@ image::kb/docs/web/gf-services-jdbc-resources.png[title="JDBC Resources displaye
 For more tips on troubleshooting problems when using MySQL and the IDE, see the following documents:
 
 * xref:kb/docs/ide/mysql.adoc[Connecting to a MySQL Database] tutorial.
-* The troubleshooting section of xref:./mysql-webapp.adoc#troubleshoot[Creating a Simple Web Application Using a MySQL Database]
+* The troubleshooting section of xref:kb/docs/web/mysql-webapp.adoc#troubleshoot[Creating a Simple Web Application Using a MySQL Database]
 
 xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 
@@ -826,9 +826,9 @@ For more information about JSF 2.x, see the following resources.
 
 === NetBeans Articles and Tutorials
 
-* xref:./jsf20-intro.adoc[Introduction to JavaServer Faces 2.x in NetBeans IDE]
-* xref:./jsf20-support.adoc[JSF 2.x Support in NetBeans IDE]
-* xref:../../samples/scrum-toys.adoc[Scrum Toys - The JSF 2.0 Complete Sample Application]
+* xref:kb/docs/web/jsf20-intro.adoc[Introduction to JavaServer Faces 2.x in NetBeans IDE]
+* xref:kb/docs/web/jsf20-support.adoc[JSF 2.x Support in NetBeans IDE]
+* xref:samples/scrum-toys.adoc[Scrum Toys - The JSF 2.0 Complete Sample Application]
 * xref:kb/docs/javaee/javaee-gettingstarted.adoc[Getting Started with Java EE Applications]
 * xref:kb/docs/java-ee.adoc[Java EE &amp; Java Web Learning Trail]
 

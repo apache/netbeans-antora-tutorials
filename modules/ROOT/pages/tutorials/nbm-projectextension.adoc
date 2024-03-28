@@ -46,7 +46,7 @@ New NetBeans IDE APIs since NetBeans IDE 6.0 enable you to add new nodes to an e
 
 image::tutorials/cc_72_result-2.png[]
 
-Prior to NetBeans IDE 6.0, no NetBeans IDE APIs existed for extending existing project types. Instead, you would need to create new project types from scratch. From 6.0 onwards, you are recommended to extend existing project types rather than create new ones, where possible. This will keep the number of project types to a minimum and avoid a large number of project types with very small differences. However, it is, of course, always possible to create project types from scratch, as before, following the  xref:./nbm-projecttype.adoc[NetBeans Project Type Module Tutorial].
+Prior to NetBeans IDE 6.0, no NetBeans IDE APIs existed for extending existing project types. Instead, you would need to create new project types from scratch. From 6.0 onwards, you are recommended to extend existing project types rather than create new ones, where possible. This will keep the number of project types to a minimum and avoid a large number of project types with very small differences. However, it is, of course, always possible to create project types from scratch, as before, following the  xref:tutorials/nbm-projecttype.adoc[NetBeans Project Type Module Tutorial].
 
 Annotations are used throughout this tutorial to register the lookup extension, logical view extension, and project customizer extension. As you will see below, the extensions will be registered for the project type "org-netbeans-modules-web-project", which is the web application project type. Here is a list of strings representing other project types supported by NetBeans IDE:
 
@@ -483,5 +483,5 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 For more information about creating and developing NetBeans modules, see the following resources:
 
-*  xref:../kb/docs/platform.adoc[Other Related Tutorials]
+*  xref:kb/docs/platform.adoc[Other Related Tutorials]
 *  link:https://bits.netbeans.org/dev/javadoc/[NetBeans API Javadoc]

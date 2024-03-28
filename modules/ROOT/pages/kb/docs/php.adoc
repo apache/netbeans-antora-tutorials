@@ -160,7 +160,7 @@ Below are some resources using the NetBeans IDE to develop PHP applications and 
 * xref:kb/docs/ide/index.adoc[Base IDE Features]
 * xref:kb/articles/mysql.adoc[MySQL and the NetBeans IDE]
 * xref:kb/docs/ide/mysql.adoc[Connecting to a MySQL Database]
-// no umbrella * xref:../../features/ide/collaboration.adoc[Version Control and Developer Collaboration]
+// no umbrella * xref:features/ide/collaboration.adoc[Version Control and Developer Collaboration]
 * link:http://nbdrupalsupport.dev.java.net/[NetBeans IDE Support for Drupal 6.x]
 
 === Weblogs

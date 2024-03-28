@@ -60,7 +60,7 @@ If you are deploying an application to a local registered Tomcat, GlassFish serv
 [NOTE]
 ====
 * If you are using the profiler for the first time, it is recommended that you read the xref:kb/docs/java/profiler-intro.adoc[+Introduction to Profiling Java Applications in NetBeans IDE+] which provides an overview of the monitoring and profiling tasks.
-//* If you are using NetBeans IDE 7.2 or earlier, see xref:../../72/javaee/profiler-javaee.adoc[+Profiling an Enterprise Application in NetBeans IDE 7.2+]
+//* If you are using NetBeans IDE 7.2 or earlier, see xref:72/javaee/profiler-javaee.adoc[+Profiling an Enterprise Application in NetBeans IDE 7.2+]
 * In this document you will profile an enterprise application deployed to the GlassFish server. The preferred and the easiest configuration for profiling an enterprise or web application during development is when the the application is running on a local Tomcat, GlassFish or JBoss server.
 ====
 

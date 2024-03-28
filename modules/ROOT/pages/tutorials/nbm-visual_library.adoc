@@ -186,7 +186,7 @@ To do something useful with the Visual Library API, we will implement the  link:
 
 
 [start=1]
-1. Since the focus of this tutorial is the Visual Library API, and not the Palette API, no time will be spent here explaining how the Palette API works. Many tutorials exist on this subject already ( xref:../kb/docs/platform.adoc[here]). Therefore, you can simply copy and paste the following files into a new package called  ``org.netbeans.shapesample.palette`` :
+1. Since the focus of this tutorial is the Visual Library API, and not the Palette API, no time will be spent here explaining how the Palette API works. Many tutorials exist on this subject already ( xref:kb/docs/platform.adoc[here]). Therefore, you can simply copy and paste the following files into a new package called  ``org.netbeans.shapesample.palette`` :
 
 *  link:images/vislib_Category.java[Category.java]
 *  link:images/vislib_CategoryChildren.java[CategoryChildren.java]

@@ -644,5 +644,5 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 == Next Steps
 
-By now you may have noticed that some components have more granular selection logic, and even involve multiple selection. In the xref:./nbm-selection-2.adoc[next tutorial] you will cover how to use the link:https://bits.netbeans.org/dev/javadoc/org-openide-nodes/overview-summary.html[Nodes API] to handle that.
+By now you may have noticed that some components have more granular selection logic, and even involve multiple selection. In the xref:tutorials/nbm-selection-2.adoc[next tutorial] you will cover how to use the link:https://bits.netbeans.org/dev/javadoc/org-openide-nodes/overview-summary.html[Nodes API] to handle that.
 

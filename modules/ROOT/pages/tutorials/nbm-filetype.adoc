@@ -114,7 +114,7 @@ Note the following about the fields in the File Recognition panel:
 
 Let's imagine that Abc files can be case-sensitive. For this reason, you specify _two_ MIME types in this tutorial— ``abc``  and  ``ABC`` .
 
-* *XML Root Element.* Specifies a unique namespace that distinguishes the XML file type from all other XML file types. Since many XML files have the same extension ( ``xml`` ), the IDE distinguishes between XML files via their XML root elements. More specifically, the IDE can distinguish between namespaces and the first XML element in XML files. You can use this to, for example, distinguish between a JBoss deployment descriptor and a WebLogic deployment descriptor. Once you have made this distinction, you can ensure that menu items added to the JBoss deployment descriptor's contextual menu are not available to the WebLogic deployment descriptor. For an example, see the  xref:./nbm-palette-api2.adoc[NetBeans Component Palette Module Tutorial].
+* *XML Root Element.* Specifies a unique namespace that distinguishes the XML file type from all other XML file types. Since many XML files have the same extension ( ``xml`` ), the IDE distinguishes between XML files via their XML root elements. More specifically, the IDE can distinguish between namespaces and the first XML element in XML files. You can use this to, for example, distinguish between a JBoss deployment descriptor and a WebLogic deployment descriptor. Once you have made this distinction, you can ensure that menu items added to the JBoss deployment descriptor's contextual menu are not available to the WebLogic deployment descriptor. For an example, see the  xref:tutorials/nbm-palette-api2.adoc[NetBeans Component Palette Module Tutorial].
 
 Click Next.
 
@@ -417,7 +417,7 @@ You now have two visual tabs in a multiview window. For each additional tab, cre
 
 A  ``DataObject``  is like a  ``FileObject`` , except that it knows what kind of file is being shown. The "New File Type" wizard created a  ``DataObject``  for our file type, so let's now use it to parse the underlying file and expose its content as new nodes in the explorer views, e.g., the Projects window, Files window, and the Favorites window.
 
-For background to this section and complete details on support for nodes on the NetBeans Platform, see  xref:./nbm-nodesapi2.adoc[NetBeans Nodes API Tutorial].
+For background to this section and complete details on support for nodes on the NetBeans Platform, see  xref:tutorials/nbm-nodesapi2.adoc[NetBeans Nodes API Tutorial].
 
 
 [start=1]
@@ -511,7 +511,7 @@ image::tutorials/filetype_72_new-action-6.png[]
 
 Our Node now has child Nodes. In this section, we also assign properties to our Node. The properties are displayed in the Properties window.
 
-For background to this section and complete details on support for properties on the NetBeans Platform, see  xref:./nbm-property-editors.adoc[NetBeans Property Editor Tutorial].
+For background to this section and complete details on support for properties on the NetBeans Platform, see  xref:tutorials/nbm-property-editors.adoc[NetBeans Property Editor Tutorial].
 
 By default, the following properties are shown in the Properties window for our new file:
 
@@ -599,7 +599,7 @@ image::tutorials/filetype_72_new-action-7.png[]
 
 Let's now illustrate via a small example how the various views can be synchronized.
 
-For background to this section and complete details on the Visual Library in the NetBeans Platform, see "NetBeans APIs for Visualizing Data" in the  xref:../kb/docs/platform.adoc[NetBeans Platform Learning Trail], especially the  link:https://bits.netbeans.org/dev/javadoc/org-netbeans-api-visual/org/netbeans/api/visual/widget/doc-files/documentation.html[official Visual Library documentation].
+For background to this section and complete details on the Visual Library in the NetBeans Platform, see "NetBeans APIs for Visualizing Data" in the  xref:kb/docs/platform.adoc[NetBeans Platform Learning Trail], especially the  link:https://bits.netbeans.org/dev/javadoc/org-netbeans-api-visual/org/netbeans/api/visual/widget/doc-files/documentation.html[official Visual Library documentation].
 
 
 [start=1]
@@ -696,4 +696,4 @@ For more information about creating and developing NetBeans modules, see the fol
 
 *  link:https://netbeans.apache.org/platform/index.html[NetBeans Platform Homepage]
 *  link:https://bits.netbeans.org/dev/javadoc/[NetBeans API List (Current Development Version)]
-*  xref:../kb/docs/platform.adoc[Other Related Tutorials]
+*  xref:kb/docs/platform.adoc[Other Related Tutorials]

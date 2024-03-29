@@ -69,20 +69,20 @@ In addition to being a platform for multi-platform desktop applications, the Jav
 
 === Profiling Source Code
 
-- xref:./java/profiler-intro.adoc[+Introduction to Profiling Java Applications+]
-- xref:./java/profiler-profilingpoints.adoc[+Using Profiling Points+]
+- xref:kb/docs/java/profiler-intro.adoc[+Introduction to Profiling Java Applications+]
+- xref:kb/docs/java/profiler-profilingpoints.adoc[+Using Profiling Points+]
 - xref:front::community/magazine/html/04/profiler.adoc[+Advanced Profiling: Theory in Practice+]
 // - xref:front::competition/win-with-netbeans/case-study-nb-profiler.adoc[+Case Study of NetBeans Profiler+]
 
 === Scripting Languages
 
-- xref:./java/groovy-quickstart.adoc[+Introduction to Groovy+]
+- xref:kb/docs/java/groovy-quickstart.adoc[+Introduction to Groovy+]
 
 === JMX Monitoring and Management
 
-- xref:./java/jmx-getstart.adoc[+Getting Started with Java Management Extensions (JMX) Monitoring+]
-- xref:./java/jmx-tutorial.adoc[+Adding JMX Instrumentation to a Java Application+]
-- xref:./java/jmx-manager-tutorial.adoc[+Developing a JMX Manager and Connecting to a Remote JMX Agent+]
+- xref:kb/docs/java/jmx-getstart.adoc[+Getting Started with Java Management Extensions (JMX) Monitoring+]
+- xref:kb/docs/java/jmx-tutorial.adoc[+Adding JMX Instrumentation to a Java Application+]
+- xref:kb/docs/java/jmx-manager-tutorial.adoc[+Developing a JMX Manager and Connecting to a Remote JMX Agent+]
 
 === Community-Contributed Docs
 

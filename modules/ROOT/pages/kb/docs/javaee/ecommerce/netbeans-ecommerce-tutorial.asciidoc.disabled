@@ -255,7 +255,7 @@ Java EE 5 technologies are listed at:
 
 * link:http://java.sun.com/javaee/technologies/javaee5.jsp[+http://java.sun.com/javaee/technologies/javaee5.jsp+]
 
-A JSR's final release provides a _reference implementation_, which is a free implementation of the technology. In this tutorial, you utilize these implementations to develop the sample e-commerce application. For example, the GlassFish v3 application server, which is included in the standard Java download bundle for xref:../../../../download/index.adoc[NetBeans IDE], is the reference implementation of the Java EE 6 platform specification (link:http://jcp.org/en/jsr/summary?id=316[+JSR 316+]). As a reference implementation for the Java EE platform, it includes reference implementations for the technologies included in the platform, such as Servlet, EJB and JPA technologies.
+A JSR's final release provides a _reference implementation_, which is a free implementation of the technology. In this tutorial, you utilize these implementations to develop the sample e-commerce application. For example, the GlassFish v3 application server, which is included in the standard Java download bundle for xref:front::download/index.adoc[NetBeans IDE], is the reference implementation of the Java EE 6 platform specification (link:http://jcp.org/en/jsr/summary?id=316[+JSR 316+]). As a reference implementation for the Java EE platform, it includes reference implementations for the technologies included in the platform, such as Servlet, EJB and JPA technologies.
 
 
 
@@ -302,7 +302,7 @@ People are saying great things about NetBeans. For a list of testimonials, see l
 The IDE provides many link:../../../../features/web/index.html[+features for web development+], and several advantages over other IDEs. Here are several noteworthy points:
 
 * *Works Out of the Box:* Simply download, install, and run the IDE. With its small download size, installation is a breeze. The IDE runs on many platforms including Windows, Linux, Mac OS X and Solaris. All IDE tools and features are fully integrated - no need to hunt for plug-ins - and they work together when you launch the IDE.
-* *Free and Open Source:* When you use the NetBeans IDE, you join a vibrant, link:../../../../community/index.html[+open source community+] with thousands of users ready to help and contribute. There are discussions on the link:../../../../community/lists/index.html[+NetBeans project mailing lists+], blogs on link:http://www.planetnetbeans.org/[+Planet NetBeans+], and helpful FAQs and tutorials on the link:http://wiki.netbeans.org/[+community wiki+].
+* *Free and Open Source:* When you use the NetBeans IDE, you join a vibrant, link:../../../../community/index.html[+open source community+] with thousands of users ready to help and contribute. There are discussions on the link:../../../../community/lists/index.html[+NetBeans project mailing lists+], blogs on link:http://www.planetnetbeans.org/[+Planet NetBeans+], and helpful FAQs and tutorials on the xref:wiki::wiki/index.adoc[community wiki].
 * *Profiling and Debugging Tools:* With NetBeans IDE link:../../../../features/java/profiler.html[+profiler+], you get real time insight into memory usage and potential performance bottlenecks. Furthermore, you can instrument specific parts of code to avoid performance degradation during profiling. The link:http://profiler.netbeans.org/docs/help/6.0/heapwalker.html[+HeapWalker+] tool helps you evaluate Java heap contents and find memory leaks.
 * *Customizable Projects:* Through the NetBeans IDE build process, which relies on industry standards such as link:http://ant.apache.org/[+Apache Ant+], link:http://www.gnu.org/software/make/[+make+], link:http://maven.apache.org/[+Maven+], and link:http://rake.rubyforge.org/[+rake+] - rather than a proprietary build process - you can easily customize projects and add functionality. You can build, run, and deploy projects to servers outside of the IDE.
 * *Collaboration Tools:* The IDE provides built-in support for version control systems such as CVS, Subversion, and Mercurial.
@@ -9019,7 +9019,7 @@ image::images/files-window.png[title="JMeter test plans contained in 'jmeter' fo
 
 
 [start=2]
-. If you are running the Profiler for the first time, you need to perform a calibration step on the JDK. To do so, choose Profile > Advanced Commands > Run Profiler Calibration. For more information, refer to the NetBeans User FAQ wiki: link:http://wiki.netbeans.org/FaqProfilerCalibration[+What exactly does the Profiler Calibration mean?+].
+. If you are running the Profiler for the first time, you need to perform a calibration step on the JDK. To do so, choose Profile > Advanced Commands > Run Profiler Calibration. For more information, refer to the NetBeans User FAQ wiki: xref:wiki::wiki/FaqProfilerCalibration[What exactly does the Profiler Calibration mean?].
 
 [start=3]
 . Click the Profile Project ( image::images/profile-btn.png[] ) button. When a project is profiled for the first time, its build script must be modified to enable profiling. The IDE warns you that it will modify the project's build script. 
@@ -9233,7 +9233,7 @@ link:/about/contact_form.html?to=3&subject=Feedback: NetBeans E-commerce Tutoria
 * link:../../../../features/java/profiler.html[+NetBeans Profiler Features+]
 * link:../../java/profiler-profilingpoints.html[+Using Profiling Points+]
 * link:http://profiler.netbeans.org/docs/help/6.0/heapwalker.html[+Using HeapWalker+]
-* link:http://wiki.netbeans.org/HeapWalkerDemo[+HeapWalker Demo+]
+* xref:wiki::wiki/HeapWalkerDemo[HeapWalker Demo]
 * link:../../java/profile-loadgenerator.html[+Using a Load Generator+]
 * link:../profiler-javaee.html[+Profiling an Enterprise Application+]
 * link:../../java/profiler-intro.html[+Introduction to Profiling Java Applications+]

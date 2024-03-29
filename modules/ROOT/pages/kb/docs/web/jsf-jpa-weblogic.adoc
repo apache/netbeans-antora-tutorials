@@ -429,6 +429,6 @@ xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 For more information about using NetBeans IDE to develop web applications using Java Persistence and JavaServer Faces, see the following resources:
 
 * xref:kb/docs/javaee/weblogic-javaee-m1-screencast.adoc[+Video of Deploying a Web Application to the Oracle WebLogic Server+]
-* xref:./jsf20-intro.adoc[+Introduction to JavaServer Faces 2.0+]
+* xref:kb/docs/web/jsf20-intro.adoc[+Introduction to JavaServer Faces 2.0+]
 * xref:kb/docs/javaee/ecommerce/intro.adoc[+The NetBeans E-commerce Tutorial+]
 * xref:kb/docs/java-ee.adoc[+Java EE &amp; Java Web Learning Trail+]

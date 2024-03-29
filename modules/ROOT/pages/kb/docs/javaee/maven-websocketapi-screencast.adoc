@@ -41,7 +41,7 @@ link:http://bits.netbeans.org/media/websocketapi-screencast.mp4[+Download / Watc
 
 |For the steps for creating this application in NetBeans IDE, see the following tutorial.
 
-* xref:./maven-websocketapi.adoc[+Using the WebSocket API in a Web Application+]
+* xref:kb/docs/javaee/maven-websocketapi.adoc[+Using the WebSocket API in a Web Application+]
 
 xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
  
@@ -50,7 +50,7 @@ xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 
 == Related links
 
-* Demo: xref:./javaee-gettingstarted-screencast.adoc[+Getting Started with Java EE Applications+]
-* xref:./javaee-gettingstarted.adoc[+Getting Started with Java EE Applications+]
-* xref:./javaee-intro.adoc[+Introduction to Java EE Technology+]
+* Demo: xref:kb/docs/javaee/javaee-gettingstarted-screencast.adoc[+Getting Started with Java EE Applications+]
+* xref:kb/docs/javaee/javaee-gettingstarted.adoc[+Getting Started with Java EE Applications+]
+* xref:kb/docs/javaee/javaee-intro.adoc[+Introduction to Java EE Technology+]
 * xref:kb/docs/java-ee.adoc[+Java EE &amp; Java Web Learning Trail +]

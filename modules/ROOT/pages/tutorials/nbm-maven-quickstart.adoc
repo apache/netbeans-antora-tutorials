@@ -38,11 +38,11 @@ Welcome to the  link:https://netbeans.apache.org/platform/[*NetBeans Platform*]!
 
 This document is a quick demonstration of how to create a simple NetBeans Platform application on top of the Maven build framework. After using Maven archetypes to create the NetBeans Platform application build structure, you use the Swing UI toolkit and "Matisse" GUI Builder to create a window component. The modular aspect of the NetBeans Platform enables you to expand the functionality of your application by adding new features during development or at runtime.
 
-This document is based on the Ant-based  xref:./nbm-quick-start.adoc[NetBeans Platform Quick Start for NetBeans Platform]. and illustrates some of the differences between using Ant and Maven to develop NetBeans Platform applications. After you understand how Maven is different from Ant, you can easily proceed through other tutorials on the  xref:../kb/docs/platform.adoc[NetBeans Platform Learning Trail].
+This document is based on the Ant-based  xref:tutorials/nbm-quick-start.adoc[NetBeans Platform Quick Start for NetBeans Platform]. and illustrates some of the differences between using Ant and Maven to develop NetBeans Platform applications. After you understand how Maven is different from Ant, you can easily proceed through other tutorials on the  xref:kb/docs/platform.adoc[NetBeans Platform Learning Trail].
 
 // NOTE: This document uses NetBeans Platform 7.2 and NetBeans IDE 7.2. If you are using an earlier version, see  link:71/nbm-maven-quickstart.html[the previous version of this document].
 
-If you are new to the NetBeans Platform, you might want to watch the screencast series  xref:./nbm-10-top-apis.adoc[Top 10 NetBeans APIs].
+If you are new to the NetBeans Platform, you might want to watch the screencast series  xref:tutorials/nbm-10-top-apis.adoc[Top 10 NetBeans APIs].
 
 
 
@@ -56,7 +56,7 @@ Before starting this tutorial you may want to familiarize yourself with the foll
 
 *  xref:wiki::wiki/MavenBestPractices.adoc[Best Practices for Maven in NetBeans IDE]
 *  link:http://www.sonatype.com/books/maven-book/reference/introduction.html[Chapter 1. Introducing Apache Maven] (from  link:http://www.sonatype.com/books/maven-book/reference/public-book.html[Maven: The Definitive Guide])
-*  xref:./nbm-maven-commandline.adoc[NetBeans Platform Command Line Tutorial]
+*  xref:tutorials/nbm-maven-commandline.adoc[NetBeans Platform Command Line Tutorial]
 
 
 == Creating a Maven Based NetBeans Platform Application Project
@@ -751,7 +751,7 @@ image::tutorials/maven-quickstart_72_result-1.png[title="Screenshot of final Net
 
 When you type text in the Text window and click the Filter! button, the text is converted to upper case letters and the text is added to the content of the History window.
 
-This tutorial demonstrated the fundamental pieces of NetBeans Platform applications. Creating a NetBeans Platform application using Maven is not very different from creating an application using Ant. The major difference is understanding how the Maven POM controls how the application is assembled. For more examples on how to build NetBeans Platform applications and modules, see the tutorials listed in the  xref:../kb/docs/platform.adoc[NetBeans Platform Learning Trail].
+This tutorial demonstrated the fundamental pieces of NetBeans Platform applications. Creating a NetBeans Platform application using Maven is not very different from creating an application using Ant. The major difference is understanding how the Maven POM controls how the application is assembled. For more examples on how to build NetBeans Platform applications and modules, see the tutorials listed in the  xref:kb/docs/platform.adoc[NetBeans Platform Learning Trail].
 
 xref:front::community/mailing-lists.adoc[ Send Us Your Feedback]
 
@@ -762,7 +762,7 @@ xref:front::community/mailing-lists.adoc[ Send Us Your Feedback]
 
 For more information about creating and developing applications, see the following resources.
 
-*  xref:../kb/docs/platform.adoc[NetBeans Platform Learning Trail]
+*  xref:kb/docs/platform.adoc[NetBeans Platform Learning Trail]
 *  link:https://bits.netbeans.org/dev/javadoc/[NetBeans API Javadoc]
 
 If you have any questions about the NetBeans Platform, feel free to write to the mailing list, dev@platform.netbeans.org, or view the  link:https://mail-archives.apache.org/mod_mbox/netbeans-dev/[NetBeans Platform mailing list archive].

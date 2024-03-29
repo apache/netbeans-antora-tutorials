@@ -262,7 +262,7 @@ xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 
 For more information about using NetBeans IDE to develop RESTful web services, SaaS, and other Java EE applications, see the following resources:
 
-* xref:./rest.adoc[+Getting Started with RESTful Web Sevices+]
+* xref:kb/docs/websvc/rest.adoc[+Getting Started with RESTful Web Sevices+]
 * xref:wiki::wiki/JavaClientForDeliciousUsingNetBeans.adoc[Creating a Java Client for del.icio.us RESTful Web Services], by Amit Kumar Saha
 * xref:wiki::wiki/RESTRemoting.adoc[NetBeans Wiki: RESTful Web Service Client Stub]
 * xref:kb/docs/web.adoc[Web Services Learning Trail]

@@ -36,7 +36,7 @@ endif::[]
 == Lesson 1a: Creating a MySQL Database
 
 This lesson describes the last preliminary step in developing the Wish List application, that of creating a sample database with test data. To complete the steps in this tutorial, you will need a database in which to store data of wishers. With the NetBeans IDE you can perform all these activities through the IDE interface. 
-Before starting, see the tutorial requirements described in xref:./wish-list-tutorial-main-page.adoc[+Creating a CRUD Application with PHP - Main page+].
+Before starting, see the tutorial requirements described in xref:kb/docs/php/wish-list-tutorial-main-page.adoc[+Creating a CRUD Application with PHP - Main page+].
 
 The current document is a part of the Creating a CRUD Application in the NetBeans IDE for PHP tutorial.
 
@@ -267,9 +267,9 @@ Note: You can download a set of SQL commands for creating the MySQL wishlist dat
 
 == Next Step
 
-xref:./wish-list-lesson2.adoc[+Next Lesson >>+]
+xref:kb/docs/php/wish-list-lesson2.adoc[+Next Lesson >>+]
 
-xref:./wish-list-tutorial-main-page.adoc[+Back to the Tutorial main page+]
+xref:kb/docs/php/wish-list-tutorial-main-page.adoc[+Back to the Tutorial main page+]
 
 xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 

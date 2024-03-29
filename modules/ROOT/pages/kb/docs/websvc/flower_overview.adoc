@@ -48,10 +48,10 @@ You can download a complete version of service and client applications from the 
 image::kb/docs/websvc/netbeans-stamp-80-74-73.png[title="Content on this page applies to the NetBeans IDE 7.2, 7.3, 7.4 and 8.0"]
 
 1. => Overview
-2. xref:./flower_ws.adoc[+ Creating the Web Service+]
-3. xref:./flower-code-ws.adoc[+ Coding and Testing the Web Service+]
-4. xref:./flower_wsdl_schema.adoc[+ Modifying the Schema and WSDL Files to Pass Binary Data+]
-5. xref:./flower_swing.adoc[+ Creating the Swing Client+]
+2. xref:kb/docs/websvc/flower_ws.adoc[+ Creating the Web Service+]
+3. xref:kb/docs/websvc/flower-code-ws.adoc[+ Coding and Testing the Web Service+]
+4. xref:kb/docs/websvc/flower_wsdl_schema.adoc[+ Modifying the Schema and WSDL Files to Pass Binary Data+]
+5. xref:kb/docs/websvc/flower_swing.adoc[+ Creating the Swing Client+]
 
 
 == Software Needed for the Tutorial
@@ -85,7 +85,7 @@ image::kb/docs/websvc/running-client.png[title="JFrame showing all flower images
 
 == Next step:
 
-xref:./flower_ws.adoc[+ Creating the Web Service+]
+xref:kb/docs/websvc/flower_ws.adoc[+ Creating the Web Service+]
 
 xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 
@@ -95,10 +95,10 @@ xref:front::community/mailing-lists.adoc[Send Feedback on This Tutorial]
 
 For background information prior to using this tutorial, see the following resources:
 
-* xref:./jax-ws.adoc[+Getting Started with JAX-WS Web Services+]
-* xref:./client.adoc[+Developing Web Service Clients+]
+* xref:kb/docs/websvc/jax-ws.adoc[+Getting Started with JAX-WS Web Services+]
+* xref:kb/docs/websvc/client.adoc[+Developing Web Service Clients+]
 * xref:kb/docs/javaee/javaee-gettingstarted.adoc[+Getting Started with Java EE Applications+]
-* xref:./wsit.adoc[+Advanced Web Service Interoperability+]
+* xref:kb/docs/websvc/wsit.adoc[+Advanced Web Service Interoperability+]
 
 To send comments and suggestions, get support, and keep informed about the latest developments on the NetBeans IDE Java EE development features, xref:front::community/mailing-lists.adoc[+join the nbj2ee@netbeans.org mailing list+].
 

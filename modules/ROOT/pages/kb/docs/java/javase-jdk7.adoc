@@ -292,6 +292,6 @@ For more information about JDK 7 and the NetBeans IDE, see:
 
 For more information about developing Java applications in the NetBeans IDE, see:
 
-* xref:./javase-intro.adoc[+Developing General Java Applications+]
+* xref:kb/docs/java/javase-intro.adoc[+Developing General Java Applications+]
 * xref:kb/docs/java-se.adoc[+General Java Development Learning Trail+]
 * link:http://www.oracle.com/pls/topic/lookup?ctx=nb8000&id=NBDAG366[+Creating Java Projects+] in _Developing Applications with NetBeans IDE_

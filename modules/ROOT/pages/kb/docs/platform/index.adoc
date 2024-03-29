@@ -41,7 +41,7 @@ The NetBeans Platform is a broad Java framework on which you can base large
 desktop applications. 
 
 // not available NetBeans IDE itself is
-//xref:../../projects/platform/screenshots.adoc[one of the hundreds of
+//xref:projects/platform/screenshots.adoc[one of the hundreds of
 //applications] based on the NetBeans Platform. 
 
 The NetBeans Platform contains

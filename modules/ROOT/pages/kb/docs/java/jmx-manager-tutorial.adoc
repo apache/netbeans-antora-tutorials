@@ -291,5 +291,5 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 For more information, see the following:
 
-* xref:./jmx-getstart.adoc[+Getting Started with JMX Monitoring in NetBeans IDE+]
-* xref:./jmx-tutorial.adoc[+Adding Java Management Extensions (JMX) Instrumentation to a Java Application+]
+* xref:kb/docs/java/jmx-getstart.adoc[+Getting Started with JMX Monitoring in NetBeans IDE+]
+* xref:kb/docs/java/jmx-tutorial.adoc[+Adding Java Management Extensions (JMX) Instrumentation to a Java Application+]

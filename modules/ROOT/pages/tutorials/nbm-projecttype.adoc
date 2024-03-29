@@ -39,9 +39,9 @@ This tutorial demonstrates how to create a new project type in a NetBeans Platfo
 
 NOTE: Before going further, make sure this is the tutorial you actually need!
 
-* Rather than creating a new project type, you might want to extend an _existing_ project type instead, as described in the  xref:./nbm-projectextension.adoc[NetBeans Project Type Extension Module Tutorial].
+* Rather than creating a new project type, you might want to extend an _existing_ project type instead, as described in the  xref:tutorials/nbm-projectextension.adoc[NetBeans Project Type Extension Module Tutorial].
 * For Maven-based NetBeans Platform applications, see  link:http://web.archive.org/web/20130603022225/http://netbeans.dzone.com/how-create-maven-nb-project-type[How to Create a Custom Project Type in a Mavenized NetBeans Platform Application].
-* If the projects for which you're creating a project type (whether on Ant or Maven based NetBeans Platform applications) need to use Ant as their build tool, you should use the  xref:./nbm-projecttypeant.adoc[NetBeans Ant-Based Project Type Module Tutorial] instead.
+* If the projects for which you're creating a project type (whether on Ant or Maven based NetBeans Platform applications) need to use Ant as their build tool, you should use the  xref:tutorials/nbm-projecttypeant.adoc[NetBeans Ant-Based Project Type Module Tutorial] instead.
 
 
 You will also make use of these icons, which you can right-click here and download: image:tutorials/projecttypes_72pics_icon.png[] and image:tutorials/projecttypes_72pics_sub-icon.png[]
@@ -1087,7 +1087,7 @@ image::tutorials/projecttypes_72pics_proj-temp-3.png[]
 
 image::tutorials/projecttypes_72pics_proj-temp-4.png[]
 
-You have now used the New Project Template wizard to register some project samples in your application. Also notice that you have some ZIP files containing your sample projects, created by the Project Template wizard, together with several classes from the NetBeans Wizard API. For further information, refer to the  xref:./nbm-projectsamples.adoc[NetBeans Project Sample Module Tutorial].
+You have now used the New Project Template wizard to register some project samples in your application. Also notice that you have some ZIP files containing your sample projects, created by the Project Template wizard, together with several classes from the NetBeans Wizard API. For further information, refer to the  xref:tutorials/nbm-projectsamples.adoc[NetBeans Project Sample Module Tutorial].
 
 
 [start=7]
@@ -1110,5 +1110,5 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 For more information about creating and developing NetBeans modules, see the following resources:
 
-*  xref:../kb/docs/platform.adoc[Other Related Tutorials]
+*  xref:kb/docs/platform.adoc[Other Related Tutorials]
 *  link:https://bits.netbeans.org/dev/javadoc/index.html[NetBeans API Javadoc]

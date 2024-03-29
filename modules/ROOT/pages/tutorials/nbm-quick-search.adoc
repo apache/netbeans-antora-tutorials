@@ -427,4 +427,4 @@ For more information about creating and developing NetBeans modules, see the fol
 
 *  link:https://netbeans.apache.org/platform/index.html[NetBeans Platform Homepage]
 *  link:https://bits.netbeans.org/dev/javadoc/index.html[NetBeans API List (Current Development Version)]
-*  xref:../kb/docs/platform.adoc[Other Related Tutorials]
+*  xref:kb/docs/platform.adoc[Other Related Tutorials]

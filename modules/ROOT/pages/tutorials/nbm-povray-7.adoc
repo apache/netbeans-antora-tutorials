@@ -34,7 +34,7 @@ ifdef::env-github[]
 :imagesdir: ../../images
 endif::[]
 
-This is a continuation of the tutorial for building a POV-Ray rendering application on the NetBeans Platform. If you have not read the  xref:./nbm-povray-1.adoc[first],  xref:./nbm-povray-2.adoc[second],  xref:./nbm-povray-3.adoc[third],  xref:./nbm-povray-4.adoc[fourth],  xref:./nbm-povray-5.adoc[fifth], and  xref:./nbm-povray-6.adoc[sixth] parts of this tutorial, you may want to start there.
+This is a continuation of the tutorial for building a POV-Ray rendering application on the NetBeans Platform. If you have not read the  xref:tutorials/nbm-povray-1.adoc[first],  xref:tutorials/nbm-povray-2.adoc[second],  xref:tutorials/nbm-povray-3.adoc[third],  xref:tutorials/nbm-povray-4.adoc[fourth],  xref:tutorials/nbm-povray-5.adoc[fifth], and  xref:tutorials/nbm-povray-6.adoc[sixth] parts of this tutorial, you may want to start there.
 
 
 == Obtaining POV-Ray
@@ -45,7 +45,7 @@ At this point, we're almost ready to run code, so it would be a good idea to dow
 * Macintosh users may find  link:http://darwinports.opendarwin.org/[DarwinPorts] the easiest way—simply install DarwinPorts and then run `sudo port install povray`.
 * Linux and other Unix users should be fine with the downloads available from  link:http://povray.org[povray.org], using  link:http://povray.org/download/linux.php[these instructions]. Everything should work out of the box for these users, without any tweaks or post-install configurations. Make sure, however, that the POV-Ray launcher has the correct permissions, otherwise it will not execute. Run it from the command line to check that it executes.
 
-NOTE:  For details on setting up POV-Ray, especially for detailed instructions for Windows,  xref:./nbm-povray-10.adoc#appendix[see the Appendix].
+NOTE:  For details on setting up POV-Ray, especially for detailed instructions for Windows,  xref:tutorials/nbm-povray-10.adoc#appendix[see the Appendix].
 
 
 == Executing POV-Ray and Displaying the Output
@@ -502,5 +502,5 @@ image::tutorials/povray_71_ch7_pic2.png[role="left", xref="image$./povray_71_ch7
 
 == Next Steps
 
-The  xref:./nbm-povray-8.adoc[next section] will cover implementing `ViewService` and adding actions for that.
+The  xref:tutorials/nbm-povray-8.adoc[next section] will cover implementing `ViewService` and adding actions for that.
 

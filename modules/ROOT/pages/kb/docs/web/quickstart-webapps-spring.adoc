@@ -508,5 +508,5 @@ Many of the Spring NetBeans Module capabilities can also be applied to non-web b
 
 For other related tutorials, see the following resources:
 
-* xref:./framework-adding-support.adoc[Adding Support for a Web Framework]. A basic guide describing how to add support by installing a web framework plugin using the NetBeans Update Center.
-* xref:./jsf20-intro.adoc[Introduction to JavaServer Faces 2.0]. Demonstrates how to add JSF 2.0 support to an existing project, wire managed beans, and take advantage of Facelets templating.
+* xref:kb/docs/web/framework-adding-support.adoc[Adding Support for a Web Framework]. A basic guide describing how to add support by installing a web framework plugin using the NetBeans Update Center.
+* xref:kb/docs/web/jsf20-intro.adoc[Introduction to JavaServer Faces 2.0]. Demonstrates how to add JSF 2.0 support to an existing project, wire managed beans, and take advantage of Facelets templating.

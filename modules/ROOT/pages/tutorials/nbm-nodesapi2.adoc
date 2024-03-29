@@ -42,17 +42,17 @@ This tutorial shows how to make use of some of the features of the Nodes API in 
 * Create properties for display in the property sheet
 * Provide Actions from Nodes
 
-This tutorial is intended as a follow-on to the  xref:./nbm-selection-1.adoc[NetBeans Selection Management Tutorial], which covers how `Lookup` is used in managing selection in the NetBeans windowing system, and its xref:./nbm-selection-2.adoc[follow-on tutorial] which demonstrates how to use the Nodes API in managing selection.
+This tutorial is intended as a follow-on to the  xref:tutorials/nbm-selection-1.adoc[NetBeans Selection Management Tutorial], which covers how `Lookup` is used in managing selection in the NetBeans windowing system, and its xref:tutorials/nbm-selection-2.adoc[follow-on tutorial] which demonstrates how to use the Nodes API in managing selection.
 
 This tutorial builds on the source code created in the first tutorial and enhanced in the second tutorial. If you have not yet done these tutorials, you should do them first; or at least ensure you are familiar with the content and approach used, and download the completed result of the second tutorial. 
 
 
-For troubleshooting purposes, you are welcome to download the  xref:./nbm-nodesapi2.adoc[completed tutorial source code].
+For troubleshooting purposes, you are welcome to download the  xref:tutorials/nbm-nodesapi2.adoc[completed tutorial source code].
 
 
 == Creating a Node subclass
 
-As mentioned in the  xref:./nbm-selection-2.adoc[previous tutorial], Nodes are _presentation objects_. That means that they are not a data model themselves - rather, they are a presentation layer for an _underlying data model_. In the Projects or Files windows in the NetBeans IDE, you can see ``Node``s used where the underlying data model is files on disk. In the Services window in the IDE, you can see them used where the underlying objects are configurable aspects of NetBeans runtime environment, such as available application servers and databases.
+As mentioned in the  xref:tutorials/nbm-selection-2.adoc[previous tutorial], Nodes are _presentation objects_. That means that they are not a data model themselves - rather, they are a presentation layer for an _underlying data model_. In the Projects or Files windows in the NetBeans IDE, you can see ``Node``s used where the underlying data model is files on disk. In the Services window in the IDE, you can see them used where the underlying objects are configurable aspects of NetBeans runtime environment, such as available application servers and databases.
 
 As a presentation layer, ``Node``s add human-friendly attributes to the objects they model. The essential ones are:
 
@@ -674,5 +674,5 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 == Next Steps
 
-You've now begun to delve into how to get more out of the property sheet in NetBeans. In the  xref:./nbm-property-editors.adoc[next tutorial], you will cover how to write custom editors and provide a custom inline editor for use in the property sheet.
+You've now begun to delve into how to get more out of the property sheet in NetBeans. In the  xref:tutorials/nbm-property-editors.adoc[next tutorial], you will cover how to write custom editors and provide a custom inline editor for use in the property sheet.
 

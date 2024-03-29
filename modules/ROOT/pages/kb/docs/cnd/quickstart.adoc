@@ -55,11 +55,11 @@ image::kb/docs/cnd/netbeans-stamp-80-74-73.png[title="Content on this page appli
 
 |Java Developer Kit (JDK) |link:{jdkdownload}[version 6, 7, or 8] 
 
-|C and C++ compilers,  ``make`` ,  ``gdb``  |xref:./cpp-setup-instructions.adoc[Configuring the NetBeans IDE for C/C{pp}/Fortran] 
+|C and C++ compilers,  ``make`` ,  ``gdb``  |xref:kb/docs/cnd/cpp-setup-instructions.adoc[Configuring the NetBeans IDE for C/C{pp}/Fortran] 
 |===
 
 
-See the xref:front::download/index.adoc[NetBeans IDE Installation Instructions] and xref:./cpp-setup-instructions.adoc[Configuring the NetBeans IDE for C/C{pp}/Fortran]
+See the xref:front::download/index.adoc[NetBeans IDE Installation Instructions] and xref:kb/docs/cnd/cpp-setup-instructions.adoc[Configuring the NetBeans IDE for C/C{pp}/Fortran]
 for information about downloading and installing the required software.
 
 *Sample Projects*
@@ -71,7 +71,7 @@ If you want to just play with some sample projects provided in the IDE, choose F
 
 NetBeans C/C{pp} support lets you create C and C{pp} Application and Library projects with generated makefiles, as well as C and C{pp} projects with existing sources.
 
-You can build, run, and debug your project on the local host (the system from which you started the IDE) or on a remote host running a UNIX® operating system. For information on specifying the tool collection for your project and on defining and using remote hosts, see xref:./development-environment.adoc[Defining Your C/C{pp} Project's Development Environment].
+You can build, run, and debug your project on the local host (the system from which you started the IDE) or on a remote host running a UNIX® operating system. For information on specifying the tool collection for your project and on defining and using remote hosts, see xref:kb/docs/cnd/development-environment.adoc[Defining Your C/C{pp} Project's Development Environment].
 
 With a C/C{pp} Application, Dynamic Library, or Static Library project, the IDE controls all aspects of how your application is built, run, and debugged. You specify project settings when creating the project and in the Project Properties dialog box. The IDE generates a makefile in which all of your settings are stored.
 
@@ -318,7 +318,7 @@ To rebuild the project:
 
 == Next Steps 
 
-See xref:./navigating-editing.adoc[Editing and Navigating C/C{pp} Source Files] for a tutorial on using the advanced navigation and editing features in NetBeans IDE to view and modify your source code.
+See xref:kb/docs/cnd/navigating-editing.adoc[Editing and Navigating C/C{pp} Source Files] for a tutorial on using the advanced navigation and editing features in NetBeans IDE to view and modify your source code.
 
 See the xref:kb/docs/cnd.adoc[C/C{pp} Learning Trail] for more articles about developing with C/C++/Fortran in NetBeans IDE.
 

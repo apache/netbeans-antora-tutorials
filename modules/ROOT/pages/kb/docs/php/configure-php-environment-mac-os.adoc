@@ -118,7 +118,7 @@ image::kb/docs/php/new-php-project.png[role="left", xref="image$./new-php-projec
 
 --
 
-The IDE remembers this location for future projects. For further instructions on creating PHP projects in NetBeans IDE, see xref:./project-setup.adoc[+Setting Up a PHP Project+].
+The IDE remembers this location for future projects. For further instructions on creating PHP projects in NetBeans IDE, see xref:kb/docs/php/project-setup.adoc[+Setting Up a PHP Project+].
 
 == Enabling Xdebug with MAMP
 

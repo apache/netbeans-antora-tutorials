@@ -509,5 +509,5 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 For more information about creating and developing NetBeans modules, see the following resources:
 
-*  xref:../kb/docs/platform.adoc[Other Related Tutorials]
+*  xref:kb/docs/platform.adoc[Other Related Tutorials]
 *  link:https://bits.netbeans.org/dev/javadoc/[NetBeans API Javadoc]

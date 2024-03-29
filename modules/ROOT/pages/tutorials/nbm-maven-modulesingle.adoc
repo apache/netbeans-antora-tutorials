@@ -36,7 +36,7 @@ endif::[]
 
 This document demonstrates how to create a NetBeans module from a Maven archetype and build and install the module in NetBeans IDE or any other application on the NetBeans Platform. In this tutorial, you will create a module project that when installed enables you to recognize a new type of file in your projects. The module also creates a menu action that is available when the user right-click a file conforming to the new file type.
 
-This document is based on the Ant-based  xref:./nbm-filetype.adoc[NetBeans File Type Tutorial] and can be used to learn some of the differences between using Ant and Maven to develop NetBeans modules. After you understand the differences, you can easily proceed through other tutorials on the  xref:../kb/docs/platform.adoc[NetBeans Platform Learning Trail].
+This document is based on the Ant-based  xref:tutorials/nbm-filetype.adoc[NetBeans File Type Tutorial] and can be used to learn some of the differences between using Ant and Maven to develop NetBeans modules. After you understand the differences, you can easily proceed through other tutorials on the  xref:kb/docs/platform.adoc[NetBeans Platform Learning Trail].
 
 
 
@@ -189,7 +189,7 @@ When you click Finish, the IDE creates the files shown below:
 
 image::tutorials/maven-single_71_pic7.png[title="Module wizard 1"]
 
-For more details on the files that the IDE created, see  xref:wiki::wiki/DevFaqDataObject.adoc[What is a DataObject] and the section on  xref:./nbm-filetype.adoc#recognizing[Recognizing Abc Files] in the Ant-Based  xref:./nbm-filetype.adoc[File Type Integration Tutorial].
+For more details on the files that the IDE created, see  xref:wiki::wiki/DevFaqDataObject.adoc[What is a DataObject] and the section on  xref:tutorials/nbm-filetype.adoc#recognizing[Recognizing Abc Files] in the Ant-Based  xref:tutorials/nbm-filetype.adoc[File Type Integration Tutorial].
 
 
 == Building and Running the Project
@@ -375,7 +375,7 @@ When you right-click on a node of the  ``abc``  file type you will see that My A
 
 image::tutorials/maven-single_71_pic95.png[title="Module wizard 1"]
 
-This tutorial demonstrated how to create and run a NetBeans module that you created from a Maven Archetype. You also learned a little about how to work with file types, but for more details you should look at the Ant-Based  xref:./nbm-filetype.adoc[NetBeans File Type Tutorial]. For more examples on how to build NetBeans Platform applications and modules, see the tutorials listed in the  xref:../kb/docs/platform.adoc[NetBeans Platform Learning Trail].
+This tutorial demonstrated how to create and run a NetBeans module that you created from a Maven Archetype. You also learned a little about how to work with file types, but for more details you should look at the Ant-Based  xref:tutorials/nbm-filetype.adoc[NetBeans File Type Tutorial]. For more examples on how to build NetBeans Platform applications and modules, see the tutorials listed in the  xref:kb/docs/platform.adoc[NetBeans Platform Learning Trail].
 
 xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
@@ -386,8 +386,8 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 For more information about creating and developing applications, see the following resources.
 
-*  xref:../kb/docs/platform.adoc[NetBeans Platform Learning Trail]
+*  xref:kb/docs/platform.adoc[NetBeans Platform Learning Trail]
 *  link:https://bits.netbeans.org/dev/javadoc/[NetBeans API Javadoc]
 
-If you have any questions about the NetBeans Platform, feel free to write to the mailing list, dev@platform.netbeans.org, or view the  link:https://mail-archives.apache.org/mod_mbox/netbeans-dev/[NetBeans Platform mailing list archive].
+If you have any questions about the NetBeans Platform, feel free to write to the mailing list, users@netbeans.apache.org, or view the xref:front::community/mailing-lists.adoc[NetBeans Platform mailing list archive].
 

@@ -38,16 +38,16 @@
 
 . Creating the Database
 
-.. xref:./wish-list-lesson1.adoc[+Creating a MySQL Database+]
-.. xref:./wish-list-oracle-lesson1.adoc[+Creating Oracle Database Tables+]
-.. xref:./wish-list-lesson2.adoc[+Designing the Application. Reading from the Database+]
-. xref:./wish-list-lesson3.adoc[+ Creating a New Application User +]
-. xref:./wish-list-lesson4.adoc[+Optimizing the Code+]
-. xref:./wish-list-lesson5.adoc[+Adding Security. Implementing Application User Logon+]
-. xref:./wish-list-lesson6.adoc[+Adding a New Wish to the Database+]
-. xref:./wish-list-lesson7.adoc[+Updating and Deleting Entries in the Database+]
-. xref:./wish-list-lesson8.adoc[+Making the Application Look Better Using the CSS Technology+]
-. xref:./wish-list-lesson9.adoc[+Deploying the Application on a Remote Web Server+]
+.. xref:kb/docs/php/wish-list-lesson1.adoc[+Creating a MySQL Database+]
+.. xref:kb/docs/php/wish-list-oracle-lesson1.adoc[+Creating Oracle Database Tables+]
+.. xref:kb/docs/php/wish-list-lesson2.adoc[+Designing the Application. Reading from the Database+]
+. xref:kb/docs/php/wish-list-lesson3.adoc[+ Creating a New Application User +]
+. xref:kb/docs/php/wish-list-lesson4.adoc[+Optimizing the Code+]
+. xref:kb/docs/php/wish-list-lesson5.adoc[+Adding Security. Implementing Application User Logon+]
+. xref:kb/docs/php/wish-list-lesson6.adoc[+Adding a New Wish to the Database+]
+. xref:kb/docs/php/wish-list-lesson7.adoc[+Updating and Deleting Entries in the Database+]
+. xref:kb/docs/php/wish-list-lesson8.adoc[+Making the Application Look Better Using the CSS Technology+]
+. xref:kb/docs/php/wish-list-lesson9.adoc[+Deploying the Application on a Remote Web Server+]
 
 In this tutorial, you use the PHP features in the Apache NetBeans to create and run a simple web application. The example shows how to create a wish list. After you create and deploy the application, it enables you to share information on wish lists with your friends, such as lists for wedding, birthday, or holiday gifts. The information is stored in the database that you create in Lesson 1.
 
@@ -84,8 +84,8 @@ For details on installing and configuring the required software, see the documen
 
 == Next Step:
 
-xref:./wish-list-lesson1.adoc[+Creating a MySQL Database+]
+xref:kb/docs/php/wish-list-lesson1.adoc[+Creating a MySQL Database+]
 
 or
 
-xref:./wish-list-oracle-lesson1.adoc[+Creating Oracle Database Tables+]
+xref:kb/docs/php/wish-list-oracle-lesson1.adoc[+Creating Oracle Database Tables+]

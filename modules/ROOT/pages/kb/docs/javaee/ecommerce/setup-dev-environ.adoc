@@ -35,8 +35,8 @@ endif::[]
 
 == Tutorial Contents
 
-1. xref:./intro.adoc[+Introduction+]
-2. xref:./design.adoc[+Designing the Application+]
+1. xref:kb/docs/javaee/ecommerce/intro.adoc[+Introduction+]
+2. xref:kb/docs/javaee/ecommerce/design.adoc[+Designing the Application+]
 3. *Setting up the Development Environment*
 * <<create,Creating a Web Project>>
 * <<run,Running the Web Project>>
@@ -44,34 +44,34 @@ endif::[]
 * <<seeAlso,See Also>>
 
 [start=4]
-. xref:./data-model.adoc[+Designing the Data Model+]
+. xref:kb/docs/javaee/ecommerce/data-model.adoc[+Designing the Data Model+]
 
 [start=5]
-. xref:./page-views-controller.adoc[+Preparing the Page Views and Controller Servlet+]
+. xref:kb/docs/javaee/ecommerce/page-views-controller.adoc[+Preparing the Page Views and Controller Servlet+]
 
 [start=6]
-. xref:./connect-db.adoc[+Connecting the Application to the Database+]
+. xref:kb/docs/javaee/ecommerce/connect-db.adoc[+Connecting the Application to the Database+]
 
 [start=7]
-. xref:./entity-session.adoc[+Adding Entity Classes and Session Beans+]
+. xref:kb/docs/javaee/ecommerce/entity-session.adoc[+Adding Entity Classes and Session Beans+]
 
 [start=8]
-. xref:./manage-sessions.adoc[+Managing Sessions+]
+. xref:kb/docs/javaee/ecommerce/manage-sessions.adoc[+Managing Sessions+]
 
 [start=9]
-. xref:./transaction.adoc[+Integrating Transactional Business Logic+]
+. xref:kb/docs/javaee/ecommerce/transaction.adoc[+Integrating Transactional Business Logic+]
 
 [start=10]
-. xref:./language.adoc[+Adding Language Support+]
+. xref:kb/docs/javaee/ecommerce/language.adoc[+Adding Language Support+]
 
 [start=11]
-. xref:./security.adoc[+Securing the Application+]
+. xref:kb/docs/javaee/ecommerce/security.adoc[+Securing the Application+]
 
 [start=12]
-. xref:./test-profile.adoc[+Testing and Profiling+]
+. xref:kb/docs/javaee/ecommerce/test-profile.adoc[+Testing and Profiling+]
 
 [start=13]
-. xref:./conclusion.adoc[+Conclusion+]
+. xref:kb/docs/javaee/ecommerce/conclusion.adoc[+Conclusion+]
 
 image::kb/docs/javaee/ecommerce/netbeans-stamp-68-69.png[title="Content on this page applies to NetBeans IDE, versions 6.8 and 6.9"]
 
@@ -133,7 +133,7 @@ If you wanted to deploy to a server that isn't yet registered with the IDE, you 
 [start=7]
 . For Java EE Version, select Java EE 6 Web. 
 
-The application that you create makes use of various Java EE 6 features, namely servlet annotations (new in the link:http://jcp.org/en/jsr/summary?id=315[+Servlet 3.0 Specification+]), and EJBs used directly in servlet containers (new in the link:http://jcp.org/en/jsr/summary?id=318[+EJB 3.1 Specification+]). Both Servlet 3.0 and EJB 3.1 are part of the Java EE 6 platform, therefore you require an EE-6 compliant server such as GlassFish v3 to work through this tutorial. For more information, see xref:./entity-session.adoc#specification[+About Specifications and Implementations+].
+The application that you create makes use of various Java EE 6 features, namely servlet annotations (new in the link:http://jcp.org/en/jsr/summary?id=315[+Servlet 3.0 Specification+]), and EJBs used directly in servlet containers (new in the link:http://jcp.org/en/jsr/summary?id=318[+EJB 3.1 Specification+]). Both Servlet 3.0 and EJB 3.1 are part of the Java EE 6 platform, therefore you require an EE-6 compliant server such as GlassFish v3 to work through this tutorial. For more information, see xref:kb/docs/javaee/ecommerce/entity-session.adoc#specification[+About Specifications and Implementations+].
 
 [start=8]
 . Make sure that the 'Enable Contexts and Dependency Injection' option is deselected. This option is specific to the Contexts and Dependency Injection (CDI) technology, specified by link:http://jcp.org/en/jsr/detail?id=299[+JSR-299+], and is not used in this tutorial. For more information, see xref:kb/docs/javaee/cdi-intro.adoc[+Getting Started with Contexts and Dependency Injection and JSF 2.0+]. 

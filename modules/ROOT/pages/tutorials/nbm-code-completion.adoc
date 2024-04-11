@@ -1,4 +1,4 @@
-// 
+//
 //     Licensed to the Apache Software Foundation (ASF) under one
 //     or more contributor license agreements.  See the NOTICE file
 //     distributed with this work for additional information
@@ -6,9 +6,9 @@
 //     to you under the Apache License, Version 2.0 (the
 //     "License"); you may not use this file except in compliance
 //     with the License.  You may obtain a copy of the License at
-// 
+//
 //       http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 //     Unless required by applicable law or agreed to in writing,
 //     software distributed under the License is distributed on an
 //     "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -19,7 +19,7 @@
 
 = NetBeans Code Completion Tutorial
 :page-layout: platform_tutorial
-:jbake-tags: tutorials 
+:jbake-tags: tutorials
 :jbake-status: published
 :page-syntax: true
 :source-highlighter: pygments
@@ -35,73 +35,79 @@ ifdef::env-github[]
 :imagesdir: ../../images
 endif::[]
 
+include::front::partial$database.adoc[]
+
 This tutorial shows you how to implement the
-link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/overview-summary.html[Editor
-Code Completion API]. You will be shown how to implement the API in the context
-of HTML files. When the user invokes the code completion feature, a code
-completion box will appear, displaying words that can complete the text typed
-in the editor. At the end of this tutorial, HTML files will have a code
-completion box as follows:
+link:{apidoclink}org-netbeans-modules-editor-completion/overview-summary.html[Editor Code Completion API].
+You will be shown how to implement the API in the context of HTML files.
+When the user invokes the code completion feature, a code completion box will appear,
+displaying words that can complete the text typed in the editor.
+At the end of this tutorial, HTML files will have a code completion box as follows:
 
 The content of the code completion box will come from country names retrieved
-from the JDK's  ``java.util.Locale``  package.
+from the JDK's ``java.util.Locale`` package.
 
-For troubleshooting purposes, you are welcome to download the  link:http://web.archive.org/web/20150927111721/https://java.net/projects/nb-api-samples/sources/api-samples/show/versions/8.0/tutorials/CountryCodeCompleter[completed tutorial source code].
+For troubleshooting purposes, you are welcome to download the link:{templaterepository}tutorials/CountryCodeCompleter[completed tutorial source code].
 
 
 == Introduction to Code Completion Integration
 
 Two classes apply to code completion and these will be developed in this tutorial:
 
-*  `` link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionItem.html[CompletionItem]`` 
-*  `` link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionProvider.html[CompletionProvider]`` 
+* ``link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionItem.html[CompletionItem]``
+* ``link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionProvider.html[CompletionProvider]``
 
-Both of these come from the  link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/overview-summary.html[Editor Code Completion API] and are implemented in this tutorial's module as CountriesCompletionItem and CountriesCompletionProvider.
+Both of these come from the link:{apidoclink}org-netbeans-modules-editor-completion/overview-summary.html[Editor Code Completion API]
+and are implemented in this tutorial's module as ``CountriesCompletionItem`` and ``CountriesCompletionProvider``.
 
 
 == Creating the Module Project
 
-In this section, we use a wizard to create the source structure that every NetBeans module requires. The source structure consists of certain folders in specific places and a set of files that are always needed. For example, every Ant-based NetBeans module requires a  ``nbproject``  folder, which holds the project's metadata.
+In this section, we use a wizard to create the source structure that every NetBeans module requires.
+The source structure consists of certain folders in specific places and a set of files that are always needed.
+For example, every Ant-based NetBeans module requires a ``nbproject`` folder, which holds the project's metadata.
 
 
-[start=1]
-1. Choose File > New Project (Ctrl-Shift-N). Under Categories, select NetBeans Modules. Under Projects, select Module. Click Next.
+. Choose File > New Project kbd:[Ctrl+Shift+N]. Under Categories, select NetBeans Modules. Under Projects, select Module. Click Next.
+. In the Name and Location panel, type ``CountryCodeCompleter`` in Project Name. Change the Project Location to any directory on your computer. Click Next.
+. In the Basic Module Configuration panel, type ``org.netbeans.modules.countries`` as the Code Name Base. Click Finish.
 
-[start=2]
-1. In the Name and Location panel, type  ``CountryCodeCompleter``  in Project Name. Change the Project Location to any directory on your computer. Click Next.
-
-[start=3]
-1. In the Basic Module Configuration panel, type  ``org.netbeans.modules.countries``  as the Code Name Base. Click Finish.
-
-The IDE creates the  ``CountryCodeCompleter``  project. The project contains all of your sources and project metadata, such as the project's Ant build script. The project opens in the IDE. You can view its logical structure in the Projects window (Ctrl-1) and its file structure in the Files window (Ctrl-2).
+The IDE creates the ``CountryCodeCompleter`` project.
+The project contains all of your sources and project metadata, such as the project's Ant build script.
+The project opens in the IDE. You can view its logical structure in the Projects window kbd:[Ctrl+1] and its file structure in the Files window kbd:[Ctrl+2].
 
 
 == Implementing the Completion Provider Class
 
-The first class we will deal with when creating a code completion feature for HTML files is the  `` link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionProvider.html[CompletionProvider]`` . As the user types in an editor, the code completion infrastructure asks all code completion providers registered in the XML layer file to create  `` link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionTask.html[CompletionTasks]`` . The tasks are created by the  `` link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionProvider.html#createTask(int,%20javax.swing.text.JTextComponent)[CompletionProvider.createTask]``  method. What _happens_ when the method is invoked is up to the implementation. In _our_ implementation, we will create a  `` link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionItem.html[CompletionItem]``  for a list of countries.
+The first class we will deal with when creating a code completion feature for HTML files is the ``link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionProvider.html[CompletionProvider]``.
+As the user types in an editor, the code completion infrastructure asks all code completion providers registered in the XML layer file to create ``link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionTask.html[CompletionTasks]``.
+The tasks are created by the ``link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionProvider.html#createTask(int,%20javax.swing.text.JTextComponent)[CompletionProvider.createTask]`` method.
+What _happens_ when the method is invoked is up to the implementation.
+In _our_ implementation, we will create a ``link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionItem.html[CompletionItem]`` for a list of countries.
 
 
-[start=1]
-1. Right-click the LIbraries node of the  ``CountryCodeCompleter``  project and choose Add Module Dependency:
-
-
+. Right-click the LIbraries node of the ``CountryCodeCompleter`` project and choose Add Module Dependency:
++
 image::tutorials/cc_72_deps.png[]
-
++
 Set dependencies on the following:
-
-* "Editor Code Completion", which provides the API classes that we need in this tutorial.
-* "MIME Lookup API", which provides the Java annotation for registering completion providers.
-* "Utilities API".
-
-[start=2]
-1. Right-click the  ``CountryCodeCompleter``  project and choose New > Java Class. In Class Name, type  ``CountriesCompletionProvider`` . In Package, choose  ``org.netbeans.modules.countries`` . Click Finish.
-
-[start=3]
-1. 
-In the  ``CountriesCompletionProvider``  class, change the signature so that the class  ``implements CompletionProvider`` . Place the cursor on the line that defines the signature. A lightbulb appears. Click it and the IDE adds an import statement for  ``org.netbeans.spi.editor.completion.CompletionProvider`` . The lightbulb appears again. Click it again and the IDE creates skeleton methods for the two methods required by the CompletionProvider class. You should now see this:
-
-
-[source,java,subs="macros"]
++
+** "Editor Code Completion", which provides the API classes that we need in this tutorial.
+** "MIME Lookup API", which provides the Java annotation for registering completion providers.
+** "Utilities API".
+** "Base Utilities API".
+. Right-click the ``CountryCodeCompleter`` project and choose New > Java Class. In Class Name, type ``CountriesCompletionProvider`` .
+In Package, choose ``org.netbeans.modules.countries``.
+Click Finish.
+. In the ``CountriesCompletionProvider`` class, change the signature so that the class ``implements CompletionProvider``.
+Place the cursor on the line that defines the signature.
+A lightbulb appears.
+Click it and the IDE adds an import statement for ``org.netbeans.spi.editor.completion.CompletionProvider``.
+The lightbulb appears again.
+Click it again and the IDE creates skeleton methods for the two methods required by the CompletionProvider class.
+You should now see this:
++
+[source,java,subs="{sourcesubs}"]
 ----
 
 package org.netbeans.modules.countries;
@@ -110,30 +116,28 @@ import javax.swing.text.JTextComponent;
 import org.netbeans.spi.editor.completion.CompletionProvider;
 import org.netbeans.spi.editor.completion.CompletionTask;
 
-public class CountriesCompletionProvider implements  link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionProvider.html[CompletionProvider] {
-    
+public class CountriesCompletionProvider implements link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionProvider.html[CompletionProvider] {
+
     public CountriesCompletionProvider() {
     }
 
     @Override
-    public  link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionTask.html[CompletionTask]  link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionProvider.html#createTask(int,%20javax.swing.text.JTextComponent)[createTask(int queryType, JTextComponent jtc)] {
+    public link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionTask.html[CompletionTask] link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionProvider.html#createTask(int,%20javax.swing.text.JTextComponent)[createTask(int queryType, JTextComponent jtc)] {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public int  link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionProvider.html#getAutoQueryTypes(javax.swing.text.JTextComponent,%20java.lang.String)[getAutoQueryTypes(JTextComponent component, String typedText)] {
+    public int link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionProvider.html#getAutoQueryTypes(javax.swing.text.JTextComponent,%20java.lang.String)[getAutoQueryTypes(JTextComponent component, String typedText)] {
         throw new UnsupportedOperationException("Not supported yet.");
     }
-    
+
 }
-                    
+
 ----
-
-
-[start=4]
-1. Before coding the  ``CompletionProvider``  class, let's register it in the XML layer file, via a NetBeans Platform annotation:
-
-[source,java,subs="macros"]
++
+. Before coding the ``CompletionProvider`` class, let's register it in the XML layer file, via a NetBeans Platform annotation:
++
+[source,java,subs="{sourcesubs}"]
 ----
 
 package org.netbeans.modules.countries;
@@ -155,56 +159,51 @@ public class CountriesCompletionProvider implements CompletionProvider {
     public int getAutoQueryTypes(JTextComponent component, String typedText) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
-    
+
 }
 ----
-
-Read  link:http://netbeans.dzone.com/news/mimelocation-mimeregistration[@MimeLocation, @MimeRegistration and @MimeRegistrations added] for details on the annotation above.
++
+Read link:https://web.archive.org/web/20151109174504/https://dzone.com/articles/mimelocation-mimeregistration[@MimeLocation, @MimeRegistration and @MimeRegistrations added] for details on the annotation above.
 
 
 === Implementing the createTask Method
 
-In this section we create a skeleton implementation of  `` link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/support/AsyncCompletionTask.html[AsyncCompletionTask]`` . In the next sections, we will fill this skeleton method out.
+In this section we create a skeleton implementation of ``link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/support/AsyncCompletionTask.html[AsyncCompletionTask]``.
+In the next sections, we will fill this skeleton method out.
 
-
-[start=1]
-1. In the createTask method, below the code from the previous section, add the following lines:
-
-[source,java,subs="macros"]
+. In the createTask method, below the code from the previous section, add the following lines:
++
+[source,java,subs="{sourcesubs}"]
 ----
 
 return new AsyncCompletionTask(new AsyncCompletionQuery() {
 });
 ----
-
-Here, we're returning  `` link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/support/AsyncCompletionTask.html[AsyncCompletionTask]`` , which will allow for the asynchronous creation of our task. The class comes from the  `` link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/support/package-summary.html[org.netbeans.spi.editor.completion.support]``  package, which provides several useful supporting classes for code completion implementations. We will use several of them in this tutorial.
-
-
-[start=2]
-1. Place the cursor on the line. Click the lightbulb that appears and let the IDE add import statements. Also let it create a skeleton method for the  link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/support/AsyncCompletionTask.html#query(org.netbeans.spi.editor.completion.CompletionResultSet)[query] method.
-
-[start=3]
-1. Next, we need to specify which code completion type we are working with. When the user clicks Ctrl-Space, or an alternative key combination defined by the user, our code completion entries should appear. This is the COMPLETION_QUERY_TYPE. Alternative query types exist, such as DOCUMENTATION_QUERY_TYPE and TOOLTIP_QUERY_TYPE. We need to test whether the user pressed the keys applicable to the COMPLETION_QUERY_TYPE. Therefore add the following test to the start of the  ``createTask``  method:
-
-[source,java,subs="macros"]
++
+Here, we're returning ``link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/support/AsyncCompletionTask.html[AsyncCompletionTask]`` , which will allow for the asynchronous creation of our task. The class comes from the  ``link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/support/package-summary.html[org.netbeans.spi.editor.completion.support]`` package, which provides several useful supporting classes for code completion implementations. We will use several of them in this tutorial.
++
+. Place the cursor on the line. Click the lightbulb that appears and let the IDE add import statements. Also let it create a skeleton method for the link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/support/AsyncCompletionTask.html#query(org.netbeans.spi.editor.completion.CompletionResultSet)[query] method.
++
+. Next, we need to specify which code completion type we are working with. When the user clicks kbd:[Ctrl+Space], or an alternative key combination defined by the user, our code completion entries should appear. This is the COMPLETION_QUERY_TYPE. Alternative query types exist, such as DOCUMENTATION_QUERY_TYPE and TOOLTIP_QUERY_TYPE. We need to test whether the user pressed the keys applicable to the COMPLETION_QUERY_TYPE. Therefore add the following test to the start of the ``createTask`` method:
++
+[source,java,subs="{sourcesubs}"]
 ----
 
 if (queryType != CompletionProvider.COMPLETION_QUERY_TYPE)
    return null;
 ----
-
-At this stage, the  ``createTask``  method should look as follows:
-
-
-[source,java,subs="macros"]
++
+At this stage, the ``createTask`` method should look as follows:
++
+[source,java,subs="{sourcesubs}"]
 ----
 
 @Override
 public CompletionTask createTask(int queryType, JTextComponent jtc) {
-    
+
     if (queryType != CompletionProvider.COMPLETION_QUERY_TYPE)
         return null;
-    
+
     return new AsyncCompletionTask(new AsyncCompletionQuery() {
         protected void query(CompletionResultSet completionResultSet, Document document, int caretOffset) {
         }
@@ -216,12 +215,12 @@ public CompletionTask createTask(int queryType, JTextComponent jtc) {
 
 === Implementing the getAutoQueryTypes Method
 
-In this section we return 0 as our  ``AutoQueryType`` , so that the code completion box does not appear automatically, but only when requested by the user.
+In this section we return 0 as our ``AutoQueryType`` , so that the code completion box does not appear automatically, but only when requested by the user.
 
-Before filling out the  ``query``  method, let's look at the  `` link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionProvider.html#getAutoQueryTypes(javax.swing.text.JTextComponent,%20java.lang.String)[getAutoQueryTypes(JTextComponent jTextComponent, String string)]``  method. This method determines whether the code completion box appears _automatically_ or not. For now, let's return 0. This means that the code completion box will never appear unless the user explicitly asks for it. So, this method should now look as follows:
+Before filling out the ``query`` method, let's look at the ``link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionProvider.html#getAutoQueryTypes(javax.swing.text.JTextComponent,%20java.lang.String)[getAutoQueryTypes(JTextComponent jTextComponent, String string)]`` method. This method determines whether the code completion box appears _automatically_ or not. For now, let's return 0. This means that the code completion box will never appear unless the user explicitly asks for it. So, this method should now look as follows:
 
 
-[source,java,subs="macros"]
+[source,java,subs="{sourcesubs}"]
 ----
 
 @Override
@@ -230,24 +229,21 @@ public int getAutoQueryTypes(JTextComponent component, String string) {
 }
 ----
 
-By default, the user would press Ctrl-Space to make the code completion box appear. Later, we can add a new option to our Options window extension, such as a checkbox which will change the int returned in this method from 0 to 1, so that the code completion box appears automatically. (There are also other types of queries, as shown  link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/constant-values.html#org.netbeans.spi.editor.completion.CompletionProvider.COMPLETION_QUERY_TYPE[here].)
+By default, the user would press kbd:[Ctrl+Space] to make the code completion box appear. Later, we can add a new option to our Options window extension, such as a checkbox which will change the int returned in this method from 0 to 1, so that the code completion box appears automatically. (There are also other types of queries, as shown link:{apidoclink}org-netbeans-modules-editor-completion/constant-values.html#org.netbeans.spi.editor.completion.CompletionProvider.COMPLETION_QUERY_TYPE[here].)
 
 
 == Implementing the Completion Item Class
 
-In this section we will create a class that implements  `` link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionItem.html[CompletionItem]`` . Once we have defined this class, we will fill out the query method in the  ``CompletionProvider``  class. The  ``CompletionProvider``  will create instances of our  ``CompletionItem`` .
+In this section we will create a class that implements ``link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionItem.html[CompletionItem]`` . Once we have defined this class, we will fill out the query method in the ``CompletionProvider`` class. The ``CompletionProvider`` will create instances of our ``CompletionItem`` .
 
 
-[start=1]
-1. Right-click the  ``CountryCodeCompleter``  project and choose New > Java Class. In Class Name, type  ``CountriesCompletionItem`` . In Package, choose  ``org.netbeans.modules.countries`` . Click Finish.
-
-[start=2]
-1. We will return to this class in later steps. For now, we will fill out the query method that we defined in the CompletionProvider class. Fill out the AsyncCompletionTask as follows, and note the explanatory comments in the code:
-
-[source,java,subs="macros"]
+. Right-click the ``CountryCodeCompleter`` project and choose New > Java Class. In Class Name, type ``CountriesCompletionItem`` . In Package, choose ``org.netbeans.modules.countries`` . Click Finish.
+. We will return to this class in later steps. For now, we will fill out the query method that we defined in the CompletionProvider class. Fill out the AsyncCompletionTask as follows, and note the explanatory comments in the code:
++
+[source,java,subs="{sourcesubs}"]
 ----
 
-return new  link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/support/AsyncCompletionTask.html[AsyncCompletionTask](new AsyncCompletionQuery() {
+return new link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/support/AsyncCompletionTask.html[AsyncCompletionTask](new AsyncCompletionQuery() {
 
     @Override
     protected void query(CompletionResultSet completionResultSet, Document document, int caretOffset) {
@@ -269,19 +265,17 @@ return new  link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-edit
 
 }, jtc);
 ----
-
-A red underline remains, after you let the IDE add various import statements. The error underline tells you that the CompletionItem's constructor does not expect the values that you are passing to it. In the next step, we will fill out the CompletionItem so that it meets the requirements of the CompletionProvider.
-
-Read  xref:front::blogs/geertjan/java_classes_in_code_completion.adoc[Java Classes in Code Completion] to learn how to put Java classes in the code completion box, instead of the locales that are used above.
-
-
-[start=3]
-1. In the  ``CountriesCompletionItem``  class, change the signature so that the class  ``implements CompletionItem`` . Let the IDE create import statements and skeleton implementations for the class's required methods. Read the entry in the NetBeans Javadoc for  `` link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionItem.html[CompletionItem]``  to begin to understand what each of the methods is for. For now, we will implement a minimal completion item, just enough to be able to compile the module and see the code completion box.
-
-[start=4]
-1. In the CountriesCompletionItem class, define the constructor as follows:
-
-[source,java,subs="macros"]
++
+A red underline remains, after you let the IDE add various import statements. 
+The error underline tells you that the CompletionItem's constructor does not expect the values that you are passing to it. 
+In the next step, we will fill out the CompletionItem so that it meets the requirements of the CompletionProvider.
++
+Read xref:front::blogs/geertjan/java_classes_in_code_completion.adoc[Java Classes in Code Completion] to learn how to put Java classes in the code completion box, instead of the locales that are used above.
++
+. In the ``CountriesCompletionItem`` class, change the signature so that the class ``implements CompletionItem`` . Let the IDE create import statements and skeleton implementations for the class's required methods. Read the entry in the NetBeans Javadoc for ``link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionItem.html[CompletionItem]`` to begin to understand what each of the methods is for. For now, we will implement a minimal completion item, just enough to be able to compile the module and see the code completion box.
+. In the CountriesCompletionItem class, define the constructor as follows:
++
+[source,java,subs="{sourcesubs}"]
 ----
 
 private String text;
@@ -295,15 +289,14 @@ public CountriesCompletionItem(String text, int caretOffset) {
     this.caretOffset = caretOffset;
 }
 ----
-
++
 Note that here we're referencing an icon. This is the icon that will appear next to each entry represented by the CompletionItem in the code completion box. The icon can be any icon with a dimension of 16x16 pixels. For example, you could make use of this icon: image:tutorials/cc_icon.png[]
-
++
 If you like, you can right-click the image above and save it to the location specified in the ImageIcon definition above.
-
-[start=5]
-1. Next define the  `` link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionItem.html#getPreferredWidth(java.awt.Graphics,%20java.awt.Font)[getPreferredWidth()]``  and  `` link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionItem.html#render(java.awt.Graphics,%20java.awt.Font,%20java.awt.Color,%20java.awt.Color,%20int,%20int,%20boolean)[render()]``  methods as follows:
-
-[source,java,subs="macros"]
++
+. Next define the ``link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionItem.html#getPreferredWidth(java.awt.Graphics,%20java.awt.Font)[getPreferredWidth()]`` and ``link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionItem.html#render(java.awt.Graphics,%20java.awt.Font,%20java.awt.Color,%20java.awt.Color,%20int,%20int,%20boolean)[render()]`` methods as follows:
++
+[source,java,subs="{sourcesubs}"]
 ----
 
 @Override
@@ -318,11 +311,10 @@ public void render(Graphics g, Font defaultFont, Color defaultColor,
             (selected ? Color.white : fieldColor), width, height, selected);
 }
 ----
-
-Define the  `` link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionItem.html#getSortText()[getSortText()]``  method as follows:
-
-
-[source,java,subs="macros"]
++
+Define the ``link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionItem.html#getSortText()[getSortText()]`` method as follows:
++
+[source,java,subs="{sourcesubs}"]
 ----
 
 @Override
@@ -330,11 +322,10 @@ public CharSequence getSortText() {
     return text;
 }
 ----
-
-Next, define the  `` link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionItem.html#getInsertPrefix()[getInsertPrefix()]``  method:
-
-
-[source,java,subs="macros"]
++
+Next, define the ``link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionItem.html#getInsertPrefix()[getInsertPrefix()]`` method:
++
+[source,java,subs="{sourcesubs}"]
 ----
 
 @Override
@@ -342,28 +333,23 @@ public CharSequence getInsertPrefix() {
     return text;
 }
 ----
-
-Finally, create dummy implementations of the remaining methods. So, return  ``null``  for  ``createDocumentationTask()``  and  ``createToolTipTask()`` . Then return  ``false``  for  ``instantSubstitution()``  and return  ``0``  for  ``getSortPriority()`` . Finally, empty the methods  ``defaultAction``  and  ``processKeyEvent`` .
-
-
-[start=6]
-1. Right-click the module and choose Run. A new instance of the IDE starts up and installs your module. Open an HTML file in the IDE. Type something and press Ctrl-Space. You should now see the following:
-
-
++
+Finally, create dummy implementations of the remaining methods. So, return ``null`` for ``createDocumentationTask()`` and ``createToolTipTask()`` . Then return ``false`` for ``instantSubstitution()`` and return ``0`` for ``getSortPriority()`` . Finally, empty the methods ``defaultAction`` and ``processKeyEvent`` .
++
+. Right-click the module and choose Run. A new instance of the IDE starts up and installs your module. Open an HTML file in the IDE. Type something and press Ctrl-Space. You should now see the following:
++
 image::tutorials/cc_72_result-1.png[]
-
-When you press Enter in the list above, nothing happens. That is because we have not defined the  `` link:https://bits.netbeans.org/dev/javadoc/org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionItem.html#defaultAction(javax.swing.text.JTextComponent)[defaultAction()]``  method yet. We will do so in the next section. Also note that the list does not narrow while you are typing. That is because we have not created a filter yet. The filter will detect what we are typing and adjust the entries in the list accordingly. We will create a filter in a later section.
++
+When you press Enter in the list above, nothing happens. That is because we have not defined the ``link:{apidoclink}org-netbeans-modules-editor-completion/org/netbeans/spi/editor/completion/CompletionItem.html#defaultAction(javax.swing.text.JTextComponent)[defaultAction()]`` method yet. We will do so in the next section. Also note that the list does not narrow while you are typing. That is because we have not created a filter yet. The filter will detect what we are typing and adjust the entries in the list accordingly. We will create a filter in a later section.
 
 
 === Implementing the Action
 
 In this section we specify what happens when the user presses the Enter key or clicks the mouse over an entry in the code completion box.
 
-
-[start=1]
-1. Fill out the  ``defaultAction()``  method as follows:
-
-[source,java,subs="macros"]
+. Fill out the ``defaultAction()`` method as follows:
++
+[source,java,subs="{sourcesubs}"]
 ----
 
 @Override
@@ -378,26 +364,22 @@ public void defaultAction(JTextComponent jtc) {
     }
 }
 ----
-
-
-[start=2]
-1. Install the module again. Notice that when you press Enter or click the mouse over an entry in the code completion box, the selected text is added at the cursor in your HTML file. However, the text that you typed prior to calling up the code completion box is not removed. Below, the "V" should be removed, because "Vietnam" was selected from the code completion box:
-
-
++
+. Install the module again. Notice that when you press Enter or click the mouse over an entry in the code completion box, the selected text is added at the cursor in your HTML file. However, the text that you typed prior to calling up the code completion box is not removed. Below, the "V" should be removed, because "Vietnam" was selected from the code completion box:
++
 image::tutorials/cc_65-result-of-cc2.png[]
-
++
 In the next section, we will add functionality to detect the number of characters that have been typed and remove them when the selected country is inserted into the document.
 
 
 === Implementing the Filter
 
-In this section we enable the code completion box to narrow while the user is typing. In this way, when the user types 'hel', only words that begin with those letters are shown in the code completion box. The filter is defined in the  ``CountriesCompletionProvider``  class.
+In this section we enable the code completion box to narrow while the user is typing. In this way, when the user types 'hel', only words that begin with those letters are shown in the code completion box. The filter is defined in the ``CountriesCompletionProvider`` class.
 
 
-[start=1]
-1. In the CountriesCompletionProvider class, rewrite the  ``AsyncCompletionTask()``  method by adding the statements highlighted in bold below:
-
-[source,java,subs="macros"]
+. In the CountriesCompletionProvider class, rewrite the ``AsyncCompletionTask()`` method by adding the statements highlighted in bold below:
++
+[source,java,subs="{sourcesubs}"]
 ----
 
 return new AsyncCompletionTask(new AsyncCompletionQuery() {
@@ -443,12 +425,10 @@ return new AsyncCompletionTask(new AsyncCompletionQuery() {
 
 }, jtc);
 ----
-
-
-[start=2]
-1. Right at the end of the CountriesCompletionProvider, add the following two methods:
-
-[source,java,subs="macros"]
++
+. Right at the end of the CountriesCompletionProvider, add the following two methods:
++
+[source,java,subs="{sourcesubs}"]
 ----
 
 static int getRowFirstNonWhite(StyledDocument doc, int offset)
@@ -471,14 +451,13 @@ throws BadLocationException {
     return start;
 }
 ----
-
-
-[source,java,subs="macros"]
++
+[source,java,subs="{sourcesubs}"]
 ----
 
 static int indexOfWhite(char[] line){
     int i = line.length;
-    while(--i > -1){
+    while(--i &gt; -1){
         final char c = line[i];
         if(Character.isWhitespace(c)){
             return i;
@@ -486,16 +465,14 @@ static int indexOfWhite(char[] line){
     }
     return -1;
 }
-                        
+
 ----
-
-
-[start=3]
-1. Change the constructor of the  ``CountriesCompletionItem``  to receive the start offset. Then change the  ``defaultAction``  so that the start offset will be used in determining the characters that will be removed when the selected country is inserted. 
-
++
+. Change the constructor of the ``CountriesCompletionItem`` to receive the start offset. Then change the ``defaultAction`` so that the start offset will be used in determining the characters that will be removed when the selected country is inserted.
++
 Below, the statements that should be added: `private int dotOffset;`
-
-[source,java,subs="macros"]
++
+[source,java,subs="{sourcesubs}"]
 ----
 
 public CountriesCompletionItem(String text, int dotOffset, int caretOffset) {
@@ -517,19 +494,16 @@ public void defaultAction(JTextComponent component) {
         Exceptions.printStackTrace(ex);
     }
 }
-    
+
 ...
 ...
 ...
 ----
-
-
-[start=4]
-1. Install the module again and notice that this time the list of words narrows while you are typing...
-
-
++
+. Install the module again and notice that this time the list of words narrows while you are typing...
++
 image::tutorials/cc_65-result-of-cc.png[]
-
++
 ...and that when you press Enter, the characters that you typed are removed and replaced by the country selected from the code completion box.
 
 
@@ -537,17 +511,13 @@ image::tutorials/cc_65-result-of-cc.png[]
 
 Some optional features can also be added, as described below.
 
-
-[start=1]
-1. Optionally, you can implement the  ``createToolTipTask``  method in the  ``CountriesCompletionItem`` , with this result when Ctrl-P is pressed:
-
-
+. Optionally, you can implement the ``createToolTipTask`` method in the ``CountriesCompletionItem`` , with this result when Ctrl-P is pressed:
++
 image::tutorials/cc_65-result-of-cc3.png[]
-
++
 Here is the code that will achieve the result shown in the screenshot above:
-
-
-[source,java,subs="macros"]
++
+[source,java,subs="{sourcesubs}"]
 ----
 
 @Override
@@ -563,18 +533,14 @@ public CompletionTask createToolTipTask() {
     });
 }
 ----
-
-
-[start=2]
-1. Optionally, you can provide documentation for the entries in the code completion box:
-
-
++
+. Optionally, you can provide documentation for the entries in the code completion box:
++
 image::tutorials/cc_65-result-of-cc4.png[]
-
-Make use of the documentation box like this, by implementing the  ``createDocumentationTask``  method in the  ``CountriesCompletionItem``  class:
-
-
-[source,java,subs="macros"]
++
+Make use of the documentation box like this, by implementing the ``createDocumentationTask`` method in the ``CountriesCompletionItem`` class:
++
+[source,java,subs="{sourcesubs}"]
 ----
 
 @Override
@@ -588,11 +554,10 @@ public CompletionTask createDocumentationTask() {
     });
 }
 ----
-
++
 In the code above, the reference to the CountriesCompletionDocumentation class could be implemented as follows:
-
-
-[source,java,subs="macros"]
++
+[source,java,subs="{sourcesubs}"]
 ----
 
 public class CountriesCompletionDocumentation implements CompletionDocumentation {
@@ -625,12 +590,11 @@ public class CountriesCompletionDocumentation implements CompletionDocumentation
 
 }
 ----
-
-By implementing the  ``getURL()``  in the code above, you can enable the URL button, as shown below:
-
-
++
+By implementing the ``getURL()`` in the code above, you can enable the URL button, as shown below:
++
 image::tutorials/cc_65-result-of-cc5.png[]
-
++
 When the user clicks the URL button, the browser set in the IDE will open, displaying the content provided by the specified URL.
 
 Congratulations, you have now completed a simple implementation of a code completion integration module.
@@ -642,5 +606,5 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 For more information about creating and developing plugins, see the following resources:
 
-*  xref:kb/docs/platform.adoc[NetBeans Platform Learning Trail]
-*  link:https://bits.netbeans.org/dev/javadoc/[NetBeans API Javadoc]
+* xref:kb/docs/platform.adoc[NetBeans Platform Learning Trail]
+* link:{apidoclink}[NetBeans API Javadoc]

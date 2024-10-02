@@ -163,17 +163,54 @@ image::kb/docs/ide/add-column.png[]
 
 |Key |Index |Null |Unique |Column name |Data type |Size 
 
-|[checked] |[checked] |[checked] |id |INTEGER |0 
+| [checked] 
+| [checked] 
+|
+| [checked] 
+|id 
+|INTEGER 
+|0 
 
-|[checked] |firstName |VARCHAR |20 
+|
+|
+|[checked] 
+| 
+|firstName 
+|VARCHAR 
+|20 
 
-|[checked] |lastName |VARCHAR |20 
+|
+|
+|[checked] 
+|
+|lastName 
+|VARCHAR 
+|20 
 
-|[checked] |nickName |VARCHAR |30 
+|
+|
+|[checked] 
+|
+|nickName 
+|VARCHAR 
+|30 
 
-|[checked] |friendSince |DATE |0 
+|
+|
+|[checked] 
+|
+|friendSince 
+|DATE 
+|0 
 
-|[checked] |email |VARCHAR |60 
+|
+|
+|[checked] 
+|
+|email 
+|VARCHAR 
+|60 
+
 |===
 
 You are creating a table named  ``FRIENDS``  that holds the following data for each contact record:

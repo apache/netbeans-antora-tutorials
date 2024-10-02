@@ -432,62 +432,63 @@ You can adjust the User Defined Variables, then run the test plan and examine th
 
 The following table lists results recorded in JMeter's link:http://jakarta.apache.org/jmeter/usermanual/component_reference.html#Summary_Report[+Summary Report+], from increasing the number of users with each test run.
 
+[cols="1a,2a"]
 |===
-||===
-|Users |Ramp-up
-(seconds)  |Average
-(milliseconds) |Throughput |Error % 
+|
 
-|1 |(n/a) |11 |41/min |0.00% 
+!===
+!Users !Ramp-up (seconds)  !Average (milliseconds) !Throughput !Error % 
 
-|20 |20 |9 |577/min |0.00% 
+!1 !(n/a) !11 !41/min !0.00% 
 
-|50 |25 |8 |22.2/sec |0.00% 
+!20 !20 !9 !577/min !0.00% 
 
-|80 |25 |8 |35.3/sec |0.00% 
+!50 !25 !8 !22.2/sec !0.00% 
 
-|100 |25 |7 |44.1/sec |0.00% 
+!80 !25 !8 !35.3/sec !0.00% 
 
-|120 |25 |7 |52.9/sec |0.00% 
+!100 !25 !7 !44.1/sec !0.00% 
 
-|150 |25 |7 |66.0/sec |0.00% 
+!120 !25 !7 !52.9/sec !0.00% 
 
-|200 |25 |11 |87.5/sec |0.00% 
+!150 !25 !7 !66.0/sec !0.00% 
 
-|250 |25 |16 |109.5/sec |0.00% 
+!200 !25 !11 !87.5/sec !0.00% 
 
-|300 |25 |35 |130.1/sec |0.00% 
+!250 !25 !16 !109.5/sec !0.00% 
 
-|350 |25 |54 |150.4/sec |0.00% 
+!300 !25 !35 !130.1/sec !0.00% 
 
-|400 |25 |120 |164.3/sec |0.00% 
+!350 !25 !54 !150.4/sec !0.00% 
 
-|450 |25 |394 |158.4/sec |0.00% 
+!400 !25 !120 !164.3/sec !0.00% 
 
-|500 |25 |355 |182.9/sec |0.00% 
+!450 !25 !394 !158.4/sec !0.00% 
 
-|550 |25 |369 |198.4/sec |0.00% 
+!500 !25 !355 !182.9/sec !0.00% 
 
-|600 |25 |446 |206.4/sec |0.00% 
+!550 !25 !369 !198.4/sec !0.00% 
 
-|650 |25 |492 |219.9/sec |0.00% 
+!600 !25 !446 !206.4/sec !0.00% 
 
-|700 |25 |599 |225.9/sec |0.00% 
+!650 !25 !492 !219.9/sec !0.00% 
 
-|750 |25 |668 |231.9/sec |0.00% 
+!700 !25 !599 !225.9/sec !0.00% 
 
-|800 |25 |875 |225.6/sec |0.00% 
+!750 !25 !668 !231.9/sec !0.00% 
 
-|850 |25 |976 |230.5/sec |0.00% 
+!800 !25 !875 !225.6/sec !0.00% 
 
-|900 |25 |1258 |220.9/sec |0.00% 
+!850 !25 !976 !230.5/sec !0.00% 
 
-|950 |25 |1474 |215.8/sec |0.00% 
+!900 !25 !1258 !220.9/sec !0.00% 
 
-|1000 |25 |1966 |190.8/sec |0.00% 
-|===
+!950 !25 !1474 !215.8/sec !0.00% 
 
+!1000 !25 !1966 !190.8/sec !0.00% 
+!===
 
+| 
 *Notes and observations:*
 
 * Maximum throughput was recorded at 231.9/sec for 750 users. Throughput is generally much quicker for requests in the first part of the test plan, and then decreases as `/checkout` and `/purchase` requests are served. Because the elapsed time for these requests begins to dramatically increase beyond 750 users, the overall throughput begins to decrease beyond this number.
@@ -495,6 +496,7 @@ The following table lists results recorded in JMeter's link:http://jakarta.apach
 * In all tests, the `Error` `%` column remained at `0.00%`. The server was able to successfully respond to all requests, even when the computer's CPU levels were at a maximum, and JMeter was lagging in its ability to display results. This would indicate that the bottleneck in these tests was the computer's processing resources. (The computer had available memory for all tests.)
 * The Average represents the average elapsed time (in milliseconds) for all requests serviced in the test plan. While the average values for the most demanding tests were still under 2 seconds, the Summary Report's Maximum values recorded for elapsed time were much higher, reaching nearly 70 seconds for the `/purchase` request. When determining what resources are required for a normal load, consider that these results do not include network time, and that most users are willing to wait at most 4 - 8 seconds for a response.^<<footnote2,[2]>>^
  
+|===
 
 If the production server is on a machine that has resources similar to those of your development environment, and assuming your computer is not running other CPU-intensive processes while tests are conducted, you can get a rough idea of how many users can be served by examining your computer's CPU usage during tests. For example, if it has been decided that CPU levels for normal and peak loads will be approximately 30% and 70%, respectively, you can watch the CPU monitor as you increase the number of users with each run of the test plan. The following images suggest 150 users could be served during a normal load, and 400 during a peak load.
 

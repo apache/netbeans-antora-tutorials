@@ -191,20 +191,45 @@ image::kb/docs/ide/add-column-dialog.png[]
 |===
 |Key |Index |Null |Unique |Column Name |Data Type |Size 
 
-|[checked] |[checked] |[checked] |id |SMALLINT |0 
+|[checked] 
+|[checked] 
+|
+|[checked] 
+|id 
+|SMALLINT 
+|0 
 
-|[checked] |name |VARCHAR |50 
+|
+|
+|[checked] 
+|
+|name 
+|VARCHAR 
+|50 
 
-|[checked] |description |VARCHAR |500 
+|
+|
+|[checked] 
+|
+|description 
+|VARCHAR 
+|500 
 
-|[checked] |FK_counselorID |SMALLINT |0 
+|
+|
+|[checked] 
+|
+|FK_counselorID 
+|SMALLINT 
+|0 
+
 |===
 
 You are creating a table named  ``Subject``  that will hold data for each of the following records.
 
-* *Name: *name of the subject
-* *Description: *description of the subject
-* *Counselor ID: *counselor ID that corresponds to an ID from the Counselor table
+* *Name:* name of the subject
+* *Description:* description of the subject
+* *Counselor ID:* counselor ID that corresponds to an ID from the Counselor table
 
 image::kb/docs/ide/create-table-subject.png[]
 

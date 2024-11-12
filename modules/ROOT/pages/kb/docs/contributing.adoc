@@ -44,7 +44,7 @@ The NetBeans website is written mainly in link:https://asciidoc.org/[AsciiDoc], 
 
 We then generate HTML for the web using Groovy Server Page templates (these live in link:https://github.com/apache/netbeans-website/tree/master/netbeans.apache.org/src/content/templates[https://github.com/apache/netbeans-website/tree/master/netbeans.apache.org/src/content/templates] ). These templates (and some other stuff like SCSS) are responsible for the layout of the web pages. 
 
-NOTE: The generated HTML is responsive, this is, it can be correctly visualized in mobile phones.
+NOTE: The generated HTML is responsive, that is, it can be correctly visualized in mobile phones.
 
 === Direct editing in GitHub
 

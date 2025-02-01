@@ -26,10 +26,90 @@
 :source-highlighter: pygments
 :toc: left
 :toc-title:
-:description: Configuring NetBeans IDE 8.0 for C/C++/Fortran - Apache NetBeans
-:keywords: Apache NetBeans, Tutorials, Configuring NetBeans IDE 8.0 for C/C++/Fortran
+:description: Configuring NetBeans IDE above 8.2 for C/C++/Fortran - Apache NetBeans
+:keywords: Apache NetBeans, Tutorials, Configuring NetBeans IDE above 8.2 for C/C++/Fortran
 
-//Contributed by _Ann Rice_ and maintained by _Susan Morgan_ 
-//_March 2014_ [Revision number: V8.0-1]
+//Contributed by _Ann Rice_ _and SCRIER_, and maintained by _Susan Morgan_ 
+//_March 2014_ , revised Jan 2025 [Revision number: V8.0-2]
 
 link:https://web.archive.org/web/20161111071155/https://netbeans.org/community/releases/80/cpp-setup-instructions.html[Former article page]
+
+= Installing C/C++ Application development module on current Netbeans
+Although the C/C++/Fortran Application development module works fine on modern Netbeans, for some reason when Netbeans was taken over by Apache from Oracle this module was left out of the official distribution, and a limited Lightweight C basic support module slotted into its place and included instead.  This was a problem in 2016.  It is still a problem in 2025.  The last known working version was 8.2, but sadly you can't download the nice Netbeans 8.2 from Apache any more yet, and we're up to version 24 on Netbeans.
+
+Before, at least the "NetBeans 8.2 Plugin Portal" repository was included under Tools->Plugins->Settings->Configuration of Update Centers.  But even this repository is no longer automatically included under at least Apache Netbeans binary version 24.
+
+It is thus necessary to reach out and install the C/C++ Application development module from an old repository.
+
+== Steps
+Instructions and examples will be given for under Linux.  Apple should be the same, and Windows should be similar.
+
+=== 1. Ensure you have *unpack200* as a java executable in your system
+Unpack200 is an obsolete decompression format/tool that was available in Java versions Java5 through Java14.  The easiest way to ensure this is on your linux system is to install one of the old Java packages, such as 8 or 14.  
+
+(There is a shell script for unpack200 that is apparently provided on Linux Mint under /usr/share/bash-completion/completions/unpack200 for backwards compatibility, but it looks like it only runs in a shell environment, not a Java environment.  It is possible that perhaps setting its executable flag, or compiling it into an executable using *shc*, could get it to work under the Netbeans installer.  But it's simply easier to install an entire old Java distribution.)
+
+=== 2. Locate the full path to your unpack200 java utility
+Fork off a new terminal with Cntrl-Alt-T, for convenience.  Then type
+----
+ls -l `locate unpack200`
+----
+using backtics, to find the full locations of all versions and their aliases on your system.  In my system, this shows up under
+----
+/usr/lib/jvm/java-8-openjdk-am64/jre/bin/unpack200
+----
+and is an executable, unlike the bash-completion text-based shell script.
+
+Make note of the path of the *unpack200* with the largest size, the others are generally aliases.
+
+=== 3. Install the old repository into your Netbeans system
+
+Under *Tools* -> *Plugins* -> /*Settings*/ tab, choose the *[ Add ]* button. 
+You'll get a pop-up.
+
+In the *Name* slot, fill in an arbitrary name for your repository, such as *Netbeans Old Distribution*.
+
+In the *Url* slot, fill in the following repository path: 
+----
+http://updates.netbeans.org/netbeans/updates/8.2/uc/final/distribution/catalog.xml.gz
+----
+then hit the *[OK]* button.
+
+_It is also rumored that repository_
+----
+http://bits.netbeans.org/dev/nbms-and-javadoc/lastSuccessfulBuild/artifact/nbbuild/nbms/updates.xml.gz
+----
+_may work *instead*, and could give you access to C++17 when "perhaps" the previous one may not.  But I don't remember having any problems accessing C++17 before, so probably they're both good._
+
+Continuing.  For good luck, under the */Updates/* tab, hit *[Check For Updates]* button.
+
+=== 4. Add the C/C++ Plugin from the repository you just added, as usual
+
+Under */Available Plugins/* tab, you should now see the C/C + + plugin listed, using the repository just added.  Click this *C / C ++* checkbox, then click the *[Install]* button.
+
+The system goes up to 99% complete, then complains that it can't unpack some files due to "unpack200" not being found.  In the lower left, there is a button *[Choose unpack200]*.  Click this, then navigate to the executable in the path you found in Step 1 (ahh, you kept the terminal window open, right?).
+
+The installation completes, but complains with a "Warning:  Could not install some modules:", including Versioning to Remote Bridge API; Remote Mercurical; Remote Git; Remote Subversion; "and 7 further modules".  These look like security holes, and you probably wouldn't want them anyway.  Hit the *[Disable Modules and Continue]* button in the lower right.
+
+=== 5. Check your Install
+
+At this point you should be good.  Look under the */Installed/* tab, and you'll see under *User Installed Plugins*,  _not_ the C/C + + line, the "c/c + + support" plugin you just installed.
+
+Under the */Settings/* tab in Plugins, you should see your arbitrary *Netbeans Old Distribution* name that you typed.   
+Close the Plugins popup pane out.
+
+Under either Cntrl-Shift-_N_, File->New Project, or the _New Project_ orange button, you should see a listing for C/C + + that now brings up the familiar *C / C + + Application* third from the top.  And, yes, if you _really_ want Lightweight C / C + +, it's still there at the bottom.
+
+== Opportunities for Improvement
+
+Since the 8.2 C + + plugin _actually works_, it would be useful and should be trivial to at the least roll back the previous built-in repository list so that under Plugins/Settings it already includes the *NetBeans 8.2 Plugin Portal*.  Then at least the workaround instructions from 2022, which are all over the web, would still work.
+
+Since the 8.2 C + + plugin _actually works_, it would be _most useful_ to actually _include_ it as a standard built-in option _in the IDE itself_.  Even as an "unsupported" included option.  That way, programmers who've spent 15 years developing in C++ under Netbeans could in fact get this up and running on a new computer, without having to maintain a legacy desktop in the corner because the new installation package cannot be found, nor without having to use hidden repository commands to install basic functionality.  This would be great! 
+
+Pages on this topic are each viewed by close to ten thousand on stack overflow, so there certainly is a demand for this.  It would be a great improvement for Apache Netbeans!
+
+Hopefully these 2025 instructions will help _you_ to install a working C/C++ IDE system on your Linux computer!
+
+
+
+

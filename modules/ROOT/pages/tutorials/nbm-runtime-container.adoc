@@ -19,6 +19,7 @@
 
 = NetBeans Platform Runtime Container Tutorial
 :page-layout: platform_tutorial
+:jbake-types: tutorial
 :jbake-tags: tutorials 
 :jbake-status: published
 :page-syntax: true
@@ -26,7 +27,7 @@
 :toc: left
 :toc-title:
 :icons: font
-:page-reviewed: 2020-12-19
+:page-reviewed: 2025-05-18
 :description: NetBeans Platform Runtime Container Tutorial - Apache NetBeans
 :keywords: Apache NetBeans Platform, Platform Tutorials, NetBeans Platform Runtime Container Tutorial
 
@@ -55,7 +56,7 @@ Brief overview of each of these nine modules:
 * Lookup API (org-openide-util-lookup): Provides a generic communication mechanism for inter-modular interaction.
 * Base Utilities API (org-openide-util): Includes several utility classes shared between the other modules in the runtime container.
 * Utilities API (org-openide-util-ui): User Interface utility classes.
-* OW2 ASM (): Used for bytecode manipulation. Private implementation detail.
+* OW2 ASM (org.ow2.asm): Used for bytecode manipulation. Private implementation detail.
 
 == Setting up the Runtime Container
 
@@ -190,7 +191,7 @@ public class Installer extends ModuleInstall {
 
 
 [start=7]
-1. Run the application again and notice the 'Hello World' message in the application's output (Output window, which can be opened from the Window menu if required). The end of the stack trace, which includes the 'hello world' message, should be something like this:
+1. Run the application again and notice the 'Hello World' message in the application's output (Output window, which can be opened from the Window menu if required or by using the shortcut 'Ctrl + 4'). The end of the stack trace, which includes the 'hello world' message, should be something like this:
 
 [source]
 ----
@@ -242,7 +243,7 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 To continue your journey on the NetBeans Platform, see:
 
-*  xref:kb/docs/platform.adoc[NNetBeans Platform Learning Trail]
+*  xref:kb/docs/platform.adoc[NetBeans Platform Learning Trail]
 *  xref:tutorials/nbm-quick-start.adoc[NetBeans Platform Quick Start]
 *  xref:tutorials/nbm-selection-1.adoc[NetBeans Selection Management Tutorial I—Using a TopComponent's Lookup]
 *  xref:tutorials/nbm-10-top-apis.adoc[Top 10 NetBeans APIs]

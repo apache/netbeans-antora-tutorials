@@ -75,7 +75,7 @@ You can see that the new project is now visible in the Projects window and that 
 When you click Finish the IDE opens the new class in the editor.
 . In the source editor, add the following three fields to  ``MyBooks.java`` .
 +
-[source,java]
+[source,java,subs="{sourcesubs}"]
 ----
 
 package testann;

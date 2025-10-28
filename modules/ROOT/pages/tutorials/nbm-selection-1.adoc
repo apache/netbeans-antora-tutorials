@@ -27,7 +27,7 @@
 :toc-title:
 :icons: font
 :experimental:
-:page-reviewed: 2020-12-20
+:page-reviewed: 2025-10-28
 :description: NetBeans Selection Management Tutorial I - Using a TopComponent's Lookup - Apache NetBeans
 :keywords: Apache NetBeans Platform, Platform Tutorials, NetBeans Selection Management Tutorial I - Using a TopComponent's Lookup
 
@@ -54,7 +54,7 @@ Basically, each `TopComponent` has a bag of objects that it can put things into,
 
 The loosely-coupled modular example used in this tutorial will contain three modules constituting a NetBeans Platform application, as illustrated below:
 
-image::tutorials/selection-1_module_structure.png[]
+image::tutorials/selection-1_nb27_module_structure.png[]
 
 Start by creating the NetBeans Platform application that will contain all three modules:
 
@@ -62,7 +62,7 @@ Start by creating the NetBeans Platform application that will contain all three 
 [start=1]
 1. Choose menu:File[New Project] (kbd:[Ctrl+Shift+N]). Under Categories, expand Java with Ant, and select NetBeans Modules. Under Projects, select NetBeans Platform Application: 
 
-image::tutorials/selection-1_new-project1.png[]
+image::tutorials/selection-1_nb27_new-project1.png[]
 
 Click btn:[Next].
 
@@ -70,13 +70,13 @@ Click btn:[Next].
 [start=2]
 1. In the Name and Location panel, type  ``EventManager``  in Project Name. Change the Project Location to any directory on your computer:
 
-image::tutorials/selection-1_new-project2.png[]
+image::tutorials/selection-1_nb27_new-project2.png[]
 
 Click btn:[Finish].
 
 You now have a NetBeans Platform application project, which is the container for the modules that you will be creating throughout this tutorial:
 
-image::tutorials/selection-1_new-project3.png[]
+image::tutorials/selection-1_nb27_new-project3.png[]
 
 Via the configuration files shown in the screenshot above, the NetBeans Platform application project provides a set of pre-defined modules, such as modules that give your application a window system and an action system. The configuration files also set up the application to be built via the Ant build system. In the next steps, you will be adding three custom modules to the application. The first module will provide an API class, while the other two will share that API module between them. That will ensure that the other two modules do not depend on each other, making them loosely coupled.
 
@@ -84,7 +84,7 @@ Via the configuration files shown in the screenshot above, the NetBeans Platform
 [start=3]
 1. Choose menu:File[New Project] (kbd:[Ctrl+Shift+N]) again. If not already open, under Categories, expand Java with Ant, and select NetBeans Modules. Under Projects, select Module:
 
-image::tutorials/selection-1_new-project4.png[]
+image::tutorials/selection-1_nb27_new-project4.png[]
 
 Click btn:[Next].
 
@@ -94,7 +94,7 @@ TIP: You could also do this by expanding the "EventManager" project node, right-
 [start=4]
 1. In the Name and Location panel, type  ``MyAPI``  in Project Name. Now look at the Project Location field and the Project Folder field. As you can see, the default in the wizard is to create the module within the directory where you just created the "EventManager" application, which means that the module's sources will be organized within the folder where the application is defined. That is the standard way to organize NetBeans Platform application sources.
 
-image::tutorials/selection-1_new-project5.png[]
+image::tutorials/selection-1_nb27_new-project5.png[]
 
 Click btn:[Next].
 
@@ -109,7 +109,7 @@ Click btn:[Next].
 
 The result should be as follows:
 
-image::tutorials/selection-1_new-project6.png[]
+image::tutorials/selection-1_nb27_new-project6.png[]
 
 Click btn:[Finish].
 
@@ -119,7 +119,7 @@ Click btn:[Finish].
 
 At the end of this step, the structure of the application should be as follows:
 
-image::tutorials/selection-1_new-project7.png[]
+image::tutorials/selection-1_nb27_new-project7.png[]
 
 The reason you are creating three modules in the application is that you are creating a modular application, where the viewer and editor modules will be loosely coupled from each other, only sharing the API module between them. The usefulness of this approach will become clearer as you continue with this tutorial.
 
@@ -132,11 +132,11 @@ In this part of the tutorial, we will create a trivial API class. In the real wo
 [start=1]
 1. Right click the `org.myorg.myapi` package and choose New > Java Class.
 
-image::tutorials/selection-1_api1.png[]
+image::tutorials/selection-1_nb27_api1.png[]
 
 Name the class `Event`:
  
-image::tutorials/selection-1_api2.png[]
+image::tutorials/selection-1_nb27_api2.png[]
 
 Click btn:[Finish].
 
@@ -179,7 +179,7 @@ This will be all of the code that this module contains. As you can see, each tim
 [start=2]
 1. The next step is to have your API module export the `org.myorg.myapi` package so other modules can see the Event class in it. By default, all packages are hidden from all other modules in the application. Right click the My API project and choose Properties. In the API Versioning page in the Project Properties dialog box, check the checkbox for `org.myorg.myapi` in the Public Packages list, as shown below:
 
-image::tutorials/selection-1_api3.png[]
+image::tutorials/selection-1_nb27_api3.png[]
 
 Click btn:[OK].
 
@@ -187,9 +187,9 @@ Now expand the Important Files node of the My API project. Open the Project Meta
 
 [source,xml]
 ----
-    <public-packages>
-        <package>org.myorg.myapi</package>
-    </public-packages>
+<public-packages>
+    <package>org.myorg.myapi</package>
+</public-packages>
 ----
 
 When the module is compiled, the information above in the `project.xml` file is added to the module's manifest file.
@@ -198,25 +198,21 @@ When the module is compiled, the information above in the `project.xml` file is 
 [start=3]
 1. Now you need to set up some dependencies between your modules. The other two modules, My Editor and My Viewer, will use the `Event` class, so each of them needs to say that they _depend on_ the API module. Right-click on the My Editor project node, and choose Properties. The Project Properties dialog will appear. Select the Libraries tab.
 
-image::tutorials/selection-1_api4.png[]
+image::tutorials/selection-1_nb27_api4.png[]
 
 Click btn:[Add Dependency...]
 
 In the Filter text box, type `Event`, which will refine the list of all available modules. Locate the "My API" module and select it:
 
-image::tutorials/selection-1_api5.png[]
+image::tutorials/selection-1_nb27_api5.png[]
 
 TIP: Using the Cluster combo-box will provide more filtering.
 
 Click btn:[OK] to add the dependency.
 
-You should see the following:
+You should see the module listed under _Module Dependencies_. Click btn:[OK] to close the Project Properties dialog.
 
-image::tutorials/selection-1_api6.png[]
-
-Click btn:[OK] to close the Project Properties dialog.
-
-When you open the Project Metadata file in the Important Files node of the My Editor module, you should see that the section below has been added:
+When you open the _Project Metadata_ file in the _Important Files_ node of the `My Editor` module, you should see that the section below has been added:
 
 
 [source,xml]
@@ -239,7 +235,7 @@ Now add the same dependency for the My Viewer module, starting with right-click 
 
 When this is done, the new contract between the modules is represented in the Project window as follows:
 
-image::tutorials/selection-1_api7.png[]
+image::tutorials/selection-1_nb27_api7.png[]
 
 
 == Creating the Viewer Component
@@ -253,33 +249,27 @@ A "singleton component" is a component like the Projects window in the NetBeans 
 
 
 [start=1]
-1. Right click the `org.myorg.myviewer` package and choose New > Other. 
+1. Right click the `org.myorg.myviewer` package and choose New > Window to create a TopComponent for this module. 
 
-image::tutorials/selection-1_viewer1.png[]
-
-In the resulting New File dialog, select Module Development > Window, as shown below:
-
-image::tutorials/selection-1_viewer2.png[]
-
-Click btn:[Next] (or press Enter).
+image::tutorials/selection-1_nb27_viewer1.png[]
 
 
 [start=2]
 1. On the "Basic Settings" page of the wizard, select `explorer` as the location in which to place your viewer component, and check the "Open on Application Start" checkbox to cause the window to open on startup, as shown below:
 
-image::tutorials/selection-1_viewer3.png[]
+image::tutorials/selection-1_nb27_viewer3.png[]
 
 Click btn:[Next].
 
 [start=3]
 1. The "Name, Icon and Location" page of the wizard will appear. Set `MyViewer` as the class name prefix:
 
-image::tutorials/selection-1_viewer4.png[]
+image::tutorials/selection-1_nb27_viewer4.png[]
 
 [start=4]
 1. Click btn:[Finish] and you should see the following:
 
-image::tutorials/selection-1_viewer5.png[]
+image::tutorials/selection-1_nb27_viewer5.png[]
 
 You now have a skeleton `TopComponent` - a singleton component called `MyViewerTopComponent`. The wizard created the Java class, and added the required module dependencies (under Libraries). 
 
@@ -290,20 +280,20 @@ You now have a skeleton `TopComponent` - a singleton component called `MyViewerT
 [source,java]
 ----
 @ConvertAsProperties(
-        dtd = "-//org.myorg.myviewer//MyViewer//EN",
-        autostore = false
+    dtd = "-//org.myorg.myviewer//MyViewer//EN",
+    autostore = false
 )
 @TopComponent.Description(
-        preferredID = "MyViewerTopComponent",
-        //iconBase="SET/PATH/TO/ICON/HERE",
-        persistenceType = TopComponent.PERSISTENCE_ALWAYS
+    preferredID = "MyViewerTopComponent",
+    //iconBase="SET/PATH/TO/ICON/HERE",
+    persistenceType = TopComponent.PERSISTENCE_ALWAYS
 )
 @TopComponent.Registration(mode = "explorer", openAtStartup = true)
 @ActionID(category = "Window", id = "org.myorg.myviewer.MyViewerTopComponent")
 @ActionReference(path = "Menu/Window" /*, position = 333 */)
 @TopComponent.OpenActionRegistration(
-        displayName = "#CTL_MyViewerAction",
-        preferredID = "MyViewerTopComponent"
+    displayName = "#CTL_MyViewerAction",
+    preferredID = "MyViewerTopComponent"
 )
 @Messages({
     "CTL_MyViewerAction=MyViewer",
@@ -323,11 +313,9 @@ You will add two labels to the component, which will display some information ab
 [start=1]
 1. Drag two Labels (javax.swing.JLabel) to the form from the Palette (kbd:[Ctrl+Shift+8]), one below the other, as shown below:
 
-image::tutorials/selection-1_viewer6.png[]
+image::tutorials/selection-1_nb27_viewer6.png[]
 
-Press F2 on the first label and then change the text as shown above, so that by default it displays "[Nothing selected]".
-
-image::tutorials/selection-1_viewer7.png[]
+Press F2 on the first label and then change the text as shown above, so that by default it displays `[Nothing selected]`.
 
 
 [start=2]
@@ -342,11 +330,9 @@ Right-click in the editor and choose Fix Imports, so that `LookupListener` is im
 
 Put the cursor over the lightbulb icon should appear in the editor margin. A popup hint should appear, as shown below:
 
-image::tutorials/selection-1_viewer8.png[]
+image::tutorials/selection-1_nb27_viewer8.png[]
 
 Left click on the lightbulb icon in the editor margin, and when the popup appears, select the text "Implement all abstract methods".
-
-image::tutorials/selection-1_viewer9.png[]
 
 You now have a class that implements `LookupListener` (i.e. the `resultChanged` method). Now it needs something to listen to.
 
@@ -359,31 +345,31 @@ There is a convenient global `Lookup` object, which proxies the Lookup of whatev
 
 [source,java]
 ----
-    private Lookup.Result<Event> result = null;
+private Lookup.Result<Event> result = null;
 
-    @Override
-    public void componentOpened() {
-        result = Utilities.actionsGlobalContext().lookupResult(Event.class);
-        result.addLookupListener (this);
-    }
+@Override
+public void componentOpened() {
+    result = Utilities.actionsGlobalContext().lookupResult(Event.class);
+    result.addLookupListener (this);
+}
 
-    @Override
-    public void componentClosed() {
-        result.removeLookupListener(this);
-    }
+@Override
+public void componentClosed() {
+    result.removeLookupListener(this);
+}
 
-    @Override
-    public void resultChanged(LookupEvent lookupEvent) {
-        Collection<? extends Event> allEvents = result.allInstances();
-        if (!allEvents.isEmpty()) {
-            Event event = allEvents.iterator().next();
-            jLabel1.setText(Integer.toString(event.getIndex()));
-            jLabel2.setText(event.getDate().toString());
-        } else {
-            jLabel1.setText("[Nothing selected]");
-            jLabel2.setText("");
-        }
+@Override
+public void resultChanged(LookupEvent lookupEvent) {
+    Collection<? extends Event> allEvents = result.allInstances();
+    if (!allEvents.isEmpty()) {
+        Event event = allEvents.iterator().next();
+        jLabel1.setText(Integer.toString(event.getIndex()));
+        jLabel2.setText(event.getDate().toString());
+    } else {
+        jLabel1.setText("[Nothing selected]");
+        jLabel2.setText("");
     }
+}
 ----
 
 * `componentOpened()` is called whenever the component is made visible by the window system; `componentClosed()` is called whenever the user clicks the X button on its tab to close it. So whenever the component is showing, you want it to be tracking the selection - which is what the above code does.
@@ -425,29 +411,26 @@ TIP: You can select more than one dependency at a time using Ctrl + left-click. 
 
 You should end up with six dependencies (the MyAPI dependency from the earlier part of this tutorial, plus the five you just added), as shown below:
 
-image::tutorials/selection-1_editor1.png[]
+image::tutorials/selection-1_nb27_editor1.png[]
 
 You can also see these in the Libraries node of the My Editor project.
 
 
 [start=2]
-1. Right-click the `org.myorg.myeditor` package in the My Editor project, and choose New > Other. When the New File dialog appears, select Swing GUI Forms from the Category selection, and JPanel Form from the File Types selection. 
+1. Right-click the `org.myorg.myeditor` package in the My Editor project, and choose _New > Window_ as done for `MiViewer`. Choose `editor` for the Windows Position and check Open on Application Start. Write `MyEditor` for Class Name Prefix.
 
-image::tutorials/selection-1_editor2.png[]
+image::tutorials/selection-1_nb27_editor2.png[]
 
 Click btn:[Next].
 
 [start=3]
 1. Set the class name to "MyEditor", and click:[Finish] to complete the wizard.
 
-You should see `MyEditor.java` open in with the Design view (form editor) open:
-
-image::tutorials/selection-1_editor3.png[]
 
 [start=4]
 1. When the form editor opens, drop two Text Fields (javax.swing.JTextField) on the form, one above the other. 
 
-image::tutorials/selection-1_editor4.png[]
+image::tutorials/selection-1_nb27_editor4.png[]
 
 On the property sheet, set the "editable" property (checkbox) to `false` for both text fields.
 
@@ -459,21 +442,29 @@ On the property sheet, set the "editable" property (checkbox) to `false` for bot
 
 [source,java]
 ----
-
+@ConvertAsProperties(
+    dtd = "-//org.myorg.myeditor//MyEditor//EN",
+    autostore = false
+)
 @TopComponent.Description(
-        preferredID = "MyEditorTopComponent",
-        persistenceType = TopComponent.PERSISTENCE_ALWAYS)
-@TopComponent.Registration(
-        mode = "editor",
-        openAtStartup = true)
-@ActionID(
-        category = "Window",
-        id = "org.myorg.myeditor.MyEditorTopComponent")
-@ActionReference(path = "Menu/Window")
-@TopComponent.OpenActionRegistration(displayName = "#CTL_MyEditorAction")
-@NbBundle.Messages({"CTL_MyEditorAction=Open Editor"})
-
-public class MyEditor extends TopComponent {
+    preferredID = "MyEditorTopComponent",
+    //iconBase="SET/PATH/TO/ICON/HERE",
+    persistenceType = TopComponent.PERSISTENCE_ALWAYS
+)
+@TopComponent.Registration(mode = "editor", openAtStartup = true)
+@ActionID(category = "Window", id = "org.myorg.myeditor.MyEditorTopComponent")
+@ActionReference(path = "Menu/Window" /*, position = 333 */)
+@TopComponent.OpenActionRegistration(
+    displayName = "#CTL_MyEditorAction",
+    preferredID = "MyEditorTopComponent"
+)
+@Messages(
+    {
+        "CTL_MyEditorAction=MyEditor",
+        "CTL_MyEditorTopComponent=MyEditor Window",
+        "HINT_MyEditorTopComponent=This is a MyEditor window"
+    })
+public final class MyEditorTopComponent extends TopComponent
 ----
 
 
@@ -513,11 +504,9 @@ To make your editor component at least somewhat interesting (though it doesn't a
 
 Now you're ready to run the tutorial. Simply right click `EventManager`, the application which contains your three modules, and choose Run from the popup menu. When the IDE opens, simply choose Window > Open Editor to invoke your action. Do this a couple of times, so that there are several of your editor components open. Your singleton `MyViewer` window should also be open. Notice how the `MyViewer` window's contents change as you click different tabs, as shown here:
 
-image::tutorials/selection-1_result1.png[]
+image::tutorials/selection-1_nb27_result1.png[]
 
-If you click in the Viewer window, or close all of the editor windows, note that the text changes to "[no selection]", as shown below:
-
-image::tutorials/selection-1_result2.png[]
+If you click in the Viewer window, or close all of the editor windows, note that the text changes to "[no selection]".
 
 NOTE:  If you do not see the `MyViewer` window, you probably did not check the checkbox in the wizard to open it on system start - simply go to the Window menu and choose MyViewer to display it.
 
@@ -544,12 +533,10 @@ To make it really evident how powerful this approach can be, you'll take one mor
 [start=2]
 1. Set the `text` property of the JButton to "Replace".
 
-image::tutorials/selection-1_replace1.png[]
-
 [start=3]
 1. Right click the `JButton` and choose Events > Action > actionPerformed. 
 
-image::tutorials/selection-1_replace2.png[]
+image::tutorials/selection-1_nb27_replace2.png[]
 
 This will cause the code editor to open with the cursor in an event handler method. Make that method call `updateContent()`.
 
@@ -590,7 +577,7 @@ link:https://bits.netbeans.org/dev/javadoc/org-openide-util-lookup/org/openide/u
 
 
 [start=5]
-1. Remove the lines we added to the constructor earlier, except for the line beginning "associateLookup...". That line of the constructor should be changed as follows:
+1. Remove the lines we added to the constructor earlier, except for the call to `associateLookup(...)`. That line of the constructor should be changed as follows:
 
 [source,java]
 ----
@@ -616,9 +603,10 @@ NOTE: Be sure to leave the standard `initComponents()` call.
 ----
 import java.util.Collections;
 import org.myorg.myapi.Event;
+import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
 import org.openide.awt.ActionReference;
-import org.openide.util.NbBundle;
+import org.openide.util.NbBundle.Messages;
 import org.openide.util.lookup.AbstractLookup;
 import org.openide.util.lookup.InstanceContent;
 import org.openide.windows.TopComponent;
@@ -628,7 +616,7 @@ You're now ready to run the Event Manager again. Right click EventManager again 
 
 When you click the Replace button, all of the components update, including the instance of `MyViewer` - everything.
 
-image::tutorials/selection-1_replace3.png[]
+image::tutorials/selection-1_nb27_replace3.png[]
 
 
 == Providing More Than One Object

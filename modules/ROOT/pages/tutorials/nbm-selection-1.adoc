@@ -38,26 +38,26 @@ endif::[]
 This tutorial shows how to build a NetBeans Platform application with losely coupled modules: one that provides a
 selected object, and others that update components as the selection changes.
 
-Part 1 (this tutorial) covers using a TopComponent's Lookup. Part 2 explains selection for a single item (for example,
-one element in a tree).
+This tutorial is part 1 of a series and covers using a TopComponent's Lookup. Part 2 explains selection for a single
+item (for example, one element in a tree view).
 
 == Introduction to Selection
 
 Selection is crucial for complex applications. NetBeans has two basic concepts of selection:
 
 * The contents of the focused xref:wiki::wiki/DevFaqWindowsTopComponent.adoc[TopComponent]'s xref:wiki::wiki/DevFaqLookup.adoc[Lookup]
-* The focused `TopComponent`'s xref:wiki::wiki/DevFaqWhatIsANode.adoc[activated `Node`(s)]
+* The focused `TopComponent` 's xref:wiki::wiki/DevFaqWhatIsANode.adoc[activated `Node`(s)]
 
 This tutorial covers only the `Lookup` portion of selection.
 
-Selection enables context-sensitive actions (actions that are enabled or disabled depending on what is selected), and
-palette windows such as the Property Sheet or Navigator components in the IDE, which display some aspect of whatever is
+Selection allows for context-sensitive actions (enabled/disabled depending on selection), and
+palette windows such as the Property Sheet or Navigator components in the IDE, which display details of whatever is
 selected.
 
-Each `TopComponent` has a bag of objects that it can put things into, and that other code is able to query. That bag of
-objects is its _Lookup_: a Map where the keys are class objects and the values are objects of that type. This decouples
-the components that provide some object and the components that consume those objects, so they can be implemented in
-separate modules. New editors for existing objects can be provided without changing the rest of the system.
+Each `TopComponent` exposes a _Lookup_ — a Map from class to objects of that type, that other components can query.
+This permits decoupling the components that provide some objects and the components that consume them, so they can be
+implemented in separate modules. New editors for existing objects can be provided without changing the rest\
+of the system.
 
 
 == Creating the NetBeans Platform Application Project
@@ -71,12 +71,12 @@ Lets start by creating the NetBeans Platform application that will contain all t
 
 
 1. Go to _File > New Project_. Under *Categories*, expand *Java with Ant* and select *NetBeans Modules*. Then select
-*NetBeans Platform Application*:
+*NetBeans Platform Application* as *Project* type:
 +
 image::tutorials/selection-1_nb27_new-project1.png[]
 
 
-2. In the *Name and Location* panel, type `EventManager` in *Project Name*. Change the location to any directory on
+2. In the *Name and Location* panel, use `EventManager` as the *Project Name*. Choose the location for the project on
 your computer:
 +
 image::tutorials/selection-1_nb27_new-project2.png[]
@@ -87,10 +87,10 @@ throughout this tutorial:
 image::tutorials/selection-1_nb27_new-project3.png[]
 +
 Via the configuration files shown in the screenshot above, the application has access to a window system and an action
-system. The configuration files also set up the application to be built via the _Ant_ build system. In the next steps.
+system. The configuration files also set up the application to be built via the _Ant_ build system.
 +
-You will be adding three custom modules to the application. The first module will provide an API class, while the other
-two will share that API module between them. That will ensure that the other two modules do not depend on each other,
+You will be adding three modules to the application. The first module will provide an API class, while the other
+two will both depend on that API module. That will ensure that the other two modules do not depend on each other,
 making them loosely coupled.
 
 
@@ -99,14 +99,14 @@ making them loosely coupled.
 +
 image::tutorials/selection-1_nb27_new-project4.png[]
 +
-TIP: You could also do this by expanding the "EventManager" project node, right-click the "Modules" node, and then
-choose "Add New".
+TIP: You could also do this by expanding the `EventManager` project node, right-click the *Modules* node, and then
+choose _Add New_.
 
 
 4. In the *Name and Location* panel, use `MyAPI` as *Project Name*. Now look at the *Project Location* field and the
-*Project Folder* field. The default behavior is to create the module inside the directory of the "EventManager"
+*Project Folder* field. The default behavior is to create the module inside the directory of the `EventManager`
 application, which means that the module's sources will be organized within the folder where the application is
-defined. That is the standard way to organize NetBeans Platform application sources.
+defined. That is the standard way to organize the source code in NetBeans Platform application projects.
 +
 image::tutorials/selection-1_nb27_new-project5.png[]
 
@@ -114,10 +114,8 @@ image::tutorials/selection-1_nb27_new-project5.png[]
 5. In the Basic Module Configuration panel, set the following values:
 +
 * *Code Name Base.* The code name base is a string that uniquely identifies a module. By convention, the value of the
-code name base is the main package of the module. Therefore, if the main package of your module is going to be
-"org.me.foo", then that would normally also be the value of the code name base of the module. In this case, since the
-base package will be "org.myorg.myapi", set the code name base to  `org.myorg.myapi`. That will be the string used to
-identify the module by other modules that will need to make use of code within this module.
+code name base is the main package of the module. In this case, set the code name base to `org.myorg.myapi`. That will
+be the string used to identify the module by other modules that will need to make use of code within this module.
 * *Module Display Name.* Set the module display name to `My API`. That is the text you will see displayed for the module
 in the Projects window in the IDE.
 * *Localizing Bundle.* Leave the location of the localizing bundle with the default value, so that localization
@@ -133,10 +131,10 @@ The result should be as follows:
 image::tutorials/selection-1_nb27_new-project6.png[]
 
 
-6. Create two modules (repeat steps 3–5). Name them:
+6. Create another two modules (repeat steps 3–5), using the following parameters:
 +
-* MyEditor — Code Name Base: `org.myorg.myeditor`, Module Display Name: "My Editor"
-* MyViewer — Code Name Base: `org.myorg.myviewer`, Module Display Name: "My Viewer"
+* Project Name: MyEditor, Code Name Base: `org.myorg.myeditor`, Module Display Name: _My Editor_
+* Project Name: MyViewer, Code Name Base: `org.myorg.myviewer`, Module Display Name: _My Viewer_
 +
 At the end of this step, the structure of the application should be as follows:
 +
@@ -152,7 +150,7 @@ Now we'll create a simple API class. In real applications, this API might repres
 tutorial, we'll create a simple "Event" object with a unique ID and a date.
 
 
-1. Right click the `org.myorg.myapi` package and choose New > Java Class.
+1. Right click the `org.myorg.myapi` package and choose _New > Java Class_.
 +
 image::tutorials/selection-1_nb27_api1.png[]
 +
@@ -324,11 +322,11 @@ Click the Design tab to open the "Matisse" GUI Builder (the form editor). You'll
 about the selected `Event`.
 
 
-1. Drag two Labels (javax.swing.JLabel) from the Palette (kbd:[Ctrl+Shift+8]) to the form, one below the other:
+1. Drag two Labels (javax.swing.JLabel) from the Palette to the form, one below the other:
 +
 image::tutorials/selection-1_nb27_viewer6.png[]
 +
-Press F2 on the first label and change the text to `[Nothing selected]` as shown above.
+Select the first label and press F2, change the text to `[Nothing selected]` as shown above.
 
 
 2. Click the Source button to switch to the code editor. Change the class signature so `MyViewerTopComponent` implements
@@ -341,14 +339,12 @@ public final class MyViewerTopComponent extends TopComponent implements LookupLi
 +
 Right-click in the editor and choose Fix Imports to import `LookupListener`.
 +
-A lightbulb icon appears in the editor margin. Click it to see the popup:
+A lightbulb icon will appear in the editor margin. Click it to see the popup:
 +
 image::tutorials/selection-1_nb27_viewer8.png[]
 +
-Select the text "Implement all abstract methods" on the context menu that appears.
-+
-Now you have a class that implements `LookupListener` (it implements the `resultChanged` method). You need something to
-listen to.
+Select the text "Implement all abstract methods" on the context menu that appears. Now you have a class that implements
+`LookupListener` (it implements the `resultChanged` method). You need something to listen to.
 +
 There's a global `Lookup` object that proxies the Lookup of whatever component has focus - you can get it by calling
 `Utilities.actionsGlobalContext()`. Instead of tracking focus yourself, you can listen to this global selection
@@ -395,6 +391,7 @@ will update the two `JLabel`s you put on the form.
 
 +
 The required import statements for the `MyViewerTopComponent` are as follows:
+
 +
 [source,java]
 ----

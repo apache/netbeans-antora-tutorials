@@ -35,9 +35,11 @@ ifdef::env-github[]
 :imagesdir: ../../images
 endif::[]
 
-This tutorial shows how to build a NetBeans Platform application with losely coupled modules: one that provides a selected object, and others that update components as the selection changes.
+This tutorial shows how to build a NetBeans Platform application with losely coupled modules: one that provides a
+selected object, and others that update components as the selection changes.
 
-Part 1 (this tutorial) covers using a TopComponent's Lookup. Part 2 explains selection for a single item (for example, one element in a tree).
+Part 1 (this tutorial) covers using a TopComponent's Lookup. Part 2 explains selection for a single item (for example,
+one element in a tree).
 
 == Introduction to Selection
 
@@ -48,56 +50,81 @@ Selection is crucial for complex applications. NetBeans has two basic concepts o
 
 This tutorial covers only the `Lookup` portion of selection.
 
-Selection enables context-sensitive actions (actions that are enabled or disabled depending on what is selected), and palette windows such as the Property Sheet or Navigator components in the IDE, which display some aspect of whatever is selected.
+Selection enables context-sensitive actions (actions that are enabled or disabled depending on what is selected), and
+palette windows such as the Property Sheet or Navigator components in the IDE, which display some aspect of whatever is
+selected.
 
-Each `TopComponent` has a bag of objects that it can put things into, and that other code is able to query. That bag of objects is its _Lookup_: a Map where the keys are class objects and the values are objects of that type. This decouples the components that provide some object and the components that consume those objects, so they can be implemented in separate modules. New editors for existing objects can be provided without changing the rest of the system.
+Each `TopComponent` has a bag of objects that it can put things into, and that other code is able to query. That bag of
+objects is its _Lookup_: a Map where the keys are class objects and the values are objects of that type. This decouples
+the components that provide some object and the components that consume those objects, so they can be implemented in
+separate modules. New editors for existing objects can be provided without changing the rest of the system.
 
 
 == Creating the NetBeans Platform Application Project
 
-The example used in this tutorial will contain three modules constituting a NetBeans Platform application, as illustrated below:
+The example used in this tutorial will contain three modules constituting a NetBeans Platform application, as
+illustrated below:
 
 image::tutorials/selection-1_nb27_module_structure.png[]
 
 Lets start by creating the NetBeans Platform application that will contain all three modules.
 
 
-1. Go to _File > New Project_. Under *Categories*, expand *Java with Ant* and select *NetBeans Modules*. Then select *NetBeans Platform Application*:
+1. Go to _File > New Project_. Under *Categories*, expand *Java with Ant* and select *NetBeans Modules*. Then select
+*NetBeans Platform Application*:
 +
 image::tutorials/selection-1_nb27_new-project1.png[]
 
 
-2. In the *Name and Location* panel, type `EventManager` in *Project Name*. Change the location to any directory on your computer:
+2. In the *Name and Location* panel, type `EventManager` in *Project Name*. Change the location to any directory on
+your computer:
 +
 image::tutorials/selection-1_nb27_new-project2.png[]
 +
-You now have a NetBeans Platform application project, which is the container for the modules that you will be creating throughout this tutorial:
+You now have a NetBeans Platform application project, which is the container for the modules that you will be creating
+throughout this tutorial:
 +
 image::tutorials/selection-1_nb27_new-project3.png[]
 +
-Via the configuration files shown in the screenshot above, the application has access to a window system and an action system. The configuration files also set up the application to be built via the _Ant_ build system. In the next steps.
+Via the configuration files shown in the screenshot above, the application has access to a window system and an action
+system. The configuration files also set up the application to be built via the _Ant_ build system. In the next steps.
 +
-You will be adding three custom modules to the application. The first module will provide an API class, while the other two will share that API module between them. That will ensure that the other two modules do not depend on each other, making them loosely coupled.
+You will be adding three custom modules to the application. The first module will provide an API class, while the other
+two will share that API module between them. That will ensure that the other two modules do not depend on each other,
+making them loosely coupled.
 
 
-3. Go to _File > New Project_ again. If not already open, under *Categories*, expand *Java with Ant*, and select *NetBeans Modules*. Under *Projects*, select *Module*:
+3. Go to _File > New Project_ again. If not already open, under *Categories*, expand *Java with Ant*, and select
+*NetBeans Modules*. Under *Projects*, select *Module*:
 +
 image::tutorials/selection-1_nb27_new-project4.png[]
 +
-TIP: You could also do this by expanding the "EventManager" project node, right-click the "Modules" node, and then choose "Add New".
+TIP: You could also do this by expanding the "EventManager" project node, right-click the "Modules" node, and then
+choose "Add New".
 
 
-4. In the *Name and Location* panel, use `MyAPI` as *Project Name*. Now look at the *Project Location* field and the *Project Folder* field. The default behavior is to create the module inside the directory of the "EventManager" application, which means that the module's sources will be organized within the folder where the application is defined. That is the standard way to organize NetBeans Platform application sources.
+4. In the *Name and Location* panel, use `MyAPI` as *Project Name*. Now look at the *Project Location* field and the
+*Project Folder* field. The default behavior is to create the module inside the directory of the "EventManager"
+application, which means that the module's sources will be organized within the folder where the application is
+defined. That is the standard way to organize NetBeans Platform application sources.
 +
 image::tutorials/selection-1_nb27_new-project5.png[]
 
 
 5. In the Basic Module Configuration panel, set the following values:
 +
-* *Code Name Base.* The code name base is a string that uniquely identifies a module. By convention, the value of the code name base is the main package of the module. Therefore, if the main package of your module is going to be "org.me.foo", then that would normally also be the value of the code name base of the module. In this case, since the base package will be "org.myorg.myapi", set the code name base to  `org.myorg.myapi`. That will be the string used to identify the module by other modules that will need to make use of code within this module.
-* *Module Display Name.* Set the module display name to `My API`. That is the text you will see displayed for the module in the Projects window in the IDE.
-* *Localizing Bundle.* Leave the location of the localizing bundle with the default value, so that localization keys/values will be stored in the main package, with the name `org/myorg/myapi`.
-* *Generate OSGi Bundle.* Leave this unchecked to use the NetBeans module system. There are two module systems are supported by the NetBeans Platform, the NetBeans module system and the OSGi framework. You can use OSGi if required to meet your business requirements, although we use the NetBeans module system in this tutorial series.
+* *Code Name Base.* The code name base is a string that uniquely identifies a module. By convention, the value of the
+code name base is the main package of the module. Therefore, if the main package of your module is going to be
+"org.me.foo", then that would normally also be the value of the code name base of the module. In this case, since the
+base package will be "org.myorg.myapi", set the code name base to  `org.myorg.myapi`. That will be the string used to
+identify the module by other modules that will need to make use of code within this module.
+* *Module Display Name.* Set the module display name to `My API`. That is the text you will see displayed for the module
+in the Projects window in the IDE.
+* *Localizing Bundle.* Leave the location of the localizing bundle with the default value, so that localization
+key/values will be stored in the main package, with the name `org/myorg/myapi`.
+* *Generate OSGi Bundle.* Leave this unchecked to use the NetBeans module system. There are two module systems are
+supported by the NetBeans Platform, the NetBeans module system and the OSGi framework. You can use OSGi if required to
+meet your business requirements, although we use the NetBeans module system in this tutorial series.
 
 +
 The result should be as follows:
@@ -115,12 +142,14 @@ At the end of this step, the structure of the application should be as follows:
 +
 image::tutorials/selection-1_nb27_new-project7.png[]
 +
-We split the project into three modules so the viewer and editor depend only on a shared API. This makes the viewer and editor losely coupled, which has many advantages.
+We split the project into three modules so the viewer and editor depend only on a shared API. This makes the viewer and
+editor losely coupled, which has many advantages.
 
 
 == Creating an API and Setting Up Dependencies
 
-Now we'll create a simple API class. In real applications, this API might represent files or other data. For this tutorial, we'll create a simple "Event" object with a unique ID and a date.
+Now we'll create a simple API class. In real applications, this API might represent files or other data. For this
+tutorial, we'll create a simple "Event" object with a unique ID and a date.
 
 
 1. Right click the `org.myorg.myapi` package and choose New > Java Class.
@@ -164,14 +193,18 @@ public final class Event {
 }
 ----
 +
-This is all the code for this module. Each time you create a new `Event`, a counter is incremented to give each event a unique ID.
+This is all the code for this module. Each time you create a new `Event`, a counter is incremented to give each event a
+unique ID.
 
 
-2. Next, make your API module export the `org.myorg.myapi` package so other modules can see the Event class. By default, all packages are hidden from other modules. Right click the My API project and choose Properties. In the API Versioning page, check the checkbox for `org.myorg.myapi` in the Public Packages list:
+2. Next, make your API module export the `org.myorg.myapi` package so other modules can see the Event class. By default,
+all packages are hidden from other modules. Right click the My API project and choose Properties. In the API Versioning
+page, check the checkbox for `org.myorg.myapi` in the Public Packages list:
 +
 image::tutorials/selection-1_nb27_api3.png[]
 +
-Now expand the Important Files node of the My API project and open the Project Metadata file (named `project.xml` on disk). Notice this section was added when you clicked OK:
+Now expand the Important Files node of the My API project and open the Project Metadata file (named `project.xml` on
+disk). Notice this section was added when you clicked OK:
 +
 [source,xml]
 ----
@@ -183,7 +216,8 @@ Now expand the Important Files node of the My API project and open the Project M
 When you compile the module, this information from `project.xml` is added to the module's manifest file.
 
 
-3. Now set up dependencies between your modules. Both My Editor and My Viewer will use the `Event` class, so they need to depend on the API module. Right-click the My Editor project and choose Properties. Select the Libraries tab.
+3. Now set up dependencies between your modules. Both My Editor and My Viewer will use the `Event` class, so they need
+to depend on the API module. Right-click the My Editor project and choose Properties. Select the Libraries tab.
 +
 image::tutorials/selection-1_nb27_api4.png[]
 +
@@ -195,7 +229,8 @@ TIP: the Cluster combo-box can be used for filtering as well.
 +
 You'll see the module listed under _Module Dependencies_. Click `OK` to close the dialog.
 +
-Open the _Project Metadata_ file in the _Important Files_ node of the `My Editor` module. You'll see this section was added:
+Open the _Project Metadata_ file in the _Important Files_ node of the `My Editor` module. You'll see this section was
+added:
 
 [source,xml]
 ----
@@ -211,21 +246,25 @@ Open the _Project Metadata_ file in the _Important Files_ node of the `My Editor
 </module-dependencies>
 ----
 
-Notice the code name base identifies the MyAPI module. When you compile the module, this information from `project.xml` goes into the module's manifest file.
+Notice the code name base identifies the MyAPI module. When you compile the module, this information from `project.xml`
+goes into the module's manifest file.
 
-Add the same dependency for the My Viewer module. Right-click the My Viewer project and select Properties. When finished, the module dependencies look like this in the Project window:
+Add the same dependency for the My Viewer module. Right-click the My Viewer project and select Properties. When
+finished, the module dependencies look like this in the Project window:
 
 image::tutorials/selection-1_nb27_api7.png[]
 
 
 == Creating the Viewer Component
 
-Now you'll create a singleton component that tracks if there's an `Event` in the global selection. If there is, it will display information about it. This is commonly used for master/detail views.
+Now you'll create a singleton component that tracks if there's an `Event` in the global selection. If there is, it will
+display information about it. This is commonly used for master/detail views.
 
 
 === Generating a Singleton TopComponent
 
-A "singleton component" is like the Projects window in NetBeans IDE - there's only one of them in the system. The Window wizard generates all the code needed for a singleton component. You just need to provide the contents.
+A "singleton component" is like the Projects window in NetBeans IDE - there's only one of them in the system. The Window
+wizard generates all the code needed for a singleton component. You just need to provide the contents.
 
 
 1. Right click the `org.myorg.myviewer` package and choose New > Window to create a TopComponent for this module. 
@@ -233,7 +272,8 @@ A "singleton component" is like the Projects window in NetBeans IDE - there's on
 image::tutorials/selection-1_nb27_viewer1.png[]
 
 
-2. On the "Basic Settings" wizard, select `explorer` as the window location and check "Open on Application Start" to open the window at startup:
+2. On the "Basic Settings" wizard, select `explorer` as the window location and check "Open on Application Start" to
+open the window at startup:
 +
 image::tutorials/selection-1_nb27_viewer3.png[]
 
@@ -246,9 +286,11 @@ image::tutorials/selection-1_nb27_viewer4.png[]
 +
 image::tutorials/selection-1_nb27_viewer5.png[]
 +
-You now have a skeleton `TopComponent` called `MyViewerTopComponent`. The wizard created the Java class and added the required module dependencies (under Libraries).
+You now have a skeleton `TopComponent` called `MyViewerTopComponent`. The wizard created the Java class and added the
+required module dependencies (under Libraries).
 
-5. Open the `MyViewerTopComponent` file and click the Source tab. The annotations at the top of the file register `MyViewerTopComponent` in the layer file and create an `Action` for opening it from the Window menu:
+5. Open the `MyViewerTopComponent` file and click the Source tab. The annotations at the top of the file register
+`MyViewerTopComponent` in the layer file and create an `Action` for opening it from the Window menu:
 +
 [source,java]
 ----
@@ -278,7 +320,8 @@ You now have a skeleton `TopComponent` called `MyViewerTopComponent`. The wizard
 
 === Creating a Context Sensitive TopComponent
 
-Click the Design tab to open the "Matisse" GUI Builder (the form editor). You'll add two labels to display information about the selected `Event`.
+Click the Design tab to open the "Matisse" GUI Builder (the form editor). You'll add two labels to display information
+about the selected `Event`.
 
 
 1. Drag two Labels (javax.swing.JLabel) from the Palette (kbd:[Ctrl+Shift+8]) to the form, one below the other:
@@ -288,7 +331,8 @@ image::tutorials/selection-1_nb27_viewer6.png[]
 Press F2 on the first label and change the text to `[Nothing selected]` as shown above.
 
 
-2. Click the Source button to switch to the code editor. Change the class signature so `MyViewerTopComponent` implements `LookupListener`:
+2. Click the Source button to switch to the code editor. Change the class signature so `MyViewerTopComponent` implements
+`LookupListener`:
 +
 [source,java]
 ----
@@ -303,12 +347,16 @@ image::tutorials/selection-1_nb27_viewer8.png[]
 +
 Select the text "Implement all abstract methods" on the context menu that appears.
 +
-Now you have a class that implements `LookupListener` (it implements the `resultChanged` method). You need something to listen to.
+Now you have a class that implements `LookupListener` (it implements the `resultChanged` method). You need something to
+listen to.
 +
-There's a global `Lookup` object that proxies the Lookup of whatever component has focus - you can get it by calling `Utilities.actionsGlobalContext()`. Instead of tracking focus yourself, you can listen to this global selection `Lookup`, which fires changes whenever focus changes.
+There's a global `Lookup` object that proxies the Lookup of whatever component has focus - you can get it by calling
+`Utilities.actionsGlobalContext()`. Instead of tracking focus yourself, you can listen to this global selection
+`Lookup`, which fires changes whenever focus changes.
 
 
-3. Edit the `MyViewerTopComponent` source to add a lookup result member and implement the `componentOpened`, `componentClosed`, and `resultChanged` methods:
+3. Edit the `MyViewerTopComponent` source to add a lookup result member and implement the `componentOpened`,
+`componentClosed`, and `resultChanged` methods:
 +
 [source,java]
 ----
@@ -339,8 +387,11 @@ public void resultChanged(LookupEvent lookupEvent) {
 }
 ----
 +
-* `componentOpened()` is called whenever the component is made visible by the window system; `componentClosed()` is called whenever the user clicks the X button on its tab to close it. So whenever the component is showing, you want it to be tracking the selection - which is what the above code does.
-* The `resultChanged()` method is your implementation of `LookupListener`. Whenever the selected `Event` changes, it will update the two `JLabel`s you put on the form.
+* `componentOpened()` is called whenever the component is made visible by the window system; `componentClosed()` is
+called whenever the user clicks the X button on its tab to close it. So whenever the component is showing, you want it
+to be tracking the selection - which is what the above code does.
+* The `resultChanged()` method is your implementation of `LookupListener`. Whenever the selected `Event` changes, it
+will update the two `JLabel`s you put on the form.
 
 +
 The required import statements for the `MyViewerTopComponent` are as follows:
@@ -363,16 +414,23 @@ import org.openide.util.Utilities;
 
 == Creating the Editor Component
 
-Now you need something to provide `Event` instances for the viewer. You'll do this in the My Editor module, keeping with the goal of loose coupling between components.
+Now you need something to provide `Event` instances for the viewer. You'll do this in the My Editor module, keeping with
+the goal of loose coupling between components.
 
-You'll create another `TopComponent` that opens in the editor area and provides an `Event` from its `Lookup`. The TopComponents are singletons by default but changing that is easy.
+You'll create another `TopComponent` that opens in the editor area and provides an `Event` from its `Lookup`. The
+TopComponents are singletons by default but changing that is easy.
 
 
 1. Add dependencies to the My Editor module so it can find the classes you'll use.
 +
-Right click the My Editor project and choose Properties. On the Library page of the Project Properties dialog box, click the Add Dependency button, and type `TopComponent` in the Filter textbox. The dialog should automatically suggest setting a dependency on the Window System API. Do the same thing for `Lookups` (Lookup API). Also set a dependency on the Utilities API, Base Utilities API, and UI Utilities API, which provide various helpful supporting classes that are made available by the NetBeans Platform.
+Right click the My Editor project and choose Properties. On the Library page of the Project Properties dialog box, click
+the Add Dependency button, and type `TopComponent` in the Filter textbox. The dialog should automatically suggest
+setting a dependency on the Window System API. Do the same thing for `Lookups` (Lookup API). Also set a dependency on
+the Utilities API, Base Utilities API, and UI Utilities API, which provide various helpful supporting classes that are
+made available by the NetBeans Platform.
 +
-TIP: You can select more than one dependency at a time using Ctrl + left-click. For example, you could select both Utilities API and UI Utilities API based off a filtered search for "Utilities".
+TIP: You can select more than one dependency at a time using Ctrl + left-click. For example, you could select both
+Utilities API and UI Utilities API based off a filtered search for "Utilities".
 +
 You'll have six total dependencies (MyAPI from earlier, plus the five you just added):
 +
@@ -381,7 +439,8 @@ image::tutorials/selection-1_nb27_editor1.png[]
 You can also see these in the Libraries node of the My Editor project.
 
 
-2. Right-click the `org.myorg.myeditor` package and choose _New > Window_ like you did for `MyViewer`. Choose `editor` for Windows Position and check Open on Application Start. Use `MyEditor` for Class Name Prefix.
+2. Right-click the `org.myorg.myeditor` package and choose _New > Window_ like you did for `MyViewer`. Choose `editor`
+for Windows Position and check Open on Application Start. Use `MyEditor` for Class Name Prefix.
 +
 image::tutorials/selection-1_nb27_editor2.png[]
 
@@ -393,7 +452,8 @@ image::tutorials/selection-1_nb27_editor4.png[]
 In the property sheet, set both text fields' "editable" property to `false`.
 
 
-4. We want to allow the user to open more than one window. Click the Source tab to switch to the code editorand delete the `preferredID` from the `@TopComponent.Description` annotation on top of the class.
+4. We want to allow the user to open more than one window. Click the Source tab to switch to the code editorand delete
+the `preferredID` from the `@TopComponent.Description` annotation on top of the class.
 +
 [source,java]
 ----
@@ -447,39 +507,57 @@ import org.openide.util.lookup.Lookups;
 import org.openide.windows.TopComponent;
 ----
 +
-The line `associateLookup(Lookups.singleton(obj));` creates a `Lookup` containing one object - the new `Event` instance. This becomes what `MyEditor.getLookup()` returns. While this is a simple example, you can imagine `Event` representing a file, database entity, or anything else you want to edit or view. You could also have a component that lets you select or edit multiple `Event` instances, which is covered in the next tutorial.
+The line `associateLookup(Lookups.singleton(obj));` creates a `Lookup` containing one object - the new `Event` instance.
+This becomes what `MyEditor.getLookup()` returns. While this is a simple example, you can imagine `Event` representing a
+file, database entity, or anything else you want to edit or view. You could also have a component that lets you select
+or edit multiple `Event` instances, which is covered in the next tutorial.
 +
-To make the editor component interesting (though it doesn't actually edit anything), you set the text fields to display values from the `Event`.
+To make the editor component interesting (though it doesn't actually edit anything), you set the text fields to display
+values from the `Event`.
 
 
 == Running the Code
 
-Now you're ready to run the tutorial. Right click `EventManager` and choose Run. When the IDE opens, choose Window > Open Editor to invoke your action. Do this a few times to open several editor components. Your `MyViewer` window should also be open. Notice how the `MyViewer` window content changes as you click different tabs:
+Now you're ready to run the tutorial. Right click `EventManager` and choose Run. When the IDE opens, choose
+Window > Open Editor to invoke your action. Do this a few times to open several editor components. Your `MyViewer`
+window should also be open. Notice how the `MyViewer` window content changes as you click different tabs:
 
 image::tutorials/selection-1_nb27_result1.png[]
 
 If you click in the Viewer window or close all editor windows, the text changes to "[no selection]".
 
-NOTE: If you don't see the `MyViewer` window, you probably didn't check the "open on system start" checkbox in the wizard. Go to the Window menu and choose MyViewer to display it.
+NOTE: If you don't see the `MyViewer` window, you probably didn't check the "open on system start" checkbox in the
+wizard. Go to the Window menu and choose MyViewer to display it.
 
 
 == So, What's the Point?
 
-The key point is how the code is split into three modules: My Viewer knows nothing about My Editor, and either can run independently. They only share a dependency on My API. This means:
+The key point is how the code is split into three modules: My Viewer knows nothing about My Editor, and either can run
+independently. They only share a dependency on My API. This means:
 
 1. My Viewer and My Editor can be developed and shipped independently
-2. Any module can provide a different editor and the viewer will work with it, as long as the new editor offers an `Event` from its Lookup
+2. Any module can provide a different editor and the viewer will work with it, as long as the new editor offers an
+`Event` from its Lookup
 
-To understand the value, imagine `Event` is something complex - say `MyEditor` is an image editor and `Event` represents an image being edited. You could replace `MyEditor` with an SVG vector editor, and the viewer (showing image attributes) would work transparently with the new editor. This is why you can add new tools to NetBeans IDE that work with Java files - they work across different NetBeans versions, and alternative editors (like the form editor) still work with all components and actions that work with Java files.
+To understand the value, imagine `Event` is something complex - say `MyEditor` is an image editor and `Event` represents
+an image being edited. You could replace `MyEditor` with an SVG vector editor, and the viewer (showing image attributes)
+would work transparently with the new editor. This is why you can add new tools to NetBeans IDE that work with Java
+files - they work across different NetBeans versions, and alternative editors (like the form editor) still work with all
+components and actions that work with Java files.
 
-This is how NetBeans IDE works with Java and other source files. The thing available from the editor's Lookup is a xref:wiki::wiki/DevFaqDataObject.adoc[DataObject], and components like Navigator and Property Sheet watch what object the focused `TopComponent` provides.
+This is how NetBeans IDE works with Java and other source files. The thing available from the editor's Lookup is
+a xref:wiki::wiki/DevFaqDataObject.adoc[DataObject], and components like Navigator and Property Sheet watch what object
+the focused `TopComponent` provides.
 
-This approach is also valuable when migrating existing applications to the NetBeans Platform. The data model object is probably existing, working code that shouldn't change for NetBeans integration. By keeping the data model API in a separate module, NetBeans integration stays separate from core business logic.
+This approach is also valuable when migrating existing applications to the NetBeans Platform. The data model object is
+probably existing, working code that shouldn't change for NetBeans integration. By keeping the data model API in a
+separate module, NetBeans integration stays separate from core business logic.
 
 
 == Changing Selected Objects on the Fly
 
-To show how powerful this approach is, you'll add a button to your editor that replaces the `Event` with a new one on the fly.
+To show how powerful this approach is, you'll add a button to your editor that replaces the `Event` with a new one
+on the fly.
 
 
 1. Open `MyEditor` in the form editor (click the Design button) and drag a `Button` (javax.swing.JButton) to it.
@@ -522,7 +600,8 @@ public class MyEditor extends TopComponent {
     private final InstanceContent content = new InstanceContent();
 ----
 +
-link:https://bits.netbeans.org/dev/javadoc/org-openide-util-lookup/org/openide/util/lookup/InstanceContent.html[InstanceContent] lets you modify a Lookup's content (specifically an `AbstractLookup`) on the fly.
+link:https://bits.netbeans.org/dev/javadoc/org-openide-util-lookup/org/openide/util/lookup/InstanceContent.html[InstanceContent]
+lets you modify a Lookup's content (specifically an `AbstractLookup`) on the fly.
 
 
 5. Remove the constructor lines you added earlier, except for the call to `associateLookup(...)`. Change that line to:
@@ -562,16 +641,25 @@ image::tutorials/selection-1_nb27_replace3.png[]
 
 == Providing More Than One Object
 
-This works well for decoupling, but providing just one object from your component is like having a `Map` with only one key and value. This technique becomes more powerful when you provide multiple objects from multiple APIs.
+This works well for decoupling, but providing just one object from your component is like having a `Map` with only one
+key and value. This technique becomes more powerful when you provide multiple objects from multiple APIs.
 
-For example, NetBeans commonly uses context sensitive actions. The built-in `SaveAction` listens for a `SaveCookie` on the global context - the same way your viewer listens for `Event`. When a `SaveCookie` appears (editors add one when file content is modified but not saved), the action becomes enabled, so Save toolbar buttons and menu items become enabled. When Save is invoked, it calls `SaveCookie.save()`, which causes the `SaveCookie` to disappear, disabling the Save action until a new one appears.
+For example, NetBeans commonly uses context sensitive actions. The built-in `SaveAction` listens for a `SaveCookie` on
+the global context - the same way your viewer listens for `Event`. When a `SaveCookie` appears (editors add one when
+file content is modified but not saved), the action becomes enabled, so Save toolbar buttons and menu items become
+enabled. When Save is invoked, it calls `SaveCookie.save()`, which causes the `SaveCookie` to disappear, disabling the
+Save action until a new one appears.
 
-The pattern is to provide more than one object from your component's `Lookup` - different components and actions are interested in different aspects of the object being edited. These aspects can be cleanly separated into interfaces that those components and actions can depend on and listen for.
+The pattern is to provide more than one object from your component's `Lookup` - different components and actions are
+interested in different aspects of the object being edited. These aspects can be cleanly separated into interfaces that
+those components and actions can depend on and listen for.
 
 xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 
 
 == Next Steps
 
-You may have noticed that some components have more detailed selection logic and even support multiple selection. The xref:tutorials/nbm-selection-2.adoc[next tutorial] covers how to use the link:https://bits.netbeans.org/dev/javadoc/org-openide-nodes/overview-summary.html[Nodes API] to handle that.
+You may have noticed that some components have more detailed selection logic and even support multiple selection.
+The xref:tutorials/nbm-selection-2.adoc[next tutorial] covers how to use the
+link:https://bits.netbeans.org/dev/javadoc/org-openide-nodes/overview-summary.html[Nodes API] to handle that.
 

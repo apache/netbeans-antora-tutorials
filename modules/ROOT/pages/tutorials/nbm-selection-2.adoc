@@ -69,25 +69,22 @@ Thanks to the components in the Explorer API, it is very easy to create your own
 The first thing you will do is some substantial modifications to your `MyEditor` editor component (from the xref:tutorials/nbm-selection-1.adoc[previous tutorial]). This starts with opening it in the editor.
 
 
-[start=1]
 1. First, bring up the properties dialog for the My Editor project by right-clicking the My Editor project and choosing Properties. On the Libraries tab, click the Add Dependency button, and type "BeanTreeView" in Filter text box:
-
++
 image::tutorials/selection-2_nb27_explorer1.png[]
-
++
 Select the "Explorer & Property Sheet API", and click btn:[OK] to add this dependency so you can use classes from it.
 
 
-[start=2]
-1. Open the MyEditor.java file. If not already showing, switch to the form designer.
-
+2. Open the MyEditor.java file. If not already showing, switch to the form designer.
++
 Select all of the components (two text fields, and the button), and delete them.
-
++
 In the following steps, we will use a component from the Explorer & Property Sheet API, instead of the components we have been using so far.
 
 
-[start=3]
-1. Switch to the Source view of MyEditor.java, and rewrite the constructor of the  `MyEditor`  class as shown below:
-
+3. Switch to the Source view of MyEditor.java, and rewrite the constructor of the  `MyEditor`  class as shown below:
++
 [source,java]
 ----
 public MyEditor() {
@@ -101,22 +98,20 @@ public MyEditor() {
     setDisplayName("MyEditor " + obj.getIndex());
 }
 ----
-
++
 `BeanTreeView` is a component from the Explorer & Property Sheet API - a basic `JTree`-based view over a `Node` and its children, with built-in handling of popup menus, searching and more. Press kbd:[Ctrl+Shift+I] to import BeanTreeView, because the import statement needs to be added.
 
-[start=4]
-1. Remove the unused `updateContent()` method.
+4. Remove the unused `updateContent()` method.
 
-[start=5]
-1. The next step is to give your tree something to show. Explorer UI components work like this: When added to a container, they search that container and their ancestors until they find one that implements `ExplorerManager.Provider`. So you don't set the node to be viewed directly on the component - you set it on the component's manager. This makes it possible to have multiple views, master/detail views and such, all managed by a single manager. Add to the signature of MyEditor as follows:
-
+5. The next step is to give your tree something to show. Explorer UI components work like this: When added to a container, they search that container and their ancestors until they find one that implements `ExplorerManager.Provider`. So you don't set the node to be viewed directly on the component - you set it on the component's manager. This makes it possible to have multiple views, master/detail views and such, all managed by a single manager. Add to the signature of MyEditor as follows:
++
 [source,java]
 ----
 public class MyEditor extends TopComponent implements ExplorerManager.Provider {
 ----
-
++
 Then press kbd:[Ctrl+Shift+I] to fix imports. Keeping the cursor in the signature line, a lightbulb glyph should appear in the margin. Press kbd:[Alt+Enter], and accept the hint "Implement all abstract methods". This will add one method, `getExplorerManager()`. Implement it as follows:
-
++
 [source,java]
 ----
 private final ExplorerManager mgr = new ExplorerManager();
@@ -128,21 +123,20 @@ public ExplorerManager getExplorerManager() {
 ----
 
 
-[start=6]
-1. Now, since the goal is one component that can display multiple `Event`s, you need a `Node` or two to display in your component. Each one will own an instance of `Event`. So, right now you'll just add the code that will create a root node for your tree view. Add the following line to the constructor:
-
+6. Now, since the goal is one component that can display multiple `Event`s, you need a `Node` or two to display in your component. Each one will own an instance of `Event`. So, right now you'll just add the code that will create a root node for your tree view. Add the following line to the constructor:
++
 [source,java]
 ----
 mgr.setRootContext(new AbstractNode(Children.create(new EventChildFactory(), true)));
 ----
-
++
 This is the code that sets the root node for all of the explorer views that are child components of `MyEditor`. The `Children.create` is a static call from the NetBeans APIs that will, thanks to the `true` parameter, create the child components asynchronously, that is, as needed, instead of all at once.
 
-[start=7]
-1. If you tried Fix Imports, you may have seen the error dialog telling you that neither `AbstractNode`, `Children`, nor `EventChildFactory` could be resolved. To resolve `AbstractNode` and `Children`, you need to add one dependency, on the Nodes API module. Right click the My Editor project and select Properties, go to the Libraries page and click Add Dependency. Type "AbstractNode" in the Add dialog, and when the item "Nodes API" in the list is selected, click btn:[OK] or press Enter.
 
-[start=8]
-1. Now, back in the source editor, press Ctrl-Shift-I to Fix Imports. You will be notified that `EventChildFactory` could not be resolved. That's okay - you're about to write it, in the next section.
+7. If you tried Fix Imports, you may have seen the error dialog telling you that neither `AbstractNode`, `Children`, nor `EventChildFactory` could be resolved. To resolve `AbstractNode` and `Children`, you need to add one dependency, on the Nodes API module. Right click the My Editor project and select Properties, go to the Libraries page and click Add Dependency. Type "AbstractNode" in the Add dialog, and when the item "Nodes API" in the list is selected, click btn:[OK] or press Enter.
+
+
+8. Now, back in the source editor, press Ctrl-Shift-I to Fix Imports. You will be notified that `EventChildFactory` could not be resolved. That's okay - you're about to write it, in the next section.
 
 
 == Implementing Nodes and Node Children
@@ -152,24 +146,21 @@ You'll notice you're using a class called `AbstractNode` above. Despite its name
 The next step is to implement `EventChildFactory`, so that there are subnodes underneath the initial node.
 
 
-[start=1]
 1. Right click the `org.myorg.myeditor` package in the My Editor project, and choose New > Java Class from the popup menu. In the New Java Class wizard, name the class "EventChildFactory", and click Finish or press Enter to create the class.
 
-[start=2]
-1. Modify the signature of the class so it extends `ChildFactory`:
 
+2. Modify the signature of the class so it extends `ChildFactory`:
++
 [source,java]
 ----
-
 public class EventChildFactory extends ChildFactory<Event> {
 ----
-
++
 Press kbd:[Ctrl+Shift+I] to Fix Imports.
 
 
-[start=3]
-1. Position the cursor in the class signature line. When the lightbulb glyph appears in the margin, press Alt-Enter and then Enter again to accept the hint "Implement all abstract methods". This will add a protected `createKeys(List<Event> list)` method - this is where you will create the keys, on a background thread, that will be used to create the children of your root node. The children will be created the first time the object is asked for its child nodes. So you can delay creation of child Nodes until the user has really expanded the parent node in a view and needs to see them. Implement the method as follows:
-
+3. Position the cursor in the class signature line. When the lightbulb glyph appears in the margin, press Alt-Enter and then Enter again to accept the hint "Implement all abstract methods". This will add a protected `createKeys(List<Event> list)` method - this is where you will create the keys, on a background thread, that will be used to create the children of your root node. The children will be created the first time the object is asked for its child nodes. So you can delay creation of child Nodes until the user has really expanded the parent node in a view and needs to see them. Implement the method as follows:
++
 [source,java]
 ----
 @Override
@@ -182,15 +173,14 @@ protected boolean createKeys(List<Event> list) {
     return true;
 }
 ----
-
++
 As you may have guessed from the name `ChildFactory`, what your parent class does is take an array or `Collection` of key objects, and act as a factory for child nodes for them. For each element in the array or collection you pass to the `toPopulate` list above, the `createNodeForKey()` method shown below will be called once when `true` is returned.
-
++
 NOTE: This means that you can have more than one node to represent one object, if that makes sense in your design.
 
 
-[start=4]
-1. Now you need to implement the code that actually creates Node objects for all of these. Implement `createNodeForKey` as follows:
-
+4. Now you need to implement the code that actually creates Node objects for all of these. Implement `createNodeForKey` as follows:
++
 [source,java]
 ----
 @Override
@@ -202,25 +192,24 @@ protected Node createNodeForKey(Event key) {
     return result;
 }
 ----
-
++
 The new `Node` is created by passing in the definition of its `Children`, together with the current  `Event`, which is put into the `Lookup` of the  `Node`. When the user selects the  `Node`, the object in its `Lookup` will be proxied by the  `Lookup`  of the  `TopComponent`, which in turn is proxied by the global `Lookup`. In this way, you make the current  `Event` object available to any object that is interested in it, whenever the `Node` is selected. 
-
++
 Press kbd:[Ctrl+Shift+I] to Fix Imports.
 
 
-[start=6]
-1. The last step is to install a bit of plumbing code that will wire up your explorer manager to your TopComponent's lookup. First, delete the line
-
+5. The last step is to install a bit of plumbing code that will wire up your explorer manager to your TopComponent's lookup. First, delete the line
++
 [source,java]
 ----
 private final InstanceContent content = new InstanceContent();
 ----
-
++
 from the head of the class definition - you will be using a utility to wire up the selected `Node`'s `Lookup` to your component's `Lookup`.
 
-[start=7]
-1. Modify the constructor of `MyEditor` so it looks like this:
 
+6. Modify the constructor of `MyEditor` so it looks like this:
++
 [source,java]
 ----
 public MyEditor() {
@@ -235,7 +224,7 @@ public MyEditor() {
     mgr.setRootContext(new AbstractNode(Children.create(new EventChildFactory(), true)));
 }
 ----
-
++
 Press kbd:[Ctrl+Shift+I] to Fix Imports which will add the ExplorerUtils import.
 
 == Running the Tutorial
@@ -282,13 +271,11 @@ image::tutorials/selection-2_nb27_result7.png[]
 You may have noticed that `BeanTreeView` - the basic tree view for Nodes - lets you select more than one Node at a time. Therefore, it might be desirable to modify your viewer component to display information about all of the selected nodes:
 
 
-[start=1]
 1. Open `org.myorg.myviewer.MyViewerTopComponent` from the My Viewer project, in the editor. Switch to Source view if not already selected.
 
 
-[start=2]
-1. Replace the `resultChanged()` listener method with the following code:
-
+2. Replace the `resultChanged()` listener method with the following code:
++
 [source,java]
 ----
 @Override
@@ -314,14 +301,14 @@ public void resultChanged(LookupEvent lookupEvent) {
     }
 }
 ----
-
++
 As usual, fix imports.
 
-[start=3]
-1. Clean and Build, and Run again.
 
+3. Clean and Build, and Run again.
++
 So you can see that the `Lookup` created by `ExplorerUtils` handle not only proxies the `Lookup` of whatever `Node` is selected; it also correctly proxies the `Lookup` for multiple selected entries.
-
++
 image::tutorials/selection-2_nb27_multiselect1.png[]
 
 
@@ -342,4 +329,3 @@ xref:front::community/mailing-lists.adoc[Send Us Your Feedback]
 == Next Steps
 
 So you now have a view that can display `Node` s that expose some underlying model object (`Event` in your case). In the  xref:tutorials/nbm-nodesapi2.adoc[next tutorial], you will cover how to enhance the Nodes you have already created with actions, properties and more colorful display names.
-

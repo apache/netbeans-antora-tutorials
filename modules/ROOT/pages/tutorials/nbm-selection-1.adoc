@@ -449,7 +449,7 @@ image::tutorials/selection-1_nb27_editor4.png[]
 In the property sheet, set both text fields' "editable" property to `false`.
 
 
-4. We want to allow the user to open more than one window. Click the Source tab to switch to the code editorand delete
+4. We want to allow the user to open more than one window. Click the Source tab to switch to the code editor and delete
 the `preferredID` from the `@TopComponent.Description` annotation on top of the class.
 +
 [source,java]
@@ -538,13 +538,12 @@ independently. They only share a dependency on My API. This means:
 
 To understand the value, imagine `Event` is something complex - say `MyEditor` is an image editor and `Event` represents
 an image being edited. You could replace `MyEditor` with an SVG vector editor, and the viewer (showing image attributes)
-would work transparently with the new editor. This is why you can add new tools to NetBeans IDE that work with Java
-files - they work across different NetBeans versions, and alternative editors (like the form editor) still work with all
-components and actions that work with Java files.
+would work transparently with the new editor. This is why you can add tools for Java files to NetBeans — they remain
+compatible across NetBeans versions, and the same components and actions continue to work with alternative editors for
+Java (like the form editor).
 
-This is how NetBeans IDE works with Java and other source files. The thing available from the editor's Lookup is
-a xref:wiki::wiki/DevFaqDataObject.adoc[DataObject], and components like Navigator and Property Sheet watch what object
-the focused `TopComponent` provides.
+This is how NetBeans works with source files. The editor's Lookup contains a xref:wiki::wiki/DevFaqDataObject.adoc[DataObject],
+and components like Navigator and Property Sheet watch what object the focused `TopComponent` provides.
 
 This approach is also valuable when migrating existing applications to the NetBeans Platform. The data model object is
 probably existing, working code that shouldn't change for NetBeans integration. By keeping the data model API in a
@@ -578,9 +577,9 @@ Add the missing method:
 ----
 private void updateContent() {
     Event obj = new Event();
-    jTextField1.setText ("Event #" + obj.getIndex());
-    jTextField2.setText ("Created: " + obj.getDate());
-    setDisplayName ("MyEditor " + obj.getIndex());
+    jTextField1.setText("Event #" + obj.getIndex());
+    jTextField2.setText("Created: " + obj.getDate());
+    setDisplayName("MyEditor " + obj.getIndex());
     content.set(Collections.singleton (obj), null);
 }
 ----

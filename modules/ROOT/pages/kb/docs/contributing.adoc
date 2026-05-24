@@ -59,7 +59,7 @@ image::kb/docs/contributing-link.png[title="Click the 'See this page in GitHub' 
 
 image::kb/docs/contributing-button.png[title="Edit button in GitHub"]
 
-If you don't have edit permissions you always can clone the link:https://github.com/apache/netbeans-website[website repository in GitHub] and edit the file in your own clone, and then submit that as a Pull Request against the main Apache NetBeans website repository.
+If you don't have edit permissions you always can clone the link:https://github.com/apache/netbeans-antora[website repositories in GitHub] and edit the file in your own clone, and then submit that as a Pull Request against the main Apache NetBeans website repository.
 
 You can also watch the following YouTube video for instructions:
 

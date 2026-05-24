@@ -54,7 +54,7 @@ In this exercise we will open the demo Java application project, which contains 
 
 === Opening the Example Project
 
-1. Download and unzip the link:https://netbeans.org/files/documents/4/770/InternationalizeDemo.zip[+InternationalizeDemo.zip+] project to any location on your computer.
+1. Download and unzip the link:https://web.archive.org/web/20210118114542/https://netbeans.org/project_downloads/www/InternationalizeDemo.zip[InternationalizeDemo.zip] project to any location on your computer.
 2. Choose File > Open Project, navigate to the  ``InternationalizeDemo``  project that you extracted in the last step, and click Open. The project folder might be in a containing folder that is also called  ``InternationalizeDemo`` .
 3. Expand Source Packages > Demo and double-click  ``FindDialog.java`` . The sample form opens in the GUI Builder.
 
@@ -345,12 +345,12 @@ The IDE opens the  ``Find.java``  file in the Source Editor.
 
 . Insert the following line in bold in the main method:
 
-[source,xml]
+[source,java,subs="verbatim,macros"]
 ----
 
     public static void main(String args[]) {
-			   /* Set the Nimbus look and feel */
-			   //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+	/* Set the Nimbus look and feel */
+	//<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
@@ -372,13 +372,13 @@ The IDE opens the  ``Find.java``  file in the Source Editor.
         }
         //</editor-fold>
         *System.out.println();*
-		/* Create and display the form */ 
+	/* Create and display the form */ 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Find().setVisible(true);
             }
         });
-               }
+    }
 ----
 
 
@@ -400,12 +400,12 @@ image::kb/docs/java/insi18nstring.png[]
 
 . The IDE inserts an internationalized string:
 
-[source,xml]
+[source,java,subs="verbatim,macros"]
 ----
 
     public static void main(String args[]) {
-			   /* Set the Nimbus look and feel */
-			   //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+	/* Set the Nimbus look and feel */
+	//<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
@@ -426,12 +426,12 @@ image::kb/docs/java/insi18nstring.png[]
             java.util.logging.Logger.getLogger(Find.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-*        System.out.println(java.util.ResourceBundle.getBundle("examples/Find").getString("Start"));*
+        *System.out.println(java.util.ResourceBundle.getBundle("examples/Find").getString("Start"));*
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Find().setVisible(true);
                 }
             });
-               }
+    }
 ----

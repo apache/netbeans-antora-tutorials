@@ -27,22 +27,30 @@
 :toc: left
 :toc-title:
 :description: Java EE &amp; Java Web Learning Trail - Apache NetBeans
-:keywords: Apache NetBeans, Tutorials, Java EE &amp; Java Web Learning Trail
+:keywords: Apache NetBeans, Tutorials, Java EE &amp; Java Web Learning Trail, Jakarta EE, MicroProfile
+
+NOTE: Java EE has been renamed *Jakarta EE* and is now developed under the Eclipse Foundation. From Jakarta EE 9 onward, the package namespace changed from `javax.*` to `jakarta.*`. Many tutorials on this page were written for Java EE 6/7/8 (`javax.*`) and remain useful for the concepts, but their code may need the namespace change when used with a Jakarta EE 9+ server. Resources are labelled below where this matters.
 
 == What is a Java Web Application?
 
 A Java web application generates interactive web pages containing various types of markup language (HTML, XML, and so on) and dynamic content. It is typically comprised of web components such as JavaServer Pages (JSP), servlets and JavaBeans to modify and temporarily store data, interact with databases and web services, and render content in response to client requests.
 
-Because many of the tasks involved in web application development can be repetitive or require a surplus of boilerplate code, web frameworks can be applied to alleviate the overhead associated with common activities. For example, many frameworks, such as JavaServer Faces, provide libraries for templating pages and session management, and often promote code reuse.
+Because many of the tasks involved in web application development can be repetitive or require a surplus of boilerplate code, web frameworks can be applied to alleviate the overhead associated with common activities. For example, many frameworks, such as JavaServer Faces (now Jakarta Faces), provide libraries for templating pages and session management, and often promote code reuse.
 
-=== *What is Java EE?*
+=== *What is Java EE (Jakarta EE)?*
 
-Java EE (Enterprise Edition) is a widely used platform containing a set of coordinated technologies that significantly reduce the cost and complexity of developing, deploying, and managing multi-tier, server-centric applications. Java EE builds upon the Java SE platform and provides a set of APIs (application programming interfaces) for developing and running portable, robust, scalable, reliable and secure server-side applications.
+Java EE (Enterprise Edition), now known as Jakarta EE, is a widely used platform containing a set of coordinated technologies that significantly reduce the cost and complexity of developing, deploying, and managing multi-tier, server-centric applications. Jakarta EE builds upon the Java SE platform and provides a set of APIs (application programming interfaces) for developing and running portable, robust, scalable, reliable and secure server-side applications.
 
-Some of the fundamental components of Java EE include:
+Some of the fundamental components of Java EE / Jakarta EE include:
 
 * Enterprise JavaBeans (EJB): a managed, server-side component architecture used to encapsulate the business logic of an application. EJB technology enables rapid and simplified development of distributed, transactional, secure and portable applications based on Java technology.
-* Java Persistence API (JPA): a framework that allows developers to manage data using object-relational mapping (ORM) in applications built on the Java Platform.
+* Java Persistence API (JPA, now Jakarta Persistence): a framework that allows developers to manage data using object-relational mapping (ORM) in applications built on the Java Platform.
+* Contexts and Dependency Injection (CDI): the standard dependency injection and event model that ties together web, business and persistence tiers.
+* Jakarta REST (formerly JAX-RS): the standard API for building RESTful web services.
+
+=== *What is MicroProfile?*
+
+Eclipse MicroProfile is a set of specifications built on a subset of Jakarta EE that targets cloud-native microservices (configuration, health checks, metrics, fault tolerance, JWT authentication, OpenAPI and REST clients). Several of the application servers listed in this trail support it.
 
 === JavaScript and Ajax Development
 
@@ -55,6 +63,9 @@ JavaScript is an object-oriented scripting language primarily used in client-sid
 * xref:kb/docs/javaee/javaee-gettingstarted.adoc[+Getting Started with Java EE Applications+]
 * xref:kb/docs/web/jsf20-intro.adoc[+Introduction to JavaServer Faces 2.x+]
 * xref:kb/docs/web/ajax-quickstart.adoc[+Introduction to Ajax+]
+* link:https://jakarta.ee/[+Jakarta EE: Official Site and Specifications+]
+* link:https://start.jakarta.ee/[+Jakarta EE Starter: Generate a Starter Project+]
+* link:https://eclipse-ee4j.github.io/jakartaee-tutorial/[+The Jakarta EE Tutorial+]
 
 == Tutorials and Articles
 
@@ -88,9 +99,28 @@ JavaScript is an object-oriented scripting language primarily used in client-sid
 * xref:kb/docs/web/jsf-jpa-weblogic.adoc[+Developing an Enterprise Application for Oracle WebLogic Server+]
 * xref:kb/docs/web/mysql-webapp.adoc[+Creating a Simple Web Application Using a MySQL Database+]
 * xref:kb/docs/web/jsf20-crud.adoc[+Generating a JavaServer Faces 2.0 CRUD Application from a Database+]
-* xref:kb/docs/web/applets.adoc[+Integrating an Applet in a Web Application+]
+* xref:kb/docs/web/applets.adoc[+Integrating an Applet in a Web Application+] (legacy: applets are deprecated and unsupported in modern browsers)
 * xref:kb/docs/web/security-webapps.adoc[+Securing a Web Application+]
 * xref:kb/docs/java/profile-loadgenerator.adoc[+Using a Load Generator in NetBeans IDE+]
+
+=== RESTful Web Services and Microservices
+
+// TODO: maintainers, replace or supplement the external links below with in-repo NetBeans tutorials when available.
+* link:https://jakarta.ee/specifications/restful-ws/[+Jakarta REST (RESTful Web Services) Specification+]
+* link:https://microprofile.io/[+Eclipse MicroProfile: Microservices for Jakarta EE+]
+* link:https://start.microprofile.io/[+MicroProfile Starter+]
+* link:https://eclipse-ee4j.github.io/jakartaee-tutorial/#building-restful-web-services-with-jakarta-rest[+Building RESTful Web Services with Jakarta REST (Jakarta EE Tutorial)+]
+
+=== Application Servers
+
+NetBeans can register and deploy to a range of servers. Check each server's documentation for the Jakarta EE / Java version it supports before choosing.
+
+* link:https://glassfish.org/[+Eclipse GlassFish+] (Jakarta EE reference implementation)
+* link:https://payara.fish/[+Payara Server and Payara Micro+]
+* link:https://www.wildfly.org/[+WildFly+]
+* link:https://openliberty.io/[+Open Liberty+]
+* link:https://tomee.apache.org/[+Apache TomEE+]
+* link:https://tomcat.apache.org/[+Apache Tomcat+] (servlet and JSP container)
 
 === Cloud Support
 
@@ -119,6 +149,7 @@ JavaScript is an object-oriented scripting language primarily used in client-sid
 * xref:kb/docs/web/grails-quickstart.adoc[+Grails+]
 * xref:kb/docs/web/quickstart-webapps-wicket.adoc[+Wicket+]
 * xref:kb/docs/web/framework-adding-support.adoc[+Adding Support For A Web Framework+]
+* link:https://jakarta.ee/specifications/faces/[+Jakarta Faces (formerly JavaServer Faces) Specification+]
 
 === JavaScript and Ajax Development
 
@@ -133,29 +164,29 @@ JavaScript is an object-oriented scripting language primarily used in client-sid
 * xref:kb/docs/javaee/javaee-gettingstarted-pf-screencast.adoc[+Java EE Development with PrimeFaces+]
 * xref:kb/docs/javaee/weblogic-javaee-m1-screencast.adoc[+Video of Deploying a Web Application to the Oracle WebLogic Server+]
 * xref:kb/docs/javaee/javaee-gettingstarted-screencast.adoc[+Video of Getting Started with Java EE 6 Applications+]
-* YouTube: link:http://www.youtube.com/watch?v=0hHkV04JPxo[+WebLogic Server 12c - 5 Mins with GlassFish Descriptor Support+]
+* YouTube: link:https://www.youtube.com/watch?v=0hHkV04JPxo[+WebLogic Server 12c - 5 Mins with GlassFish Descriptor Support+]
 * YouTube: link:https://www.youtube.com/watch?v=_PDIxHyaWy4[+Get Started with PrimeFaces Development +]
-* YouTube: link:http://www.youtube.com/watch?v=Uvt1byURZrw[+Unlocking the Java EE6 Platform+]
-* YouTube: link:http://www.youtube.com/watch?v=vaOpJJ-Xm70[+Type-safe injection of OSGi dynamic services with GlassFish 3.1 and CDI+]
-* YouTube: link:http://www.youtube.com/watch?v=wcg2SCgTL-4[+HTML5 and Web Sockets in Glassfish+]
-* YouTube: link:http://www.youtube.com/watch?v=zdYxdx3FuX0[+Java EE 6 does Java 7 with GlassFish 3.1.1+]
+* YouTube: link:https://www.youtube.com/watch?v=Uvt1byURZrw[+Unlocking the Java EE6 Platform+]
+* YouTube: link:https://www.youtube.com/watch?v=vaOpJJ-Xm70[+Type-safe injection of OSGi dynamic services with GlassFish 3.1 and CDI+]
+* YouTube: link:https://www.youtube.com/watch?v=wcg2SCgTL-4[+HTML5 and Web Sockets in Glassfish+]
+* YouTube: link:https://www.youtube.com/watch?v=zdYxdx3FuX0[+Java EE 6 does Java 7 with GlassFish 3.1.1+]
 
 === OSGi-enabled Java EE Applications by Arun Gupta (YouTube)
 
-* YouTube: link:http://www.youtube.com/watch?v=X7GwN4XSzfU[+Parent POM Project (Part 1 of 6) +]
-* YouTube: link:http://www.youtube.com/watch?v=eBdLqdvOF_8[+API and Service OSGi Bundle (Part 2 of 6) +]
-* YouTube: link:http://www.youtube.com/watch?v=TWRt_cFDRHE[+Client OSGi Bundle invoking an OSGi Service (Part 3 of 6) +]
-* YouTube: link:http://www.youtube.com/watch?v=bSX89JjQoRM[+WAB client invoking an OSGi service (Part 4 of 6) +]
-* YouTube: link:http://www.youtube.com/watch?v=6WexZAUeFWM[+Client OSGi bundle invoking EJB service (Part 5 of 6) +]
-* YouTube: link:http://www.youtube.com/watch?v=IU4UMTnifhw[+Conclusion and other possible extensions (Part 6 of 6) +]
+* YouTube: link:https://www.youtube.com/watch?v=X7GwN4XSzfU[+Parent POM Project (Part 1 of 6) +]
+* YouTube: link:https://www.youtube.com/watch?v=eBdLqdvOF_8[+API and Service OSGi Bundle (Part 2 of 6) +]
+* YouTube: link:https://www.youtube.com/watch?v=TWRt_cFDRHE[+Client OSGi Bundle invoking an OSGi Service (Part 3 of 6) +]
+* YouTube: link:https://www.youtube.com/watch?v=bSX89JjQoRM[+WAB client invoking an OSGi service (Part 4 of 6) +]
+* YouTube: link:https://www.youtube.com/watch?v=6WexZAUeFWM[+Client OSGi bundle invoking EJB service (Part 5 of 6) +]
+* YouTube: link:https://www.youtube.com/watch?v=IU4UMTnifhw[+Conclusion and other possible extensions (Part 6 of 6) +]
 
 === Java EE 6 Video Tutorial by Arun Gupta (YouTube)
 
-* link:http://www.youtube.com/watch?v=pwBNmAhtqk8[+ JSP + Servlets + EJB: Java EE 6 &amp; GlassFish 3 using NetBeans 6.9 (Part 1 of 5) +]
-* link:http://www.youtube.com/watch?v=_D_vphsAM-Y[+ Java Persistence API 2: Java EE 6 &amp; GlassFish 3 using NetBeans 6.9 (Part 2 of 5) +]
-* link:http://www.youtube.com/watch?v=-Q25P-oSUJ8[+ Facelets and JSF 2: Java EE 6 &amp; GlassFish 3 using NetBeans 6.9 (Part 3 of 5) +]
-* link:http://www.youtube.com/watch?v=D1fyKOTO5rw[+ CDI with JSF 2: Java EE 6 &amp; GlassFish 3 using NetBeans 6.9 (Part 4 of 5) +]
-* link:http://www.youtube.com/watch?v=qf2Jxwpbsuo[+RESTful Web services using JAX-RS: Java EE 6 &amp; GlassFish 3 using NetBeans 6.9 (Part 5 of 5) +]
+* link:https://www.youtube.com/watch?v=pwBNmAhtqk8[+ JSP + Servlets + EJB: Java EE 6 &amp; GlassFish 3 using NetBeans 6.9 (Part 1 of 5) +]
+* link:https://www.youtube.com/watch?v=_D_vphsAM-Y[+ Java Persistence API 2: Java EE 6 &amp; GlassFish 3 using NetBeans 6.9 (Part 2 of 5) +]
+* link:https://www.youtube.com/watch?v=-Q25P-oSUJ8[+ Facelets and JSF 2: Java EE 6 &amp; GlassFish 3 using NetBeans 6.9 (Part 3 of 5) +]
+* link:https://www.youtube.com/watch?v=D1fyKOTO5rw[+ CDI with JSF 2: Java EE 6 &amp; GlassFish 3 using NetBeans 6.9 (Part 4 of 5) +]
+* link:https://www.youtube.com/watch?v=qf2Jxwpbsuo[+RESTful Web services using JAX-RS: Java EE 6 &amp; GlassFish 3 using NetBeans 6.9 (Part 5 of 5) +]
 
 == Sample Applications
 
@@ -165,6 +196,7 @@ JavaScript is an object-oriented scripting language primarily used in client-sid
 * xref:samples/webjpa.adoc[+Using the Java Persistence API in a Stand-Alone Web App+]
 * xref:samples/javaee-crud.adoc[+JSF CRUD Web Application with Java Persistence API+]
 * xref:samples/javaee-stateless.adoc[+Dependency Injection with Stateless Session Beans+]
+* link:https://github.com/eclipse-ee4j/jakartaee-examples[+Jakarta EE Examples (Eclipse EE4J on GitHub)+]
 
 == Community-Contributed Docs
 
@@ -179,10 +211,13 @@ JavaScript is an object-oriented scripting language primarily used in client-sid
 * link:http://www.adam-bien.com/roller/abien/entry/simplest_possible_ejb_3_13[+Simplest Possible EJB 3.1/REST (JSR 311) Component+] by Adam Bien
 * xref:wiki::wiki/DevelopAjaxJSF2App.adoc[+Develop Ajax-based JSF2 applications with PrimeFaces using Netbeans 6.8+] by Christopher Lam
 
+// TODO: several community links above (dzone, java.net-era blogs) are likely dead. Run a link check and point to web.archive.org snapshots or remove.
+
 == Other Resources
 
 === _Developing Applications with NetBeans IDE_ User's Guide
 
+// NOTE: These point to the NetBeans 7.4 documentation set. Prefer the Apache NetBeans docs where equivalent topics exist.
 * link:http://www.oracle.com/pls/topic/lookup?ctx=nb7400&id=NBDAG1216[+Developing Enterprise Applications+]
 * link:http://www.oracle.com/pls/topic/lookup?ctx=nb7400&id=NBDAG1349[+Developing with Java Persistence+]
 * link:http://www.oracle.com/pls/topic/lookup?ctx=nb7400&id=NBDAG1035[+Developing Web Applications+]
@@ -197,10 +232,16 @@ JavaScript is an object-oriented scripting language primarily used in client-sid
 
 === Tutorials and Other Docs
 
+* link:https://eclipse-ee4j.github.io/jakartaee-tutorial/[+The Jakarta EE Tutorial+]
+* link:https://glassfish.org/[+Join the Eclipse GlassFish Community +]
+* link:https://dev.mysql.com/doc/connector-j/en/[+MySQL Connector/J (JDBC) Documentation+]
+
+=== Legacy Tutorials and Docs
+
+These cover older platform versions (`javax.*` namespace) and are kept for reference.
+
 * link:http://docs.oracle.com/javaee/7/tutorial/doc/[+The Java EE 7 Tutorial+]
 * link:http://docs.oracle.com/javaee/6/tutorial/doc/[+The Java EE 6 Tutorial+]
-* link:https://glassfish.java.net/[+Join the GlassFish Community +]
-* link:http://www.mysql.com/why-mysql/java/[+MySQL and Java - Resources +]
 * link:https://weblogs.java.net/blog/caroljmcdonald/archive/2013/09/16/example-backbonejs-jax-rs-jpa-application[+Example Backbone.js , JAX-RS, JPA Application+]
 * link:http://www.andygibson.net/blog/index.php/2009/12/16/getting-started-with-jsf-2-0-and-cdi-in-jee-6-part-1/[+ Getting Started with JSF 2.0 and CDI in JEE 6, Part 1+], link:http://www.andygibson.net/blog/index.php/2009/12/22/getting-started-with-cdi-part-2-injection/[+Part 2+]
 * link:http://technology.amis.nl/blog/?p=2613[+Integrating Seam with Maven, NetBeans and GlassFish +]
@@ -208,12 +249,9 @@ JavaScript is an object-oriented scripting language primarily used in client-sid
 
 === Weblogs
 
-* link:http://www.java.net/blogs/edburns/[+Ed Burns+]
 * link:https://blogs.oracle.com/arungupta/[+Arun Gupta+]
-* link:http://www.java.net/blog/6034[+Cay Horstmann+]
 * link:http://blogs.oracle.com/vkraemer/[+Vince Kraemer+]
-* link:http://www.java.net/blogs/caroljmcdonald/[+Carol McDonald+]
 * xref:front::blogs/geertjan/index.adoc[Geertjan Wielenga]
 * link:http://blogs.oracle.com/theaquarium/[+The Aquarium+]
 * link:http://buttso.blogspot.com/[+The Buttso Blathers+]
-
+// Removed as defunct (java.net blogs migrated/shut down): Ed Burns, Cay Horstmann, Carol McDonald

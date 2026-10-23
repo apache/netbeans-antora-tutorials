@@ -65,7 +65,7 @@ JavaScript is an object-oriented scripting language primarily used in client-sid
 * xref:kb/docs/web/ajax-quickstart.adoc[+Introduction to Ajax+]
 * link:https://jakarta.ee/[+Jakarta EE: Official Site and Specifications+]
 * link:https://start.jakarta.ee/[+Jakarta EE Starter: Generate a Starter Project+]
-* link:https://eclipse-ee4j.github.io/jakartaee-tutorial/[+The Jakarta EE Tutorial+]
+* link:https://jakarta.ee/learn/docs/jakartaee-tutorial/current/index.html[+The Jakarta EE Tutorial+]
 
 == Tutorials and Articles
 
@@ -105,11 +105,9 @@ JavaScript is an object-oriented scripting language primarily used in client-sid
 
 === RESTful Web Services and Microservices
 
-// TODO: maintainers, replace or supplement the external links below with in-repo NetBeans tutorials when available.
 * link:https://jakarta.ee/specifications/restful-ws/[+Jakarta REST (RESTful Web Services) Specification+]
 * link:https://microprofile.io/[+Eclipse MicroProfile: Microservices for Jakarta EE+]
 * link:https://start.microprofile.io/[+MicroProfile Starter+]
-* link:https://eclipse-ee4j.github.io/jakartaee-tutorial/#building-restful-web-services-with-jakarta-rest[+Building RESTful Web Services with Jakarta REST (Jakarta EE Tutorial)+]
 
 === Application Servers
 
@@ -164,29 +162,29 @@ NetBeans can register and deploy to a range of servers. Check each server's docu
 * xref:kb/docs/javaee/javaee-gettingstarted-pf-screencast.adoc[+Java EE Development with PrimeFaces+]
 * xref:kb/docs/javaee/weblogic-javaee-m1-screencast.adoc[+Video of Deploying a Web Application to the Oracle WebLogic Server+]
 * xref:kb/docs/javaee/javaee-gettingstarted-screencast.adoc[+Video of Getting Started with Java EE 6 Applications+]
-* YouTube: link:https://www.youtube.com/watch?v=0hHkV04JPxo[+WebLogic Server 12c - 5 Mins with GlassFish Descriptor Support+]
+* YouTube: link:http://www.youtube.com/watch?v=0hHkV04JPxo[+WebLogic Server 12c - 5 Mins with GlassFish Descriptor Support+]
 * YouTube: link:https://www.youtube.com/watch?v=_PDIxHyaWy4[+Get Started with PrimeFaces Development +]
-* YouTube: link:https://www.youtube.com/watch?v=Uvt1byURZrw[+Unlocking the Java EE6 Platform+]
-* YouTube: link:https://www.youtube.com/watch?v=vaOpJJ-Xm70[+Type-safe injection of OSGi dynamic services with GlassFish 3.1 and CDI+]
-* YouTube: link:https://www.youtube.com/watch?v=wcg2SCgTL-4[+HTML5 and Web Sockets in Glassfish+]
-* YouTube: link:https://www.youtube.com/watch?v=zdYxdx3FuX0[+Java EE 6 does Java 7 with GlassFish 3.1.1+]
+* YouTube: link:http://www.youtube.com/watch?v=Uvt1byURZrw[+Unlocking the Java EE6 Platform+]
+* YouTube: link:http://www.youtube.com/watch?v=vaOpJJ-Xm70[+Type-safe injection of OSGi dynamic services with GlassFish 3.1 and CDI+]
+* YouTube: link:http://www.youtube.com/watch?v=wcg2SCgTL-4[+HTML5 and Web Sockets in Glassfish+]
+* YouTube: link:http://www.youtube.com/watch?v=zdYxdx3FuX0[+Java EE 6 does Java 7 with GlassFish 3.1.1+]
 
 === OSGi-enabled Java EE Applications by Arun Gupta (YouTube)
 
-* YouTube: link:https://www.youtube.com/watch?v=X7GwN4XSzfU[+Parent POM Project (Part 1 of 6) +]
-* YouTube: link:https://www.youtube.com/watch?v=eBdLqdvOF_8[+API and Service OSGi Bundle (Part 2 of 6) +]
-* YouTube: link:https://www.youtube.com/watch?v=TWRt_cFDRHE[+Client OSGi Bundle invoking an OSGi Service (Part 3 of 6) +]
-* YouTube: link:https://www.youtube.com/watch?v=bSX89JjQoRM[+WAB client invoking an OSGi service (Part 4 of 6) +]
-* YouTube: link:https://www.youtube.com/watch?v=6WexZAUeFWM[+Client OSGi bundle invoking EJB service (Part 5 of 6) +]
-* YouTube: link:https://www.youtube.com/watch?v=IU4UMTnifhw[+Conclusion and other possible extensions (Part 6 of 6) +]
+* YouTube: link:http://www.youtube.com/watch?v=X7GwN4XSzfU[+Parent POM Project (Part 1 of 6) +]
+* YouTube: link:http://www.youtube.com/watch?v=eBdLqdvOF_8[+API and Service OSGi Bundle (Part 2 of 6) +]
+* YouTube: link:http://www.youtube.com/watch?v=TWRt_cFDRHE[+Client OSGi Bundle invoking an OSGi Service (Part 3 of 6) +]
+* YouTube: link:http://www.youtube.com/watch?v=bSX89JjQoRM[+WAB client invoking an OSGi service (Part 4 of 6) +]
+* YouTube: link:http://www.youtube.com/watch?v=6WexZAUeFWM[+Client OSGi bundle invoking EJB service (Part 5 of 6) +]
+* YouTube: link:http://www.youtube.com/watch?v=IU4UMTnifhw[+Conclusion and other possible extensions (Part 6 of 6) +]
 
 === Java EE 6 Video Tutorial by Arun Gupta (YouTube)
 
-* link:https://www.youtube.com/watch?v=pwBNmAhtqk8[+ JSP + Servlets + EJB: Java EE 6 &amp; GlassFish 3 using NetBeans 6.9 (Part 1 of 5) +]
-* link:https://www.youtube.com/watch?v=_D_vphsAM-Y[+ Java Persistence API 2: Java EE 6 &amp; GlassFish 3 using NetBeans 6.9 (Part 2 of 5) +]
-* link:https://www.youtube.com/watch?v=-Q25P-oSUJ8[+ Facelets and JSF 2: Java EE 6 &amp; GlassFish 3 using NetBeans 6.9 (Part 3 of 5) +]
-* link:https://www.youtube.com/watch?v=D1fyKOTO5rw[+ CDI with JSF 2: Java EE 6 &amp; GlassFish 3 using NetBeans 6.9 (Part 4 of 5) +]
-* link:https://www.youtube.com/watch?v=qf2Jxwpbsuo[+RESTful Web services using JAX-RS: Java EE 6 &amp; GlassFish 3 using NetBeans 6.9 (Part 5 of 5) +]
+* link:http://www.youtube.com/watch?v=pwBNmAhtqk8[+ JSP + Servlets + EJB: Java EE 6 &amp; GlassFish 3 using NetBeans 6.9 (Part 1 of 5) +]
+* link:http://www.youtube.com/watch?v=_D_vphsAM-Y[+ Java Persistence API 2: Java EE 6 &amp; GlassFish 3 using NetBeans 6.9 (Part 2 of 5) +]
+* link:http://www.youtube.com/watch?v=-Q25P-oSUJ8[+ Facelets and JSF 2: Java EE 6 &amp; GlassFish 3 using NetBeans 6.9 (Part 3 of 5) +]
+* link:http://www.youtube.com/watch?v=D1fyKOTO5rw[+ CDI with JSF 2: Java EE 6 &amp; GlassFish 3 using NetBeans 6.9 (Part 4 of 5) +]
+* link:http://www.youtube.com/watch?v=qf2Jxwpbsuo[+RESTful Web services using JAX-RS: Java EE 6 &amp; GlassFish 3 using NetBeans 6.9 (Part 5 of 5) +]
 
 == Sample Applications
 
@@ -196,7 +194,6 @@ NetBeans can register and deploy to a range of servers. Check each server's docu
 * xref:samples/webjpa.adoc[+Using the Java Persistence API in a Stand-Alone Web App+]
 * xref:samples/javaee-crud.adoc[+JSF CRUD Web Application with Java Persistence API+]
 * xref:samples/javaee-stateless.adoc[+Dependency Injection with Stateless Session Beans+]
-* link:https://github.com/eclipse-ee4j/jakartaee-examples[+Jakarta EE Examples (Eclipse EE4J on GitHub)+]
 
 == Community-Contributed Docs
 
@@ -211,13 +208,10 @@ NetBeans can register and deploy to a range of servers. Check each server's docu
 * link:http://www.adam-bien.com/roller/abien/entry/simplest_possible_ejb_3_13[+Simplest Possible EJB 3.1/REST (JSR 311) Component+] by Adam Bien
 * xref:wiki::wiki/DevelopAjaxJSF2App.adoc[+Develop Ajax-based JSF2 applications with PrimeFaces using Netbeans 6.8+] by Christopher Lam
 
-// TODO: several community links above (dzone, java.net-era blogs) are likely dead. Run a link check and point to web.archive.org snapshots or remove.
-
 == Other Resources
 
 === _Developing Applications with NetBeans IDE_ User's Guide
 
-// NOTE: These point to the NetBeans 7.4 documentation set. Prefer the Apache NetBeans docs where equivalent topics exist.
 * link:http://www.oracle.com/pls/topic/lookup?ctx=nb7400&id=NBDAG1216[+Developing Enterprise Applications+]
 * link:http://www.oracle.com/pls/topic/lookup?ctx=nb7400&id=NBDAG1349[+Developing with Java Persistence+]
 * link:http://www.oracle.com/pls/topic/lookup?ctx=nb7400&id=NBDAG1035[+Developing Web Applications+]
@@ -232,8 +226,6 @@ NetBeans can register and deploy to a range of servers. Check each server's docu
 
 === Tutorials and Other Docs
 
-* link:https://eclipse-ee4j.github.io/jakartaee-tutorial/[+The Jakarta EE Tutorial+]
-* link:https://glassfish.org/[+Join the Eclipse GlassFish Community +]
 * link:https://dev.mysql.com/doc/connector-j/en/[+MySQL Connector/J (JDBC) Documentation+]
 
 === Legacy Tutorials and Docs
@@ -254,4 +246,3 @@ These cover older platform versions (`javax.*` namespace) and are kept for refer
 * xref:front::blogs/geertjan/index.adoc[Geertjan Wielenga]
 * link:http://blogs.oracle.com/theaquarium/[+The Aquarium+]
 * link:http://buttso.blogspot.com/[+The Buttso Blathers+]
-// Removed as defunct (java.net blogs migrated/shut down): Ed Burns, Cay Horstmann, Carol McDonald
